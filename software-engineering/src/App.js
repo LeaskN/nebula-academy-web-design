@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Overview } from './pages/Overview';
+import { Program } from './pages/Program';
 import { NoMatch } from './pages/NoMatch';
-import { NavigationBar } from './components/NavigationBar';
+import { NavigationBar } from './components/Global/NavigationBar';
+import { ApplyNowFooter } from './components/Global/ApplyNowFooter';
+import { Footer } from './components/Global/Footer'
 
 function App() {
   return (
@@ -11,8 +13,8 @@ function App() {
       <NavigationBar/>
         <Router>
           <Switch>
-            <Route exact path ="/" component={Home}/>
-            <Route path ="/overview" component={Overview}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/program" component={Program}/>
             <Route component={NoMatch}/>
             {/* 
             <Route path ="/" component={Curriculum}/>
@@ -25,6 +27,8 @@ function App() {
             */}
           </Switch>
         </Router>
+        <ApplyNowFooter/>
+        <Footer/>
     </React.Fragment>
   );
 }

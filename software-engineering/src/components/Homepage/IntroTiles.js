@@ -47,7 +47,7 @@ export const IntroTiles = () => (
                 <Col>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile">
-                            <Card.Img src={require('../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Curriculum</Card.Title>
                                 <Card.Text>
@@ -62,7 +62,7 @@ export const IntroTiles = () => (
                 <Col>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile">
-                            <Card.Img src={require('../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Job Placement Info</Card.Title>
                                 <Card.Text>
@@ -76,7 +76,7 @@ export const IntroTiles = () => (
                 </Col>
                 <Col>
                     <Card className="row2Tile bg-dark text-white row2Tile3">
-                        <Card.Img src={require('../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
+                        <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
                         <Card.ImgOverlay className="hideImage">
                             <h1>100%</h1>
                             <Card.Text>
@@ -102,7 +102,7 @@ export const IntroTiles = () => (
                 <Col>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile">
-                            <Card.Img src={require('../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Curriculum</Card.Title>
                                 <Card.Text>
@@ -110,6 +110,7 @@ export const IntroTiles = () => (
                                 additional content. This content is a little bit longer.
                                 </Card.Text>
                                 <Card.Text>Click here to read more about curriculum.</Card.Text>
+                                <Button variant="outline-success">Scholarships</Button>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>
@@ -117,7 +118,7 @@ export const IntroTiles = () => (
                 <Col>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile">
-                            <Card.Img src={require('../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Job Placement Info</Card.Title>
                                 <Card.Text>

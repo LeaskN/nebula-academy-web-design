@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
-import Icon from '../assets/NebulaAcademyLogoNextToTitle.png';
+import Icon from '../../assets/NebulaAcademyLogoNextToTitle.png';
 import './NavigationBar.css';
 
 export const NavigationBar = () => (
@@ -21,7 +21,7 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/GuestSpeakers">GuestSpeakers</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Scholarships">FAQs</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/FAQ">FAQs</Nav.Link></Nav.Item>
                     <Button variant="outline-success">Apply</Button>
                 </Nav>
             </Navbar.Collapse>

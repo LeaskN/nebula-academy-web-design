@@ -1,0 +1,6 @@
+.contentCentered{
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    text-align: center;
+}

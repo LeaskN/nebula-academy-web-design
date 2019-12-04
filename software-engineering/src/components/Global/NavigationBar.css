@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #131524 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    width: 100vw;
+    z-index: 10;
+}
+.nav-link{
+    color: #bbb !important;
+}

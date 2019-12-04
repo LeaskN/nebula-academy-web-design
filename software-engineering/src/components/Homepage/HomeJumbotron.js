@@ -3,13 +3,12 @@ import { Jumbotron, Container } from 'react-bootstrap';
 import './HomeJumbotron.css'
 
 export const HomeJumbotron = () => (
-  <div>
+  <React.Fragment>
     <Jumbotron className="homeJumbo">
       <div className="overlay"></div>
       <Container>
-        <h1 >Hello, world!</h1>
+        <h1>Long Island Coding Bootcamp</h1>
       </Container>
     </Jumbotron>
-  </div>
-)
-
+  </React.Fragment>
+) 
