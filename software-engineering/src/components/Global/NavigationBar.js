@@ -22,7 +22,7 @@ export const NavigationBar = () => (
                     </NavDropdown>
                     <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/FAQ">FAQs</Nav.Link></Nav.Item>
-                    <Button variant="outline-success">Apply</Button>
+                    <Button href="/application" variant="outline-success">Apply</Button>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

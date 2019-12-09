@@ -1,4 +1,4 @@
-.curriculumJumbotron{
+.applicationJumbotron{
     background-image: url('../../assets/NebulaAcademyBootCampImg2Cover.jpg');
     color: #ccc;
     z-index: 02;
@@ -9,7 +9,7 @@
     z-index: -2;
     margin: 0px;
 }
-.curriculumOverlay{
+.applicationOverlay{
     background-color: #000;
     opacity: .6;
     position: absolute;

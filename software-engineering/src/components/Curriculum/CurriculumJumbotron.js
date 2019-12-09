@@ -4,8 +4,8 @@ import './CurriculumJumbotron.css'
 
 export const CurriculumJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="CurriculumJumbotron">
-      <div className="CurriculumOverlay"></div>
+    <Jumbotron className="curriculumJumbotron">
+      <div className="curriculumOverlay"></div>
       <Container>
         <h1>Curriculum</h1>
       </Container>

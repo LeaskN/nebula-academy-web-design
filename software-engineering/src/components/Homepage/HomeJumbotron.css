@@ -10,7 +10,7 @@
     margin: 0px;
     width: 100vw;
 }
-.overlay{
+.homeOverlay{
     background-color: #000;
     opacity: .6;
     position: absolute;

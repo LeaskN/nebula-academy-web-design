@@ -7,6 +7,7 @@ import { NavigationBar } from './components/Global/NavigationBar';
 import { ApplyNowFooter } from './components/Global/ApplyNowFooter';
 import { Footer } from './components/Global/Footer'
 import { Curriculum } from './pages/Curriculum';
+import { Application } from './pages/Application';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path="/program" component={Program}/>
             <Route path ="/curriculum" component={Curriculum}/>
+            <Route path ="/application" component={Application}/>
             <Route component={NoMatch}/>
             {/* 
             <Route path ="/Internship" component={Internship}/>
