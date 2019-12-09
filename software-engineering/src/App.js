@@ -6,6 +6,7 @@ import { NoMatch } from './pages/NoMatch';
 import { NavigationBar } from './components/Global/NavigationBar';
 import { ApplyNowFooter } from './components/Global/ApplyNowFooter';
 import { Footer } from './components/Global/Footer'
+import { Curriculum } from './pages/Curriculum';
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/program" component={Program}/>
+            <Route path ="/curriculum" component={Curriculum}/>
             <Route component={NoMatch}/>
             {/* 
-            <Route path ="/" component={Curriculum}/>
             <Route path ="/Internship" component={Internship}/>
             <Route path ="/Outcomes" component={Outcomes}/>
             <Route path ="/Scholarship" component={Scholarship}/>

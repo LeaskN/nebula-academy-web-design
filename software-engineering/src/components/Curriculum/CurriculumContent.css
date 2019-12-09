@@ -1,0 +1,26 @@
+.cardDeckLeft{
+    text-align: center;
+    width: 30vw;
+}
+.cardDeckRight{
+    width: 60vw;
+}
+.rightPanelLeftCol{
+    text-align: center;
+    width: 30%;
+}
+.rightPanelRightCol{
+    width: 60%;
+}
+.cardColumns{
+    padding:0px;
+}
+.staticCard{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
+}
+.subtleButton:hover{
+    cursor: pointer;
+}
