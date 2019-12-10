@@ -5,7 +5,7 @@ import './IntroTiles.css';
 export const IntroTiles = () => (
     <React.Fragment>
             <Row className="introRow1">
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile1">
                         <Card.ImgOverlay>
                             <Card.Title>Learn to Code in 6 Months</Card.Title>
@@ -18,7 +18,7 @@ export const IntroTiles = () => (
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile2">
                         <Card.ImgOverlay>
                             <Card.Title>Get a Technical Job in a Growing Field</Card.Title>
@@ -30,7 +30,7 @@ export const IntroTiles = () => (
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile3">
                         <Card.ImgOverlay>
                             <Card.Title>Industry Starting Salaries are Strong</Card.Title>
@@ -44,7 +44,7 @@ export const IntroTiles = () => (
                 </Col>
             </Row>
             <Row className="introRow2">
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -59,7 +59,7 @@ export const IntroTiles = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -74,7 +74,7 @@ export const IntroTiles = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <Card className="row2Tile bg-dark text-white row2Tile3">
                         <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
                         <Card.ImgOverlay className="hideImage">
@@ -99,7 +99,7 @@ export const IntroTiles = () => (
                 </Col>
             </Row>
             <Row className="introRow3">
-                <Col>
+                <Col xs={12} md={6}>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -115,7 +115,7 @@ export const IntroTiles = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col>
+                <Col xs={12} md={6}>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />

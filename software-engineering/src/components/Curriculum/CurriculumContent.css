@@ -1,6 +1,6 @@
 .cardDeckLeft{
     text-align: center;
-    width: 30vw;
+    width: 20vw;
 }
 .cardDeckRight{
     width: 60vw;
@@ -23,4 +23,24 @@
 }
 .subtleButton:hover{
     cursor: pointer;
+}
+#partnersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+}
+#speakersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+}
+.sponsorsArea{
+    justify-content: space-around;
+    padding: 15px;
+}
+.partnersCardOpacity{
+    background-color: rgba(0,0,0,0.8)
+}
+.sponsorsCardOpacity{
+    background-color: rgba(0,0,0,0.8);
 }

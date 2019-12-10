@@ -13,9 +13,9 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/">Welcome</Nav.Link></Nav.Item>
                     <NavDropdown title="Program" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/Overview">Overview</NavDropdown.Item>
-                        <NavDropdown.Item href="/Internship">Internship</NavDropdown.Item>
+                        <NavDropdown.Item href="/Internships">Internships</NavDropdown.Item>
                         <NavDropdown.Item href="/Outcomes">Outcomes</NavDropdown.Item>
-                        <NavDropdown.Item href="/Scholarship">Scholarship</NavDropdown.Item>
+                        <NavDropdown.Item href="/Scholarships">Scholarships</NavDropdown.Item>
                         <NavDropdown.Item href="/Apply">Apply</NavDropdown.Item>
                         <NavDropdown.Item href="/Partners">Partners</NavDropdown.Item>
                         <NavDropdown.Item href="/GuestSpeakers">GuestSpeakers</NavDropdown.Item>

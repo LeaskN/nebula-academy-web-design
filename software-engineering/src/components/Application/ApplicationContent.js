@@ -1,5 +1,9 @@
 import React, { Component }from 'react';
-import { Form, Button, Col, Row} from 'react-bootstrap';
+import { 
+    // Form, Button,
+     Col, Row } from 'react-bootstrap';
+import Iframe from 'react-iframe';
+// import fire from '../../fire';
 import './ApplicationContent.css'
 
 class ApplicationContent extends Component {
@@ -44,7 +48,9 @@ class ApplicationContent extends Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        let exportData = this.state
+        // let exportData = this.state
+        // fire.database().ref('messages').push( exportData );
+        this.setState({}); // <- clear the input
     }
     render() {
         return (
@@ -61,7 +67,23 @@ class ApplicationContent extends Component {
                     <p>Upon completion of Part I you will receive a link to Part II. </p>
                     <p>Questions? Contact us at succeed@nebulaacademy.com.  </p>
                     <p>Must include length of time the course takes, AWS, JS, React, and WF experience</p>  
-                    <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
+                    <Row>
+                        <Col className="formContainer">
+                            <Iframe url="https://forms.office.com/Pages/ResponsePage.aspx?id=DYC-61190U-xMgLVy3lNnmhMOgtjMC5JhCXq1Gwz5J5UQjlZMUZKSVFNRUxYVEpTRThOMlo2UEoxTyQlQCN0PWcu&embed=true"
+                                width="850px"
+                                height="800px"
+                                id="myId"
+                                className="form"
+                                display="initial"
+                                position="relative"/>
+                        </Col>
+                    </Row>       
+                    
+                    
+                    
+                    
+                    
+                    {/* <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
                         <Form.Row>
                             <Form.Group as={Col}>
                                 <Form.Label>First Name</Form.Label>
@@ -271,7 +293,7 @@ class ApplicationContent extends Component {
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
-                    </Form>
+                    </Form> */}
                 </Col>
                 <Col xs={1}></Col>
             </Row>

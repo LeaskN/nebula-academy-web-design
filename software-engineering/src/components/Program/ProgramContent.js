@@ -9,9 +9,9 @@ export const ProgramContent = () => (
         <p>About 3-5 sentences</p>
         <p>Must include length of time the course takes, AWS, JS, React, and WF experience</p>   
     </Container>
-    <Row className="introRow2">
-        <Col>
-            <Card className="row2Tile row2Tile1">
+    <Row className="programContentRow">
+        <Col xs={12} md={4}>
+            <Card >
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                     <Card.ImgOverlay className="behindText">
@@ -25,7 +25,7 @@ export const ProgramContent = () => (
                 </Card>
             </Card>
         </Col>
-        <Col>
+        <Col xs={12} md={4}>
             <Card className="row2Tile row2Tile2">
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -40,7 +40,7 @@ export const ProgramContent = () => (
                 </Card>
             </Card>
         </Col>
-        <Col>
+        <Col xs={12} md={4}>
             <Card className="row2Tile row2Tile2">
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />

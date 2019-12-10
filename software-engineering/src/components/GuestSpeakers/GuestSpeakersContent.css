@@ -1,0 +1,10 @@
+.guestSpeakersContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.guestSpeakersCard{
+    margin-bottom: 30px;
+}
+.guestSpeakersCard:hover{
+    box-shadow: 4px 8px 16px 4px rgba(58, 0, 0, 0.4)
+}

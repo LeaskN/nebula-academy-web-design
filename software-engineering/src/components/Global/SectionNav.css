@@ -4,7 +4,7 @@
     justify-content: center;
     justify-content: space-around;
     margin: 0px;
-    height: 100px;
+    min-height: 100px;
 }
 .section{
     display: flex;
@@ -13,13 +13,13 @@
     justify-content: space-around;
     margin: 0px;
     height:100%;
-    background: linear-gradient(to right, transparent 20%, #992653 20%, #992653 80%, transparent 80%) 0 70% / 100% 3px no-repeat;
+    background: linear-gradient(to right, transparent 20%, #992653 20%, #992653 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
     padding-bottom: 15px;
     color:black !important;
 }
 .section:hover{
     cursor: pointer;
-    background: linear-gradient(to right, transparent 20%, green 20%, green 80%, transparent 80%) 0 70% / 100% 3px no-repeat;
+    background: linear-gradient(to right, transparent 20%, green 20%, green 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
 }
 .customLink{
     color: black;
