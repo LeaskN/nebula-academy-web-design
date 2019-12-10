@@ -13,10 +13,10 @@ export const ApplyNowFooter = () => (
       <p>
         <Row>
           <Col className="contentCentered">
-            <Button variant="primary">Program</Button>
+            <Button href="/program" variant="primary">Program</Button>
           </Col>
           <Col className="contentCentered">
-            <Button variant="primary">Apply Now</Button>
+            <Button href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
       </p>

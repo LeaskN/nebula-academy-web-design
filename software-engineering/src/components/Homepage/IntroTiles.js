@@ -14,7 +14,7 @@ export const IntroTiles = () => (
                             additional content. This content is a little bit longer.
                             </Card.Text>
                             <Card.Text>Last updated 3 mins ago</Card.Text>
-                        <Button variant="outline-success">Apply Now</Button>
+                            <Button href="/application" variant="outline-success">Apply Now</Button>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>

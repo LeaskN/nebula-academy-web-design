@@ -1,6 +1,6 @@
 import React from 'react';
 import  { ApplicationJumbotron } from '../components/Application/ApplicationJumbotron';
-import  { ApplicationContent } from '../components/Application/ApplicationContent';
+import  ApplicationContent from '../components/Application/ApplicationContent';
 
 
 
