@@ -6,7 +6,7 @@ export const PartnersContent = () => (
   <React.Fragment>
     <Container className="partnersContainer">
       <Row>
-        <Col xs={3}>
+        <Col className="partnersCard" xs={6} sm={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
@@ -17,7 +17,7 @@ export const PartnersContent = () => (
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="partnersCard" xs={6} sm={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
@@ -28,7 +28,7 @@ export const PartnersContent = () => (
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="partnersCard" xs={6} sm={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
@@ -39,7 +39,7 @@ export const PartnersContent = () => (
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="partnersCard" xs={6} sm={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>

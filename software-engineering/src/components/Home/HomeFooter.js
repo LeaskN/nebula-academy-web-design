@@ -1,9 +1,9 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
-import './ApplyNowFooter.css'
+import './HomeFooter.css'
 
-export const ApplyNowFooter = () => (
-  <Container>
+export const HomeFooter = () => (
+  <Container className="fullHomeFooter">
     <Jumbotron>
       <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1>
       <p className="contentCentered">

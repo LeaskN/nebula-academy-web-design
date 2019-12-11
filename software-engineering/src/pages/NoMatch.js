@@ -6,7 +6,7 @@ export const NoMatch = () => (
             NoMatch Page
         </h2>
         <p>
-        Not a correct slash route. 
+            Not a correct slash route. 
         </p>
     </div>
 )

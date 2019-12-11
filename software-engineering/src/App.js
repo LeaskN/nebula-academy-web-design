@@ -8,7 +8,6 @@ import { Application } from './pages/Application';
 import { Internships } from './pages/Internships';
 import { Outcomes } from './pages/Outcomes';
 import { NavigationBar } from './components/Global/NavigationBar';
-import { ApplyNowFooter } from './components/Global/ApplyNowFooter';
 import { Footer } from './components/Global/Footer'
 import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
@@ -36,7 +35,6 @@ function App() {
             */}
           </Switch>
         </Router>
-        <ApplyNowFooter/>
         <Footer/>
     </React.Fragment>
   );

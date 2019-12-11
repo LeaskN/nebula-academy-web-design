@@ -11,9 +11,9 @@ export const Footer = () => (
             <ul>
             <Nav.Item><Nav.Link href="/">About</Nav.Link></Nav.Item>
             {/* <Nav.Item><Nav.Link href="/">Careers</Nav.Link></Nav.Item> */}
-            <Nav.Item><Nav.Link href="/">Staff</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/">Guest Speakers</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/">Partners</Nav.Link></Nav.Item>
+            {/* <Nav.Item><Nav.Link href="/">Staff</Nav.Link></Nav.Item> */}
+            <Nav.Item><Nav.Link href="/guestspeakers">Guest Speakers</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/partners">Partners</Nav.Link></Nav.Item>
             </ul>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">

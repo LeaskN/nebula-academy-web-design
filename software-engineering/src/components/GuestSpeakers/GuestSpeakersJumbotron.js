@@ -7,7 +7,7 @@ export const GuestSpeakersJumbotron = () => (
     <Jumbotron className="GuestSpeakers">
       <div className="guestSpeakersOverlay"></div>
       <Container>
-        <h1>Guest Speakers</h1>
+        <h1 className="jumboText">Guest Speakers</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>

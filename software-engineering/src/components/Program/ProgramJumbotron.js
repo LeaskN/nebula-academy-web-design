@@ -7,7 +7,7 @@ export const ProgramJumbotron = () => (
     <Jumbotron className="programJumbotron">
       <div className="programOverlay"></div>
       <Container>
-        <h1>Program</h1>
+        <h1 className="jumboText">Program</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>

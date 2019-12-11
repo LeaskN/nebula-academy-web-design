@@ -6,12 +6,12 @@ export const GuestSpeakersContent = () => (
   <React.Fragment>
     <Container className="guestSpeakersContainer">
       <Row>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>
@@ -20,12 +20,12 @@ export const GuestSpeakersContent = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>
@@ -34,12 +34,12 @@ export const GuestSpeakersContent = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>
@@ -48,12 +48,12 @@ export const GuestSpeakersContent = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>
@@ -62,12 +62,12 @@ export const GuestSpeakersContent = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>
@@ -76,12 +76,12 @@ export const GuestSpeakersContent = () => (
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card className="partnerCard">
             <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
           </Card>
         </Col>
-        <Col xs={3}>
+        <Col className="guestSpeakersCard" xs={6} md={3}>
           <Card>
             <Card.Body>
               <Card.Title>Steve Jobs</Card.Title>

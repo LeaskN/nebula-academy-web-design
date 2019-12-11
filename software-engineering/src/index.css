@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   width:100vw;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -29,3 +30,19 @@ code {
 .col-12{
   padding: 0px !important;
 }
+.jumbotron {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .jumboText {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .jumboText {
+    font-size: 60px;
+  }
+}
+

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col, Card, Button} from 'react-bootstrap';
-import './IntroTiles.css';
+import './HomeContent.css';
 
-export const IntroTiles = () => (
+export const HomeContent = () => (
     <React.Fragment>
             <Row className="introRow1">
                 <Col xs={12} md={4}>
@@ -130,6 +130,6 @@ export const IntroTiles = () => (
                         </Card>
                     </Card>
                 </Col>
-            </Row>                  
+            </Row>          
     </React.Fragment>
 )
