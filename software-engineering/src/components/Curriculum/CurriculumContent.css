@@ -1,7 +1,8 @@
 .cardDeckLeft{
     text-align: center;
-    width: 20vw;
     height: 100%;
+    color: #ffffff;
+    background-color: #9971AF;
 }
 .card-body{
     margin: auto;

@@ -43,8 +43,7 @@ export const HomeContent = () => (
             <Row className="introRow2">
                 <Col md={6} xl={4}>
                     <Card className="row2Tile row2Tile1">
-                        <Card className="text-white subTile">
-                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                        <Card className="text-white subTile subTile1">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Market-Driven Curriculum</Card.Title>
                                 <Card.Text>
@@ -57,8 +56,7 @@ export const HomeContent = () => (
                 </Col>
                 <Col md={6} xl={4}>
                     <Card className="row2Tile row2Tile2">
-                        <Card className="text-white subTile">
-                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                        <Card className="text-white subTile subTile2">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Job Readiness</Card.Title>
                                 <Card.Text>
@@ -98,8 +96,7 @@ export const HomeContent = () => (
             <Row className="introRow3">
                 <Col xs={12} md={6}>
                     <Card className="row2Tile row2Tile1">
-                        <Card className="text-white subTile">
-                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                        <Card className="text-white subTile subTile3">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Learner Support</Card.Title>
                                 <Card.Text>
@@ -113,8 +110,7 @@ export const HomeContent = () => (
                 </Col>
                 <Col xs={12} md={6}>
                     <Card className="row2Tile row2Tile2">
-                        <Card className="text-white subTile">
-                            <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                        <Card className="text-white subTile subTile4">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>More Info</Card.Title>
                                 <Card.Text>

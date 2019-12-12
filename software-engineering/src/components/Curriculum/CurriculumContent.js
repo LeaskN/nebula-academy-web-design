@@ -51,7 +51,7 @@ class CurriculumContent extends Component {
                     <p>Description of what web applications are, what front-end is, what back endis. How differetn people and coders have different preferences and that there are differnt jobs to apply to. Mention Some technologies like CSS HTML REACT AWS and more.</p>
                     <p>AWS Certification Description</p>   
                     <Row className="staticCard">
-                        <Col className="cardColumns">
+                        <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body>
                                         <Card.Title className="subtleButton" onClick={() => this.button1()}>Basics</Card.Title>
@@ -66,7 +66,7 @@ class CurriculumContent extends Component {
                                     </Card.Body> 
                             </Card>
                         </Col>
-                        <Col className="cardColumns">
+                        <Col xs={8} className="cardColumns">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <Card.Text>
@@ -193,7 +193,7 @@ class CurriculumContent extends Component {
                         </Card>
                     </Row>
                     <Row className="staticCard">
-                        <Col className="cardColumns">
+                        <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton1()}>Schedule Overview</Card.Title>
@@ -208,7 +208,7 @@ class CurriculumContent extends Component {
                                     </Card.Body> 
                             </Card>
                         </Col>
-                        <Col className="cardColumns">
+                        <Col xs={8} className="cardColumns">
                             {this.state.toggle2.scheduleButton1 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <Card.Text>
@@ -258,32 +258,32 @@ class CurriculumContent extends Component {
                             </Card>: null}
                             {this.state.toggle2.scheduleButton3 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Practice Hours</h1>
                                         <Card.Text>
+                                        <h1>Practice Hours</h1>
+                                            <Row>
+                                                <Col xs={1} md={3}>
+                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
+                                                </Col>
+                                                <Col xs={10}md={9}>
+                                                <p>Students will have to apply themselves both in and outside of the classroom. We reccomend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
+                                                <p>We understand that this is intense and have built in planning to ensure that our students dont burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recooperate.</p>
+                                                </Col>
+                                            </Row>
                                         </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton4 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <h1>Weekly Calendar</h1>
-                                                <Card.Text>
+                                        <Card.Text>
                                             <Row>
                                                 <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col>
                                                 <Col xs={10}md={9}>
-                                                <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks.</p>
-                                                <p>We start with creating a development environment which will enable you to begin coding. This will include downloading & updaing NPM, downloading VS Code, and other similar tasks. We will practice file navigation and manipulation through terminal and get into creating our first JavaScript programs!</p>
-                                                <p>We will begin by playing around with different JavaScript data types through hands on learning and experimenting with different data structures.</p>
-                                                <p>We close out the week by learning about Git and GitHub.</p>
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/rubypython.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
-                                                    <p>placeholder </p>
+                                                <p>As previously mentioned we typically have four weeks of study and practice follwed by one week of unspecified time. </p>
+                                                <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
+                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recooperation weeks around them.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -291,8 +291,31 @@ class CurriculumContent extends Component {
                             </Card>: null}
                             {this.state.toggle2.scheduleButton5 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Last Couple Weeks/Job Placement</h1>
                                         <Card.Text>
+                                        <h1>Last Couple Weeks/Job Placement</h1>
+                                            <Row>
+                                                <Col xs={1} md={3}>
+                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
+                                                </Col>
+                                                <Col xs={10}md={9}>
+                                                <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interviews, and anythnig that can help a participant land a job.</p>
+                                                <p>This means our daily schedule will look more like this:</p>
+                                                    <p>9:00 AM: Stand-up</p>
+                                                    <p style={{marginLeft:"20px"}}>Stand-up becomes even more important as participant schedules will vary and so will topics covered. By doing this students will see similarities and be able to help one another with their problems.</p>
+                                                    <p>10:00 AM: Code practice</p>
+                                                    <p style={{marginLeft:"20px"}}>This is core interview practice and will be kept up throughout.</p>
+                                                    <p>11:00 AM: Applying for jobs</p>
+                                                    <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new applicatios. We want to ensure partitipants are hitting both quality and quantity.</p>
+                                                    <p>12:30 PM: Lunch</p>
+                                                    <p style={{marginLeft:"20px"}}>Having a set time for lunch helps fight burnout and is still suggested as something the students should observe for the full hour.</p>
+                                                    <p>1:30 PM: Lunch</p>
+                                                    <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we dont suggest starting new projects at this time. However we definintely want our participants to dive in deeper on older projects.</p>
+                                                    <p>3:00 PM: Lunch</p>
+                                                    <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of jepordy games, whiteboarding, or coding challanges.</p>
+                                                    <p>4:00 PM: End of day</p>
+                                                    <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" applications through application websites like LinkedIn, ZipRecruiter, & Glassdoor.</p>
+                                                </Col>
+                                            </Row>
                                         </Card.Text>
                                     </Card.Body>
                             </Card>: null}

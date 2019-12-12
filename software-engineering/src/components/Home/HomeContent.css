@@ -69,6 +69,22 @@
     background-color: rgba(0, 0, 0, .7);
     border: 0px !important;
 }
+.subTile1{
+    background-image: url("../../assets/guyCoding3.jpg");
+    background-size: cover;
+}
+.subTile2{
+    background-image: url("../../assets/jobPlacementWatch.png");
+    background-size: cover;
+}
+.subTile3{
+    background-image: url("../../assets/womanOnComputer.jpg");
+    background-size: cover;
+}
+.subTile4{
+    background-image: url("../../assets/computerCode.png");
+    background-size: cover;
+}
 .hideImage{
     margin: auto;
     background-color: #434686;
@@ -83,3 +99,4 @@
     justify-content: space-around;
     margin: 0px;
 }
+
