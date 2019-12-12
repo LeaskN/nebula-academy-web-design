@@ -6,8 +6,7 @@ export const ProgramContent = () => (
   <React.Fragment>
     <Container>
         <h1>Learn to Code</h1>
-        <p>About 3-5 sentences</p>
-        <p>Must include length of time the course takes, AWS, JS, React, and WF experience</p>   
+        <p>You’ll be challenged in this immersive software engineering program. Taught by industry professionals, you’ll spend 5 days a week and 8 hours a day in learning sessions, coding time, and self-study. When you have finished our curriculum, you will have learned enough to launch a career in software development. We focus on holistic training, and part of our curriculum covers soft skills and personal development. Our curriculum covers everything you will need to know to be a full-stack developer, as well the opportunity to complete an industry certification from Amazon or Microsoft. From programming languages to industry best practices, you will get hands-on experience working with today’s web development tools.</p>
     </Container>
     <Row className="programContentRow">
         <Col xs={12} md={4}>

@@ -46,12 +46,11 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Curriculum</Card.Title>
+                                <Card.Title>Market-Driven Curriculum</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                Nebula Academy programs begin with the career goal in mind. At the national level, we engage with industry to understand challenges, translate them into skills, and deliver intense training to participants who graduate ready to make meaningful contributions to employers.
                                 </Card.Text>
-                                <Card.Text>Click here to read more about curriculum.</Card.Text>
+                                <a href="/curriculum" className="linkLight">Click here to read more about curriculum.</a>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>
@@ -61,12 +60,11 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Job Placement Info</Card.Title>
+                                <Card.Title>Job Readiness</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                Our curriculum combines hard and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. We know that industry values certifications, tech skills, and soft-skills, so we have created a blend to provide our participants with a competitive edge having a certification from industry partners like Amazon and Microsoft.
                                 </Card.Text>
-                                <Card.Text>Click here to read more about job placement.</Card.Text>
+                                <a href="/outcomes" className="linkLight">Click here to read more about job readiness.</a>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>

@@ -52,6 +52,13 @@ code {
 .link:hover{
   color:  black;
 }
+.linkLight{
+  text-decoration: none;
+  color: lightgrey;
+}
+.linkLight:hover{
+  color:  white;
+}
 .centralText{
   display: flex;
   justify-content: center;
