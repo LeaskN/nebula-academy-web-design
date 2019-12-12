@@ -20,8 +20,8 @@ class OutcomesContent extends Component {
                         <Col sm={12}>
                             <h1>Outcomes</h1>
                             <Col sm={10} style={{marginLeft:"30px"}}>
-                                <p>Our goal is to land you a job in a software engineering related role soon after graduation.</p>
-                                <p>On average entry-level software engineers make ____. On average entry-level software engineers on LI make______. </p>
+                                <p>Everyone learns at a different pace, has different learning goals and career goals. At Nebula Academy we ensure our program meets diverse learning needs and provides participants with a path to a sustainable career in Information Technology.</p>
+                                <p> As a research focused organization, we place our programs, our instructors, and our participants under ongoing evaluation to gain insight during, and after our programs. We know what our participants think of our instruction, our content, and our ability to support them in gaining a place in the workforce. Since we established the organization, we’ve collected feedback reports and implemented pre and post assessments to enable our team to continuously enhance our curriculum and our delivery methodology.</p>
                             </Col>
                         </Col>
                     </Row>
@@ -29,17 +29,21 @@ class OutcomesContent extends Component {
                         <Col md={6}>
                             <Card>
                                 <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_1.png")} />
+                                <a style={{textAlign:"center"}}className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_2.png")} />
+                                <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_2.png")} />
+                                <a style={{textAlign:"center"}}className="link" href="https://www.glassdoor.com/research/september-local-pay-reports/"> View Source</a>
                             </Card>
                         </Col>
                         <Col md={6}>
                             <Card>
-                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_3.png")} />
+                                <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_3.png")} />
+                                <a style={{textAlign:"center"}}className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_4.png")} />
+                                <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_4.png")} />
+                                <a style={{textAlign:"center"}}className="link" href="https://money.usnews.com/careers/best-jobs/software-developer/salary"> View Source</a>
                             </Card>
                         </Col>
                     </Row>

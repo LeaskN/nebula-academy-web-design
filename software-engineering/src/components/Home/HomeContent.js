@@ -101,10 +101,9 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Scholarships</Card.Title>
+                                <Card.Title>Learner Support</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
                                 </Card.Text>
                                 <Card.Text>Click here to read more about curriculum.</Card.Text>
                                 <Button href="/scholarships" variant="success">Scholarships</Button>
@@ -117,12 +116,10 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Get More Info</Card.Title>
+                                <Card.Title>More Info</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement.  If you are additional questions that we have not answered please reach out to our team at succeed@nebulaacademy.com
                                 </Card.Text>
-                                <Card.Text>Click here to read more about job placement.</Card.Text>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>

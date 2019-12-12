@@ -16,10 +16,8 @@ export const ProgramContent = () => (
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Elevate Yourself or Change Your Career</Card.Title>
                         <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        Employment of computer and information technology occupations is projected to grow 21 percent from 2018 to 2028, much faster than the average for all occupations. These occupations are projected to add about 546,200 new jobs. Demand for these workers will stem from greater emphasis on cloud computing, the collection and storage of big data, and information security.  If you are in a current role that is being disrupted by innovation this is an opportunity to build a career that can sustain innovation growth.  Looking to change careers for whatever reason, Nebula Academy can support you in understanding the skills required to shift into new growing opportunities.
                         </Card.Text>
-                        <Card.Text>Click here to read more about curriculum.</Card.Text>
                     </Card.ImgOverlay>
                 </Card>
             </Card>
@@ -31,10 +29,9 @@ export const ProgramContent = () => (
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Career Preperation</Card.Title>
                         <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        <p>It can be daunting to participate in an accelerated technology learning program, something that we at Nebula Academy understand well. Many of our participants are balancing school, work, home lives, and other responsibilities, on top of spending 30+ hours a week gaining critical tech skills through our boot camp programs.</p>
+                        <p>We often hear that these learning experiences are the most challenging–and rewarding–of people’s lives. If you’ve decided to enroll in a Nebula Academy program, know that our team is dedicated to your success in gaining employment and building a sustainable career for you and your family.</p>
                         </Card.Text>
-                        <Card.Text>Click here to read more about job placement.</Card.Text>
                     </Card.ImgOverlay>
                 </Card>
             </Card>
@@ -46,10 +43,14 @@ export const ProgramContent = () => (
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Coding Basics</Card.Title>
                         <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources. 
                         </Card.Text>
-                        <Card.Text>Click here to read more about job placement.</Card.Text>
+                        <a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a><br/>
+                        <a className="linkLight" href="https://flexboxfroggy.com/">Structuring web pages game.</a><br/>
+                        <a className="linkLight" href="https://www.w3schools.com/js/js_intro.asp">W3's introduction to JavaScript.</a><br/>
+                        <a className="linkLight" href="https://www.youtube.com/watch?v=GTWrWM1UsnA">The Coding Train's JavaScript Tic Tac Toe.</a><br/>
+                        <a className="linkLight" href="https://www.youtube.com/watch?v=Ukg_U3CnJWI">What is JavaScript?</a><br/>
+                        <a className="linkLight" href="https://www.youtube.com/playlist?list=PLM_i0obccy3uiITMEb7PUlzgIFlxq9fvv">JavaScript for beginners.</a><br/>
                     </Card.ImgOverlay>
                 </Card>
             </Card>
