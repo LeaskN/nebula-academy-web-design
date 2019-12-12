@@ -45,4 +45,15 @@ code {
     font-size: 60px;
   }
 }
+.link{
+  text-decoration: none;
+  color: darkgrey;
+}
+.link:hover{
+  color:  black;
+}
+.centralText{
+  display: flex;
+  justify-content: center;
+}
 

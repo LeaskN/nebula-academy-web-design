@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Card } from 'react-bootstrap';
 import './OutcomesContent.css'
 
 
@@ -19,7 +19,7 @@ class OutcomesContent extends Component {
                     <Row>
                         <Col sm={12}>
                             <h1>Outcomes</h1>
-                            <Col sm={10}>
+                            <Col sm={10} style={{marginLeft:"30px"}}>
                                 <p>Our goal is to land you a job in a software engineering related role soon after graduation.</p>
                                 <p>On average entry-level software engineers make ____. On average entry-level software engineers on LI make______. </p>
                             </Col>
@@ -27,12 +27,20 @@ class OutcomesContent extends Component {
                     </Row>
                     <Row>
                         <Col md={6}>
-                            <div className="dataBox"></div>
-                            <div className="dataBox"></div>
+                            <Card>
+                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_1.png")} />
+                            </Card>
+                            <Card>
+                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_2.png")} />
+                            </Card>
                         </Col>
                         <Col md={6}>
-                            <div className="dataBox"></div>
-                            <div className="dataBox"></div>
+                            <Card>
+                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_3.png")} />
+                            </Card>
+                            <Card>
+                                <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_4.png")} />
+                            </Card>
                         </Col>
                     </Row>
                 </Container>

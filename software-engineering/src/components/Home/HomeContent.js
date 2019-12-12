@@ -1,20 +1,19 @@
 import React from 'react';
-import { Row, Col, Card, Button} from 'react-bootstrap';
+import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './HomeContent.css';
 
 export const HomeContent = () => (
     <React.Fragment>
+        <Container>
             <Row className="introRow1">
                 <Col xs={12} md={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile1">
                         <Card.ImgOverlay>
                             <Card.Title>Learn to Code in 6 Months</Card.Title>
                             <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                             </Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
-                            <Button href="/application" variant="outline-success">Apply Now</Button>
+                            <Button href="/application" variant="success">Apply Now</Button>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
@@ -23,10 +22,9 @@ export const HomeContent = () => (
                         <Card.ImgOverlay>
                             <Card.Title>Get a Technical Job in a Growing Field</Card.Title>
                             <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            The field is exponentially growing. According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.
                             </Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
+                            <a className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm"> Source: bls.gov </a>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
@@ -35,16 +33,15 @@ export const HomeContent = () => (
                         <Card.ImgOverlay>
                             <Card.Title>Industry Starting Salaries are Strong</Card.Title>
                             <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            The national average salary for an Entry Level Software Engineer is $86,367 in United States, compared to a national average of entry level jobs at a salary of $40,013, according to Glassdoor.
                             </Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
+                            <a className="link" href="https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm"> Source: Glassdoor </a>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
             </Row>
             <Row className="introRow2">
-                <Col xs={12} md={4}>
+                <Col md={6} xl={4}>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -59,7 +56,7 @@ export const HomeContent = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col md={6} xl={4}>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
@@ -74,26 +71,28 @@ export const HomeContent = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col  lg={12} xl={4}>
                     <Card className="row2Tile bg-dark text-white row2Tile3">
                         <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
                         <Card.ImgOverlay className="hideImage">
-                            <h1>100%</h1>
-                            <Card.Text>
-                            Stats description
-                            </Card.Text>
-                            <h1>100%</h1>
-                            <Card.Text>
-                            Stats description
-                            </Card.Text>
-                            <h1>100%</h1>
-                            <Card.Text>
-                            Stats description
-                            </Card.Text>
-                            <h1>100%</h1>
-                            <Card.Text>
-                            Stats description
-                            </Card.Text>
+                            <br/>
+                            <h1 className="centralText">$62,910</h1>
+                            <a className="link centralText" href="https://www.indeed.com/salaries/junior-software-engineer-Salaries">
+                            Junior Software Engineer Salary
+                            </a>
+                            <h1 className="centralText">$106,395</h1>
+                            <a className="link centralText" href="https://www.indeed.com/career/software-engineer/salaries">
+                            Software Engineer Salary
+                            </a>
+                            <h1 className="centralText">$112,376</h1>
+                            <a className="link centralText" href="https://www.indeed.com/career/full-stack-developer/salaries">
+                            Full Stack Developer Salary
+                            </a>
+                            <h1 className="centralText">$128,817</h1>
+                            <a className="link centralText" href="https://www.indeed.com/career/senior-software-engineer/salaries">
+                            Senior Software Engineer Salary
+                            </a>
+                            <br/>
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
@@ -104,13 +103,13 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Curriculum</Card.Title>
+                                <Card.Title>Scholarships</Card.Title>
                                 <Card.Text>
                                 This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.
                                 </Card.Text>
                                 <Card.Text>Click here to read more about curriculum.</Card.Text>
-                                <Button variant="outline-success">Scholarships</Button>
+                                <Button href="/scholarships" variant="success">Scholarships</Button>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>
@@ -120,7 +119,7 @@ export const HomeContent = () => (
                         <Card className="text-white subTile">
                             <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Job Placement Info</Card.Title>
+                                <Card.Title>Get More Info</Card.Title>
                                 <Card.Text>
                                 This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.
@@ -130,6 +129,7 @@ export const HomeContent = () => (
                         </Card>
                     </Card>
                 </Col>
-            </Row>          
+            </Row>    
+        </Container>      
     </React.Fragment>
 )

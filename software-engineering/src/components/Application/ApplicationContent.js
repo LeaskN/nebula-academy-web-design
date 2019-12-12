@@ -57,7 +57,7 @@ class ApplicationContent extends Component {
             <Container>
                 <Row>
                     <Col xs={12}>
-                        <h2>The application consists of two parts</h2>
+                        <h2 style={{marginTop:"20px"}}>The application consists of two parts</h2>
                         <Col xs={10}>
                             <h3>PART I:</h3>
                             <Col xs={10}>

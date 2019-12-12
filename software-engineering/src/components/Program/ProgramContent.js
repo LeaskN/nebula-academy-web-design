@@ -15,7 +15,7 @@ export const ProgramContent = () => (
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                     <Card.ImgOverlay className="behindText">
-                        <Card.Title>Curriculum</Card.Title>
+                        <Card.Title>Elevate Yourself or Change Your Career</Card.Title>
                         <Card.Text>
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
@@ -30,7 +30,7 @@ export const ProgramContent = () => (
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                     <Card.ImgOverlay className="behindText">
-                        <Card.Title>Job Placement Info</Card.Title>
+                        <Card.Title>Career Preperation</Card.Title>
                         <Card.Text>
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
@@ -45,7 +45,7 @@ export const ProgramContent = () => (
                 <Card className="text-white subTile">
                     <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
                     <Card.ImgOverlay className="behindText">
-                        <Card.Title>Job Placement Info</Card.Title>
+                        <Card.Title>Coding Basics</Card.Title>
                         <Card.Text>
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
