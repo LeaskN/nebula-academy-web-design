@@ -5,11 +5,8 @@ import './HomeFooter.css'
 export const HomeFooter = () => (
   <Container className="fullHomeFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1>
-      <p className="contentCentered">
-        This is a simple hero unit, a simple jumbotron-style component for calling
-        extra attention to featured content or information.
-      </p>
+      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      
       <p>
         <Row>
           <Col className="contentCentered">

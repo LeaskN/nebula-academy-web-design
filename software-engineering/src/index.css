@@ -64,3 +64,21 @@ code {
   justify-content: center;
 }
 
+.container{
+  width: 90vw;
+}
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1500px;
+  }
+}
+@media (max-width: 576px){
+  .container {
+      width: 100vw;
+  }
+}
+.card-body {
+  margin: auto;
+  width: 100%;
+}

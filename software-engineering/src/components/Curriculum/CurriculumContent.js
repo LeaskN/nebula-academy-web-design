@@ -59,6 +59,7 @@ class CurriculumContent extends Component {
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button3()}>React</Card.Title>
                                         <hr/>
+                                        <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button4()}>Certifications</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button5()}>Job Placement</Card.Title>
@@ -71,10 +72,10 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Basics</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
                                                     <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
                                                     <p>Coding Basics include things from creating a personalized coding environment to JavaScript baiscs, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
@@ -86,17 +87,17 @@ class CurriculumContent extends Component {
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <Card.Text>
-                                        <h1>Advanced JavaScript</h1>
+                                        <Col>
+                                        </Col><h1>Advanced JavaScript</h1>
                                         <Row>
-                                                <Col xs={1} md={3} style={{flexDirection: "column;", justifyContent: "space-around"}}>
+                                                {/* <Col xs={1} md={3} style={{flexDirection: "column;", justifyContent: "space-around"}}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                     <div style={{height: "100px"}}></div>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                     <div style={{height: "100px"}}></div>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col>*/}
+                                                <Col xs={10} md={12}>
                                                     <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
                                                     <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
                                                     <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
@@ -112,10 +113,10 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>React</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10} md={12}>
                                                     <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large applications which can change data without reloading the page.</p>
                                                     <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
                                                     <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
@@ -131,10 +132,10 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Certifications</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10} md={12}>
                                                     <p>Aside from knowing powerful technologies we focus on certifications. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS certifications.</p>
                                                     <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competiton. AWS certifications are the most sought after in the technology fields today and put particiaptns on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
                                                     <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
@@ -148,14 +149,11 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Job Placement</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
-                                                    <p>Bottom line is getting a well-paying job.</p>
-                                                    <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
-                                                    <p>This partnership is a two way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
-                                                    <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like but they are given an opportunity to impress the partner right from the start.</p>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
+                                                <p>Our curriculum combines hard- and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. We know that industry values certifications, tech skills, and soft-skills, so we have created a blend to provide our participants with a competitive edge having a certification from industry partners like Amazon and Microsoft.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -172,8 +170,7 @@ class CurriculumContent extends Component {
                             <Card.ImgOverlay className="partnersCardOpacity">
                                 <Card.Title>Partners Page</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
                                 </Card.Text>
                                 <Button href="/partners" variant="primary">Partners Page</Button>
                             </Card.ImgOverlay>
@@ -182,8 +179,7 @@ class CurriculumContent extends Component {
                             <Card.ImgOverlay className="sponsorsCardOpacity">
                                 <Card.Title>Guest Speakers Page</Card.Title>
                                 <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+                                The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
                                 </Card.Text>
                                 <Button href="/guestspeakers" variant="primary">Guest Speakers Page</Button>
                             </Card.ImgOverlay>
@@ -199,6 +195,7 @@ class CurriculumContent extends Component {
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton3()}>Practice Hours</Card.Title>
                                         <hr/>
+                                        <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton4()}>Weekly Calendar</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton5()}>Last Couple Weeks/Job Placement</Card.Title>
@@ -211,14 +208,14 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Schedule Overview</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
                                                     <p>The Nebula Academy Software Engineering program is 22 weeks long.</p>
-                                                    <p>We primarily work in 4 week sprints where we are learning, practicing, and implimenting new and previously covered technologies. We finish the 4 week cycle by creating projects.</p>
-                                                    <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recooperate.</p>
-                                                    <p>We can't do anything with burnt-out participants so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
+                                                    <p>We primarily work in 4-week sprints where we are learning, practicing, and implementing new and previously covered technologies. We finish the 4-week cycle by creating projects.</p>
+                                                    <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recuperate.</p>
+                                                    <p>We can't do anything with burnt-out participants, so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -229,10 +226,10 @@ class CurriculumContent extends Component {
                                         <h1>Daily Schedule</h1>
                                         <Card.Text>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
                                                     <p>The daily schedule will vary but it will generally look like this:</p>
                                                     <p>9:00 AM: Stand-up</p>
                                                     <p style={{marginLeft:"20px"}}>Stand-up is a classic developer team start to the day where issues, thoughts, and schedules are shared.</p>
@@ -241,13 +238,13 @@ class CurriculumContent extends Component {
                                                     <p>11:00 AM: New Subject Matter</p>
                                                     <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
                                                     <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
+                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.1:30 PM: Project Time</p>
                                                     <p>1:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands on style.</p>
+                                                    <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands-on style.</p>
                                                     <p>3:00 PM: Lunch</p>
                                                     <p style={{marginLeft:"20px"}}>Old Material. At the end of the day we want to cover old topics that students feel they need to brush up on.</p>
                                                     <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "offical" end of day.</p>
+                                                    <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "official" end of day.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -258,10 +255,10 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                         <h1>Practice Hours</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
                                                 <p>Students will have to apply themselves both in and outside of the classroom. We reccomend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
                                                 <p>We understand that this is intense and have built in planning to ensure that our students dont burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recooperate.</p>
                                                 </Col>
@@ -274,13 +271,13 @@ class CurriculumContent extends Component {
                                         <h1>Weekly Calendar</h1>
                                         <Card.Text>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
-                                                <p>As previously mentioned we typically have four weeks of study and practice follwed by one week of unspecified time. </p>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
+                                                <p>As previously mentioned, we typically have four weeks of study and practice followed by one week of unspecified time.</p>
                                                 <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
-                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recooperation weeks around them.</p>
+                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -291,10 +288,10 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                         <h1>Last Couple Weeks/Job Placement</h1>
                                             <Row>
-                                                <Col xs={1} md={3}>
+                                                {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>
-                                                <Col xs={10}md={9}>
+                                                </Col> */}
+                                                <Col xs={10}md={12}>
                                                 <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interviews, and anythnig that can help a participant land a job.</p>
                                                 <p>This means our daily schedule will look more like this:</p>
                                                     <p>9:00 AM: Stand-up</p>

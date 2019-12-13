@@ -6,7 +6,7 @@ export const HomeContent = () => (
     <React.Fragment>
         <Container>
             <Row className="introRow1">
-                <Col xs={12} md={4}>
+                <Col xs={12} lg={12} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile1">
                         <Card.ImgOverlay>
                             <Card.Title>Learn to Code in 6 Months</Card.Title>
@@ -17,7 +17,7 @@ export const HomeContent = () => (
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} lg={6} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile2">
                         <Card.ImgOverlay>
                             <Card.Title>Get a Technical Job in a Growing Field</Card.Title>
@@ -28,7 +28,7 @@ export const HomeContent = () => (
                         </Card.ImgOverlay>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} lg={6} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile3">
                         <Card.ImgOverlay>
                             <Card.Title>Industry Starting Salaries are Strong</Card.Title>
@@ -109,7 +109,7 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
                 <Col xs={12} md={6}>
-                    <Card className="row2Tile row2Tile2">
+                    <Card className="row2Tile row2Tile2 row3Tile2">
                         <Card className="text-white subTile subTile4">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>More Info</Card.Title>

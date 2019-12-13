@@ -2,9 +2,9 @@
     background-image: url('../../assets/9_CurriculumHeader.jpg');
     color: #ccc;
     z-index: 02;
-    background-size: 100%;
+    background-size: cover;
     height:250px;
-    background-position: 0px -30px;
+    background-position: 0px 0px;
     position: relative;
     z-index: -2;
     margin: 0px;
