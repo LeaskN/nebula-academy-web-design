@@ -153,7 +153,9 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Our curriculum combines hard- and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. We know that industry values certifications, tech skills, and soft-skills, so we have created a blend to provide our participants with a competitive edge having a certification from industry partners like Amazon and Microsoft.</p>
+                                                <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
+                                                <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
+                                                <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -194,7 +196,7 @@ class CurriculumContent extends Component {
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton2()}>Daily Schedule</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton3()}>Practice Hours</Card.Title>
-                                        <hr/>
+                                        <br/>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton4()}>Weekly Calendar</Card.Title>
                                         <hr/>
@@ -238,7 +240,7 @@ class CurriculumContent extends Component {
                                                     <p>11:00 AM: New Subject Matter</p>
                                                     <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
                                                     <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.1:30 PM: Project Time</p>
+                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
                                                     <p>1:30 PM: Lunch</p>
                                                     <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands-on style.</p>
                                                     <p>3:00 PM: Lunch</p>
@@ -292,7 +294,7 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interviews, and anythnig that can help a participant land a job.</p>
+                                                <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interview preparation, mock interviews, studying and taking certification exams, meeting with career coaches to outline short list of employers, completing job applications, and creating a plan to ensure they land a job.</p>
                                                 <p>This means our daily schedule will look more like this:</p>
                                                     <p>9:00 AM: Stand-up</p>
                                                     <p style={{marginLeft:"20px"}}>Stand-up becomes even more important as participant schedules will vary and so will topics covered. By doing this students will see similarities and be able to help one another with their problems.</p>
