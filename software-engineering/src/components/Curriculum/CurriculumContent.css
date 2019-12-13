@@ -53,3 +53,14 @@
 .sponsorsCardOpacity{
     background-color: rgba(0,0,0,0.8);
 }
+
+.curriculumBackImage1{
+    background-image: url("../../assets/10_handshake.jpg");
+    background-size: cover;
+    background-position: -0px -220px;
+}
+.curriculumBackImage2{
+    background-image: url("../../assets/11_GuestSpeakers.jpg");
+    background-size: cover;
+    background-position: -0px -170px;
+}

@@ -4,3 +4,23 @@
 .card-img-overlay{
     padding: 1rem 1.25rem 0 1.7rem;
 }
+.programBackImage1{
+    background-image: url("../../assets/6_ElevateYourself.jpg");
+    background-size: cover;
+}
+.programBackImage2{
+    background-image: url("../../assets/7_CareerPrep.jpg");
+    background-size: cover;
+    background-position: -300px -0px;
+}
+.programBackImage3{
+    background-image: url("../../assets/8_CodingBasics.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+
+}
+.programBackImage4{
+    background-image: url("../../assets/9_CurriculumHeader.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+}

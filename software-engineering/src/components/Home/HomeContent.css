@@ -70,19 +70,19 @@
     border: 0px !important;
 }
 .subTile1{
-    background-image: url("../../assets/guyCoding3.jpg");
+    background-image: url("../../assets/1.jpg");
     background-size: cover;
 }
 .subTile2{
-    background-image: url("../../assets/jobPlacementWatch.png");
+    background-image: url("../../assets/2_JobPlacement.jpg");
     background-size: cover;
 }
 .subTile3{
-    background-image: url("../../assets/womanOnComputer.jpg");
+    background-image: url("../../assets/3_scholarship.jpg");
     background-size: cover;
 }
 .subTile4{
-    background-image: url("../../assets/computerCode.png");
+    background-image: url("../../assets/4_GetMoreInfo.jpg");
     background-size: cover;
 }
 .hideImage{

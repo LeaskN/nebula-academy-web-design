@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
-import { PartnersCarosel } from '../Global/PartnersCarosel';
 import './CurriculumContent.css'
 
 
@@ -169,8 +168,7 @@ class CurriculumContent extends Component {
                         <p>We aim to get our candidates placed. Unlike institutions that aim to educate without directing individuals towards a job we primarly work on ensuring our candidates get hired. Beyond our partners and connections, both local and national, we aim to get our students certifications, pass assessments, and create projects that will help with the hiring process.</p>
                     </Row>
                     <Row className="sponsorsArea">
-                        <Card id="partnersCard" className="bg-dark text-white">
-                            <Card.Img className="cardImage" src={require("../../assets/partners.jpg")} alt="Card image" />
+                        <Card id="partnersCard" className="bg-dark text-white curriculumBackImage1">
                             <Card.ImgOverlay className="partnersCardOpacity">
                                 <Card.Title>Partners Page</Card.Title>
                                 <Card.Text>
@@ -180,8 +178,7 @@ class CurriculumContent extends Component {
                                 <Button href="/partners" variant="primary">Partners Page</Button>
                             </Card.ImgOverlay>
                         </Card>
-                        <Card id="speakersCard" className="bg-dark text-white">
-                            <Card.Img className="cardImage" src={require("../../assets/guestSpeaker.jpg")} alt="Card image" />
+                        <Card id="speakersCard" className="bg-dark text-white curriculumBackImage2">
                             <Card.ImgOverlay className="sponsorsCardOpacity">
                                 <Card.Title>Guest Speakers Page</Card.Title>
                                 <Card.Text>
@@ -244,7 +241,7 @@ class CurriculumContent extends Component {
                                                     <p>11:00 AM: New Subject Matter</p>
                                                     <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
                                                     <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We have a fridge so participants can bring in meals, there are some options within walking distance, many places deliver, and there are a huge amount within driving distance.</p>
+                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
                                                     <p>1:30 PM: Lunch</p>
                                                     <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands on style.</p>
                                                     <p>3:00 PM: Lunch</p>
@@ -320,9 +317,6 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                         </Col>
-                    </Row>
-                    <Row>
-                        <PartnersCarosel />
                     </Row>
                 </Container>
             </React.Fragment>

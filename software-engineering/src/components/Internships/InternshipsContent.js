@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { SponsorsCarosel } from '../Global/SponsorsCarosel';
 import './InternshipsContent.css'
 
 
@@ -23,9 +22,6 @@ class InternshipsContent extends Component {
                         <p>Through our partnership with industry companies and a diverse portfolio of businesses we offer internships to participants to build their capacity by demonstrating their knowledges gained through our programs. Internships are an opportunity to engage with companies and prove knowledge and skills to gain employment. </p>
                     </Col>
                     <Col xs={1}></Col>
-                </Row>
-                <Row>
-                    <SponsorsCarosel />
                 </Row>
                 <Row>
                     <Col xs={1}></Col>

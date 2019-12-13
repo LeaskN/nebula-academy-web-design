@@ -11,8 +11,7 @@ export const ProgramContent = () => (
     <Row className="programContentRow">
         <Col xs={12} md={4}>
             <Card >
-                <Card className="text-white subTile">
-                    <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                <Card className="text-white subTile programBackImage1">
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Elevate Yourself or Change Your Career</Card.Title>
                         <Card.Text>
@@ -23,9 +22,7 @@ export const ProgramContent = () => (
             </Card>
         </Col>
         <Col xs={12} md={4}>
-            <Card className="row2Tile row2Tile2">
-                <Card className="text-white subTile">
-                    <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
+                <Card className="text-white subTile programBackImage2">
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Career Preperation</Card.Title>
                         <Card.Text>
@@ -34,25 +31,21 @@ export const ProgramContent = () => (
                         </Card.Text>
                     </Card.ImgOverlay>
                 </Card>
-            </Card>
         </Col>
         <Col xs={12} md={4}>
-            <Card className="row2Tile row2Tile2">
-                <Card className="text-white subTile">
-                    <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} alt="Card image" />
-                    <Card.ImgOverlay className="behindText">
-                        <Card.Title>Coding Basics</Card.Title>
-                        <Card.Text>
-                        We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources. 
-                        </Card.Text>
-                        <a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a><br/>
-                        <a className="linkLight" href="https://flexboxfroggy.com/">Structuring web pages game.</a><br/>
-                        <a className="linkLight" href="https://www.w3schools.com/js/js_intro.asp">W3's introduction to JavaScript.</a><br/>
-                        <a className="linkLight" href="https://www.youtube.com/watch?v=GTWrWM1UsnA">The Coding Train's JavaScript Tic Tac Toe.</a><br/>
-                        <a className="linkLight" href="https://www.youtube.com/watch?v=Ukg_U3CnJWI">What is JavaScript?</a><br/>
-                        <a className="linkLight" href="https://www.youtube.com/playlist?list=PLM_i0obccy3uiITMEb7PUlzgIFlxq9fvv">JavaScript for beginners.</a><br/>
-                    </Card.ImgOverlay>
-                </Card>
+            <Card className="text-white subTile programBackImage3">
+                <Card.ImgOverlay className="behindText">
+                    <Card.Title>Coding Basics</Card.Title>
+                    <Card.Text>
+                    We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources. 
+                    </Card.Text>
+                    <a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a><br/>
+                    <a className="linkLight" href="https://flexboxfroggy.com/">Structuring web pages game.</a><br/>
+                    <a className="linkLight" href="https://www.w3schools.com/js/js_intro.asp">W3's introduction to JavaScript.</a><br/>
+                    <a className="linkLight" href="https://www.youtube.com/watch?v=GTWrWM1UsnA">The Coding Train's JavaScript Tic Tac Toe.</a><br/>
+                    <a className="linkLight" href="https://www.youtube.com/watch?v=Ukg_U3CnJWI">What is JavaScript?</a><br/>
+                    <a className="linkLight" href="https://www.youtube.com/playlist?list=PLM_i0obccy3uiITMEb7PUlzgIFlxq9fvv">JavaScript for beginners.</a><br/>
+                </Card.ImgOverlay>
             </Card>
         </Col>
     </Row>

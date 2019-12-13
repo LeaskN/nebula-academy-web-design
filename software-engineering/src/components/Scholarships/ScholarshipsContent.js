@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import './ScholarshipsContent.css'
 
 export const ScholarshipsContent = () => (
@@ -12,7 +12,7 @@ export const ScholarshipsContent = () => (
       <Row>
         <Col xs={6}>
           <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+            <Card.Img variant="top" src={require("../../assets/17_homemaker.png")} />
             <Card.Body>
               <Card.Title>Homemaker Returning to the Workforce:</Card.Title>
               <ul className="cardInformation">
@@ -27,7 +27,7 @@ export const ScholarshipsContent = () => (
           </Col>
           <Col xs={6}>
             <Card style={{ width: '22rem' }}>
-              <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+              <Card.Img variant="top" src={require("../../assets/18_LowIncome.jpg")} />
               <Card.Body>
                 <Card.Title>Low Income Individuals:</Card.Title>
                 <ul>
@@ -49,7 +49,7 @@ export const ScholarshipsContent = () => (
       <Row>
         <Col xs={6}>
           <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+            <Card.Img variant="top" src={require("../../assets/19_Disability.jpg")} />
             <Card.Body>
               <Card.Title>Individuals with Disability:</Card.Title>
               <ul className="cardInformation">
@@ -62,7 +62,7 @@ export const ScholarshipsContent = () => (
           </Col>
           <Col xs={6}>
             <Card style={{ width: '22rem' }}>
-              <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+              <Card.Img variant="top" src={require("../../assets/20_55+.jpg")} />
               <Card.Body>
                 <Card.Title>Individuals 55 and Older:</Card.Title>
                 <ul>
@@ -77,7 +77,7 @@ export const ScholarshipsContent = () => (
       <Row>
         <Col xs={6}>
           <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+            <Card.Img variant="top" src={require("../../assets/21_singleparent.jpg")} />
             <Card.Body>
               <Card.Title>Single Parent:</Card.Title>
               <ul className="cardInformation">
@@ -92,7 +92,7 @@ export const ScholarshipsContent = () => (
           </Col>
           <Col xs={6}>
             <Card style={{ width: '22rem' }}>
-              <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+              <Card.Img variant="top" src={require("../../assets/22_veterans.jpg")} />
               <Card.Body>
                 <Card.Title>Veteran:</Card.Title>
                 <ul>
@@ -107,7 +107,7 @@ export const ScholarshipsContent = () => (
       <Row>
         <Col xs={6}>
           <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+            <Card.Img variant="top" src={require("../../assets/22_JusticeSystem.jpg")} />
             <Card.Body>
               <Card.Title>Individuals formerly involved in the justice system?</Card.Title>
               <ul className="cardInformation">
@@ -120,7 +120,7 @@ export const ScholarshipsContent = () => (
           </Col>
           <Col xs={6}>
             <Card style={{ width: '22rem' }}>
-              <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+              <Card.Img variant="top" src={require("../../assets/22_homeless.jpg")} />
               <Card.Body>
                 <Card.Title>Homeless individuals:</Card.Title>
                 <ul>
@@ -142,7 +142,7 @@ export const ScholarshipsContent = () => (
       <Row>
         <Col>
           <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/guestSpeaker.jpg")} />
+            <Card.Img variant="top" src={require("../../assets/22_NativeAmerican.jpg")} />
             <Card.Body>
               <Card.Title>Native American:</Card.Title>
               <ul className="cardInformation">
