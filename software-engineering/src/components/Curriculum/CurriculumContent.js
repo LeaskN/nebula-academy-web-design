@@ -301,15 +301,15 @@ class CurriculumContent extends Component {
                                                     <p>10:00 AM: Code practice</p>
                                                     <p style={{marginLeft:"20px"}}>This is core interview practice and will be kept up throughout.</p>
                                                     <p>11:00 AM: Applying for jobs</p>
-                                                    <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new applicatios. We want to ensure partitipants are hitting both quality and quantity.</p>
+                                                    <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new applications. We want to ensure participants are hitting both quality and quantity.</p>
                                                     <p>12:30 PM: Lunch</p>
                                                     <p style={{marginLeft:"20px"}}>Having a set time for lunch helps fight burnout and is still suggested as something the students should observe for the full hour.</p>
-                                                    <p>1:30 PM: Lunch</p>
+                                                    <p>1:30 PM: Project Time</p>
                                                     <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we dont suggest starting new projects at this time. However we definintely want our participants to dive in deeper on older projects.</p>
-                                                    <p>3:00 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of jepordy games, whiteboarding, or coding challanges.</p>
+                                                    <p>3:00 PM: Interview Preparation</p>
+                                                    <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of Jeopardy games, white-boarding, or coding challenges.</p>
                                                     <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" applications through application websites like LinkedIn, ZipRecruiter, & Glassdoor.</p>
+                                                    <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" applications through application websites like LinkedIn, Microsoft, Google, Amazon, Company Partner Sites, ZipRecruiter, & Glassdoor.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
