@@ -47,8 +47,13 @@ class CurriculumContent extends Component {
             <React.Fragment>
                 <Container>
                     <h1>Full Stack Development</h1>
-                    <p>Description of what web applications are, what front-end is, what back endis. How differetn people and coders have different preferences and that there are differnt jobs to apply to. Mention Some technologies like CSS HTML REACT AWS and more.</p>
-                    <p>AWS Certification Description</p>   
+                    <p>A <b>web application</b> is an application program that is stored on a server in the cloud somewhere and delivered over the internet through a web browser interface like Google Chrome.  Web services are Web Apps by definition and many, although not all, websites contain Web Apps.</p>
+                    <p>A <b>full stack developer</b> is an engineer who can handle all the work of databases, servers, systems engineering, and clients. Depending on the project, what customers need may be a mobile stack, a Web stack, or a native application stack.</p>
+                    <p><b>Front-end development</b> manages everything that users visually see first in their browser or application. Front end developers are responsible for the look and feel of a site. Front end development is mostly focused on what some may say is the "client side" of development.</p>
+                    <p><b>Back-end development</b> manages everything that users don’t see in their browser or application. Back end developers are responsible for the databases of a site. Back end development is mostly focused on what some may is the " server-side " of development.</p>
+                    <p>Participants may know where they want to focus from a skills development coming into a program, or have no idea, the program will support the decision process as participants skills evolve.  No matter what path they decide to take or develop, all participants will understand how the two roles interact and the responsibilities of their role.</p>
+                    <h3>AWS Certification:</h3>
+                    <p>Our program is unique in that we integrate Amazon Web Services Cloud Practitioner Certification into our program.  We want to ensure our participants can differentiate themselves in applying to jobs post the program. The AWS Cloud Foundations course provides participants with an overall understanding of cloud computing concepts, independent of specific technical roles. It provides participants with a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
