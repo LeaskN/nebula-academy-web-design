@@ -238,10 +238,10 @@ class CurriculumContent extends Component {
                                                     <p>11:00 AM: New Subject Matter</p>
                                                     <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
                                                     <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program.  This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
-                                                    <p>1:30 PM: Lunch</p>
+                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program. This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
+                                                    <p>1:30 PM: Projects</p>
                                                     <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands-on style.</p>
-                                                    <p>3:00 PM: Lunch</p>
+                                                    <p>3:00 PM: Content Review</p>
                                                     <p style={{marginLeft:"20px"}}>Old Material. At the end of the day we want to cover old topics that students feel they need to brush up on.</p>
                                                     <p>4:00 PM: End of day</p>
                                                     <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "official" end of day.</p>
