@@ -259,8 +259,8 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Students will have to apply themselves both in and outside of the classroom. We reccomend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
-                                                <p>We understand that this is intense and have built in planning to ensure that our students dont burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recooperate.</p>
+                                                <p>Students will have to apply themselves both in and outside of the classroom. We recommend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
+                                                <p>We understand that this is intense and have built in planning to ensure that our students don't burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recuperate.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
