@@ -21,7 +21,7 @@ export const Footer = () => (
             </ul>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="https://twitter.com/nebulaacademy?lang=en"><img src={TwitterIcon} height="125px" alt=""></img></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="https://twitter.com/nynebula?lang=en"><img src={TwitterIcon} height="125px" alt=""></img></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="https://www.facebook.com/NebulaAcademyNY/"><img src={FacebookIcon} height="125px" alt=""></img></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="https://www.instagram.com/nebulaacademia/"><img src={InstagramIcon} height="125px" alt=""></img></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="https://www.linkedin.com/company/40795558/admin/"><img src={LinkedInIcon} height="125px" alt=""></img></Nav.Link></Nav.Item>
