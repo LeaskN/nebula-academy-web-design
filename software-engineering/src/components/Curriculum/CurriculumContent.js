@@ -302,8 +302,8 @@ class CurriculumContent extends Component {
                                                     <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new applications. We want to ensure participants are hitting both quality and quantity.</p>
                                                     <p>12:30 PM: Lunch</p>
                                                     <p style={{marginLeft:"20px"}}>Having a set time for lunch helps fight burnout and is still suggested as something the students should observe for the full hour.</p>
-                                                    <p>1:30 PM: Project Time</p>
-                                                    <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we dont suggest starting new projects at this time. However we definintely want our participants to dive in deeper on older projects.</p>
+                                                    <p>1:30 PM: Projects</p>
+                                                    <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we don't suggest starting new projects at this time. However we definitely want our participants to dive in deeper on older projects.</p>
                                                     <p>3:00 PM: Interview Preparation</p>
                                                     <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of Jeopardy games, white-boarding, or coding challenges.</p>
                                                     <p>4:00 PM: End of day</p>
