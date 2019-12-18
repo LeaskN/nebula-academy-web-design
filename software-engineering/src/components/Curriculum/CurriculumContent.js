@@ -59,7 +59,6 @@ class CurriculumContent extends Component {
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button3()}>React</Card.Title>
                                         <hr/>
-                                        <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button4()}>Certifications</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button5()}>Job Placement</Card.Title>
@@ -196,7 +195,6 @@ class CurriculumContent extends Component {
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton2()}>Daily Schedule</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton3()}>Practice Hours</Card.Title>
-                                        <br/>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.scheduleButton4()}>Weekly Calendar</Card.Title>
                                         <hr/>

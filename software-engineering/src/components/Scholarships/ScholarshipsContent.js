@@ -130,7 +130,7 @@ export const ScholarshipsContent = () => (
                   <li>Do you require assistance in overcoming barriers to employment?</li>
                   <li>Are you experiencing difficulty in obtaining employment and are looking to upgrade your skills for better opportunities in the workforce?</li>
                   <li>State or local income-based public assistance</li>
-                  <li>Does your total family income not exceed the higher of;</li>
+                  <li>Does your total family income not exceed the higher of:</li>
                   <li>The poverty line; or</li>
                   <li>70% of the Lower Living Standard Income Level; or</li>
                   <li>Is a homeless individual.</li>
@@ -140,7 +140,7 @@ export const ScholarshipsContent = () => (
           </Col>
       </Row>
       <Row>
-        <Col>
+        <Col xs={6}>
           <Card style={{ width: '22rem' }}>
             <Card.Img variant="top" src={require("../../assets/22_NativeAmerican.jpg")} />
             <Card.Body>
