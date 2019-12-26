@@ -81,7 +81,7 @@ class CurriculumContent extends Component {
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
-                                                    <p>Coding Basics include things from creating a personalized coding environment to JavaScript baiscs, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
+                                                    <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
                                                 </Col>
                                             </Row>

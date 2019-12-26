@@ -1,2 +1,2 @@
 # Nebula-Academy-SE-Program
-A website built with React - it will host the Nebula Academy 22 week software engineering program website
+The overall goal of the website is to give users information on the 22 week Nebula Academy Software Engineering program. It is buit using React, JavaScript, CSS, & HTML. 
