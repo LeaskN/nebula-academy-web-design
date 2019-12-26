@@ -1,2 +1,3 @@
-# Nebula-Academy-SE-Program
-The overall goal of the website is to give users information on the 22 week Nebula Academy Software Engineering program. It is buit using React, JavaScript, CSS, & HTML. 
+# Nebula-Academy-Web-Design
+- Nebula Academy is equipping all learners of all ages with the necessary skills to address the computer science gap. 
+There are three domains, code.nebulaacademy.com (which can be found under the software-engineering folder), teach.nebulaacademy.com, & kids.nebulaacademy.com.  
