@@ -95,8 +95,8 @@ export const HomeContent = () => (
             </Row>
             <Row className="introRow3">
                 <Col xs={12} md={6}>
-                    <Card className="row2Tile row2Tile1">
-                        <Card className="text-white subTile subTile3">
+                    <Card className="row3Tile row3Tile1">
+                        <Card className="text-white row3Tile subTile subTile3">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Learner Support</Card.Title>
                                 <Card.Text>
@@ -109,8 +109,8 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
                 <Col xs={12} md={6}>
-                    <Card className="row2Tile row2Tile2 row3Tile2">
-                        <Card className="text-white subTile subTile4">
+                    <Card className="row3Tile row3Tile2">
+                        <Card className="text-white row3Tile row3Tile2 subTile subTile4">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>More Info</Card.Title>
                                 <Card.Text>

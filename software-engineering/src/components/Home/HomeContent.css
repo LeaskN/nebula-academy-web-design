@@ -133,18 +133,23 @@
     .row1Tile {
         padding: 0px !important;
         margin: 0px !important;
-        min-height: 600px;
+        min-height: 730px;
     }
     .row2Tile{
         padding: 0px !important;
         margin: 0px !important;
+        margin-bottom: -50px !important;
+        min-height: 600px;
     }
     .row3Tile{
         padding: 0px !important;
         margin: 0px !important;
+        min-height: 1000px;
     }
-    .row1Tile2{
-        min-height: 400px;
+    .row3Tile2{
+        padding: 0px !important;
+        margin: 0px !important;
+        min-height: 750px;
     }
     .row1Tile3{
         min-height: 400px;
