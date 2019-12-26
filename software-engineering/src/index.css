@@ -73,11 +73,13 @@ code {
     max-width: 1500px;
   }
 }
-@media (max-width: 576px){
+/* @media (max-width: 576px){
   .container {
       width: 100vw;
+      margin: 0px;
+      padding: 0px;
   }
-}
+} */
 .card-body {
   margin: auto;
   width: 100%;

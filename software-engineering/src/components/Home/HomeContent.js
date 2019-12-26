@@ -4,7 +4,7 @@ import './HomeContent.css';
 
 export const HomeContent = () => (
     <React.Fragment>
-        <Container>
+        <Container style={{padding:"0px"}}>
             <Row className="introRow1">
                 <Col xs={12} lg={12} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile1">
@@ -41,7 +41,7 @@ export const HomeContent = () => (
                 </Col>
             </Row>
             <Row className="introRow2">
-                <Col md={6} xl={4}>
+                <Col xs ={12} md={6} xl={4}>
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile subTile1">
                             <Card.ImgOverlay className="behindText">
@@ -54,20 +54,20 @@ export const HomeContent = () => (
                         </Card>
                     </Card>
                 </Col>
-                <Col md={6} xl={4}>
+                <Col xs ={12} md={6} xl={4}>
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile subTile2">
                             <Card.ImgOverlay className="behindText">
                                 <Card.Title>Job Readiness</Card.Title>
                                 <Card.Text>
-                                Our curriculum combines hard and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. We know that industry values certifications, tech skills, and soft-skills, so we have created a blend to provide our participants with a competitive edge having a certification from industry partners like Amazon and Microsoft.
+                                Our curriculum combines hard- and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. 
                                 </Card.Text>
                                 <a href="/outcomes" className="linkLight">Click here to read more about job readiness.</a>
                             </Card.ImgOverlay>
                         </Card>
                     </Card>
                 </Col>
-                <Col  lg={12} xl={4}>
+                <Col  xs ={12} lg={12} xl={4}>
                     <Card className="row2Tile bg-dark text-white row2Tile3">
                         <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
                         <Card.ImgOverlay className="hideImage">

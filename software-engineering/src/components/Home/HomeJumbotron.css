@@ -10,6 +10,22 @@
     margin: 0px;
     width: 100vw;
 }
+@media (max-width: 769px){
+    .jumboText{
+        font-size: 45px;
+        padding: 0px;
+    }
+    .row2Tile{
+        padding-left : 0px !important;
+        padding-right: 0px !important;
+    }
+}
+@media (max-width: 1199px){
+    .row2Tile{
+        /* padding-left : 0px !important; */
+        padding-right: 0px !important;
+    }
+}
 .homeOverlay{
     background-color: #000;
     opacity: .6;
