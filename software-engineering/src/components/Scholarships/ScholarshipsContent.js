@@ -5,7 +5,7 @@ import './ScholarshipsContent.css'
 export const ScholarshipsContent = () => (
   <React.Fragment>
     <Container>
-      Scholarships are provide by We Connect The Dots, Inc. Through government grants, corporate and private donations, We Connect The Dots is able to provide a limited number of participants with full scholarships.  Some scholarships include transportation to and from the program, stipends to support the financial needs during the program, and a laptop.
+    Scholarships are provided by We Connect The Dots, Inc., through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact succeed@nebualacademyny.com or call 631-468-7475 to speak with our team.
     </Container>
     <br/>
     <Container className="">

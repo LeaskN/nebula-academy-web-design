@@ -57,22 +57,38 @@ class ApplicationContent extends Component {
             <Container>
                 <Row>
                     <Col xs={12}>
-                        <h2 style={{marginTop:"20px"}}>The application consists of two parts</h2>
-                        <Col xs={10}>
-                            <h3>PART I:</h3>
-                            <Col xs={10}>
-                                <p>You provide personal background information (Budget 15 to 60 minutes) </p>
-                            </Col>
-                        </Col>
-                        <Col xs={10}>
-                            <h3>PART II:</h3>
+                        <Row>
+                            <h2 style={{marginTop:"20px"}}>The program application process consists of three phases. All candidates: Scholarship applicants, partial, full, and or paid applicants must complete all three phases.</h2>
+                        </Row>
+                        <Row style={{marginLeft:"20px", marginTop:"20px"}}>
+                            <Col xs={10} lg={4}>
+                                <h3>Phase I:</h3>
                                 <Col xs={10}>
-                                    <p> Short Essays, Video, and Coding Challenges. (Budget 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions) </p>
-                                    <p>To preserve your data, do not close your browser session until Part I is complete.</p>
-                                    <p>Upon completion of Part I you will receive a link to Part II. </p>
-                                    <p>Questions? Contact us at succeed@nebulaacademy.com.  </p>
+                                    <p>You provide personal background information (Allow for 15 to 30 minutes)</p>
                                 </Col>
-                        </Col>
+                            </Col>
+                            <Col xs={10} lg={4}>
+                                <h3>Phase II:</h3>
+                                    <Col xs={10}>
+                                        <p>Short Essays, Video, and Coding challenges are required for all candidates. (Allow for 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions)</p>
+                                    </Col>
+                            </Col>
+                            <Col xs={10} lg={4}>
+                                <h3>Phase III:</h3>
+                                    <Col xs={10} >
+                                        <p>Each candidate will be required to do either an in person or video interview, scheduled through our program manager.</p>
+                                        
+                                    </Col>
+                            </Col>
+                        </Row>
+                        <hr></hr>
+                        <Row>
+                            <Col className="alignCenter">
+                                <h3>Completing online Application:</h3>
+                                    <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
+                            </Col>
+                        </Row>
+                        <hr></hr>
                         <Row>
                             <Col className="formContainer">
                                 <Iframe url="https://forms.office.com/Pages/ResponsePage.aspx?id=DYC-61190U-xMgLVy3lNnmhMOgtjMC5JhCXq1Gwz5J5UQjlZMUZKSVFNRUxYVEpTRThOMlo2UEoxTyQlQCN0PWcu&embed=true"

@@ -6,7 +6,7 @@ import './NavigationBar.css';
 export const NavigationBar = () => (
     <React.Fragment>
         <Navbar bg="dark" className="mainNavbar navbar-dark navbar-collapse" toggleable expand="lg">
-            <Navbar.Brand  href="/"><img src={Icon} height="65px" alt=""></img></Navbar.Brand>
+            <Navbar.Brand  href="/"><img src={Icon} height="50px" alt=""></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
@@ -20,7 +20,7 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/guestspeakers">GuestSpeakers</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
-                    <Button href="/application" variant="outline-success">Apply</Button>
+                    <Button href="/application" variant="success">Apply</Button>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
