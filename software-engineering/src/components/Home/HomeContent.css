@@ -128,6 +128,9 @@
     .row1Tile1{
         max-height: 400px;
     }
+    .row1Tile2{
+        max-height: 400px;
+    }
 }
 @media (max-width: 700px){
     .row1Tile {
@@ -150,6 +153,9 @@
         padding: 0px !important;
         margin: 0px !important;
         min-height: 750px;
+    }
+    .row1Tile2{
+        min-height: 400px;
     }
     .row1Tile3{
         min-height: 400px;
