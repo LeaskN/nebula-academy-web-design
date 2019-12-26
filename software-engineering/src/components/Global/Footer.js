@@ -10,7 +10,7 @@ import './Footer.css';
 export const Footer = () => (
     <React.Fragment>
         <Navbar bg="dark" className="footerNavbar mainNavbar navbar-dark navbar-collapse" toggleable expand="lg">
-            <Navbar.Brand  href="/"><img src={NebulaIcon} height="100px" alt=""></img></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={NebulaIcon} height="100px" alt=""></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <ul>
             <Nav.Item><Nav.Link href="/">About</Nav.Link></Nav.Item>

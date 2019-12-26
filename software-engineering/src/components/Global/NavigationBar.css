@@ -6,6 +6,17 @@
     width: 100vw;
     z-index: 10;
 }
+.navBarLogoSmall{
+    display: none;
+}
+@media (max-width:388px){
+    .navBarLogoSmall{
+        display: flex;
+    }
+    .navBarLogo{
+        display: none;
+    }
+}
 .nav-link{
     color: #bbb !important;
 }
