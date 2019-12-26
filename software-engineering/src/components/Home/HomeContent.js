@@ -9,7 +9,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={12} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile1">
                         <Card.ImgOverlay>
-                            <Card.Title>Learn to Code in 6 Months</Card.Title>
+                            <h4>Learn to Code in 6 Months</h4>
                             <Card.Text>
                             Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                             </Card.Text>
@@ -20,7 +20,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={6} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile2">
                         <Card.ImgOverlay>
-                            <Card.Title>Get a Technical Job in a Growing Field</Card.Title>
+                            <h4>Get a Technical Job in a Growing Field</h4>
                             <Card.Text>
                             The field is exponentially growing. According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.
                             </Card.Text>
@@ -31,7 +31,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={6} xl={4}>
                     <Card className="row1Tile bg-dark text-white row1Tile3">
                         <Card.ImgOverlay>
-                            <Card.Title>Industry Starting Salaries are Strong</Card.Title>
+                            <h4>Industry Starting Salaries are Strong</h4>
                             <Card.Text>
                             The national average salary for an Entry Level Software Engineer is $86,367 in United States, compared to a national average of entry level jobs at a salary of $40,013, according to Glassdoor.
                             </Card.Text>
@@ -45,7 +45,7 @@ export const HomeContent = () => (
                     <Card className="row2Tile row2Tile1">
                         <Card className="text-white subTile subTile1">
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Market-Driven Curriculum</Card.Title>
+                                <h4>Market-Driven Curriculum</h4>
                                 <Card.Text>
                                 Nebula Academy programs begin with the career goal in mind. At the national level, we engage with industry to understand challenges, translate them into skills, and deliver intense training to participants who graduate ready to make meaningful contributions to employers.
                                 </Card.Text>
@@ -58,7 +58,7 @@ export const HomeContent = () => (
                     <Card className="row2Tile row2Tile2">
                         <Card className="text-white subTile subTile2">
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Job Readiness</Card.Title>
+                                <h4>Job Readiness</h4>
                                 <Card.Text>
                                 Our curriculum combines hard- and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. 
                                 </Card.Text>
@@ -69,7 +69,6 @@ export const HomeContent = () => (
                 </Col>
                 <Col  xs ={12} lg={12} xl={4}>
                     <Card className="row2Tile bg-dark text-white row2Tile3">
-                        <Card.Img src={require('../../assets/NicLeaskPHOTO.jpg')} display='hidden' alt="Card image" />
                         <Card.ImgOverlay className="hideImage">
                             <br/>
                             <h1 className="centralText">$62,910</h1>
@@ -93,12 +92,13 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
             </Row>
+            <br/>
             <Row className="introRow3">
                 <Col xs={12} md={6}>
                     <Card className="row3Tile row3Tile1">
                         <Card className="text-white row3Tile subTile subTile3">
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>Learner Support</Card.Title>
+                                <h4>Learner Support</h4>
                                 <Card.Text>
                                 Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
                                 </Card.Text>
@@ -112,7 +112,7 @@ export const HomeContent = () => (
                     <Card className="row3Tile row3Tile2">
                         <Card className="text-white row3Tile row3Tile2 subTile subTile4">
                             <Card.ImgOverlay className="behindText">
-                                <Card.Title>More Info</Card.Title>
+                                <h4>More Info</h4>
                                 <Card.Text>
                                 As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement.  If you are additional questions that we have not answered please reach out to our team at succeed@nebulaacademy.com
                                 </Card.Text>
