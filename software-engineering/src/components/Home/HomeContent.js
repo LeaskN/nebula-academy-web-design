@@ -102,7 +102,7 @@ export const HomeContent = () => (
                                 <Card.Text>
                                 Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
                                 </Card.Text>
-                                <Card.Text>Click here to read more about curriculum.</Card.Text>
+                                <br></br>
                                 <Button href="/scholarships" variant="success">Scholarships</Button>
                             </Card.ImgOverlay>
                         </Card>
@@ -114,7 +114,7 @@ export const HomeContent = () => (
                             <Card.ImgOverlay className="behindText">
                                 <h4>More Info</h4>
                                 <Card.Text>
-                                As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement.  If you are additional questions that we have not answered please reach out to our team at succeed@nebulaacademy.com
+                                As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com
                                 </Card.Text>
                             </Card.ImgOverlay>
                         </Card>
