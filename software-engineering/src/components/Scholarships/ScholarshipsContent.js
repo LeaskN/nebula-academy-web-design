@@ -12,7 +12,7 @@ export const ScholarshipsContent = () => (
       </a>
     </div>
     <br/>
-    Scholarships are provided by <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">We Connect The Dots, Inc.</a>, through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact succeed@nebualacademyny.com or call 631-468-7475 to speak with our team.
+    Scholarships are provided by <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">We Connect The Dots, Inc.</a>, through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact scholarshipts@wctd.org or call 631-468-7475 to speak with our team.
     </Container>
     <br/>
     <Container className="">

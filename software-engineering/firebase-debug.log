@@ -1,0 +1,34 @@
+[debug] [2019-12-27T17:44:24.789Z] ----------------------------------------------------------------------
+[debug] [2019-12-27T17:44:24.791Z] Command:       /Users/Nic/.nvm/versions/node/v10.16.0/bin/node /Users/Nic/.nvm/versions/node/v10.16.0/bin/firebase deploy
+[debug] [2019-12-27T17:44:24.791Z] CLI Version:   7.9.0
+[debug] [2019-12-27T17:44:24.791Z] Platform:      darwin
+[debug] [2019-12-27T17:44:24.791Z] Node Version:  v10.16.0
+[debug] [2019-12-27T17:44:24.792Z] Time:          Fri Dec 27 2019 12:44:24 GMT-0500 (Eastern Standard Time)
+[debug] [2019-12-27T17:44:24.792Z] ----------------------------------------------------------------------
+[debug] [2019-12-27T17:44:24.792Z] 
+[debug] [2019-12-27T17:44:24.800Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-27T17:44:24.801Z] > authorizing via signed-in user
+[debug] [2019-12-27T17:44:24.801Z] [iam] checking project nebula-se-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-27T17:44:24.803Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-27T17:44:24.803Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-27T17:44:25.593Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-27T17:44:25.602Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nebula-se-website:testIamPermissions  
+
+[debug] [2019-12-27T17:44:26.918Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-27T17:44:26.919Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nebula-se-website  
+ 
+[debug] [2019-12-27T17:44:27.856Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'nebula-se-website'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-12-27T17:44:27.860Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/nebula-se-website/versions  
+
+[debug] [2019-12-27T17:44:29.171Z] <<< HTTP RESPONSE 200
+[info] i  hosting[nebula-se-website]: beginning deploy...
+[info] i  hosting[nebula-se-website]: found 54 files in build
+[debug] [2019-12-27T17:44:30.090Z] [hosting] hash cache [YnVpbGQ] stored for 54 files
+[debug] [2019-12-27T17:44:30.090Z] [hosting][hash queue][FINAL]
+[debug] [2019-12-27T17:44:30.090Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/nebula-se-website/versions/738e26e84962374f:populateFiles  
+ <request body omitted>
