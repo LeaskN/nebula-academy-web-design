@@ -1,11 +1,18 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import './ScholarshipsContent.css'
+import './ScholarshipsContent.css' 
+import WCTDIcon from '../../assets/We_Connect_The_Dots_logo_Large.png';
 
 export const ScholarshipsContent = () => (
   <React.Fragment>
     <Container>
-    Scholarships are provided by We Connect The Dots, Inc., through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact succeed@nebualacademyny.com or call 631-468-7475 to speak with our team.
+    <div style={{height:"100px", justifyContent:"center", display:"flex"}}>
+      <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">
+        <img height="100px" alt="wctd.org" src={WCTDIcon}></img>
+      </a>
+    </div>
+    <br/>
+    Scholarships are provided by <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">We Connect The Dots, Inc.</a>, through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact succeed@nebualacademyny.com or call 631-468-7475 to speak with our team.
     </Container>
     <br/>
     <Container className="">
