@@ -7,13 +7,13 @@ export const HomeContent = () => (
         <Container>
             <Row>
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
-                <Card className="introRowTile">
-                    <Card.Body>
-                        <Card.Title>Learn To Code in 6 Months</Card.Title>
-                        <Card.Text>
-                            Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
-                        </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                    <Card className="introRowTile">
+                        <Card.Body>
+                            <Card.Title>Learn To Code in 6 Months</Card.Title>
+                            <Card.Text>
+                                Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
+                            </Card.Text>
+                            <Button href="/application" variant="success">Apply Now</Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -23,13 +23,12 @@ export const HomeContent = () => (
                             <Card.Title>Why Nebula Academy?</Card.Title>
                             <Card.Text>
                                 <ul style={{listStyleType:"none"}}>
-                                    <li>Earn the fastest growing industry certification to accelerate the employment process.</li>
-                                    <li>Gain access to the CareerLeader Assessment. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
-                                    <li>Multiple payment options such as Scholarships, Pay After Employment, and Extended Payment.</li>
-                                    <li>Pending approval 1/6/20: All Nebula Academy participants will be able to earn college credits.</li>
+                                    <li><b>Earn the <a className="link" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
+                                    <li>Gain access to the <b><a className="link" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
+                                    <li><b>Multiple payment options</b> such as Scholarships, Pay After Employment, and Extended Payment.</li>
+                                    <li><b>Pending approval 1/6/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
                                 </ul>  
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
                         </Card.Body>
                     </Card>
                 </Col>
