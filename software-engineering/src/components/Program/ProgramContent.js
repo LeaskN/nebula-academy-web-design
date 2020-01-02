@@ -36,7 +36,7 @@ export const ProgramContent = () => (
                     <Card.ImgOverlay className="behindText">
                         <Card.Title>Coding Basics</Card.Title>
                         <Card.Text>
-                        We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources. 
+                        We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources.
                         </Card.Text>
                         <a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a><br/>
                         <a className="linkLight" href="https://flexboxfroggy.com/">Structuring web pages game.</a><br/>
@@ -51,4 +51,3 @@ export const ProgramContent = () => (
     </Container>
   </React.Fragment>
 )
-
