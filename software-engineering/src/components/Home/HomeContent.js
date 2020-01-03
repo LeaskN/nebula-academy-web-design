@@ -77,7 +77,7 @@ export const HomeContent = () => (
                     </Row>
                 </Col>
                 <Col  xs={12} lg={12} xl={4}>
-                    <Card className=" bg-dark text-white row2Tile3">
+                    <Card className=" bg-dark text-white ">
                         <Card className="purpleBackground">
                             <br/>
                             <h1 className="centralText">$62,910</h1>
