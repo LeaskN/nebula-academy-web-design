@@ -45,22 +45,15 @@
 }
 .sponsorsArea{
     justify-content: space-around;
-    padding: 15px;
+    
 }
-.partnersCardOpacity{
-    background-color: rgba(0,0,0,0.6)
-}
-.sponsorsCardOpacity{
-    background-color: rgba(0,0,0,0.6);
-}
-
 .curriculumBackImage1{
+    border:10px solid white;
     background-image: url("../../assets/10_handshake.jpg");
     background-size: cover;
-    background-position: -0px -220px;
 }
 .curriculumBackImage2{
+    border:10px solid white;
     background-image: url("../../assets/11_GuestSpeakers.jpg");
     background-size: cover;
-    background-position: -0px -170px;
 }

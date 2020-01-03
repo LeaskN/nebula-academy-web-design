@@ -169,24 +169,28 @@ class CurriculumContent extends Component {
                         <p>We aim to get our candidates placed. Unlike institutions that aim to educate without directing individuals towards a job we primarly work on ensuring our candidates get hired. Beyond our partners and connections, both local and national, we aim to get our students certifications, pass assessments, and create projects that will help with the hiring process.</p>
                     </Row>
                     <Row className="sponsorsArea">
-                        <Card id="partnersCard" className="bg-dark text-white curriculumBackImage1">
-                            <Card.ImgOverlay className="partnersCardOpacity">
-                                <Card.Title>Partners Page</Card.Title>
-                                <Card.Text>
-                                Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
-                                </Card.Text>
-                                <Button href="/partners" variant="primary">Partners Page</Button>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card id="speakersCard" className="bg-dark text-white curriculumBackImage2">
-                            <Card.ImgOverlay className="sponsorsCardOpacity">
-                                <Card.Title>Guest Speakers Page</Card.Title>
-                                <Card.Text>
-                                The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
-                                </Card.Text>
-                                <Button href="/guestspeakers" variant="primary">Guest Speakers Page</Button>
-                            </Card.ImgOverlay>
-                        </Card>
+                        <Col xs={12} lg={6} xl={6} className="curriculumBackImage1">
+                            <Card className="overImage">
+                                <Card.Body>
+                                    <Card.Title>Partners</Card.Title>
+                                    <Card.Text>
+                                        Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
+                                    </Card.Text>
+                                    <Button href="/partners" variant="primary">Partners</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col xs={12} lg={6} xl={6} className="curriculumBackImage2">
+                            <Card className="overImage">
+                                <Card.Body>
+                                    <Card.Title>Guest Speakers</Card.Title>
+                                    <Card.Text>
+                                        The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
+                                    </Card.Text>
+                                    <Button href="/guestspeakers" variant="primary">Guest Speakers</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
                     </Row>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
