@@ -17,7 +17,7 @@ export const HomeContent = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={12} lg={6} xl={4} className="introRow1Column3">
+                <Col xs={12} lg={6} xl={4} className="introRow1Column2">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>Why Nebula Academy?</Card.Title>
@@ -32,7 +32,7 @@ export const HomeContent = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={12} lg={12} xl={4} className="introRow1Column2">
+                <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>Industry Starting Salaries are Strong</Card.Title>
@@ -77,7 +77,7 @@ export const HomeContent = () => (
                     </Row>
                 </Col>
                 <Col  xs={12} lg={12} xl={4}>
-                    <Card className=" bg-dark text-white ">
+                    <Card className="bg-dark text-white">
                         <Card className="purpleBackground">
                             <br/>
                             <h1 className="centralText">$62,910</h1>
@@ -102,7 +102,7 @@ export const HomeContent = () => (
                 </Col>
             </Row>
             <Row>
-                <Col xl={6} className="row3Tile1">
+                <Col xl={6} className="introRow3Tile1">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>Learner Support</Card.Title>
@@ -113,7 +113,7 @@ export const HomeContent = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xl={6} className="row3Tile2">
+                <Col xl={6} className="introRow3Tile2">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>More Info</Card.Title>
