@@ -4,8 +4,7 @@ import './GuestSpeakersJumbotron.css'
 
 export const GuestSpeakersJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="GuestSpeakers">
-      <div className="guestSpeakersOverlay"></div>
+    <Jumbotron className="guestSpeakersJumbotron">
       <Container>
         <h1 className="jumboText">Guest Speakers</h1>
       </Container>
