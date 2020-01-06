@@ -102,7 +102,7 @@ export const HomeContent = () => (
                 </Col>
             </Row>
             <Row>
-                <Col xl={6} className="introRow3Tile1">
+                <Col xl={6} className="introRow3Tile1 paddingRight">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>Learner Support</Card.Title>
@@ -113,7 +113,7 @@ export const HomeContent = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xl={6} className="introRow3Tile2">
+                <Col xl={6} className="introRow3Tile2 paddingLeft">
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>More Info</Card.Title>

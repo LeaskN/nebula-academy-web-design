@@ -30,3 +30,14 @@
 .card{
     border: 0px !important;
 }
+.paddingRight{
+    border-top: 5px solid white;
+    border-right: 2.5px solid white;
+}
+.paddingLeft{
+    border-top:5px solid white;
+    border-left: 2.5px solid white;
+}
+.paddingMiddle{
+    border-top: 5px solid white;
+}

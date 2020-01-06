@@ -88,16 +88,10 @@ class CurriculumContent extends Component {
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <Card.Text>
-                                        <Col>
-                                        </Col><h1>Advanced JavaScript</h1>
-                                        <Row>
-                                                {/* <Col xs={1} md={3} style={{flexDirection: "column;", justifyContent: "space-around"}}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                    <div style={{height: "100px"}}></div>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                    <div style={{height: "100px"}}></div>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col>*/}
+                                            <Col>
+                                            </Col>
+                                            <h1>Advanced JavaScript</h1>
+                                            <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
                                                     <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
