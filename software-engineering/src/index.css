@@ -47,6 +47,7 @@ code {
 }
 .link{
   text-decoration: none;
+  font-weight: 700;
   color: darkgrey;
 }
 .link:hover{
@@ -54,6 +55,7 @@ code {
 }
 .linkLight{
   text-decoration: none;
+  font-weight: 700;
   color: lightgrey;
 }
 .linkLight:hover{
