@@ -35,7 +35,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>Industry Starting Salaries are Strong</Card.Title>
+                            <Card.Title>Get a Job in a Growing Field with Strong Starting Salaries</Card.Title>
                             <Card.Text>
                                 The national average salary for an Entry Level Software Engineer is $86,367 in United States, compared to a national average of entry level jobs at a salary of $40,013, according to Glassdoor.
                                 The field is exponentially growing. According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.
