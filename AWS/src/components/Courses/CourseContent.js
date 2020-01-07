@@ -5,15 +5,15 @@ import './CourseContent.css'
 export const CourseContent = () => (
   <React.Fragment>
     <Container>
-        <h1>Learn to Code</h1>
-        <p>You’ll be challenged in this immersive software engineering program. Taught by industry professionals, you’ll spend 5 days a week and 8 hours a day in learning sessions, coding time, and self-study. When you have finished our curriculum, you will have learned enough to launch a career in software development. We focus on holistic training, and part of our curriculum covers soft skills and personal development. Our curriculum covers everything you will need to know to be a full-stack developer, as well the opportunity to complete an industry certification from Amazon or Microsoft. From programming languages to industry best practices, you will get hands-on experience working with today’s web development tools.</p>
+        <h1>Earn an Amazon Web Services Certification</h1>
+        <p>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Kearn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
         <Row >
             <Col xs={12} lg={6} xl={4} className="courseBackImage1">
                 <Card className="overImage">
                     <Card.Body>
-                        <Card.Title>Elevate Yourself or Change Your Career</Card.Title>
+                        <Card.Title>Cloud Basics</Card.Title>
                         <Card.Text>
-                            Employment of computer and information technology occupations is projected to grow 21 percent from 2018 to 2028, much faster than the average for all occupations. These occupations are projected to add about 546,200 new jobs. Demand for these workers will stem from greater emphasis on cloud computing, the collection and storage of big data, and information security.  If you are in a current role that is being disrupted by innovation this is an opportunity to build a career that can sustain innovation growth.  Looking to change careers for whatever reason, Nebula Academy can support you in understanding the skills required to shift into new growing opportunities.
+                            Intended for students who seek an overall understanding of cloud computing concepts. Independent of specific technical roles.
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -21,10 +21,9 @@ export const CourseContent = () => (
             <Col xs={12} lg={6} xl={4} className="courseBackImage2">
                 <Card className="overImage">
                     <Card.Body>
-                        <Card.Title>Career Preperation</Card.Title>
+                        <Card.Title>Cloud Architect</Card.Title>
                         <Card.Text>
-                        <p>It can be daunting to participate in an accelerated technology learning course, something that we at Nebula Academy understand well. Many of our participants are balancing school, work, home lives, and other responsibilities, on top of spending 30+ hours a week gaining critical tech skills through our boot camp courses.</p>
-                        <p>We often hear that these learning experiences are the most challenging–and rewarding–of people’s lives. If you’ve decided to enroll in a Nebula Academy course, know that our team is dedicated to your success in gaining employment and building a sustainable career for you and your family.</p>
+                        <p>For students seeking to understand the fundamentals of building IT infrastructure on Amazon Webs Services, or AWS.</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -32,9 +31,9 @@ export const CourseContent = () => (
             <Col xs={12} lg={12} xl={4} className="courseBackImage3">
                 <Card className="overImage">
                     <Card.Body>
-                        <Card.Title>Coding Basics</Card.Title>
+                        <Card.Title>Cloud Operations & Development</Card.Title>
                         <Card.Text>
-                            We believe in elevating students from passion and interest to full employment. What this means is that we do not require any coding experience. Many other programs will require students to learn on their own beforehand but we believe in teaching from the basics to full projects & deployment. However if you'd like to practice and get ahead of the crowd take a look at some of the following resources:
+                            Designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles.
                         </Card.Text>
                         <ul>
                             <li><a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a></li>
