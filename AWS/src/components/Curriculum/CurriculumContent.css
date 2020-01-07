@@ -1,0 +1,59 @@
+.cardDeckLeft{
+    text-align: center;
+    height: 100%;
+    color: #ffffff;
+    background-color: #9971AF;
+}
+.card-body{
+    margin: auto;
+}
+.cardDeckRight{
+    width: 60vw;
+}
+.rightPanelLeftCol{
+    text-align: center;
+    width: 30%;
+}
+.rightPanelRightCol{
+    width: 60%;
+}
+.cardColumns{
+    padding:0px;
+}
+.staticCard{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
+}
+.subtleButton{
+    padding-top: 50px;
+}
+.subtleButton:hover{
+    cursor: pointer;
+}
+#partnersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+}
+#speakersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+    margin-top: 30px;
+}
+.sponsorsArea{
+    justify-content: space-around;
+    
+}
+.curriculumBackImage1{
+    border:10px solid white;
+    background-image: url("../../assets/10_handshake.jpg");
+    background-size: cover;
+}
+.curriculumBackImage2{
+    border:10px solid white;
+    background-image: url("../../assets/11_GuestSpeakers.jpg");
+    background-size: cover;
+}
