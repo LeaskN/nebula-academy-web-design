@@ -1,5 +1,5 @@
 .homeJumbo{
-    background-image: url('../../assets/NebulaAcademyBootCampImg2Cover.jpg');
+    background-image: url('../../assets/partners.jpg');
     background-size: cover;
     color: #ccc;
     z-index: 02;
@@ -8,7 +8,7 @@
     z-index: -2;
     margin: 0px;
 }
-@media (max-width: 769px){
+@media (max-width: 995px){
     .jumboText{
         font-size: 45px;
         padding: 0px;

@@ -49,11 +49,11 @@
 }
 .curriculumBackImage1{
     border:10px solid white;
-    background-image: url("../../assets/10_handshake.jpg");
+    background-image: url("../../assets/partners.jpg");
     background-size: cover;
 }
 .curriculumBackImage2{
     border:10px solid white;
-    background-image: url("../../assets/11_GuestSpeakers.jpg");
+    background-image: url("../../assets/partners.jpg");
     background-size: cover;
 }

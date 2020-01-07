@@ -2,11 +2,3 @@
     display: flex;
     justify-content: space-around;
 }
-
-/* .cardInformation{
-    height: 26px;
-    overflow: hidden;
-}
-.cardInformation:hover{
-    height: fit-content;
-} */
