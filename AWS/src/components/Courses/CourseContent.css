@@ -1,19 +1,19 @@
-.programBackImage1{
+.courseBackImage1{
     background-image: url("../../assets/partners.jpg");
     background-size: cover;
 }
-.programBackImage2{
+.courseBackImage2{
     background-image: url("../../assets/partners.jpg");
     background-size: cover;
     background-position: -300px -0px;
 }
-.programBackImage3{
+.courseBackImage3{
     background-image: url("../../assets/partners.jpg");
     background-size: cover;
     background-position: -0px -0px;
 
 }
-.programBackImage4{
+.courseBackImage4{
     background-image: url("../../assets/partners.jpg");
     background-size: cover;
     background-position: -0px -0px;

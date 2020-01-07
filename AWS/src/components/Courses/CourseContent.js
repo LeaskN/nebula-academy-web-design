@@ -1,14 +1,14 @@
 import React from 'react';
 import { Row, Card, Col, Container } from 'react-bootstrap';
-import './ProgramContent.css'
+import './CourseContent.css'
 
-export const ProgramContent = () => (
+export const CourseContent = () => (
   <React.Fragment>
     <Container>
         <h1>Learn to Code</h1>
         <p>You’ll be challenged in this immersive software engineering program. Taught by industry professionals, you’ll spend 5 days a week and 8 hours a day in learning sessions, coding time, and self-study. When you have finished our curriculum, you will have learned enough to launch a career in software development. We focus on holistic training, and part of our curriculum covers soft skills and personal development. Our curriculum covers everything you will need to know to be a full-stack developer, as well the opportunity to complete an industry certification from Amazon or Microsoft. From programming languages to industry best practices, you will get hands-on experience working with today’s web development tools.</p>
         <Row >
-            <Col xs={12} lg={6} xl={4} className="programBackImage1">
+            <Col xs={12} lg={6} xl={4} className="courseBackImage1">
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>Elevate Yourself or Change Your Career</Card.Title>
@@ -18,18 +18,18 @@ export const ProgramContent = () => (
                     </Card.Body>
                 </Card>
             </Col>
-            <Col xs={12} lg={6} xl={4} className="programBackImage2">
+            <Col xs={12} lg={6} xl={4} className="courseBackImage2">
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>Career Preperation</Card.Title>
                         <Card.Text>
-                        <p>It can be daunting to participate in an accelerated technology learning program, something that we at Nebula Academy understand well. Many of our participants are balancing school, work, home lives, and other responsibilities, on top of spending 30+ hours a week gaining critical tech skills through our boot camp programs.</p>
-                        <p>We often hear that these learning experiences are the most challenging–and rewarding–of people’s lives. If you’ve decided to enroll in a Nebula Academy program, know that our team is dedicated to your success in gaining employment and building a sustainable career for you and your family.</p>
+                        <p>It can be daunting to participate in an accelerated technology learning course, something that we at Nebula Academy understand well. Many of our participants are balancing school, work, home lives, and other responsibilities, on top of spending 30+ hours a week gaining critical tech skills through our boot camp courses.</p>
+                        <p>We often hear that these learning experiences are the most challenging–and rewarding–of people’s lives. If you’ve decided to enroll in a Nebula Academy course, know that our team is dedicated to your success in gaining employment and building a sustainable career for you and your family.</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
-            <Col xs={12} lg={12} xl={4} className="programBackImage3">
+            <Col xs={12} lg={12} xl={4} className="courseBackImage3">
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>Coding Basics</Card.Title>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Program } from './pages/Program';
+import { Courses } from './pages/Courses';
 import { NoMatch } from './pages/NoMatch';
 import { Curriculum } from './pages/Curriculum';
 import { Application } from './pages/Application';
@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path= "/program" component={Program}/>
+            <Route path= "/courses" component={Courses}/>
             <Route path = "/curriculum" component={Curriculum}/>
             <Route path = "/application" component={Application}/>
             <Route path = "/internships" component={Internships}/>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
-import './ProgramFooter.css'
+import './CourseFooter.css'
 
-export const ProgramFooter = () => (
-  <Container className="fullProgramFooter">
+export const CourseFooter = () => (
+  <Container className="fullCourseFooter">
     <Jumbotron>
       <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
       
