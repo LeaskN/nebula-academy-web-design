@@ -12,7 +12,7 @@ export const CurriculumFooter = () => (
             <Button href="/universities" variant="primary">Course Info</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Register Now</Button>
+            <Button href="/registration" variant="primary">Register Now</Button>
           </Col>
         </Row>
       </p>

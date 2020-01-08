@@ -13,7 +13,7 @@ export const UniversitiesFooter = () => (
             <Button href="/outcomes" variant="primary">Outcomes</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Register Now</Button>
+            <Button href="/registration" variant="primary">Register Now</Button>
           </Col>
         </Row>
       </p>

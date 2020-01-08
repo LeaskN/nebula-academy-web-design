@@ -13,7 +13,7 @@ export const PartnersFooter = () => (
             <Button href="/guestspeakers" variant="primary">Guest Speakers</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>
       </p>

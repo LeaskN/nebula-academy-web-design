@@ -13,7 +13,7 @@ export const GuestSpeakersFooter = () => (
             <Button href="/outcomes" variant="primary">Outcomes</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>
       </p>

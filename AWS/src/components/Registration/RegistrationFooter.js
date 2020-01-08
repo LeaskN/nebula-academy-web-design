@@ -1,9 +1,9 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
-import './ApplicationFooter.css'
+import './RegistrationFooter.css'
 
-export const ApplicationFooter = () => (
-  <Container className="fullApplicationFooter">
+export const registrationFooter = () => (
+  <Container className="fullregistrationFooter">
     <Jumbotron>
       <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
       
@@ -13,7 +13,7 @@ export const ApplicationFooter = () => (
             <Button href="/scholarships" variant="primary">Scholarships</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>
       </p>

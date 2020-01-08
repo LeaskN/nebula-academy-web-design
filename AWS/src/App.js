@@ -4,7 +4,7 @@ import { Home } from './pages/Home';
 import { Courses } from './pages/Courses';
 import { NoMatch } from './pages/NoMatch';
 import { Curriculum } from './pages/Curriculum';
-import { Application } from './pages/Application';
+import { Registration } from './pages/Registration';
 import { Universities } from './pages/Universities';
 import { Outcomes } from './pages/Outcomes';
 import { NavigationBar } from './components/Global/NavigationBar';
@@ -12,7 +12,7 @@ import { Footer } from './components/Global/Footer'
 import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
-// import { Home, Program, NoMatch, Curriculum, Application, Universities, Outcomes, Scholarships } from './pages/';
+// import { Home, Program, NoMatch, Curriculum, registration, Universities, Outcomes, Scholarships } from './pages/';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path= "/courses" component={Courses}/>
             <Route path = "/curriculum" component={Curriculum}/>
-            <Route path = "/application" component={Application}/>
+            <Route path = "/registration" component={Registration}/>
             <Route path = "/universities" component={Universities}/>
             <Route path ="/outcomes" component={Outcomes}/>
             <Route path ="/scholarships" component={Scholarships}/>
@@ -31,7 +31,7 @@ function App() {
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route component = {NoMatch}/>
             {/* 
-            <Route path ="/Apply" component={Apply}/>
+            <Route path ="/Register" component={Register}/>
             */}
           </Switch>
         </Router>
