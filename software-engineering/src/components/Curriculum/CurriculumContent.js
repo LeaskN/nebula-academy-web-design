@@ -53,7 +53,7 @@ class CurriculumContent extends Component {
     render() {
         return (
             <React.Fragment>
-                <Container>
+                <Container className="cur-container">
                     <h1>Full Stack Development</h1>
                     <p>A <b>Web Application</b> is an application that is stored on a server in the cloud and is delivered over the internet through a web browser interface like Google Chrome. <b>Front-end development</b> manages client-side operations including everything that users visually see in an application. Front-end developers are also responsible for the look and feel of a site. <b>Back-end development</b> manages everything that users don’t see in their browser or application such as databases and server-side operations. A <b>full-stack engineer</b> is an engineer who can handle the front-end and back-end development such as database management, server maintenance, systems engineering, and client-side interfaces.</p>
                     <p>Participants may know where they want to focus from a skills development coming into a program, or have no idea, the program will support the decision process as participants skills evolve. No matter what path they decide to take or develop, all participants will understand both the primary responsibilities of each role and how the roles interact.</p>
@@ -62,7 +62,7 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
+                                    <Card.Body className="cur-card-btn">
                                         <Card.Title onClick={() => this.button1()} className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton buttonColor"}>Basics</Card.Title>
                                         <hr/>
                                         <Card.Title onClick={() => this.button2()} className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton buttonColor"}
@@ -81,14 +81,14 @@ class CurriculumContent extends Component {
                         </Col>
                         <Col xs={8} className="cardColumns">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <h1>Basics</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                            <h1 className="cur-header">Basics</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                     <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
                                                     <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
@@ -98,13 +98,13 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
                                             <Col>
                                             </Col>
-                                            <h1>Advanced JavaScript</h1>
+                                            <h1 className="cur-header">Advanced JavaScript</h1>
                                             <Row>
-                                                <Col xs={10} md={12}>
+                                                <Col>
                                                     <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
                                                     <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
                                                     <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
@@ -116,14 +116,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <h1>React</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                            <h1 className="cur-header">React</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10} md={12}>
+                                                <Col>
                                                     <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large applications which can change data without reloading the page.</p>
                                                     <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
                                                     <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
@@ -135,14 +135,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <h1>Certifications</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                            <h1 className="cur-header">Certifications</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10} md={12}>
+                                                <Col>
                                                     <p>Aside from knowing powerful technologies we focus on certifications. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS certifications.</p>
                                                     <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competiton. AWS certifications are the most sought after in the technology fields today and put particiaptns on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
                                                     <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
@@ -152,14 +152,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <h1>Job Placement</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                            <h1 className="cur-header">Job Placement</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                 <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
                                                 <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
                                                 <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
@@ -201,7 +201,7 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
+                                    <Card.Body className="cur-card-btn">
                                         <Card.Title onClick={() => this.scheduleButton1()}
                                         className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Schedule Overview</Card.Title>
@@ -226,14 +226,14 @@ class CurriculumContent extends Component {
                         </Col>
                         <Col xs={8} className="cardColumns">
                             {this.state.toggle2.scheduleButton1 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <h1>Schedule Overview</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                            <h1 className="cur-header">Schedule Overview</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                     <p>The Nebula Academy Software Engineering program is 22 weeks long.</p>
                                                     <p>We primarily work in 4-week sprints where we are learning, practicing, and implementing new and previously covered technologies. We finish the 4-week cycle by creating projects.</p>
                                                     <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recuperate.</p>
@@ -244,14 +244,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton2 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <h1>Daily Schedule</h1>
-                                        <Card.Text>
+                                    <Card.Body className="cur-card-body">
+                                        <h1 className ="cur-header">Daily Schedule</h1>
+                                        <Card.Text className="cur-text">
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                     <p>The daily schedule will vary but it will generally look like this:</p>
                                                     <p>9:00 AM: Stand-up</p>
                                                     <p style={{marginLeft:"20px"}}>Stand-up is a classic developer team start to the day where issues, thoughts, and schedules are shared.</p>
@@ -273,14 +273,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton3 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                        <h1>Practice Hours</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                        <h1 className="cur-header">Practice Hours</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                 <p>Students will have to apply themselves both in and outside of the classroom. We recommend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
                                                 <p>We understand that this is intense and have built in planning to ensure that our students don't burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recuperate.</p>
                                                 </Col>
@@ -289,14 +289,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton4 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <h1>Weekly Calendar</h1>
-                                        <Card.Text>
+                                    <Card.Body className="cur-card-body">
+                                        <h1 className="cur-header">Weekly Calendar</h1>
+                                        <Card.Text className="cur-text">
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                 <p>As previously mentioned, we typically have four weeks of study and practice followed by one week of unspecified time.</p>
                                                 <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
                                                 <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
@@ -306,14 +306,14 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton5 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
-                                        <h1>Last Couple Weeks/Job Placement</h1>
+                                    <Card.Body className="cur-card-body">
+                                        <Card.Text className="cur-text">
+                                        <h1 className="cur-header">Last Couple Weeks/Job Placement</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
+                                                <Col>
                                                 <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interview preparation, mock interviews, studying and taking certification exams, meeting with career coaches to outline short list of employers, completing job applications, and creating a plan to ensure they land a job.</p>
                                                 <p>This means our daily schedule will look more like this:</p>
                                                     <p>9:00 AM: Stand-up</p>

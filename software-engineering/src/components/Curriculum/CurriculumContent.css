@@ -39,10 +39,40 @@
     background: linear-gradient(to left, transparent 0%, green 100%, green 100%, transparent 0%) 0 100% / 100% 4px no-repeat;
 }
 
-.subtleButton:hover{
+.subtleButton:hover {
     cursor: pointer;
     color: #414141;
 }
+
+@media screen and (max-width: 555px) {
+  .container.cur-container {
+    width: 100%;
+  }
+
+  .cur-card-btn.card-body {
+    padding: 0.25rem;
+  }
+
+  .h5.subtleButton, h5 {
+    font-size: 0.9rem;
+  }
+
+  .cur-header {
+    font-size: 1.5rem;
+  }
+  .cur-card-body.card-body{
+    padding: 0.5rem;
+  }
+
+  .cur-text {
+    font-size: 0.9rem;
+  }
+
+
+} /* End of Media screen curriculum */
+
+
+
 #partnersCard{
     overflow: hidden;
     width: 40%;
