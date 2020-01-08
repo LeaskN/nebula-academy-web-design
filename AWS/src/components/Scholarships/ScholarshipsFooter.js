@@ -5,7 +5,7 @@ import './ScholarshipsFooter.css'
 export const ScholarshipsFooter = () => (
   <Container className="fullScholarshipsFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
       
       <p>
         <Row>
