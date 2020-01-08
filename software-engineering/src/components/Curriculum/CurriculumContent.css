@@ -28,9 +28,20 @@
 }
 .subtleButton{
     padding-top: 50px;
+    padding-bottom: 15px;
 }
+
+.buttonColor {
+  color: white;
+}
+
+.toggled {
+    color: #414141;
+}
+
 .subtleButton:hover{
     cursor: pointer;
+    background: linear-gradient(to left, transparent 0%, green 100%, green 100%, transparent 0%) 0 100% / 100% 4px no-repeat;
 }
 #partnersCard{
     overflow: hidden;

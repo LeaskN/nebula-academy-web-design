@@ -2,8 +2,13 @@
     height:auto;
 }
 .card-img-overlay{
-    padding: 1rem 1.25rem 0 1.7rem;
+  padding: 10px;
 }
+
+.overlay-height {
+  height: 100%
+}
+
 .programBackImage1{
     background-image: url("../../assets/6_ElevateYourself.jpg");
     background-size: cover;
