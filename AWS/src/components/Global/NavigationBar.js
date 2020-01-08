@@ -17,12 +17,12 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/universities">Universities</NavDropdown.Item>
                         <NavDropdown.Item href="/outcomes">Outcomes</NavDropdown.Item>
                         <NavDropdown.Item href="/scholarships">Scholarships</NavDropdown.Item>
-                        <NavDropdown.Item href="/application">Apply</NavDropdown.Item>
+                        <NavDropdown.Item href="/registration">Register</NavDropdown.Item>
                         <NavDropdown.Item href="/partners">Partners</NavDropdown.Item>
                         <NavDropdown.Item href="/guestspeakers">GuestSpeakers</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
-                    <Button href="/application" variant="success">Apply</Button>
+                    <Button href="/registration" variant="success">Register</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
             </Navbar.Collapse>

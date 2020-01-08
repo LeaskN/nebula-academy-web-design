@@ -4,9 +4,9 @@ import {
     Container, Col, Row } from 'react-bootstrap';
 import Iframe from 'react-iframe';
 // import fire from '../../fire';
-import './ApplicationContent.css'
+import './RegistrationContent.css'
 
-class ApplicationContent extends Component {
+class registrationContent extends Component {
     state = {
 
     }
@@ -58,33 +58,12 @@ class ApplicationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The program application process consists of three phases. All candidates: Scholarship applicants, partial, full, and or paid applicants must complete all three phases.</h2>
-                        </Row>
-                        <Row style={{marginLeft:"20px", marginTop:"20px"}}>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase I:</h3>
-                                <Col xs={10}>
-                                    <p>You provide personal background information (Allow for 15 to 30 minutes)</p>
-                                </Col>
-                            </Col>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase II:</h3>
-                                    <Col xs={10}>
-                                        <p>Short Essays, Video, and Coding challenges are required for all candidates. (Allow for 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions)</p>
-                                    </Col>
-                            </Col>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase III:</h3>
-                                    <Col xs={10} >
-                                        <p>Each candidate will be required to do either an in person or video interview, scheduled through our program manager.</p>
-                                        
-                                    </Col>
-                            </Col>
+                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: Part 1 is the following form on this page. Part 2 is an interview to understand a participants motivations, commitments, & capacity.</h2>
                         </Row>
                         <hr></hr>
                         <Row>
                             <Col className="alignCenter">
-                                <h3>Completing online Application:</h3>
+                                <h3>Completing online registration:</h3>
                                     <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
                             </Col>
                         </Row>
@@ -195,7 +174,7 @@ class ApplicationContent extends Component {
                                     </Form.Control>
                                 </Form.Group>
                                 <Form.Group required controlId="FormControlCohort">
-                                    <Form.Label>Which cohort are you applying to?</Form.Label>
+                                    <Form.Label>Which cohort are you Registering to?</Form.Label>
                                     <Form.Control required as="select" >
                                         <option aria-label="option 0" label="Select"></option>
                                         <option onChange={(event) => {this.setState({ cohortMarToAug: event.target.value })}} aria-label="option 1" label="March 2 - August 7 2019"/> 
@@ -222,7 +201,7 @@ class ApplicationContent extends Component {
                                     <Form.Control onChange={(event) => {this.setState({eduNotIncluded: event.target.value})}} placeholder="Certifications, self-learning, etc.."/>
                                 </Form.Group>
                                 <Form.Group controlId="FormControlCohort">
-                                    <Form.Label>Which of the following do you identify with (select all that apply)?</Form.Label>
+                                    <Form.Label>Which of the following do you identify with (select all that Register)?</Form.Label>
                                     <Form.Check onChange={(event) => {this.setState({  identifyCaucasian: event.target.value })}} aria-label="option 1" label="Caucasian"/> 
                                     <Form.Check onChange={(event) => {this.setState({  identifyAfricanAmerican: event.target.value })}} aria-label="option 2" label="African American"/> 
                                     <Form.Check onChange={(event) => {this.setState({  identifyHispanicLatin: event.target.value })}} aria-label="option 3" label="Hispanic or Latin Origin"/> 
@@ -325,4 +304,4 @@ class ApplicationContent extends Component {
     }
 };
 
-export default ApplicationContent;
+export default registrationContent;

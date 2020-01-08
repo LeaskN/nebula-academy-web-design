@@ -5,7 +5,7 @@ import './GuestSpeakersFooter.css'
 export const GuestSpeakersFooter = () => (
   <Container className="fullGuestSpeakersFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
       
       <p>
         <Row>
@@ -13,7 +13,7 @@ export const GuestSpeakersFooter = () => (
             <Button href="/outcomes" variant="primary">Outcomes</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>
       </p>

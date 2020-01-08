@@ -9,7 +9,7 @@ import './PartnersContent.css'
 export const PartnersContent = () => (
   <React.Fragment>
     <Container>
-      <p>We look forward to the opportunity to support you. Either take the first step to engage with our team by completing our <a href="#application">partner application below</a> or read on for more information.</p>
+      <p>We look forward to the opportunity to support you. Either take the first step to engage with our team by completing our <a href="#registration">partner registration below</a> or read on for more information.</p>
       <p>Employment of computer and information technology occupations is projected to grow 21 percent from 2018 to 2028, much faster than the average for all occupations. These occupations are projected to add about 546,200 new jobs. Demand for these workers will stem from greater emphasis on cloud computing, the collection and storage of big data, and information security. Nebula Academy is helping companies prepare for the future of work. Let us help you with you recruitment needs, as we develop the talent to grow your business. </p>
       <p>We invite you to sign up for our partner program and engage with our team to build capacity for your growing resource needs.  As a new program we are offering this opportunity at no cost to your business.  It really is a WIN WIN WIN all around! The first group of participants will complete the training in July 2020.</p>
       <h3>WIN for Partners:</h3>
@@ -30,7 +30,7 @@ export const PartnersContent = () => (
       <h3>WIN for Participants:</h3>
       <ul>
         <li>
-        Through our partnership with We Connect The Dots participants can apply for full and partial scholarships to our program.
+        Through our partnership with We Connect The Dots participants can Register for full and partial scholarships to our program.
         </li>
         <li>
         Participants are not just learning, they are building both the soft skills and the technical skills necessary for successful employment.
@@ -51,8 +51,8 @@ export const PartnersContent = () => (
         Through continued growth of partnerships with businesses we will grow our own capacity to develop high quality resources resulting from our training programs.
         </li>
       </ul>
-      <p id="application">The NYS Governor’s office and the NYS Department of Labor understand how important our program is to businesses. Check out the <a href="https://tinyurl.com/wctdgrant" target="empty">recent grant award</a> in partnership with We Connect The dots that will support our success together. We look forward to taking this first step with you, once you complete the application. Upon completion of the application you can expect engagement from our team outlining the full details of the partner program.</p>
-      <h2>Partner Application:</h2>
+      <p id="registration">The NYS Governor’s office and the NYS Department of Labor understand how important our program is to businesses. Check out the <a href="https://tinyurl.com/wctdgrant" target="empty">recent grant award</a> in partnership with We Connect The dots that will support our success together. We look forward to taking this first step with you, once you complete the registration. Upon completion of the registration you can expect engagement from our team outlining the full details of the partner program.</p>
+      <h2>Partner registration:</h2>
     </Container>
     <Row>
         <Col className="formContainer">

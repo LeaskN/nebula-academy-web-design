@@ -5,7 +5,7 @@ import './CourseFooter.css'
 export const CourseFooter = () => (
   <Container className="fullCourseFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
       
       <p>
         <Row>
@@ -13,7 +13,7 @@ export const CourseFooter = () => (
             <Button href="/curriculum" variant="primary">Curriculum</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>
       </p>
