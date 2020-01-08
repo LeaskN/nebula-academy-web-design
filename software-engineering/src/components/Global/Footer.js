@@ -12,6 +12,7 @@ export const Footer = () => (
         <Navbar bg="dark" className="footerNavbar mainNavbar navbar-dark navbar-collapse" toggleable expand="lg">
             <Navbar.Brand href="/"><img src={NebulaIcon} height="100px" alt=""></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse id="basic-navbar-nav">
             <ul>
             <Nav.Item><Nav.Link href="/">About</Nav.Link></Nav.Item>
             {/* <Nav.Item><Nav.Link href="/">Careers</Nav.Link></Nav.Item> */}
@@ -19,7 +20,6 @@ export const Footer = () => (
             <Nav.Item><Nav.Link href="/guestspeakers">Guest Speakers</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/partners">Partners</Nav.Link></Nav.Item>
             </ul>
-            <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="https://twitter.com/nynebula?lang=en"><img src={TwitterIcon} height="100px" alt=""></img></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="https://www.facebook.com/NebulaAcademyNY/"><img src={FacebookIcon} height="100px" alt=""></img></Nav.Link></Nav.Item>
