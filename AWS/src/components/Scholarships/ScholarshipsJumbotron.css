@@ -1,0 +1,9 @@
+.scholarshipsJumbotron{
+    background-image: url('../../assets/partners.jpg');
+    background-size: 100%;
+    color: #ccc;
+    z-index: 02;
+    height:250px;
+    z-index: -2;
+    margin: 0px;
+}

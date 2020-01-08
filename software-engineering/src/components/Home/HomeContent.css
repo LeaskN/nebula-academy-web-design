@@ -1,214 +1,43 @@
-.introRow1{
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px !important;
+.introRowTile{
+    background-color: transparent;
+    color: white;
 }
-.row1Tile{
-    margin-left: -15px;
-    margin-right: -15px;
-    border-radius: 0px;
-    padding: 0px !important;
+.introRow1Column1{
+   background-color:#434686
 }
-.row1Tile1{
-    background-color: #434686 !important;
-    padding: 0px !important;
-    height: 565px;
+.introRow1Column2{
+    background-color:#8A659A;
+ }
+ .introRow1Column3{
+    background-color:#992653;
+ }
+.introRow2Tile1{
+    background-image: url("../../assets/2_JobPlacement.jpg");
+    background-size: cover;
 }
-.row1Tile2{
-    background-color: #992653 !important;
-    height: 565px;
+.introRow3Tile1{
+    background-image: url("../../assets/3_scholarship.jpg");
+    background-size: cover;
 }
-.row1Tile3{
-    background-color: #8A659A !important;
-    border-radius: 0px;
-    height: 565px;
+.introRow3Tile2{
+    background-image: url("../../assets/4_GetMoreInfo.jpg");
+    background-size: cover;
 }
-.introRow2{
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px!important;
-}
-.row2Tile{
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 10px;
-    border-radius: 100px;
-    min-height: 650px;
-    border: 0px;
-}
-.row2Tile1{
-    border-radius: 0px !important;
-    height: 650px;
-    padding-left: 0px;
-}
-.row2Tile2{
-    border-radius: 0px !important;
-    height: 650px;
-}
-.row2Tile3{
-    background-color: #434686 !important;
-    min-height: 650px;
-}
-.card-img{
-    border-radius: 0px !important;
-    height: contain;
-}
-.subTile{
-    border: 0px !important;
-    min-height: 650px;
+.purpleBackground{
+    margin: auto;
+    background-color: #434686;
 }
 .card{
     border: 0px !important;
 }
-.behindText{
-    background-color: rgba(0, 0, 0, .65);
-    border: 0px !important;
+.paddingRight{
+    border-top: 5px solid white;
+    border-right: 2.5px solid white;
 }
-.subTile1{
-    background-image: url("../../assets/1.jpg");
-    background-size: cover;
+.paddingLeft{
+    border-top:5px solid white;
+    border-left: 2.5px solid white;
 }
-.subTile2{
-    background-image: url("../../assets/2_JobPlacement.jpg");
-    background-size: cover;
-}
-.subTile3{
-    background-image: url("../../assets/3_scholarship.jpg");
-    background-size: cover;
-}
-.subTile4{
-    background-image: url("../../assets/4_GetMoreInfo.jpg");
-    background-size: cover;
-}
-.hideImage{
-    margin: auto;
-    background-color: #434686;
-    border: 0px !important;
-    height: 100%;
-}
-.introRow3{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    margin: 0px;
-    margin-left: -15px;
-    padding-right:0px;
-}
-.row3Tile2{
-    padding-right: 0px;
-    padding-right: 1vw !important;
-}
-
-@media (max-width: 1199px){
-    .row1Tile{
-        max-height: 300px;
-    }
-    .row2Tile3 {
-        background-color: #434686 !important;
-        min-height: 500px;
-    }
-}
-@media (max-width: 991px){
-    .row1Tile {
-        padding: 0px !important;
-        margin: 0px !important;
-        max-height: 350px;
-    }
-    .row2Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-    .row2Tile3{
-        margin-bottom: -150px !important;
-        max-height: 300px;
-    }
-    .row3Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-    .row1Tile1{
-        max-height: 400px;
-    }
-    .row1Tile2{
-        max-height: 400px;
-        margin-bottom: -150px !important;
-    }
-    .row1Tile3{
-        max-height: 400px;
-        margin-bottom: -150px !important;
-    }
-}
-@media (max-width: 650px){
-    .row1Tile {
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 550px;
-    }
-    .row2Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-        margin-bottom: -50px !important;
-        min-height: 400px;
-    }
-    .row2Tile3{
-        padding: 0px !important;
-        margin: 0px !important;
-        margin-bottom: -50px !important;
-        min-height: 400px;
-    }
-    .row3Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 900px;
-    }
-    .row3Tile2{
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 600px;
-    }
-    .row1Tile2{
-        min-height: 400px;
-    }
-    .row1Tile3{
-        min-height: 400px;
-    }
-}
-@media (max-width: 400px){
-    .row1Tile {
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 730px;
-    }
-    .row2Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-        margin-bottom: -50px !important;
-        min-height: 600px;
-    }
-    .row3Tile{
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 1075px;
-    }
-    .row3Tile2{
-        padding: 0px !important;
-        margin: 0px !important;
-        min-height: 750px;
-    }
-    .row1Tile2{
-        min-height: 400px;
-    }
-    .row1Tile3{
-        min-height: 400px;
-    }
+.paddingMiddle{
+    border-top: 5px solid white;
 }

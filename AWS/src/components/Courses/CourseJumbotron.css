@@ -1,0 +1,10 @@
+.courseJumbotron{
+    background-image: url('../../assets/partners.jpg');
+    background-size: cover;
+    color: #ccc;
+    z-index: 02;
+    height:250px;
+    position: relative;
+    z-index: -2;
+    margin: 0px;
+}

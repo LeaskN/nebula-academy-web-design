@@ -1,0 +1,20 @@
+.courseBackImage1{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+}
+.courseBackImage2{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+    background-position: -300px -0px;
+}
+.courseBackImage3{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+
+}
+.courseBackImage4{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+}

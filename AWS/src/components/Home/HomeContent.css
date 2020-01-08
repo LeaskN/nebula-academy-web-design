@@ -1,0 +1,43 @@
+.introRowTile{
+    background-color: transparent;
+    color: white;
+}
+.introRow1Column1{
+   background-color:#434686
+}
+.introRow1Column2{
+    background-color:#8A659A;
+ }
+ .introRow1Column3{
+    background-color:#992653;
+ }
+.introRow2Tile1{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+}
+.introRow3Tile1{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+}
+.introRow3Tile2{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+}
+.purpleBackground{
+    margin: auto;
+    background-color: #434686;
+}
+.card{
+    border: 0px !important;
+}
+.paddingRight{
+    border-top: 5px solid white;
+    border-right: 2.5px solid white;
+}
+.paddingLeft{
+    border-top:5px solid white;
+    border-left: 2.5px solid white;
+}
+.paddingMiddle{
+    border-top: 5px solid white;
+}
