@@ -30,7 +30,7 @@ function App() {
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route component = {NoMatch}/>
-            {/* 
+            {/*
             <Route path ="/Apply" component={Apply}/>
             */}
           </Switch>

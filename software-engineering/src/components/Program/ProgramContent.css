@@ -6,10 +6,10 @@
     background-image: url("../../assets/7_CareerPrep.jpg");
     background-size: cover;
     background-position: -300px -0px;
-} 
+}
 @media (max-width: 991px){
     .programBackImage2{
-        background-position: 0px 0px; 
+        background-position: 0px 0px;
     }
 }
 .programBackImage3{
