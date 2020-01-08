@@ -7,7 +7,7 @@ export const HomeJumbotron = () => (
     <Jumbotron className="homeJumbo">
       <div className="homeOverlay"></div>
       <Container>
-        <h1 className="jumboText">Earn Your AWS Certification at Nebula Academy</h1>
+        <h1 className="jumboText">Amazon Web Services Academy Program</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>
