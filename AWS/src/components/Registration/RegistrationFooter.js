@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
 import './RegistrationFooter.css'
 
-export const registrationFooter = () => (
+export const RegistrationFooter = () => (
   <Container className="fullregistrationFooter">
     <Jumbotron>
       <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>

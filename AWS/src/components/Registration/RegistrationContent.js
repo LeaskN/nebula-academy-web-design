@@ -58,28 +58,7 @@ class registrationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The program registration process consists of three phases. All candidates: Scholarship applicants, partial, full, and or paid applicants must complete all three phases.</h2>
-                        </Row>
-                        <Row style={{marginLeft:"20px", marginTop:"20px"}}>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase I:</h3>
-                                <Col xs={10}>
-                                    <p>You provide personal background information (Allow for 15 to 30 minutes)</p>
-                                </Col>
-                            </Col>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase II:</h3>
-                                    <Col xs={10}>
-                                        <p>Short Essays, Video, and Coding challenges are required for all candidates. (Allow for 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions)</p>
-                                    </Col>
-                            </Col>
-                            <Col xs={10} lg={4}>
-                                <h3>Phase III:</h3>
-                                    <Col xs={10} >
-                                        <p>Each candidate will be required to do either an in person or video interview, scheduled through our program manager.</p>
-                                        
-                                    </Col>
-                            </Col>
+                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: Part 1 is the following form on this page. Part 2 is an interview to understand a participants motivations, commitments, & capacity.</h2>
                         </Row>
                         <hr></hr>
                         <Row>

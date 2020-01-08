@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
 import './RegistrationJumbotron.css'
 
-export const registrationJumbotron = () => (
+export const RegistrationJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="registrationJumbotron">
       <Container>
