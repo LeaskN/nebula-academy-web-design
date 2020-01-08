@@ -56,12 +56,11 @@ class CurriculumContent extends Component {
                                     <Card.Body>
                                         <Card.Title className="subtleButton" onClick={() => this.button1()}>Academy Cloud Foundations</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button4()}>Academy Cloud Developing</Card.Title>
-                                        <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button2()}>Academy Cloud Architect</Card.Title>
                                         <hr/>
                                         <Card.Title className="subtleButton" onClick={() => this.button3()}>Academy Cloud Operations</Card.Title>
-                                        
+                                        <hr/>
+                                        <Card.Title className="subtleButton" onClick={() => this.button4()}>Academy Cloud Developing</Card.Title>
                                     </Card.Body> 
                             </Card>
                         </Col>
@@ -75,35 +74,9 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                    <h3>Description:</h3>
-                                                    <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
-                                                    <h3>Course Objectives</h3>
-                                                    <h5>Upon completion of this course, students will be able to:</h5>
-                                                    <ul>
-                                                        <li> Define the AWS Cloud</li>
-                                                        <li>Explain the AWS pricing philosophy</li>
-                                                        <li>Identify the global infrastructure components of AWS</li>
-                                                        <li>Describe the security and compliance measures of the AWS Cloud, including AWS Identity and Access Management (IAM)</li>
-                                                        <li>Create a virtual private cloud (VPC) by using Amazon Virtual Private Cloud (Amazon VPC)</li>
-                                                        <li>Demonstrate when to use Amazon Elastic Compute Cloud (Amazon EC2), AWS Lambda, and AWS Elastic Beanstalk</li>
-                                                        <li>Differentiate between Amazon Simple Storage Service (Amazon S3), Amazon Elastic Block Store (Amazon EBS), Amazon Elastic File System (Amazon EFS), and Amazon Simple Storage Service Glacier (Amazon S3 Glacier)</li>
-                                                        <li>Demonstrate when to use AWS database services, including Amazon Relational Database Service (Amazon RDS), Amazon DynamoDB, Amazon Redshift, and Amazon Aurora</li>
-                                                        <li>Explain the architectural principles of the AWS Cloud</li>
-                                                        <li>Explore key concepts related to Elastic Load Balancing, Amazon CloudWatch, and Amazon EC2 Auto Scaling</li>
-                                                    </ul>
-                                                    <h5>Course Outline</h5>
-                                                    <h6>Duration</h6>
-                                                    <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</p>
-                                                    <h6>Intended Audience</h6>
-                                                    <p>This is an advanced (level 200) course</p>
-                                                    <h6>Student Prerequisites (To ensure success in this course, students should have):</h6>
-                                                    <ul>
-                                                        <li>Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
-                                                        <li>A working knowledge of distrubted systems</li>
-                                                        <li>Familiarity with general networking concepts</li>
-                                                        <li>Familiarity with cloud computing concepts</li>
-                                                    </ul>
-                                                    
+                                                    <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
+                                                    <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
+                                                    <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -116,51 +89,12 @@ class CurriculumContent extends Component {
                                             </Col>
                                             <h1>Academy Cloud Architect</h1>
                                             <Row>
-                                                <Col xs={10}md={12}>
-                                                    <h3>Description:</h3>
-                                                        <p>AWS Academy Cloud Architecting covers the fundamentals of building IT infrastructure on AWS. The course is designed to teach solutions architects how to optimize their use of the AWS Cloud by understanding AWS services and how they fit into cloud-based solutions. Although architectural solutions can differ depending on the industry, type of application, and size of the business, this course emphasizes best practices for the AWS Cloud that apply to all of them. It also recommends various design patterns to help you think through the process of architecting optimal IT solutions on AWS. Throughout the course, students will explore case studies that showcase how some AWS customers have designed their infrastructures and the strategies and services that they have implemented. Finally, this course provides opportunities for students to build a variety of infrastructures through a guided, hands-on approach.</p>
-                                                    <h3>Course Objectives</h3>
-                                                    <h5>Upon completion of this course, students will be able to:</h5>
-                                                    <ul>
-                                                        <li>Describe how cloud adoption transforms the way IT systems work</li>
-                                                        <li>Describe the benefits of cloud computing with Amazon Web Services</li>
-                                                        <li>iscuss how to design systems that are secure, reliable, high-performing, and cost efficient</li>
-                                                        <li>Describe principles to consider when migrating or designing new applications for the cloud</li>
-                                                        <li>Identify the design patterns and architectural options applied in a variety of use cases</li>
-                                                        <li>Define high availability, fault tolerance, and scalability</li>
-                                                        <li>Discuss how to avoid single points of failure</li>
-                                                        <li>List AWS services that have built-in fault tolerance or can be designed for fault tolerance</li>
-                                                        <li>Describe why load balancing is a key architectural component for AWS-powered applications</li>
-                                                        <li>Describe how to leverage the capabilities of AWS to support automation</li>
-                                                        <li> Create, manage, provision, and update related resources using AWS CloudFormation</li>
-                                                        <li> Articulate the importance of making systems highly cohesive and loosely coupled</li>
-                                                        <li> Describe system coupling to support the distributed nature of applications built for the cloud</li>
-                                                        <li> Describe database services for storing and deploying web-accessible applications</li>
-                                                        <li> Compare structured query language (SQL) databases with NoSQL databases</li>
-                                                        <li> Describe how the AWS Well-Architected Framework improves cloud-based architectures</li>
-                                                        <li> Describe the business impact of design decisions</li>
-                                                        <li> Identify the design principles and best practices of the Operational Excellence pillar</li>
-                                                        <li> Describe how to secure data at every layer in the application</li>
-                                                        <li> Describe the appropriate tools and services to provide security-focused content</li>
-                                                        <li> Describe the design principles and best practices of the Reliability pillar.</li>
-                                                        <li> Select compute, storage, database, and networking resources to improve performance</li>
-                                                        <li> Evaluate the most important performance metrics for your applications</li>
-                                                        <li> Follow best practices to eliminate unneeded costs or suboptimal resources</li>
-                                                        <li> Troubleshoot common errors</li>
-                                                    </ul>
-                                                    <h5>Course Outline</h5>
-                                                    <h6>Duration</h6>
-                                                    <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</p>
-                                                    <h6>Intended Audience</h6>
-                                                    <p>This is an advanced (level 200) course</p>
-                                                    <h6>Student Prerequisites (To ensure success in this course, students should have):</h6>
-                                                    <ul>
-                                                        <li> Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
-                                                        <li> A working knowledge of distributed systems</li>
-                                                        <li> Familiarity with general networking concepts</li>
-                                                        <li> A working knowledge of multi-tier architectures</li>
-                                                        <li> Familiarity with cloud computing concepts</li>
-                                                    </ul>
+                                                <Col xs={10} md={12}>
+                                                    <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
+                                                    <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust registrations.</p>
+                                                    <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your registration. Once we have learned these previous topics we will deploy some static websites.</p>
+                                                    <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
+                                                    <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who dont have many deployed projects.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -174,54 +108,12 @@ class CurriculumContent extends Component {
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
-                                                    <h3>Description:</h3>
-                                                        <p>AWS Academy Cloud Operations is designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles. It will also help prepare them to take the AWS SysOps Administrator – Associate exam. Emphasizing best practices in the AWS Cloud and recommended design patterns, this course will teach students how to solve problems and troubleshoot various scenarios. The course will show students how to create automatable and repeatable deployments of networks and systems on AWS and covers specific AWS features and tools related to configuration and deployment. With case studies and demonstrations, students will learn how some AWS customers design their infrastructures and implement various strategies and services. Students will also have the opportunity to build a variety of infrastructures via guided, hands-on activities.</p>
-                                                    <h3>Curriculum Objectives</h3>
-                                                    <h5>This course teaches students how to:</h5>
-                                                    <ul>
-                                                    <li> Understand AWS infrastructure as it relates to system operations, such as global infrastructure, core services, and account security</li>
-                                                    <li> Use the AWS Command Line Interface (AWS CLI), and understand additional administration and development tools</li>
-                                                    <li> Manage, secure, and scale compute instances on AWS</li>
-                                                    <li> Manage, secure, and scale configurations</li>
-                                                    <li> Identify container services and AWS services that are available for serverless computing.</li>
-                                                    <li> Manage, secure, and scale databases on AWS</li>
-                                                    <li> Build virtual private networks with Amazon Virtual Private Cloud (Amazon VPC)</li>
-                                                    <li> Configure and manage storage options using the storage services offered with AWS</li>
-                                                    <li> Monitor the health of your infrastructure with services such as Amazon CloudWatch, AWS CloudTrail, and AWS Config</li>
-                                                    <li> Manage resource consumption in an AWS account by using tags, Amazon CloudWatch, and AWS Trusted Advisor</li>
-                                                    <li> Create and configure automated and repeatable deployments with tools such as Amazon Machine Images (AMIs) and AWS CloudFormation</li> 
-                                                    </ul>
-                                                    <h5>Course Outline</h5>
-                                                    <h6>Duration</h6>
-                                                    <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</p>
-                                                    <h6>Intended Audience</h6>
-                                                    <p>This is an intermediate (level 200) course</p>
-                                                    <h5>Employment Outcomes</h5>
-                                                    <p>This course is intended for prospective operations/support/DevOps roles including:</p>
-                                                    <ul>
-                                                        <li>Operations Engineer</li>
-                                                        <li>Support Engineer</li>
-                                                        <li>Application Support Engineer</li>
-                                                        <li>Product Support Engineer</li>
-                                                        <li>Customer Support Engineer</li>
-                                                        <li>Support Specialist</li>
-                                                        <li>Junior DevOps Engineer</li>
-                                                        <li>DevOps Engineer</li>
-                                                        <li>Operations Engineer</li>
-                                                        <li>Platform Engineer</li>
-                                                        <li>Cloud Engineer</li>
-                                                        <li>Site Reliability Engineer</li>
-                                                    </ul>
-                                                    <h6>Student Prerequisites (AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success, students should have:):</h6>
-                                                    <ul>
-                                                        <li>Completed AWS Academy Cloud Foundations or have equivalent experience</li>
-                                                        <li>A working knowledge of at least one scripting language</li>
-                                                        <li>Familiarity with Linux, the command line and Application Programming Interfaces (APIs)</li>
-                                                        <li>Familiarity with virtualization and distributed computing</li>
-                                                        <li>An understanding of version control (e.g., Git)</li>
-                                                        <li>An understanding of data storage mechanisms such as SQL</li>
-                                                    </ul>
+                                                <Col xs={10} md={12}>
+                                                    <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large registrations which can change data without reloading the page.</p>
+                                                    <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
+                                                    <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
+                                                    <p>There are many ways to go from here but a participants projects can represent what they are interested in. We teach frontend, backend, and fullstack but if a participant is more inclined towards one of these three they are invited to focus on that.</p>
+                                                    <p>The bottom lines are employment and payment, knowing React can land someone a high-paying job in a short amount of time.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -235,39 +127,10 @@ class CurriculumContent extends Component {
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
-                                                <Col xs={10}md={12}>
-                                                    <h3>Description:</h3>
-                                                        <p>AWS Academy Cloud Developing is designed to help students gain technical expertise in development using cloud technologies and prepare them to take the AWS Certified Developer – Associate level AWS Certification exam. The curriculum is delivered through instructor-led classes, knowledge assessments, and hands-on labs. Students will also have access to course manuals, online knowledge assessments, a free practice certification exam, and a discount voucher for the certification exam.</p>
-                                                    <h3>Curriculum Objectives</h3>
-                                                    <h5>AWS Cloud Developing teaches students how to:</h5>
-                                                    <ul>
-                                                        <li>Recall cloud computing services and models</li>
-                                                        <li>Describe developing on AWS</li>
-                                                        <li>Configure AWS Identity and Access Management for programmatic access</li>
-                                                        <li>Configure storage with Amazon S3 programmatically</li>
-                                                        <li>Develop with DynamoDB</li>
-                                                        <li>Explain caching</li>
-                                                        <li>Configure containers</li>
-                                                        <li>Develop event-driven solutions with Lambda</li>
-                                                        <li>Configure solutions with API Gateway</li>
-                                                        <li>Develop solutions with SQS and SNS</li>
-                                                        <li>Describe the use of Step Functions</li>
-                                                        <li>Identify best practice for building secure applications</li>
-                                                        <li>Identify best practice for deploying applications</li>
-                                                    </ul>
-                                                    <h5>Course Outline</h5>
-                                                    <h6>Duration</h6>
-                                                    <p>Approximately 40 hours, delivered over a period of four weeks. Actual delivery times will vary from class to class and depending on delivery format.</p>
-                                                    <h6>Intended Audience</h6>
-                                                    <p>Undergraduate, graduate, or professional students seeking cloud developing expertise. This is an intermediate (level 200) course.</p>
-                                                    <h6>Student Prerequisites (AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have):</h6>
-                                                    <ul>
-                                                        <li> Completed AWS Academy Cloud Foundations course or have equivalent experience</li>
-                                                        <li> A working knowledge of distributed systems</li>
-                                                        <li> Familiarity with general networking concepts</li>
-                                                        <li> A working knowledge of multi-tier architectures</li>
-                                                        <li> Familiarity with cloud computing concepts</li>
-                                                    </ul>
+                                                <Col xs={10} md={12}>
+                                                    <p>Aside from knowing powerful technologies we focus on certifications. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS certifications.</p>
+                                                    <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competiton. AWS certifications are the most sought after in the technology fields today and put particiaptns on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
+                                                    <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -329,10 +192,18 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                    <p>The Nebula Academy Software Engineering program is 22 weeks long.</p>
-                                                    <p>We primarily work in 4-week sprints where we are learning, practicing, and implementing new and previously covered technologies. We finish the 4-week cycle by creating projects.</p>
-                                                    <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recuperate.</p>
-                                                    <p>We can't do anything with burnt-out participants, so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
+                                                    <p>All in person sessions take place at 180 Michael Drive in Syosset NY 11791.  To locate our facility drive around the back of the building and look for our signs and entrance in the back-parking lot.</p>
+                                                    <ul>
+                                                        <li>All sessions begin promptly at 9:00 AM and end promptly at 4:00 PM</li>
+                                                        <li>Participants can stay and continue working on labs after 4:00 PM and until closing.  Instructors are available depending on scheduling of other programs each day after 4:00 PM.</li>
+                                                        <li>Participants can utilize our laptops within the facility and on as available basis, we cannot guarantee availability of a laptop. We recommend bringing your own each day.</li>
+                                                        <li>There is a kitchen with refrigerator and microwave for those bringing a lunch. We suggest bringing a refillable water bottle as we have a water cooler available.</li>
+                                                    </ul>
+                                                    <p>What to expect for the flow of learning each day:</p>
+                                                    <ul>
+                                                        <li>Instructor led content and lab time will vary throughout each day.</li>
+                                                        <li>Participants who invest in additional lab time are more likely to be successful in passing exams and to be able to demonstrate learned skills in interviews and on the job.</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -347,21 +218,14 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                    <p>The daily schedule will vary but it will generally look like this:</p>
-                                                    <p>9:00 AM: Stand-up</p>
-                                                    <p style={{marginLeft:"20px"}}>Stand-up is a classic developer team start to the day where issues, thoughts, and schedules are shared.</p>
-                                                    <p>10:00 AM: Code practice</p>
-                                                    <p style={{marginLeft:"20px"}}>There are specific problems which can be practiced in order to build coding competency and interview ability. We practice them daily.</p>
-                                                    <p>11:00 AM: New Subject Matter</p>
-                                                    <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
-                                                    <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program. This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
-                                                    <p>1:30 PM: Projects</p>
-                                                    <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands-on style.</p>
-                                                    <p>3:00 PM: Content Review</p>
-                                                    <p style={{marginLeft:"20px"}}>Old Material. At the end of the day we want to cover old topics that students feel they need to brush up on.</p>
-                                                    <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "official" end of day.</p>
+                                                <ul>
+                                                    <li>Participants are provided details on how to access the online sessions via Zoom calls upon registration and before sessions begin.</li>
+                                                    <li>Participants will have access to our Microsoft Teams environment for both during and outside class hours engagement.</li>
+                                                    <li>All live remote sessions are a blend of participates who are in the classroom and in the virtual classroom.</li>
+                                                    <li>Microsoft Teams is monitored by instructors throughout the sessions to ensure remote experiences are as close to in person as possible.</li>
+                                                    <li>We recommend that you are hardwired to an internet connection during live sessions to avoid wireless delays in connectivity</li>
+                                                    <li>Instructions for setup and access to any additional content will be shared with participations via Microsoft Teams.</li>
+                                                </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -376,8 +240,11 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Students will have to Register themselves both in and outside of the classroom. We recommend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
-                                                <p>We understand that this is intense and have built in planning to ensure that our students don't burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recuperate.</p>
+                                                    <ul>
+                                                        <li>Lab time is blended throughout the session days and we encourage participants to utilize independent study time on labs outside of class.</li>
+                                                        <li>Participants have access to labs from outside of class</li>
+                                                        <li>Lab sessions are timed and in general participants have ample time to complete lab assignments</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -392,9 +259,10 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>As previously mentioned, we typically have four weeks of study and practice followed by one week of unspecified time.</p>
-                                                <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
-                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
+                                                    <ul>
+                                                        <li>Instructors are available via Microsoft Teams for support participants outside of class hours, expect a response to questions from instructors and students as this is a community contribution environment.</li>
+                                                        <li>Instructors are available for scheduled 1:1 sessions during the program hours as necessary</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -409,22 +277,11 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around registrations, projects, interview preparation, mock interviews, studying and taking certification exams, meeting with career coaches to outline short list of employers, completing job registrations, and creating a plan to ensure they land a job.</p>
-                                                <p>This means our daily schedule will look more like this:</p>
-                                                    <p>9:00 AM: Stand-up</p>
-                                                    <p style={{marginLeft:"20px"}}>Stand-up becomes even more important as participant schedules will vary and so will topics covered. By doing this students will see similarities and be able to help one another with their problems.</p>
-                                                    <p>10:00 AM: Code practice</p>
-                                                    <p style={{marginLeft:"20px"}}>This is core interview practice and will be kept up throughout.</p>
-                                                    <p>11:00 AM: Registering for jobs</p>
-                                                    <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new registrations. We want to ensure participants are hitting both quality and quantity.</p>
-                                                    <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>Having a set time for lunch helps fight burnout and is still suggested as something the students should observe for the full hour.</p>
-                                                    <p>1:30 PM: Projects</p>
-                                                    <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we don't suggest starting new projects at this time. However we definitely want our participants to dive in deeper on older projects.</p>
-                                                    <p>3:00 PM: Interview Preparation</p>
-                                                    <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of Jeopardy games, white-boarding, or coding challenges.</p>
-                                                    <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" registrations through registration websites like LinkedIn, Microsoft, Google, Amazon, Company Partner Sites, ZipRecruiter, & Glassdoor.</p>
+                                                    <ul>
+                                                        <li>Designated hours are setup during program sessions to support participants with preparing for certification exams.</li>
+                                                        <li>All scheduled sessions are posted within Microsoft Teams for awareness, we highly recommend participants work with other program participants in study groups to support successful exam scores.</li>
+                                                        <li>Participants can schedule 1:1 sessions with instructors during program hours</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
