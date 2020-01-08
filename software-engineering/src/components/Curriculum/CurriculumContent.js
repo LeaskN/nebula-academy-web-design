@@ -68,13 +68,13 @@ class CurriculumContent extends Component {
                                         <Card.Title onClick={() => this.button2()} className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Advanced JavaScript</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button3()}
+                                        <Card.Title onClick={() => this.button3()}
                                         className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton buttonColor"}>React</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button4()}
+                                        <Card.Title onClick={() => this.button4()}
                                         className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton buttonColor"}>Certifications</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button5()}
+                                        <Card.Title onClick={() => this.button5()}
                                         className={this.state.toggle.button5 ? " subtleButton toggled" : "subtleButton buttonColor"}>Job Placement</Card.Title>
                                     </Card.Body>
                             </Card>
@@ -206,19 +206,19 @@ class CurriculumContent extends Component {
                                         className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Schedule Overview</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton2()}
+                                        <Card.Title onClick={() => this.scheduleButton2()}
                                         className={this.state.toggle2.scheduleButton2 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Daily Schedule</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton3()}
+                                        <Card.Title onClick={() => this.scheduleButton3()}
                                         className={this.state.toggle2.scheduleButton3 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Practice Hours</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton4()}
+                                        <Card.Title onClick={() => this.scheduleButton4()}
                                         className={this.state.toggle2.scheduleButton4 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Weekly Calendar</Card.Title>
                                         <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton5()}
+                                        <Card.Title onClick={() => this.scheduleButton5()}
                                         className={this.state.toggle2.scheduleButton5 ? " subtleButton toggled" : "subtleButton buttonColor"}
                                         >Last Couple Weeks/Job Placement</Card.Title>
                                     </Card.Body>

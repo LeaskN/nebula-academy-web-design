@@ -36,12 +36,12 @@
 }
 
 .toggled {
-    color: #414141;
+    background: linear-gradient(to left, transparent 0%, green 100%, green 100%, transparent 0%) 0 100% / 100% 4px no-repeat;
 }
 
 .subtleButton:hover{
     cursor: pointer;
-    background: linear-gradient(to left, transparent 0%, green 100%, green 100%, transparent 0%) 0 100% / 100% 4px no-repeat;
+    color: #414141;
 }
 #partnersCard{
     overflow: hidden;
