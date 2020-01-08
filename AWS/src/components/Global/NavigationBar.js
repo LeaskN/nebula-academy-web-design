@@ -14,7 +14,7 @@ export const NavigationBar = () => (
                 <Nav className="ml-auto">
                     <NavDropdown title="Program" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/">Overview</NavDropdown.Item>
-                        <NavDropdown.Item href="/internships">Internships</NavDropdown.Item>
+                        <NavDropdown.Item href="/universities">Universities</NavDropdown.Item>
                         <NavDropdown.Item href="/outcomes">Outcomes</NavDropdown.Item>
                         <NavDropdown.Item href="/scholarships">Scholarships</NavDropdown.Item>
                         <NavDropdown.Item href="/application">Apply</NavDropdown.Item>
