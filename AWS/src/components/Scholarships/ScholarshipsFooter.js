@@ -13,7 +13,7 @@ export const ScholarshipsFooter = () => (
             <Button href="/curriculum" variant="primary">Curriculum</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/internships" variant="primary">Apply</Button>
+            <Button href="/universities" variant="primary">Apply</Button>
           </Col>
         </Row>
       </p>

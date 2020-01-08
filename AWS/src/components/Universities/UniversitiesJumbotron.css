@@ -1,4 +1,4 @@
-.internshipsJumbotron{
+.universitiesJumbotron{
     background-image: url('../../assets/partners.jpg');
     background-size: cover;
     color: #ccc;
@@ -8,7 +8,7 @@
     z-index: -2;
     margin: 0px;
 }
-.internshipsOverlay{
+.universitiesOverlay{
     background-color: #000;
     opacity: .6;
     position: absolute;
