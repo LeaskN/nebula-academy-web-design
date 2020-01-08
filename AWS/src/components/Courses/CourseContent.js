@@ -35,14 +35,6 @@ export const CourseContent = () => (
                         <Card.Text>
                             Designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles.
                         </Card.Text>
-                        <ul>
-                            <li><a className="linkLight" href="https://www.youtube.com/watch?v=bupWPZdXqIA">Starting up an HTML file.</a></li>
-                            <li><a className="linkLight" href="https://flexboxfroggy.com/">Structuring web pages game.</a></li>
-                            <li><a className="linkLight" href="https://www.w3schools.com/js/js_intro.asp">W3's introduction to JavaScript.</a></li>
-                            <li><a className="linkLight" href="https://www.youtube.com/watch?v=GTWrWM1UsnA">The Coding Train's JavaScript Tic Tac Toe.</a></li>
-                            <li><a className="linkLight" href="https://www.youtube.com/watch?v=Ukg_U3CnJWI">What is JavaScript?</a></li>
-                            <li><a className="linkLight" href="https://www.youtube.com/playlist?list=PLM_i0obccy3uiITMEb7PUlzgIFlxq9fvv">JavaScript for beginners.</a></li>
-                        </ul>
                     </Card.Body>
                 </Card>
             </Col>

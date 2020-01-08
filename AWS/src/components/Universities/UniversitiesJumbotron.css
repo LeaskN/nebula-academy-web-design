@@ -1,5 +1,5 @@
 .universitiesJumbotron{
-    background-image: url('../../assets/partners.jpg');
+    background-image: url('../../assets/10_AWS_universities.jpg');
     background-size: cover;
     color: #ccc;
     z-index: 02;
@@ -10,7 +10,7 @@
 }
 .universitiesOverlay{
     background-color: #000;
-    opacity: .6;
+    opacity: .65;
     position: absolute;
     top: 0;
     left: 0;
