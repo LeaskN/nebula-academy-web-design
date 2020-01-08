@@ -39,7 +39,7 @@ export const HomeContent = () => (
             </Row>
             <Row>
                 <Col xs={12} lg={12} xl={8} className="introRow2Tile1">
-                    <Row>
+                    <Row className="overImage">
                         <Col xl={6}>
                             <Card className="introRowTile">
                                 <Card.Body>
@@ -51,7 +51,7 @@ export const HomeContent = () => (
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col xl={6}>
+                        <Col xl={6} >
                             <Card className="introRowTile">
                                 <Card.Body>
                                     <Card.Title>Job Placement</Card.Title>
@@ -83,7 +83,7 @@ export const HomeContent = () => (
             <Row>
                 <Col xl={6} className="introRow3Tile1 paddingRight">
                     <Card className="introRowTile">
-                        <Card.Body>
+                        <Card.Body className="overImage">
                             <Card.Title>Scholarships</Card.Title>
                             <Card.Text>
                             Building a career in today's modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in technology.
@@ -93,7 +93,7 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
                 <Col xl={6} className="introRow3Tile2 paddingLeft">
-                    <Card className="introRowTile">
+                    <Card className="overImage introRowTile">
                         <Card.Body>
                             <Card.Title>More Info</Card.Title>
                             <Card.Text>

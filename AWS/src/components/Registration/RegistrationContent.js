@@ -70,7 +70,7 @@ class registrationContent extends Component {
                         <hr></hr>
                         <Row>
                             <Col className="formContainer">
-                                <Iframe url="https://forms.office.com/Pages/ResponsePage.aspx?id=DYC-61190U-xMgLVy3lNnmhMOgtjMC5JhCXq1Gwz5J5UQjlZMUZKSVFNRUxYVEpTRThOMlo2UEoxTyQlQCN0PWcu&embed=true"
+                                <Iframe url="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:AWS%20Academy%20Programs"
                                     width="850px"
                                     height="800px"
                                     id="myId"
