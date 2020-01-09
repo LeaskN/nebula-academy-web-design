@@ -4,11 +4,12 @@
     color: #ffffff;
     background-color: #9971AF;
 }
-.card-body{
-    margin: auto;
-}
 .cardDeckRight{
     width: 60vw;
+    background-color: #fafbfc;
+}
+.card-body{
+    margin: auto;
 }
 .rightPanelLeftCol{
     text-align: center;
@@ -27,21 +28,21 @@
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
 }
 .subtleButton{
-    padding-top: 50px;
-    padding-bottom: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-left: 5px solid #414141;
 }
-
-.buttonColor {
-  color: white;
-}
-
-.toggled {
-    color: #414141;
-}
-
 .subtleButton:hover{
     cursor: pointer;
-    background: linear-gradient(to left, transparent 0%, green 100%, green 100%, transparent 0%) 0 100% / 100% 4px no-repeat;
+    color: #414141;
+    border-left: 5px solid #AB225D;
+}
+.toggled {
+    color: #414141;
+    border-left: 5px solid #206DD4;
+    background-color: #fafbfc;
 }
 #partnersCard{
     overflow: hidden;
@@ -56,7 +57,6 @@
 }
 .sponsorsArea{
     justify-content: space-around;
-
 }
 .curriculumBackImage1{
     border:10px solid white;

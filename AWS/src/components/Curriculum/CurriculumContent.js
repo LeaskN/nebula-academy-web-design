@@ -53,21 +53,36 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
-                                        <Card.Title className="subtleButton" onClick={() => this.button1()}>Academy Cloud Foundations</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button2()}>Academy Cloud Architect</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button3()}>Academy Cloud Operations</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.button4()}>Academy Cloud Developing</Card.Title>
+                                    <Card.Body className="noPadding">
+                                        <Card.Title 
+                                            onClick={() => this.button1()}
+                                            className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
+                                            Academy Cloud Foundations
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button2()}
+                                            className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
+                                            Academy Cloud Architect
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button3()}
+                                            className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton"}>
+                                            Academy Cloud Operations
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button4()}
+                                            className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
+                                            Academy Cloud Developing
+                                        </Card.Title>
                                     </Card.Body> 
                             </Card>
                         </Col>
                         <Col xs={8} className="cardColumns">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                             <h1>Academy Cloud Foundations</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -79,7 +94,7 @@ class CurriculumContent extends Component {
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
+
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
@@ -169,16 +184,36 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton1()}>In Person Sessions</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton2()}>Live Remote Sessions</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton3()}>Lab Hours</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton4()}>Instructor Support Hours</Card.Title>
-                                        <hr/>
-                                        <Card.Title className="subtleButton" onClick={() => this.scheduleButton5()}> Exam Prep Hours</Card.Title>
+                                    <Card.Body className="noPadding">
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton1()}
+                                            className={this.state.toggle.scheduleButton1 ? " subtleButton toggled" : "subtleButton"}>
+                                            In Person Sessions
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton2()}
+                                            className={this.state.toggle.scheduleButton2 ? " subtleButton toggled" : "subtleButton"}>
+                                            Live Remote Sessions
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton3()}
+                                            className={this.state.toggle.scheduleButton3 ? " subtleButton toggled" : "subtleButton"}>
+                                            Lab Hours
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton4()}
+                                            className={this.state.toggle.scheduleButton4 ? " subtleButton toggled" : "subtleButton"}>
+                                            Instructor Support Hours
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton5()}
+                                            className={this.state.toggle.scheduleButton5 ? " subtleButton toggled" : "subtleButton"}>
+                                                Exam Prep Hours
+                                            </Card.Title>
                                     </Card.Body> 
                             </Card>
                         </Col>

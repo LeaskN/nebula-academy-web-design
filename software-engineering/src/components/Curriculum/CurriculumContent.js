@@ -62,24 +62,40 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
-                                        <Card.Title onClick={() => this.button1()} className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton buttonColor"}>Basics</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.button2()} className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Advanced JavaScript</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.button3()}
-                                        className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton buttonColor"}>React</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.button4()}
-                                        className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton buttonColor"}>Certifications</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.button5()}
-                                        className={this.state.toggle.button5 ? " subtleButton toggled" : "subtleButton buttonColor"}>Job Placement</Card.Title>
+                                    <Card.Body className="noPadding">
+                                        <Card.Title 
+                                            onClick={() => this.button1()} 
+                                            className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
+                                            Basics
+                                            </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button2()} 
+                                            className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
+                                            Advanced JavaScript
+                                            </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button3()}
+                                            className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton"}>
+                                            React
+                                            </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button4()}
+                                            className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
+                                            Certifications
+                                            </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button5()}
+                                            className={this.state.toggle.button5 ? " subtleButton toggled" : "subtleButton"}>
+                                            Job Placement
+                                            </Card.Title>
                                     </Card.Body>
                             </Card>
                         </Col>
-                        <Col xs={8} className="cardColumns">
+                        <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <Card.Text>
@@ -201,26 +217,36 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body>
-                                        <Card.Title onClick={() => this.scheduleButton1()}
-                                        className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Schedule Overview</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.scheduleButton2()}
-                                        className={this.state.toggle2.scheduleButton2 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Daily Schedule</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.scheduleButton3()}
-                                        className={this.state.toggle2.scheduleButton3 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Practice Hours</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.scheduleButton4()}
-                                        className={this.state.toggle2.scheduleButton4 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Weekly Calendar</Card.Title>
-                                        <hr/>
-                                        <Card.Title onClick={() => this.scheduleButton5()}
-                                        className={this.state.toggle2.scheduleButton5 ? " subtleButton toggled" : "subtleButton buttonColor"}
-                                        >Last Couple Weeks/Job Placement</Card.Title>
+                                    <Card.Body className="noPadding">
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton1()}
+                                            className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton"}>
+                                            Schedule Overview
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton2()}
+                                            className={this.state.toggle2.scheduleButton2 ? " subtleButton toggled" : "subtleButton"}>
+                                            Daily Schedule
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton3()}
+                                            className={this.state.toggle2.scheduleButton3 ? " subtleButton toggled" : "subtleButton"}>
+                                            Practice Hours
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton4()}
+                                            className={this.state.toggle2.scheduleButton4 ? " subtleButton toggled" : "subtleButton"}>
+                                            Weekly Calendar
+                                        </Card.Title>
+                                        <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.scheduleButton5()}
+                                            className={this.state.toggle2.scheduleButton5 ? " subtleButton toggled" : "subtleButton"}>
+                                            Last Couple Weeks/Job Placement
+                                        </Card.Title>
                                     </Card.Body>
                             </Card>
                         </Col>

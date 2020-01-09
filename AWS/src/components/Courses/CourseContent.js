@@ -23,7 +23,7 @@ export const CourseContent = () => (
                     <Card.Body>
                         <Card.Title>Cloud Architect</Card.Title>
                         <Card.Text>
-                        <p>For students seeking to understand the fundamentals of building IT infrastructure on Amazon Webs Services, or AWS.</p>
+                            For students seeking to understand the fundamentals of building IT infrastructure on Amazon Webs Services, or AWS.
                         </Card.Text>
                     </Card.Body>
                 </Card>

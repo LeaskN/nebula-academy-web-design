@@ -89,3 +89,12 @@ code {
   margin-right: 0px;
   margin-left: 0px;
 }
+.noPadding{
+  padding: 0px;
+}
+.noMargin{
+  margin: 0px;
+}
+.offWhite{
+  background-color: #fafbfc
+}
