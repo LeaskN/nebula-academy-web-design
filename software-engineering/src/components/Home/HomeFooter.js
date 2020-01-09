@@ -6,8 +6,6 @@ export const HomeFooter = () => (
   <Container className="fullHomeFooter">
     <Jumbotron>
       <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
-      
-      <p>
         <Row>
           <Col className="contentCentered">
             <Button href="/program" variant="primary">Program</Button>
@@ -16,7 +14,6 @@ export const HomeFooter = () => (
             <Button href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
-      </p>
     </Jumbotron>
   </Container>
 )

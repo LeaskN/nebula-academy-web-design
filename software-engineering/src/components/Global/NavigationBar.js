@@ -6,7 +6,7 @@ import './NavigationBar.css';
 
 export const NavigationBar = () => (
     <React.Fragment>
-        <Navbar bg="dark" className="mainNavbar navbar-dark navbar-collapse" toggleable expand="lg">
+        <Navbar bg="dark" className="mainNavbar navbar-dark navbar-collapse" toggleable="true" expand="lg">
             <Navbar.Brand className="navBarLogo" href="/"><img src={Icon} height="50px" alt=""></img></Navbar.Brand>
             <Navbar.Brand className="navBarLogoSmall" href="/"><img src={NebulaIcon} height="47px" alt=""></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
