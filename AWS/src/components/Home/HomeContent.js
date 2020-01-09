@@ -22,8 +22,7 @@ export const HomeContent = () => (
                         <Card.Body>
                             <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
                             <Card.Text>
-                                <p>Unlock a world of opportunities with your AWS Cloud Literacy skills.</p>  
-                            </Card.Text>
+                                Unlock a world of opportunities with your AWS Cloud Literacy skills.                            </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
