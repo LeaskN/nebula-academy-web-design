@@ -12,6 +12,8 @@ import { Footer } from './components/Global/Footer'
 import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
+import { HiddenRegistration } from './pages/HiddenRegistration';
+
 // import { Home, Program, NoMatch, Curriculum, registration, Universities, Outcomes, Scholarships } from './pages/';
 
 function App() {
@@ -29,10 +31,8 @@ function App() {
             <Route path ="/scholarships" component={Scholarships}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
+            <Route path ="/HiddenRegistration" component={HiddenRegistration}/>
             <Route component = {NoMatch}/>
-            {/* 
-            <Route path ="/Register" component={Register}/>
-            */}
           </Switch>
         </Router>
         <Footer/>
