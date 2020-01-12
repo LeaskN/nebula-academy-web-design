@@ -25,7 +25,7 @@ export const HomeContent = () => (
                                     <li><b>Earn the <a className="link" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
                                     <li>Gain access to the <b><a className="link" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
                                     <li><b>Multiple payment options</b> such as Scholarships, Pay After Employment, and Extended Payment.</li>
-                                    <li><b>Pending approval 1/6/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
+                                    <li><b>Pending approval 6/1/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
                                 </ul>  
                         </Card.Body>
                     </Card>
