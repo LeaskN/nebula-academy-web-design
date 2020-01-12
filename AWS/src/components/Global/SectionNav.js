@@ -10,7 +10,6 @@ export const SectionNav = () => (
                 <Col className="section"><a className="customLink" href="/Courses" >Courses</a></Col>
                 <Col className="section"><a className="customLink" href="/Curriculum" >Curriculum</a></Col>
                 <Col className="section"><a className="customLink" href="/Universities" >Universities</a></Col>
-                <Col className="section"><a className="customLink" href="/Certifications" >Certifications</a></Col>
             </Row>
         </Container>
     </React.Fragment>
