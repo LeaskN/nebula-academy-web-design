@@ -9,12 +9,9 @@ import { Universities } from './pages/Universities';
 import { Outcomes } from './pages/Outcomes';
 import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
-import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
 import { HiddenRegistration } from './pages/HiddenRegistration';
-
-// import { Home, Program, NoMatch, Curriculum, registration, Universities, Outcomes, Scholarships } from './pages/';
 
 function App() {
   return (
@@ -28,7 +25,6 @@ function App() {
             <Route path = "/registration" component={Registration}/>
             <Route path = "/universities" component={Universities}/>
             <Route path ="/outcomes" component={Outcomes}/>
-            <Route path ="/scholarships" component={Scholarships}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route path ="/HiddenRegistration" component={HiddenRegistration}/>

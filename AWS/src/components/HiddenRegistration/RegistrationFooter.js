@@ -10,9 +10,6 @@ export const RegistrationFooter = () => (
       <p>
         <Row>
           <Col className="contentCentered">
-            <Button href="/scholarships" variant="primary">Scholarships</Button>
-          </Col>
-          <Col className="contentCentered">
             <Button href="/registration" variant="primary">Register</Button>
           </Col>
         </Row>

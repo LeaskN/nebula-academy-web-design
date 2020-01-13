@@ -83,11 +83,10 @@ export const HomeContent = () => (
                 <Col xl={6} className="introRow3Tile1 paddingRight">
                     <Card className="introRowTile">
                         <Card.Body className="overImage">
-                            <Card.Title>Scholarships</Card.Title>
+                            <Card.Title>Support</Card.Title>
                             <Card.Text>
-                            Building a career in today's modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in technology.
+                            Building a career in today's modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our support system and how you can begin your journey to build a sustainable career in technology.
                             </Card.Text>
-                            <Button href="/scholarships" variant="success">Scholarships</Button>
                         </Card.Body>
                     </Card>
                 </Col>
