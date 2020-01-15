@@ -43,6 +43,10 @@ class applicationContent extends Component {
             return ele !== value;
         });
     }
+    fixJSON(){
+        let string = JSON.stringify(this.state);
+        return string;
+    }
     handleInputChange(event) {
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
@@ -92,7 +96,7 @@ class applicationContent extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state)
-    }
+    }    
     render() {
         return (
             <Container>
@@ -231,33 +235,33 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>Are you currently authorized to work in the US?</Form.Label>
                                 <Form.Control required name="Authorized_to_work_in_US__c" as="select" onChange={this.handleInputChange}>
-                                    <option aria-label="option 0" label="Select"/> 
-                                    <option aria-label="option 1" label="Yes" value="true"/> 
-                                    <option aria-label="option 2" label="No" value="false"/> 
+                                    <option aria-label="option 0" label="Select"></option> 
+                                    <option aria-label="option 1" label="Yes" value="true">Yes</option> 
+                                    <option aria-label="option 2" label="No" value="false">No</option> 
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group required>
                                 <Form.Label>Would you be interested in learning more about our teacher certification program?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="Interested_inTeacher_certification_progr__c"  as="select">
-                                        <option aria-label="option 0" label="Select" value="false"/> 
-                                        <option aria-label="option 1" label="Yes" value="true"/> 
-                                        <option aria-label="option 2" label="No" value="false"/> 
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
+                                        <option aria-label="option 2" label="No" value="false">No</option> 
                                     </Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Are you a US citizen or permanent resident?</Form.Label>
                                     <Form.Control required as="select" name="US_citizen_or_permanent_resident__c" onChange={this.handleInputChange}>
-                                        <option aria-label="option 0" label="Select" value="false"/> 
-                                        <option aria-label="option 1" label="Yes" value="true"/> 
-                                        <option aria-label="option 2" label="No" value="false"/> 
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
+                                        <option aria-label="option 2" label="No" value="false">No</option> 
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="VET_GI_BILL_BENEFITS__c" as="select">
-                                        <option aria-label="option 0" label="Select" value="false"/> 
-                                        <option aria-label="option 2" label="Yes" value="true"/> 
-                                        <option aria-label="option 3" label="No" value="false"/> 
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 2" label="Yes" value="true">Yes</option> 
+                                        <option aria-label="option 3" label="No" value="false">No</option> 
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
@@ -292,7 +296,7 @@ class applicationContent extends Component {
                                 <br/>
                             </Form.Group>
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') ? "hidden" : "showing"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
                                     <Form.Control input onChange={this.handleInputChange} name="Ethnicity_OTHER_Desc__c" placeholder="Gender" />
                                 </Form.Group>
@@ -308,7 +312,7 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other" type="checkbox"/> Other</label><br/>
                             </Form.Group>
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') ? "hidden" : "showing"}>
+                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control input onChange={this.handleInputChange} name="Gender_OTHER_Desc__c" placeholder="Gender" />
                                 </Form.Group>
@@ -316,24 +320,24 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>Do you have coding experience?</Form.Label>
                                 <Form.Control required onChange={this.handleInputChange} name="Coding_experience__c" as="select">
-                                    <option aria-label="option 0" label="Select"/> 
-                                    <option aria-label="option 1" value="None" label="None"/> 
-                                    <option aria-label="option 2" value="Beginner (100 hours or less of tutorials)" label="Beginner (100 hours or less of tutorials)"/> 
-                                    <option aria-label="option 3" value="Intermediate (Three or fewer classes and personal projects)" label="Intermediate (Three or fewer classes and personal projects)"/> 
-                                    <option aria-label="option 4" value="Advanced (Degree or professional experience)" label="Advanced (Degree or professional experience)"/> 
+                                    <option aria-label="option 0" label="Select"></option> 
+                                    <option aria-label="option 1" value="None" label="None">None</option> 
+                                    <option aria-label="option 2" value="Beginner (100 hours or less of tutorials)" label="Beginner (100 hours or less of tutorials)">Beginner (100 hours or less of tutorials)</option> 
+                                    <option aria-label="option 3" value="Intermediate (Three or fewer classes and personal projects)" label="Intermediate (Three or fewer classes and personal projects)">Intermediate (Three or fewer classes and personal projects)</option> 
+                                    <option aria-label="option 4" value="Advanced (Degree or professional experience)" label="Advanced (Degree or professional experience)">Advanced (Degree or professional experience)</option> 
                                 </Form.Control>
                             </Form.Group>  
                             <Form.Group>
                                 <Form.Label>Please provide highest education level</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Highest_education_level__c" as="select">
-                                <option aria-label="option 0" label="Select"/> 
-                                <option aria-label="option 1" value="High School" label="High School"/> 
-                                <option aria-label="option 2" value="Some College" label="Some College"/> 
-                                <option aria-label="option 3" value="Associates Degree" label="Associates Degree"/> 
-                                <option aria-label="option 4" value="Bachelors Degree" label="Bachelors Degree"/> 
-                                <option aria-label="option 5" value="Masters" label="Masters"/> 
-                                <option aria-label="option 6" value="Doctorate" label="Doctorate"/> 
-                                <option aria-label="option 7" value="Other" label="Other"/> 
+                                <option aria-label="option 0" label="Select"></option> 
+                                <option aria-label="option 1" value="High School" label="High School">High School</option> 
+                                <option aria-label="option 2" value="Some College" label="Some College">Some College</option> 
+                                <option aria-label="option 3" value="Associates Degree" label="Associates Degree">Associates Degree</option> 
+                                <option aria-label="option 4" value="Bachelors Degree" label="Bachelors Degree">Bachelors Degree</option> 
+                                <option aria-label="option 5" value="Masters" label="Masters">Masters</option> 
+                                <option aria-label="option 6" value="Doctorate" label="Doctorate">Doctorate</option> 
+                                <option aria-label="option 7" value="Other" label="Other">Other</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group className={this.state.Highest_education_level__c === "Other" ? "showing" : "hidden"}>
@@ -347,21 +351,21 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="How_did_you_hear_about_our_program__c" as="select">
-                                <option aria-label="option 0" label="Select"/> 
-                                <option aria-label="option 1" value="Article" label="Article"/> 
-                                <option aria-label="option 2" value="Course Report" label="Course Report"/> 
-                                <option aria-label="option 3" value="Facebook" label="Facebook"/> 
-                                <option aria-label="option 4" value="Friend/Family" label="Friend/Family"/> 
-                                <option aria-label="option 5" value="GitHub" label="GitHub"/> 
-                                <option aria-label="option 6" value="Google" label="Google"/> 
-                                <option aria-label="option 7" value="Hiring Heroes" label="Hiring Heroes"/> 
-                                <option aria-label="option 8" value="Institute for Vets & Families (IVMF)" label="Institute for Vets & Families (IVMF)"/> 
-                                <option aria-label="option 9" value="LinkedIn" label="LinkedIn"/> 
-                                <option aria-label="option 10" value="Operation Code" label="Operation Code"/> 
-                                <option aria-label="option 11" value="Twitter" label="Twitter"/> 
-                                <option aria-label="option 12" value="Veterans Affairs" label="Veterans Affairs"/> 
-                                <option aria-label="option 13" value="Warrior Scholar" label="Warrior Scholar"/> 
-                                <option aria-label="option 14" value="Other" label="Other"/> 
+                                <option aria-label="option 0" label="Select"></option> 
+                                <option aria-label="option 1" value="Article" label="Article">Article</option> 
+                                <option aria-label="option 2" value="Course Report" label="Course Report">Course Report</option> 
+                                <option aria-label="option 3" value="Facebook" label="Facebook">Facebook</option> 
+                                <option aria-label="option 4" value="Friend/Family" label="Friend/Family">Friend/Family</option> 
+                                <option aria-label="option 5" value="GitHub" label="GitHub">GitHub</option> 
+                                <option aria-label="option 6" value="Google" label="Google">Google</option> 
+                                <option aria-label="option 7" value="Hiring Heroes" label="Hiring Heroes">Hiring Heroes</option> 
+                                <option aria-label="option 8" value="Institute for Vets & Families (IVMF)" label="Institute for Vets & Families (IVMF)">Institute for Vets & Families (IVMF)" label="Institute for Vets & Families (IVMF)</option> 
+                                <option aria-label="option 9" value="LinkedIn" label="LinkedIn">LinkedIn</option> 
+                                <option aria-label="option 10" value="Operation Code" label="Operation Code">Operation Code</option> 
+                                <option aria-label="option 11" value="Twitter" label="Twitter">Twitter</option> 
+                                <option aria-label="option 12" value="Veterans Affairs" label="Veterans Affairs">Veterans Affairs</option> 
+                                <option aria-label="option 13" value="Warrior Scholar" label="Warrior Scholar">Warrior Scholar</option> 
+                                <option aria-label="option 14" value="Other" label="Other">Other</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group className={this.state.How_did_you_hear_about_our_program__c === "Other" ? "showing" : "hidden"}>
@@ -371,22 +375,22 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>Please provide your preference to experience learning</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Preference_to_experience_learning__c" as="select">
-                                <option aria-label="option 0" label="Select"/> 
-                                <option aria-label="option 1" value="Virtual" label="Virtual"/> 
-                                <option aria-label="option 1" value="In-Person" label="In-Person"/> 
-                                <option aria-label="option 2" value="Both" label="Both"/> 
+                                <option aria-label="option 0" label="Select"></option> 
+                                <option aria-label="option 1" value="Virtual" label="Virtual">Virtual</option> 
+                                <option aria-label="option 1" value="In-Person" label="In-Person">In-Person</option> 
+                                <option aria-label="option 2" value="Both" label="Both">Both</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
-                                <option aria-label="option 0" label="Select"/> 
-                                <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program."/> 
-                                <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation."/> 
-                                <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation."/> 
-                                <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation."/> 
-                                <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation."/> 
-                                <option aria-label="option 6" value="Other" label="Other"/> 
+                                <option aria-label="option 0" label="Select"></option> 
+                                <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
+                                <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
+                                <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
+                                <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
+                                <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
+                                <option aria-label="option 6" value="Other" label="Other">Other</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
@@ -398,8 +402,8 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
                                 <Form.Control onChange={this.handleInputChange} name="Educational_Proof_for_HS_Diploma__c" required as="select">
-                                    <option aria-label="option 0" label="Select"/> 
-                                    <option aria-label="option 1" label="I Acknowledge" value="true"/> 
+                                    <option label="Select"></option> 
+                                    <option label="I Acknowledge" value="true">I Acknowledge</option>
                                 </Form.Control>
                             </Form.Group>
                             <Button variant="primary" type="submit">
@@ -408,6 +412,7 @@ class applicationContent extends Component {
                         </Form>
                     </Col>
                 </Row>
+                <p style={{maxWidth:"80vw", wordWrap: "break-word"}}>JSON: {this.fixJSON()}</p>
             </Container>
         )
     }
