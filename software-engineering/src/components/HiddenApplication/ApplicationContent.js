@@ -116,7 +116,7 @@ class applicationContent extends Component {
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>First</Form.Label>
-                                    <Form.Control required input onChange={this.handleInputChange} name="First_Name__c" placeholder="First Name" />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="First_Name__c" placeholder="First Name" />
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Last</Form.Label>
@@ -126,7 +126,7 @@ class applicationContent extends Component {
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="formGridPhone">
                                     <Form.Label>Phone</Form.Label>
@@ -135,16 +135,16 @@ class applicationContent extends Component {
                             </Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>Mailing Address 1</Form.Label>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Mailing_Address__c" placeholder="Mailing Address" />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Mailing_Address__c" placeholder="Mailing Address" />
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Mailing Address 2</Form.Label>
-                                    <Form.Control input onChange={this.handleInputChange} name="Mailing_Address2__c" placeholder="Additional address information such as apartment number"/>
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Mailing_Address2__c" placeholder="Additional address information such as apartment number"/>
                                 </Form.Group>
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>City</Form.Label>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Mailing_City__c" placeholder="City" />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Mailing_City__c" placeholder="City" />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="formGridState">
                                     <Form.Label>State</Form.Label>
@@ -219,13 +219,13 @@ class applicationContent extends Component {
                                 <Form.Label>Online Profiles (one per textbox) </Form.Label>
                             <Form.Row>
                                 <Form.Group as={Col}>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Online_Profile_One__c" placeholder="GitHub, etc..." />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Online_Profile_One__c" placeholder="GitHub, etc..." />
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Online_Profile_Two__c" placeholder="LinkedIn, etc..." />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Online_Profile_Two__c" placeholder="LinkedIn, etc..." />
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control required input onChange={this.handleInputChange} name="Online_Profile_Three__c" placeholder="Twitter, etc..." />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Online_Profile_Three__c" placeholder="Twitter, etc..." />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
@@ -298,7 +298,7 @@ class applicationContent extends Component {
                             <Form.Row className="paddedSides">
                                 <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control input onChange={this.handleInputChange} name="Ethnicity_OTHER_Desc__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_OTHER_Desc__c" placeholder="Gender" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group required onChange={this.handleInputChange} className="Gender__c">
@@ -314,7 +314,7 @@ class applicationContent extends Component {
                             <Form.Row className="paddedSides">
                                 <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
-                                    <Form.Control input onChange={this.handleInputChange} name="Gender_OTHER_Desc__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Gender_OTHER_Desc__c" placeholder="Gender" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
@@ -342,7 +342,7 @@ class applicationContent extends Component {
                             </Form.Group>
                             <Form.Group className={this.state.Highest_education_level__c === "Other" ? "showing" : "hidden"}>
                                 <Form.Label>Please provide highest education level</Form.Label>
-                                <Form.Control input onChange={this.handleInputChange} name="Highest_education_level_OTHER_Desc__c" placeholder="Highest Education" />
+                                <Form.Control input="true" onChange={this.handleInputChange} name="Highest_education_level_OTHER_Desc__c" placeholder="Highest Education" />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please include certification(s), specialized training(s), license(s), self-taught learning program(s), self-enrichment workshop(s) and other career-enhancing program(s) below.</Form.Label>
@@ -370,7 +370,7 @@ class applicationContent extends Component {
                             </Form.Group>
                             <Form.Group className={this.state.How_did_you_hear_about_our_program__c === "Other" ? "showing" : "hidden"}>
                                     <Form.Label>Please provide how you heard of our program.</Form.Label>
-                                    <Form.Control input onChange={this.handleInputChange} name="How_did_you_hear_OTHER_Desc__c" placeholder="Something else" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="How_did_you_hear_OTHER_Desc__c" placeholder="Something else" />
                                 </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide your preference to experience learning</Form.Label><br/>
@@ -396,7 +396,7 @@ class applicationContent extends Component {
                             <Form.Row className="paddedSides">
                                 <Form.Group as={Col} className={this.state.Primary_intentions_for_enrolling__c === "Other" ? "showing " : "hidden"}>
                                     <Form.Label>Please describe your primary intentions below:</Form.Label>
-                                    <Form.Control input onChange={this.handleInputChange} name="Primary_Intentions_OTHER_DESC__c" placeholder="Primary Intentions: Other" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Primary_Intentions_OTHER_DESC__c" placeholder="Primary Intentions: Other" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
