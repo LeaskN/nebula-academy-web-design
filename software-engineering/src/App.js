@@ -12,7 +12,7 @@ import { Footer } from './components/Global/Footer'
 import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
-// import { Home, Program, NoMatch, Curriculum, Application, Internships, Outcomes, Scholarships } from './pages/';
+import { HiddenApplication } from './pages/HiddenApplication';
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
             <Route path ="/scholarships" component={Scholarships}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
+            <Route path ="/HiddenApplication" component={HiddenApplication}/>
             <Route component = {NoMatch}/>
             {/*
             <Route path ="/Apply" component={Apply}/>

@@ -57,9 +57,9 @@ export function register(config) {
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
-    .then(registration => {
-      registration.onupdatefound = () => {
-        const installingWorker = registration.installing;
+    .then(application => {
+      application.onupdatefound = () => {
+        const installingWorker = application.installing;
         if (installingWorker == null) {
           return;
         }
@@ -76,7 +76,7 @@ function registerValidSW(swUrl, config) {
 
               // Execute callback
               if (config && config.onUpdate) {
-                config.onUpdate(registration);
+                config.onUpdate(application);
               }
             } else {
               // At this point, everything has been precached.
@@ -86,7 +86,7 @@ function registerValidSW(swUrl, config) {
 
               // Execute callback
               if (config && config.onSuccess) {
-                config.onSuccess(registration);
+                config.onSuccess(application);
               }
             }
           }
@@ -94,7 +94,7 @@ function registerValidSW(swUrl, config) {
       };
     })
     .catch(error => {
-      console.error('Error during service worker registration:', error);
+      console.error('Error during service worker application:', error);
     });
 }
 
@@ -109,8 +109,8 @@ function checkValidServiceWorker(swUrl, config) {
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
         // No service worker found. Probably a different app. Reload the page.
-        navigator.serviceWorker.ready.then(registration => {
-          registration.unregister().then(() => {
+        navigator.serviceWorker.ready.then(application => {
+          application.unregister().then(() => {
             window.location.reload();
           });
         });
@@ -128,8 +128,8 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
+    navigator.serviceWorker.ready.then(application => {
+      application.unregister();
     });
   }
 }
