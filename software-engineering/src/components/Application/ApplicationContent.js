@@ -70,7 +70,7 @@ class ApplicationContent extends Component {
                             <Col xs={10} lg={4}>
                                 <h3>Phase II:</h3>
                                     <Col xs={10}>
-                                        <p>Short Essays, Video, and Coding challenges are required for all candidates. (Allow for 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions)</p>
+                                        <p>Short Essays and Coding challenges are required for all candidates. (Allow for 2 - 4 hours if you have coding experience. If you don't, then expect 4 to 6 hours to go through the recommended tutorials and coding questions)</p>
                                     </Col>
                             </Col>
                             <Col xs={10} lg={4}>
