@@ -11,6 +11,7 @@ import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
+import { Staff } from './pages/Staff';
 import { HiddenRegistration } from './pages/HiddenRegistration';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path = "/registration" component={Registration}/>
             <Route path = "/universities" component={Universities}/>
             <Route path ="/outcomes" component={Outcomes}/>
+            <Route path ="/staff" component={Staff}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route path ="/HiddenRegistration" component={HiddenRegistration}/>

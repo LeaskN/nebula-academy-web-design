@@ -65,6 +65,9 @@ code {
   justify-content: center;
   text-align: center;
 }
+.greyText{
+  color: rgb(151, 151, 151);
+}
 .container{
   width: 90vw;
 }

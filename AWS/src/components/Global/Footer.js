@@ -16,7 +16,7 @@ export const Footer = () => (
             <Nav.Item><Nav.Link href="/">About</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/careers">Careers</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/staff">Staff</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/staff">Universities</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>
             </ul>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
