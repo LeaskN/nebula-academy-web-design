@@ -1,7 +1,7 @@
 import React from 'react';
+import StaffContent from '../components/Staff/StaffContent';
 import { StaffJumbotron } from '../components/Staff/StaffJumbotron';
 import { SectionNav } from '../components/Global/SectionNav';
-import { StaffContent } from '../components/Staff/StaffContent';
 import  { StaffFooter } from '../components/Staff/StaffFooter';
 
 

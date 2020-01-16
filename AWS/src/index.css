@@ -98,3 +98,6 @@ code {
 .noMargin{
   margin: 0px;
 }
+.pointer:hover{
+  cursor: pointer;
+}
