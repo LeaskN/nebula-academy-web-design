@@ -22,8 +22,8 @@ export const HomeContent = () => (
                         <Card.Body>
                             <h3>Why Nebula Academy?</h3>
                                 <ul style={{listStyleType:"none"}}>
-                                    <li><b>Earn the <a className="link" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
-                                    <li>Gain access to the <b><a className="link" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
+                                    <li><b>Earn the <a className="link" target="empty" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
+                                    <li>Gain access to the <b><a className="link" target="empty" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
                                     <li><b>Multiple payment options</b> such as Scholarships, Pay After Employment, and Extended Payment.</li>
                                     <li><b>Pending approval 6/1/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
                                 </ul>  
@@ -39,9 +39,9 @@ export const HomeContent = () => (
                                 The field is exponentially growing. According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.
                             </Card.Text>
                             <p><>Sources: </>
-                                <a className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">bls.gov</a> 
+                                <a className="link" target="empty" href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">bls.gov</a> 
                                 <> and </>
-                                <a className="link" href="https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm">Glassdoor</a>
+                                <a className="link" target="empty" href="https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm">Glassdoor</a>
                             </p>
                         </Card.Body>
                     </Card>
@@ -79,19 +79,19 @@ export const HomeContent = () => (
                         <Card className="purpleBackground">
                             <br/>
                             <h1 className="centralText">$62,910</h1>
-                            <a className="link centralText" href="https://www.indeed.com/salaries/junior-software-engineer-Salaries">
+                            <a className="link centralText" target="empty" href="https://www.indeed.com/salaries/junior-software-engineer-Salaries">
                             Junior Software Engineer Salary
                             </a>
                             <h1 className="centralText">$106,395</h1>
-                            <a className="link centralText" href="https://www.indeed.com/career/software-engineer/salaries">
+                            <a className="link centralText" target="empty" href="https://www.indeed.com/career/software-engineer/salaries">
                             Software Engineer Salary
                             </a>
                             <h1 className="centralText">$112,376</h1>
-                            <a className="link centralText" href="https://www.indeed.com/career/full-stack-developer/salaries">
+                            <a className="link centralText" target="empty" href="https://www.indeed.com/career/full-stack-developer/salaries">
                             Full Stack Developer Salary
                             </a>
                             <h1 className="centralText">$128,817</h1>
-                            <a className="link centralText" href="https://www.indeed.com/career/senior-software-engineer/salaries">
+                            <a className="link centralText" target="empty" href="https://www.indeed.com/career/senior-software-engineer/salaries">
                             Senior Software Engineer Salary
                             </a>
                             <br/>
