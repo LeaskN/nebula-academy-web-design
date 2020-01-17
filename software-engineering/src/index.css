@@ -98,15 +98,29 @@ code {
 .offWhite{
   background-color: #fafbfc
 }
+/* @media(max-width: 1299px){
+  .popover{
+    left: -26% !important; 
+  }
+} */
 .popover-header{
-  width: 50vw;
-}
-.popover{
-  transform: translate3d(25vw, 966px, 0px) !important; 
+  position: fixed;
+  width: 70vw;  /* adjust as per your needs */
+  height: 350px;   /* adjust as per your needs */
+  margin-left:-35vw; 
+  margin-top: -350px;  /* negative half of width above */
+  overflow: scroll;
+  z-index: 100;
 }
 .arrow{
-  left: 24vw !important;
+  display:none !important;
 }
+
+/* @media(max-width: 499px){
+  .popover-header{
+    width: 70vw;
+  }
+} */
 .contentCentered{
   display: flex;
   align-items: space-around;

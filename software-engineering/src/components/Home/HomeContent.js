@@ -99,6 +99,7 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
             </Row>
+            {/* <div className="test"></div> */}
             <Row>
                 <Col xs={12} className='introRowTile'>
                     <Card className="guarantee">
@@ -108,7 +109,7 @@ export const HomeContent = () => (
                             <div className="contentCentered">
                                 <ButtonToolbar>
                                     {<OverlayTrigger
-                                        trigger="click"
+                                        trigger="focus"
                                         key='top'
                                         placement='top'
                                         overlay={
