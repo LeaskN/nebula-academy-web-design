@@ -9,7 +9,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>Learn To Code in 6 Months</Card.Title>
+                            <h3>Learn To Code in 6 Months</h3>
                             <Card.Text>
                                 Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                             </Card.Text>
@@ -20,7 +20,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={6} xl={4} className="introRow1Column2">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>Why Nebula Academy?</Card.Title>
+                            <h3>Why Nebula Academy?</h3>
                                 <ul style={{listStyleType:"none"}}>
                                     <li><b>Earn the <a className="link" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
                                     <li>Gain access to the <b><a className="link" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
@@ -33,7 +33,7 @@ export const HomeContent = () => (
                 <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>Get a Job in a Growing Field with Strong Starting Salaries</Card.Title>
+                            <h3>Get a Job in a Growing Field with Strong Starting Salaries</h3>
                             <Card.Text>
                                 The national average salary for an Entry Level Software Engineer is $86,367 in United States, compared to a national average of entry level jobs at a salary of $40,013, according to Glassdoor.
                                 The field is exponentially growing. According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.
@@ -53,7 +53,7 @@ export const HomeContent = () => (
                         <Col xl={6}>
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <Card.Title>Market-Driven Curriculum</Card.Title>
+                                    <h3>Market-Driven Curriculum</h3>
                                     <Card.Text>
                                     Nebula Academy programs begin with the career goal in mind. At the national level, we engage with industry to understand challenges, translate them into skills, and deliver intense training to participants who graduate ready to make meaningful contributions to employers.
                                     </Card.Text>
@@ -64,7 +64,7 @@ export const HomeContent = () => (
                         <Col xl={6}>
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <Card.Title>Job Readiness</Card.Title>
+                                    <h3>Job Readiness</h3>
                                     <Card.Text>
                                     Our curriculum combines hard- and soft-skills training to teach participants how to work collaboratively, communicate across teams, and present themselves to employers. We incorporate career evaluations, career coaching, and interview preparation into every program we deliver. 
                                     </Card.Text>
@@ -102,38 +102,40 @@ export const HomeContent = () => (
             <Row>
                 <Col xs={12} className='introRowTile'>
                     <Card className="guarantee">
-                        <Card.Title>100% refund if you don't land interviews!</Card.Title>
+                        <h2>100% refund if you don't land interviews!</h2>
                             <p>Our goals are to get you educated, skillful, and employed. In our conditions below we outline the metrics that make participants eligible for the guarantee. If and we don't enable you to get an interview you're eligible to a full refund! We know that the market is NOT saturated with software engineers and that we are teaching you the appropriate skills that if you want to get hired, you will.</p>
                             <p>Check out our 9 simple and achievable conditions below!</p>
-                            <ButtonToolbar>
-                                {<OverlayTrigger
-                                    trigger="click"
-                                    key='top'
-                                    placement='top'
-                                    overlay={
-                                        <Popover id={`popover-positioned-top`}>
-                                        <Popover.Title><h3>For the final two weeks of the program the following must be accomplished each day:</h3></Popover.Title>
-                                        <Popover.Title>
-                                        <h5>Project & Certification Conditions:</h5>
-                                        <ol>
-                                            <li>Pass your AWS Cloud Practitioner exam</li>
-                                            <li>Five live projects assessed</li>
-                                            <li>All project assessments passed at a minimum of 80% (can be re-taken)</li>
-                                            <li>Resume submitted, reviewed, and approved by program manager</li>
-                                        </ol>
-                                        <h5>For the final two weeks of the program the following must be accomplished each day:</h5>
-                                        <ol>
-                                            <li>20 One click applications</li>
-                                            <li>10 LinkedIn applications</li>
-                                            <li>2 Industry website application</li>
-                                        </ol>
-                                        </Popover.Title>
-                                        </Popover>
-                                    }
-                                    >
-                                    <Button variant="secondary">Conditions</Button>
-                                    </OverlayTrigger>}
-                            </ButtonToolbar>
+                            <div className="contentCentered">
+                                <ButtonToolbar>
+                                    {<OverlayTrigger
+                                        trigger="click"
+                                        key='top'
+                                        placement='top'
+                                        overlay={
+                                            <Popover id={`popover-positioned-top`}>
+                                            <Popover.Title><h4>For the final two weeks of the program the following must be accomplished each day:</h4></Popover.Title>
+                                            <Popover.Title>
+                                            <h5>Project & Certification Conditions:</h5>
+                                            <ol>
+                                                <li>Pass your AWS Cloud Practitioner exam</li>
+                                                <li>Five live projects assessed</li>
+                                                <li>All project assessments passed at a minimum of 80% (can be re-taken)</li>
+                                                <li>Resume submitted, reviewed, and approved by program manager</li>
+                                            </ol>
+                                            <h5>For the final two weeks of the program the following must be accomplished each day:</h5>
+                                            <ol>
+                                                <li>20 One click applications</li>
+                                                <li>10 LinkedIn applications</li>
+                                                <li>2 Industry website application</li>
+                                            </ol>
+                                            </Popover.Title>
+                                            </Popover>
+                                        }
+                                        >
+                                        <Button variant="secondary">Conditions</Button>
+                                        </OverlayTrigger>}
+                                </ButtonToolbar>  
+                            </div>
                     </Card>
                 </Col>
             </Row>
@@ -141,7 +143,7 @@ export const HomeContent = () => (
                 <Col xl={6} className="introRow3Tile1 paddingRight">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>Learner Support</Card.Title>
+                            <h3>Learner Support</h3>
                             <Card.Text>
                             Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
                             </Card.Text>
@@ -152,7 +154,7 @@ export const HomeContent = () => (
                 <Col xl={6} className="introRow3Tile2 paddingLeft">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>More Info</Card.Title>
+                            <h3>More Info</h3>
                             <Card.Text>
                             As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com
                             </Card.Text>

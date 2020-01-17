@@ -99,8 +99,17 @@ code {
   background-color: #fafbfc
 }
 .popover-header{
-  width: 50vw !important;
+  width: 50vw;
 }
-.popover-body{
-  width: 50vw !important;
+.popover{
+  transform: translate3d(25vw, 966px, 0px) !important; 
+}
+.arrow{
+  left: 24vw !important;
+}
+.contentCentered{
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  text-align: center;
 }
