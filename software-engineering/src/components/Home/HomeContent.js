@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import { Row, Col, Card, Button, Container, ButtonToolbar, OverlayTrigger, Popover } from 'react-bootstrap';
 import './HomeContent.css';
 
 export const HomeContent = () => (
@@ -100,6 +100,44 @@ export const HomeContent = () => (
                 </Col>
             </Row>
             <Row>
+                <Col xs={12} className='introRowTile'>
+                    <Card className="guarantee">
+                        <Card.Title>100% refund if you don't land interviews!</Card.Title>
+                            <p>Our goals are to get you educated, skillful, and employed. In our conditions below we outline the metrics that make participants eligible for the guarantee. If and we don't enable you to get an interview you're eligible to a full refund! We know that the market is NOT saturated with software engineers and that we are teaching you the appropriate skills that if you want to get hired, you will.</p>
+                            <p>Check out our 9 simple and achievable conditions below!</p>
+                            <ButtonToolbar>
+                                {<OverlayTrigger
+                                    trigger="click"
+                                    key='top'
+                                    placement='top'
+                                    overlay={
+                                        <Popover id={`popover-positioned-top`}>
+                                        <Popover.Title><h3>For the final two weeks of the program the following must be accomplished each day:</h3></Popover.Title>
+                                        <Popover.Title>
+                                        <h5>Project & Certification Conditions:</h5>
+                                        <ol>
+                                            <li>Pass your AWS Cloud Practitioner exam</li>
+                                            <li>Five live projects assessed</li>
+                                            <li>All project assessments passed at a minimum of 80% (can be re-taken)</li>
+                                            <li>Resume submitted, reviewed, and approved by program manager</li>
+                                        </ol>
+                                        <h5>For the final two weeks of the program the following must be accomplished each day:</h5>
+                                        <ol>
+                                            <li>20 One click applications</li>
+                                            <li>10 LinkedIn applications</li>
+                                            <li>2 Industry website application</li>
+                                        </ol>
+                                        </Popover.Title>
+                                        </Popover>
+                                    }
+                                    >
+                                    <Button variant="secondary">Conditions</Button>
+                                    </OverlayTrigger>}
+                            </ButtonToolbar>
+                    </Card>
+                </Col>
+            </Row>
+            <Row>
                 <Col xl={6} className="introRow3Tile1 paddingRight">
                     <Card className="introRowTile">
                         <Card.Body>
@@ -125,3 +163,4 @@ export const HomeContent = () => (
         </Container>      
     </React.Fragment>
 )
+

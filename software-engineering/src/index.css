@@ -98,6 +98,9 @@ code {
 .offWhite{
   background-color: #fafbfc
 }
-/* .dropdown-backdrop{
-  position: static;
-} */
+.popover-header{
+  width: 50vw !important;
+}
+.popover-body{
+  width: 50vw !important;
+}

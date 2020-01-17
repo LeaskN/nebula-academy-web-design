@@ -27,6 +27,11 @@
     margin: auto;
     background-color: #434686;
 }
+.guarantee{
+    margin: auto;
+    padding: 10px;
+    background-color: #434686;
+}
 .card{
     border: 0px !important;
 }
