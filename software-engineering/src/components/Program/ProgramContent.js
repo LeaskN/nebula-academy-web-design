@@ -22,10 +22,8 @@ export const ProgramContent = () => (
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>Career Preperation</Card.Title>
-                        <Card.Text>
                         <p>It can be daunting to participate in an accelerated technology learning program, something that we at Nebula Academy understand well. Many of our participants are balancing school, work, home lives, and other responsibilities, on top of spending 30+ hours a week gaining critical tech skills through our boot camp programs.</p>
                         <p>We often hear that these learning experiences are the most challenging–and rewarding–of people’s lives. If you’ve decided to enroll in a Nebula Academy program, know that our team is dedicated to your success in gaining employment and building a sustainable career for you and your family.</p>
-                        </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>

@@ -6,9 +6,7 @@ export const CurriculumFooter = () => (
   <Container className="fullCurriculumFooter">
     <Jumbotron>
       <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
-      
-      <p>
-        <Row>
+              <Row>
           <Col className="contentCentered">
             <Button href="/internships" variant="primary">Internships</Button>
           </Col>
@@ -16,7 +14,6 @@ export const CurriculumFooter = () => (
             <Button href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
-      </p>
     </Jumbotron>
   </Container>
 )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionNav } from '../components/Global/SectionNav';
+import SectionNav  from '../components/Global/SectionNav';
 import { CurriculumJumbotron } from '../components/Curriculum/CurriculumJumbotron';
 import CurriculumContent from '../components/Curriculum/CurriculumContent';
 import  { CurriculumFooter } from '../components/Curriculum/CurriculumFooter';

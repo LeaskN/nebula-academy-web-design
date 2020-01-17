@@ -16,6 +16,8 @@
     background: linear-gradient(to right, transparent 20%, #992653 20%, #992653 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
     padding-bottom: 15px;
     color:black !important;
+    /* font-weight: bold; */
+    font-size: x-large;
 }
 .section:hover{
     cursor: pointer;
@@ -28,3 +30,6 @@
     color: black;
     text-decoration: none;
 }
+/* .selectedSectionNav{
+    background-color: red;
+} */

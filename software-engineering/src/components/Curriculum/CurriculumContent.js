@@ -98,7 +98,6 @@ class CurriculumContent extends Component {
                         <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                             <h1>Basics</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -110,49 +109,41 @@ class CurriculumContent extends Component {
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
-                                            <Col>
+                                        <h1>Advanced JavaScript</h1>
+                                        <Row>
+                                            <Col xs={10} md={12}>
+                                                <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
+                                                <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
+                                                <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
+                                                <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
+                                                <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who dont have many deployed projects.</p>
                                             </Col>
-                                            <h1>Advanced JavaScript</h1>
-                                            <Row>
-                                                <Col xs={10} md={12}>
-                                                    <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
-                                                    <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
-                                                    <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
-                                                    <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
-                                                    <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who dont have many deployed projects.</p>
-                                                </Col>
-                                            </Row>
-                                        </Card.Text>
+                                        </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
-                                            <h1>React</h1>
-                                            <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
-                                                <Col xs={10} md={12}>
-                                                    <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large applications which can change data without reloading the page.</p>
-                                                    <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
-                                                    <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
-                                                    <p>There are many ways to go from here but a participants projects can represent what they are interested in. We teach frontend, backend, and fullstack but if a participant is more inclined towards one of these three they are invited to focus on that.</p>
-                                                    <p>The bottom lines are employment and payment, knowing React can land someone a high-paying job in a short amount of time.</p>
-                                                </Col>
-                                            </Row>
-                                        </Card.Text>
+                                        <h1>React</h1>
+                                        <Row>
+                                            {/* <Col xs={1} md={3}>
+                                                <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
+                                            </Col> */}
+                                            <Col xs={10} md={12}>
+                                                <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large applications which can change data without reloading the page.</p>
+                                                <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
+                                                <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
+                                                <p>There are many ways to go from here but a participants projects can represent what they are interested in. We teach frontend, backend, and fullstack but if a participant is more inclined towards one of these three they are invited to focus on that.</p>
+                                                <p>The bottom lines are employment and payment, knowing React can land someone a high-paying job in a short amount of time.</p>
+                                            </Col>
+                                        </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                             <h1>Certifications</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -164,12 +155,10 @@ class CurriculumContent extends Component {
                                                     <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                             <h1>Job Placement</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -181,7 +170,6 @@ class CurriculumContent extends Component {
                                                 <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                         </Col>
@@ -253,7 +241,6 @@ class CurriculumContent extends Component {
                         <Col xs={8} className="cardColumns">
                             {this.state.toggle2.scheduleButton1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                             <h1>Schedule Overview</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -266,13 +253,11 @@ class CurriculumContent extends Component {
                                                     <p>We can't do anything with burnt-out participants, so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton2 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <h1>Daily Schedule</h1>
-                                        <Card.Text>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
@@ -295,12 +280,10 @@ class CurriculumContent extends Component {
                                                     <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "official" end of day.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton3 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                         <h1>Practice Hours</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -311,13 +294,11 @@ class CurriculumContent extends Component {
                                                 <p>We understand that this is intense and have built in planning to ensure that our students don't burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recuperate.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton4 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                         <h1>Weekly Calendar</h1>
-                                        <Card.Text>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
@@ -328,12 +309,10 @@ class CurriculumContent extends Component {
                                                 <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton5 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <Card.Text>
                                         <h1>Last Couple Weeks/Job Placement</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
@@ -358,7 +337,6 @@ class CurriculumContent extends Component {
                                                     <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" applications through application websites like LinkedIn, Microsoft, Google, Amazon, Company Partner Sites, ZipRecruiter, & Glassdoor.</p>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
                                     </Card.Body>
                             </Card>: null}
                         </Col>
