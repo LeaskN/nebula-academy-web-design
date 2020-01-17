@@ -14,7 +14,7 @@ export const Footer = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <ul>
             <Nav.Item><Nav.Link href="/">About</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/careers">Careers</Nav.Link></Nav.Item>
+            {/* <Nav.Item><Nav.Link href="/careers">Careers</Nav.Link></Nav.Item> */}
             <Nav.Item><Nav.Link href="/staff">Staff</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>
             </ul>

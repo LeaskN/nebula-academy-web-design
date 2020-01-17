@@ -22,7 +22,7 @@ export const HomeContent = () => (
                         <Card.Body>
                             <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
                             <Card.Text>
-                                Unlock a world of opportunities with your AWS Cloud Literacy skills.                            </Card.Text>
+                                Unlock a world of opportunities with your AWS Cloud Literacy skills.</Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -70,7 +70,7 @@ export const HomeContent = () => (
                             <h3 className="centralText">The average salary of an AWS-certified IT professional is $129,868 - ranking as one of the highest-paying certification categories in North America.</h3>
                             <h3 className="centralText">AWS Certifications Increase Tech Pay Up To $12K a year.</h3>
                             <p className="centralText">Source:&nbsp;
-                                <a className="link centralText" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">
+                                <a className="link centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">
                                 Forbes
                                 </a>
                             </p>
