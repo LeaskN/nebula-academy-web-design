@@ -367,11 +367,9 @@ class applicationContent extends Component {
                                 <Form.Label>Please provide your Gender</Form.Label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Female" type="checkbox"/> Female</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Male" type="checkbox"/> Male</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Transgender" type="checkbox"/> Transgender</label><br/>
+                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Non-binary/third gender" type="checkbox"/> Non-binary/third gender</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Transsexual" type="checkbox"/> Transsexual</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Two-spirited" type="checkbox"/> Two-spirited</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Intersex" type="checkbox"/> Intersex</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other" type="checkbox"/> Other</label><br/>
+                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other/Prefer to self-describe" type="checkbox"/> Other/prefer to self-describe</label><br/>
                             </Form.Group>
                             <Form.Row className="paddedSides">
                                 <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
