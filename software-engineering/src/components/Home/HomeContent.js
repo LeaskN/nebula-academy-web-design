@@ -104,8 +104,8 @@ export const HomeContent = () => (
                 <Col xs={12} className='introRowTile'>
                     <Card className="guarantee">
                         <h2>100% refund if you don't land interviews!</h2>
-                            <p>Our goals are to get you educated, skillful, and employed. In our conditions below we outline the metrics that make participants eligible for the guarantee. If and we don't enable you to get an interview you're eligible to a full refund! We know that the market is NOT saturated with software engineers and that we are teaching you the appropriate skills that if you want to get hired, you will.</p>
-                            <p>Check out our 9 simple and achievable conditions below!</p>
+                            <p>Our goals are to get you educated, skillful, and employed. In our conditions below we outline the metrics that make participants eligible for the guarantee. If we don't enable you to get an interview you're eligible to a full refund! We know that the market is NOT saturated with software engineers and that we are teaching you the appropriate skills that if you want to get hired, you will.</p>
+                            <p>Check out our 7 simple and achievable conditions below!</p>
                             <div className="contentCentered">
                                 <ButtonToolbar>
                                     {<OverlayTrigger
