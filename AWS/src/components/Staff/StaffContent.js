@@ -22,7 +22,6 @@ class StaffContent extends Component {
                 { name: 'Francine Maione', refName:'FrancineMaione', position:'Instructional Technology Consultant', linkText: `Francine's LinkedIn`, url:'https://www.linkedin.com/in/francine-touliatos-maione-16924813b/', image: FrancineMaioneImage, bio: 'Francine Maione is an Instructional Technology Consultant currently specializing in integrating STEM Equipment into Pre-K, Primary, Middle and Secondary Classrooms.  She graduated from New York University with a degree in Educational Theatre. Francine entered the field of Technology as a Teacher Assistant/Computer Specialist in a K-6 Elementary School in Manhasset, NY. Her experiences working with both students and teachers in a Computer Lab has fueled her passion to assist todays Educators in gaining the skills necessary to encourage creativity & innovation in a STEM setting. She is a Microsoft Innovative Educator (MIE) and enjoys volunteering for We Connect The Dots, Inc.'},
                 { name: 'Dr. Julene Reed', refName:'DrJuleneReed', position:'Professional Development Consultant', linkText: `Julene's LinkedIn`, url:'https://www.linkedin.com/in/julenereed/', image: JuleneReedImage, bio: 'Julene is a professional development consultant, researcher, and educator with over twenty–five years of experience in education. Julene holds a doctorate in education leadership with a focus on global education. She is an Apple Distinguished Educator, Apple Teacher, Google for Education Certified Trainer and Innovator, Google Earth Education Expert, Microsoft Innovative Educator and Trainer, education author, and international consultant and presenter.'}, 
                 { name: 'Tom Lemons', refName:'TomLemons', position:'Business Development', linkText: `Tom's Linkedin`, url:'https://www.linkedin.com/in/thomas-lemons-206196a2/', image: TomLemonsImage, bio: 'Tom is a graduate of Rollins College with a bachelor in business and social entrepreneurship. Tom is a catalyst to our growth in the North East of the US. Tom comes from a family of educators across Massachusetts. He is following in their footsteps by modernizing what a current higher education looks like.'}, 
-                { name: 'Tom Lemons', refName:'TomLemons', position:'Business Development', linkText: `Tom's Linkedin`, url:'https://www.linkedin.com/in/thomas-lemons-206196a2/', image: TomLemonsImage, bio: 'Tom is a graduate of Rollins College with a bachelor in business and social entrepreneurship. Tom is a catalyst to our growth in the North East of the US. Tom comes from a family of educators across Massachusetts. He is following in their footsteps by modernizing what a current higher education looks like.'}, 
             ],            
         };
         this.clickedEle = this.clickedEle.bind(this);
@@ -81,9 +80,9 @@ class StaffContent extends Component {
     render() {
         return (
             <Container>
-                <Row>{this.state.allPeople.map(person =>
+                {/* <Row>{this.state.allPeople.map(person =>
                     <Col sm={12} className={this.state.name !== person.refName ? "hidden" : "showing "}><br/>{this.showBio(this.state.name)}</Col>
-                )}</Row>
+                )}</Row> */}
                 <Row>{this.state.allPeople.map(person =>
                     <React.Fragment>
                         <Col onClick={(e) => this.clickedEle(e)}>
