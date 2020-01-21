@@ -14,6 +14,7 @@ import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
 import { HiddenApplication } from './pages/HiddenApplication';
 import { TryCoding } from './pages/TryCoding';
+import { Staff } from './pages/Staff';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route path ="/TryCoding" component={TryCoding}/>
+            <Route path ="/staff" component={Staff}/>
             <Route path ="/HiddenApplication" component={HiddenApplication}/>
             <Route component = {NoMatch}/>
             {/*
