@@ -369,7 +369,7 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Male" type="checkbox"/> Male</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Non-binary/third gender" type="checkbox"/> Non-binary/third gender</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Transsexual" type="checkbox"/> Transsexual</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other/Prefer to self-describe" type="checkbox"/> Other/prefer to self-describe</label><br/>
+                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other/Prefer to self-describe" type="checkbox"/> Other/refer to self-describe</label><br/>
                             </Form.Group>
                             <Form.Row className="paddedSides">
                                 <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') > -1 ? "showding" : "hidden"}>

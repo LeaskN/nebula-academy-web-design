@@ -98,17 +98,13 @@ code {
 .offWhite{
   background-color: #fafbfc
 }
-/* @media(max-width: 1299px){
-  .popover{
-    left: -26% !important; 
-  }
-} */
+
 .popover-header{
   position: fixed;
-  width: 70vw;  /* adjust as per your needs */
-  height: 350px;   /* adjust as per your needs */
+  width: 70vw; 
+  height: 350px;  
   margin-left:-35vw; 
-  margin-top: -350px;  /* negative half of width above */
+  margin-top: -350px; 
   overflow: scroll;
   z-index: 100;
 }
@@ -116,11 +112,6 @@ code {
   display:none !important;
 }
 
-/* @media(max-width: 499px){
-  .popover-header{
-    width: 70vw;
-  }
-} */
 .contentCentered{
   display: flex;
   align-items: space-around;

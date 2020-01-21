@@ -1,0 +1,30 @@
+.introRowTile{
+    background-color: transparent;
+    color: white;
+}
+.introRow1Column1{
+   background-color:#434686
+}
+.purpleBackground{
+    margin: auto;
+    background-color: #434686;
+}
+.guarantee{
+    margin: auto;
+    padding: 10px;
+    background-color:#8A659A;
+}
+.card{
+    border: 0px !important;
+}
+.paddingRight{
+    border-top: 5px solid white;
+    border-right: 2.5px solid white;
+}
+.paddingLeft{
+    border-top:5px solid white;
+    border-left: 2.5px solid white;
+}
+.paddingMiddle{
+    border-top: 5px solid white;
+}
