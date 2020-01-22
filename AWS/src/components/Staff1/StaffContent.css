@@ -21,20 +21,12 @@
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-.toggleOff{
-  display: none;
+.hidden{
+    display: none;
 }
-.slidingPane{
-  height:fit-content !important;
+.hidden:hover{
+    display: contents;
 }
-.slide-pane_from_bottom{
-  /* margin-top: 20vh; */
-  overflow: auto;
-}
-.ReactModal__Overlay {
-  overflow: scroll;
-}
-.img-fluid {
-  width: 100%;
-  height: auto;
+.showing{
+    margin: 10px;
 }
