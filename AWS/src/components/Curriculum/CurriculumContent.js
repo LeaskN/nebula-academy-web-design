@@ -165,7 +165,7 @@ class CurriculumContent extends Component {
                                     <Card.Text>
                                         Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
                                     </Card.Text>
-                                    <Button href="/partners" variant="primary">Partners</Button>
+                                    <Button href="/partners" variant="warning">Partners</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -176,7 +176,7 @@ class CurriculumContent extends Component {
                                     <Card.Text>
                                         The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
                                     </Card.Text>
-                                    <Button href="/guestspeakers" variant="primary">Guest Speakers</Button>
+                                    <Button href="/guestspeakers" variant="warning">Guest Speakers</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

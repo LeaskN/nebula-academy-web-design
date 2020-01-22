@@ -14,10 +14,10 @@ export const Footer = () => (
                 <Navbar.Brand href="/"><img src={NebulaIcon} height="70px" alt=""></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <ul>
-                    <li className="noPadding noMargin smallLineHeight"><Nav.Link href="/">About</Nav.Link></li>
-                    {/* <li className="noPadding noMargin smallLineHeight"><Nav.Link href="/careers">Careers</Nav.Link></li> */}
-                    <li className="noPadding noMargin smallLineHeight"><Nav.Link href="/staff">Staff</Nav.Link></li>
-                    <li className="noPadding noMargin smallLineHeight"><Nav.Link href="/universities">Universities</Nav.Link></li>
+                    <li className="noPadding nobull noMargin smallLineHeight"><Nav.Link href="/">About</Nav.Link></li>
+                    {/* <li className="noPadding nobull noMargin smallLineHeight"><Nav.Link href="/careers">Careers</Nav.Link></li> */}
+                    <li className="noPadding nobull noMargin smallLineHeight"><Nav.Link href="/staff">Staff</Nav.Link></li>
+                    <li className="noPadding nobull noMargin smallLineHeight"><Nav.Link href="/universities">Universities</Nav.Link></li>
                 </ul>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">

@@ -3,13 +3,13 @@
     color: white;
 }
 .introRow1Column1{
-   background-color:#434686
+   background-color:#146eb4
 }
 .introRow1Column2{
-    background-color:#8A659A;
+    background-color:#ff9900;
  }
  .introRow1Column3{
-    background-color:#992653;
+    background-color:#146eb4;
  }
 .introRow2Tile1{
     background-image: url("../../assets/2_AWS_home_curriculum_placement.jpg");
@@ -25,7 +25,7 @@
 }
 .purpleBackground{
     margin: auto;
-    background-color: #434686;
+    background-color: #146eb4;
 }
 .card{
     border: 0px !important;

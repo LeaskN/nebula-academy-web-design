@@ -10,10 +10,10 @@ export const GuestSpeakersFooter = () => (
       <p>
         <Row>
           <Col className="contentCentered">
-            <Button href="/outcomes" variant="primary">Outcomes</Button>
+            <Button href="/outcomes" variant="warning">Outcomes</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/registration" variant="primary">Register</Button>
+            <Button href="/registration" variant="warning">Register</Button>
           </Col>
         </Row>
       </p>

@@ -8,10 +8,10 @@ export const HomeFooter = () => (
       <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/program" variant="primary">Course Info</Button>
+            <Button href="/program" variant="warning">Course Info</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/registration" variant="primary">Register Now</Button>
+            <Button href="/registration" variant="warning">Register Now</Button>
           </Col>
         </Row>
     </Jumbotron>

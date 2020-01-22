@@ -293,7 +293,7 @@ class registrationContent extends Component {
                                             <option aria-label="option 1" label="I Acknowledge"/> 
                                         </Form.Control>
                                 </Form.Group> 
-                            <Button variant="primary" type="submit">
+                            <Button variant="warning" type="submit">
                                 Submit
                             </Button>
                         </Form> */}

@@ -13,7 +13,7 @@ export const HomeContent = () => (
                             <Card.Text>
                                 The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concetps, independent of specific technical roles.
                             </Card.Text>
-                            <Button href="/registration" variant="success">Register Now</Button>
+                            <Button href="/registration" variant="warning">Register Now</Button>
                         </Card.Body>
                     </Card>
                 </Col>

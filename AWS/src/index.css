@@ -104,3 +104,11 @@ code {
 .smallLineHeight{
   line-height: 9px;
 }
+.btn-warning{
+  background-color: #ff9900;
+  border-color: #ff9900;
+  color: white;
+}
+.nobull {
+  list-style-type: none;
+}

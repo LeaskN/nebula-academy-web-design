@@ -9,10 +9,10 @@ export const CurriculumFooter = () => (
       <p>
         <Row>
           <Col className="contentCentered">
-            <Button href="/universities" variant="primary">Course Info</Button>
+            <Button href="/universities" variant="warning">Course Info</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/registration" variant="primary">Register Now</Button>
+            <Button href="/registration" variant="warning">Register Now</Button>
           </Col>
         </Row>
       </p>

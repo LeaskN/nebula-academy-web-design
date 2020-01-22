@@ -8,10 +8,10 @@ export const CourseFooter = () => (
       <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/curriculum" variant="primary">Curriculum</Button>
+            <Button href="/curriculum" variant="warning">Curriculum</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/registration" variant="primary">Register</Button>
+            <Button href="/registration" variant="warning">Register</Button>
           </Col>
         </Row>
     </Jumbotron>
