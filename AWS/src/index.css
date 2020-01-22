@@ -101,3 +101,6 @@ code {
 .pointer:hover{
   cursor: pointer;
 }
+.smallLineHeight{
+  line-height: 9px;
+}
