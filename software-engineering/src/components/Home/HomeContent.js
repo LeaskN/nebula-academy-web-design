@@ -32,11 +32,11 @@ render() {
                                 <Card.Body>
                                     <h3>Why Nebula Academy?</h3>
                                         <ul>
-                                            <li><b>Earn the <a className="link" target="empty" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
-                                            <li>Gain access to the <b><a className="link" target="empty" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
+                                            <li><b>Earn the <a className="linkLight" target="empty" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
+                                            <li>Gain access to the <b><a className="linkLight" target="empty" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
                                             <li><b>Multiple payment options</b> such as Scholarships, Pay After Employment, and Extended Payment.</li>
                                             <li><b>Pending approval 6/1/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
-                                            <li><b>100% Money Back Guarantee </b><a className="link" href='#conditions'>(see conditions below)</a></li>
+                                            <li><b>100% Money Back Guarantee </b><a className="linkLight" href='#conditions'>(see conditions below)</a></li>
                                         </ul>  
                                 </Card.Body>
                             </Card>
