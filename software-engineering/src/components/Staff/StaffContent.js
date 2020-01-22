@@ -1,5 +1,9 @@
 import React, { Component }from 'react';
-import { Row, Col, Container, Image } from 'react-bootstrap';
+import { Row, Col, Container, Image, Card} from 'react-bootstrap';
+import Modal from 'react-modal';
+import SlidingPane from 'react-sliding-pane';
+import 'react-sliding-pane/dist/react-sliding-pane.css';
+
 import './StaffContent.css';
 import LaurieCareyImage from "../../assets/LaurieNebulaAcademy.jpg"
 import NicLeaskImage from "../../assets/NicLeaskPHOTO.jpg"
@@ -16,7 +20,11 @@ class StaffContent extends Component {
             setShow: false,
             viewWidth:0,
             colWidth: 294,
-            name:"",
+            name:'',
+            activeBio:'',
+            activePosition:'',
+            isPaneOpen: false,
+            isPaneOpenLeft: false,
             allPeople: [ 
                 { name: 'Laurie Carey', refName:'LaurieCarey', position:'CEO & Education Management Consultant', linkText: `Book Laurie's Time`, url:'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Request%20appointment%20for%20services%20with%20Laurie%20Carey%20', image: LaurieCareyImage, bio:'Laurie Carey is a new American educator – challenging the problems of American education with a multi-prong vision that brings the tools of business success, innovative educational practices, and strategic technology to schools, districts, universities, teachers, students and parents. Laurie Carey is not the proprietor of another educational product or service.  The entities that she has founded, Nebula Academy, Laurie Carey Consulting, LLC and We Connect The Dots, Inc., are driven by ideas, passions, individual skills, partnerships and the efficacy of research. Both entities utilize mutually supporting designs to bring American education to a new level of effectiveness and leadership by replacing stagnation and irrelevance with passionate motivational learning and teaching.'}, 
                 { name: 'Nic Leask', refName:'NicLeask', position:'STEAM Coach & Software Engineer', linkText: `Nic's LinkedIn`, url:'https://www.linkedin.com/in/nicholas-leask/', image: NicLeaskImage, bio: 'Nic is a STEAM Coach & Software Engineer. He is a Microsoft Innovative Educator (MIE) Certified Instructor and Microsoft: Education Educator (MEE) Certified Instructor.  He attended the Minecraft: Education Edition training at the Microsoft Corporate Office in Redmond, Washington. He graduated from Stony Brook University where he attained a degree in both Environmental Studies(BA) and Business Management(BS). Post-graduation Nic worked for an environmental marketing agency and later worked at a technology recruitment firm. The latter is where Nic found his opportunity to move into technology. He attended a software engineering bootcamp in NYC where he gained experience working primarily with React, JavaScript, Node.js, HTML, & CSS. Nic has helped shape Nebula Academy, taught the importance of bringing tech into the classroom and how to utilize technology as a resource tool to engage students in immersive learning experiences.'},
@@ -26,12 +34,13 @@ class StaffContent extends Component {
                 { name: 'Tom Lemons', refName:'TomLemons', position:'Business Development', linkText: `Tom's Linkedin`, url:'https://www.linkedin.com/in/thomas-lemons-206196a2/', image: TomLemonsImage, bio: 'Tom is a graduate of Rollins College with a bachelor in business and social entrepreneurship. Tom is a catalyst to our growth in the North East of the US. Tom comes from a family of educators across Massachusetts. He is following in their footsteps by modernizing what a current higher education looks like.'}, 
             ],            
         };
-        this.clickedEle = this.clickedEle.bind(this);
+        this.setInfo = this.setInfo.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
     componentDidMount() {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        Modal.setAppElement(this.el);
     }
     
     componentWillUnmount() {
@@ -52,55 +61,80 @@ class StaffContent extends Component {
             }
         }
     }
-    clickedEle(event){
+    setInfo(event){
         let target = event.target;
         if (target.parentElement.className === 'col'){
             let person = target.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-            if (this.state.name === person){
-                this.setState({
-                    name: ''
-                })
-            } else {
-                this.setState({
-                    name: person
-                })
+            if (this.state.name !== person) {
+                for (let i = 0; i < this.state.allPeople.length; i++) {
+                    const individual = this.state.allPeople[i];
+                    if(person === individual.refName)
+                    this.setState({
+                        name: person,
+                        activeBio: individual.bio,
+                        activePosition: individual.position
+                    })
+                } 
             }
         } else if (target.parentElement.parentElement.className === 'col'){
             let person = target.parentElement.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-            if (this.state.name === person){
-                this.setState({
-                    name: ''
-                })
-            } else {
-                this.setState({
-                    name: person
-                })
+
+            if (this.state.name !== person) {
+                for (let i = 0; i < this.state.allPeople.length; i++) {
+                    const individual = this.state.allPeople[i];
+                    if(person === individual.refName)
+                    this.setState({
+                        name: person,
+                        activeBio: individual.bio,
+                        activePosition: individual.position
+                    })
+                } 
             }
         } 
     }
-
+    setInfoOpenPanel(e){
+        this.setInfo(e);
+        this.setState({ isPaneOpen: true });
+    }
     render() {
         return (
-            <Container>
-                {/* <Row id='bio'>{this.state.allPeople.map(person =>
-                    <Col sm={12}  className={this.state.name !== person.refName ? "hidden" : "showing "}><br/>{this.showBio(this.state.name)}</Col>
-                )}</Row> */}
-                <Row href='#bio'>{this.state.allPeople.map(person =>
-                    <React.Fragment>
-                        <Col onClick={(e) => this.clickedEle(e)}>
-                            <div className="imageContainer pointer" >
-                                <Image src={person.image} fluid />
-                            </div>
-                            <br/>
-                            <h2 className="centralText pointer">{person.name}</h2>
-                            <h4 className="greyText centralText pointer">{person.position}</h4>
-                            <a className="link centralText" href={person.url} target="empty">{person.linkText}</a>
-                            <hr/>
-                        </Col> 
-                    </React.Fragment>
-                )}</Row>
-                
-            </Container>      
+            <div ref={ref => this.el = ref}>
+                <SlidingPane
+                    className='some-custom-class slidingPane'
+                    overlayClassName='some-custom-overlay-class'
+                    isOpen={ this.state.isPaneOpen }
+                    title={ this.state.name }
+                    subtitle={ this.state.activePosition }
+                    from='bottom'
+                    height="100px"
+                    width='100vw'
+                    onRequestClose={ () => {
+                        this.setState({ isPaneOpen: false });
+                    } }>
+                    <div>{this.state.activeBio}</div>
+                    <br />
+                </SlidingPane>
+                <React.Fragment>
+                    <Container>
+                        <Row>{this.state.allPeople.map(person =>
+                            <React.Fragment>
+                                <Col >
+                                    <div className="imageContainer" >
+                                        <Image src={person.image} fluid />
+                                    </div>
+                                    <br/>
+                                    <h2 className="centralText">{person.name}</h2>
+                                    <h4 className="greyText centralText">{person.position}</h4>
+                                    <a className="link centralText" href={person.url} target="empty">{person.linkText}</a>
+                                    <p className="centralText" onClick={(e) => this.setInfoOpenPanel(e)}>bio</p>
+                                    <hr/>
+                                </Col> 
+                            </React.Fragment>
+                        )}</Row>
+                        
+                    </Container>     
+                </React.Fragment> 
+            </div>
         )
     }
 }
