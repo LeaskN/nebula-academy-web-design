@@ -131,3 +131,7 @@ code {
 .smallLineHeight{
   line-height: 9px;
 }
+
+.nobull {
+  list-style-type: none;
+}

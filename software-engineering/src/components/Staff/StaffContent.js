@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { Row, Col, Container, Image, Card} from 'react-bootstrap';
+import { Row, Col, Container, Image} from 'react-bootstrap';
 import Modal from 'react-modal';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
@@ -53,6 +53,7 @@ class StaffContent extends Component {
         let string = JSON.stringify(bio);
         return string;
     }
+
     setInfo(event){
         let target = event.target;
         if (target.parentElement.className === 'col'){

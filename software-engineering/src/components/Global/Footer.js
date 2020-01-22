@@ -15,11 +15,11 @@ export const Footer = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
             <ul>
-            <p className="noPadding noMargin smallLineHeight"><Nav.Link href="/">About</Nav.Link></p>
-            {/* <p className="noPadding noMargin smallLineHeight"><Nav.Link href="/">Careers</Nav.Link></p> */}
-            <p className="noPadding noMargin smallLineHeight"><Nav.Link href="/staff">Staff</Nav.Link></p>
-            <p className="noPadding noMargin smallLineHeight"><Nav.Link href="/guestspeakers">Guest Speakers</Nav.Link></p>
-            <p className="noPadding noMargin smallLineHeight"><Nav.Link href="/partners">Partners</Nav.Link></p>
+                <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link href="/">About</Nav.Link></li>
+                {/* <p className="noPadding noMargin nobull smallLineHeight"><Nav.Link href="/">Careers</Nav.Link></p> */}
+                <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link href="/staff">Staff</Nav.Link></li>
+                <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link href="/guestspeakers">Guest Speakers</Nav.Link></li>
+                <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link href="/partners">Partners</Nav.Link></li>
             </ul>
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="https://twitter.com/nynebula?lang=en"><img src={TwitterIcon} height="70px" alt=""></img></Nav.Link></Nav.Item>
