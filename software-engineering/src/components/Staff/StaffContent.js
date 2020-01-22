@@ -53,14 +53,6 @@ class StaffContent extends Component {
         let string = JSON.stringify(bio);
         return string;
     }
-    showBio(name){
-        for (let i = 0; i < this.state.allPeople.length; i++) {
-            let person = this.state.allPeople[i];
-            if (person.refName === name){
-                return <Col sm={12} id="bio" className={this.state.name !== person.refName ? "hidden" : "showing"}><br/>{(person.bio)}</Col>
-            }
-        }
-    }
     setInfo(event){
         let target = event.target;
         if (target.parentElement.className === 'col'){
@@ -106,7 +98,6 @@ class StaffContent extends Component {
                     title={ this.state.name }
                     subtitle={ this.state.activePosition }
                     from='bottom'
-                    height="100px"
                     width='100vw'
                     onRequestClose={ () => {
                         this.setState({ isPaneOpen: false });
@@ -124,10 +115,10 @@ class StaffContent extends Component {
                                     </div>
                                     <br/>
                                     <h2 className="centralText">{person.name}</h2>
-                                    <h4 className="greyText centralText">{person.position}</h4>
+                                    <h4 className="centralText">{person.position}</h4>
+                                    <h6 className="centralText linkDark" onClick={(e) => this.setInfoOpenPanel(e)}>About {person.name.split(' ').length === 3? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0]}</h6>
                                     <a className="link centralText" href={person.url} target="empty">{person.linkText}</a>
-                                    <p className="centralText" onClick={(e) => this.setInfoOpenPanel(e)}>bio</p>
-                                    <hr/>
+                                    <br/>
                                 </Col> 
                             </React.Fragment>
                         )}</Row>

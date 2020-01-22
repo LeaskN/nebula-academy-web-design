@@ -60,6 +60,15 @@ code {
 .linkLight:hover{
   color:  white;
 }
+.linkDark{
+  text-decoration: none;
+  font-weight: 700;
+  color: #1E2125;
+}
+.linkDark:hover{
+  color:  black;
+  cursor: pointer;
+}
 .centralText{
   display: flex;
   justify-content: center;
@@ -117,4 +126,8 @@ code {
   align-items: space-around;
   justify-content: space-around;
   text-align: center;
+}
+
+.smallLineHeight{
+  line-height: 9px;
 }
