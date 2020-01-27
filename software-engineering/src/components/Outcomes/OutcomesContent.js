@@ -26,24 +26,24 @@ class OutcomesContent extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={6}>
+                        <Col md={6} style={{ height: "100%"}}>
                             <Card>
                                 <Card.Img variant="top" src={require("../../assets/JobGrowth_graphs_1.png")} />
-                                <a style={{textAlign:"center"}}className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
+                                <a style={{textAlign:"center"}} className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
                             </Card>
                             <Card>
                                 <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_2.png")} />
-                                <a style={{textAlign:"center"}}className="link" href="https://www.glassdoor.com/research/september-local-pay-reports/"> View Source</a>
+                                <a style={{textAlign:"center"}} className="link" href="https://www.glassdoor.com/research/september-local-pay-reports/"> View Source</a>
                             </Card>
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} style={{ height: "100%"}}>
                             <Card>
                                 <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_3.png")} />
-                                <a style={{textAlign:"center"}}className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
+                                <a style={{textAlign:"center"}} className="link" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
                             </Card>
                             <Card>
                                 <Card.Img href="" variant="top" src={require("../../assets/JobGrowth_graphs_4.png")} />
-                                <a style={{textAlign:"center"}}className="link" href="https://money.usnews.com/careers/best-jobs/software-developer/salary"> View Source</a>
+                                <a style={{textAlign:"center"}} className="link" href="https://money.usnews.com/careers/best-jobs/software-developer/salary"> View Source</a>
                             </Card>
                         </Col>
                     </Row>

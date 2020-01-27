@@ -6,6 +6,7 @@ class applicationContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            fixedJSON:'',
             Gender__c:[],
             Ethnicity__c: []
         };
@@ -44,8 +45,13 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let string = JSON.stringify(this.state);
-        return string;
+        let tempObj = this.state
+        for(let item in tempObj){
+            if(typeof tempObj[item] == "object"){
+                tempObj[item] = tempObj[item].join(';');
+            }
+        }
+       return JSON.stringify(tempObj)
     }
     handleInputChange(event) {
         let target = event.target;
@@ -91,6 +97,7 @@ class applicationContent extends Component {
                 [name]: value
             });
         }
+        this.fixJSON();
         console.log(this.state)
     }
     handleSubmit(event) {
@@ -414,7 +421,7 @@ class applicationContent extends Component {
                         </Form>
                     </Col>
                 </Row>
-                <p style={{maxWidth:"80vw", wordWrap: "break-word"}}>JSON: {this.fixJSON()}</p>
+                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON()}</p>
             </Container>
         )
     }

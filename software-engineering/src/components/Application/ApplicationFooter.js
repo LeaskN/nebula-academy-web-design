@@ -10,10 +10,12 @@ export const ApplicationFooter = () => (
       <p>
         <Row>
           <Col className="contentCentered">
-            <Button href="/scholarships" variant="primary">Scholarships</Button>
+          <div id="spacer" ></div>
+            <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <div id="spacer" ></div>
+            <Button className="bottom contentCentered" href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
       </p>

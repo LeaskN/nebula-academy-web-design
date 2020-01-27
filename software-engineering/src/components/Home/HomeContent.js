@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Button, Container, ButtonToolbar, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Row, Col, Card, Button, Container, ButtonToolbar } from 'react-bootstrap';
+import Conditions from "../Global/Conditions/Conditions.js";
+
 
 import './HomeContent.css';
 
@@ -8,7 +10,8 @@ class HomeContent extends Component {
         super(props);
         this.state = {
             Gender__c:[],
-            Ethnicity__c: []
+            Ethnicity__c: [],
+            show: false
         };
     }
 render() {
@@ -23,7 +26,8 @@ render() {
                                     <Card.Text>
                                         Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                                     </Card.Text>
-                                    <Button href="/application" variant="success">Apply Now</Button>
+                                    <div id="spacer" ></div>
+                                    <Button className="bottom contentCentered"  href="/application" variant="primary">Apply Now</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -111,42 +115,30 @@ render() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12} className='introRowTile' >
-                            <Card className="guarantee" >
-                                <h2>100% refund if you don't land interviews!</h2>
-                                    <p>Our goals are to get you educated, skillful, and employed. In our conditions below we outline the metrics that make participants eligible for the guarantee. If we don't enable you to get an interview you're eligible to a full refund! We know that the market is NOT saturated with software engineers and that we are teaching you the appropriate skills that if you want to get hired, you will.</p>
+                        <Col sm={6} className="introRow1Column1">
+                            <Card className="introRowTile">
+                                <Card.Body>
+                                    <h3>Try before you buy!</h3>
+                                    <p>Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Give it a <b>free 6 hour try with us!</b> </p>
+                                    <p>Participants will have the opportunity to try coding for free. We will build a simple and fun application to give our participants a coding experience.</p>
+                                    <p>Any participants that decide on the day to sign up for our 6 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount.</p>
+                                    <div id="spacer" ></div>
+                                    <Button className="bottom contentCentered" href="/application" variant="primary">Try Coding</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col sm={6}  className="introRow1Column2">
+                            <Card className="introRowTile">
+                                <Card.Body>
+                                    <h3>100% refund available!</h3>
+                                    <p>Our goals are to get you educated, skillful, and employed. Click below to see how participants can remain eligible for the guarantee. <b>If we don't enable a participant to land an interview they are eligible to a full refund.</b></p> 
+                                    <p>There are software engineering jobs that need to be filled and we are teaching participants the appropriate skills that if they want to get hired, they will.</p>
                                     <p>Check out our 7 simple and achievable conditions below!</p>
-                                    <div className="contentCentered">
-                                        <ButtonToolbar>
-                                            {<OverlayTrigger
-                                                trigger="focus"
-                                                key='top'
-                                                placement='top'
-                                                overlay={
-                                                    <Popover id={`popover-positioned-top`}>
-                                                    <Popover.Title><h4>For the final two weeks of the program the following must be accomplished each day:</h4></Popover.Title>
-                                                    <Popover.Title>
-                                                    <h5>Project & Certification Conditions:</h5>
-                                                    <ol>
-                                                        <li>Pass your AWS Cloud Practitioner exam</li>
-                                                        <li>Five live projects assessed</li>
-                                                        <li>All project assessments passed at a minimum of 80% (can be re-taken)</li>
-                                                        <li>Resume submitted, reviewed, and approved by program manager</li>
-                                                    </ol>
-                                                    <h5>For the final two weeks of the program the following must be accomplished each day:</h5>
-                                                    <ol>
-                                                        <li>20 One click applications</li>
-                                                        <li>10 LinkedIn applications</li>
-                                                        <li>2 Industry website application</li>
-                                                    </ol>
-                                                    </Popover.Title>
-                                                    </Popover>
-                                                }
-                                                >
-                                                <Button variant="secondary">Conditions</Button>
-                                                </OverlayTrigger>}
-                                        </ButtonToolbar>  
-                                    </div>
+                                    <div id="spacer" ></div>
+                                    <ButtonToolbar className="bottom contentCentered" >
+                                    <Conditions/>                                        
+                                    </ButtonToolbar>  
+                                </Card.Body>
                             </Card>
                         </Col>
                     </Row>
@@ -156,9 +148,10 @@ render() {
                                 <Card.Body>
                                     <h3>Learner Support</h3>
                                     <Card.Text>
-                                    Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
+                                    Building a career in todays modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be primaryful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
                                     </Card.Text>
-                                    <Button href="/scholarships" variant="success">Scholarships</Button>
+                                    <div id="spacer" ></div>
+                                    <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -167,7 +160,7 @@ render() {
                                 <Card.Body>
                                     <h3>More Info</h3>
                                     <Card.Text>
-                                    As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com
+                                    As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued primary post job placement. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
