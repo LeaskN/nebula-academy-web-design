@@ -1,51 +1,51 @@
 .card{
-    border: 0px !important;
+  border: 0px !important;
 }
 .paddingRight{
-    border-top: 5px solid white;
-    border-right: 2.5px solid white;
+  border-top: 5px solid white;
+  border-right: 2.5px solid white;
 }
 .paddingLeft{
-    border-top:5px solid white;
-    border-left: 2.5px solid white;
+  border-top:5px solid white;
+  border-left: 2.5px solid white;
 }
 .paddingMiddle{
-    border-top: 5px solid white;
+  border-top: 5px solid white;
 }
 .imageContainer{
-    height: 268.5px;
-    width: 268.5px;
-    margin: auto;
-    overflow: hidden; 
-    justify-content: center;
-    border: 5px solid #7F5A8F;
-    border-radius: 10px;
+  height: 268.5px;
+  width: 268.5px;
+  margin: auto;
+  overflow: hidden; 
+  justify-content: center;
+  border: 5px solid #7F5A8F;
+  border-radius: 10px;
 }
 .toggleOff{
-  display: none;
+display: none;
 }
 .slidingPane{
-  height:fit-content !important;
+height:fit-content !important;
 }
 .slide-pane_from_bottom{
-  /* margin-top: 20vh; */
-  overflow: auto;
+/* margin-top: 20vh; */
+overflow: auto;
 }
 .ReactModal__Overlay {
-  overflow: scroll;
+overflow: scroll;
 }
 .img-fluid {
-  width: 100%;
-  height: auto;
+width: 100%;
+height: auto;
 }
 .staffMember{
-  background-color: rgb(228, 228, 228);
-  border-radius: 10px;
-  border: 5px solid white;
-  padding: 10px !important;
-  filter: grayscale(100%);
+background-color: rgb(228, 228, 228);
+border-radius: 10px;
+border: 5px solid white;
+padding: 10px !important;
+filter: grayscale(100%);
 }
 .staffMember:hover{
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+filter: grayscale(0%);
 }
