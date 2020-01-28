@@ -109,6 +109,21 @@ code {
   border-color: #ff9900;
   color: white;
 }
+.btn-primary{
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+.btn-secondary{
+  color: white;
+  background-color: #7F5A8F;
+  border-color: #7F5A8F;
+}
+.btn-secondary:hover{
+  color: white;
+  background-color: #3B3D7B;
+  border-color: #3B3D7B;
+}
 .nobull {
   list-style-type: none;
 }

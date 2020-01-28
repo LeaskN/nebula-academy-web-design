@@ -9,7 +9,7 @@ class CurriculumContent extends Component {
             button1: true,
         },
         toggle2:{
-            scheduleButton1:true,
+            scheduleButton1: true,
         }
     };
     button1 = () => {
@@ -187,31 +187,31 @@ class CurriculumContent extends Component {
                                     <Card.Body className="noPadding">
                                         <Card.Title 
                                             onClick={() => this.scheduleButton1()}
-                                            className={this.state.toggle.scheduleButton1 ? " subtleButton toggled" : "subtleButton"}>
+                                            className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton"}>
                                             In Person Sessions
                                         </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.scheduleButton2()}
-                                            className={this.state.toggle.scheduleButton2 ? " subtleButton toggled" : "subtleButton"}>
+                                            className={this.state.toggle2.scheduleButton2 ? " subtleButton toggled" : "subtleButton"}>
                                             Live Remote Sessions
                                         </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.scheduleButton3()}
-                                            className={this.state.toggle.scheduleButton3 ? " subtleButton toggled" : "subtleButton"}>
+                                            className={this.state.toggle2.scheduleButton3 ? " subtleButton toggled" : "subtleButton"}>
                                             Lab Hours
                                         </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.scheduleButton4()}
-                                            className={this.state.toggle.scheduleButton4 ? " subtleButton toggled" : "subtleButton"}>
+                                            className={this.state.toggle2.scheduleButton4 ? " subtleButton toggled" : "subtleButton"}>
                                             Instructor Support Hours
                                         </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.scheduleButton5()}
-                                            className={this.state.toggle.scheduleButton5 ? " subtleButton toggled" : "subtleButton"}>
+                                            className={this.state.toggle2.scheduleButton5 ? " subtleButton toggled" : "subtleButton"}>
                                                 Exam Prep Hours
                                             </Card.Title>
                                     </Card.Body> 
