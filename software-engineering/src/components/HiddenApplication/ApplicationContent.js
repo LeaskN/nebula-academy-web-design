@@ -40,6 +40,7 @@ class applicationContent extends Component {
         }
     }
     arrayRemove(arr, value){
+        console.log(arr, value)
         return arr.filter(function(ele){
             return ele !== value;
         });
@@ -62,26 +63,25 @@ class applicationContent extends Component {
         
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
+            //if state does not contain listName
             if(!this.state[listName]){
                 //first time something is being added to an array
                 this.setState({
-                    [listName]: [name]
+                    [listName]: [name]+';'
                 })
             } else if (this.state[listName].indexOf(name) > -1) {
                 //unchecked box
-                let nameArr = this.state[listName];
-                nameArr = this.arrayRemove(nameArr, name)
-                
+                let nameStr = this.state[listName].split(name+';').join('');
                 this.setState({
-                    [listName]: nameArr
+                    [listName]: nameStr
                 })
                 
                 // this.state[listName].splice(this.state[listName].indexOf(name), 1) //this shouldnt work but it does
             } else {
                 //adding to an existing array
-                let nameArr = [this.state[listName].concat(name)].flat()
+                let nameStr = [this.state[listName].concat(name+';')]
                 this.setState({
-                    [listName]: nameArr
+                    [listName]: nameStr
                 })
             }
         //else its not a list
@@ -110,7 +110,13 @@ class applicationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: Part 1 is the following form on this page. Part 2 is an interview to understand a participants motivations, commitments, & capacity.</h2>
+                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: </h2>
+                        </Row>
+                        <Row style={{marginLeft:"50px"}}>
+                            <p><b>Part 1:</b> the form on this page</p>
+                        </Row>
+                        <Row style={{marginLeft:"50px"}}>
+                            <p><b>Part 2:</b> an interview to understand a participants motivations, commitments, & capacity</p>
                         </Row>
                         <hr></hr>
                         <Row>
@@ -236,7 +242,7 @@ class applicationContent extends Component {
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
-                                <Form.Label>Briefly explain your most important accomplishments, traits and qualifications, etc. <a href="https://www.indeed.com/career-advice/career-development/guide-to-writing-a-bio-with-examples">Guide to Writing a Bio (with examples).</a></Form.Label>
+                                <Form.Label>Briefly explain your most important accomplishments, traits and qualifications, etc. <a href="https://www.indeed.com/career-advice/career-development/guide-to-writing-a-bio-with-examples">Guide to Writing a Bio (with examples)</a></Form.Label>
                                 <Form.Control type="text" as="textarea" rows="3" placeholder="Tell us about yourself." required />
                             </Form.Group>
                             <Form.Group required onChange={this.handleInputChange} className="Scholarship_Type__c">
@@ -339,7 +345,7 @@ class applicationContent extends Component {
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>Would you be interested in learning more about our teacher certification program?</Form.Label>
-                                    <Form.Control onChange={this.handleInputChange} name="Interested_inTeacher_certification_progr__c"  as="select">
+                                    <Form.Control onChange={this.handleInputChange} name="Want_to_know_more_about_teacher_cert_pgm__c"  as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Yes" value="true">Yes</option> 
                                         <option aria-label="option 2" label="No" value="false">No</option> 
@@ -352,44 +358,55 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Multiple payments option" type="checkbox"/> Multiple payments option</label><br/>
                             </Form.Group>
-                            <Form.Group required onChange={this.handleInputChange} className="Ethnicity__c">
-                                <Form.Label>Please provide your ethnicity</Form.Label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Caucasian" type="checkbox"/> Caucasian</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="African American" type="checkbox"/> African American</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Hispanic or Latin Origin" type="checkbox"/> Hispanic or Latin Origin</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Hispanic or Latin Origin" type="checkbox"/> Hispanic or Latin Origin</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native Hawaiian or Other Pacific Islander" type="checkbox"/> Native Hawaiian or Other Pacific Islander</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Middle Eastern or North African" type="checkbox"/> Middle Eastern or North African</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other" type="checkbox"/> Other</label>
-                                <br/>
-                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Please provide your ethnicity</Form.Label>
+                                    <Form.Control required onChange={this.handleInputChange} className="Ethnicity__c" name="Ethnicity__c"  as="select">
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 1" label="Caucasian" value="Caucasian"> Caucasian</option>
+                                        <option aria-label="option 2" label="African American" value="African American"> African American</option>
+                                        <option aria-label="option 3" label="Hispanic or Latin Origin" value="Hispanic or Latin Origin"> Hispanic or Latin Origin</option>
+                                        <option aria-label="option 4" label="Native American" value="Native American"> Native American</option>
+                                        <option aria-label="option 5" label="Native Hawaiian or Other Pacific Islander" value="Native Hawaiian or Other Pacific Islander"> Native Hawaiian or Other Pacific Islander</option>
+                                        <option aria-label="option 6" label="Middle Eastern or North African" value="Middle Eastern or North African"> Middle Eastern or North African</option>
+                                        <option aria-label="option 7" label="Other" value="Other"> Other</option>
+                                    </Form.Control>
+                            </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_OTHER_Desc__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Gender" />
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Group required onChange={this.handleInputChange} className="Gender__c">
-                                <Form.Label>Please provide your Gender</Form.Label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Female" type="checkbox"/> Female</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Male" type="checkbox"/> Male</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Non-binary/third gender" type="checkbox"/> Non-binary/third gender</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Transsexual" type="checkbox"/> Transsexual</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Other/Prefer to self-describe" type="checkbox"/> Other/refer to self-describe</label><br/>
-                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Please provide your Gender</Form.Label>
+                                    <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c"  as="select">
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 1" label="Female" value="Female"> Female</option>
+                                        <option aria-label="option 2" label="Male" value="Male"> Male</option>
+                                        <option aria-label="option 3" label="Non-binary/third gender" value="Non-binary/third gender"> Non-binary/third gender</option>
+                                        <option aria-label="option 4" label="Transsexual" value="Transsexual"> Transsexual</option>
+                                        <option aria-label="option 5" label="Other/Prefer to self-describe" value="Other/Prefer to self-describe"> Other/Prefer to self-describe</option>
+                                    </Form.Control>
+                            </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other') > -1 ? "showding" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Gender_OTHER_Desc__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="VET_GI_BILL_BENEFITS__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 2" label="Yes" value="true">Yes</option> 
-                                        <option aria-label="option 3" label="No" value="false">No</option> 
+                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
+                                        <option aria-label="option 2" label="No" value="false">No</option> 
+                                    </Form.Control>
+                            </Form.Group> 
+                            <Form.Group>
+                                <Form.Label>Which cohort are you applying to?</Form.Label>
+                                    <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
+                                        <option aria-label="option 0" label="Select" value="false"></option> 
+                                        <option aria-label="option 1" label="Software Engineering Bootcamp March - August" value="7013F0000004EC0QAM">Software Engineering Bootcamp March - August</option> 
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group>
@@ -410,7 +427,7 @@ class applicationContent extends Component {
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
-                                <Form.Control onChange={this.handleInputChange} name="Educational_Proof_for_HS_Diploma__c" required as="select">
+                                <Form.Control onChange={this.handleInputChange} name="High_School_Diploma_or_GED__c" required as="select">
                                     <option label="Select"></option> 
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
                                 </Form.Control>
