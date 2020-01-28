@@ -1,13 +1,13 @@
-import React, { Component }from 'react';
-import { Row, Col, Container, Image} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Row, Col, Container, Image, ButtonToolbar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
-
+import StaffAbout from './StaffAbout.js'
 import './StaffContent.css';
 import LaurieCareyImage from "../../assets/LaurieNebulaAcademy.jpg"
-import NicLeaskImage from "../../assets/NicLeaskPHOTO.jpg"
-import MichaelCareyImage from "../../assets/MCNebulaAcademy.jpg"
+import NicLeaskImage from "../../assets/NicLinkedin.jpg"
+import MichaelCareyImage from "../../assets/MCLinkedin.jpg"
 import FrancineMaioneImage from "../../assets/FTMNebulaAcademy.jpg"
 import JuleneReedImage from "../../assets/DrJuleneReedNebulaAcademy.jpg"
 import TomLemonsImage from "../../assets/TomLemonsImage.jpg"
@@ -16,8 +16,10 @@ class StaffContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            test: 'test',
             show: false,
-            setShow: false,
+            // setShow: false,
+            showText:'false',
             viewWidth:0,
             colWidth: 294,
             name:'',
@@ -53,7 +55,6 @@ class StaffContent extends Component {
         let string = JSON.stringify(bio);
         return string;
     }
-
     setInfo(event){
         let target = event.target;
         if (target.parentElement.className === 'col'){
@@ -110,20 +111,22 @@ class StaffContent extends Component {
                     <Container>
                         <Row>{this.state.allPeople.map(person =>
                             <React.Fragment>
-                                <Col >
+                                <Col className="staffMember">
                                     <div className="imageContainer" >
-                                        <Image src={person.image} fluid />
+                                        <Image src={ person.image } fluid />
                                     </div>
                                     <br/>
-                                    <h2 className="centralText">{person.name}</h2>
-                                    <h4 className="centralText">{person.position}</h4>
-                                    <h6 className="centralText linkDark" onClick={(e) => this.setInfoOpenPanel(e)}>About {person.name.split(' ').length === 3? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0]}</h6>
-                                    <a className="link centralText" href={person.url} target="empty">{person.linkText}</a>
-                                    <br/>
+                                    <h2 className="centralText">{ person.name }</h2>
+                                    <h4 className="centralText">{ person.position }</h4>
+                                    <a className="link centralText" href={ person.url } target="empty">{ person.linkText }</a>
+                                    <div id="spacer" ></div>                                
+                                    <ButtonToolbar className="bottom contentCentered">
+                                        <StaffAbout state={ person } name={ person.name.split(' ').length === 3? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0] }/>
+                                    </ButtonToolbar>                            
                                 </Col> 
+                                    <br/>    
                             </React.Fragment>
                         )}</Row>
-                        
                     </Container>     
                 </React.Fragment> 
             </div>

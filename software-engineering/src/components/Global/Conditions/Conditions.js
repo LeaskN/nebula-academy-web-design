@@ -9,7 +9,6 @@ export default class Conditions extends React.Component {
             showText:'false',
         }
     }
-    // handleClose = () => {this.setState({show: false})};
     handleShow = () => {
         let changeShow = !this.state.show;
         this.setState({ show: changeShow });
@@ -24,10 +23,9 @@ export default class Conditions extends React.Component {
 
             <Modal show={this.state.show}  onHide={(e)=>this.handleShow()}>
                 <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Project & Certification Conditions:</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h5>Project & Certification Conditions:</h5>
                     <ol>
                         <li>Pass your AWS Cloud Practitioner exam</li>
                         <li>Have five live projects assessed and accepted by program manager</li>

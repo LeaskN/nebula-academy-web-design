@@ -144,6 +144,16 @@ code {
   background-color: white;
   border-color: white;
 }
+.btn-secondary{
+  color: white;
+  background-color: #7F5A8F;
+  border-color: #7F5A8F;
+}
+.btn-secondary:hover{
+  color: white;
+  background-color: #3B3D7B;
+  border-color: #3B3D7B;
+}
 .fullWidth{
   width: 100% !important;
 }

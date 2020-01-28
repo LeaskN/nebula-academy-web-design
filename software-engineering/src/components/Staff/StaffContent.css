@@ -18,8 +18,8 @@
     margin: auto;
     overflow: hidden; 
     justify-content: center;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+    border: 5px solid #7F5A8F;
+    border-radius: 10px;
 }
 .toggleOff{
   display: none;
@@ -37,4 +37,15 @@
 .img-fluid {
   width: 100%;
   height: auto;
+}
+.staffMember{
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 10px !important;
+  filter: grayscale(100%);
+}
+.staffMember:hover{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
