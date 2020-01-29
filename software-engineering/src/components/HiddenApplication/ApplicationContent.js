@@ -13,11 +13,19 @@ class applicationContent extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     getData(e) {
+        // let futureState = {};
         e.preventDefault();
-        fetch("https://reqres.in/api/users/2")
-            .then(res => res.json())
-            .then(res => this.setState({ apiResponse: res }))
-            .then(console.log(this.state));
+        fetch(`http://23.96.61.174:3000/campaigns`)
+        .then(console.log('attmepting fetch'))
+        .then(res => console.log(res))
+        // fetch('http://23.96.61.174:3000/campaigns', {
+        //     mode: 'no-cors',
+        // })
+        //     .then(res => res.json())
+        //     .then(res => console.log(res))
+            // .then(res => futureState = res )
+            // .then(res => this.setState({ test: 'test'}))
+            // .then(res => alert(`Thanks ${this.state.First_Name__c} your confirmation will be sent to ${this.state.Email_ID__c} shortly.` ));
     }
     putData(e) {
         e.preventDefault();
@@ -26,7 +34,7 @@ class applicationContent extends Component {
             fetch("https://reqres.in/api/users/2", {
                 method: 'put',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': 'http://localhost:3000/hiddenapplication',
                 },
                 body: JSON.stringify(this.state),
             })
@@ -49,6 +57,7 @@ class applicationContent extends Component {
         let tempObj = this.state
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
+                console.log(item)
                 tempObj[item] = tempObj[item].join(';');
             }
         }
@@ -406,7 +415,8 @@ class applicationContent extends Component {
                                 <Form.Label>Which cohort are you applying to?</Form.Label>
                                     <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
                                         <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Software Engineering Bootcamp March - August" value="7013F0000004EC0QAM">Software Engineering Bootcamp March - August</option> 
+                                        <option aria-label="option 1" label="Software Engineering Bootcamp March 2020 - August 2020" value="7013F0000004EC0QAM">Software Engineering Bootcamp March 2020 - August 2020</option> 
+                                        <option aria-label="option 2" label="Software Engineering BootCamp September 2020 - February 2021" value="7013F0000004aJJQAY">Software Engineering BootCamp September 2020 - February 2021</option> 
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group>
@@ -438,7 +448,8 @@ class applicationContent extends Component {
                         </Form>
                     </Col>
                 </Row>
-                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON()}</p>
+                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON().indexOf(`"fixedJSON":"",`) > -1 ? this.fixJSON().split(`"fixedJSON":"",`).join('') : this.fixJSON()}</p>
+                <Button variant="secondary" type="submit" onClick={(e) => this.getData(e)}>Get</Button>
             </Container>
         )
     }
