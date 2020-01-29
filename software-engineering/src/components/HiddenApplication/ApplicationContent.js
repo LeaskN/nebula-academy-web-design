@@ -6,49 +6,62 @@ class applicationContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            fixedJSON:'',
             Gender__c:[],
-            Ethnicity__c: []
+            Ethnicity__c: [],
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     getData(e) {
-        // let futureState = {};
         e.preventDefault();
         fetch(`http://23.96.61.174:3000/campaigns`)
         .then(console.log('attmepting fetch'))
+        .then(res => res.json())
         .then(res => console.log(res))
-        // fetch('http://23.96.61.174:3000/campaigns', {
-        //     mode: 'no-cors',
-        // })
-        //     .then(res => res.json())
-        //     .then(res => console.log(res))
-            // .then(res => futureState = res )
-            // .then(res => this.setState({ test: 'test'}))
-            // .then(res => alert(`Thanks ${this.state.First_Name__c} your confirmation will be sent to ${this.state.Email_ID__c} shortly.` ));
     }
     putData(e) {
-        e.preventDefault();
-        console.log(this.state)
-        if(this.state.acknowledgement){                
-            fetch("https://reqres.in/api/users/2", {
-                method: 'put',
-                headers: {
-                    'Access-Control-Allow-Origin': 'http://localhost:3000/hiddenapplication',
-                },
-                body: JSON.stringify(this.state),
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-        }
+        fetch(`http://23.96.61.174:3000/application`, {
+            method: 'POST', 
+            mode: 'cors', 
+            cache: 'no-cache', 
+            credentials: 'same-origin', 
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow', 
+            referrerPolicy: 'no-referrer',
+            body: this.fixJSON()
+        })
+        .then((response) => response.json())
+        .then((response) => {
+            console.log('Success:', response);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        })
     }
+    handleSubmit(event) {
+        console.log(this.state.testArea)
+        fetch(`http://23.96.61.174:3000/application`, {
+            method: 'POST', 
+            mode: 'cors', 
+            cache: 'no-cache', 
+            credentials: 'same-origin', 
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow', 
+            referrerPolicy: 'no-referrer',
+            body: this.state.testArea
+        })
+        .then((response) => response.json())
+        .then((response) => {
+            console.log('Success:', response);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        })
+    }   
     arrayRemove(arr, value){
-        console.log(arr, value)
         return arr.filter(function(ele){
             return ele !== value;
         });
@@ -57,7 +70,6 @@ class applicationContent extends Component {
         let tempObj = this.state
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
-                console.log(item)
                 tempObj[item] = tempObj[item].join(';');
             }
         }
@@ -107,12 +119,8 @@ class applicationContent extends Component {
             });
         }
         this.fixJSON();
-        console.log(this.state)
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-        console.log(this.state)
-    }    
+        console.log(this.fixJSON())
+    } 
     render() {
         return (
             <Container>
@@ -252,7 +260,7 @@ class applicationContent extends Component {
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>Briefly explain your most important accomplishments, traits and qualifications, etc. <a href="https://www.indeed.com/career-advice/career-development/guide-to-writing-a-bio-with-examples">Guide to Writing a Bio (with examples)</a></Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Tell us about yourself." required />
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Tell us about yourself." onChange={this.handleInputChange} name="Short_Bio__c" required />
                             </Form.Group>
                             <Form.Group required onChange={this.handleInputChange} className="Scholarship_Type__c">
                                 <Form.Label>Are you interested in any of the following scholarships?</Form.Label><br/>
@@ -298,7 +306,7 @@ class applicationContent extends Component {
                                     <option aria-label="option 0" label="Select"></option> 
                                     <option aria-label="option 1" value="None" label="None">None</option> 
                                     <option aria-label="option 2" value="Beginner (100 hours or less of tutorials)" label="Beginner (100 hours or less of tutorials)">Beginner (100 hours or less of tutorials)</option> 
-                                    <option aria-label="option 3" value="Intermediate (Three or fewer classes and personal projects)" label="Intermediate (Three or fewer classes and personal projects)">Intermediate (Three or fewer classes and personal projects)</option> 
+                                    <option aria-label="option 3" value="Intermediate (three or fewer classes or personal projects)" label="Intermediate (Three or fewer classes and personal projects)">Intermediate (Three or fewer classes and personal projects)</option> 
                                     <option aria-label="option 4" value="Advanced (Degree or professional experience)" label="Advanced (Degree or professional experience)">Advanced (Degree or professional experience)</option> 
                                 </Form.Control>
                             </Form.Group>  
@@ -323,7 +331,7 @@ class applicationContent extends Component {
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>Please include certification(s), specialized training(s), license(s), self-taught learning program(s), self-enrichment workshop(s) and other career-enhancing program(s) below.</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Certifications, self-learning, etc.." required />
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Certifications, self-learning, etc.." name="Education_Not_included_above__c" required />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide your preference to experience learning</Form.Label><br/>
@@ -388,7 +396,7 @@ class applicationContent extends Component {
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>Please provide your Gender</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c"  as="select">
+                                    <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Female" value="Female"> Female</option>
                                         <option aria-label="option 2" label="Male" value="Male"> Male</option>
@@ -415,7 +423,7 @@ class applicationContent extends Component {
                                 <Form.Label>Which cohort are you applying to?</Form.Label>
                                     <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
                                         <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Software Engineering Bootcamp March 2020 - August 2020" value="7013F0000004EC0QAM">Software Engineering Bootcamp March 2020 - August 2020</option> 
+                                        <option aria-label="option 1" label="Software Engineering Bootcamp March 2020 - August 2020" value="7013F0000004aIuQAI">Software Engineering Bootcamp March 2020 - August 2020</option> 
                                         <option aria-label="option 2" label="Software Engineering BootCamp September 2020 - February 2021" value="7013F0000004aJJQAY">Software Engineering BootCamp September 2020 - February 2021</option> 
                                     </Form.Control>
                             </Form.Group> 
@@ -442,14 +450,15 @@ class applicationContent extends Component {
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
                                 </Form.Control>
                             </Form.Group>
-                            <Button variant="primary" type="submit">
+                            <Button variant="secondary" type="submit">
                                 Submit
                             </Button>
                         </Form>
                     </Col>
                 </Row>
-                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON().indexOf(`"fixedJSON":"",`) > -1 ? this.fixJSON().split(`"fixedJSON":"",`).join('') : this.fixJSON()}</p>
+                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON()}</p>
                 <Button variant="secondary" type="submit" onClick={(e) => this.getData(e)}>Get</Button>
+                <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Put</Button>
             </Container>
         )
     }
