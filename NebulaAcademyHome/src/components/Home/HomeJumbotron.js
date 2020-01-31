@@ -4,8 +4,8 @@ import './HomeJumbotron.css'
 
 export const HomeJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="homeJumbo">
-      <div className="homeOverlay"></div>
+    <Jumbotron className="noMargin">
+      {/* <div className="homeOverlay"></div> */}
       <Container>
       <h1 className="contentCentered">Computer Science Growth System</h1>
       <h2 className="contentCentered">We cover K to Career</h2>

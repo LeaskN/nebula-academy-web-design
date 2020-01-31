@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Icon from '../../assets/NebulaAcademyLogoNextToTitle.png';
-import NebulaIcon from '../../assets/NAIconTransparent240.png';
 import './NavigationBar.css';
 
 export const NavigationBar = () => (
@@ -11,12 +10,11 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <div className='navContents'>
-                    <Nav.Item><Nav.Link href="/trycoding">Try Coding</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/STEAM for Kids">STEAM for Kids</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Educators">Educators</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Workforce Development">Workforce Development</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Universities">Universities</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Philanthropy">Philanthropy</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/educators">Educators</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/workforce-development">Workforce Development</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/philanthropy">Philanthropy</Nav.Link></Nav.Item>
                     <NavDropdown alignRight id="dropdown-menu-align-right" title="About">
                         <NavDropdown.Item href="/">Team</NavDropdown.Item>
                         <NavDropdown.Item href="/success-stories">Success Stories</NavDropdown.Item>
@@ -24,6 +22,7 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/philanthropy">Philanthropy</NavDropdown.Item>
                         <NavDropdown.Item href="/blog">Blog</NavDropdown.Item>
                     </NavDropdown>
+                    <div style={{width: "15px"}}></div>
                 </div>
             </Navbar.Collapse>
         </Navbar>

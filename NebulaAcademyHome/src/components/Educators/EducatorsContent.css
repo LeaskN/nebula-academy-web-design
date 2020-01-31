@@ -1,12 +1,10 @@
-.HomeUrlCard{
+.EducatorsUrlCard{
     text-align: center;
     color: black;
     background-color: white;
     margin: 20px;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
     border: 3px solid #8E5EA5;
-    border-radius: 10px;
-    padding: 10px !important;
     min-width: 300px;
     min-height: 200px;
 }

@@ -10,7 +10,6 @@ export default class StaffAbout extends React.Component {
         }
     }
     handleShow = () => {
-        console.log(this.props.state)
         let changeShow = !this.state.show;
         this.setState({ show: changeShow });
     };

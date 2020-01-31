@@ -1,6 +1,5 @@
 import React from 'react';
 import { HomeJumbotron } from '../components/Home/HomeJumbotron';
-import SectionNav from '../components/Global/SectionNav';
 import HomeContent from '../components/Home/HomeContent';
 import  { HomeFooter } from '../components/Home/HomeFooter';
 
