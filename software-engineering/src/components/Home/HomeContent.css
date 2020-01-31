@@ -43,19 +43,3 @@
 .paddingMiddle{
     border-top: 5px solid white;
 }
-
-.bottom{
-    position:absolute;  
-    margin-left: 5%;
-    margin-bottom: 15px;
-    margin-top: 0px;
-    width: 90%;                
-    bottom: 0;                          
-    left: 0; 
-}
-#spacer{
-    height: 50px;
-    width: 100px;
-    float: left;
-    display:inline-block;
-}
