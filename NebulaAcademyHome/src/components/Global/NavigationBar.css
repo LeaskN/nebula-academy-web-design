@@ -1,0 +1,42 @@
+.mainNavbar{
+    justify-content: space-between !important;
+}
+.navbar{
+    background-color: #131524 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    z-index: 10;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+    display: flex;
+}
+.navContents{
+    display: flex;
+    font-size: 1em;
+}
+.nav-link{
+    text-align: center;
+    color: #bbb !important;
+}
+@media (max-width: 1200px){
+    .navContents{
+        font-size: .93em;
+    }
+    .nav-link{
+        padding: 5px;
+    }
+}
+.navBarLogoSmall{
+    display: none;
+}
+@media (max-width:388px){
+    .navBarLogoSmall{
+        display: flex;
+    }
+    .navBarLogo{
+        display: none;
+    }
+}
