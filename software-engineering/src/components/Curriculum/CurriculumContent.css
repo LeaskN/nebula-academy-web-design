@@ -3,7 +3,9 @@
     height: 100%;
     color: #ffffff;
     background-color: #9971AF;
-    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
 }
 .cardDeckRight{
     width: 60vw;
