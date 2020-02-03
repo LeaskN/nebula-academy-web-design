@@ -1,5 +1,7 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar,
+    //  NavDropdown 
+    } from 'react-bootstrap';
 import Icon from '../../assets/NebulaAcademyLogoNextToTitle.png';
 import './NavigationBar.css';
 

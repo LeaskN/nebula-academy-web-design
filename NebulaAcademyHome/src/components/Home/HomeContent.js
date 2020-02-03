@@ -14,6 +14,24 @@ class HomeContent extends Component {
             backgroundColor: 'transparent',
             clicked: 'steamforkids',
             shape: 'circle',
+            slides: [
+                {
+                    image: slide1,
+                    al: 'First slide',
+                    header: 'This is the first SE slide header',
+                    body: 'This is the first slide body',
+                },{
+                    image: slide2,
+                    al: 'Second slide',
+                    header: 'This is the second SE slide header',
+                    body: 'This is the second slide body',
+                },{
+                    image: slide3,
+                    al: 'Third slide',
+                    header: 'This is the third SE slide header',
+                    body: 'This is the third slide body',
+                }
+            ],
             elements: [ 
                 { color: '#8E5EA5', header:"STEAM for Kids", content: "This is the steamForKids content" },
                 { color: '#993955', header:"Educators", content: "This is the educators content" }, 
@@ -28,44 +46,25 @@ class HomeContent extends Component {
             'philanthropy': { color: '#9395D3', header:"Philanthropy", content: "This is the philanthropy content" },
         };
     }
+    createSlides = () => {
+        return (
+            this.state.slides.map(slide => (
+                <Carousel.Item>
+                    <img className="d-block w-100" alt={slide.image} src={slide.image} al={slide.al}/>
+                    <Carousel.Caption>
+                        <h3>{slide.header}</h3>
+                        <p>{slide.body}</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))
+        )
+    }
 render() {
         return (
             <React.Fragment>
-                    <Carousel>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={slide1}
-                            alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Carousel of each audience with a picture, quote, and clickthrough to their pre-website landing page</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={slide2}
-                            alt="Second slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Carousel of each audience with a picture, quote, and clickthrough to their pre-website landing page</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={slide3}
-                            alt="Third slide"
-                            />
-                            <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Carousel of each audience with a picture, quote, and clickthrough to their pre-website landing page</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        </Carousel>
+                <Carousel >
+                    {this.createSlides()}
+                </Carousel>
                         <ShapeAndContent state={this.state} />
                     <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
                         <Col className="HomeUrlCard">

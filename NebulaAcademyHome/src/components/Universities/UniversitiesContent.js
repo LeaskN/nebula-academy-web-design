@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Button, Carousel } from 'react-bootstrap';
-import ShapeAndContent from '../Global/ShapeAndContent'
+import { Row, Col, Button } from 'react-bootstrap';
 
 import './UniversitiesContent.css';
 

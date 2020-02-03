@@ -210,5 +210,13 @@ code {
   }
 }
 .dropdown-menu{
-  z-index: 10000000000;
+  z-index: 10000;
+}
+.carousel-inner{
+  max-height: 375px;
+}
+.carousel-caption{
+  z-index: 10;
+  color: white;
+  top: 7%;
 }

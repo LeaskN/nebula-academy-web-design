@@ -82,23 +82,10 @@ class WorkforceDevelopment extends Component {
             ))
         )
     }
-    createSoftwareEngineeringSlides = () => {
-        return (
-            this.state.softwareEngineeringCarouselItems.map(element => (
-                <Carousel.Item>
-                    <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
-                    <Carousel.Caption>
-                        <h3>{element.header}</h3>
-                        <p>{element.body}</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            ))
-        )
-    }
     createAWSSlides = () => {
         return (
             this.state.AWSCarouselItems.map(element => (
-                <Carousel.Item>
+                <Carousel.Item key={element.header}>
                     <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
                     <Carousel.Caption>
                         <h3>{element.header}</h3>
@@ -106,13 +93,26 @@ class WorkforceDevelopment extends Component {
                     </Carousel.Caption>
                 </Carousel.Item>
             ))
-        )
-    }
+            )
+        }
+        createSoftwareEngineeringSlides = () => {
+            return (
+                this.state.softwareEngineeringCarouselItems.map(element => (
+                    <Carousel.Item key={element.header}>
+                        <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
+                        <Carousel.Caption>
+                            <h3>{element.header}</h3>
+                            <p>{element.body}</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))
+            )
+        }
 render() {
         return (
             <React.Fragment>
                 <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                        <Col className="WorkforceDevelopmentUrlCard" style={{borderColor: '#ff9900'}}>
+                        <Col className="WorkforceDevelopmentUrlCard" style={{borderColor: '#ff9900',  minWidth: '340px'}}>
                             <h1>AWS</h1>
                             <Carousel>
                                 {this.createAWSSlides()}
@@ -120,7 +120,7 @@ render() {
                             <div id="spacer"></div>
                             <Button className='bottom' href="https://aws.nebulaacademy.com" target="blank" variant="warning">AWS</Button>
                         </Col>
-                        <Col className="WorkforceDevelopmentUrlCard">
+                        <Col className="WorkforceDevelopmentUrlCard" style={{ minWidth: '340px'}}>
                             <h1>Software Engineering</h1>
                             <Carousel>
                                 {this.createSoftwareEngineeringSlides()}
