@@ -6,6 +6,10 @@ import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
 import { STEAMForKids } from './pages/STEAMForKids'
 import { Educators } from './pages/Educators'
+import { WorkforceDevelopment } from './pages/WorkforceDevelopment'
+import { Universities } from './pages/Universities'
+import { Philanthropy } from './pages/Philanthropy'
+import { Staff } from './pages/Staff'
 
 // import { Staff } from './pages/Staff';
 
@@ -18,11 +22,11 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path ="/steam-for-kids" component={STEAMForKids}/>
             <Route path ="/educators" component={Educators}/>
-            {/* <Route path ="/workforce-development" component={WorkforceDevelopment}/>
+            <Route path ="/workforce-development" component={WorkforceDevelopment}/>
             <Route path ="/universities" component={Universities}/>
-            <Route path ="/philantrhopy" component={Philantrhopy}/>
-            <Route path ="/team" component={Team}/>
-            <Route path ="/success-stories" component={SuccessStories}/>
+            <Route path ="/philanthropy" component={Philanthropy}/>
+            <Route path ="/staff" component={Staff}/>
+         {/*<Route path ="/success-stories" component={SuccessStories}/>
             <Route path ="/employment" component={Employment}/>
             <Route path ="/blog" component={Blog}/>*/}
             <Route component = {NoMatch}/>

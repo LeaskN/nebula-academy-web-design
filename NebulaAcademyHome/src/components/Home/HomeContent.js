@@ -28,44 +28,6 @@ class HomeContent extends Component {
             'philanthropy': { color: '#9395D3', header:"Philanthropy", content: "This is the philanthropy content" },
         };
     }
-    handleClick = (e) => {
-        e.preventDefault()
-        let targetTitle = e.target.innerHTML.split(' ').join('').toLowerCase();
-        for(let i = 0; i < e.target.parentElement.children.length; i++){
-            e.target.parentElement.children[i].style.backgroundColor = 'transparent';
-            e.target.parentElement.children[i].style.backgroundColor = 'transparent'
-            e.target.parentElement.children[i].style.border = '3px solid #8E5EA5';
-            e.target.parentElement.children[i].style.color = 'black';
-            e.target.style.boxShadow = `0px 0px 10px 3px transparent`;
-
-        }
-        this.setState({
-            clicked: targetTitle,
-            justClicked: true,
-        })
-        e.target.style.backgroundColor = this.state[targetTitle].color;
-        e.target.style.border = '3px solid white';
-        e.target.style.color = 'white';
-    }
-    mouseOver = (e) => {
-        let targetTitle = e.target.innerHTML.split(' ').join('').toLowerCase();
-        e.target.style.backgroundColor = this.state[targetTitle].color;
-        e.target.style.border = '3px solid white';
-        e.target.style.boxShadow = `0px 0px 10px 3px ${e.target.style.backgroundColor}`;
-        e.target.style.color = 'white';
-    }
-    mouseAway = (e) => {
-        if(this.state.justClicked){
-            this.setState({
-                justClicked: false,
-            })
-        } else {
-            e.target.style.backgroundColor = 'transparent'
-            e.target.style.border = '3px solid #8E5EA5';
-            e.target.style.color = 'black';
-            e.target.style.boxShadow = `0px 0px 10px 3px transparent`;
-        }
-    }
 render() {
         return (
             <React.Fragment>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Carousel, Col, Button } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
 import slide1 from '../../assets/1_AWS_home.jpg'
 import slide2 from '../../assets/1_AWS_home.jpg'
@@ -67,34 +67,6 @@ render() {
                         </Carousel.Item>
                         </Carousel>
                     <ShapeAndContent state={this.state}/>
-                    <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                        <Col className="STEAMKidsUrlCard">
-                            <h1>STEAM for Kids</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="STEAMKidsUrlCard">
-                            <h1>What do We Teach?</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="STEAMKidsUrlCard">
-                            <h1>Teaching Methodology </h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="STEAMKidsUrlCard">
-                            <h1>What are the Technologies We Use?</h1>
-                            <div id="spacer"></div>
-                            
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="STEAMKidsUrlCard">
-                            <h1>Outcomes</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                    </Row>
             </React.Fragment>
             )
 

@@ -15,13 +15,13 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/workforce-development">Workforce Development</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/philanthropy">Philanthropy</Nav.Link></Nav.Item>
-                    <NavDropdown alignRight id="dropdown-menu-align-right" title="About">
+                    <Nav.Item><Nav.Link href="/staff">Team</Nav.Link></Nav.Item>
+                    {/* <NavDropdown alignRight id="dropdown-menu-align-right" title="About">
                         <NavDropdown.Item href="/">Team</NavDropdown.Item>
                         <NavDropdown.Item href="/success-stories">Success Stories</NavDropdown.Item>
                         <NavDropdown.Item href="/employment">Employment</NavDropdown.Item>
-                        <NavDropdown.Item href="/philanthropy">Philanthropy</NavDropdown.Item>
                         <NavDropdown.Item href="/blog">Blog</NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                     <div style={{width: "15px"}}></div>
                 </div>
             </Navbar.Collapse>

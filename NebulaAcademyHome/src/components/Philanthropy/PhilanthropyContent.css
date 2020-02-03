@@ -1,0 +1,22 @@
+.PhilanthropyUrlCard{
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 1px solid #00C9CB;
+    min-width: 300px;
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.cardDeckLeft{
+    color: #ffffff;
+    background-color: #00C9CB;
+    align-items: center;
+    justify-content: center !important;
+}
+@media (max-width: 810px){
+    .changingFont{
+        font-size: 4vw !important;
+    }
+}
