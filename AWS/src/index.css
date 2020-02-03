@@ -109,6 +109,11 @@ code {
   border-color: #ff9900;
   color: white;
 }
+.btn-warning:hover{
+  background-color: #e45b00;
+  border-color: #e45b00;
+  color: white;
+}
 .btn-primary{
   color: black;
   background-color: white;
