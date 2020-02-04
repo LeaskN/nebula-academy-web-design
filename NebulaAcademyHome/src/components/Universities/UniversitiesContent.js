@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
+import AWS_Brochure from '../../assets/AWS_Brochure.pdf'
+import AWS_Flyer from '../../assets/AWS_Flyer.pdf'
+import AWS_Student_Infographic from '../../assets/AWS_Student_Infographic.pdf'
+import AWS_University_Infographic from '../../assets/AWS_University_Infographic.pdf'
 
 import './UniversitiesContent.css';
 
@@ -35,10 +39,10 @@ render() {
                             <h1>Additional AWS Information</h1>
                             <p>Please feel free to download our flyer, infographs, or our full AWS brochure</p>
                             <Row className="contentCentered">
-                                <Button style={{margin: '10px'}} href="https://code.nebulaacademy.com" target="blank" variant="warning">Flyer</Button>
-                                <Button style={{margin: '10px'}} href="https://code.nebulaacademy.com" target="blank" variant="warning">Infograph1</Button>
-                                <Button style={{margin: '10px'}} href="https://code.nebulaacademy.com" target="blank" variant="warning">Infograph2</Button>
-                                <Button style={{margin: '10px'}} href="https://code.nebulaacademy.com" target="blank" variant="warning">Full AWS Brochure</Button>
+                                <Button style={{margin: '10px'}} href={AWS_Brochure} target="blank" download variant="warning">Flyer</Button>
+                                <Button style={{margin: '10px'}} href={AWS_Flyer} target="blank" download variant="warning">Infograph1</Button>
+                                <Button style={{margin: '10px'}} href={AWS_Student_Infographic} target="blank" download variant="warning">Infograph2</Button>
+                                <Button style={{margin: '10px'}} href={AWS_University_Infographic} target="blank" download variant="warning">Full AWS Brochure</Button>
                             </Row>
                         </Col>
                         <Col></Col>

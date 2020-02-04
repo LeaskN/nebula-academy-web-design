@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, Card } from 'react-bootstrap';
 
-import image1 from '../../assets/1_AWS_home.jpg'
-import image2 from '../../assets/1_AWS_home.jpg'
-import image3 from '../../assets/1_AWS_home.jpg'
-import image4 from '../../assets/1_AWS_home.jpg'
+import image1 from '../../assets/DiscoveryDay_1_13.jpg'
+import image2 from '../../assets/DiscoveryDay2.jpg'
+import image3 from '../../assets/Codathon2.jpg'
+import image4 from '../../assets/12b_Slidelabel.jpg'
 
 import './PhilanthropyContent.css';
 
@@ -13,10 +13,10 @@ class Philanthropy extends Component {
         super(props);
         this.state = {
             programs: [
-                { title:'Program1', description:'This is the description for Program1', image:image1 }, 
-                { title:'Program2', description:'This is the description for Program2', image:image2 }, 
-                { title:'Program3', description:'This is the description for Program3', image:image3 }, 
-                { title:'Program4', description:'This is the description for Program4', image:image4 }, 
+                { title:'CODING PROGRAMS FOR AGES 7-18', image:image1, buttonText: 'Coding Ages 7-18', url:'https://www.we-connect-the-dots.org/coding-programs-for-1st12th', description:'Help support underrepresented student populations to learn to code by sponsoring scholarships and transportation to our after school coding program.  Students meet weekdays from 4-6pm, experiencing personalized classes based on their capabilities and interests.  To learn more about the program visit We Connect The Dots Website to learn more.', }, 
+                { title:'Community Ambassador Program', image:image2, url:'https://www.we-connect-the-dots.org/student-ambassador-program', buttonText: 'Community Ambassador', description:'Help support underrepresented student populations to build leadership and entrepreneur skills by funding the overall program and transportation to the program for students.  Students meet once a week and one Saturday per month  To learn more about the program visit We Connect The Dots Website to learn more.', }, 
+                { title:'Annual Code-A-Thon Program', image:image3, url:'https://www.we-connect-the-dots.org/2020-codeathon', buttonText: 'Coda-A-Thon', description:'Help support underrepresented student populations ages 13-18 to learn to code, collaborate in teams, build leadership and entrepreneur skills, and so much more by funding the overall program and transportation to the program for students.  This is an annual program design to both spark an interest in coding and build ongoing skills for students who participate year over year. To learn more about the program visit We Connect The Dots Website to learn more.', }, 
+                { title:'Software Engineer Bootcamp', image:image4, url:'https://code.nebulaacademy.com/Scholarships', buttonText: 'Software Engineering Bootcamp', description:'Help support underrepresented adult populations to build sustainable careers in technology.  Employment of computer and information technology occupations is projected to grow 21 percent from 2020 to 2028, much faster than the average for all occupations. These occupations are projected to add about 546,200 new jobs.This immersive workforce development program is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Support us by funding more or more scholarships to attend the program.', }, 
             ],
             helpOut: [
                 {title: 'Scholarships', shortDescription:'This is a seven word descriptive header', description: 'This is the scholarships description', buttonText:'View Scholarships', url: 'wctd.org'},
@@ -33,7 +33,7 @@ class Philanthropy extends Component {
                     <h1>{program.title}</h1>
                     <p>{program.description}</p>
                     <div id="spacer"></div>
-                    <Button className='bottom' href="https://aws.nebulaacademy.com" target="blank" variant="info">AWS</Button>
+                    <Button className='bottom' href={program.url} target="empty" variant="info">{program.buttonText}</Button>
                 </Col>
             ))
         )
@@ -62,11 +62,12 @@ class Philanthropy extends Component {
 render() {
         return (
             <React.Fragment>
-                <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                    {this.createProgramCard()}
+                <br/>
+                <Row style={{marginLeft: '10vw', marginRight: '10vw', border:'1.5px solid #00C9CB'}}>
+                    { this.createProgramCard() }
                 </Row>
                 <br/>
-                    {this.helpOutCard()}
+                    { this.helpOutCard() }
             </React.Fragment>
         )
     }

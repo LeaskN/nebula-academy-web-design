@@ -4,7 +4,7 @@ import './EducatorsJumbotron.css'
 
 export const EducatorsJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="noMargin">
+    <Jumbotron className="noMargin" style={{padding:'15px'}}>
       <Container>
         <h1 className="contentCentered">Transforming Education by Empowering Educators</h1>
         <p> We are educators and technologists working together to better education through Computer Science and STEAM integration in and out of the classroom in partnership with industry. </p>

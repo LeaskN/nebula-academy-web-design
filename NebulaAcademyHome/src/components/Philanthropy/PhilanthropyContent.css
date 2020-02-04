@@ -2,16 +2,18 @@
     text-align: center;
     color: black;
     background-color: white;
-    border: 1px solid #00C9CB;
+    border: 3px solid #00C9CB;
     min-width: 300px;
     min-height: 200px;
     background-position: center;
     background-size: cover;
     color: white;
+    padding: 7px !important;
 }
 .cardDeckLeft{
     color: #ffffff;
     background-color: #00C9CB;
+    padding: 10px;
     align-items: center;
     justify-content: center !important;
 }
