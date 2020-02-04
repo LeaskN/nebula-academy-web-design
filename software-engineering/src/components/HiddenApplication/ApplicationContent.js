@@ -139,7 +139,7 @@ class applicationContent extends Component {
                         <Row>
                             <Col className="alignCenter">
                                 <h3>Completing online application:</h3>
-                                    <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
+                                    <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com or by phone at: 631-468-7475.</p>
                             </Col>
                         </Row>
                         <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
