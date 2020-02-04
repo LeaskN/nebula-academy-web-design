@@ -26,7 +26,7 @@ render() {
                 <Col xs={8} className="cardColumns offWhite">
                     <Card style={{padding: "10px"}}>
                         <h3><a href={this.link} target="empty">Try Coding Workshop 2.7.2020</a></h3>
-                        <p>Spend your day in a beginner level, crash course in back-end engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a back-end software developer does and learn...<a href={this.link} target="empty">learn more</a></p>
+                        <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...<a href={this.link} target="empty">learn more</a></p>
                         <p><b>Participants must be over 17 to participate.</b></p>
                         <p><a target="empty" href="https://www.google.com/maps/place/Nebula+Academy/@40.8042109,-73.5183472,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2813b158c5423:0x81578d2a8861e473!8m2!3d40.8042109!4d-73.5161585">Nebula Academy, 180 Micheal Drive, NY 11791</a><span role="img" aria-label="pin">📍</span></p>
                     </Card>

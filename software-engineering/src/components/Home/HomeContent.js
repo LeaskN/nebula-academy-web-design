@@ -119,11 +119,11 @@ render() {
                             <Card className="introRowTile">
                                 <Card.Body>
                                     <h3>Try before you buy!</h3>
-                                    <p>Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Give it a <b>free 6 hour try with us!</b> </p>
+                                    <p>Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Come and give it a <b>free 6 hour try with us!</b> </p>
                                     <p>Participants will have the opportunity to try coding for free. We will build a simple and fun application to give our participants a coding experience.</p>
                                     <p>Any participants that decide on the day to sign up for our 6 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount.</p>
                                     <div id="spacer" ></div>
-                                    <Button className="bottom contentCentered" href="/application" variant="primary">Try Coding</Button>
+                                    <Button className="bottom contentCentered" href="/trycoding" variant="primary">Try Coding</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
