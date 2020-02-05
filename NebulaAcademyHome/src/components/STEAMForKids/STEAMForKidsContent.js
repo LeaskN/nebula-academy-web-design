@@ -13,7 +13,7 @@ class STEAMForKids extends Component {
         this.state = {
             backgroundColor: 'transparent',
             clicked: 'whyissteamforkidsimportant?',
-            shape: 'square',
+            shape: 'circle',
             elements : [
                 { color: '#8E5EA5', header:"Why is STEAM for Kids Important?", content: "This is the whysteamforkids content" },
                 { color: '#993955', header:"What do we teach?", content: "This is the whatdoweteach content" }, 

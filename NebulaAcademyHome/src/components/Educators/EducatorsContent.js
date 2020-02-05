@@ -13,7 +13,7 @@ class Educators extends Component {
         this.state = {
             backgroundColor: 'transparent',
             clicked: 'sciencebehindlearning',
-            shape: 'square',
+            shape: 'circle',
             slides: [
                 {
                     image: slide1,

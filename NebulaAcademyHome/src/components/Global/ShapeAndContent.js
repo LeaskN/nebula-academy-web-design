@@ -63,7 +63,7 @@ class ShapeAndContent extends Component {
     createShape = () => {
         return (
             this.props.state.elements.map(element => (
-                <div className={`${this.props.state.shape}`} key={element.header} style={{color:`black`}} onMouseEnter={ e => this.mouseOver(e)} onMouseLeave={ e => this.mouseAway(e)} onClick={e => this.handleClick(e)}>{element.header}</div>
+                <div className={`${this.props.state.shape}`} key={element.header} style={{color:`${ this.state.active.header === `${element.header}` ? 'white' : 'black'}`, backgroundColor:`${ this.state.active.header === `${element.header}` ? `${element.color}` : 'transparent'}`}} onMouseEnter={ e => this.mouseOver(e)} onMouseLeave={ e => this.mouseAway(e)} onClick={e => this.handleClick(e)}>{element.header}</div>
             ))
         )
     }
@@ -78,7 +78,7 @@ render() {
         return (
             <React.Fragment>
                 <div>
-                    <Row className="squareContainer" >
+                    <Row className="circleContainer" >
                         {this.createShape()}
                     </Row>
                     <Row className="lineContainer">

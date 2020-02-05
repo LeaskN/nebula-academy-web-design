@@ -2,8 +2,8 @@
     padding-top: 10px;
 }
 .circle {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     margin: 10px;
     border-radius: 1000px;
     border: 3px solid #8E5EA5;
@@ -26,36 +26,6 @@
     animation: glow 1.5s linear infinite alternate;
     background-color: transparent;
 }
-.squareLineContainer{
-    padding-top: 10px;
-}
-.square {
-    min-width: 155px;
-    min-height: 75px;
-    padding: 7px;
-    margin-top: 10px;
-    margin-bottom: 0 !important;
-    border: 3px solid #8E5EA5;
-    border-radius: 10px;
-    font-size: 1.2em;
-    color: black;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    transition: background-color .4s linear;
-}
-.squareContainer{
-    display: flex;
-    justify-content: space-around;
-}
-.square:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 3px #8E5EA5;
-    animation: glow 1.5s linear infinite alternate;
-    background-color: transparent;
-}
 .lineContainer{
     display: flex;
     justify-content: space-around;
@@ -65,9 +35,7 @@
     .lineContainer{
         display: none;
     }
-    .square{
-        margin-bottom: 10px !important;
-    }
+
 }
 .line{
     width: 4px;

@@ -4,10 +4,10 @@ import './UniversitiesJumbotron.css'
 
 export const UniversitiesJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="noMargin">
+    <Jumbotron className="noMargin UniversitiesJumbo">
       <Container>
       <h1 className="contentCentered">Universities</h1>
-      <p>Universities Description</p>
+      <p>Nebula Academy bridges the gap between Academia and Industry. We partner with universities to remain on the cutting edge of higher education.</p>
       </Container>
     </Jumbotron>
   </React.Fragment>

@@ -6,6 +6,8 @@ import AWS_Student_Infographic from '../../assets/AWS_Student_Infographic.pdf'
 import AWS_University_Infographic from '../../assets/AWS_University_Infographic.pdf'
 
 import './UniversitiesContent.css';
+import uniImage from '../../assets/UniCollegePicture2.jpg'
+import uniImage2 from '../../assets/UniDevOps.jpg'
 
 class Universities extends Component {
     constructor(props) {
@@ -16,36 +18,48 @@ class Universities extends Component {
 render() {
         return (
             <React.Fragment>
-                <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                        <Col className="UniversitiesUrlCard">
-                            <h1>Certifications Within Higher Education</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' href="https://aws.nebulaacademy.com" target="blank" variant="secondary">AWS</Button>
+                <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
+                        <Col className="UniversitiesUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
+                            <h2 style={{ fontSize: '1.9rem' }}>Certifications in the Workplace</h2>
+                            <blockquote>"Companies are actively seeking job applicants with AWS Cloud Computing skills. 58% of employees request AWS skills by name in listings that require “cloud computing” skill. Nebula Academy offers AWS-authored courses that will help you become AWS Cloud literate and master the in-demand skills that hiring companies need most."</blockquote>
+                            <a className="linkLight" href="https://searchcloudcomputing.techtarget.com/feature/Are-you-on-the-right-cloud-computing-career-path">Source: Search Cloud Computing</a>
                         </Col>
                         <Col className="UniversitiesUrlCard">
-                            <h1>Certifications in the Workplace</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' href="https://aws.nebulaacademy.com" target="blank" variant="secondary">AWS</Button>
+                            <h2 style={{ fontSize: '1.9rem' }}>Certifications Within Higher Education</h2>
+                            <blockquote>"AWS Academy provides higher education institutions with a ready-to-teach cloud computing curriculum that prepares students to pursue industry-recognized certifications and in-demand cloud jobs. Our curriculum helps educators stay at the forefront of AWS Cloud innovation so that they can equip students with the skills they need to get hired in one of the fastest-growing industries."</blockquote>
+                            <a className="link" href="https://aws.amazon.com/training/awsacademy/">Source: AWS Academy</a>
                         </Col>
-                        <Col className="UniversitiesUrlCard">
-                            <h1>Bridge Higher Education and Industry</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' href="https://code.nebulaacademy.com" target="blank" variant="secondary">Bootcamp</Button>
+                        <Col className="UniversitiesUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
+                            <h2 style={{ fontSize: '1.9rem' }}>Bridge Higher Education and Industry</h2>
+                            <blockquote >"The biggest issue we face is industry telling us we're not doing enough to prepare our students for the workforce. Which is frustrating because our dilemma is that industry is not investing enough in us to be able to prepare our students"</blockquote>
+                            <>
+                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>Caron Hobin</p>
+                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>VP for strategic alliances</p>
+                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>Baypath University</p>
+                            </>
                         </Col>
                     </Row>
-                    <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                        <Col></Col>
-                        <Col className="UniversitiesUrlCard" style={{borderColor: '#ff9900'}}>
-                            <h1>Additional AWS Information</h1>
-                            <p>Please feel free to download our flyer, infographs, or our full AWS brochure</p>
+                    <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
+                        <Col className="UniversitiesUrlCard" style={{ backgroundImage: "url(" + uniImage + ")" }}></Col>
+                        <Col className="UniversitiesUrlCard" style={{ borderColor: '#ff9900' }}>
+                            <h2 style={{ fontSize: '1.9rem' }}>Additional AWS Information</h2>
+                            <p>Please feel free to download and share the following infomation with students, teachers, and administration.</p>
                             <Row className="contentCentered">
-                                <Button style={{margin: '10px'}} href={AWS_Brochure} target="blank" download variant="warning">Flyer</Button>
-                                <Button style={{margin: '10px'}} href={AWS_Flyer} target="blank" download variant="warning">Infograph1</Button>
-                                <Button style={{margin: '10px'}} href={AWS_Student_Infographic} target="blank" download variant="warning">Infograph2</Button>
-                                <Button style={{margin: '10px'}} href={AWS_University_Infographic} target="blank" download variant="warning">Full AWS Brochure</Button>
+                                <Col>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Brochure } target="blank" download variant="warning">AWS One-Page Flyer</Button>
+                                </Col>
+                                <Col>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Flyer } target="blank" download variant="warning">AWS Full Brochure</Button>
+                                </Col>
+                                <Col>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Student_Infographic } target="blank" download variant="warning">Student Infograph</Button>
+                                </Col>
+                                <Col>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_University_Infographic } target="blank" download variant="warning">University Infograph</Button>
+                                </Col>
                             </Row>
                         </Col>
-                        <Col></Col>
+                        <Col className="UniversitiesUrlCard" style={{  backgroundImage: "url(" + uniImage2 + ")" }}></Col>
                     </Row>
             </React.Fragment>
         )

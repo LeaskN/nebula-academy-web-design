@@ -7,4 +7,8 @@
     border: 3px solid #8E5EA5;
     min-width: 300px;
     min-height: 200px;
+    padding: 8px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

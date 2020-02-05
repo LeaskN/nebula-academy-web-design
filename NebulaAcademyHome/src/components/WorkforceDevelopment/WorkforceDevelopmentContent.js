@@ -18,7 +18,7 @@ class WorkforceDevelopment extends Component {
         this.state = {
             backgroundColor: 'transparent',
             clicked: 'sciencebehindlearning',
-            shape: 'square',
+            shape: 'circle',
             softwareEngineeringCarouselItems: [{
                 image: SESlide1,
                 al: 'First slide',
@@ -62,17 +62,17 @@ class WorkforceDevelopment extends Component {
                 body: 'This is the fifth slide body',
             }],
             elements : [
-                { color: '#8E5EA5', header:"Try Coding", content: "Try before you buy! Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Give it a free 6 hour try with us! Participants will have the opportunity to try coding for free. We will build a simple and fun application to give our participants a coding experience. Any participants that decide on the day to sign up for our 6 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount." },
-                { color: '#993955', header:"Scholarships", content: `Scholarships are provided by We Connect The Dots, Inc., through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact scholarships@wctd.org or call 631-468-7475 to speak with the WCTD program manager. The "Pathways to Success" program is currently offering 9 full scholarships to candidates who meet any of the populations outlined on this page. Applications are now being accepted for review for the March program.` }, 
+                { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6 hour in person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
+                { color: '#993955', header:"Scholarships", content: `As a social enterprise our mission is to inspire future innovators through building awareness and skills related to technology and computer science.  Our methodology, Computer Science Growth System, combined with our scholarship programs builds capacity from K-Career.` }, 
                 { color: '#138DFE', header:"Workforce Experience", content: "This is the Workforce Experience content" },
-                { color: '#8FBFE0', header:"Guest Speakers", content: "This is the Guest Speakers content" },
-                { color: '#9395D3', header:"Outcomes", content: "This is the Outcomes content" },
+                { color: '#8FBFE0', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
+                { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise metrics are key to our long-term sustainability. Measuring what matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
             ],
-            'trycoding': { color: '#8E5EA5', header:"Try Coding", content: "Try before you buy!Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Give it a free 6 hour try with us! Participants will have the opportunity to try coding for free. We will build a simple and fun application to give our participants a coding experience. Any participants that decide on the day to sign up for our 6 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount." },
-            'scholarships': { color: '#993955', header:"Scholarships", content: `Scholarships are provided by We Connect The Dots, Inc., through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact scholarships@wctd.org or call 631-468-7475 to speak with the WCTD program manager. The "Pathways to Success" program is currently offering 9 full scholarships to candidates who meet any of the populations outlined on this page. Applications are now being accepted for review for the March program.` }, 
+            'trycoding': { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6 hour in person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
+            'scholarships': { color: '#993955', header:"Scholarships", content: `As a social enterprise our mission is to inspire future innovators through building awareness and skills related to technology and computer science.  Our methodology, Computer Science Growth System, combined with our scholarship programs builds capacity from K-Career.` }, 
             'workforceexperience': { color: '#138DFE', header:"Workforce Experience", content: "This is the Workforce Experience content" },
-            'guestspeakers': { color: '#8FBFE0', header:"Guest Speakers", content: "This is the Guest Speakers content" },
-            'outcomes': { color: '#9395D3', header:"Outcomes", content: "This is the Outcomes content" },
+            'guestspeakers': { color: '#8FBFE0', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
+            'measuringsuccess': { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise metrics are key to our long-term sustainability. Measuring what matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
         };
     }
     createAWSSlides = () => {
