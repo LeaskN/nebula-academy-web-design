@@ -31,7 +31,6 @@
 }
 @media (max-width: 570px){
     .WorkforceDevelopmentUrlCard{
-        font-size: .60em;
         line-height: .6em;
         min-width: 100vw !important;
         border: none;
@@ -44,5 +43,10 @@
 @media (max-width: 660px){
     .carousel-item > img {
         width: auto !important;
+    }
+}
+@media (max-width: 570px){
+    .WorkforceDevelopmentUrlCard{
+        font-size: .60em;
     }
 }

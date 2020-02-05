@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, Carousel } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
-import AWSSlide1 from '../../assets/1_AWS_home.jpg';
-import AWSSlide2 from '../../assets/1_AWS_home.jpg';
-import AWSSlide3 from '../../assets/1_AWS_home.jpg';
-import AWSSlide4 from '../../assets/1_AWS_home.jpg';
-import AWSSlide5 from '../../assets/1_AWS_home.jpg';
-import SESlide1 from '../../assets/1_AWS_home.jpg'
-import SESlide2 from '../../assets/1_AWS_home.jpg'
-import SESlide3 from '../../assets/1_AWS_home.jpg'
+import AWSSlide1 from '../../assets/awsstats1.jpg';
+import AWSSlide2 from '../../assets/awsslide2.jpg';
+import AWSSlide3 from '../../assets/awsquote.jpg';
+import AWSSlide4 from '../../assets/AdobeStock_312848234.jpg';
+import SESlide1 from '../../assets/NebulaGrowingField.jpg'
+import SESlide2 from '../../assets/nebulaSECourseDescription2.jpg'
+import SESlide3 from '../../assets/nebulasecoursedescription.jpg'
 
 import './WorkforceDevelopmentContent.css';
 
@@ -55,22 +54,17 @@ class WorkforceDevelopment extends Component {
                 al: 'Fourth slide',
                 header: 'Course Description',
                 body: 'Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.',
-            },{
-                image: AWSSlide5,
-                al: 'Fifth slide',
-                header: 'This is the fifth AWS slide header',
-                body: 'This is the fifth slide body',
             }],
             elements : [
                 { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6 hour in person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
                 { color: '#993955', header:"Scholarships", content: `As a social enterprise our mission is to inspire future innovators through building awareness and skills related to technology and computer science.  Our methodology, Computer Science Growth System, combined with our scholarship programs builds capacity from K-Career.` }, 
-                { color: '#138DFE', header:"Workforce Experience", content: "This is the Workforce Experience content" },
+                { color: '#138DFE', header:"Workforce Experience", content: <><p>The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.</p><p>The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce.</p></> },
                 { color: '#8FBFE0', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
                 { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise metrics are key to our long-term sustainability. Measuring what matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
             ],
             'trycoding': { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6 hour in person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
             'scholarships': { color: '#993955', header:"Scholarships", content: `As a social enterprise our mission is to inspire future innovators through building awareness and skills related to technology and computer science.  Our methodology, Computer Science Growth System, combined with our scholarship programs builds capacity from K-Career.` }, 
-            'workforceexperience': { color: '#138DFE', header:"Workforce Experience", content: "This is the Workforce Experience content" },
+            'workforceexperience': { color: '#138DFE', header:"Workforce Experience", content: <><p>The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.</p><p>The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce.</p></> },
             'guestspeakers': { color: '#8FBFE0', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
             'measuringsuccess': { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise metrics are key to our long-term sustainability. Measuring what matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
         };
@@ -90,7 +84,7 @@ class WorkforceDevelopment extends Component {
                     <Carousel.Caption>
                         <h3>{element.header}</h3>
                         <br/>
-                        <p className="carouselParagraph">{element.body}</p>
+                        <div className="carouselParagraph">{element.body}</div>
                     </Carousel.Caption>
                 </Carousel.Item>
             ))
@@ -104,7 +98,7 @@ class WorkforceDevelopment extends Component {
                         <Carousel.Caption>
                             <h3>{element.header}</h3>
                             <br/>
-                            <p className="carouselParagraph">{element.body}</p>
+                            <div className="carouselParagraph">{element.body}</div>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))
@@ -116,7 +110,7 @@ render() {
                 <Row style={{marginLeft: '3vw', marginRight: '3vw'}}>
                     <Col className="WorkforceDevelopmentUrlCard" style={{ borderColor: '#ff9900'}}>
                             <h1>AWS</h1>
-                            <Carousel>
+                            <Carousel interval="10000">
                                 {this.createAWSSlides()}
                             </Carousel>
                             <div id="spacer"></div>
@@ -124,7 +118,7 @@ render() {
                     </Col>
                     <Col className="WorkforceDevelopmentUrlCard">
                             <h1>Software Engineering</h1>
-                            <Carousel>
+                            <Carousel interval="10000">
                                 {this.createSoftwareEngineeringSlides()}
                             </Carousel>
                             <div id="spacer"></div>
