@@ -21,40 +21,40 @@ class WorkforceDevelopment extends Component {
             shape: 'circle',
             softwareEngineeringCarouselItems: [{
                 image: SESlide1,
-                al: 'First slide',
-                header: 'This is the first SE slide header',
-                body: 'This is the first slide body',
+                al: 'The field is exponentially growing.',
+                header: 'The field is exponentially growing.',
+                body: 'According to the U.S. Bureau of Labor Statistics, software engineer jobs are projected to increase by 21% from 2018 to 2028.',
             },{
                 image: SESlide2,
-                al: 'Second slide',
-                header: 'This is the second SE slide header',
-                body: 'This is the second slide body',
+                al: 'ReactJS is the future',
+                header: 'ReactJS is the future of Web Dev',
+                body: <div><p>Today, ReactJS has become highly popular because of its extra simplicity and flexibility. It is estimated that more than 1,300 developers and over 94,000 sites utilize ReactJS. React JS is leading in Top 10K Sites, Top 100K Sites, Top 1M Sites, and The Entire Web.</p><p>Sources: <a className="linkLight" target="empty" href="https://www.tecla.io/blog/2019-stats-on-top-js-frameworks-react-angular-and-vue/#section-content">Tecla.io</a> & <a className="linkLight" target="empty" href="https://medium.com/@thinkwik/why-reactjs-is-gaining-so-much-popularity-these-days-c3aa686ec0b3">Medium.com</a></p></div>,
             },{
                 image: SESlide3,
-                al: 'Third slide',
-                header: 'This is the third SE slide header',
-                body: 'This is the third slide body',
+                al: 'Course Description',
+                header: 'Course Description',
+                body: <p>Taught by industry professionals, participants will spend 5 days a week and 8 hours a day learning, coding, and studying to become a full-stack developer with either an AWS or Microsoft certification. Upon completion, participants will have the ability to launch a career in software development. We focus on holistic training including soft skills and personal development. Participants will get hands-on experience working with today’s web development tools.</p>,
             }],
             AWSCarouselItems: [{
                 image: AWSSlide1,
                 al: 'First slide',
-                header: 'This is the first AWS slide header',
-                body: 'This is the first slide body',
+                header: 'AWS Certifications Pay Well',
+                body: <div><p>'The average salary of an AWS-certified IT professional is $129,868 — ranking as one of the highest-paying certification categories in North America.'</p><p>Source: <a className="linkLight" target="empty" href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/">Global Knowledge</a></p></div>,
             },{
                 image: AWSSlide2,
                 al: 'Second slide',
-                header: 'This is the second AWS slide header',
-                body: 'This is the second slide body',
+                header: 'AWS ranks highly as one of the best certifications to hold.',
+                body: <div><p>Forbes Magazine has ranked AWS Certification as one of the Top 15 Most Valuable IT Certifications. Each of the five Amazon Web Services (AWS) certifications brings in an average salary of more than $100,000.</p><p>Source: <a className="linkLight" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978">Forbes Magazine</a></p></div>,
             },{
                 image: AWSSlide3,
                 al: 'Third slide',
-                header: 'This is the third AWS slide header',
-                body: 'This is the third slide body',
+                header: 'AWS Certifications Are Great for All Levels of Employment',
+                body: <><blockquote style={{borderLeft: 'none', paddingLeft: ''}}>“My advice to people leaving college is always the same: Get AWS-Certified.” <br/><br/><b><p>David Linthicum, Infoworld</p></b></blockquote></>,
             },{
                 image: AWSSlide4,
                 al: 'Fourth slide',
-                header: 'This is the fourth AWS slide header',
-                body: 'This is the fourth slide body',
+                header: 'Course Description',
+                body: 'Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.',
             },{
                 image: AWSSlide5,
                 al: 'Fifth slide',
@@ -89,7 +89,8 @@ class WorkforceDevelopment extends Component {
                     <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
                     <Carousel.Caption>
                         <h3>{element.header}</h3>
-                        <p>{element.body}</p>
+                        <br/>
+                        <p className="carouselParagraph">{element.body}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             ))
@@ -102,7 +103,8 @@ class WorkforceDevelopment extends Component {
                         <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
                         <Carousel.Caption>
                             <h3>{element.header}</h3>
-                            <p>{element.body}</p>
+                            <br/>
+                            <p className="carouselParagraph">{element.body}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))
@@ -111,24 +113,24 @@ class WorkforceDevelopment extends Component {
 render() {
         return (
             <React.Fragment>
-                <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
-                        <Col className="WorkforceDevelopmentUrlCard" style={{borderColor: '#ff9900',  minWidth: '340px'}}>
+                <Row style={{marginLeft: '3vw', marginRight: '3vw'}}>
+                    <Col className="WorkforceDevelopmentUrlCard" style={{ borderColor: '#ff9900'}}>
                             <h1>AWS</h1>
                             <Carousel>
                                 {this.createAWSSlides()}
                             </Carousel>
                             <div id="spacer"></div>
                             <Button className='bottom' href="https://aws.nebulaacademy.com" target="blank" variant="warning">AWS</Button>
-                        </Col>
-                        <Col className="WorkforceDevelopmentUrlCard" style={{ minWidth: '340px'}}>
+                    </Col>
+                    <Col className="WorkforceDevelopmentUrlCard">
                             <h1>Software Engineering</h1>
                             <Carousel>
                                 {this.createSoftwareEngineeringSlides()}
                             </Carousel>
                             <div id="spacer"></div>
                             <Button className='bottom' href="https://code.nebulaacademy.com" target="blank" variant="secondary">Bootcamp</Button>
-                        </Col>
-                    </Row>
+                    </Col>
+                </Row>
                     <ShapeAndContent state={this.state}/>
             </React.Fragment>
         )

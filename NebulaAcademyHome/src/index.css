@@ -32,6 +32,38 @@ code {
 .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
   padding: 0px !important;
 }
+.carousel-indicators{
+  margin-bottom: 0px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  width: 30px;
+}
+.carousel-caption{
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+}
+.carouselParagraph{
+  line-height: 30px;
+}
+@media (max-width: 610px){
+  .row{
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .WorkforceDevelopmentUrlCard{
+    margin: 0 !important;
+    width: 100vw;
+  }
+}
 .jumbotron {
   text-align: center;
 }
