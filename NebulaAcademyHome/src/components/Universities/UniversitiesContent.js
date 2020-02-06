@@ -19,7 +19,7 @@ render() {
         return (
             <React.Fragment>
                 <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
-                        <Col className="UniversitiesUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
+                        <Col className="UniversitiesUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
                             <h2 style={{ fontSize: '1.9rem' }}>Certifications in the Workplace</h2>
                             <blockquote>"Companies are actively seeking job applicants with AWS Cloud Computing skills. 58% of employees request AWS skills by name in listings that require “cloud computing” skill. Nebula Academy offers AWS-authored courses that will help you become AWS Cloud literate and master the in-demand skills that hiring companies need most."</blockquote>
                             <a className="linkLight" href="https://searchcloudcomputing.techtarget.com/feature/Are-you-on-the-right-cloud-computing-career-path">Source: Search Cloud Computing</a>

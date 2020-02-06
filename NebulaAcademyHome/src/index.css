@@ -260,6 +260,8 @@ blockquote{
   font-family: 'Montserrat';
   margin: 5px;
   font-style: italic;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 .jumbotron {
   border-radius: 0px;
