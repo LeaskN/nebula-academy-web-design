@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Carousel, Col, Button } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
-import slide1 from '../../assets/1_AWS_home.jpg'
-import slide2 from '../../assets/1_AWS_home.jpg'
-import slide3 from '../../assets/1_AWS_home.jpg'
+import slide1 from '../../assets/NebulaDronepicsChapinSchool_25.jpg'
+import slide2 from '../../assets/nebulahomeimage.jpg'
+import slide3 from '../../assets/nebulahomeimage3.jpg'
 
 import './HomeContent.css';
 
@@ -18,32 +18,29 @@ class HomeContent extends Component {
                 {
                     image: slide1,
                     al: 'First slide',
-                    header: 'This is the first SE slide header',
-                    body: 'This is the first slide body',
+                    body: <h3>We pride ourselves on the technology platforms we choose to teach and utilize within our organization. In order to model and teach how technology increases potential and productivity, we must understand it in real-world applications.</h3>,
                 },{
                     image: slide2,
                     al: 'Second slide',
-                    header: 'This is the second SE slide header',
-                    body: 'This is the second slide body',
+                    body: <h3>We work hand-in-hand with our industry and university partners to create programs that help adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h3>,
                 },{
                     image: slide3,
                     al: 'Third slide',
-                    header: 'This is the third SE slide header',
-                    body: 'This is the third slide body',
+                    body: <h3>Our instructors are certified industry professionals and have the necessary technological skills to run our programs. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h3>,
                 }
             ],
             elements: [ 
-                { color: '#8E5EA5', header:"STEAM for Kids", content: "This is the steamForKids content" },
-                { color: '#993955', header:"Educators", content: "This is the educators content" }, 
-                { color: '#138DFE', header:"Workforce Development", content: "This is the workforceDevelopment content" },
-                { color: '#8FBFE0', header:"Universities", content: "This is the universities content" },
-                { color: '#9395D3', header:"Philanthropy", content: "This is the philanthropy content" },
+                { color: '#8E5EA5', header:"STEAM for Kids", content: "Through a collaboration with the community, education, government and the technology industry, we provide awareness and education of the 21st Century workforce skills, as well as the opportunities available to students embracing STEAM careers at a local, national and global level." },
+                { color: '#993955', header:"Educators", content: "We are educators and technologists working together to better education through Computer Science and STEAM integration in and out of the classroom in partnership with industry. We transform education by empowering educators." }, 
+                { color: '#138DFE', header:"Workforce Development", content: "We reignite the passion for learning in today’s continually disruptive workforce development industries. We achieve these objectives by leveraging tools and resources that support today’s modern learner, where technology is used as a tool for supporting more productive and engaging STEAM learning experiences.​" },
+                { color: '#8FBFE0', header:"Universities", content: "Nebula Academy bridges the gap between academia and industry. We work with colleges and universities to ensure their curriculum is up to date with industry standards and students are prepared with the skillset they need to enter the modern workforce. " },
+                { color: '#9395D3', header:"Philanthropy", content: "Nebula Academy is a social enterprise institution. Through our not-for-profit entity, We Connect The Dots, we aspire to help our community and world by giving back. Learn more on the types of programs we have and how you can give back! " },
             ],
-            'steamforkids': { color: '#8E5EA5', header:"STEAM for Kids", content: "This is the steamForKids content" },
-            'educators': { color: '#993955', header:"Educators", content: "This is the educators content" }, 
-            'workforcedevelopment': { color: '#138DFE', header:"Workforce Development", content: "This is the workforceDevelopment content" },
-            'universities': { color: '#8FBFE0', header:"Universities", content: "This is the universities content" },
-            'philanthropy': { color: '#9395D3', header:"Philanthropy", content: "This is the philanthropy content" },
+            'steamforkids': { color: '#8E5EA5', header:"STEAM for Kids", content: "Through a collaboration with the community, education, government and the technology industry, we provide awareness and education of the 21st Century workforce skills, as well as the opportunities available to students embracing STEAM careers at a local, national and global level." },
+            'educators': { color: '#993955', header:"Educators", content: "We are educators and technologists working together to better education through Computer Science and STEAM integration in and out of the classroom in partnership with industry. We transform education by empowering educators." }, 
+            'workforcedevelopment': { color: '#138DFE', header:"Workforce Development", content: "We reignite the passion for learning in today’s continually disruptive workforce development industries. We achieve these objectives by leveraging tools and resources that support today’s modern learner, where technology is used as a tool for supporting more productive and engaging STEAM learning experiences.​" },
+            'universities': { color: '#8FBFE0', header:"Universities", content: "Nebula Academy bridges the gap between academia and industry. We work with colleges and universities to ensure their curriculum is up to date with industry standards and students are prepared with the skillset they need to enter the modern workforce. " },
+            'philanthropy': { color: '#9395D3', header:"Philanthropy", content: "Nebula Academy is a social enterprise institution. Through our not-for-profit entity, We Connect The Dots, we aspire to help our community and world by giving back. Learn more on the types of programs we have and how you can give back! " },
         };
     }
     createSlides = () => {
@@ -62,7 +59,7 @@ class HomeContent extends Component {
 render() {
         return (
             <React.Fragment>
-                <Carousel >
+                <Carousel interval='10000'>
                     {this.createSlides()}
                 </Carousel>
                         <ShapeAndContent state={this.state} />
