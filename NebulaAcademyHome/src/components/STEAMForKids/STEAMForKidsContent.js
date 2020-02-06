@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Carousel, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
 import slide1 from '../../assets/1_AWS_home.jpg'
 import slide2 from '../../assets/1_AWS_home.jpg'

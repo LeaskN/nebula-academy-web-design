@@ -39,11 +39,12 @@ width: 100%;
 height: auto;
 }
 .staffMember{
-background-color: rgb(228, 228, 228);
-border-radius: 10px;
-border: 5px solid white;
-padding: 10px !important;
-filter: grayscale(100%);
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 10px !important;
+  filter: grayscale(100%);
+  transition: .5s;
 }
 .staffMember:hover{
 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */

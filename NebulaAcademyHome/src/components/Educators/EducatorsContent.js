@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
 import slide1 from '../../assets/Image1.jpg'
 import slide2 from '../../assets/Image2.jpg'
@@ -46,25 +46,22 @@ class Educators extends Component {
             'technologyintegration': { color: '#9395D3', header:"Technology Integration", content: "Physical computing has taken a foothold in education as a result of its ability to create the necessary stickiness for students to learn. We provide educators with the necessary resources and workshops for them to integrate physical computing into the classroom. To see how we integrate technology in the classroom, visit https://csteach.nebulaacademy.com. " },
         };
     }
-    createSlides = () => {
-        return (
+    createSlideCard = () => {
+        return(
             this.state.slides.map(slide => (
-                <Carousel.Item>
-                    <img className="d-block w-100" alt={slide.image} src={slide.image} al={slide.al}/>
-                    <Carousel.Caption>
-                        <h3>{slide.header}</h3>
-                        <p>{slide.body}</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
+                    <h3>{slide.header}</h3>
+                    <p>{slide.body}</p>
+                </Col>
             ))
         )
     }
 render() {
         return (
             <React.Fragment>
-                    <Carousel >
-                        {this.createSlides()}
-                    </Carousel>
+                <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
+                    { this.createSlideCard() }
+                </Row>
                     <ShapeAndContent state={this.state}/>
             </React.Fragment>
             )
