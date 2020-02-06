@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Carousel, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
-import slide1 from '../../assets/NebulaDronepicsChapinSchool_25.jpg'
 import slide2 from '../../assets/nebulahomeimage.jpg'
-import slide3 from '../../assets/nebulahomeimage3.jpg'
 
 import './HomeContent.css';
 
@@ -16,17 +14,14 @@ class HomeContent extends Component {
             shape: 'circle',
             slides: [
                 {
-                    image: slide1,
-                    al: 'First slide',
-                    body: <h3>We pride ourselves on the technology platforms we choose to teach and utilize within our organization. In order to model and teach how technology increases potential and productivity, we must understand it in real-world applications.</h3>,
+                    header: 'Modern Technology',
+                    body: <h5>We pride ourselves on the technology platforms we choose to teach and utilize within our organization. In order to model and teach how technology increases potential and productivity, we must understand it in real-world applications.</h5>,
                 },{
-                    image: slide2,
-                    al: 'Second slide',
-                    body: <h3>We work hand-in-hand with our industry and university partners to create programs that help adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h3>,
+                    header: 'Industry Shaped Curriculum',
+                    body: <h5>We work hand-in-hand with our industry and university partners to create programs that help adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h5>,
                 },{
-                    image: slide3,
-                    al: 'Third slide',
-                    body: <h3>Our instructors are certified industry professionals and have the necessary technological skills to run our programs. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h3>,
+                    header: 'Certified Instruction',
+                    body: <h5>Our instructors are certified industry professionals and have the necessary technological skills to run our programs. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h5>,
                 }
             ],
             elements: [ 
@@ -43,25 +38,22 @@ class HomeContent extends Component {
             'philanthropy': { color: '#9395D3', header:"Philanthropy", content: "Nebula Academy is a social enterprise institution. Through our not-for-profit entity, We Connect The Dots, we aspire to help our community and world by giving back. Learn more on the types of programs we have and how you can give back! " },
         };
     }
-    createSlides = () => {
-        return (
+    createSlideCard = () => {
+        return(
             this.state.slides.map(slide => (
-                <Carousel.Item>
-                    <img className="d-block w-100" alt={slide.image} src={slide.image} al={slide.al}/>
-                    <Carousel.Caption>
-                        <h3>{slide.header}</h3>
-                        <p>{slide.body}</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
+                    <h1>{slide.header}</h1>
+                    <p>{slide.body}</p>
+                </Col>
             ))
         )
     }
 render() {
         return (
             <React.Fragment>
-                <Carousel interval='10000'>
-                    {this.createSlides()}
-                </Carousel>
+                <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
+                    { this.createSlideCard() }
+                </Row>
                         <ShapeAndContent state={this.state} />
                     <Row style={{marginLeft: '10vw', marginRight: '10vw'}}>
                         <Col className="HomeUrlCard">

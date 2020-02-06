@@ -64,7 +64,7 @@ render() {
         return (
             <React.Fragment>
                 <br/>
-                <Row style={{marginLeft: '10vw', marginRight: '10vw', border:'1.5px solid #00C9CB'}}>
+                <Row style={{marginLeft: '10vw', marginRight: '10vw', }}>
                     { this.createProgramCard() }
                 </Row>
                 <br/>

@@ -46,11 +46,12 @@ class ShapeAndContent extends Component {
         e.target.style.color = 'white';
     }
     mouseAway = (e) => {
+        let nextBorderColor = e.target.style.backgroundColor;
         if(this.state.active.header === e.target.innerHTML){
             e.target.style.border = `3px solid ${this.state.active.color}`;
         } else {
             e.target.style.backgroundColor = 'transparent'
-            e.target.style.border = `3px solid #8D60A4`;
+            e.target.style.border = `3px solid ${nextBorderColor}`;
             e.target.style.color = 'black';
         }
         e.target.style.boxShadow = `0px 0px 10px 3px transparent`;
@@ -63,7 +64,7 @@ class ShapeAndContent extends Component {
     createShape = () => {
         return (
             this.props.state.elements.map(element => (
-                <div className={`${this.props.state.shape}`} key={element.header} style={{color:`${ this.state.active.header === `${element.header}` ? 'white' : 'black'}`, backgroundColor:`${ this.state.active.header === `${element.header}` ? `${element.color}` : 'transparent'}`}} onMouseEnter={ e => this.mouseOver(e)} onMouseLeave={ e => this.mouseAway(e)} onClick={e => this.handleClick(e)}>{element.header}</div>
+                <div className={`${this.props.state.shape}`} key={element.header} style={{border: `3px solid ${element.color}`, color:`${ this.state.active.header === `${element.header}` ? 'white' : 'black'}`, backgroundColor:`${ this.state.active.header === `${element.header}` ? `${element.color}` : 'transparent'}`}} onMouseEnter={ e => this.mouseOver(e)} onMouseLeave={ e => this.mouseAway(e)} onClick={e => this.handleClick(e)}>{element.header}</div>
             ))
         )
     }
@@ -85,7 +86,7 @@ render() {
                         {this.createLine()}
                     </Row>
                 </div>
-                    <Row style={{border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
+                    <Row style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
                         <Col>
                             <h1>{this.state.active.header}</h1>
                             <p>{this.state.active.content}</p>

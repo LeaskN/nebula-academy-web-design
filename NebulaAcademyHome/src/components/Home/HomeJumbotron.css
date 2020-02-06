@@ -1,37 +1,15 @@
 .homeJumbo{
-    background-image: url('../../assets/NebulaAcademyBootCampImg2Cover.jpg');
+    background-image: url('../../assets/NebulaDronepicsChapinSchool_25.jpg');
     background-size: cover;
-    color: #ccc;
+    color: white;
     z-index: 1;
     height: fit-content;
     position: relative;
     margin: 0px;
     padding: 30px;
     font-size: x-large;
+    text-shadow: 1px 1px 1px #8E5EA5; 
 }
-@media (max-width: 769px){
-    .jumboText{
-        font-size: 45px;
-        padding: 0px;
-    }
-    .row2Tile{
-        padding-left : 0px !important;
-        padding-right: 0px !important;
-    }
-}
-@media (max-width: 1199px){
-    .row2Tile{
-        padding-right: 0px !important;
-    }
-}
-.homeOverlay{
-    background-color: #000;
-    opacity: .6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+/* 
+import slide1 from 
+import slide3 from '../../assets/nebulahomeimage3.jpg' */

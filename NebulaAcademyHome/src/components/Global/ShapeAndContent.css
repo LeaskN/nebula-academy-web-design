@@ -4,7 +4,7 @@
 .circle {
     width: 170px;
     height: 170px;
-    margin: 10px;
+    margin: 20px 10px 0px 10px;
     border-radius: 1000px;
     border: 3px solid #8E5EA5;
     font-size: 1.3em;
@@ -41,14 +41,16 @@
     width: 4px;
     padding: none;
     background-color: #8E5EA5;
-    height: 60px;
+    height: 30px;
 }
 .dynamicContentInfo{
     width: 90vw;
     text-align: center;
     height: 100%;
-    color: black;
-    background-color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px black; 
+    color: white;
     margin: auto;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);

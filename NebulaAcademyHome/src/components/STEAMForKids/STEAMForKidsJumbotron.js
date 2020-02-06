@@ -4,10 +4,10 @@ import './STEAMForKidsJumbotron.css'
 
 export const STEAMForKidsJumbotron = () => (
   <React.Fragment>
-    <Jumbotron className="noMargin">
+    <Jumbotron className="STEAMForKidsJumbo noMargin">
       <Container>
-      <h1 className="contentCentered">STEAM For Kids</h1>
-      <p>STEAM For Kids is an after school program which enables kids of all ages to learn how to mix all aspects of STEAM with computer science!</p>
+      <h1 className="STEAMForKidsJumboHeader contentCentered">STEAM For Kids</h1>
+      <p className="STEAMForKidsJumboSmallerHeader">STEAM For Kids is an after school program which enables kids of all ages to learn how to mix all aspects of STEAM with computer science!</p>
       </Container>
     </Jumbotron>
   </React.Fragment>
