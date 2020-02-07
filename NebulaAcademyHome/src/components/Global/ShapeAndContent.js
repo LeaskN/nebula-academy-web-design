@@ -23,9 +23,10 @@ class ShapeAndContent extends Component {
         e.preventDefault()
         let targetTitle = e.target.innerHTML.split(' ').join('').toLowerCase();
         for(let i = 0; i < e.target.parentElement.children.length; i++){
+            console.log(this.props.state.elements[i].color)
             e.target.parentElement.children[i].style.backgroundColor = 'transparent';
             e.target.parentElement.children[i].style.backgroundColor = 'transparent'
-            e.target.parentElement.children[i].style.border = '3px solid #8E5EA5';
+            e.target.parentElement.children[i].style.border = `3px solid #${this.props.state.elements[i].color}`;
             e.target.parentElement.children[i].style.color = 'black';
             e.target.style.boxShadow = `0px 0px 10px 3px transparent`;
         }

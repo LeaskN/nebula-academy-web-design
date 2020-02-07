@@ -8,7 +8,7 @@ export const PhilanthropyJumbotron = () => (
       <Container>
       <h1 className="contentCentered">Philanthropy</h1>
       <p>Nebula Academy is a social enterprise institution. We aspire to help our community and world by giving back. The majority of our support heads to We Connect the Dots (<a href="https://wctd.org" className="link">WCTD.org</a>) read on or click below to read more.</p>
-      <Button variant='info' href="https://aws.nebulaacademy.com" target="blank">We Connect the Dots</Button>
+      <Button variant='info' href="https://wctd.org" target="blank">We Connect the Dots</Button>
       </Container>
     </Jumbotron>
   </React.Fragment>

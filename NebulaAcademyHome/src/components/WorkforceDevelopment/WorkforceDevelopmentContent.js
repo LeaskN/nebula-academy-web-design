@@ -26,13 +26,13 @@ class WorkforceDevelopment extends Component {
             },{
                 image: SESlide2,
                 al: 'ReactJS is the future',
-                header: 'ReactJS is the future of Web Dev',
+                header: 'ReactJS is the future of Web Dev', 
                 body: <div><p>Today, ReactJS has become highly popular because of its extra simplicity and flexibility. It is estimated that more than 1,300 developers and over 94,000 sites utilize ReactJS. React JS is leading in Top 10K Sites, Top 100K Sites, Top 1M Sites, and The Entire Web.</p><p>Sources: <a className="linkLight" target="empty" href="https://www.tecla.io/blog/2019-stats-on-top-js-frameworks-react-angular-and-vue/#section-content">Tecla.io</a> & <a className="linkLight" target="empty" href="https://medium.com/@thinkwik/why-reactjs-is-gaining-so-much-popularity-these-days-c3aa686ec0b3">Medium.com</a></p></div>,
             },{
                 image: SESlide3,
                 al: 'Course Description',
                 header: 'Course Description',
-                body: <p>Taught by industry professionals, participants will spend 5 days a week and 8 hours a day learning, coding, and studying to become a full-stack developer with either an AWS or Microsoft certification. Upon completion, participants will have the ability to launch a career in software development. We focus on holistic training including soft skills and personal development. Participants will get hands-on experience working with today’s web development tools.</p>,
+                body: <p>Taught by industry professionals, participants will spend 5 days a week and 8 hours a day learning, coding, and studying to become a full-stack developer with an AWS or Microsoft certification. Upon completion, participants will have the ability to launch a career in software development. We focus on holistic training including soft skills and personal development. Participants will get hands-on experience working with today’s modern web development tools.</p>,
             }],
             AWSCarouselItems: [{
                 image: AWSSlide1,
