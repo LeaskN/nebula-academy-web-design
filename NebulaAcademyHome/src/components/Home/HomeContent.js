@@ -51,42 +51,14 @@ class HomeContent extends Component {
         )
     }
 render() {
-        return (
-            <React.Fragment>
-                <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
-                    { this.createSlideCard() }
-                </Row>
-                        <ShapeAndContent state={this.state} />
-                    <Row style={{ backgroundImage: `url('${slide1}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
-                        <Col className="HomeUrlCard">
-                            <h1>STEAM for Kids</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="HomeUrlCard">
-                            <h1>Educators</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="HomeUrlCard">
-                            <h1>Workforce Development</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="HomeUrlCard">
-                            <h1>Universitites</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                        <Col className="HomeUrlCard">
-                            <h1>Philanthropy</h1>
-                            <div id="spacer"></div>
-                            <Button className='bottom' variant="secondary"> Test Button</Button>
-                        </Col>
-                    </Row>
-            </React.Fragment>
-            )
-
+    return (
+        <React.Fragment>
+            <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
+                { this.createSlideCard() }
+            </Row>
+                    <ShapeAndContent state={this.state} />
+        </React.Fragment>
+        )
     }
 };
 

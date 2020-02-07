@@ -8,7 +8,7 @@ export const EducatorsJumbotron = () => (
       <Container>
         <h1 className="contentCentered">Transforming Education by Empowering Educators</h1>
         <p>We provide schools and teachers with the skills to engage with the modern classroom of dynamic learning styles by leveraging technology as a tool in project-based experiential learning.</p>
-        <Button variant="secondary">CSTeach.nebulaacademy.com</Button>
+        <Button href="csteach.nebulaacademy.com" variant="secondary" target="empty" disabled>Educator Certifications</Button>
       </Container>
     </Jumbotron>
   </React.Fragment>

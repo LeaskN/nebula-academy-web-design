@@ -14,22 +14,18 @@ class Educators extends Component {
             backgroundColor: 'transparent',
             clicked: 'sciencebehindlearning',
             shape: 'circle',
-            slides: [
-                {
-                    image: slide1,
-                    al: 'First slide',
-                    header: '“It helped me as a facilitator to have a new perspective on teaching, learning and the neuroscience behind education. Having a new understanding of how students operate help to better relate to their behaviors.”',
-                    body: '',
-                },{
+            slides: [{
                     image: slide2,
                     al: 'Second slide',
                     header: '“I gained valuable skills and knowledge to bring technology into my classroom.”',
-                    body: '',
+                },{
+                    image: slide1,
+                    al: 'First slide',
+                    header: '“It helped me as a facilitator to have a new perspective on teaching, learning and the neuroscience behind education. Having a new understanding of how students operate help to better relate to their behaviors.”',
                 },{
                     image: slide3,
                     al: 'Third slide',
                     header: '“The light bulb went off and I was able to put what I was learning into perspective as a mom and teacher.”',
-                    body: '',
                 }
             ],
             elements : [
@@ -49,8 +45,8 @@ class Educators extends Component {
     createSlideCard = () => {
         return(
             this.state.slides.map(slide => (
-                <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
-                    <h3>{slide.header}</h3>
+                <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard cardHeaderContainer">
+                    <blockquote style={{fontSize: '1.3em'}}>{slide.header}</blockquote>
                     <p>{slide.body}</p>
                 </Col>
             ))
