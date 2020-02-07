@@ -118,7 +118,7 @@ class StaffContent extends Component {
                                     <br/>
                                     <h2 className="centralText">{ person.name }</h2>
                                     <h4 className="centralText">{ person.position }</h4>
-                                    <a className="link centralText" href={ person.url } target="empty">{ person.linkText }</a>
+                                    <a className="linkLight centralText" style={{color:'darkgrey'}}href={ person.url } target="empty">{ person.linkText }</a>
                                     <div id="spacer" ></div>                                
                                     <ButtonToolbar className="bottom contentCentered">
                                         <StaffAbout state={ person } name={ person.name.split(' ').length === 3? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0] }/>
