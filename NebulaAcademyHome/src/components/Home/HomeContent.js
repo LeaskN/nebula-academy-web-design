@@ -56,7 +56,7 @@ render() {
             <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                 { this.createSlideCard() }
             </Row>
-                    <ShapeAndContent state={this.state} />
+                <ShapeAndContent state={this.state} />
         </React.Fragment>
         )
     }

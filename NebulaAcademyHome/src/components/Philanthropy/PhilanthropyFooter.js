@@ -5,13 +5,11 @@ import './PhilanthropyFooter.css'
 export const PhilanthropyFooter = () => (
   <Container className="fullPhilanthropy">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Transforming individuals, teams, and organizations</h1>
+<h3 className="contentCentered">Continue exploring our website to better understand our offerings</h3><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/program" variant="primary">Program</Button>
-          </Col>
-          <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/staff" variant="secondary">Team</Button>
           </Col>
         </Row>
     </Jumbotron>

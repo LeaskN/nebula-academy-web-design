@@ -5,14 +5,12 @@ import './STEAMForKidsFooter.css'
 export const STEAMForKidsFooter = () => (
   <Container className="fullSTEAMForKids">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Transforming individuals, teams, and organizations</h1>
+<h3 className="contentCentered">Continue exploring our website to better understand our offerings</h3><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/program" variant="primary">Program</Button>
-          </Col>
-          <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
-          </Col>
+            <Button href="/educators" variant="secondary">Educators</Button>
+          </Col>å
         </Row>
     </Jumbotron>
   </Container>

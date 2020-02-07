@@ -5,14 +5,12 @@ import './EducatorsFooter.css'
 export const EducatorsFooter = () => (
   <Container className="fullEducators">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">View Our Programs</h1><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/program" variant="primary">Program</Button>
+            <Button href="/workforce-development" variant="secondary">Workforce Development</Button>
           </Col>
-          <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
-          </Col>
+          
         </Row>
     </Jumbotron>
   </Container>
