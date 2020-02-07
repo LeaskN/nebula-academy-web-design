@@ -7,7 +7,7 @@ export const STEAMForKidsJumbotron = () => (
     <Jumbotron className="STEAMForKidsJumbo noMargin">
       <Container>
       <h1 className="STEAMForKidsJumboHeader contentCentered">STEAM For Kids</h1>
-      <p className="STEAMForKidsJumboSmallerHeader">STEAM For Kids is an after school program which enables kids of all ages to learn how to mix all aspects of STEAM with computer science!</p>
+      <p className="STEAMForKidsJumboSmallerHeader">STEAM kids is an after-school program which enables kids, ages 7-18, the opportunity to learn about computer science, coding and careers across STEAM (Science, Technology, Engineering, Arts, Math) industries.</p>
       </Container>
     </Jumbotron>
   </React.Fragment>

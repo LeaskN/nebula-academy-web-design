@@ -43,6 +43,7 @@ class HomeContent extends Component {
             this.state.slides.map(slide => (
                 <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
                     <h1>{slide.header}</h1>
+                    <br/>
                     <p>{slide.body}</p>
                 </Col>
             ))

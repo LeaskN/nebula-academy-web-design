@@ -10,9 +10,6 @@
     background-position: center;
     background-size: cover;
     padding: 10px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .HomeUrlCard > h3 {
     margin: auto;
