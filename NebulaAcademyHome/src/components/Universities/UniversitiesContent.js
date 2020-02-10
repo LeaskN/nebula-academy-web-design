@@ -21,7 +21,7 @@ render() {
                 <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
                         <Col className="UniversitiesUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
                             <h2 style={{ fontSize: '1.9rem' }}>Certifications in the Workplace</h2>
-                            <blockquote>"Companies are actively seeking job applicants with AWS Cloud Computing skills. 58% of employees request AWS skills by name in listings that require “cloud computing” skill. Nebula Academy offers AWS-authored courses that will help you become AWS Cloud literate and master the in-demand skills that hiring companies need most."</blockquote>
+                            <blockquote>"Companies are actively seeking job applicants with AWS Cloud Computing skills. 58% of employees request AWS skills by name in listings that require 'cloud computing' skill. Nebula Academy offers AWS-authored courses that will help you become AWS Cloud literate and master the in-demand skills that hiring companies need most."</blockquote>
                             <a className="linkLight" href="https://searchcloudcomputing.techtarget.com/feature/Are-you-on-the-right-cloud-computing-career-path">Source: Search Cloud Computing</a>
                         </Col>
                         <Col className="UniversitiesUrlCard">
@@ -46,10 +46,10 @@ render() {
                             <p>Please feel free to download and share the following infomation with students, teachers, and administration.</p>
                             <Row className="contentCentered">
                                 <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Brochure } target="blank" download variant="warning">AWS One-Page Flyer</Button>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Flyer } target="blank" download variant="warning">AWS One-Page Flyer</Button>
                                 </Col>
                                 <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Flyer } target="blank" download variant="warning">AWS Full Brochure</Button>
+                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Brochure } target="blank" download variant="warning">AWS Full Brochure</Button>
                                 </Col>
                                 <Col>
                                     <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Student_Infographic } target="blank" download variant="warning">Student Infograph</Button>
