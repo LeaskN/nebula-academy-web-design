@@ -85,13 +85,38 @@ class CurriculumContent extends Component {
                                     <Card.Body>
                                             <h1>Academy Cloud Foundations</h1>
                                             <Row>
-                                                <Col xs={10}md={12}>
-                                                    <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
-                                                    <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
-                                                    <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
+                                                <Col xs={10} md={12}>
+                                                    <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                                    <h4>Curriculum Objectives</h4>
+                                                    <p>AWS Cloud Developing teaches students how to:</p>
+                                                    <ul>
+                                                        <li> Define the AWS Cloud</li>
+                                                        <li> Explain the AWS pricing philosophy</li>
+                                                        <li> Identify the global infrastructure components of AWS</li>
+                                                        <li> Describe the security and compliance measures of the AWS Cloud, including AWS Identity and Access Management (IAM)</li>
+                                                        <li> Create a virtual private cloud (VPC) by using Amazon Virtual Private Cloud (Amazon VPC)</li>
+                                                        <li> Demonstrate when to use Amazon Elastic Compute Cloud (Amazon EC2), AWS Lambda, and AWS Elastic Beanstalk</li>
+                                                        <li> Differentiate between Amazon Simple Storage Service (Amazon S3), Amazon Elastic Block Store (Amazon EBS), Amazon Elastic File System (Amazon EFS), and Amazon Simple Storage Service Glacier (Amazon S3 Glacier)</li>
+                                                        <li> Demonstrate when to use AWS database services, including Amazon Relational Database Service (Amazon RDS), Amazon DynamoDB, Amazon Redshift, and Amazon Aurora</li>
+                                                        <li> Explain the architectural principles of the AWS Cloud</li>
+                                                        <li> Explore key concepts related to Elastic Load Balancing, Amazon CloudWatch, and Amazon EC2 Auto Scaling</li>
+                                                    </ul>
+                                                    <h4>Course Outline</h4>
+                                                    <p>Duration:</p>
+                                                    <ul><li>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
+                                                    <p>Intended Audience:</p>
+                                                    <ul><li>This is an intermediate (200-level) course</li></ul>
+                                                    <h4>Student Prerequisites</h4>
+                                                    <ul><li>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have:</li></ul>
+                                                    <ul>
+                                                        <li>Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
+                                                        <li>A working knowledge of distributed systems</li>
+                                                        <li>Familiarity with general networking concepts</li>
+                                                        <li>A working knowledge of multi-tier architectures</li>
+                                                        <li>Familiarity with cloud computing concepts</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
-
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
@@ -137,8 +162,8 @@ class CurriculumContent extends Component {
                                                     <p>Duration:</p>
                                                     <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format. </p>
                                                     <p>Intended Audience:</p>
-                                                    <p>This is an advanced (level 200) course</p>
-                                                    <p>Student Prerequisites</p>
+                                                    <p>This is an advanced (200-level) course</p>
+                                                    <h4>Student Prerequisites</h4>
                                                     <p>To ensure success in this course, students should have:</p>
                                                     <ul>
                                                         <li> Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
@@ -157,15 +182,54 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Academy Cloud Operations</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10} md={12}>
-                                                    <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large registrations which can change data without reloading the page.</p>
-                                                    <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
-                                                    <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
-                                                    <p>There are many ways to go from here but a participants projects can represent what they are interested in. We teach frontend, backend, and fullstack but if a participant is more inclined towards one of these three they are invited to focus on that.</p>
-                                                    <p>The bottom lines are employment and payment, knowing React can land someone a high-paying job in a short amount of time.</p>
+                                                    <p>AWS Academy Cloud Operations is designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles. It will also help prepare them to take the AWS SysOps Administrator – Associate exam. Emphasizing best practices in the AWS Cloud and recommended design patterns, this course will teach students how to solve problems and troubleshoot various scenarios. The course will show students how to create automatable and repeatable deployments of networks and systems on AWS and covers specific AWS features and tools related to configuration and deployment. With case studies and demonstrations, students will learn how some AWS customers design their infrastructures and implement various strategies and services. Students will also have the opportunity to build a variety of infrastructures via guided, hands-on activities.</p>
+                                                    <h4>COURSE OBJECTIVES</h4>
+                                                    <p>Upon completion of this course, students will be able to:</p>
+                                                    <ul>
+                                                        <li> Understand AWS infrastructure as it relates to system operations, such as global infrastructure, core services, and account security</li>
+                                                        <li> Use the AWS Command Line Interface (AWS CLI), and understand additional administration and development tools</li>
+                                                        <li> Manage, secure, and scale compute instances on AWS</li>
+                                                        <li> Manage, secure, and scale configurations</li>
+                                                        <li> Identify container services and AWS services that are available for serverless computing.</li>
+                                                        <li> Manage, secure, and scale databases on AWS</li>
+                                                        <li> Build virtual private networks with Amazon Virtual Private Cloud (Amazon VPC)</li>
+                                                        <li> Configure and manage storage options using the storage services offered with AWS</li>
+                                                        <li> Monitor the health of your infrastructure with services such as Amazon CloudWatch, AWS CloudTrail, and AWS Config</li>
+                                                        <li> Manage resource consumption in an AWS account by using tags, Amazon CloudWatch, and AWS Trusted Advisor</li>
+                                                        <li> Create and configure automated and repeatable deployments with tools such as Amazon Machine Images (AMIs) and AWS CloudFormation </li>
+                                                    </ul>
+                                                    <h4>Course Outline</h4>
+                                                    <p>Duration:</p>
+                                                    <p>Approximately 40 hours, delivered over a four week period. Actual delivery times vary depending on the format. </p>
+                                                    <p>Intended Audience:</p>
+                                                    <p>This is an intermediate (200-level) course</p>
+                                                    <h4>Employment Outcomes</h4>
+                                                    <p>This course is intended for prospective operations/support/DevOps roles including:</p>
+                                                    <ul>
+                                                        <li>Operations Engineer</li>
+                                                        <li>Support Engineer</li>
+                                                        <li>Application Support Engineer</li>
+                                                        <li>Product Support Engineer</li>
+                                                        <li>Customer Support Engineer</li>
+                                                        <li>Support Specialist</li>
+                                                        <li>Junior DevOps Engineer</li>
+                                                        <li>DevOps Engineer</li>
+                                                        <li>Operations Engineer</li>
+                                                        <li>Platform Engineer</li>
+                                                        <li>Cloud Engineer</li>
+                                                        <li>Site Reliability Engineer</li>
+                                                    </ul>
+                                                    <h4>Student Prerequisites</h4>
+                                                    <p>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success, students should have:</p>
+                                                    <ul>
+                                                        <li> Completed AWS Academy Cloud Foundations or have equivalent experience</li>
+                                                        <li> A working knowledge of at least one scripting language</li>
+                                                        <li> Familiarity with Linux, the command line and Application Programming Interfaces (APIs)</li>
+                                                        <li> Familiarity with virtualization and distributed computing</li>
+                                                        <li> An understanding of version control (e.g., Git)</li>
+                                                        <li> An understanding of data storage mechanisms such as SQL</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
@@ -176,13 +240,39 @@ class CurriculumContent extends Component {
                                         <Card.Text>
                                             <h1>Academy Cloud Developing</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10} md={12}>
-                                                    <p>Aside from knowing powerful technologies we focus on certifications. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS certifications.</p>
-                                                    <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competiton. AWS certifications are the most sought after in the technology fields today and put particiaptns on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
-                                                    <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
+                                                    <p>AWS Academy Cloud Developing is designed to help students gain technical expertise in development using cloud technologies and prepare them to take the AWS Certified Developer – Associate level AWS Certification exam. The curriculum is delivered through instructor-led classes, knowledge assessments, and hands-on labs. Students will also have access to course manuals, online knowledge assessments, a free practice certification exam, and a discount voucher for the certification exam.</p>
+                                                    <h4>Curriculum Objectives</h4>
+                                                    <p>AWS Cloud Developing teaches students how to:</p>
+                                                    <ul>
+                                                        <li>Recall cloud computing services and models</li>
+                                                        <li>Describe developing on AWS</li>
+                                                        <li>Configure AWS Identity and Access Management for programmatic access</li>
+                                                        <li>Configure storage with Amazon S3 programmatically</li>
+                                                        <li>Develop with DynamoDB</li>
+                                                        <li>Explain caching</li>
+                                                        <li>Configure containers</li>
+                                                        <li>Develop event-driven solutions with Lambda</li>
+                                                        <li>Configure solutions with API Gateway</li>
+                                                        <li>Develop solutions with SQS and SNS</li>
+                                                        <li>Describe the use of Step Functions</li>
+                                                        <li>Identify best practice for building secure applications</li>
+                                                        <li>Identify best practice for deploying applications</li>
+                                                    </ul>
+                                                    <h4>Course Outline</h4>
+                                                    <p>Duration:</p>
+                                                    <ul><li>Approximately 40 hours, delivered over a period of four weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
+                                                    <p>Intended Audience:</p>
+                                                    <ul><li>Undergraduate, graduate, or professional students seeking cloud developing expertise. This is an intermediate (200-level) course.</li></ul>
+                                                    <h4>Student Prerequisites</h4>
+                                                    <ul><li>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have:</li></ul>
+                                                    <ul>
+                                                        <li>Completed AWS Academy Cloud Foundations course or have equivalent experience</li>
+                                                        <li>A working knowledge of distributed systems</li>
+                                                        <li>Familiarity with general networking concepts</li>
+                                                        <li>A working knowledge of multi-tier architectures</li>
+                                                        <li>Familiarity with cloud computing concepts</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
