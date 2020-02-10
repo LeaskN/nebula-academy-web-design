@@ -160,9 +160,9 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                     <h4>Course Outline</h4>
                                                     <p>Duration:</p>
-                                                    <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format. </p>
+                                                    <ul><li>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
                                                     <p>Intended Audience:</p>
-                                                    <p>This is an advanced (200-level) course</p>
+                                                    <ul><li>This is an intermediate (200-level) course</li></ul>
                                                     <h4>Student Prerequisites</h4>
                                                     <p>To ensure success in this course, students should have:</p>
                                                     <ul>
@@ -201,9 +201,9 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                     <h4>Course Outline</h4>
                                                     <p>Duration:</p>
-                                                    <p>Approximately 40 hours, delivered over a four week period. Actual delivery times vary depending on the format. </p>
+                                                    <ul><li>Approximately 40 hours, delivered over a four week period. Actual delivery times vary depending on the format.</li></ul>
                                                     <p>Intended Audience:</p>
-                                                    <p>This is an intermediate (200-level) course</p>
+                                                    <ul><li>This is an intermediate (200-level) course</li></ul>
                                                     <h4>Employment Outcomes</h4>
                                                     <p>This course is intended for prospective operations/support/DevOps roles including:</p>
                                                     <ul>
