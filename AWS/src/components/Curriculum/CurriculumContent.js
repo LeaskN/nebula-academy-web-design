@@ -85,9 +85,6 @@ class CurriculumContent extends Component {
                                     <Card.Body>
                                             <h1>Academy Cloud Foundations</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
                                                     <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
@@ -105,11 +102,51 @@ class CurriculumContent extends Component {
                                             <h1>Academy Cloud Architect</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
-                                                    <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
-                                                    <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust registrations.</p>
-                                                    <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your registration. Once we have learned these previous topics we will deploy some static websites.</p>
-                                                    <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
-                                                    <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who dont have many deployed projects.</p>
+                                                    <p>AWS Academy Cloud Architecting covers the fundamentals of building IT infrastructure on AWS. The course is designed to teach solutions architects how to optimize their use of the AWS Cloud by understanding AWS services and how they fit into cloud-based solutions. Although architectural solutions can differ depending on the industry, type of application, and size of the business, this course emphasizes best practices for the AWS Cloud that apply to all of them. It also recommends various design patterns to help you think through the process of architecting optimal IT solutions on AWS. Throughout the course, students will explore case studies that showcase how some AWS customers have designed their infrastructures and the strategies and services that they have implemented. Finally, this course provides opportunities for students to build a variety of infrastructures through a guided, hands-on approach.</p>
+                                                    <h4>COURSE OBJECTIVES</h4>
+                                                    <p>Upon completion of this course, students will be able to:</p>
+                                                    <ul>
+                                                        <li> Describe how cloud adoption transforms the way IT systems work</li>
+                                                        <li> Describe the benefits of cloud computing with Amazon Web Services</li>
+                                                        <li> Discuss how to design systems that are secure, reliable, high-performing, and cost efficient</li>
+                                                        <li> Describe principles to consider when migrating or designing new applications for the cloud</li>
+                                                        <li> Identify the design patterns and architectural options applied in a variety of use cases</li>
+                                                        <li> Define high availability, fault tolerance, and scalability</li>
+                                                        <li> Discuss how to avoid single points of failure</li>
+                                                        <li> List AWS services that have built-in fault tolerance or can be designed for fault</li>
+                                                        <li> Describe why load balancing is a key architectural component for AWS-powered applications</li>
+                                                        <li> Identify the benefits of Infrastructure as Code</li>
+                                                        <li> Describe how to leverage the capabilities of AWS to support automation</li>
+                                                        <li> Create, manage, provision, and update related resources using AWS CloudFormation</li>
+                                                        <li> Articulate the importance of making systems highly cohesive and loosely coupled</li>
+                                                        <li> Describe system coupling to support the distributed nature of applications built for the cloud</li>
+                                                        <li> Describe database services for storing and deploying web-accessible applications</li>
+                                                        <li> Compare structured query language (SQL) databases with NoSQL databases</li>
+                                                        <li> Describe how the AWS Well-Architected Framework improves cloud-based architectures</li>
+                                                        <li> Describe the business impact of design decisions</li>
+                                                        <li> Identify the design principles and best practices of the Operational Excellence pillar</li>
+                                                        <li> Describe how to secure data at every layer in the application</li>
+                                                        <li> Describe the appropriate tools and services to provide security-focused content</li>
+                                                        <li> Describe the design principles and best practices of the Reliability pillar.</li>
+                                                        <li> Select compute, storage, database, and networking resources to improve performance</li>
+                                                        <li> Evaluate the most important performance metrics for your applications</li>
+                                                        <li> Follow best practices to eliminate unneeded costs or suboptimal resources</li>
+                                                        <li> Troubleshoot common errors</li>
+                                                    </ul>
+                                                    <h4>Course Outline</h4>
+                                                    <p>Duration:</p>
+                                                    <p>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format. </p>
+                                                    <p>Intended Audience:</p>
+                                                    <p>This is an advanced (level 200) course</p>
+                                                    <p>Student Prerequisites</p>
+                                                    <p>To ensure success in this course, students should have:</p>
+                                                    <ul>
+                                                        <li> Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
+                                                        <li> A working knowledge of distributed systems</li>
+                                                        <li> Familiarity with general networking concepts</li>
+                                                        <li> A working knowledge of multi-tier architectures</li>
+                                                        <li> Familiarity with cloud computing concepts</li>
+                                                    </ul>
                                                 </Col>
                                             </Row>
                                         </Card.Text>
