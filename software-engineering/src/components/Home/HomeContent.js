@@ -14,9 +14,13 @@ class HomeContent extends Component {
             show: false
         };
     }
+    testLog(){
+        console.log('this is a test')
+    }
 render() {
         return (
             <React.Fragment>
+                {this.testLog()}
                 <Container>
                     <Row>
                         <Col xs={12} lg={6} xl={4} className="introRow1Column1">
@@ -136,7 +140,7 @@ render() {
                                     <p>Check out our 7 simple and achievable conditions below!</p>
                                     <div id="spacer" ></div>
                                     <ButtonToolbar className="bottom contentCentered" >
-                                    <Conditions/>                                        
+                                        <Conditions/>                                        
                                     </ButtonToolbar>  
                                 </Card.Body>
                             </Card>
