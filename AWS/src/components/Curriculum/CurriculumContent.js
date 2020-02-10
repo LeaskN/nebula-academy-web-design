@@ -46,10 +46,8 @@ class CurriculumContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>Full Stack Development</h1>
-                    <p>
-                        Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices. 
-                    </p>
+                    <h1>AWS Cloud Programs</h1>
+                    <p>Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices. </p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
