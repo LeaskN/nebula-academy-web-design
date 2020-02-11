@@ -49,7 +49,7 @@ height: auto;
 .staffMember:hover{
   color: white;
   text-shadow: 1px 1px 1px #000;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%) !important;
   background-color: #7F5A8F;
 }
