@@ -132,3 +132,7 @@ code {
 .nobull {
   list-style-type: none;
 }
+
+.jumbotron {
+  border-radius: 0px;
+}
