@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #131524 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    width: 100vw;
+    z-index: 10;
+}
+.navBarLogoSmall{
+    display: none;
+}
+@media (max-width:388px){
+    .navBarLogoSmall{
+        display: flex;
+    }
+    .navBarLogo{
+        display: none;
+    }
+}
+.nav-link{
+    color: #bbb !important;
+}

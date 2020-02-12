@@ -1,0 +1,10 @@
+.partnersJumbotron{
+    background-image: url('../../assets/28_partner.jpg');
+    background-size: cover;
+    color: white;
+    z-index: 02;
+    height:250px;
+    position: relative;
+    z-index: -2;
+    margin: 0px;
+}

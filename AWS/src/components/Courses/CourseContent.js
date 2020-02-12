@@ -6,7 +6,7 @@ export const CourseContent = () => (
   <React.Fragment>
     <Container>
         <h1>Earn an Amazon Web Services Certification</h1>
-        <p>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Kearn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
+        <p>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
         <Row >
             <Col xs={12} lg={6} xl={4} className="courseBackImage1">
                 <Card className="overImage">

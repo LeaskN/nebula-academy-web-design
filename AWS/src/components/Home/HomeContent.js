@@ -11,7 +11,7 @@ export const HomeContent = () => (
                         <Card.Body>
                             <Card.Title>There is a growing demand for AWS Cloud literate employees</Card.Title>
                             <Card.Text>
-                                The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concetps, independent of specific technical roles.
+                                The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concepts, independent of specific technical roles.
                             </Card.Text>
                             <Button href="/registration" variant="warning">Register Now</Button>
                         </Card.Body>

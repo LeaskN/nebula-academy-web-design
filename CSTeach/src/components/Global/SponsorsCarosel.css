@@ -1,0 +1,8 @@
+.sponsorsCarosel{
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.carousel-caption {
+    top: 20px;
+}

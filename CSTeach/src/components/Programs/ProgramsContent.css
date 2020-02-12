@@ -1,0 +1,27 @@
+.programTile1{
+    padding: 10px;
+    min-height: 250px;
+    background-color: #8D60A4;
+    border: 1.5px solid black;
+}
+.programTile2{
+    padding: 10px;
+    min-height: 250px;
+    background-color: rgb(202, 202, 202);
+    border: 1.5px solid black;
+}
+.programTile3{
+    padding: 10px;
+    min-height: 250px;
+    background-color: #9497D1;
+    border: 1.5px solid black;
+}
+.programTile4{
+    padding: 10px;
+    min-height: 250px;
+    background-color: rgb(202, 202, 202);
+    border: 1.5px solid black;
+}
+.programRow{
+    border: 1.5px solid black;
+}

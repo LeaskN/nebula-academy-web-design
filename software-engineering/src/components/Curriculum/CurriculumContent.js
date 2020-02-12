@@ -116,11 +116,11 @@ class CurriculumContent extends Component {
                                         <h1>Advanced JavaScript</h1>
                                         <Row>
                                             <Col xs={10} md={12}>
-                                                <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debuggin, the basic accumilator pattern, & higher order functions.</p>
+                                                <p>Advanced JavaScript contains topics including, but not limited to: functions, scope, debugging, the basic accumulator pattern, & higher order functions.</p>
                                                 <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
                                                 <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
                                                 <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
-                                                <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who dont have many deployed projects.</p>
+                                                <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who don't have many deployed projects.</p>
                                             </Col>
                                         </Row>
                                     </Card.Body>
@@ -151,8 +151,8 @@ class CurriculumContent extends Component {
                                                 </Col> */}
                                                 <Col xs={10} md={12}>
                                                     <p>Aside from knowing powerful technologies we focus on certifications. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS certifications.</p>
-                                                    <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competiton. AWS certifications are the most sought after in the technology fields today and put particiaptns on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
-                                                    <p>Once again this all comes down to jobs and payment, working with us makes particiapnts ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
+                                                    <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competition. AWS certifications are the most sought after in the technology fields today and put participants on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
+                                                    <p>Once again this all comes down to jobs and payment, working with us makes participants ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
