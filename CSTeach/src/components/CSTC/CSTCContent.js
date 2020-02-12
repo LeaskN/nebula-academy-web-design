@@ -146,7 +146,7 @@ class CSTCContent extends Component {
                     </Row>
                     <h1>Optional STEAM Coach Kit:</h1>
                     <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
-                        <Col xs={3}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
                             <img alt="surface" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={surface}></img>
                         </Col>
                         <Col xs={9}>
@@ -156,7 +156,7 @@ class CSTCContent extends Component {
                         </Col>
                     </Row>
                     <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
-                        <Col xs={3}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
                             <img alt="tello" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={tello}></img>
                         </Col>
                         <Col xs={9}>
@@ -166,7 +166,7 @@ class CSTCContent extends Component {
                         </Col>
                     </Row>
                     <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
-                        <Col xs={3}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
                             <img alt="micro" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={micro}></img>
                         </Col>
                         <Col xs={9}>

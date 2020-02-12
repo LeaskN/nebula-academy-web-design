@@ -1,0 +1,73 @@
+.cardDeckLeft{
+    text-align: center;
+    height: 100%;
+    color: #ffffff;
+    background-color: #9971AF;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+.cardDeckRight{
+    width: 60vw;
+    background-color: #fafbfc;
+}
+.card-body{
+    margin: auto;
+}
+.rightPanelLeftCol{
+    text-align: center;
+    width: 30%;
+}
+.rightPanelRightCol{
+    width: 60%;
+}
+.cardColumns{
+    padding:0px;
+}
+.staticCard{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
+}
+.subtleButton{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-left: 5px solid #414141;
+}
+.subtleButton:hover{
+    cursor: pointer;
+    color: #414141;
+    border-left: 5px solid #AB225D;
+}
+.toggled {
+    color: #414141;
+    border-left: 5px solid #206DD4;
+    background-color: #fafbfc;
+}
+#partnersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+}
+#speakersCard{
+    overflow: hidden;
+    width: 40%;
+    height: 325px;
+    margin-top: 30px;
+}
+.sponsorsArea{
+    justify-content: space-around;
+}
+.STEAMCoachBackImage1{
+    border:10px solid white;
+    background-image: url("../../assets/10_handshake.jpg");
+    background-size: cover;
+}
+.STEAMCoachBackImage2{
+    border:10px solid white;
+    background-image: url("../../assets/11_GuestSpeakers.jpg");
+    background-size: cover;
+}

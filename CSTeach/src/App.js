@@ -17,6 +17,7 @@ import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
 import { CSTC } from './pages/CSTC';
 import { SBLS } from './pages/SBLS';
+import { STEAMCoach } from './pages/STEAMCoach';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path ="/staff" component={Staff}/>
             <Route path ="/CSTC" component={CSTC}/>
             <Route path ="/SBLS" component={SBLS}/>
+            <Route path ="/STEAMCoach" component={STEAMCoach}/>
             <Route path ="/HiddenApplication" component={HiddenApplication}/>
             <Route component = {NoMatch}/>
             {/*
