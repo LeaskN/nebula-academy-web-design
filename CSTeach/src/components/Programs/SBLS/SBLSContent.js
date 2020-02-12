@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-import './STEAMCoachContent.css'
+import './SBLSContent.css'
 
-class STEAMCoachContent extends Component {
+class SBLSContent extends Component {
     state = {
         toggle: {
             button1: true,
@@ -31,7 +31,7 @@ class STEAMCoachContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>The Science Behind Learning for the future: teach what's needed to your students</h1>
+                    <h1>short description</h1>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -80,32 +80,9 @@ class STEAMCoachContent extends Component {
                                             <Col xs={10} md={12}>
                                                 <ol>
                                                     <li>Create a brain-based language for connecting</li>
-                                                    <li>Adopt a brain-friendly mindset </li>
-                                                    <li>Refine brain-friendly skills for learning </li>
+                                                    <li>Adopt a brain-friendly mindset</li>
+                                                    <li>Refine brain-friendly skills for learning</li>
                                                     <li>Improve confidence connecting with others</li>
-                                                    <li>Understanding of 21CLD in the classroom</li>
-                                                    <li>Use of ICT products; Surface Go, Micro:bit, Drone</li>
-                                                    <li>Professional Learning Community (PLC) access</li>
-                                                    <li>Post-training classroom modeling</li>
-                                                </ol>
-                                            </Col>
-                                        </Row>
-                                    </Card.Body>
-                            </Card>: null}
-                            {this.state.toggle.button3 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <h1>Program Objectives:</h1>
-                                        <Row>
-                                            <Col xs={10} md={12}>
-                                                <ol>
-                                                    <li>Create a brain-based language for connecting</li>
-                                                    <li>Adopt a brain-friendly mindset </li>
-                                                    <li>Refine brain-friendly skills for learning </li>
-                                                    <li>Improve confidence connecting with others</li>
-                                                    <li>Understanding of 21CLD in the classroom</li>
-                                                    <li>Use of ICT products; Surface Go, Micro:bit, Drone</li>
-                                                    <li>Professional Learning Community (PLC) access</li>
-                                                    <li>Post-training classroom modeling</li>
                                                 </ol>
                                             </Col>
                                         </Row>
@@ -114,19 +91,13 @@ class STEAMCoachContent extends Component {
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                             <h1>Modules</h1>
-                                            <p><b>Modules 1-6:</b> Coaching Certification</p>
-                                            <p><b>Module 7:</b> Introduction to 21st CLD</p>
-                                            <p><b>Module 8:</b> Collaboration</p>
-                                            <p><b>Module 9:</b> Knowledge Construction</p>
-                                            <p><b>Module 10:</b> Use of ICT</p>
-                                            <p><b>Module 11:</b> Using tools to support ICT for learning</p>
-                                            <p><b>Module 12:</b> Introduction to Sanford’s design thinking model</p>
-                                            <p><b>Module 13:</b> Applying Research skills to support empathizing & delivering project outcomes</p>
-                                            <p><b>Module 14:</b> Using tools to collaborate & begin Project Framework with        teams</p>
-                                            <p><b>Module 15:</b> BBC python and micro:bits activity</p>
-                                            <p><b>Module 16:</b> Team Collaboration (project) </p>
-                                            <p>Final Team Project: Learning Design Thinking through an Entrepreneurial </p>
-                                            <p>ExperienceThe curriculum is designed to engage educators with hands-on activities and exercises intended to help educators experience and learn how design thinking produces outcome through product development and all the roles involved in the process. Educators will be provided opportunities to gain experience in all aspects of an entrepreneurial experience, and how to engage students in this process within the classroom structure. The content can be approached in several different ways and is easily adaptable to a variety of situations. Each unit contains suggested sample activities, but instructors are provided clear learning topics to allow them the freedom to develop their own exercises. Likewise, sample student objectives are suggested but the instructor has the freedom to create specific objectives to match their own exercises and assignments. </p>
+                                                <p><b>Module 0:</b> Program Orientation</p>
+                                                <p><b>Module 1:</b> Intro to Science Behind Learning</p>
+                                                <p><b>Module 2:</b> Neuroscience Foundation</p>
+                                                <p><b>Module 3:</b> Brain-based Learning</p>
+                                                <p><b>Module 4:</b> Brain-friendly Communications</p>
+                                                <p><b>Module 5:</b> Brain-friendly Connections</p>
+                                                <p><b>Module 6:</b> Emotional Regulation</p>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
@@ -146,4 +117,4 @@ class STEAMCoachContent extends Component {
     }
 };
 
-export default STEAMCoachContent;
+export default SBLSContent;

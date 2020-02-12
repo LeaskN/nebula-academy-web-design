@@ -8,7 +8,7 @@ export const ProgramsFooter = () => (
       <h1 className="contentCentered">Build your teaching capacity with Nebula Academy</h1><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/programs" variant="primary">Programs</Button>
+            <Button href="/curriculum" variant="primary">Curriculum</Button>
           </Col>
           <Col className="contentCentered">
             <Button href="/register" variant="primary">Register Now</Button>

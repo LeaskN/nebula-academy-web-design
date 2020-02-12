@@ -171,3 +171,6 @@ code {
   width: 100px;
   display:inline-block;
 }
+.jumbotron {
+  border-radius: 0px;
+}

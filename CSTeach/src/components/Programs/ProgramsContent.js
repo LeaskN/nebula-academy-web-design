@@ -7,16 +7,16 @@ export const ProgramsContent = () => (
     <Container>
         <h1>Earn an Amazon Web Services Certification</h1>
         <p>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. ​Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions. </p>
-        <Row className="programRow">
+        <Row className="programRow"style={{color:"white", marginBottom: '20px'}}>
             <Col xs={12} lg={6} xl={4}>
                 <div className="programTile1">
                     <div>
-                        <h3>Coaching</h3>
+                        <h3>Science Behind Learning</h3>
                         <p>
-                        Coaching Description 
+                        Science Behind Learning Description 
                         </p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/sbls" variant="light">Learn More</Button>
                     </div>
                 </div>
             </Col>
@@ -26,7 +26,7 @@ export const ProgramsContent = () => (
                         <h3>Steam Coach</h3>
                         <p>Steam Coach Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/STEAMCoach" variant="light">Learn More</Button>
                     </div>
                 </div>
             </Col>
@@ -36,7 +36,7 @@ export const ProgramsContent = () => (
                         <h3>CS Teaching Certification</h3>
                         <p>CS Teaching Certification Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/cstc" variant="light">Learn More</Button>
                     </div>
                 </div>
             </Col>
@@ -46,7 +46,7 @@ export const ProgramsContent = () => (
                         <h3>Drones</h3>
                         <p>Drones Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -56,7 +56,7 @@ export const ProgramsContent = () => (
                         <h3>Micro:bits</h3>
                         <p>Micro:bits Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -66,7 +66,7 @@ export const ProgramsContent = () => (
                         <h3>3D Animation</h3>
                         <p>3D Animation Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -76,7 +76,7 @@ export const ProgramsContent = () => (
                         <h3>3D Printing</h3>
                         <p>3D Printing Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -86,7 +86,7 @@ export const ProgramsContent = () => (
                         <h3>Minecraft:EE</h3>
                         <p>Minecraft:EE Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -96,7 +96,7 @@ export const ProgramsContent = () => (
                         <h3>Microsoft MIE</h3>
                         <p>Microsoft MIE Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -106,17 +106,17 @@ export const ProgramsContent = () => (
                         <h3>PTA</h3>
                         <p>PTA Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
             <Col xs={12} lg={6} xl={4}>
                 <div className="programTile3">
                     <div>
-                        <h3>PTA</h3>
-                        <p>PTA Description</p>
+                        <h3>CS Program</h3>
+                        <p>CS Program Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>
@@ -126,7 +126,7 @@ export const ProgramsContent = () => (
                         <h3>Educator Keynote Speaking</h3>
                         <p>Educator Keynote Speaking Description</p>
                         <div id="spacer" ></div>
-                        <Button className="bottom contentCentered"  href="/application" variant="primary">Acuity Button</Button>
+                        <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="/application" variant="light">Acuity Button</Button>
                     </div>
                 </div>
             </Col>

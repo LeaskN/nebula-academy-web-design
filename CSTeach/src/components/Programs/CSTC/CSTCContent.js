@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import './CSTCContent.css'
-import prices from '../../assets/programPrices.png'
-import micro from '../../assets/micro.png'
-import tello from '../../assets/tello.png'
-import surface from '../../assets/surface.png'
+import prices from '../../../assets/programPrices.png'
+import micro from '../../../assets/micro.png'
+import tello from '../../../assets/tello.png'
+import surface from '../../../assets/surface.png'
 
 class CSTCContent extends Component {
     state = {
@@ -35,7 +35,7 @@ class CSTCContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>CSTC for the future: teach what's needed to your students</h1>
+                    <h1>CSTC short description</h1>
                     <p>The certification begins with the 2 day Science Behind Learning Certification training and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments, learn how to build an understanding of the expectations of such a learning environment and experience, how the role and behavior of students has to change, as well as the role and behavior of the teacher, in order to ensure success. Most importantly, participants will have a visualization of what the classroom has to change into and what it looks like when being done successfully. Lastly, participants will learn about building team collaboration so that each member has a clear understanding of the purpose of their work together.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">

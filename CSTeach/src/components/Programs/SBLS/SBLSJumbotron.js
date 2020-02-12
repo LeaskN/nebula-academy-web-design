@@ -7,7 +7,7 @@ export const SBLSJumbotron = () => (
     <Jumbotron className="SBLSJumbotron">
       <div className="SBLSOverlay"></div>
       <Container>
-        <h1 className="jumboText">Computer Science Teaching Certification</h1>
+        <h1 className="jumboText">Science Behind Learning</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>

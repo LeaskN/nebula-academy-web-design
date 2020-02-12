@@ -120,34 +120,9 @@ render() {
                             </Card>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xl={6} className="introRow3Tile1 paddingRight">
-                            <Card className="introRowTile">
-                                <Card.Body>
-                                    <h3>Learner Support</h3>
-                                    <Card.Text>
-                                    Building a career in today's modern workforce is challenging, and sometimes can be overwhelming to move through change. Our team of on-site and online personnel are there to help. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically and computationally, to build strong problem-solving skills, on overcoming adversity, and to build confidence in entering careers in the modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.
-                                    </Card.Text>
-                                    <div id="spacer" ></div>
-                                    <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xl={6} className="introRow3Tile2 paddingLeft">
-                            <Card className="introRowTile">
-                                <Card.Body>
-                                    <h3>More Info</h3>
-                                    <Card.Text>
-                                    As you navigate through our website, you'll find details regarding the overall program, what to expect from the experience, the learning careers, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued primary post-job placement. If you have additional questions that we have not answered, please reach out to our team at succeed@nebulaacademyny.com.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>    
                 </Container>      
             </React.Fragment>
-            )
-
+        )
     }
 };
 
