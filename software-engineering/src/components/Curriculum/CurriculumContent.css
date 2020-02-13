@@ -30,10 +30,18 @@
     margin-bottom: 20px;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
 }
-@media ( max-width: 411px){
+@media ( max-width: 414px){
     .staticCard{
         width: 100vw;
-        margin-left: -9vw;
+        margin-left: -10vw;
+    }
+    .cardDeckRight > div > .row > div{
+        font-size: 13px !important;   
+        padding: 0px !important;
+    }
+    .cardDeckRight > div > .row{
+        padding: 0px !important;
+        width: 112% !important; 
     }
 }
 .subtleButton{
