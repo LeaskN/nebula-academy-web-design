@@ -10,18 +10,16 @@ export default class StaffAbout extends React.Component {
         }
     }
     handleShow = () => {
-        console.log(this.props.state)
         let changeShow = !this.state.show;
         this.setState({ show: changeShow });
     };
     render() {
         
         return(
-        <React.Fragment >
-            <Button className="contentCentered fullWidth" variant="secondary" onClick={(e)=>this.handleShow()}>
+        <React.Fragment>
+            <Button className="contentCentered fullWidth" variant="info" onClick={(e)=>this.handleShow()}>
                 About {this.props.name}
             </Button>
-
             <Modal show={this.state.show}  onHide={(e)=>this.handleShow()}>
                 <Modal.Header closeButton>
                 <Modal.Title>About {this.props.name} </Modal.Title>

@@ -5,9 +5,8 @@ import './StaffJumbotron.css'
 export const StaffJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="staffJumbo">
-      <div className="staffOverlay"></div>
       <Container>
-        <h1 className="jumboText">Staff</h1>
+        <h1 className="homeJumboHeader contentCentered" style={{fontSize: '3em'}}>Team</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>
