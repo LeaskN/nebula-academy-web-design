@@ -233,15 +233,19 @@ code {
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-  width:87.5vw;
 }
-@media (max-width: 400px){
+@media ( max-width: 414px){
   .staticCard{
-    width:100vw;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: 0 0 0 0 rgba(0,0,0,0);
-    border-bottom:1px solid black;
+      width: 100vw;
+      margin-left: -10vw;
+  }
+  .cardDeckRight > div > .row > div{
+      font-size: 13px !important;   
+      padding: 0px !important;
+  }
+  .cardDeckRight > div > .row{
+      padding: 0px !important;
+      width: 112% !important; 
   }
 }
 .dropdown-menu{
