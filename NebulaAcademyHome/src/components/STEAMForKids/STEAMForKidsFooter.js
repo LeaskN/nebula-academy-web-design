@@ -10,7 +10,7 @@ export const STEAMForKidsFooter = () => (
         <Row>
           <Col className="contentCentered">
             <Button href="/educators" variant="secondary">Educators</Button>
-          </Col>å
+          </Col>
         </Row>
     </Jumbotron>
   </Container>
