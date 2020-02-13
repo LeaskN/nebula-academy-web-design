@@ -30,6 +30,12 @@
     margin-bottom: 20px;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
 }
+@media ( max-width: 411px){
+    .staticCard{
+        width: 100vw;
+        margin-left: -9vw;
+    }
+}
 .subtleButton{
     padding-top: 40px;
     padding-bottom: 40px;

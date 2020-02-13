@@ -6,22 +6,21 @@ import WCTDIcon from '../../assets/We_Connect_The_Dots_logo_Large.png';
 export const ScholarshipsContent = () => (
   <React.Fragment>
     <Container>
-    <div style={{height:"100px", justifyContent:"center", display:"flex"}}>
+    <div style={{height:"100px", paddingTop:"20px", marginLeft:"20px", marginRight:"20px", justifyContent:"center", display:"flex"}}>
       <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">
-        <img height="100px" alt="wctd.org" src={WCTDIcon}></img>
+        <img style={{maxWidth: '95vw', minMargin:'20px', height:'100%'}}  alt="wctd.org" src={WCTDIcon}></img>
       </a>
     </div>
     <br/>
     <p>Scholarships are provided by <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">We Connect The Dots, Inc.</a>, through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact scholarships@wctd.org or call 631-468-7475 to speak with the WCTD program manager.</p>
     <p>The "Pathways to Success" program is currently offering 9 full scholarships to candidates who meet any of the populations outlined on this page.  Applications are now being accepted for review for the March program.</p>
-
     </Container>
     <br/>
     <Container className="">
       <Row>
-        <Col xs={6}>
-          <Card style={{ width: '22rem' }}>
-            <Card.Img variant="top" src={require("../../assets/17_homemaker.png")} />
+        <Col xs={12} md={6}>
+          <Card style={{ padding: '10px' }}>
+            <Card.Img variant="top" src={require("../../assets/returningToWorkforce.jpg")} />
             <Card.Body>
               <Card.Title>Homemaker Returning to the Workforce:</Card.Title>
               <ul className="cardInformation">
@@ -34,8 +33,8 @@ export const ScholarshipsContent = () => (
             </Card.Body>
           </Card>
           </Col>
-          <Col xs={6}>
-            <Card style={{ width: '22rem' }}>
+          <Col xs={12} md={6}>
+            <Card style={{ padding: '10px' }}>
               <Card.Img variant="top" src={require("../../assets/18_LowIncome.jpg")} />
               <Card.Body>
                 <Card.Title>Low Income Individuals:</Card.Title>
@@ -56,8 +55,8 @@ export const ScholarshipsContent = () => (
           </Col>
       </Row>
       <Row>
-        <Col xs={6}>
-          <Card style={{ width: '22rem' }}>
+        <Col xs={12} md={6}>
+          <Card style={{ padding: '10px' }}>
             <Card.Img variant="top" src={require("../../assets/19_Disability.jpg")} />
             <Card.Body>
               <Card.Title>Individuals with Disability:</Card.Title>
@@ -69,8 +68,8 @@ export const ScholarshipsContent = () => (
             </Card.Body>
           </Card>
           </Col>
-          <Col xs={6}>
-            <Card style={{ width: '22rem' }}>
+          <Col xs={12} md={6}>
+            <Card style={{ padding: '10px' }}>
               <Card.Img variant="top" src={require("../../assets/20_55+.jpg")} />
               <Card.Body>
                 <Card.Title>Individuals 55 and Older:</Card.Title>
@@ -84,8 +83,8 @@ export const ScholarshipsContent = () => (
           </Col>
       </Row>
       <Row>
-        <Col xs={6}>
-          <Card style={{ width: '22rem' }}>
+        <Col xs={12} md={6}>
+          <Card style={{ padding: '10px' }}>
             <Card.Img variant="top" src={require("../../assets/21_singleparent.jpg")} />
             <Card.Body>
               <Card.Title>Single Parent:</Card.Title>
@@ -99,8 +98,8 @@ export const ScholarshipsContent = () => (
             </Card.Body>
           </Card>
           </Col>
-          <Col xs={6}>
-            <Card style={{ width: '22rem' }}>
+          <Col xs={12} md={6}>
+            <Card style={{ padding: '10px' }}>
               <Card.Img variant="top" src={require("../../assets/22_veterans.jpg")} />
               <Card.Body>
                 <Card.Title>Veteran:</Card.Title>
@@ -114,8 +113,8 @@ export const ScholarshipsContent = () => (
           </Col>
       </Row>
       <Row>
-        <Col xs={6}>
-          <Card style={{ width: '22rem' }}>
+        <Col xs={12} md={6}>
+          <Card style={{ padding: '10px' }}>
             <Card.Img variant="top" src={require("../../assets/22_JusticeSystem.jpg")} />
             <Card.Body>
               <Card.Title>Individuals formerly involved in the justice system?</Card.Title>
@@ -127,8 +126,8 @@ export const ScholarshipsContent = () => (
             </Card.Body>
           </Card>
           </Col>
-          <Col xs={6}>
-            <Card style={{ width: '22rem' }}>
+          <Col xs={12} md={6}>
+            <Card style={{ padding: '10px' }}>
               <Card.Img variant="top" src={require("../../assets/22_homeless.jpg")} />
               <Card.Body>
                 <Card.Title>Homeless individuals:</Card.Title>
@@ -149,8 +148,8 @@ export const ScholarshipsContent = () => (
           </Col>
       </Row>
       <Row>
-        <Col xs={6}>
-          <Card style={{ width: '22rem' }}>
+        <Col xs={12} md={6}>
+          <Card style={{ padding: '10px' }}>
             <Card.Img variant="top" src={require("../../assets/22_NativeAmerican.jpg")} />
             <Card.Body>
               <Card.Title>Native American:</Card.Title>
