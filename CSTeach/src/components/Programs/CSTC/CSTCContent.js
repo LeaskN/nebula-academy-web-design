@@ -79,8 +79,12 @@ class CSTCContent extends Component {
                                             <h1>Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>Through our Computer Science Certification, we help students and teachers become computer science instructors and teachers through a structure of blended learning programs within traditional classroom content, as well as a plan and implementation model to incorporate College Board courses for AP Computer Science Principals, AP Computer Science-A, and advanced computer science electives that support Web Development, Cybersecurity, Data Science, and Machine Learning.</p>
-                                                    <p>Our model helps to ensure that schools remain current and competitive with industry needs, and so students can leverage core skills in computational thinking for any career path they choose.</p>
+                                                    <p><b>Collaboration:</b> Are students required to share responsibility and make substantive decisions with other people? Is their work interdependent?</p>
+                                                    <p><b>Knowledge Construction:</b> Are students required to construct and apply knowledge? Is that knowledge interdisciplinary?</p>
+                                                    <p><b>Real-World Problem Solving & Innovation:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
+                                                    <p><b>Self-Regulation:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
+                                                    <p><b>Use of ICT for learning:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
+                                                    <p><b>Skilled Communication:</b> Are students required to communicate their own ideas regarding a concept or issue? Must their communication be supported with evidence and designed with a particular audience in mind?</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>

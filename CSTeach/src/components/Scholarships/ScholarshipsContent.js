@@ -12,8 +12,7 @@ export const ScholarshipsContent = () => (
       </a>
     </div>
     <br/>
-    <p>Scholarships are provided by <a href="https://wctd.org" target="_blank" rel="noopener noreferrer">We Connect The Dots, Inc.</a>, through government grants, and corporate and private donations. We Connect The Dots is able to provide a limited number of participants with full or partial scholarships. To learn more contact scholarships@wctd.org or call 631-468-7475 to speak with the WCTD program manager.</p>
-    <p>The "Pathways to Success" program is currently offering 9 full scholarships to candidates who meet any of the populations outlined on this page.  Applications are now being accepted for review for the March program.</p>
+    <p style={{textAlign: 'center'}}>Scholarship and Financing are available for participants. Contact us at <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> to learn more! </p>
 
     </Container>
     <br/>

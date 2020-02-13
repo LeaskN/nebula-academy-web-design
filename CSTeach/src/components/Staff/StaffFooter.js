@@ -1,17 +1,22 @@
 import React from 'react';
-import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
+import { Jumbotron, Container, Button, Col, Row, Form} from 'react-bootstrap';
 import './StaffFooter.css'
 
 export const StaffFooter = () => (
   <Container className="fullStaffFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Transforming individuals, teams, and organizations</h1>
+<h3 className="contentCentered">Continue exploring our website to better understand our offerings</h3><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/programs" variant="primary">Course Info</Button>
+            <Button href="/" style={{maxHeight:'37px', margin:'auto'}} variant="secondary">Home</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/registration" variant="primary">Register Now</Button>
+            <Form enctype="text/plain" action="mailto:support@nebulaacademyny.com" method="GET">
+              <Button variant="secondary" type="submit">
+                Send Us an Email
+              </Button>
+            </Form>
           </Col>
         </Row>
     </Jumbotron>

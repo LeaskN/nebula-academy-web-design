@@ -18,7 +18,7 @@
   margin: auto;
   overflow: hidden; 
   justify-content: center;
-  border: 5px solid #7F5A8F;
+  border: 5px solid #00C9CB;
   border-radius: 10px;
 }
 .toggleOff{
@@ -39,13 +39,17 @@ width: 100%;
 height: auto;
 }
 .staffMember{
-background-color: rgb(228, 228, 228);
-border-radius: 10px;
-border: 5px solid white;
-padding: 10px !important;
-filter: grayscale(100%);
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 10px !important;
+  filter: grayscale(100%);
+  transition: .5s;
 }
 .staffMember:hover{
--webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-filter: grayscale(0%);
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%) !important;
+  background-color: #7F5A8F;
 }
