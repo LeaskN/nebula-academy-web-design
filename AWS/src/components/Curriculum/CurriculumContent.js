@@ -51,36 +51,36 @@ class CurriculumContent extends Component {
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body className="noPadding">
-                                        <Card.Title 
+                                    <div className="noPadding">
+                                        <div 
                                             onClick={() => this.button1()}
                                             className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
                                             Academy Cloud Foundations
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.button2()}
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
                                             Academy Cloud Architect
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.button3()}
                                             className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton"}>
                                             Academy Cloud Operations
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.button4()}
                                             className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
                                             Academy Cloud Developing
-                                        </Card.Title>
-                                    </Card.Body> 
+                                        </div>
+                                    </div> 
                             </Card>
                         </Col>
-                        <Col xs={8} className="cardColumns">
+                        <Col xs={8} className="cardColumns" style={{padding: '20px'}}>
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
-                                    <Card.Body>
+                                    <div >
                                             <h1>Academy Cloud Foundations</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
@@ -115,11 +115,11 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                    </Card.Body>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                             <Col>
                                             </Col>
                                             <h1>Academy Cloud Architect</h1>
@@ -172,12 +172,12 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                             <h1>Academy Cloud Operations</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
@@ -230,12 +230,12 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                             <h1>Academy Cloud Developing</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
@@ -273,8 +273,8 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                         </Col>
                     </Row>
@@ -285,72 +285,69 @@ class CurriculumContent extends Component {
                     <Row className="sponsorsArea">
                         <Col xs={12} lg={6} xl={6} className="curriculumBackImage1">
                             <Card className="overImage">
-                                <Card.Body>
-                                    <Card.Title>Partners</Card.Title>
-                                    <Card.Text>
+                                <div style={{padding: '10px'}}>
+                                    <div>Partners</div>
+                                    <div>
                                         Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
-                                    </Card.Text>
+                                    </div>
                                     <Button href="/partners" variant="warning">Partners</Button>
-                                </Card.Body>
+                                </div>
                             </Card>
                         </Col>
                         <Col xs={12} lg={6} xl={6} className="curriculumBackImage2">
                             <Card className="overImage">
-                                <Card.Body>
-                                    <Card.Title>Guest Speakers</Card.Title>
-                                    <Card.Text>
+                                <div style={{padding: '10px'}}>
+                                    <div>Guest Speakers</div>
+                                    <div>
                                         The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
-                                    </Card.Text>
+                                    </div>
                                     <Button href="/guestspeakers" variant="warning">Guest Speakers</Button>
-                                </Card.Body>
+                                </div>
                             </Card>
                         </Col>
                     </Row>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
-                                    <Card.Body className="noPadding">
-                                        <Card.Title 
+                                    <div className="noPadding">
+                                        <div 
                                             onClick={() => this.scheduleButton1()}
                                             className={this.state.toggle2.scheduleButton1 ? " subtleButton toggled" : "subtleButton"}>
                                             In Person Sessions
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.scheduleButton2()}
                                             className={this.state.toggle2.scheduleButton2 ? " subtleButton toggled" : "subtleButton"}>
                                             Live Remote Sessions
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.scheduleButton3()}
                                             className={this.state.toggle2.scheduleButton3 ? " subtleButton toggled" : "subtleButton"}>
                                             Lab Hours
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.scheduleButton4()}
                                             className={this.state.toggle2.scheduleButton4 ? " subtleButton toggled" : "subtleButton"}>
                                             Instructor Support Hours
-                                        </Card.Title>
+                                        </div>
                                         <hr className="noMargin"/>
-                                        <Card.Title 
+                                        <div 
                                             onClick={() => this.scheduleButton5()}
                                             className={this.state.toggle2.scheduleButton5 ? " subtleButton toggled" : "subtleButton"}>
                                                 Exam Prep Hours
-                                            </Card.Title>
-                                    </Card.Body> 
+                                            </div>
+                                    </div> 
                             </Card>
                         </Col>
                         <Col xs={8} className="cardColumns">
                             {this.state.toggle2.scheduleButton1 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                             <h1>In Person Sessions</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <p>All in person sessions take place at 180 Michael Drive in Syosset NY 11791.  To locate our facility drive around the back of the building and look for our signs and entrance in the back-parking lot.</p>
                                                     <ul>
@@ -366,17 +363,14 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton2 ? <Card className="cardDeckRight">
-                                    <Card.Body>
+                                    <div style={{padding: '10px'}}>
                                         <h1>Live Remote Sessions</h1>
-                                        <Card.Text>
+                                        <div>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                 <ul>
                                                     <li>Participants are provided details on how to access the online sessions via Zoom calls upon registration and before sessions begin.</li>
@@ -388,17 +382,14 @@ class CurriculumContent extends Component {
                                                 </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton3 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                         <h1>Lab Hours</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <ul>
                                                         <li>Lab time is blended throughout the session days and we encourage participants to utilize independent study time on labs outside of class.</li>
@@ -407,17 +398,14 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton4 ? <Card className="cardDeckRight">
-                                    <Card.Body>
+                                    <div style={{padding: '10px'}}>
                                         <h1>Instructor Support Hours</h1>
-                                        <Card.Text>
+                                        <div>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <ul>
                                                         <li>Instructors are available via Microsoft Teams for support participants outside of class hours, expect a response to questions from instructors and students as this is a community contribution environment.</li>
@@ -425,17 +413,14 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                             {this.state.toggle2.scheduleButton5 ? <Card className="cardDeckRight">
-                                    <Card.Body>
-                                        <Card.Text>
+                                    <div style={{padding: '10px'}}>
+                                        <div>
                                         <h1>Exam Prep Hours</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <ul>
                                                         <li>Designated hours are setup during program sessions to support participants with preparing for certification exams.</li>
@@ -444,8 +429,8 @@ class CurriculumContent extends Component {
                                                     </ul>
                                                 </Col>
                                             </Row>
-                                        </Card.Text>
-                                    </Card.Body>
+                                        </div>
+                                    </div>
                             </Card>: null}
                         </Col>
                     </Row>

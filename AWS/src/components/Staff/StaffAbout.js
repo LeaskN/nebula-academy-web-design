@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Modal, } from 'react-bootstrap';
 
 export default class StaffAbout extends React.Component {
-
     constructor(props) {
         super(props);
         this.state= {
@@ -10,23 +9,17 @@ export default class StaffAbout extends React.Component {
             showText:'false',
         }
     }
-    testLog(){
-        console.log('this is a test')
-    }
     handleShow = () => {
-        console.log(this.props.state)
         let changeShow = !this.state.show;
         this.setState({ show: changeShow });
     };
     render() {
         
         return(
-            <React.Fragment >
-            {this.testLog()}
-            <Button className="contentCentered fullWidth" variant="secondary" onClick={(e)=>this.handleShow()}>
+        <React.Fragment>
+            <Button className="contentCentered fullWidth" variant="info" onClick={(e)=>this.handleShow()}>
                 About {this.props.name}
             </Button>
-
             <Modal show={this.state.show}  onHide={(e)=>this.handleShow()}>
                 <Modal.Header closeButton>
                 <Modal.Title>About {this.props.name} </Modal.Title>
