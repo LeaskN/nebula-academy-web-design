@@ -69,7 +69,7 @@ class CertificationsContent extends Component {
                 <Row>
                     <Col xs={1}></Col>
                     <Col xs={10}>
-                        <h1>Quote from University Leaders</h1>
+                        <h1>Relevant quote (Edu leader?)</h1>
                         <p>The primary focus of this program is to have participants land jobs in coding & technology oriented roles. There are different paths that one can take to achieve this goal but the most consistent is through internship opportunities. We are partnered with many local companies who are looking for Software Engineering interns. These roles frequently lead to job placement within that company or open up new avenues towards full time employment elsewhere.</p>
                         <h1>Description as to why the evolution of education is important</h1>
                         <p>The primary focus of this program is to have participants land jobs in coding & technology oriented roles. There are different paths that one can take to achieve this goal but the most consistent is through internship opportunities. We are partnered with many local companies who are looking for Software Engineering interns. These roles frequently lead to job placement within that company or open up new avenues towards full time employment elsewhere.</p>

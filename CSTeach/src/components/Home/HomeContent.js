@@ -87,14 +87,10 @@ render() {
                             <Card className="bg-dark text-white">
                                 <Card className="purpleBackground" style={{padding:'10px'}}>
                                     <br/>
-                                    <h1 className="centralText">Schools: (Indeed) Need for CS teachers</h1>
-                                    <a className="link centralText" target="empty" href="https://www.indeed.com/salaries/junior-software-engineer-Salaries">
-                                    Junior Software Engineer Salary
-                                    </a>
-                                    <h1 className="centralText">Teachers: Increase your salary and marketability</h1>
-                                    <a className="link centralText" target="empty" href="https://www.indeed.com/career/software-engineer/salaries">
-                                    Software Engineer Salary
-                                    </a>
+                                    <h5 className="centralText">As the world becomes increasingly more digital, a strong understanding of computation, networking, and systems interactions (hardware and software) becomes that much more important to students in future opportunities.</h5>
+                                    <p className="centralText">Source: <a className="linkLight" target="empty" href="https://medium.com/@andrewjjulian/my-school-added-a-k-12-computer-science-curriculum-your-school-should-too-bfac54f10129">&nbsp; Median</a></p>
+                                    <h5 className="centralText">The U.S. Bureau of Labor Statistics predicts that the number of jobs will increase by 4% for high school teachers and 4% for postsecondary computer science teachers between 2018 and 2028.</h5>
+                                    <p className="centralText">Source:<a className="linkLight" target="empty" href="https://www.indeed.com/career/software-engineer/salaries">&nbsp; Bureau of Labor Statistics</a></p>
                                     <br/>
                                 </Card>
                             </Card>
