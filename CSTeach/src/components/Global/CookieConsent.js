@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap'
+// import CookieConsent from "react-cookie-consent";
+
 
 class CookieConsent extends Component {
     constructor(props) {
