@@ -13,10 +13,17 @@ import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
 import { Staff } from './pages/Staff';
 import { HiddenRegistration } from './pages/HiddenRegistration';
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   return (
     <React.Fragment>
+      <CookieConsent
+        style={{ background: "#131520" }}
+        buttonStyle={{ color: "#4e503b", borderRadius: '10px', shadow:'10px', backgroundColor: 'white' }}
+        >
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
       <NavigationBar/>
         <Router>
           <Switch>

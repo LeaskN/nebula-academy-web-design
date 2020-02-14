@@ -10,6 +10,7 @@ import { WorkforceDevelopment } from './pages/WorkforceDevelopment'
 import { Universities } from './pages/Universities'
 import { Philanthropy } from './pages/Philanthropy'
 import { Staff } from './pages/Staff'
+import CookieConsent from "react-cookie-consent";
 
 // import { Staff } from './pages/Staff';
 
@@ -17,6 +18,12 @@ function App() {
   return (
     <React.Fragment>
       <NavigationBar/>
+      <CookieConsent
+        style={{ background: "#131520" }}
+        buttonStyle={{ color: "#4e503b", borderRadius: '10px', shadow:'10px', backgroundColor: 'white' }}
+      >
+      This website uses cookies to enhance the user experience.
+      </CookieConsent>
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
