@@ -18,10 +18,12 @@ import { Staff } from './pages/Staff';
 import { CSTC } from './pages/CSTC';
 import { SBLS } from './pages/SBLS';
 import { STEAMCoach } from './pages/STEAMCoach';
+import CookieConsent  from './components/Global/CookieConsent'
 
 function App() {
   return (
     <React.Fragment>
+      <CookieConsent/>
       <NavigationBar/>
         <Router>
           <Switch>

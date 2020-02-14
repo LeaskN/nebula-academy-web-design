@@ -167,3 +167,34 @@ code {
 .jumbotron {
   border-radius: 0px;
 }
+.cookieConsent{
+  min-height: 60px; 
+  position: fixed; 
+  bottom:0%;
+  width:100vw; 
+  background-color: #393838; 
+  color: white;
+  opacity: 1;
+  z-index: 1000000000000;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  line-height: 35px;
+}
+@media (max-width: 600px) {
+  .cookieConsent{
+    min-height: 60px; 
+    position: fixed; 
+    bottom:0%;
+    width:100vw; 
+    background-color: #393838; 
+    color: white;
+    opacity: 1;
+    z-index: 1000000000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px;
+    line-height: 35px;
+  }
+}
