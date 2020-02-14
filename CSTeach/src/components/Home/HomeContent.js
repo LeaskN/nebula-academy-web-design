@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import CTLEImage from '../../assets/clteAlpha.png'
 
 import './HomeContent.css';
 
@@ -22,35 +23,31 @@ render() {
                                 <Card.Body>
                                     <h3>There are 26k schools in the US and less than half teach Computer Science</h3>
                                     <Card.Text>
-                                        Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
+                                    Nebula Academy bridges the gap between academia and industry. We are a workforce accelerator that provides immersive training experience for school districts and teachers that want to not only provide their teachers with the skills necessary to educate the next generation of students, but also want to ensure the investment in training carries over into the classroom.The program provides teachers with the skills and tools to engage with the modern classroom of dynamic learning styles, and to leverage technology as a tool engaging the classroom in project-based experiential learning.
                                     </Card.Text>
-                                    <div id="spacer" ></div>
-                                    <Button className="bottom contentCentered"  href="/application" variant="primary">Apply Now</Button>
+                                    {/* <div id="spacer" ></div> */}
+                                    {/* <Button className="bottom contentCentered"  href="/application" variant="primary">Apply Now</Button> */}
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col xs={12} lg={6} xl={4} className="introRow1Column2">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Jobs Quote</h3>
+                                    <h3>Don't just take our word for it!</h3>
                                         <ul>
-                                            <li>Jobs Quote Description</li>
-                                        </ul>  
+                                            <blockquote>"Technology also has the power to transform teaching by ushering in a new model of connected teaching. This model links teachers to their students and to professional content, resources, and systems to help them improve their own instruction and personalize learning."</blockquote>
+                                        </ul>
+                                        <ul>Source: <a href="https://www.ed.gov/oii-news/use-technology-teaching-and-learning" className="linkLight">U.S. Department of Education </a></ul>  
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Build your own capacity to deliver summer/in school programs</h3>
+                                    <h3>Let us help you build your capacity</h3>
                                     <Card.Text>
-                                        Description needed: Summer camps bring in $ to schools?
+                                    Our model helps to ensure that schools remain current and competitive with industry needs, and so students can leverage core skills in computational thinking for any career path they choose. We support schools and teachers incorporate technology and STEAM-related curriculum in the classrooms, as well as incorporate STEAM programs, such as summer camps, to ensure students and teachers stay up-to-date with the latest content. 
                                     </Card.Text>
-                                    <p><>Sources: </>
-                                        <a className="link" target="empty" href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">bls.gov</a> 
-                                        <> and </>
-                                        <a className="link" target="empty" href="https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm">Glassdoor</a>
-                                    </p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -61,11 +58,12 @@ render() {
                                 <Col xl={6}>
                                     <Card className="introRowTile">
                                         <Card.Body>
-                                            <h3>Employment Opportunities</h3>
-                                            <Card.Text>
-                                            Filler Description Text
-                                            </Card.Text>
-                                            <a href="/curriculum" className="linkLight">Click here to read more about curriculum.</a>
+                                            <h3>Employment Statistics</h3>
+                                            <blockquote>"Only six states have strategic plans for K-12 computer science."</blockquote>
+                                            <blockquote>"Only 22 states have K-12 computer science standards."</blockquote>
+                                            <p>Source: <a href="https://code.org/files/2018_state_of_cs.pdf" className="linkLight">Code.org </a></p>
+                                            <blockquote>"I can say at the K-12 level there's a dramatic shortage of computer science teachers."</blockquote>
+                                            <p>Source: <b>Jake Baskin, executive director of the Computer Science Teachers Association (CSTA). </b></p>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -74,9 +72,12 @@ render() {
                                         <Card.Body>
                                             <h3>CTLE</h3>
                                             <Card.Text>
-                                            Filler CTLE Description TEXT
+                                            As a New York state-approved provider of Continuing Teacher and Leader Education (CTLE) hours, Nebula Academy can support your professional development and training needs. 
                                             </Card.Text>
                                             <a href="/careers" className="linkLight">Click here to read more about job readiness.</a>
+                                            <div className="contentCentered" style={{padding: '20px', width:'100%'}}>
+                                                <img src={CTLEImage} style={{height: '150px', filter:'invert(100%)' }} alt="ctle"></img>
+                                            </div>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -104,7 +105,7 @@ render() {
                             <Card className="introRowTile">
                                 <Card.Body>
                                     <h3>Scholarships</h3>
-                                    <p>(CHECK THIS TEXT) Building a career in today's modern workforce is challenging, and sometimes it can be overwhelming to move through change. Our team of on-site and online personnel are there to help everyone be successful. From teamwork to coaching, Nebula Academy programs teach more than just tech skills. We equip participants with the ability to think critically, think computationally, build strong problem-solving skills, how to overcome adversity, and to build confidence in entering careers in a modern workforce. Learn about our scholarships and how you can begin your journey to build a sustainable career in Information Technology.</p>
+                                    <p>Scholarships to our programs will be available soon. Check back soon to learn more details on how you can apply and be eligible for scholarships!</p>
                                     <p>Learn more about Scholarship opportunities:</p>
                                     <div id="spacer" ></div>
                                     <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
@@ -115,7 +116,7 @@ render() {
                             <Card className="introRowTile">
                                 <Card.Body>
                                     <h3>More Info</h3>
-                                    <p>As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning careers, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com</p> 
+                                    <p>As you navigate our website we have included details regarding our various programs, what to expect from our curriculum, the certifications we offer, and how we will support your continued success in implementing computer science technology in the classroom. If you have additional questions that we have not answered please reach out to our team at succeed@nebulaacademyny.com</p> 
                                 </Card.Body>
                             </Card>
                         </Col>

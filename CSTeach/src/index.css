@@ -198,3 +198,11 @@ code {
     line-height: 35px;
   }
 }
+blockquote{
+  border-left: 4px solid white;
+  font-family: 'Montserrat';
+  margin: 5px;
+  font-style: italic;
+  padding-left: 7px;
+  padding-right: 7px;
+}
