@@ -19,6 +19,43 @@ class applicationContent extends Component {
         .then(res => console.log(res))
     }
     putData(e) {
+        e.preventDefault();
+        if(this.state.Contact_Number__c){
+            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+            if(newNumber.length === 10 || newNumber.length === 11){
+                this.setState({
+                    Contact_Number__c: newNumber
+                })
+            } else {
+                alert('Please correct your phone number.')
+                return
+            }
+        } else if (this.state.How_did_you_hear_about_our_program__c === 'Other'){
+            if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
+                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+            }
+        } else if (this.state.Highest_education_level__c === 'Other'){
+            if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
+                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+            }
+        } else if (this.state.Primary_intentions_for_enrolling__c === 'Other'){
+            if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
+                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+            }
+        } else if (this.state.Ethnicity__c === 'Other'){
+            if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+            }
+        } else if (this.state.Gender__c === 'Other/Prefer to self-describe'){
+            if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+            }
+        } else if(this.state.Email_ID__c){
+            if(!this.state.Email_ID__c.indexOf('@') || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
+                alert('There is an issue with your email address. Please check for typos to continue.');
+                return;
+            }
+        }
         fetch(`http://23.96.61.174:3000/application`, {
             method: 'POST', 
             mode: 'cors', 
@@ -33,34 +70,18 @@ class applicationContent extends Component {
         })
         .then((response) => response.json())
         .then((response) => {
-            console.log('Success:', response);
+            if(response['message'].indexOf('Required fields are missing') > -1){
+                alert('Please complete the application by filling in missing fields.')
+            } else if (response['message'].indexOf('Already registered for this program') > -1){
+                alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+            }
+            console.log('Response:', response);
         })
         .catch((error) => {
             console.error('Error:', error);
+            
         })
     }
-    handleSubmit(event) {
-        console.log(this.state.testArea)
-        fetch(`http://23.96.61.174:3000/application`, {
-            method: 'POST', 
-            mode: 'cors', 
-            cache: 'no-cache', 
-            credentials: 'same-origin', 
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            redirect: 'follow', 
-            referrerPolicy: 'no-referrer',
-            body: this.state.testArea
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            console.log('Success:', response);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        })
-    }   
     arrayRemove(arr, value){
         return arr.filter(function(ele){
             return ele !== value;
@@ -142,7 +163,7 @@ class applicationContent extends Component {
                                     <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com or by phone at: 631-468-7475.</p>
                             </Col>
                         </Row>
-                        <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
+                        <Form className="manualContainer" >
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>First</Form.Label>
@@ -450,15 +471,12 @@ class applicationContent extends Component {
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
                                 </Form.Control>
                             </Form.Group>
-                            <Button variant="secondary" type="submit">
-                                Submit
-                            </Button>
+                            <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Put</Button>
                         </Form>
                     </Col>
                 </Row>
-                <p style={{maxWidth:"80vw", wordWrap: "break-word"}} >JSON: {this.fixJSON()}</p>
+                <p style={{maxWidth:"80vw", wordWrap: "break-word"}}>JSON: {this.fixJSON()}</p>
                 <Button variant="secondary" type="submit" onClick={(e) => this.getData(e)}>Get</Button>
-                <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Put</Button>
             </Container>
         )
     }
