@@ -1,7 +1,7 @@
 .CSTCJumbotron{
     background-image: url('../../../assets/MicrosoftDiscoveryDay2_1.jpg');
     background-size: cover;
-    color: #1E2125;
+    color: #ccc;
     z-index: 02;
     height:250px;
     position: relative;

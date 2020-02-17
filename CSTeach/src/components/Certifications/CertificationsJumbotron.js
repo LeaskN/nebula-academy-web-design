@@ -11,8 +11,8 @@ export const CertificationsJumbotron = () => (
           <p>We offer 2 certifications: STEAM Coach Certification and Computer Science Teaching Certification.</p>
           <p>Learn more about our programs here!</p>
           <div className="contentCentered" style={{display:'flex' }}>
-            <Button href="http://csteach.nebulaacademy.com/STEAMCoach">STEAM Coach</Button>
-            <Button href="http://csteach.nebulaacademy.com/cstc">CS Teaching</Button>
+            <Button href="/STEAMCoach">STEAM Coach</Button>
+            <Button href="/cstc">CS Teaching</Button>
           </div>
           <br/>
           <p style={{margin:'0px'}}>Participants who take our programs will also earn Certificate of completions for each program they complete and can also earn CTLE credits, if applicable.</p>

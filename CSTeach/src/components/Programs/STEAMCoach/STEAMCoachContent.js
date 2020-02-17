@@ -31,7 +31,8 @@ class STEAMCoachContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>short description</h1>
+                    <h1>What is the STEAM Coach Certification?</h1>
+                    <p>The certification begins with the 2 day Science Behind Learning Certification training and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments, learn how to build an understanding of the expectations of such a learning environment and experience, how the role and behavior of students has to change, as well as the role and behavior of the teacher, in order to ensure success. Most importantly, participants will have a visualization of what the classroom has to change into and what it looks like when being done successfully. Lastly, participants will learn about building team collaboration so that each member has a clear understanding of the purpose of their work together.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -39,7 +40,7 @@ class STEAMCoachContent extends Component {
                                         <Card.Title 
                                             onClick={() => this.button1()} 
                                             className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
-                                            Description
+                                            Program Description
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
@@ -65,7 +66,7 @@ class STEAMCoachContent extends Component {
                         <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Description:</h1>
+                                            <h1>Program Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
                                                     <p>The Science Behind Learning Certification program is an in-person professional development program dedicated to Education sector professionals. This two-day program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive outcomes and to create more brain-friendly learning environments and experiences.</p>
