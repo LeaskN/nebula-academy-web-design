@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Carousel } from 'react-bootstrap';
+import { Row, Col, Carousel, Button } from 'react-bootstrap';
 import './CertificationsContent.css'
 import AWSSlide1 from '../../assets/1_AWS_home.jpg';
 import AWSSlide2 from '../../assets/1_AWS_home.jpg';
@@ -65,6 +65,20 @@ class CertificationsContent extends Component {
             <React.Fragment>
                 <Row>
                     <Col xs={1}></Col>
+                    <Col xs={10} style={{textAlign:'center'}}>
+                        <p>We offer 2 certifications: STEAM Coach Certification and Computer Science Teaching Certification.</p>
+                        <p>Learn more about our certification programs here by clicking below</p>
+                        <div className="contentCentered" style={{display:'flex' }}>
+                            <Button variant="secondary" href="/STEAMCoach">STEAM Coach</Button>
+                            <Button variant="secondary" href="/cstc">CS Teaching</Button>
+                        </div>
+                        <br/>
+                        <p style={{margin:'0px'}}>Participants who take our programs will also earn Certificate of completions for each program they complete and can also earn CTLE credits, if applicable.</p>
+                    </Col>
+                    <Col xs={1}></Col>
+                </Row>
+                {/* <Row>
+                    <Col xs={1}></Col>
                     <Col xs={10}>
                         <h1>The value of a blended education model:</h1>
                         <p>language for this needs to be developed</p>
@@ -92,7 +106,7 @@ class CertificationsContent extends Component {
                         <p>The primary focus of this program is to have participants land jobs in coding & technology oriented roles. There are different paths that one can take to achieve this goal but the most consistent is through internship opportunities. We are partnered with many local companies who are looking for Software Engineering interns. These roles frequently lead to job placement within that company or open up new avenues towards full time employment elsewhere.</p>
                     </Col>
                     <Col xs={1}></Col>
-                </Row>
+                </Row> */}
             </React.Fragment>
         )
     }

@@ -22,7 +22,7 @@ render() {
             <React.Fragment>
                 <Container>
                     <Row className="sections">
-                        <Col className={this.state.selectedSection !== "" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/" onClick={(e)=> this.focused(e)} >Teaching Model</a></Col>
+                        <Col className={this.state.selectedSection !== "" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/" onClick={(e)=> this.focused(e)} >Methodology</a></Col>
                         <Col className={this.state.selectedSection !== "Program" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/programs" onClick={(e)=> this.focused(e)}>Programs</a></Col>
                         <Col className={this.state.selectedSection !== "Curriculum" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/Curriculum" onClick={(e)=> this.focused(e)}>Curriculum</a></Col>
                         <Col className={this.state.selectedSection !== "Certifications" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/Certifications" onClick={(e)=> this.focused(e)}>Certifications</a></Col>

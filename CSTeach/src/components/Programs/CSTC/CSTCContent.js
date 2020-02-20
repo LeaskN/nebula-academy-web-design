@@ -35,7 +35,6 @@ class CSTCContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>What is the Computer Science Teaching Certification (CSTC)?</h1>
                     <p>The certification begins with the 2 day Science Behind Learning Certification training and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments, learn how to build an understanding of the expectations of such a learning environment and experience, how the role and behavior of students has to change, as well as the role and behavior of the teacher, in order to ensure success. Most importantly, participants will have a visualization of what the classroom has to change into and what it looks like when being done successfully. Lastly, participants will learn about building team collaboration so that each member has a clear understanding of the purpose of their work together.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
@@ -50,7 +49,7 @@ class CSTCContent extends Component {
                                         <Card.Title 
                                             onClick={() => this.button2()} 
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
-                                            Program objectives
+                                            Program Objectives
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
@@ -79,12 +78,7 @@ class CSTCContent extends Component {
                                             <h1>Program Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p><b>Collaboration:</b> Are students required to share responsibility and make substantive decisions with other people? Is their work interdependent?</p>
-                                                    <p><b>Knowledge Construction:</b> Are students required to construct and apply knowledge? Is that knowledge interdisciplinary?</p>
-                                                    <p><b>Real-World Problem Solving & Innovation:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
-                                                    <p><b>Self-Regulation:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
-                                                    <p><b>Use of ICT for learning:</b> Does the learning activity require solving authentic, real-world problems? Are students’ solutions implemented in the real world?</p>
-                                                    <p><b>Skilled Communication:</b> Are students required to communicate their own ideas regarding a concept or issue? Must their communication be supported with evidence and designed with a particular audience in mind?</p>
+                                                    Through our Computer Science Certification, we help students and teachers become computer science instructors and teachers through a structure of blended learning programs within traditional classroom content, as well as a plan and implementation model to incorporate College Board courses for AP Computer Science Principals, AP Computer Science-A, and advanced computer science electives that support Web Development, Cybersecurity, Data Science, and Machine Learning. 
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -138,8 +132,7 @@ class CSTCContent extends Component {
                                     <Card.Body>
                                             <h1>Certification</h1>
                                             <Row>
-                                                <p>All of our programs will be evaluated for accreditation from NCCRS in Summer 2020.  Participants who take our programs will be grandfathered in to receive accreditation, if and when our programs are vetted. Accreditation is not determined by Nebula Academy. Participants’ organization will determine if the participant will receive accreditation.</p>
-                                                {/* <p>Click here to learn more about our accreditation process (link to accreditation chapter). </p> */}
+                                                <p>Participants will earn a Computer Science Teaching Certification, as well as CTLE credits is applicable. </p>
                                             </Row>
                                     </Card.Body>
                             </Card>: null}

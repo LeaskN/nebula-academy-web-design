@@ -31,7 +31,6 @@ class SBLSContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>short description</h1>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -39,13 +38,13 @@ class SBLSContent extends Component {
                                         <Card.Title 
                                             onClick={() => this.button1()} 
                                             className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
-                                            Description
+                                            Program Description
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.button2()} 
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
-                                            Program objectives
+                                            Program Objectives
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
@@ -65,10 +64,10 @@ class SBLSContent extends Component {
                         <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Description:</h1>
+                                            <h1>Program Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>The Science Behind Learning Certification program is an in-person professional development program dedicated to Education sector professionals. This two-day program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive outcomes and to create more brain-friendly learning environments and experiences.</p>
+                                                    <p>The Science Behind Learning Certification program is a 2-day in-person professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly learning environments and experiences.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>

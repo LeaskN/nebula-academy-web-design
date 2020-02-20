@@ -3,8 +3,7 @@
     background-size: cover;
     color: #ccc;
     z-index: 100;
-    min-height: 250px;
     z-index: -2;
     margin: 0px;
-    padding: 20px !important;
+    min-height: 250px;
 }
