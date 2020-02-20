@@ -13,7 +13,10 @@ export const HomeContent = () => (
                             <Card.Text>
                                 The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concepts, independent of specific technical roles.
                             </Card.Text>
-                            <Button href="/registration" variant="warning">Register Now</Button>
+                            <div className="contentCentered">
+                                <Button style={{margin:'10px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" variant="warning">Live Virtual Registration</Button>
+                                <Button style={{margin:'10px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" variant="warning">In Person Registration</Button>
+                            </div>
                         </Card.Body>
                     </Card>
                 </Col>

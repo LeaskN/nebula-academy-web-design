@@ -1,9 +1,6 @@
 import React, { Component }from 'react';
-import { 
-    // Form, Button,
-    Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import Iframe from 'react-iframe';
-// import fire from '../../fire';
 import './RegistrationContent.css'
 
 class registrationContent extends Component {
@@ -52,40 +49,67 @@ class registrationContent extends Component {
         // fire.database().ref('messages').push( exportData );
         this.setState({}); // <- clear the input
     }
+
     render() {
         return (
             <Container>
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: Part 1 is the following form on this page. Part 2 is an interview to understand a participants motivations, commitments, & capacity.</h2>
-                        </Row>
-                        <hr></hr>
-                        <Row>
                             <Col className="alignCenter">
-                                <h3>Completing online registration:</h3>
-                                    <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
+                                <br/>
+                                <p style={{textAlign:'center'}}>Select your program below.</p>
+                                <p style={{textAlign:'center'}}>Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
                             </Col>
                         </Row>
-                        <hr></hr>
                         <Row>
-                            <Col className="formContainer">
-                                <Iframe url="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:AWS%20Academy%20Programs"
-                                    width="850px"
-                                    height="800px"
+                            
+                        </Row>
+                        <hr></hr>
+
+                        <Row>
+                            <Col xs={12} lg={6} >
+                                <br/>
+                                <h3>Academy Cloud Foundations - In Person</h3>
+                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                    src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
+                                    width="95%"
                                     id="myId"
                                     className="form"
                                     display="initial"
                                     position="relative"
-                                    />
+                                    height="400px">
+                                </Iframe>	
+                            </Col>
+                            <Col xs={12} lg={6}>
+                                <br/>
+                                <h3>Academy Cloud Foundations - Virtual</h3>
+                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                    src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" 
+                                    width="95%"
+                                    id="myId"
+                                    className="form"
+                                    display="initial"
+                                    position="relative"
+                                    height="400px">
+                                </Iframe>	
+                            </Col>
+                            <Col xs={12} lg={12}>
+                                <br/>
+                                <h3>Academy Cloud Foundations - Live Virtual</h3>
+                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                    src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" 
+                                    width="95%"
+                                    id="myId"
+                                    className="form"
+                                    display="initial"
+                                    position="relative"
+                                    height="400px">
+                                </Iframe>	
                             </Col>
                         </Row>
                         <br/>       
-                        
-                        
-                        
-                        
-                        
+
                         {/* <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
                             <Form.Row>
                                 <Form.Group as={Col}>
