@@ -68,12 +68,12 @@ class registrationContent extends Component {
                         <hr></hr>
 
                         <Row>
-                            <Col xs={12} lg={6} >
+                            <Col className="registrationPadding" xs={12} lg={6}>
                                 <br/>
                                 <h3>Academy Cloud Foundations - In Person</h3>
-                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
-                                    width="95%"
+                                    width="100%"
                                     id="myId"
                                     className="form"
                                     display="initial"
@@ -81,12 +81,12 @@ class registrationContent extends Component {
                                     height="400px">
                                 </Iframe>	
                             </Col>
-                            <Col xs={12} lg={6}>
+                            <Col className="registrationPadding" xs={12} lg={6}>
                                 <br/>
                                 <h3>Academy Cloud Foundations - Virtual</h3>
-                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" 
-                                    width="95%"
+                                    width="100%"
                                     id="myId"
                                     className="form"
                                     display="initial"
@@ -94,12 +94,12 @@ class registrationContent extends Component {
                                     height="400px">
                                 </Iframe>	
                             </Col>
-                            <Col xs={12} lg={12}>
+                            <Col className="registrationPadding" xs={12} lg={12}>
                                 <br/>
                                 <h3>Academy Cloud Foundations - Live Virtual</h3>
-                                <Iframe style={{padding:'0px', margin:'0px'}}
+                                <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" 
-                                    width="95%"
+                                    width="100%"
                                     id="myId"
                                     className="form"
                                     display="initial"
