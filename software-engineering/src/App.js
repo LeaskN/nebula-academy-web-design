@@ -17,6 +17,10 @@ import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
 import CookieConsent from "react-cookie-consent";
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 function App() {
   return (
     <React.Fragment>
