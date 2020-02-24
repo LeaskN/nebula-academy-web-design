@@ -6,8 +6,6 @@ export const ScholarshipsFooter = () => (
   <Container className="fullScholarshipsFooter">
     <Jumbotron>
       <h1 className="contentCentered">Build your teaching capacity with Nebula Academy</h1><br/>
-      
-      <p>
         <Row>
           <Col className="contentCentered">
             <Button href="/curriculum" variant="primary">Curriculum</Button>
@@ -16,7 +14,6 @@ export const ScholarshipsFooter = () => (
             <Button href="/certifications" variant="primary">Apply</Button>
           </Col>
         </Row>
-      </p>
     </Jumbotron>
   </Container>
 )
