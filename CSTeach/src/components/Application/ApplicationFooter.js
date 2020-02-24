@@ -11,11 +11,9 @@ export const ApplicationFooter = () => (
         <Row>
           <Col className="contentCentered">
           <div id="spacer" ></div>
-            <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
           </Col>
           <Col className="contentCentered">
             <div id="spacer" ></div>
-            <Button className="bottom contentCentered" href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
       </p>

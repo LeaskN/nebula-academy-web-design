@@ -4,15 +4,13 @@ import { Home } from './pages/Home';
 import { Programs } from './pages/Programs';
 import { NoMatch } from './pages/NoMatch';
 import { Curriculum } from './pages/Curriculum';
-import { Application } from './pages/Application';
+import { Register } from './pages/Register';
 import { Certifications } from './pages/Certifications';
 import { Careers } from './pages/Careers';
 import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
-import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
 import { GuestSpeakers } from './pages/GuestSpeakers';
-import { HiddenApplication } from './pages/HiddenApplication';
 import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
 import { CSTC } from './pages/CSTC';
@@ -36,10 +34,9 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path ="/Programs" component={Programs}/>
             <Route path ="/curriculum" component={Curriculum}/>
-            <Route path ="/application" component={Application}/>
+            <Route path ="/Register" component={Register}/>
             <Route path ="/certifications" component={Certifications}/>
             <Route path ="/careers" component={Careers}/>
-            <Route path ="/scholarships" component={Scholarships}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
             <Route path ="/TryCoding" component={TryCoding}/>
@@ -47,11 +44,8 @@ function App() {
             <Route path ="/CSTC" component={CSTC}/>
             <Route path ="/SBLS" component={SBLS}/>
             <Route path ="/STEAMCoach" component={STEAMCoach}/>
-            <Route path ="/HiddenApplication" component={HiddenApplication}/>
+            <Route path ="/Register" component={Register}/>
             <Route component = {NoMatch}/>
-            {/*
-            <Route path ="/Apply" component={Apply}/>
-            */}
           </Switch>
         </Router>
         <Footer/>

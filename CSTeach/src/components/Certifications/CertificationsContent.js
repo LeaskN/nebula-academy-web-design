@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import { Row, Col, Carousel, Button } from 'react-bootstrap';
+import React, { Component} from 'react';
+import { Row, Col, Carousel, Button, Container  } from 'react-bootstrap';
 import './CertificationsContent.css'
+import prices from '../../assets/programPrices.png'
+import micro from '../../assets/micro.png'
+import tello from '../../assets/tello.png'
+import surface from '../../assets/surface.png'
 import AWSSlide1 from '../../assets/1_AWS_home.jpg';
 import AWSSlide2 from '../../assets/1_AWS_home.jpg';
 import AWSSlide3 from '../../assets/1_AWS_home.jpg';
@@ -77,36 +81,42 @@ class CertificationsContent extends Component {
                     </Col>
                     <Col xs={1}></Col>
                 </Row>
-                {/* <Row>
-                    <Col xs={1}></Col>
-                    <Col xs={10}>
-                        <h1>The value of a blended education model:</h1>
-                        <p>language for this needs to be developed</p>
-                    </Col>
-                    <Col xs={1}></Col>
-                </Row>
-                <Row>
-                <React.Fragment>
-                <br/>
-                <Row style={{marginLeft: '3vw', marginRight: '3vw'}}>
-                    <Col className="CertificationCarouselCard" style={{ borderColor: '#2670D1'}}>
-                            <Carousel interval="10000000">
-                                {this.createAWSSlides()}
-                            </Carousel>
-                    </Col>
-                </Row>
-            </React.Fragment>
-                </Row>
-                <Row>
-                    <Col xs={1}></Col>
-                    <Col xs={10}>
-                        <h1>Relevant quote (Edu leader?)</h1>
-                        <p>The primary focus of this program is to have participants land jobs in coding & technology oriented roles. There are different paths that one can take to achieve this goal but the most consistent is through internship opportunities. We are partnered with many local companies who are looking for Software Engineering interns. These roles frequently lead to job placement within that company or open up new avenues towards full time employment elsewhere.</p>
-                        <h1>Description as to why the evolution of education is important</h1>
-                        <p>The primary focus of this program is to have participants land jobs in coding & technology oriented roles. There are different paths that one can take to achieve this goal but the most consistent is through internship opportunities. We are partnered with many local companies who are looking for Software Engineering interns. These roles frequently lead to job placement within that company or open up new avenues towards full time employment elsewhere.</p>
-                    </Col>
-                    <Col xs={1}></Col>
-                </Row> */}
+                <Container>
+                <Row  style={{justifyContent: 'center'}}>
+                        <img className="staticCard" width="80%" src={prices}  alt="prices"></img>
+                    </Row>
+                    <h1>Optional STEAM Coach Kit:</h1>
+                    <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
+                            <img alt="surface" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={surface}></img>
+                        </Col>
+                        <Col xs={9}>
+                        <h3><b>Microsoft Surface Go</b></h3>
+                        <p>64GB / Intel 4415Y / 4GB RAM / WiFi</p>
+                        <p>New Surface Go is perfect for all your daily tasks, giving you laptop performance, tablet portability, and  a stunning touchscreen with the power of Windows 10 Home in S mode. Surface Go Signature Type Keyboard included.</p>
+                        </Col>
+                    </Row>
+                    <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
+                            <img alt="tello" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={tello}></img>
+                        </Col>
+                        <Col xs={9}>
+                        <h3><b>Tello Drone</b></h3>
+                        <p>14-Core processor / Collision Detection / Propeller Protection / 80 Grams / Image Stabilization / 5 MP Photos / 13 min flight time / 100m Image Transmission Distance / 720p HD Transmission /Tello App / Controller / Smartphone VR Compatibility</p>
+                        <p>Perform flying stunts, shoot quick videos with EZ Shots, and learn about drones with coding education. Get yourself a Tello to find out just how awesome flying a drone can be!</p>
+                        </Col>
+                    </Row>
+                    <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
+                        <Col style={{margin:'auto'}} xs={12} md={3}>
+                            <img alt="micro" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={micro}></img>
+                        </Col>
+                        <Col xs={9}>
+                        <h3><b>BBC’s Micro:bit</b></h3>
+                        <p>52.0mm x 43.0mm x 11.0mm / 2.0" x 1.7" x 0.4" / Product Weight: 9.0g / 0.3oz / accelerometer / compass / processor / radio & Bluetooth antenna / battery socket / 2 0 pin edge connector / USB connector / LED lights</p>
+                        <p>Designed specifically for kids and beginners, the Micro:bit is a pocket-sized computer that you can code, customize and control to bring your digital ideas, games and apps to life!</p>
+                        </Col>
+                    </Row>
+                </Container>
             </React.Fragment>
         )
     }

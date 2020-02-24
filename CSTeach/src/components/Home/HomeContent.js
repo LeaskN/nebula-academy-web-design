@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 import CTLEImage from '../../assets/clteAlpha.png'
 
 import './HomeContent.css';
@@ -103,9 +103,9 @@ render() {
                                 <Card.Body>
                                     <h3>Scholarships</h3>
                                     <p>Scholarships to our programs will be available soon. Check back soon to learn more details on how you can apply and be eligible for scholarships!</p>
-                                    <p>Learn more about Scholarship opportunities:</p>
+                                    {/* <p>Learn more about Scholarship opportunities:</p>
                                     <div id="spacer" ></div>
-                                    <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
+                                    <Button className="bottom contentCentered" href="/scholarships" disabled variant="secondary">Scholarships</Button> */}
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -12,7 +12,6 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="/trycoding">Welcome</Nav.Link></Nav.Item>
                     <NavDropdown title="Programs" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/sbls">Science Behind Learning</NavDropdown.Item>
                         <NavDropdown.Item href="/STEAMCoach">STEAM Coach</NavDropdown.Item>
@@ -26,7 +25,6 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/">CS Program</NavDropdown.Item>
                         <NavDropdown.Item href="/">Educator Keynote Speaking</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
                     <Button href="/register" variant="success">Register</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
