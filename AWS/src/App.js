@@ -15,6 +15,10 @@ import { Staff } from './pages/Staff';
 import { HiddenRegistration } from './pages/HiddenRegistration';
 import CookieConsent from "react-cookie-consent";
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 function App() {
   return (
     <React.Fragment>
