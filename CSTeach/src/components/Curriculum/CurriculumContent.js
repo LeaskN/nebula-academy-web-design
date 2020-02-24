@@ -47,8 +47,8 @@ class CurriculumContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>Curriculum for the future: teach what's needed to your students</h1>
-                    <p>Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices.</p>
+                    <h1>Curriculum designed to support student centered outcomes: Addressing the diverse learning needs of a modern classroom.</h1>
+                    <p>Our curriculum is designed by applying cognitive neuroscience research, our own experience with working with students and educators, blended with real-world industry experience. Our instructors teach across populations of students, educators, and adults in the workforce. This model brings greater value to our programs and to our participants. Our content and teaching model is continuously improved through feedback from students, educators, and our industry partners.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -62,7 +62,7 @@ class CurriculumContent extends Component {
                                         <Card.Title 
                                             onClick={() => this.button2()} 
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
-                                            Budgets & Timelines to support your capabilities
+                                            Budgets & Timelines to Support your Capabilities
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
@@ -74,13 +74,13 @@ class CurriculumContent extends Component {
                                         <Card.Title 
                                             onClick={() => this.button4()}
                                             className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
-                                            Execution on planned strategy
+                                            Execution on Strategy
                                             </Card.Title>
                                         <hr className="noMargin"/>
                                         <Card.Title 
                                             onClick={() => this.button5()}
                                             className={this.state.toggle.button5 ? " subtleButton toggled" : "subtleButton"}>
-                                            Measure outcomes & build on success
+                                            Measuring Outcomes and Building on Success
                                             </Card.Title>
                                     </Card.Body>
                             </Card>
@@ -88,67 +88,54 @@ class CurriculumContent extends Component {
                         <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Basics</h1>
+                                            <h1>Design the Strategy:</h1>
                                             <Row>
+                                            <h3>Let us help you build a successful strategy to implement computer science in your school or district</h3>
                                                 <Col xs={10}md={12}>
-                                                    <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
-                                                    <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
-                                                    <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
+                                                    <p>With technology innovation changing across every industry, our workforce needs are shifting. This shift requires downstream changes in how and what we teach students to prepare them for the modern workplace. Fewer than half of the schools across the nation are able to offer computer science education to their students. The challenges schools face is the ability to build teacher confidence and capacity in teaching new skills, skills that require a higher level of thinking. Skills that help students think like computer scientists. Learning to code teaches problem solving and critical thinking, and prepares students to better understand how technology can impact businesses and society in positive ways.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Budgets & Timelines to support your capabilities</h1>
+                                        <h1>Budgets & Timelines to Support your Capabilities</h1>
                                         <Row>
                                             <Col xs={10} md={12}>
-                                                <p>Budgets & Timelines to support your capabilities contains topics including, but not limited to: functions, scope, debugging, the basic accumulator pattern, & higher order functions.</p>
-                                                <p>These topics allow us to gain an understanding of how JavaScipt works which in turn enables us to build robust applications.</p>
-                                                <p>We will learn about HTML, CSS, DOM manipulation, event listeners, and how JavaScript can elevate your application. Once we have learned these previous topics we will deploy some static websites.</p>
-                                                <p>Every topic that is covered will be practiced in a project which will be accessible on GitHub and usually deployed as a website for potential employers to view.</p>
-                                                <p>Without a traditional Computer Science education we understand that projects are what set our participants apart from the crowd, specifically traditional students who don't have many deployed projects.</p>
+                                                <p>Every customer has unique budget structures that support new initiatives and long-term planning goals. Understanding cost models for implementation along with current capacity and future capacity allows for a strategy that is structured for long term success.</p>
                                             </Col>
                                         </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Building Capacity</h1>
+                                        <h1>Building Capacity:</h1>
                                         <Row>
                                             {/* <Col xs={1} md={3}>
                                                 <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                             </Col> */}
                                             <Col xs={10} md={12}>
-                                                <p>React is a front-end web technology which enables us to create super complex websites. It stems from a technology that Facebook created and eventually evolved into React. One of the primary features of React is that it allows developers to create large applications which can change data without reloading the page.</p>
-                                                <p>To experience this go to Facebook and click around. Notice that the top bar rarely updates. This creates a more fluid web experience and allows us to create more powerful apps.</p>
-                                                <p>Once our participants have learned how to work with React they will immediately look to create multiple projects. The first of which will be portfolios which will link to previously created projects, bios, and resumes.</p>
-                                                <p>There are many ways to go from here but a participants projects can represent what they are interested in. We teach frontend, backend, and fullstack but if a participant is more inclined towards one of these three they are invited to focus on that.</p>
-                                                <p>The bottom lines are employment and payment, knowing React can land someone a high-paying job in a short amount of time.</p>
+                                                <p>We support customers in better understanding resource needs to build long-term computer science programs. Culture changes may need to be considered in order to ensure long term success and the integration of computer science across K-12. Through our coaching model and industry experience  our instructors help customers reach their goals and overall vision of what success looks like.</p>
                                             </Col>
                                         </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Execution on planned strategy</h1>
+                                            <h1>Execution on Strategy:</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
-                                                    <p>Aside from knowing powerful technologies we focus on Execution on planned strategy. Our instructors are AWS Certified and our institution is an AWS Academy which means we are capable of teaching students to AWS Execution on planned strategy.</p>
-                                                    <p>Aligning our content with the AWS Cloud Practitioner exam is another way that our students get a step up above the competition. AWS Execution on planned strategy are the most sought after in the technology fields today and put participants on the right track to climbing up to higher paying jobs and more stimulating roles.</p>
-                                                    <p>Once again this all comes down to jobs and payment, working with us makes participants ready to pass the AWS Cloud Practitioner exam which leads to faster employment and higher pay.</p>
+                                                    <p>Through collaboration with customers we design a strategy that defines a vision, strategic goals, budget alignment, and time-line. Through a multi-year plan, we introduce computer science at a pace that fits our customers’ culture and capacity to successfully deliver.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Measure outcomes & build on success</h1>
+                                            <h1>Measuring Outcomes and Building on Success:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
-                                                <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
-                                                <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
+                                                    <p>As a research focused organization, we offer an assessment structure for both teachers and students to evaluate and measure learning outcomes throughout our engagement model. This structure creates the opportunity to provide continuous improvement in the overall computer science initiative. Demonstrating success is accomplished through the metrics that we set with customers, which align with organization’s overall goals, and what success looks like for each customer and each engagement.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>

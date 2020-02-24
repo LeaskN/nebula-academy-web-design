@@ -33,20 +33,21 @@ render() {
                         <Col xs={12} lg={6} xl={4} className="introRow1Column2">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Don't just take our word for it!</h3>
-                                        <ul>
+                                    <h3>Going beyond "Hour of Code"</h3>
+                                        {/* <ul>
                                             <blockquote>"Technology also has the power to transform teaching by ushering in a new model of connected teaching. This model links teachers to their students and to professional content, resources, and systems to help them improve their own instruction and personalize learning."</blockquote>
-                                        </ul>
-                                        <ul>Source: <a href="https://www.ed.gov/oii-news/use-technology-teaching-and-learning" className="linkLight">U.S. Department of Education </a></ul>  
+                                        </ul> */}
+                                        {/* <ul>Source: <a href="https://www.ed.gov/oii-news/use-technology-teaching-and-learning" className="linkLight">U.S. Department of Education </a></ul>   */}
+                                        <p>Our goal is to help schools go beyond Hour of Code, and design computer science programs that take students from K-12. Programs that build foundational skills and scaffolding to provide students with independent learning options and team based experiential learning programs.</p>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Let us help you build your capacity</h3>
+                                    <h3>Building Capacity for Computer Science</h3>
                                     <Card.Text>
-                                    Our model helps to ensure that schools remain current and competitive with industry needs, and so students can leverage core skills in computational thinking for any career path they choose. We support schools and teachers incorporate technology and STEAM-related curriculum in the classrooms, as well as incorporate STEAM programs, such as summer camps, to ensure students and teachers stay up-to-date with the latest content. 
+                                    Our model helps schools remain current and competitive with industry needs, so students can leverage core skills in computational thinking for any career path they choose. We support districts in evaluating technology and STEAM-related curriculum, how to incorporate STEAM programs, design after school and summer camps, and help teachers stay up-to-date with STEM/STEAM skills.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
