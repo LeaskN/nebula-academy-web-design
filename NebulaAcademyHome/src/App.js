@@ -12,6 +12,10 @@ import { Philanthropy } from './pages/Philanthropy'
 import { Staff } from './pages/Staff'
 import CookieConsent from "react-cookie-consent";
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 // import { Staff } from './pages/Staff';
 
 function App() {
