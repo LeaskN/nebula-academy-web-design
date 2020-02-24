@@ -92,7 +92,7 @@ class CurriculumContent extends Component {
                                             <Row>
                                             <h3>Let us help you build a successful strategy to implement computer science in your school or district</h3>
                                                 <Col xs={10}md={12}>
-                                                    <p>With technology innovation changing across every industry, our workforce needs are shifting. This shift requires downstream changes in how and what we teach students to prepare them for the modern workplace. Fewer than half of the schools across the nation are able to offer computer science education to their students. The challenges schools face is the ability to build teacher confidence and capacity in teaching new skills, skills that require a higher level of thinking. Skills that help students think like computer scientists. Learning to code teaches problem solving and critical thinking, and prepares students to better understand how technology can impact businesses and society in positive ways.</p>
+                                                    <p>Our engagement begins by meeting with school leadership teams tasked to define Computer Science strategy. Understanding the culture and goals of our customers is our top priority so that we can design strategies that meet customer needs, both short and long-term. Our initial discussions will revolve around computer science content knowledge and relevant pedagogical practices that need to be included in all teacher preparation programs, and how those differentiate from multiple subject and single subject teaching credentials.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -115,7 +115,7 @@ class CurriculumContent extends Component {
                                                 <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                             </Col> */}
                                             <Col xs={10} md={12}>
-                                                <p>We support customers in better understanding resource needs to build long-term computer science programs. Culture changes may need to be considered in order to ensure long term success and the integration of computer science across K-12. Through our coaching model and industry experience  our instructors help customers reach their goals and overall vision of what success looks like.</p>
+                                                <p>We support customers in better understanding resource needs to build long-term computer science programs. Culture changes may need to be considered in order to ensure long term success and the integration of computer science across K-12. Through our coaching model and industry experience and our relationships our instructors help customers reach their goals and overall vision of what success looks like.</p>
                                             </Col>
                                         </Row>
                                     </Card.Body>
@@ -135,15 +135,15 @@ class CurriculumContent extends Component {
                                             <h1>Measuring Outcomes and Building on Success:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>As a research focused organization, we offer an assessment structure for both teachers and students to evaluate and measure learning outcomes throughout our engagement model. This structure creates the opportunity to provide continuous improvement in the overall computer science initiative. Demonstrating success is accomplished through the metrics that we set with customers, which align with organization’s overall goals, and what success looks like for each customer and each engagement.</p>
+                                                    <p>As a research focused organization, we offer an assessment structure for both teachers and students to evaluate and measure learning outcomes. throughout our engagement model. This structure creates the opportunity to provide continuous improvement in the overall computer science initiative. Demonstrating success is accomplished through the metrics that we set with customers, which align with organization’s overall goals, and what success looks like for each customer and each engagement.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
                             </Card>: null}
                         </Col>
                     </Row>
-                        <h1>Execution</h1>
-                        <p>Description</p>
+                    <h1>Execution</h1>
+                    <p>Computer science education should involve real-world problem solving, engaging, meaningful, and personally relevant activities for students that focus on problem-solving, critical thinking, and creativity while emphasizing the ethical impacts of computing. </p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -186,10 +186,7 @@ class CurriculumContent extends Component {
                                             <h1>Initial Meeting</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>The Nebula Academy Software Engineering program is 22 weeks long.</p>
-                                                    <p>We primarily work in 4-week sprints where we are learning, practicing, and implementing new and previously covered technologies. We finish the 4-week cycle by creating projects.</p>
-                                                    <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recuperate.</p>
-                                                    <p>We can't do anything with burnt-out participants, so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
+                                                    <p>In order to support a district or school with a full strategy to implement computer science programs whether that is for K-12 , Middle to High School, or High School alone, the first step is understanding the current capacity and programs.  Our success together is dependent on understanding the culture, budgets, vision, and teacher capacity. Understanding the vision and what it means to implement Computer Science is an important first step.  Many schools understand how to teach students to use technology and there can be confusion on what it means to implement Computer Science into a school or district.  Computer science calls upon students to understand why and how computing technologies work, and then to build upon that conceptual knowledge by creating computational artifacts. Project based learning with integration of computer science understanding helps to provide building blocks to deeper knowledge and abilities. Providing students the opportunity to problem solve using this knowledge and aligning to real world problems to apply and demonstrate competencies.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -199,21 +196,7 @@ class CurriculumContent extends Component {
                                         <h1>Planned First Step</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>The daily schedule will vary but it will generally look like this:</p>
-                                                    <p>9:00 AM: Stand-up</p>
-                                                    <p style={{marginLeft:"20px"}}>Stand-up is a classic developer team start to the day where issues, thoughts, and schedules are shared.</p>
-                                                    <p>10:00 AM: Code practice</p>
-                                                    <p style={{marginLeft:"20px"}}>There are specific problems which can be practiced in order to build coding competency and interview ability. We practice them daily.</p>
-                                                    <p>11:00 AM: New Subject Matter</p>
-                                                    <p style={{marginLeft:"20px"}}>We will be learning our new topics at this time specifically in an introduction and coaching style.</p>
-                                                    <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>We provide lunch and snacks to all participants in our program. This is an immersive program and we need sharp brains that are fed and ready to learn. Whether you are paying for the program yourself, by your company, or have been granted a scholarship we create an inclusive learning environment that includes a healthy lunch and snacks each day. We do also have a fridge so participants can bring in meals if these choose to.</p>
-                                                    <p>1:30 PM: Projects</p>
-                                                    <p style={{marginLeft:"20px"}}>Project based learning. Here we will be continuing with the new subject specifically in a hands-on style.</p>
-                                                    <p>3:00 PM: Content Review</p>
-                                                    <p style={{marginLeft:"20px"}}>Old Material. At the end of the day we want to cover old topics that students feel they need to brush up on.</p>
-                                                    <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>Participants frequently are working on an issue, new material, or a project and extend their day beyond 4:00 PM but this is the "official" end of day.</p>
+                                                    As we engage with the leadership team to define the strategy and timeline our engagement will evolve to bring in a team of diverse members that may consist of one or more roles from the school board, administration, technology instructors, technology support staff, educators across learning domains, parent organization, community partners, and students. This is an effort that may require change in culture, and change in how and what we teach. To ensure its success having a collaborative group of stakeholders ensures the vision is met with perspectives from all groups that will be impacted.
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -223,8 +206,8 @@ class CurriculumContent extends Component {
                                         <h1>Teacher Training</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                <p>Students will have to apply themselves both in and outside of the classroom. We recommend practicing around 2-4 additional hours each night and 4-6 hours on the weekend.</p>
-                                                <p>We understand that this is intense and have built in planning to ensure that our students don't burn out. Firstly this additional practice time isn't required, secondly 5th weeks are weeks that can be used to rest, relax, and recuperate.</p>
+                                                    <p>Teacher training is critical to implementing a successful vision that transforms students and provides them the ability to better understand the evolution of technology and its role in their future.  Teaching computer science requires a different approach from traditional teaching and the first steps to developing teacher capacity is understanding the science behind learning.  We have learned more about the brain in the past 20 years than we have in our lifetime and we still have so much more to learn.  What we do know is that teaching the way we have in the past will not carry us forward into the future.  By helping to support teachers with new cognitive neuroscience understandings that support building growth mindsets, self-awareness, and stronger communication skills we can create greater learning outcomes for our students. We need to teach higher level thinking skills and we first have to ensure our teachers are prepared to teach differently before we begin to teach computer science skills and understanding.</p>
+                                                    <p>A computer science strategy will fail if we skip this step.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -234,9 +217,7 @@ class CurriculumContent extends Component {
                                         <h1>Systems Setups & Tech Integrations</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                <p>As previously mentioned, we typically have four weeks of study and practice followed by one week of unspecified time.</p>
-                                                <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
-                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
+                                                    <p>Vision first, cognitive neuroscience next, and now we have a strong foundation to build upon.  We are asking teachers to teach collaboration skills but we first need to teach teachers how to collaborative themselves.  Building a culture within the administration and the educators where they are able to work collaboratively both digitally and in person supports the needs of a modern workforce. Computer and mathematical occupations are among the fastest-growing and most lucrative sectors in the modern economy and will continue to drive demand from academia to ensure our students are prepared for the growing needs of industry. Setting up a professional learning environment for both the administration and all supporting staff within the school enables the continuous development of our skills so that we can stay aligned with industry not behind. What we teach our students must be what our teachers understand and our administration and staff utilize to ensure we are able to provide real-world understanding of how technology impacts us today and in our future. </p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -246,22 +227,7 @@ class CurriculumContent extends Component {
                                         <h1>Teaching in the Classroom</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                <p>In the last couple weeks of the course our daily schedule will not revolve around practice and learning but instead around applications, projects, interview preparation, mock interviews, studying and taking certification exams, meeting with career coaches to outline short list of employers, completing job applications, and creating a plan to ensure they land a job.</p>
-                                                <p>This means our daily schedule will look more like this:</p>
-                                                    <p>9:00 AM: Stand-up</p>
-                                                    <p style={{marginLeft:"20px"}}>Stand-up becomes even more important as participant schedules will vary and so will topics covered. By doing this students will see similarities and be able to help one another with their problems.</p>
-                                                    <p>10:00 AM: Code practice</p>
-                                                    <p style={{marginLeft:"20px"}}>This is core interview practice and will be kept up throughout.</p>
-                                                    <p>11:00 AM: Applying for jobs</p>
-                                                    <p style={{marginLeft:"20px"}}>Every day our participants will be sending out new applications. We want to ensure participants are hitting both quality and quantity.</p>
-                                                    <p>12:30 PM: Lunch</p>
-                                                    <p style={{marginLeft:"20px"}}>Having a set time for lunch helps fight burnout and is still suggested as something the students should observe for the full hour.</p>
-                                                    <p>1:30 PM: Projects</p>
-                                                    <p style={{marginLeft:"20px"}}>Updating and fixing projects. Unless a participant has a new project that they are passionate about we don't suggest starting new projects at this time. However we definitely want our participants to dive in deeper on older projects.</p>
-                                                    <p>3:00 PM: Interview Preparation</p>
-                                                    <p style={{marginLeft:"20px"}}>Interview prep. This can take the form of Jeopardy games, white-boarding, or coding challenges.</p>
-                                                    <p>4:00 PM: End of day</p>
-                                                    <p style={{marginLeft:"20px"}}>We suggest taking the time to visit some hiring partners, local companies with job listings, & doing some "one-click" applications through application websites like LinkedIn, Microsoft, Google, Amazon, Company Partner Sites, ZipRecruiter, & Glassdoor.</p>
+                                                    <p>Practice makes perfect, and that requires getting out of our comfort zone to fail and learn from our failures. When we are introducing new concepts and new teaching approaches it is critical that we provide the opportunity for educators to fail and to fail without consequences. If we don't provide that opportunity any professional development will not stick.  It is our nature to turn to what we are comfortable with and to avoid being uncomfortable. Building confidence in new concepts and new ways of doing things takes time to create changed behavior.  Behavior that transforms our gray matter in our brain so that it becomes the norm and reshapes our thinking. Our professional development programs are designed to push educators out of their comfort zone and enable them to fail again and again and to reflect and learn from those failures to build new maps in the brain and to shape new behaviors.  We support educators in and out of the classroom so that they can fail and learn and so that they can see how teaching approaches impact results in the classroom through observation and co-teaching.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
