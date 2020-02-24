@@ -18,6 +18,10 @@ import { SBLS } from './pages/SBLS';
 import { STEAMCoach } from './pages/STEAMCoach';
 import CookieConsent from "react-cookie-consent";
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 function App() {
   return (
