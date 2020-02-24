@@ -11,7 +11,7 @@ export const CurriculumFooter = () => (
             <Button href="/certifications" variant="primary">Certifications</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/register" variant="primary">Register</Button>
           </Col>
         </Row>
     </Jumbotron>

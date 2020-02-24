@@ -11,7 +11,7 @@ export const TryCodingFooter = () => (
             <Button href="/programs" variant="primary">Programs</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/register" variant="primary">Register</Button>
           </Col>
         </Row>
     </Jumbotron>

@@ -11,7 +11,7 @@ export const ScholarshipsFooter = () => (
             <Button href="/curriculum" variant="primary">Curriculum</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/certifications" variant="primary">Apply</Button>
+            <Button href="/register" variant="primary">Register</Button>
           </Col>
         </Row>
     </Jumbotron>

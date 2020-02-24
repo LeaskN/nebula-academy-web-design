@@ -13,7 +13,6 @@ export const Footer = () => (
             <Navbar.Collapse id="basic-navbar-nav">
             <ul style={{ margin:"0px"}}>
                 <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">About</Nav.Link></li>
-                {/* <p className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">Careers</Nav.Link></p> */}
                 <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/staff">Staff</Nav.Link></li>
                 <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakers">Guest Speakers</Nav.Link></li>
                 <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/partners">Partners</Nav.Link></li>
