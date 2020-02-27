@@ -27,7 +27,7 @@ export const HomeContent = () => (
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
-                            <p>Quick Read: <a className="linkWhite" href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/">Unlock a world of opportunities with your AWS Cloud Literacy skills.</a></p>
+                            <p>Quick Read: <a className="linkWhite" target="blank" href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/">Unlock a world of opportunities with your AWS Cloud Literacy skills.</a></p>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -36,7 +36,7 @@ export const HomeContent = () => (
                         <Card.Body>
                             <Card.Title>Is an AWS Certification Important to Your Career?</Card.Title>
                             <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9 percent.</p>
-                            <p>Source: <a className="linkLight" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
+                            <p>Source: <a className="linkLight" target="blank" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
                         </Card.Body>
                     </Card>
                 </Col>
