@@ -57,6 +57,14 @@ code {
   font-weight: 700;
   color: lightgrey;
 }
+.linkWhite{
+  text-decoration: underline;
+  font-weight: 700;
+  color: white;
+}
+.linkWhite:hover{
+  color: #146eb4;
+}
 .linkLight:hover{
   color:  white;
 }

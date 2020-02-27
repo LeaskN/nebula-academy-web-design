@@ -13,10 +13,13 @@ export const HomeContent = () => (
                             <Card.Text>
                                 The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concepts, independent of specific technical roles.
                             </Card.Text>
-                            <div className="contentCentered">
-                                <Button style={{margin:'10px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" variant="warning">Live Virtual Registration</Button>
-                                <Button style={{margin:'10px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" variant="warning">In Person Registration</Button>
-                            </div>
+                            <Row className="contentCentered" >
+                                <Col>
+                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+                                </Col>
+                            </Row>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -24,17 +27,16 @@ export const HomeContent = () => (
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
-                            <Card.Text>
-                                Unlock a world of opportunities with your AWS Cloud Literacy skills.</Card.Text>
+                            <p>Quick Read: <a className="linkWhite" href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/">Unlock a world of opportunities with your AWS Cloud Literacy skills.</a></p>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={12} lg={12} xl={4} className="introRow1Column3">
                     <Card className="introRowTile">
                         <Card.Body>
-                            <Card.Title>121% Growth rate for job postings that include the term "Cloud Computing"</Card.Title>
-                            <Card.Text>
-                            </Card.Text>
+                            <Card.Title>Is an AWS Certification Important to Your Career?</Card.Title>
+                            <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9 percent.</p>
+                            <p>Source: <a className="linkLight" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -73,9 +75,7 @@ export const HomeContent = () => (
                             <h3 className="centralText">The average salary of an AWS-certified IT professional is $129,868 - ranking as one of the highest-paying certification categories in North America.</h3>
                             <h3 className="centralText">AWS Certifications Increase Tech Pay Up To $12K a year.</h3>
                             <p className="centralText">Source:&nbsp;
-                                <a className="link centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">
-                                Forbes
-                                </a>
+                                <a className="linkWhite centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">Forbes</a>
                             </p>
                             <br/>
                         </Card>
