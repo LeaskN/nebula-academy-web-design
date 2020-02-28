@@ -15,8 +15,8 @@ export const Footer = () => (
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">About</Nav.Link></li>
                     {/* <p className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">Careers</Nav.Link></p> */}
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/staff">Staff</Nav.Link></li>
-                    <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakers">Guest Speakers</Nav.Link></li>
-                    <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/partners">Partners</Nav.Link></li>
+                    {/* <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakers">Guest Speakers</Nav.Link></li> */}
+                    {/* <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/partners">Partners</Nav.Link></li> */}
                 </ul>
                     <Nav className="ml-auto customFooter" >
                         <Nav.Item><Nav.Link target="blank" className="footerItem" href="https://www.facebook.com/NebulaAcademyNY/"><AiFillFacebook /></Nav.Link></Nav.Item>
