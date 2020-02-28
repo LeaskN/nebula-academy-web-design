@@ -171,7 +171,7 @@ code {
   text-align: center;
 }
 .smallLineHeight{
-  line-height: 9px;
+  line-height: 2px !important;
 }
 .nobull {
   list-style-type: none;
