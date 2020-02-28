@@ -19,7 +19,7 @@ export const Footer = () => (
                     <h5 style={{color:'#BBBBBB'}}>Contact</h5>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="tel:631-468-7477"><AiTwotonePhone/> 631-468-7477</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="mailto:succeed@nebulaacademyny.com"><AiTwotoneMail/> succeed@nebulaacademyny.com</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/https://www.google.com/maps/dir//180+Michael+Dr,+Syosset,+NY+11791,+USA/@40.8042056,-73.5511779,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c2817e5a652d8f:0x801ed763ddf8b24!2m2!1d-73.5161585!2d40.8042109!3e0" target="blank">180 Michael Drive Syosset, NY 11791</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.google.com/maps/dir//180+Michael+Dr,+Syosset,+NY+11791,+USA/@40.8042056,-73.5511779,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c2817e5a652d8f:0x801ed763ddf8b24!2m2!1d-73.5161585!2d40.8042109!3e0" target="blank">180 Michael Drive Syosset, NY 11791</Nav.Link></Nav.Item>
                 </ul>
                 <ul>
                     <h5 style={{color:'#BBBBBB'}}>All Links</h5>
@@ -33,8 +33,8 @@ export const Footer = () => (
                 </ul>
                 <ul style={{justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start', padding:'0px', whiteSpace: 'nowrap'}}>
                     <h5 style={{color:'#BBBBBB'}}>Articles</h5>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/" target="blank">Amazon: Real-world Jobs with AWS</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/http://techgenix.com/aws-certification/" target="blank">Techgenix: Why Get an AWS Cert?</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/" target="blank">Amazon: Real-world Jobs with AWS</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="http://techgenix.com/aws-certification/" target="blank">Techgenix: Why Get an AWS Cert?</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#993136f189c6" target="blank">Forbes: Increase Your Pay With AWS</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href='https://www.luminafoundation.org/files/resources/report-on-phase-i-study-embedding-industry-professional-certifications-within-higher-education-january-2017.pdf' target="blank">Lumina: Professional Certs within Higher Edu </Nav.Link></Nav.Item>
                 </ul>
