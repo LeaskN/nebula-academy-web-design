@@ -70,7 +70,7 @@ class registrationContent extends Component {
                         <Row>
                             <Col className="registrationPadding" xs={12} lg={6}>
                                 <br/>
-                                <h3>Academy Cloud Foundations - In Person</h3>
+                                <h3>AWS Academy Cloud Foundations - In Person</h3>
                                 <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
                                     width="100%"
@@ -83,7 +83,7 @@ class registrationContent extends Component {
                             </Col>
                             <Col className="registrationPadding" xs={12} lg={6}>
                                 <br/>
-                                <h3>Academy Cloud Foundations - Virtual</h3>
+                                <h3>AWS Academy Cloud Foundations - Virtual</h3>
                                 <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" 
                                     width="100%"
@@ -96,7 +96,7 @@ class registrationContent extends Component {
                             </Col>
                             <Col className="registrationPadding" xs={12} lg={12}>
                                 <br/>
-                                <h3>Academy Cloud Foundations - Live Virtual</h3>
+                                <h3>AWS Academy Cloud Foundations - Live Virtual</h3>
                                 <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" 
                                     width="100%"

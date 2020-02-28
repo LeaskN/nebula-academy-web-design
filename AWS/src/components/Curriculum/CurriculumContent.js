@@ -55,25 +55,25 @@ class CurriculumContent extends Component {
                                         <div 
                                             onClick={() => this.button1()}
                                             className={this.state.toggle.button1 ? " subtleButton toggled" : "subtleButton"}>
-                                            Academy Cloud Foundations
+                                            AWS Academy Cloud Foundations
                                         </div>
                                         <hr className="noMargin"/>
                                         <div 
                                             onClick={() => this.button2()}
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
-                                            Academy Cloud Architect
+                                            AWS Academy Cloud Architecting
                                         </div>
                                         <hr className="noMargin"/>
                                         <div 
                                             onClick={() => this.button3()}
                                             className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton"}>
-                                            Academy Cloud Operations
+                                            AWS Academy Cloud Operations
                                         </div>
                                         <hr className="noMargin"/>
                                         <div 
                                             onClick={() => this.button4()}
                                             className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
-                                            Academy Cloud Developing
+                                            AWS Academy Cloud Developing
                                         </div>
                                     </div> 
                             </Card>
@@ -81,7 +81,7 @@ class CurriculumContent extends Component {
                         <Col xs={8} className="cardColumns" style={{padding: '20px'}}>
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <div >
-                                            <h1>Academy Cloud Foundations</h1>
+                                            <h1>AWS Academy Cloud Foundations</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
@@ -122,7 +122,7 @@ class CurriculumContent extends Component {
                                         <div>
                                             <Col>
                                             </Col>
-                                            <h1>Academy Cloud Architect</h1>
+                                            <h1>AWS Academy Cloud Architecting</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>AWS Academy Cloud Architecting covers the fundamentals of building IT infrastructure on AWS. The course is designed to teach solutions architects how to optimize their use of the AWS Cloud by understanding AWS services and how they fit into cloud-based solutions. Although architectural solutions can differ depending on the industry, type of application, and size of the business, this course emphasizes best practices for the AWS Cloud that apply to all of them. It also recommends various design patterns to help you think through the process of architecting optimal IT solutions on AWS. Throughout the course, students will explore case studies that showcase how some AWS customers have designed their infrastructures and the strategies and services that they have implemented. Finally, this course provides opportunities for students to build a variety of infrastructures through a guided, hands-on approach.</p>
@@ -178,7 +178,7 @@ class CurriculumContent extends Component {
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
                                     <div style={{padding: '10px'}}>
                                         <div>
-                                            <h1>Academy Cloud Operations</h1>
+                                            <h1>AWS Academy Cloud Operations</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>AWS Academy Cloud Operations is designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles. It will also help prepare them to take the AWS SysOps Administrator – Associate exam. Emphasizing best practices in the AWS Cloud and recommended design patterns, this course will teach students how to solve problems and troubleshoot various scenarios. The course will show students how to create automatable and repeatable deployments of networks and systems on AWS and covers specific AWS features and tools related to configuration and deployment. With case studies and demonstrations, students will learn how some AWS customers design their infrastructures and implement various strategies and services. Students will also have the opportunity to build a variety of infrastructures via guided, hands-on activities.</p>
@@ -236,7 +236,7 @@ class CurriculumContent extends Component {
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <div style={{padding: '10px'}}>
                                         <div>
-                                            <h1>Academy Cloud Developing</h1>
+                                            <h1>AWS Academy Cloud Developing</h1>
                                             <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>AWS Academy Cloud Developing is designed to help students gain technical expertise in development using cloud technologies and prepare them to take the AWS Certified Developer – Associate level AWS Certification exam. The curriculum is delivered through instructor-led classes, knowledge assessments, and hands-on labs. Students will also have access to course manuals, online knowledge assessments, a free practice certification exam, and a discount voucher for the certification exam.</p>
