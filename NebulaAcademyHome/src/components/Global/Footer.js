@@ -37,7 +37,7 @@ export const Footer = () => (
                 <ul style={{justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start', padding:'0px', whiteSpace: 'nowrap'}}>
                     <h5 style={{color:'#BBBBBB'}}>Philanthropy</h5>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/wctd" target="blank" variant="warning">We Connect The Dots</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.we-connect-the-dots.org/coding-programs-for-1st12th" target="blank" variant="warning">CODING PROGRAMS, AGES 7-18 </Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.we-connect-the-dots.org/coding-programs-for-1st12th" target="blank" variant="warning">Coding Programs, Ages 7-18 </Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.we-connect-the-dots.org/student-ambassador-program" target="blank" variant="warning">Community Ambassador</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href='https://www.we-connect-the-dots.org/2020-codeathon' target="blank" variant="warning">Codeathon</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href='https://code.nebulaacademy.com/Scholarships' target="blank" variant="warning">Software Engineering Scholarships</Nav.Link></Nav.Item>
