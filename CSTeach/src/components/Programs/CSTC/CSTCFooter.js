@@ -8,10 +8,10 @@ export const CSTCFooter = () => (
       <h1 className="contentCentered">Build your teaching capacity with Nebula Academy</h1><br/>
               <Row>
           <Col className="contentCentered">
-            <Button href="/certifications" variant="primary">Certifications</Button>
+            <Button href="/register" variant="primary">Register</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/register" variant="primary">Register</Button>
+            <Button href="/certifications" variant="primary">Certifications</Button>
           </Col>
         </Row>
     </Jumbotron>

@@ -11,7 +11,7 @@ class RegisterContent extends Component {
     render() {
         return (
             <Container>
-                <h1>Click below to register</h1>
+                <h1>Register Below:</h1>
                 <Row className="programRow"style={{color:"white", marginBottom: '20px'}}>
                     <Col xs={12} lg={6} xl={4}>
                         <div className="programTile1">
