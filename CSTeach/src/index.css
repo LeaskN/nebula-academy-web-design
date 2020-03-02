@@ -206,3 +206,16 @@ blockquote{
   padding-left: 7px;
   padding-right: 7px;
 }
+.dropdown-menu{
+  z-index: 11 !important;
+  padding: 0px !important
+}
+.dropdown-item{
+  border: 1px solid rgb(0, 0, 0, .1);
+  min-width: 192px !important;
+  white-space: initial !important;
+}
+.nav-link:hover {
+  color: white !important;
+  text-decoration: none;
+}

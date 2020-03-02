@@ -6,9 +6,9 @@ import WCTDIcon from '../../assets/We_Connect_The_Dots_logo_Large.png';
 export const ScholarshipsContent = () => (
   <React.Fragment>
     <Container>
-    <div  className="box">
+    <div className="box">
       <a className="wctdImage" href="https://wctd.org" target="_blank" rel="noopener noreferrer">
-          <img height="100px" alt="wctd.org" src={WCTDIcon}></img>
+        <img height="100px" alt="wctd.org" src={WCTDIcon}></img>
       </a>
     </div>
     <br/>

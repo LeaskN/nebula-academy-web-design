@@ -16,14 +16,9 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/sbls">Science Behind Learning</NavDropdown.Item>
                         <NavDropdown.Item href="/STEAMCoach">STEAM Coach</NavDropdown.Item>
                         <NavDropdown.Item href="/CSTC">CSTC</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Drones</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Micro:bits</NavDropdown.Item>
-                        <NavDropdown.Item href="/">3D Animation</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Minecraft: Education Edition</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Microsoft MIE</NavDropdown.Item>
-                        <NavDropdown.Item href="/">PTA</NavDropdown.Item>
-                        <NavDropdown.Item href="/">CS Program</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Educator Keynote Speaking</NavDropdown.Item>
+                        <NavDropdown.Item href="programs#drones">Drones</NavDropdown.Item>
+                        <NavDropdown.Item href="/programs#minecraft:EE">Minecraft: Education Edition</NavDropdown.Item>
+                        <NavDropdown.Item href="/programs#microsoftMIE">Microsoft MIE</NavDropdown.Item>
                     </NavDropdown>
                     <Button href="/register" variant="success">Register</Button>
                     <div style={{width: "20px"}}></div>

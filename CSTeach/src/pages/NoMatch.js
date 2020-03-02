@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const NoMatch = () => (
-    <div>
+    <div style={{ height:'84vh' }}>
         <h2>
             NoMatch Page
         </h2>

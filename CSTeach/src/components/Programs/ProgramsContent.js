@@ -42,9 +42,9 @@ export const ProgramsContent = () => (
                 </div>
             </Col>
             <Col xs={12} lg={6} xl={4}>
-                <div className="programTile3">
+                <div className="programTile3" id="drones">
                     <div>
-                        <h3>Drones</h3>
+                        <h3 id="dronesHeader">Drones</h3>
                         <p>Our experience shows that students who take introduction to Coding in Middle School increases their likelihood to take Computer Science in high school, which results in students that are more likely to take computer science in college. To prepare students for the future, teachers need access to coursework that will support their success in introducing students to these growing career fields. Our goal is to help schools engage their students in learning to code through fun student centered, project-based learning experiences that integrate technology like Drones. This approach supports the understanding of applied math and real-world problem solving.</p>
                         <div id="spacer" style={{height: '100px'}} ></div>
                         <Button style={{marginBottom: '75px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:STEAM%20Drones%20Professional%20Development%20%28in-person%29" variant="light">Register: In Person</Button>
@@ -53,9 +53,9 @@ export const ProgramsContent = () => (
                 </div>
             </Col>
             <Col xs={12} lg={6} xl={4}>
-                <div className="programTile1">
+                <div className="programTile1" id="minecraft:EE">
                     <div>
-                        <h3>Minecraft:Education Edition</h3>
+                        <h3 id="minecraft:EEHeader">Minecraft:Education Edition</h3>
                         <p>Master the basic controls of Minecraft: Education Edition(EE), explore the inventory and build your first house! Travel via rail to experience a different mode of transport offered within this platform, investigate differing lesson ideas to show how MEE can be used in all curriculums / subjects in countless ways. By the end of the session, teachers should feel confident in using MEE and should have generated a plethora of ideas of how to use this amazing platform within their pedagogy.</p>
                         <div id="spacer" ></div>
                         <Button style={{marginBottom: '25px'}}className="bottom contentCentered"  href="mailto:sales@neublaacademyny.com" variant="light">Get More Info</Button>
@@ -63,9 +63,9 @@ export const ProgramsContent = () => (
                 </div>
             </Col>
             <Col xs={12} lg={6} xl={4}>
-                <div className="programTile2">
+                <div className="programTile2" id="microsoftMIE">
                     <div>
-                        <h3>Microsoft MIE</h3>
+                        <h3 id="microsoftMIEHeader">Microsoft MIE</h3>
                         <p>Participants will spend the day getting excited about the many tools Microsoft has to offer students and teachers. Teachers will reflect and create a customized toolkit of resources to increase engagement, efficiency and develop modern skills for a global classroom/society.</p>
                         <p>Participants will engage in a series of immersive learning activities that will build a strong understanding of how to use technology to improve instruction and meet the learning needs of their students.</p>
                         <div id="spacer" ></div>
