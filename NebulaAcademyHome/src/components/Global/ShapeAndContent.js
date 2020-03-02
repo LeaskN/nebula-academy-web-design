@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 import './ShapeAndContent.css';
 
@@ -23,7 +23,6 @@ class ShapeAndContent extends Component {
         e.preventDefault()
         let targetTitle = e.target.innerHTML.split(' ').join('').toLowerCase();
         for(let i = 0; i < e.target.parentElement.children.length; i++){
-            console.log(this.props.state.elements[i].color)
             e.target.parentElement.children[i].style.backgroundColor = 'transparent';
             e.target.parentElement.children[i].style.backgroundColor = 'transparent'
             e.target.parentElement.children[i].style.border = `3px solid #${this.props.state.elements[i].color}`;
@@ -35,6 +34,7 @@ class ShapeAndContent extends Component {
             active: this.state[targetTitle],
             justClicked: true,
         })
+        console.log(this.state.active)
         e.target.style.backgroundColor = this.state[targetTitle].color;
         e.target.style.border = `3px solid ${e.target.style.backgroundColor}`;
         e.target.style.color = 'white';
@@ -88,10 +88,11 @@ render() {
                     </Row>
                 </div>
                     <Row style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
-                        <Col>
+                        <Col xs={12}>
                             <h1>{this.state.active.header}</h1>
                             <p>{this.state.active.content}</p>
                         </Col>
+                        {this.state.active.buttonURL ? <Col><Button style={{textShadow:'0px 0px 0px black'}} target="blank" href={this.state.active.buttonURL}>{this.state.active.buttonText}</Button></Col>:<></>}
                     </Row>
             </React.Fragment>
             )
