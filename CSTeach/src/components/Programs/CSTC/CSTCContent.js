@@ -5,6 +5,7 @@ import prices from '../../../assets/programPrices.png'
 import micro from '../../../assets/micro.png'
 import tello from '../../../assets/tello.png'
 import surface from '../../../assets/surface.png'
+import CLD21 from '../../../assets/21CLDinfo.png'
 
 class CSTCContent extends Component {
     state = {
@@ -16,19 +17,22 @@ class CSTCContent extends Component {
         },
     };
     button1 = () => {
-        this.setState({ toggle: {button1: true, button2: false, button3: false, button4: false, button5: false } })
+        this.setState({ toggle: {button1: true, button2: false, button3: false, button4: false, button5: false, button6: false, } })
     }
     button2 = () => {
-        this.setState({ toggle: {button1: false, button2: true, button3: false, button4: false, button5: false } })
+        this.setState({ toggle: {button1: false, button2: true, button3: false, button4: false, button5: false, button6: false, } })
     }
     button3 = () => {
-        this.setState({ toggle: {button1: false, button2: false, button3: true, button4: false, button5: false } })
+        this.setState({ toggle: {button1: false, button2: false, button3: true, button4: false, button5: false, button6: false, } })
     }
     button4 = () => {
-        this.setState({ toggle: {button1: false, button2: false, button3: false, button4: true, button5: false } })
+        this.setState({ toggle: {button1: false, button2: false, button3: false, button4: true, button5: false, button6: false, } })
     }
     button5 = () => {
-        this.setState({ toggle: {button1: false, button2: false, button3: false, button4: false, button5: true } })
+        this.setState({ toggle: {button1: false, button2: false, button3: false, button4: false, button5: true, button6: false, } })
+    }
+    button6 = () => {
+        this.setState({ toggle: {button1: false, button2: false, button3: false, button4: false, button5: false, button6: true, } })
     }
 
     render() {
@@ -64,6 +68,11 @@ class CSTCContent extends Component {
                                             Modules
                                             </Card.Title>
                                         <hr className="noMargin"/>
+                                        <Card.Title 
+                                            onClick={() => this.button6()}
+                                            className={this.state.toggle.button6 ? " subtleButton toggled" : "subtleButton"}>
+                                            21<sup>st</sup> Century Learning Design
+                                        </Card.Title>
                                         <Card.Title 
                                             onClick={() => this.button5()}
                                             className={this.state.toggle.button5 ? " subtleButton toggled" : "subtleButton"}>
@@ -126,6 +135,13 @@ class CSTCContent extends Component {
                                                 <p><b>Module 30:</b> Introduction to Python</p>
                                                 <p><b>Module 31:</b> CAP Stone Development Project</p>
                                                 <p><b>Module 32:</b> Final Presentations</p>
+                                    </Card.Body>
+                            </Card>: null}
+                            {this.state.toggle.button6 ? <Card className="cardDeckRight">
+                                    <Card.Body>
+                                            <Row>
+                                                <img alt="21CLD_Information" style={{width:'100%'}} src={CLD21}></img>
+                                            </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
