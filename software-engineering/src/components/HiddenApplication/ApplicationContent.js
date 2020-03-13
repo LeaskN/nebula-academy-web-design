@@ -6,22 +6,45 @@ class applicationContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Gender__c:[],
-            Ethnicity__c: [],
+            finalData:{
+                Gender__c:[],
+                Ethnicity__c: [],
+            }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
+    componentDidMount(e){
+        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
+        .then(console.log('attmepting fetch'))
+        .then(res => res.json())
+        .then(res => this.setState({ cohortOptions: res.records }))
+    }
+    populateOptions(){
+        if(!this.state.cohortOptions){
+            return
+        } else {
+            let options = this.state.cohortOptions
+            let finalArray = [];
+            for (let i = 0; i < options.length; i++) {
+                const element = options[i];
+                finalArray.push(<option aria-label="option 1" key={element.id} label={element.name} value={element.id}>{element.name}</option> )
+            }
+            return (
+                finalArray
+            )
+        }        
+    }
     getData(e) {
         e.preventDefault();
-        fetch(`http://23.96.61.174:3000/campaigns`)
+        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
         .then(console.log('attmepting fetch'))
         .then(res => res.json())
         .then(res => console.log(res))
     }
     putData(e) {
         e.preventDefault();
-        if(this.state.Contact_Number__c){
-            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+        if(this.state.finalData.Contact_Number__c){
+            let newNumber = this.state.finalData.Contact_Number__c.replace(/\D/g,'');
             if(newNumber.length === 10 || newNumber.length === 11){
                 this.setState({
                     Contact_Number__c: newNumber
@@ -30,33 +53,33 @@ class applicationContent extends Component {
                 alert('Please correct your phone number.')
                 return
             }
-        } else if (this.state.How_did_you_hear_about_our_program__c === 'Other'){
-            if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
+        } else if (this.state.finalData.How_did_you_hear_about_our_program__c === 'Other'){
+            if( !this.state.finalData.How_did_you_hear_OTHER_Desc__c || this.state.finalData.How_did_you_hear_OTHER_Desc__c.length === 0 ){
                 alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
             }
-        } else if (this.state.Highest_education_level__c === 'Other'){
-            if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
+        } else if (this.state.finalData.Highest_education_level__c === 'Other'){
+            if( !this.state.finalData.Highest_education_level_OTHER_Desc__c || this.state.finalData.Highest_education_level_OTHER_Desc__c.length === 0 ){
                 alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
             }
-        } else if (this.state.Primary_intentions_for_enrolling__c === 'Other'){
-            if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
+        } else if (this.state.finalData.Primary_intentions_for_enrolling__c === 'Other'){
+            if( !this.state.finalData.Primary_Intentions_OTHER_DESC__c || this.state.finalData.Primary_Intentions_OTHER_DESC__c.length === 0 ){
                 alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
             }
-        } else if (this.state.Ethnicity__c === 'Other'){
-            if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+        } else if (this.state.finalData.Ethnicity__c === 'Other'){
+            if( !this.state.finalData.Ethnicity_Other_description__c || this.state.finalData.Ethnicity_Other_description__c.length === 0 ){
                 alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
             }
-        } else if (this.state.Gender__c === 'Other/Prefer to self-describe'){
-            if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+        } else if (this.state.finalData.Gender__c === 'Other/Prefer to self-describe'){
+            if( !this.state.finalData.Gender_Other__c || this.state.finalData.Ethnicity_Other_description__c.length === 0 ){
                 alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
             }
-        } else if(this.state.Email_ID__c){
-            if(!this.state.Email_ID__c.indexOf('@') || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
+        } else if(this.state.finalData.Email_ID__c){
+            if(!this.state.finalData.Email_ID__c.indexOf('@') || this.state.finalData.Email_ID__c.indexOf('@') === -1 || this.state.finalData.Email_ID__c.indexOf('.com') === -1){
                 alert('There is an issue with your email address. Please check for typos to continue.');
                 return;
             }
         }
-        fetch(`http://23.96.61.174:3000/application`, {
+        fetch(`http://23.96.61.174:3000/dev2/application`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 
@@ -88,7 +111,7 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state
+        let tempObj = this.state.finalData
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
                 tempObj[item] = tempObj[item].join(';');
@@ -316,7 +339,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.How_did_you_hear_about_our_program__c === "Other" ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.finalData.How_did_you_hear_about_our_program__c === "Other" ? "showing" : "hidden"}>
                                     <Form.Label>Please provide how you heard of our program.</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="How_did_you_hear_OTHER_Desc__c" placeholder="Something else" />
                                 </Form.Group> 
@@ -345,7 +368,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Highest_education_level__c === "Other" ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.finalData.Highest_education_level__c === "Other" ? "showing" : "hidden"}>
                                     <Form.Label>Please provide highest education level</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Highest_education_level_OTHER_Desc__c" placeholder="Highest Education" />
                                 </Form.Group>
@@ -376,7 +399,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Primary_intentions_for_enrolling__c === "Other" ? "showing " : "hidden"}>
+                                <Form.Group as={Col} className={this.state.finalData.Primary_intentions_for_enrolling__c === "Other" ? "showing " : "hidden"}>
                                     <Form.Label>Please describe your primary intentions below:</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Primary_Intentions_OTHER_DESC__c" placeholder="Primary Intentions: Other" />
                                 </Form.Group>
@@ -410,7 +433,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.finalData.Ethnicity__c.indexOf('Other') > -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Gender" />
                                 </Form.Group>
@@ -427,7 +450,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.finalData.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
                                 </Form.Group>
@@ -442,11 +465,11 @@ class applicationContent extends Component {
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>Which cohort are you applying to?</Form.Label>
-                                    <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Software Engineering Bootcamp March 2020 - August 2020" value="7013F0000004aIuQAI">Software Engineering Bootcamp March 2020 - August 2020</option> 
-                                        <option aria-label="option 2" label="Software Engineering BootCamp September 2020 - February 2021" value="7013F0000004aJJQAY">Software Engineering BootCamp September 2020 - February 2021</option> 
-                                    </Form.Control>
+                                <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
+                                    <option aria-label="option 0" label="Select" value="false"></option> 
+                                    {this.populateOptions()}
+                                    
+                                </Form.Control>
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>Are you a US citizen or permanent resident?</Form.Label>
