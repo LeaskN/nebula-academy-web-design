@@ -42,6 +42,9 @@ class Educators extends Component {
             'technologyintegration': { color: '#9395D3', header:"Technology Integration", buttonURL: "https://csteach.nebulaacademy.com/programs#drones", buttonText: "Learn More", content: "Physical computing has taken a foothold in education as a result of its ability to create the necessary stickiness for students to learn. We provide educators with the necessary resources and workshops for them to integrate physical computing into the classroom. To see how we integrate technology in the classroom, visit https://csteach.nebulaacademy.com. " },
         };
     }
+    instaRun(){
+        console.log('This is a test')
+    }
     createSlideCard = () => {
         return(
             this.state.slides.map(slide => (
@@ -55,12 +58,13 @@ class Educators extends Component {
 render() {
         return (
             <React.Fragment>
+                { this.instaRun }
                 <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                     { this.createSlideCard() }
                 </Row>
                     <ShapeAndContent state={this.state}/>
             </React.Fragment>
-            )
+        )
 
     }
 };

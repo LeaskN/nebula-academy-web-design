@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ShapeAndContent from '../Global/ShapeAndContent'
 import slide2 from '../../assets/nebulahomeimage.jpg'
+import CurrentOffer from "../Global/CurrentOffer.js";
 
 import './HomeContent.css';
 
@@ -41,10 +42,10 @@ class HomeContent extends Component {
     createSlideCard = () => {
         return(
             this.state.slides.map(slide => (
-                <Col style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
+                <Col key={slide.header} style={{ backgroundColor: 'transparent'}} className="HomeUrlCard">
                     <h1>{slide.header}</h1>
                     <br/>
-                    <p>{slide.body}</p>
+                    {slide.body}
                 </Col>
             ))
         )
@@ -52,6 +53,7 @@ class HomeContent extends Component {
 render() {
     return (
         <React.Fragment>
+            <CurrentOffer />
             <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                 { this.createSlideCard() }
             </Row>
