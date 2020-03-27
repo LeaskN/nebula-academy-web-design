@@ -3,22 +3,14 @@ import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
 import './ApplicationFooter.css'
 
 export const ApplicationFooter = () => (
-  <Container className="fullApplicationFooter">
+  <Container className="fullapplicationFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
-      
-      <p>
+      <h1 className="contentCentered">Build your capacity for AWS Cloud with Nebula Academy</h1><br/>
         <Row>
           <Col className="contentCentered">
-          <div id="spacer" ></div>
-            <Button className="bottom contentCentered" href="/scholarships" variant="primary">Scholarships</Button>
-          </Col>
-          <Col className="contentCentered">
-            <div id="spacer" ></div>
-            <Button className="bottom contentCentered" href="/application" variant="primary">Apply</Button>
+            <Button href="/application" variant="primary">Register</Button>
           </Col>
         </Row>
-      </p>
     </Jumbotron>
   </Container>
 )
