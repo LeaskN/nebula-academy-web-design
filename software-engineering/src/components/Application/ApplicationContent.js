@@ -100,6 +100,7 @@ class applicationContent extends Component {
             } else if (response['message'].indexOf('Already registered for this program') > -1){
                 alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
             }
+            alert(`Congratulations, you've successfully applied!`)
             console.log('Response:', response);
         })
         .catch((error) => {
@@ -470,7 +471,6 @@ class applicationContent extends Component {
                                 <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
                                     <option aria-label="option 0" label="Select" value="false"></option> 
                                     {this.populateOptions()}
-                                    
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group>
