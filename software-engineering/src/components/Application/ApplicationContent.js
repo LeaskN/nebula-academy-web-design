@@ -9,10 +9,11 @@ class applicationContent extends Component {
             Gender__c:[],
             Ethnicity__c: [],
         };
+        this.cohortOptions = {};
+
         this.handleInputChange = this.handleInputChange.bind(this);
         
     }
-    cohortOptions = ""
     componentDidMount(e){
         fetch(`http://23.96.61.174:3000/dev2/campaigns`)
         .then(console.log('attmepting fetch'))
@@ -100,7 +101,7 @@ class applicationContent extends Component {
             } else if (response['message'].indexOf('Already registered for this program') > -1){
                 alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
             }
-            alert(`Congratulations, you've successfully applied!`)
+            alert(`Congratulations! You've successfully applied to the ${this.state.cohortOptions}`)
             console.log('Response:', response);
         })
         .catch((error) => {
