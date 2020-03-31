@@ -9,7 +9,6 @@ class applicationContent extends Component {
             Gender__c:[],
             Ethnicity__c: [],
         };
-        this.cohortOptions = {};
         this.handleInputChange = this.handleInputChange.bind(this);
         
     }
@@ -17,24 +16,19 @@ class applicationContent extends Component {
         fetch(`http://23.96.61.174:3000/dev2/campaigns`)
         .then(console.log('attmepting fetch'))
         .then(res => res.json())
-        .then(res => this.cohortOptions = res.records)
+        .then(res => this.setState({cohortOptions : res.records}))
     }
     populateOptions(){
-        if(this.cohortOptions === ""){
-            return
-        } else {
-            let options = this.cohortOptions
-            let finalArray = [];
-            for (let i = 0; i < options.length; i++) {
-                const element = options[i];
-                if(element.name.indexOf('BootCamp') > -1){
-                    finalArray.push(<option aria-label="option 1" key={element.id} label={element.name} value={element.id}>{element.name}</option> )
-                }
+        let options = this.state.cohortOptions;
+        let finalArray = [];
+        for(let item in options){
+            if((options[item].name).indexOf('BootCamp') > -1){
+                finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
             }
-            return (
-                finalArray
-            )
-        }        
+        }
+        return (
+            finalArray
+        );
     }
     getData(e) {
         e.preventDefault();
@@ -44,6 +38,7 @@ class applicationContent extends Component {
         .then(res => console.log(res))
     }
     putData(e) {
+        this.fixJSON();
         e.preventDefault();
         if(this.state.Contact_Number__c){
             let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
@@ -100,7 +95,7 @@ class applicationContent extends Component {
             } else if (response['message'].indexOf('Already registered for this program') > -1){
                 alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
             } else {
-                alert(`Congratulations! You've successfully applied to the ${this.state.cohortOptions}`)
+                alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
                 console.log('Response:', response);
             }
         })
@@ -116,12 +111,14 @@ class applicationContent extends Component {
     }
     fixJSON(){
         let tempObj = this.state
+        delete tempObj['cohortOptions']
+        //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
                 tempObj[item] = tempObj[item].join(';');
             }
         }
-       return JSON.stringify(tempObj)
+        return JSON.stringify(tempObj)
     }
     handleInputChange(event) {
         let target = event.target;
@@ -132,25 +129,25 @@ class applicationContent extends Component {
         
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
-            //if state does not contain listName
+            //if state does not contain that specific listName yet
             if(!this.state[listName]){
                 //first time something is being added to an array
                 this.setState({
-                    [listName]: [name]+';'
+                    [listName]: [name]
                 })
+            //if that specific listName exists 
             } else if (this.state[listName].indexOf(name) > -1) {
                 //unchecked box
-                let nameStr = this.state[listName].split(name+';').join('');
+                let oldList = this.state[listName]
+                oldList.pop(oldList.indexOf(name))
                 this.setState({
-                    [listName]: nameStr
+                    [listName]: oldList
                 })
-                
-                // this.state[listName].splice(this.state[listName].indexOf(name), 1) //this shouldnt work but it does
             } else {
                 //adding to an existing array
-                let nameStr = [this.state[listName].concat(name+';')]
+                let fullArray = [...this.state[listName], name]
                 this.setState({
-                    [listName]: nameStr
+                    [listName]: fullArray
                 })
             }
         //else its not a list
@@ -166,8 +163,6 @@ class applicationContent extends Component {
                 [name]: value
             });
         }
-        this.fixJSON();
-        console.log(this.fixJSON())
     } 
     render() {
         return (
@@ -175,13 +170,16 @@ class applicationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: </h2>
+                            <h2 style={{marginTop:"20px"}}>The application consists of three parts: </h2>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
                             <p><b>Part 1:</b> the form on this page</p>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
-                            <p><b>Part 2:</b> an interview to understand a participants motivations, commitments, & capacity</p>
+                            <p><b>Part 2:</b> an assessment to test your logical thinking</p>
+                        </Row>
+                        <Row style={{marginLeft:"50px"}}>
+                            <p><b>Part 3:</b> an interview to understand a participants motivations, commitments, & capacity</p>
                         </Row>
                         <hr></hr>
                         <Row>
@@ -291,7 +289,7 @@ class applicationContent extends Component {
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Zip</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_Zipcode__c" placeholder="Last Name" />
+                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_Zipcode__c" placeholder="00000" />
                                 </Form.Group>
                             </Form.Row>
                                 <Form.Label>Online Profiles (one per textbox) </Form.Label>
