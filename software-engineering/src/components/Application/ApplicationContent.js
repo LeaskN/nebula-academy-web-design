@@ -10,7 +10,6 @@ class applicationContent extends Component {
             Ethnicity__c: [],
         };
         this.cohortOptions = {};
-
         this.handleInputChange = this.handleInputChange.bind(this);
         
     }
@@ -100,9 +99,10 @@ class applicationContent extends Component {
                 alert('Please complete the application by filling in missing fields.')
             } else if (response['message'].indexOf('Already registered for this program') > -1){
                 alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+            } else {
+                alert(`Congratulations! You've successfully applied to the ${this.state.cohortOptions}`)
+                console.log('Response:', response);
             }
-            alert(`Congratulations! You've successfully applied to the ${this.state.cohortOptions}`)
-            console.log('Response:', response);
         })
         .catch((error) => {
             console.error('Error:', error);
