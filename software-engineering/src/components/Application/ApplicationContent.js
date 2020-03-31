@@ -13,8 +13,7 @@ class applicationContent extends Component {
         
     }
     componentDidMount(e){
-        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
-        .then(console.log('attmepting fetch'))
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions : res.records}))
     }
@@ -29,13 +28,6 @@ class applicationContent extends Component {
         return (
             finalArray
         );
-    }
-    getData(e) {
-        e.preventDefault();
-        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
-        .then(console.log('attmepting fetch'))
-        .then(res => res.json())
-        .then(res => console.log(res))
     }
     putData(e) {
         this.fixJSON();
@@ -76,7 +68,7 @@ class applicationContent extends Component {
                 return;
             }
         }
-        fetch(`http://23.96.61.174:3000/dev2/application`, {
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 
@@ -96,7 +88,7 @@ class applicationContent extends Component {
                 alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
             } else {
                 alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
-                console.log('Response:', response);
+                // console.log('Response:', response);
             }
         })
         .catch((error) => {
