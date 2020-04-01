@@ -15,6 +15,7 @@ import { GuestSpeakers } from './pages/GuestSpeakers';
 import { HiddenApplication } from './pages/HiddenApplication';
 import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
+import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import CookieConsent from "react-cookie-consent";
 
 import ReactGA from 'react-ga';
@@ -34,6 +35,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
+            <Route path ="/Application/Phase2" component={ApplicationPhase2}/>
             <Route path= "/program" component={Program}/>
             <Route path = "/curriculum" component={Curriculum}/>
             <Route path = "/application" component={Application}/>

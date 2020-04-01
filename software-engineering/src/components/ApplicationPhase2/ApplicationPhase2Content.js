@@ -1,8 +1,9 @@
 import React, { Component }from 'react';
-import { Form, Button, Container, Col, Row } from 'react-bootstrap';
-import './ApplicationContent.css'
+import { Form, Button, Container, Col, Row, Image } from 'react-bootstrap';
+import './ApplicationPhase2Content.css'
+import keypad from '../../assets/keypadImage.png'
 
-class applicationContent extends Component {
+class ApplicationPhase2Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -162,10 +163,10 @@ class applicationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The application consists of three phases: </h2>
+                            <h2 style={{marginTop:"20px"}}>This is phase 2 of the Nebula Academy Software Engineering Bootcamp </h2>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
-                            <p><b>Phase 1:</b> the form on this page</p>
+                            <p><s><b>Phase 1:</b> the form on this page</s></p>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
                             <p><b>Phase 2:</b> an assessment to test your logical thinking</p>
@@ -176,9 +177,21 @@ class applicationContent extends Component {
                         <hr></hr>
                         <Row>
                             <Col className="alignCenter">
-                                <h3>Completing online application:</h3>
-                                    <p>To preserve your data, do not close your browser session until Phase I is complete. Upon completion of Phase I you will receive a link via email to begin Phase II. Questions? Contact us at succeed@nebulaacademyny.com or by phone at: 631-468-7475.</p>
+                                <h3>General Info</h3>
+                                    <p>This phase should take approximately 2-4 hours depending on your writing skills.</p>
+                                    <p>This is not a test to determine your writing capabilities. It is about your thinking. However, we do suggest that you use a spellchecker to ensure your answers are properly understood. </p>
+                                    <p>This is a web form. Therefore if you lose connection you will lose your responses. We suggest you response offline and copy and paste into this form when you're ready to submit. For example you can use a notebook, notes on your phone or computer, a text document like Word, Google Docs, or Pages to ensure you don't lose your work. </p>
                             </Col>
+                        </Row>
+                        <hr></hr>
+                        <Row>
+                            <Col className="alignCenter">
+                                <h3><b>IMPORTANT: </b></h3>
+                                    <p>Your first name, last name, and email address must match your previously entered information. The email which provided you with this link also has the first name, last name, and email address you previously entered.</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <h4>Section 1 Personal Information:</h4>
                         </Row>
                         <Form className="manualContainer" >
                             <Form.Row>
@@ -196,109 +209,36 @@ class applicationContent extends Component {
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control required input="true" onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="formGridPhone">
-                                    <Form.Label>Phone</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Contact_Number__c" placeholder="Enter Phone Number" />
-                                </Form.Group>
                             </Form.Row>
-                                <Form.Group as={Col}>
-                                    <Form.Label>Mailing Address 1</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Mailing_Address__c" placeholder="Mailing Address" />
-                                </Form.Group>
-                                <Form.Group as={Col}>
-                                    <Form.Label>Mailing Address 2</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Mailing_Address2__c" placeholder="Additional address information such as apartment number"/>
-                                </Form.Group>
-                            <Form.Row>
-                                <Form.Group as={Col}>
-                                    <Form.Label>City</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Mailing_City__c" placeholder="City" />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>State</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_State__c" as="select">
-                                    <option aria-label="option 0"></option> 
-                                    <option>AL</option>
-                                    <option>AK</option>
-                                    <option>AS</option>
-                                    <option>AZ</option>
-                                    <option>AR</option>
-                                    <option>CA</option>
-                                    <option>CO</option>
-                                    <option>CT</option>
-                                    <option>DE</option>
-                                    <option>DC</option>
-                                    <option>FM</option>
-                                    <option>FL</option>
-                                    <option>GA</option>
-                                    <option>GU</option>
-                                    <option>HI</option>
-                                    <option>ID</option>
-                                    <option>IL</option>
-                                    <option>IN</option>
-                                    <option>IA</option>
-                                    <option>KS</option>
-                                    <option>KY</option>
-                                    <option>LA</option>
-                                    <option>ME</option>
-                                    <option>MH</option>
-                                    <option>MD</option>
-                                    <option>MA</option>
-                                    <option>MI</option>
-                                    <option>MN</option>
-                                    <option>MS</option>
-                                    <option>MO</option>
-                                    <option>MT</option>
-                                    <option>NE</option>
-                                    <option>NV</option>
-                                    <option>NH</option>
-                                    <option>NJ</option>
-                                    <option>NM</option>
-                                    <option>NY</option>
-                                    <option>NC</option>
-                                    <option>ND</option>
-                                    <option>MP</option>
-                                    <option>OH</option>
-                                    <option>OK</option>
-                                    <option>OR</option>
-                                    <option>PW</option>
-                                    <option>PA</option>
-                                    <option>PR</option>
-                                    <option>RI</option>
-                                    <option>SC</option>
-                                    <option>SD</option>
-                                    <option>TN</option>
-                                    <option>TX</option>
-                                    <option>UT</option>
-                                    <option>VT</option>
-                                    <option>VI</option>
-                                    <option>VA</option>
-                                    <option>WA</option>
-                                    <option>WV</option>
-                                    <option>WI</option>
-                                    <option>WY</option>
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group as={Col}>
-                                    <Form.Label>Zip</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_Zipcode__c" placeholder="00000" />
-                                </Form.Group>
-                            </Form.Row>
-                                <Form.Label>Online Profiles (one per textbox) </Form.Label>
-                            <Form.Row>
-                                <Form.Group as={Col}>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Online_Profile_One__c" placeholder="GitHub, etc..." />
-                                </Form.Group>
-                                <Form.Group as={Col}>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Online_Profile_Two__c" placeholder="LinkedIn, etc..." />
-                                </Form.Group>
-                                <Form.Group as={Col}>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Online_Profile_Three__c" placeholder="Twitter, etc..." />
-                                </Form.Group>
-                            </Form.Row>
+                            <hr></hr>
+                        <Row>
+                            <h4>Section 2 Written responses:</h4>                            
+                        </Row>
+                        <Row>
+                            <h5>This section has 4 questions. In your own words complete 3 questions of your choice and write "skip" in the 4th</h5>
+                        </Row>
+                            <Form.Group style={{backgroundColor:'rgba(40, 40, 40, .4)'}}>
+                                <Form.Label><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                            </Form.Group>
                             <Form.Group>
-                                <Form.Label>Briefly explain your most important accomplishments, traits and qualifications, etc. <a href="https://www.indeed.com/career-advice/career-development/guide-to-writing-a-bio-with-examples">Guide to Writing a Bio (with examples)</a></Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Tell us about yourself." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                <Form.Label><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label><b>Q4:</b> You are a spy following your target and they just entered a building using a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad. </Form.Label>
+                                <Row>
+                                    <Col><p>Based on the following image what code would you punch in and why?</p></Col>
+                                </Row>
+                                <Row>
+                                    <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
+                                </Row>
+                                <br/>
+                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
                             </Form.Group>
                             <Form.Group required onChange={this.handleInputChange} className="Scholarship_Type__c">
                                 <Form.Label>Are you interested in any of the following scholarships?</Form.Label><br/>
@@ -497,4 +437,4 @@ class applicationContent extends Component {
     }
 };
 
-export default applicationContent;
+export default ApplicationPhase2Content;
