@@ -74,7 +74,7 @@ class applicationContent extends Component {
             cache: 'no-cache', 
             credentials: 'same-origin', 
             headers: {
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             redirect: 'follow', 
             referrerPolicy: 'no-referrer',
@@ -427,9 +427,9 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 && this.state.Ethnicity__c.indexOf('Other ') === -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Ethnicity" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
