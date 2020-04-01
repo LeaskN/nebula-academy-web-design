@@ -240,8 +240,26 @@ class ApplicationPhase2Content extends Component {
                                 <br/>
                                 <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
                             </Form.Group>
-                            <Form.Group required onChange={this.handleInputChange} className="Scholarship_Type__c">
-                                <Form.Label>Are you interested in any of the following scholarships?</Form.Label><br/>
+                                <fieldset>
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                    <Form.Label as="legend">Arrange the following words in a meaningful sequence.
+                                        <ol style={{listStyle: 'number'}}>
+                                            <li>Repair</li>
+                                            <li>Crash</li>
+                                            <li>Mechanic</li>
+                                            <li>Tow</li>
+                                            <li>Estimate</li>
+                                        </ol>
+                                    </Form.Label>
+                                    <Col sm={10}>
+                                        <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" />
+                                        <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" />
+                                        <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                        <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                        <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                    </Col>
+                                    </Form.Group>
+                                </fieldset>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homemaker Returning to the Workforce" type="checkbox"/> Homemaker Returning to the Workforce</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Low Income Individuals" type="checkbox"/> Low Income Individuals</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals with Disability" type="checkbox"/> Individuals with Disability</label><br/>
@@ -251,7 +269,6 @@ class ApplicationPhase2Content extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals formerly involved in the justice system" type="checkbox"/> Individuals formerly involved in the justice system</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homeless individuals" type="checkbox"/> Homeless individuals</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
-                            </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="How_did_you_hear_about_our_program__c" as="select">
