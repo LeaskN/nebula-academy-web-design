@@ -175,24 +175,26 @@ class ApplicationPhase2Content extends Component {
                             <p><b>Phase 3:</b> an interview to understand a participants motivations, commitments, & capacity</p>
                         </Row>
                         <hr></hr>
+                        <hr></hr>
                         <Row>
                             <Col className="alignCenter">
-                                <h3>General Info</h3>
+                                <h3>General Information</h3>
                                     <p>This phase should take approximately 2-4 hours depending on your writing skills.</p>
                                     <p>This is not a test to determine your writing capabilities. It is about your thinking. However, we do suggest that you use a spellchecker to ensure your answers are properly understood. </p>
                                     <p>This is a web form. Therefore if you lose connection you will lose your responses. We suggest you response offline and copy and paste into this form when you're ready to submit. For example you can use a notebook, notes on your phone or computer, a text document like Word, Google Docs, or Pages to ensure you don't lose your work. </p>
                             </Col>
                         </Row>
                         <hr></hr>
+                        <hr></hr>
+                        {/* Section 1: Personal Information */}
                         <Row>
-                            <Col className="alignCenter">
-                                <h3><b>IMPORTANT: </b></h3>
-                                    <p>Your first name, last name, and email address must match your previously entered information. The email which provided you with this link also has the first name, last name, and email address you previously entered.</p>
-                            </Col>
+                            <h4>Section 1: Personal Information</h4>
                         </Row>
                         <Row>
-                            <h4>Section 1 Personal Information:</h4>
+                            <h5 style={{color: 'red'}}><b>IMPORTANT: </b></h5>
+                            <h6>Your first name, last name, and email address <em>must</em> match your previously enetered information. The email that provided you with this link also has the first name, last name, and email address which you previously entered.</h6>
                         </Row>
+                        <br></br>
                         <Form className="manualContainer" >
                             <Form.Row>
                                 <Form.Group as={Col}>
@@ -211,239 +213,132 @@ class ApplicationPhase2Content extends Component {
                                 </Form.Group>
                             </Form.Row>
                             <hr></hr>
-                        <Row>
-                            <h4>Section 2 Written responses:</h4>                            
-                        </Row>
-                        <Row>
-                            <h5>This section has 4 questions. In your own words complete 3 questions of your choice and write "skip" in the 4th</h5>
-                        </Row>
-                            <Form.Group style={{backgroundColor:'rgba(40, 40, 40, .4)'}}>
-                                <Form.Label><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label><b>Q4:</b> You are a spy following your target and they just entered a building using a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad. </Form.Label>
+                            {/* Section 2: Short Answers  */}
+                            <Row>
+                                <h4>Section 2: Written Responses</h4>                            
+                            </Row>
+                            <Row>
+                                <h6>This section has 3 questions. In your own words, complete 2 questions of your choice and write <i>skip</i> for the question you choose to omit.</h6>
+                                {/* <h5>This section has 4 questions. In your own words complete 3 questions of your choice and write "skip" in the 4th</h5> */}
+                            </Row>
+                            <br></br>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                            <hr></hr>
+                            {/* Section 3: Logical Thinking */}
+                            <Row>
+                                <h4>Section 3: Logical Thinking</h4>
+                            </Row>
+                            <br></br>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q4:</b> You are a spy following a target who just entered a building with a door locked by a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad. </Form.Label>
+                                    <Row>
+                                        <Col><p>Based on the following image what code would you punch in and why?</p></Col>
+                                    </Row>
+                                    <Row>
+                                        <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
+                                    </Row>
+                                    <br/>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 5 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 6 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                </Form.Group>
+                                <hr></hr>
+                                {/* Section 4: Multiple Choice */}
                                 <Row>
-                                    <Col><p>Based on the following image what code would you punch in and why?</p></Col>
+                                    <h4>Section 4: Multiple Choice</h4>
                                 </Row>
-                                <Row>
-                                    <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
-                                </Row>
-                                <br/>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
-                            </Form.Group>
+                                <br></br>
                                 <fieldset>
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
-                                    <Form.Label as="legend">Arrange the following words in a meaningful sequence.
-                                        <ol style={{listStyle: 'number'}}>
-                                            <li>Repair</li>
-                                            <li>Crash</li>
-                                            <li>Mechanic</li>
-                                            <li>Tow</li>
-                                            <li>Estimate</li>
-                                        </ol>
-                                    </Form.Label>
-                                    <Col sm={10}>
-                                        <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" />
-                                        <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" />
-                                        <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                        <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                        <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                    </Col>
+                                        <Form.Label as="legend" style={{backgroundColor:'#a781bb', padding: '0 1200px 0 0'}} class><b>Q7:</b> Arrange the following words in a meaningful sequence.
+                                            <ol style={{listStyle: 'number'}}>
+                                                <i>
+                                                    <li>Repair</li>
+                                                    <li>Crash</li>
+                                                    <li>Mechanic</li>
+                                                    <li>Tow</li>
+                                                    <li>Estimate</li>
+                                                </i>
+                                            </ol>
+                                        </Form.Label>
+                                        <Col sm={10}>
+                                            <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" />
+                                            <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" />
+                                            <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                            <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios4" />
+                                            <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios5" />
+                                        </Col>
                                     </Form.Group>
                                 </fieldset>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homemaker Returning to the Workforce" type="checkbox"/> Homemaker Returning to the Workforce</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Low Income Individuals" type="checkbox"/> Low Income Individuals</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals with Disability" type="checkbox"/> Individuals with Disability</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals 55 and older" type="checkbox"/> Individuals 55 and older</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Single Parent" type="checkbox"/> Single Parent</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Veteran or Veteran's Spouse" type="checkbox"/> Veteran or Veteran's Spouse</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals formerly involved in the justice system" type="checkbox"/> Individuals formerly involved in the justice system</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homeless individuals" type="checkbox"/> Homeless individuals</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
-                            <Form.Group>
-                                <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
-                                <Form.Control required onChange={this.handleInputChange} name="How_did_you_hear_about_our_program__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="Article" label="Article">Article</option> 
-                                <option aria-label="option 2" value="Course Report" label="Course Report">Course Report</option> 
-                                <option aria-label="option 3" value="Facebook" label="Facebook">Facebook</option> 
-                                <option aria-label="option 4" value="Friend/Family" label="Friend/Family">Friend/Family</option> 
-                                <option aria-label="option 5" value="GitHub" label="GitHub">GitHub</option> 
-                                <option aria-label="option 6" value="Google" label="Google">Google</option> 
-                                <option aria-label="option 7" value="Hiring Heroes" label="Hiring Heroes">Hiring Heroes</option> 
-                                <option aria-label="option 8" value="Institute for Vets & Families (IVMF)" label="Institute for Vets & Families (IVMF)">Institute for Vets & Families (IVMF)" label="Institute for Vets & Families (IVMF)</option> 
-                                <option aria-label="option 9" value="LinkedIn" label="LinkedIn">LinkedIn</option> 
-                                <option aria-label="option 10" value="Operation Code" label="Operation Code">Operation Code</option> 
-                                <option aria-label="option 11" value="Twitter" label="Twitter">Twitter</option> 
-                                <option aria-label="option 12" value="Veterans Affairs" label="Veterans Affairs">Veterans Affairs</option> 
-                                <option aria-label="option 13" value="Warrior Scholar" label="Warrior Scholar">Warrior Scholar</option> 
-                                <option aria-label="option 14" value="Other" label="Other">Other</option> 
-                                </Form.Control>
-                            </Form.Group>
-                            <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.How_did_you_hear_about_our_program__c === "Other" ? "showing" : "hidden"}>
-                                    <Form.Label>Please provide how you heard of our program.</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="How_did_you_hear_OTHER_Desc__c" placeholder="Something else" />
-                                </Form.Group> 
-                            </Form.Row>
-                            <Form.Group>
-                                <Form.Label>Do you have coding experience?</Form.Label>
-                                <Form.Control required onChange={this.handleInputChange} name="Coding_experience__c" as="select">
-                                    <option aria-label="option 0" label="Select"></option> 
-                                    <option aria-label="option 1" value="None" label="None">None</option> 
-                                    <option aria-label="option 2" value="Beginner (100 hours or less of tutorials)" label="Beginner (100 hours or less of tutorials)">Beginner (100 hours or less of tutorials)</option> 
-                                    <option aria-label="option 3" value="Intermediate (three or fewer classes or personal projects)" label="Intermediate (Three or fewer classes and personal projects)">Intermediate (Three or fewer classes and personal projects)</option> 
-                                    <option aria-label="option 4" value="Advanced (Degree or professional experience)" label="Advanced (Degree or professional experience)">Advanced (Degree or professional experience)</option> 
-                                </Form.Control>
-                            </Form.Group>  
-                            <Form.Group>
-                                <Form.Label>Please provide highest education level</Form.Label><br/>
-                                <Form.Control required onChange={this.handleInputChange} name="Highest_education_level__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="High School" label="High School">High School</option> 
-                                <option aria-label="option 2" value="Some College" label="Some College">Some College</option> 
-                                <option aria-label="option 3" value="Associates Degree" label="Associates Degree">Associates Degree</option> 
-                                <option aria-label="option 4" value="Bachelors Degree" label="Bachelors Degree">Bachelors Degree</option> 
-                                <option aria-label="option 5" value="Masters" label="Masters">Masters</option> 
-                                <option aria-label="option 6" value="Doctorate" label="Doctorate">Doctorate</option> 
-                                <option aria-label="option 7" value="Other" label="Other">Other</option> 
-                                </Form.Control>
-                            </Form.Group>
-                            <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Highest_education_level__c === "Other" ? "showing" : "hidden"}>
-                                    <Form.Label>Please provide highest education level</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Highest_education_level_OTHER_Desc__c" placeholder="Highest Education" />
+                                <fieldset>
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                        <Form.Label as="legend" style={{backgroundColor: '#a781bb'}}><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
+                                        <Col sm={10}>
+                                            <Form.Check type="radio" label="Mike" name="formHorizontalRadios" id="formHorizontalRadios1" />
+                                            <Form.Check type="radio" label="Petunia" name="formHorizontalRadios" id="formHorizontalRadios2" />
+                                            <Form.Check type="radio" label="Steve" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                            <Form.Check type="radio" label="Phoebe" name="formHorizontalRadios" id="formHorizontalRadios4" />
+                                            <Form.Check type="radio" label="Sharmania" name="formHorizontalRadios" id="formHorizontalRadios5" />
+                                            <Form.Check type="radio" label="Bob" name="formHorizontalRadios" id="formHorizontalRadios6" />
+                                        </Col>
+                                    </Form.Group>
+                                </fieldset>
+                                <fieldset>
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                        <Form.Label as="legend"><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
+                                        <Col sm={10}>
+                                            <Form.Check type="radio" label="Jimmy" name="formHorizontalRadios" id="formHorizontalRadios1" />
+                                            <Form.Check type="radio" label="Kathy" name="formHorizontalRadios" id="formHorizontalRadios2" />
+                                            <Form.Check type="radio" label="Carla" name="formHorizontalRadios" id="formHorizontalRadios3" />
+                                            <Form.Check type="radio" label="Emmanuel" name="formHorizontalRadios" id="formHorizontalRadios4" />
+                                            <Form.Check type="radio" label="Nate" name="formHorizontalRadios" id="formHorizontalRadios5" />
+                                        </Col>
+                                    </Form.Group>
+                                </fieldset>
+                                <hr></hr>
+                                <Row>
+                                    <h4>Section 5: Essay</h4>
+                                </Row>
+                                <br></br>
+                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                    <Form.Label>
+                                        <p> In 350-700 words, tell us how you can relate your past experiences to how this program will help build your future.</p>
+                                        <h8>
+                                            <i>
+                                                <p> Here are some ideas you may want to include in your essay:</p>                                
+                                                <ul>
+                                                    <li>Something that excites you</li>
+                                                    <li>A time you overcame a significant hurdle</li>
+                                                    <li>An accomplishment that you're proud of</li>
+                                                    <li>What made you realize you're interested in technology</li>
+                                                    <li>How you use technology daily</li>
+                                                    <li>How you can stay motivated in a 3 month program</li>
+                                                    <li>Why you should be chosen as a participant</li>
+                                                    <li>How the program would change your future</li>
+                                                </ul>
+                                                <p> Anything submitted will be kept in full confidence.</p>
+                                            </i>   
+                                        </h8>
+                                    </Form.Label>
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Short_Bio__c" required />
                                 </Form.Group>
-                            </Form.Row>
-                            <Form.Group>
-                                <Form.Label>Please include certification(s), specialized training(s), license(s), self-taught learning program(s), self-enrichment workshop(s) and other career-enhancing program(s) below.</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Certifications, self-learning, etc.." name="Education_Not_included_above__c" required />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>Please provide your preference to experience learning</Form.Label><br/>
-                                <Form.Control required onChange={this.handleInputChange} name="Preference_to_experience_learning__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="Virtual" label="Virtual">Virtual</option> 
-                                <option aria-label="option 1" value="In-Person" label="In-Person">In-Person</option> 
-                                <option aria-label="option 2" value="Both" label="Both">Both</option> 
-                                </Form.Control>
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
-                                <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
-                                <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
-                                <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
-                                <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 6" value="Other" label="Other">Other</option> 
-                                </Form.Control>
-                            </Form.Group>
-                            <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Primary_intentions_for_enrolling__c === "Other" ? "showing " : "hidden"}>
-                                    <Form.Label>Please describe your primary intentions below:</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Primary_Intentions_OTHER_DESC__c" placeholder="Primary Intentions: Other" />
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Group>
-                                <Form.Label>Would you be interested in learning more about our teacher certification program?</Form.Label>
-                                    <Form.Control onChange={this.handleInputChange} name="Want_to_know_more_about_teacher_cert_pgm__c"  as="select">
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
-                                        <option aria-label="option 2" label="No" value="false">No</option> 
-                                    </Form.Control>
-                            </Form.Group> 
-                            <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
-                                <Form.Label>How are you planning to fund the program fee of $16,995 if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paying in full</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Multiple payments option" type="checkbox"/> Multiple payments option</label><br/>
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} className="Ethnicity__c" name="Ethnicity__c"  as="select">
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Caucasian" value="Caucasian"> Caucasian</option>
-                                        <option aria-label="option 2" label="African American" value="African American"> African American</option>
-                                        <option aria-label="option 3" label="Hispanic or Latin Origin" value="Hispanic or Latin Origin"> Hispanic or Latin Origin</option>
-                                        <option aria-label="option 4" label="Native American" value="Native American"> Native American</option>
-                                        <option aria-label="option 5" label="Native Hawaiian or Other Pacific Islander" value="Native Hawaiian or Other Pacific Islander"> Native Hawaiian or Other Pacific Islander</option>
-                                        <option aria-label="option 6" label="Middle Eastern or North African" value="Middle Eastern or North African"> Middle Eastern or North African</option>
-                                        <option aria-label="option 7" label="Other" value="Other"> Other</option>
-                                    </Form.Control>
-                            </Form.Group> 
-                            <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 && this.state.Ethnicity__c.indexOf('Other ') === -1 ? "showing" : "hidden"}>
-                                    <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Ethnicity" />
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Group>
-                                <Form.Label>Please provide your Gender</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c" as="select">
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Female" value="Female"> Female</option>
-                                        <option aria-label="option 2" label="Male" value="Male"> Male</option>
-                                        <option aria-label="option 3" label="Non-binary/third gender" value="Non-binary/third gender"> Non-binary/third gender</option>
-                                        <option aria-label="option 4" label="Transsexual" value="Transsexual"> Transsexual</option>
-                                        <option aria-label="option 5" label="Other/Prefer to self-describe" value="Other/Prefer to self-describe"> Other/Prefer to self-describe</option>
-                                    </Form.Control>
-                            </Form.Group> 
-                            <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
-                                    <Form.Label>Please provide your gender</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Group>
-                                <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
-                                    <Form.Control onChange={this.handleInputChange} name="VET_GI_BILL_BENEFITS__c" as="select">
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
-                                        <option aria-label="option 2" label="No" value="false">No</option> 
-                                    </Form.Control>
-                            </Form.Group> 
-                            <Form.Group>
-                                <Form.Label>Which cohort are you applying to?</Form.Label>
-                                <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
-                                    <option aria-label="option 0" label="Select" value="false"></option> 
-                                    {this.populateOptions()}
-                                </Form.Control>
-                            </Form.Group> 
-                            <Form.Group>
-                                <Form.Label>Are you a US citizen or permanent resident?</Form.Label>
-                                    <Form.Control required as="select" name="US_citizen_or_permanent_resident__c" onChange={this.handleInputChange}>
-                                        <option aria-label="option 0" label="Select" value="false"></option> 
-                                        <option aria-label="option 1" label="Yes" value="true">Yes</option> 
-                                        <option aria-label="option 2" label="No" value="false">No</option> 
-                                    </Form.Control>
-                            </Form.Group> 
-                            <Form.Group>
-                                <Form.Label>Are you currently authorized to work in the US?</Form.Label>
-                                <Form.Control required name="Authorized_to_work_in_US__c" as="select" onChange={this.handleInputChange}>
-                                    <option aria-label="option 0" label="Select"></option> 
-                                    <option aria-label="option 1" label="Yes" value="true">Yes</option> 
-                                    <option aria-label="option 2" label="No" value="false">No</option> 
-                                </Form.Control>
-                            </Form.Group> 
-                            <Form.Group>
-                                <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
-                                <Form.Control onChange={this.handleInputChange} name="High_School_Diploma_or_GED__c" required as="select">
-                                    <option label="Select"></option> 
-                                    <option label="I Acknowledge" value="true">I Acknowledge</option>
-                                </Form.Control>
-                            </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Submit</Button>
                         </Form>
                     </Col>
