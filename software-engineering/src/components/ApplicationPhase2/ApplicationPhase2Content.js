@@ -30,7 +30,7 @@ class ApplicationPhase2Content extends Component {
             finalArray
         );
     }
-    putData(e) {
+    postData(e) {
         this.fixJSON();
         e.preventDefault();
         if(this.state.Contact_Number__c){
@@ -115,7 +115,7 @@ class ApplicationPhase2Content extends Component {
     }
     handleInputChange(event) {
         let target = event.target;
-        let value = target.type === 'checkbox' ? target.checked : target.value;
+        let value = target.type === 'radio' ? target.checked : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
@@ -219,20 +219,19 @@ class ApplicationPhase2Content extends Component {
                             </Row>
                             <Row>
                                 <h6>This section has 3 questions. In your own words, complete 2 questions of your choice and write <i>skip</i> for the question you choose to omit.</h6>
-                                {/* <h5>This section has 4 questions. In your own words complete 3 questions of your choice and write "skip" in the 4th</h5> */}
                             </Row>
                             <br></br>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Answer_1__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Answer_2__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Answer_3__c" required />
                                 </Form.Group>
                             <hr></hr>
                             {/* Section 3: Logical Thinking */}
@@ -240,7 +239,7 @@ class ApplicationPhase2Content extends Component {
                                 <h4>Section 3: Logical Thinking</h4>
                             </Row>
                             <br></br>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q4:</b> You are a spy following a target who just entered a building with a door locked by a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad. </Form.Label>
                                     <Row>
                                         <Col><p>Based on the following image what code would you punch in and why?</p></Col>
@@ -249,15 +248,15 @@ class ApplicationPhase2Content extends Component {
                                         <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
                                     </Row>
                                     <br/>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Answer_4__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 5 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 5 here." onChange={this.handleInputChange} name="Answer_5__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 6 here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 6 here." onChange={this.handleInputChange} name="Answer_6__c" required />
                                 </Form.Group>
                                 <hr></hr>
                                 {/* Section 4: Multiple Choice */}
@@ -267,7 +266,7 @@ class ApplicationPhase2Content extends Component {
                                 <br></br>
                                 <fieldset>
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
-                                        <Form.Label as="legend" style={{backgroundColor:'#a781bb', padding: '0 1200px 0 0'}} class><b>Q7:</b> Arrange the following words in a meaningful sequence.
+                                        <Form.Label as="legend" style={{backgroundColor:'#ecbfff', padding: '0 1200px 0 0'}}><b>Q7:</b> Arrange the following words in a meaningful sequence.
                                             <ol style={{listStyle: 'number'}}>
                                                 <i>
                                                     <li>Repair</li>
@@ -289,7 +288,7 @@ class ApplicationPhase2Content extends Component {
                                 </fieldset>
                                 <fieldset>
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
-                                        <Form.Label as="legend" style={{backgroundColor: '#a781bb'}}><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
+                                        <Form.Label as="legend" style={{backgroundColor: '#ecbfff'}}><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
                                             <Form.Check type="radio" label="Mike" name="formHorizontalRadios" id="formHorizontalRadios1" />
                                             <Form.Check type="radio" label="Petunia" name="formHorizontalRadios" id="formHorizontalRadios2" />
@@ -302,7 +301,7 @@ class ApplicationPhase2Content extends Component {
                                 </fieldset>
                                 <fieldset>
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
-                                        <Form.Label as="legend"><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
+                                        <Form.Label as="legend" style={{backgroundColor: '#ecbfff', padding: '0 300px 0 0'}}><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
                                             <Form.Check type="radio" label="Jimmy" name="formHorizontalRadios" id="formHorizontalRadios1" />
                                             <Form.Check type="radio" label="Kathy" name="formHorizontalRadios" id="formHorizontalRadios2" />
@@ -317,10 +316,10 @@ class ApplicationPhase2Content extends Component {
                                     <h4>Section 5: Essay</h4>
                                 </Row>
                                 <br></br>
-                                <Form.Group style={{backgroundColor:'#a781bb'}}>
+                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
                                     <Form.Label>
                                         <p> In 350-700 words, tell us how you can relate your past experiences to how this program will help build your future.</p>
-                                        <h8>
+                                        
                                             <i>
                                                 <p> Here are some ideas you may want to include in your essay:</p>                                
                                                 <ul>
@@ -335,11 +334,11 @@ class ApplicationPhase2Content extends Component {
                                                 </ul>
                                                 <p> Anything submitted will be kept in full confidence.</p>
                                             </i>   
-                                        </h8>
+                                        
                                     </Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Short_Bio__c" required />
                                 </Form.Group>
-                            <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Submit</Button>
+                            <Button variant="secondary" type="submit" onClick={(e) => this.postData(e)}>Submit</Button>
                         </Form>
                     </Col>
                 </Row>
