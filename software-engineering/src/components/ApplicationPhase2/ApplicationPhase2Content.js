@@ -186,12 +186,6 @@ class ApplicationPhase2Content extends Component {
                         </Row>
                         <hr></hr>
                         <hr></hr>
-                        {/* <Row>
-                            <Col className="alignCenter">
-                                <h3 style={{color: 'red'}}><b>IMPORTANT: </b></h3>
-                                    <p>Your first name, last name, and email address must match your previously entered information. The email which provided you with this link also has the first name, last name, and email address you previously entered.</p>
-                            </Col>
-                        </Row> */}
                         {/* Section 1: Personal Information */}
                         <Row>
                             <h4>Section 1: Personal Information</h4>
