@@ -115,11 +115,11 @@ class ApplicationPhase2Content extends Component {
     }
     handleInputChange(event) {
         let target = event.target;
-        let value = target.type === 'radio' ? target.checked : target.value;
+        let value = target.type === 'radio' ? target.alt : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
-        
+       
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
             //if state does not contain that specific listName yet
@@ -211,6 +211,10 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control required input="true" onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
                                 </Form.Group>
+                                 <Form.Group as={Col}>
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Id" placeholder="Enter provided ID" />
+                                </Form.Group>
                             </Form.Row>
                             <hr></hr>
                             {/* Section 2: Short Answers  */}
@@ -265,7 +269,7 @@ class ApplicationPhase2Content extends Component {
                                 </Row>
                                 <br></br>
                                 <fieldset>
-                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_7__c">
                                         <Form.Label as="legend" style={{backgroundColor:'#ecbfff', padding: '0 1200px 0 0'}}><b>Q7:</b> Arrange the following words in a meaningful sequence.
                                             <ol style={{listStyle: 'number'}}>
                                                 <i>
@@ -278,36 +282,36 @@ class ApplicationPhase2Content extends Component {
                                             </ol>
                                         </Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" />
-                                            <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" />
-                                            <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                            <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios4" />
-                                            <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios5" />
+                                            <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" alt="1, 3, 2, 4, 5"/>
+                                            <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" alt="2, 3, 4, 5, 1"/>
+                                            <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" alt="5, 2, 3, 1, 4"/>
+                                            <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios4" alt="2, 4, 3, 5, 1"/>
+                                            <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios5" alt="5, 2, 4, 3, 1"/>
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
                                 <fieldset>
-                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_8__c">
                                         <Form.Label as="legend" style={{backgroundColor: '#ecbfff'}}><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="Mike" name="formHorizontalRadios" id="formHorizontalRadios1" />
-                                            <Form.Check type="radio" label="Petunia" name="formHorizontalRadios" id="formHorizontalRadios2" />
-                                            <Form.Check type="radio" label="Steve" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                            <Form.Check type="radio" label="Phoebe" name="formHorizontalRadios" id="formHorizontalRadios4" />
-                                            <Form.Check type="radio" label="Sharmania" name="formHorizontalRadios" id="formHorizontalRadios5" />
-                                            <Form.Check type="radio" label="Bob" name="formHorizontalRadios" id="formHorizontalRadios6" />
+                                            <Form.Check type="radio" label="Mike" name="formHorizontalRadios" id="formHorizontalRadios1" alt="Mike" />
+                                            <Form.Check type="radio" label="Petunia" name="formHorizontalRadios" id="formHorizontalRadios2" alt="Petunia" />
+                                            <Form.Check type="radio" label="Steve" name="formHorizontalRadios" id="formHorizontalRadios3" alt="Steve" />
+                                            <Form.Check type="radio" label="Phoebe" name="formHorizontalRadios" id="formHorizontalRadios4" alt="Phoebe" />
+                                            <Form.Check type="radio" label="Sharmania" name="formHorizontalRadios" id="formHorizontalRadios5" alt="Sharmania" />
+                                            <Form.Check type="radio" label="Bob" name="formHorizontalRadios" id="formHorizontalRadios6" alt="Bob" />
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
                                 <fieldset>
-                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Scholarship_Type__c">
+                                    <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_9__c">
                                         <Form.Label as="legend" style={{backgroundColor: '#ecbfff', padding: '0 300px 0 0'}}><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="Jimmy" name="formHorizontalRadios" id="formHorizontalRadios1" />
-                                            <Form.Check type="radio" label="Kathy" name="formHorizontalRadios" id="formHorizontalRadios2" />
-                                            <Form.Check type="radio" label="Carla" name="formHorizontalRadios" id="formHorizontalRadios3" />
-                                            <Form.Check type="radio" label="Emmanuel" name="formHorizontalRadios" id="formHorizontalRadios4" />
-                                            <Form.Check type="radio" label="Nate" name="formHorizontalRadios" id="formHorizontalRadios5" />
+                                            <Form.Check type="radio" label="Jimmy" name="formHorizontalRadios" id="formHorizontalRadios1" alt="Jimmy"/>
+                                            <Form.Check type="radio" label="Kathy" name="formHorizontalRadios" id="formHorizontalRadios2" alt="Kathy"/>
+                                            <Form.Check type="radio" label="Carla" name="formHorizontalRadios" id="formHorizontalRadios3" alt="Carla"/>
+                                            <Form.Check type="radio" label="Emmanuel" name="formHorizontalRadios" id="formHorizontalRadios4" alt="Emmanuel"/>
+                                            <Form.Check type="radio" label="Nate" name="formHorizontalRadios" id="formHorizontalRadios5" alt="Nate"/>
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
@@ -336,7 +340,7 @@ class ApplicationPhase2Content extends Component {
                                             </i>   
                                         
                                     </Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Short_Bio__c" required />
+                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Answer_10__c" required />
                                 </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.postData(e)}>Submit</Button>
                         </Form>
