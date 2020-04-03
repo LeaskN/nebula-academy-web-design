@@ -11,12 +11,21 @@ class ApplicationPhase2Content extends Component {
             Ethnicity__c: [],
         };
         this.handleInputChange = this.handleInputChange.bind(this);
-        
     }
     componentDidMount(e){
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions : res.records}))
+        this.findID(e)
+    }
+    findID(e){
+        let str = window.location.href;
+        console.log(str)
+        let n = str.lastIndexOf('/');
+        let result = str.substring(n + 1);
+        this.setState({
+            Id: result
+        })
     }
     populateOptions(){
         let options = this.state.cohortOptions;
@@ -119,9 +128,9 @@ class ApplicationPhase2Content extends Component {
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
-       
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
+            
             //if state does not contain that specific listName yet
             if(!this.state[listName]){
                 //first time something is being added to an array
@@ -156,6 +165,7 @@ class ApplicationPhase2Content extends Component {
                 [name]: value
             });
         }
+        console.log(this.state)
     } 
     render() {
         return (
@@ -225,16 +235,16 @@ class ApplicationPhase2Content extends Component {
                                 <h6>This section has 3 questions. In your own words, complete 2 questions of your choice and write <i>skip</i> for the question you choose to omit.</h6>
                             </Row>
                             <br></br>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
+                                <Form.Group className="question">
+                                    <Form.Label className="top"><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Answer_1__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
+                                <Form.Group className="question">
+                                    <Form.Label className="top"><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Answer_2__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
+                                <Form.Group className="question">
+                                    <Form.Label className="top"><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Answer_3__c" required />
                                 </Form.Group>
                             <hr></hr>
@@ -243,23 +253,22 @@ class ApplicationPhase2Content extends Component {
                                 <h4>Section 3: Logical Thinking</h4>
                             </Row>
                             <br></br>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q4:</b> You are a spy following a target who just entered a building with a door locked by a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad. </Form.Label>
-                                    <Row>
-                                        <Col><p>Based on the following image what code would you punch in and why?</p></Col>
-                                    </Row>
+                                <Form.Group className="question">
+                                    <Form.Label className="top">
+                                        <p><b>Q4:</b> You are a spy following a target who just entered a building with a door locked by a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad.</p> 
+                                        <p>Based on the following image what code would you punch in and why?</p>
+                                    </Form.Label>
                                     <Row>
                                         <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
                                     </Row>
-                                    <br/>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Answer_4__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></Form.Label>
+                                <Form.Group className="question">
+                                    <Form.Label className="top"><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 5 here." onChange={this.handleInputChange} name="Answer_5__c" required />
                                 </Form.Group>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
-                                    <Form.Label><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></Form.Label>
+                                <Form.Group className="question">
+                                    <Form.Label className="top"><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 6 here." onChange={this.handleInputChange} name="Answer_6__c" required />
                                 </Form.Group>
                                 <hr></hr>
@@ -268,9 +277,9 @@ class ApplicationPhase2Content extends Component {
                                     <h4>Section 4: Multiple Choice</h4>
                                 </Row>
                                 <br></br>
-                                <fieldset>
+                                <fieldset className="question">
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_7__c">
-                                        <Form.Label as="legend" style={{backgroundColor:'#ecbfff', padding: '0 1200px 0 0'}}><b>Q7:</b> Arrange the following words in a meaningful sequence.
+                                        <Form.Label  className="top"  ><b>Q7:</b> Arrange the following words in a meaningful sequence.
                                             <ol style={{listStyle: 'number'}}>
                                                 <i>
                                                     <li>Repair</li>
@@ -282,36 +291,36 @@ class ApplicationPhase2Content extends Component {
                                             </ol>
                                         </Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="1, 3, 2, 4, 5" name="formHorizontalRadios" id="formHorizontalRadios1" alt="1, 3, 2, 4, 5"/>
-                                            <Form.Check type="radio" label="2, 3, 4, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios2" alt="2, 3, 4, 5, 1"/>
-                                            <Form.Check type="radio" label="5, 2, 3, 1, 4" name="formHorizontalRadios" id="formHorizontalRadios3" alt="5, 2, 3, 1, 4"/>
-                                            <Form.Check type="radio" label="2, 4, 3, 5, 1" name="formHorizontalRadios" id="formHorizontalRadios4" alt="2, 4, 3, 5, 1"/>
-                                            <Form.Check type="radio" label="5, 2, 4, 3, 1" name="formHorizontalRadios" id="formHorizontalRadios5" alt="5, 2, 4, 3, 1"/>
+                                            <Form.Check type="radio" label="1, 3, 2, 4, 5" name="Answer_7__c" id="formHorizontalRadios1" alt="1, 3, 2, 4, 5"/>
+                                            <Form.Check type="radio" label="2, 3, 4, 5, 1" name="Answer_7__c" id="formHorizontalRadios2" alt="2, 3, 4, 5, 1"/>
+                                            <Form.Check type="radio" label="5, 2, 3, 1, 4" name="Answer_7__c" id="formHorizontalRadios3" alt="5, 2, 3, 1, 4"/>
+                                            <Form.Check type="radio" label="2, 4, 3, 5, 1" name="Answer_7__c" id="formHorizontalRadios4" alt="2, 4, 3, 5, 1"/>
+                                            <Form.Check type="radio" label="5, 2, 4, 3, 1" name="Answer_7__c" id="formHorizontalRadios5" alt="5, 2, 4, 3, 1"/>
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
-                                <fieldset>
+                                <fieldset className="question">
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_8__c">
-                                        <Form.Label as="legend" style={{backgroundColor: '#ecbfff'}}><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
+                                        <Form.Label  className="top" ><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="Mike" name="formHorizontalRadios" id="formHorizontalRadios1" alt="Mike" />
-                                            <Form.Check type="radio" label="Petunia" name="formHorizontalRadios" id="formHorizontalRadios2" alt="Petunia" />
-                                            <Form.Check type="radio" label="Steve" name="formHorizontalRadios" id="formHorizontalRadios3" alt="Steve" />
-                                            <Form.Check type="radio" label="Phoebe" name="formHorizontalRadios" id="formHorizontalRadios4" alt="Phoebe" />
-                                            <Form.Check type="radio" label="Sharmania" name="formHorizontalRadios" id="formHorizontalRadios5" alt="Sharmania" />
-                                            <Form.Check type="radio" label="Bob" name="formHorizontalRadios" id="formHorizontalRadios6" alt="Bob" />
+                                            <Form.Check type="radio" label="Mike" name="Answer_8__c" id="formHorizontalRadios6" alt="Mike" />
+                                            <Form.Check type="radio" label="Petunia" name="Answer_8__c" id="formHorizontalRadios7" alt="Petunia" />
+                                            <Form.Check type="radio" label="Steve" name="Answer_8__c" id="formHorizontalRadios8" alt="Steve" />
+                                            <Form.Check type="radio" label="Phoebe" name="Answer_8__c" id="formHorizontalRadios9" alt="Phoebe" />
+                                            <Form.Check type="radio" label="Sharmania" name="Answer_8__c" id="formHorizontalRadios10" alt="Sharmania" />
+                                            <Form.Check type="radio" label="Bob" name="Answer_8__c" id="formHorizontalRadios11" alt="Bob" />
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
-                                <fieldset>
+                                <fieldset className="question" >
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_9__c">
-                                        <Form.Label as="legend" style={{backgroundColor: '#ecbfff', padding: '0 300px 0 0'}}><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
+                                        <Form.Label  className="top" ><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
                                         <Col sm={10}>
-                                            <Form.Check type="radio" label="Jimmy" name="formHorizontalRadios" id="formHorizontalRadios1" alt="Jimmy"/>
-                                            <Form.Check type="radio" label="Kathy" name="formHorizontalRadios" id="formHorizontalRadios2" alt="Kathy"/>
-                                            <Form.Check type="radio" label="Carla" name="formHorizontalRadios" id="formHorizontalRadios3" alt="Carla"/>
-                                            <Form.Check type="radio" label="Emmanuel" name="formHorizontalRadios" id="formHorizontalRadios4" alt="Emmanuel"/>
-                                            <Form.Check type="radio" label="Nate" name="formHorizontalRadios" id="formHorizontalRadios5" alt="Nate"/>
+                                            <Form.Check type="radio" label="Jimmy" name="Answer_9__c" id="formHorizontalRadios12" alt="Jimmy"/>
+                                            <Form.Check type="radio" label="Kathy" name="Answer_9__c" id="formHorizontalRadios13" alt="Kathy"/>
+                                            <Form.Check type="radio" label="Carla" name="Answer_9__c" id="formHorizontalRadios14" alt="Carla"/>
+                                            <Form.Check type="radio" label="Emmanuel" name="Answer_9__c" id="formHorizontalRadios15" alt="Emmanuel"/>
+                                            <Form.Check type="radio" label="Nate" name="Answer_9__c" id="formHorizontalRadios16" alt="Nate"/>
                                         </Col>
                                     </Form.Group>
                                 </fieldset>
@@ -320,7 +329,7 @@ class ApplicationPhase2Content extends Component {
                                     <h4>Section 5: Essay</h4>
                                 </Row>
                                 <br></br>
-                                <Form.Group style={{backgroundColor:'#ecbfff'}}>
+                                <Form.Group className="question">
                                     <Form.Label>
                                         <p> In 350-700 words, tell us how you can relate your past experiences to how this program will help build your future.</p>
                                         
