@@ -20,7 +20,7 @@ export const NavigationBar = () => (
                         <NavDropdown.Item href="/partners">Partners</NavDropdown.Item>
                         <NavDropdown.Item href="/guestspeakers">GuestSpeakers</NavDropdown.Item>
                     </NavDropdown>
-                    <Button href="/registration" variant="warning">Register</Button>
+                    <Button href="/registration" variant="warning">Register Now</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
             </Navbar.Collapse>
