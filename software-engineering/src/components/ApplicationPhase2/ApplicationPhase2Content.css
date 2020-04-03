@@ -18,3 +18,17 @@
 body{
     background-color: #f0f0f0;
 }
+
+.question{
+    background-color: #a4bee6;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 12px;
+}
+.top{
+    background-color: rgba(255, 255, 255, .5);
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
