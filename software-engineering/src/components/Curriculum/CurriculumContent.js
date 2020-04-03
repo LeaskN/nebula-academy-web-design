@@ -104,7 +104,7 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                    <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 22 weeks. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
+                                                    <p>This content is designed to take someone without any coding ability to an entry-level professional Software Engineer in 3 months. Many of the upcoming topics and names will be foreign to you but you'll be VERY comfortable with each one of them by the end of the program.</p>
                                                     <p>Coding Basics include things from creating a personalized coding environment to JavaScript basics, learning about data structures, and understanding how to save your work through Git & GitHub.</p>
                                                     <p>The goal of this course is to land our participants with high-level jobs, most of which require a technical conversation before hand. To address this we will always have informal conversations regarding a topic and then cover probable interview questions.</p>
                                                 </Col>
@@ -249,8 +249,7 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                    <p>The Nebula Academy Software Engineering program is 22 weeks long.</p>
-                                                    <p>We primarily work in 4-week sprints where we are learning, practicing, and implementing new and previously covered technologies. We finish the 4-week cycle by creating projects.</p>
+                                                    <p>The Nebula Academy Software Engineering program is 3 months long.</p>
                                                     <p>The following week is flexible where students are covering their weak areas, fixing old or current projects, or taking some time to recuperate.</p>
                                                     <p>We can't do anything with burnt-out participants, so we want to ensure that participants are pacing themselves for the long-haul: employment.</p>
                                                 </Col>
@@ -306,9 +305,10 @@ class CurriculumContent extends Component {
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>As previously mentioned, we typically have four weeks of study and practice followed by one week of unspecified time.</p>
-                                                <p>Depending upon where we are in the course this can vary for different students. Some will relax, some will work on previous projects, and others will study previous topics.</p>
-                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation weeks around them.</p>
+                                                <p>As previously mentioned, we want to ensure that our students dont burn themselves out. We want our students to be able to learn, build, and apply with energy throughout.</p>
+                                                <p>This means that there will be a couple points within the course where students can spend time to relax and recover. This takes different forms for different students. </p>
+                                                <p>Some will work on previous projects, others will study previous topics, and others will take a little time off to recooperate.</p>
+                                                <p>We follow a <a href="https://www.redcort.com/us-federal-bank-holidays">National US Holiday Calendar</a> similar to this link and build our recuperation time around them.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>

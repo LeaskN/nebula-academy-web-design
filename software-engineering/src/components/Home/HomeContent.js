@@ -22,7 +22,7 @@ render() {
                         <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Learn To Code in 6 Months</h3>
+                                    <h3>Learn To Code in 3 Months</h3>
                                     <Card.Text>
                                         Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                                     </Card.Text>
@@ -39,7 +39,7 @@ render() {
                                             <li><b>Earn the <a className="linkLight" target="empty" href="https://aws.amazon.com/training/awsacademy/">fastest growing industry certification</a></b> to accelerate the employment process.</li>
                                             <li>Gain access to the <b><a className="linkLight" target="empty" href="http://careerleader.com/">Career Leader Assessment</a></b>. A fully integrated approach to self-assessment built on one's interests, motivators and skills.</li>
                                             <li><b>Multiple payment options</b> such as Scholarships, Pay After Employment, and Extended Payment.</li>
-                                            <li><b>Pending approval 6/1/20:</b> All Nebula Academy participants will be able to earn college credits.</li>
+                                            <li><b>Pending approval:</b> All Nebula Academy participants will be able to earn college credits.</li>
                                             <li><b>100% Money Back Guarantee </b><a className="linkLight" href='#conditions'>(see conditions below)</a></li>
                                         </ul>  
                                 </Card.Body>
@@ -121,7 +121,7 @@ render() {
                                     <h3>Try before you buy!</h3>
                                     <p>Want to learn to code? Thinking of joining a coding bootcamp but want to give it a try first? Come and give it a <b>free 6 hour try with us!</b> </p>
                                     <p>Participants will have the opportunity to try coding for free. We will build a simple and fun application to give our participants a coding experience.</p>
-                                    <p>Any participants that decide on the day to sign up for our 6 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount.</p>
+                                    <p>Any participants that decide on the day to sign up for our 3 month Software Engineering bootcamp will receive a $1000 discount. Any participants that attend and decide to sign up in the future will receive a $500 discount.</p>
                                     <div id="spacer" ></div>
                                     <Button className="bottom contentCentered" href="/trycoding" variant="primary">Try Coding</Button>
                                 </Card.Body>
