@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row, Alert } from 'react-bootstrap';
 import Iframe from 'react-iframe';
 import './RegistrationContent.css'
 
@@ -68,20 +68,7 @@ class registrationContent extends Component {
                         <hr></hr>
 
                         <Row>
-                            <Col className="registrationPadding" xs={12} lg={6}>
-                                <br/>
-                                <h3>AWS Academy Cloud Foundations - In Person</h3>
-                                <Iframe 
-                                    src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
-                                    width="100%"
-                                    id="myId"
-                                    className="form"
-                                    display="initial"
-                                    position="relative"
-                                    height="400px">
-                                </Iframe>	
-                            </Col>
-                            <Col className="registrationPadding" xs={12} lg={6}>
+                            <Col className="registrationPadding" xs={12} lg={12}>
                                 <br/>
                                 <h3>AWS Academy Cloud Foundations - Virtual</h3>
                                 <Iframe 
@@ -106,6 +93,31 @@ class registrationContent extends Component {
                                     position="relative"
                                     height="400px">
                                 </Iframe>	
+                            </Col>
+                             <Col className="registrationPadding" xs={12} lg={12}>
+                                <br/>
+                                <h3>AWS Academy Cloud Foundations - In Person (Read COVID-19 Alert Below)</h3>
+                                {/* <Iframe 
+                                    src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
+                                    width="100%"
+                                    id="myId"
+                                    className="form"
+                                    display="initial"
+                                    position="relative"
+                                    height="400px">
+                                </Iframe>	 */}
+                                <br/>
+                                <Alert variant="danger">
+                                    <Alert.Heading>Thank you for your interest</Alert.Heading>
+                                    <p>
+                                        Unfortunately, due to the global COVID-19 outbreak, Nebula Academy is temporarily on hold our in person AWS training sessions as our students' safety is our main concern.
+                                        That said, the Nebula team is offering both Virtual and Live Virtual courses to provide our students with a flexible and comprehensive learning experience regardless of the situation.
+                                    </p>
+                                    <hr />
+                                    <p className="mb-0">
+                                        Please continue to stay healthy and safe. 
+                                    </p>
+                                </Alert>
                             </Col>
                         </Row>
                         <br/>       
