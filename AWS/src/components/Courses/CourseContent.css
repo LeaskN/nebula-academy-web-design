@@ -11,5 +11,31 @@
     background-image: url("../../assets/7_AWS_Operations.jpg");
     background-size: cover;
     background-position: -0px -0px;
-
+}
+.courseBackImage4{
+    background-image: url("../../assets/nebula-developing.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+}
+.courseBackImage5{
+    background-image: url("../../assets/nebula-analytics.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+}
+.courseButton:hover{
+    background-color: #a983c4;
+}
+.bottom{
+  position:absolute !important;
+  margin-left: 5% !important;
+  margin-bottom: 15px !important;
+  margin-top: 0px !important;
+  width: 90% !important;                
+  bottom: 0 !important;                          
+  left: 0 !important; 
+}
+#spacer{
+  height: 50px;
+  width: 100px;
+  display:inline-block;
 }

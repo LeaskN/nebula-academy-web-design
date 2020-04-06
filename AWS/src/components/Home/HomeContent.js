@@ -1,11 +1,13 @@
 import React from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './HomeContent.css';
+import Popup from './Popup'
 
 export const HomeContent = () => (
     <React.Fragment>
         <Container>
             <Row>
+                {Popup()}
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
                         <Card.Body>
@@ -15,9 +17,9 @@ export const HomeContent = () => (
                             </Card.Text>
                             <Row className="contentCentered" >
                                 <Col>
-                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'108px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
                                 </Col>
                             </Row>
                         </Card.Body>
@@ -35,7 +37,7 @@ export const HomeContent = () => (
                     <Card className="introRowTile">
                         <Card.Body>
                             <Card.Title>Is an AWS Certification Important to Your Career?</Card.Title>
-                            <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9 percent.</p>
+                            <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9%.</p>
                             <p>Source: <a className="linkLight" target="blank" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
                         </Card.Body>
                     </Card>
