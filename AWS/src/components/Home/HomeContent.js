@@ -17,9 +17,9 @@ export const HomeContent = () => (
                             </Card.Text>
                             <Row className="contentCentered" >
                                 <Col>
-                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'111px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
+                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
                                 </Col>
                             </Row>
                         </Card.Body>
