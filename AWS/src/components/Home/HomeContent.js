@@ -1,11 +1,13 @@
 import React from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './HomeContent.css';
+import Popup from './Popup'
 
 export const HomeContent = () => (
     <React.Fragment>
         <Container>
             <Row>
+                {Popup()}
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
                         <Card.Body>

@@ -46,7 +46,7 @@ export const CourseContent = () => (
             </Col>
         </Row>
         <Row style={{marginTop: "1px"}}>
-             <Col xs={12} lg={4} xl={4} className="courseBackImage3" style={{border:"5px solid white",  }}>
+             <Col xs={12} lg={4} xl={4} className="courseBackImage4" style={{border:"5px solid white",  }}>
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>AWS Academy Cloud Developing<i> - Coming soon!</i></Card.Title>
@@ -58,7 +58,7 @@ export const CourseContent = () => (
                     </Card.Body>
                 </Card>
             </Col>
-             <Col xs={12} lg={4} xl={4} className="courseBackImage3" style={{border:"5px solid white",  }}>
+             <Col xs={12} lg={4} xl={4} className="courseBackImage5" style={{border:"5px solid white",  }}>
                 <Card className="overImage">
                     <Card.Body>
                         <Card.Title>AWS Academy Data Analytics<i> - Coming soon!</i></Card.Title>

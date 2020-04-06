@@ -11,7 +11,16 @@
     background-image: url("../../assets/7_AWS_Operations.jpg");
     background-size: cover;
     background-position: -0px -0px;
-
+}
+.courseBackImage4{
+    background-image: url("../../assets/nebula-developing.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
+}
+.courseBackImage5{
+    background-image: url("../../assets/nebula-analytics.jpg");
+    background-size: cover;
+    background-position: -0px -0px;
 }
 .courseButton:hover{
     background-color: #a983c4;
