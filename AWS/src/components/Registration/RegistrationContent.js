@@ -1,55 +1,12 @@
 import React, { Component }from 'react';
-import { Container, Col, Row, Alert } from 'react-bootstrap';
-import Iframe from 'react-iframe';
-import './RegistrationContent.css'
+import { Container, Col, Row, Alert, Button } from 'react-bootstrap';
+// import Iframe from 'react-iframe';
+import './RegistrationContent.css';
+import image1 from '../../assets/6.1_AWS_Basics.jpg';
+import image2 from '../../assets/6_AWS_Architect.jpg';
+import image3 from '../../assets/nebula-developing.jpg';
 
 class registrationContent extends Component {
-    state = {
-
-    }
-    handleResChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ permResident: element.label});
-    }
-    handleAuthChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ authToWork: element.label});
-    }
-    handleGIChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ GIBill: element.label});
-    }
-    handleVETTECChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ VETTEC: element.label});
-    }
-    handleCodingXPChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ codingXP: element.label});
-    }
-    handleIntentionsChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ intentions: element.label});
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-        // let exportData = this.state
-        // fire.database().ref('messages').push( exportData );
-        this.setState({}); // <- clear the input
-    }
-
     render() {
         return (
             <Container>
@@ -59,15 +16,86 @@ class registrationContent extends Component {
                             <Col className="alignCenter">
                                 <br/>
                                 <p style={{textAlign:'center'}}>Select your program below.</p>
-                                <p style={{textAlign:'center'}}>Questions? Contact us at succeed@nebulaacademyny.com. Phone: 631-468-7475</p>
+                                <p style={{textAlign:'center'}}>Questions? Contact us by mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a>. Or by phone at: 631-468-7475</p>
                             </Col>
                         </Row>
-                        <Row>
-                            
-                        </Row>
                         <hr></hr>
+                        <Row className="registrationCard">
+                            <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img>
+                            </Col>
+                            <Col lg={7}>
+                            <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
+                            <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert>
+                            <p>AWS Academy Cloud Foundations (ACF) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                            <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
+                            <div>
+                                The virtual session grants access to:
+                                <ul>
+                                    <li><b>Live virtual office hours with Nebula Academy's Certified AWS ACF instructors where participants can ask questions directly</b></li>
+                                    <li>AWS ACF labs</li>
+                                    <li>AWS ACF slides</li>
+                                    <li>AWS ACF videos</li>
+                                    <li>AWS ACF content</li>
+                                    <li>AWS ACF practice questions</li>
+                                    <li>Nebula Academy's AWS ACF Teams environment and AWS ACF related resources</li>
+                                    <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                </ul>
+                            </div>
+                            <div id="spacer"></div>
+                            <Button className="bottom" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416">Register</Button>
+                            </Col>
+                        </Row>
+                        <Row className="registrationCard">
+                            <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                <img alt="image2" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image2}></img>
+                            </Col>
+                            <Col lg={7}>
+                                <h3>AWS Academy Cloud Foundations - <b>Live Virtual</b></h3>
+                                <p>AWS Academy Cloud Foundations (ACF) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
+                                <div>
+                                    The virtual session grants access to:
+                                    <ul>
+                                        <li><b>Weekly live classes led by Nebula Academy's Certified AWS ACF instructors where participants can ask questions directly to the instructor</b></li>
+                                        <li><b>Recordings of the live classes for your individal review</b></li>
+                                        <li>AWS ACF labs</li>
+                                        <li>AWS ACF slides</li>
+                                        <li>AWS ACF videos</li>
+                                        <li>AWS ACF content</li>
+                                        <li>AWS ACF practice questions</li>
+                                        <li>Nebula Academy's AWS ACF Teams environment and AWS ACF related resources</li>
+                                        <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                    </ul>
+                                </div>
+                                <div id="spacer"></div>
+                                <Button className="bottom" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054">Register</Button>
+                            </Col>
+                        </Row>
+                        <Row className="registrationCard">
+                            <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
+                            <Row>
+                                <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                    <img alt="image3" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image3}></img>
+                                </Col>
+                                <Col lg={7}>
+                                    <h3>AWS Academy Cloud Foundations - <b>In Person</b></h3>
+                                    <h4> COVID-19 Alert:</h4>
+                                    <p>Unfortunately, due to the global COVID-19 outbreak, Nebula Academy is temporarily on hold our in person AWS training sessions as our students' safety is our main concern.
+                                    That said, the Nebula team is offering both Virtual and Live Virtual courses to provide our students with a flexible and comprehensive learning experience regardless of the situation.</p>
+                                    <hr></hr>
+                                    <p className="mb-0">
+                                    Please continue to stay healthy and safe. 
+                                    </p>
+                                    <br></br>
+                                    <div id="spacer"></div>
+                                    <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
+                                </Col>
+                            </Row>
+                            </Alert>
+                        </Row>
 
-                        <Row>
+                        {/* <Row>
                             <Col className="registrationPadding" xs={12} lg={12}>
                                 <br/>
                                 <h3>AWS Academy Cloud Foundations - Virtual</h3>
@@ -97,7 +125,7 @@ class registrationContent extends Component {
                              <Col className="registrationPadding" xs={12} lg={12}>
                                 <br/>
                                 <h3>AWS Academy Cloud Foundations - In Person (Read COVID-19 Alert Below)</h3>
-                                {/* <Iframe 
+                                <Iframe 
                                     src="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" 
                                     width="100%"
                                     id="myId"
@@ -105,234 +133,11 @@ class registrationContent extends Component {
                                     display="initial"
                                     position="relative"
                                     height="400px">
-                                </Iframe>	 */}
+                                </Iframe>	
                                 <br/>
-                                <Alert variant="danger">
-                                    <Alert.Heading>Thank you for your interest</Alert.Heading>
-                                    <p>
-                                        Unfortunately, due to the global COVID-19 outbreak, Nebula Academy is temporarily on hold our in person AWS training sessions as our students' safety is our main concern.
-                                        That said, the Nebula team is offering both Virtual and Live Virtual courses to provide our students with a flexible and comprehensive learning experience regardless of the situation.
-                                    </p>
-                                    <hr />
-                                    <p className="mb-0">
-                                        Please continue to stay healthy and safe. 
-                                    </p>
-                                </Alert>
                             </Col>
-                        </Row>
+                        </Row> */}
                         <br/>       
-
-                        {/* <Form className="manualContainer" onSubmit={(e) => this.handleSubmit(e)}>
-                            <Form.Row>
-                                <Form.Group as={Col}>
-                                    <Form.Label>First Name</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({firstName: event.target.value})}} placeholder="First Name" />
-                                </Form.Group>
-                                <Form.Group as={Col} >
-                                    <Form.Label>Last Name</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({lastName: event.target.value})}} placeholder="Last Name" />
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Row>
-                                <Form.Group as={Col}>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control required input onChange={(event) => {this.setState({email: event.target.value})}} type="email" placeholder="Enter Email" />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="formGridPhone">
-                                    <Form.Label>Phone</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({phone: event.target.value})}} placeholder="Enter Phone Number" />
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Group controlId="formGridAddress1">
-                                <Form.Label>Address</Form.Label>
-                                <Form.Control required onChange={(event) => {this.setState({address: event.target.value})}} placeholder="1234 Main St" />
-                            </Form.Group>
-                            <Form.Group controlId="formGridAddress2">
-                                <Form.Label>Address 2</Form.Label>
-                                <Form.Control onChange={(event) => {this.setState({address2: event.target.value})}}placeholder="Apartment, studio, or floor" />
-                            </Form.Group>
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridCity">
-                                    <Form.Label>City</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({city: event.target.value})}} placeholder="New York City"/>
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>State</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({state: event.target.value})}} placeholder="New York"/>
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridZip">
-                                    <Form.Label>Zip</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({zip: event.target.value})}}placeholder="10001"/>
-                                </Form.Group>
-                            </Form.Row>
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridOnlineProfile1">
-                                    <Form.Label>Online Profile 1</Form.Label>
-                                    <Form.Control onChange={(event) => {this.setState({onlineProfile1: event.target.value})}} placeholder="Ex: LinkedIn"/>
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridOnlineProfile2">
-                                    <Form.Label>Online Profile 2</Form.Label>
-                                    <Form.Control onChange={(event) => {this.setState({onlineProfile2: event.target.value})}} placeholder="Ex: GitHub"/>
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridOnlineProfile3">
-                                    <Form.Label>Online Profile 3</Form.Label>
-                                    <Form.Control onChange={(event) => {this.setState({onlineProfile3: event.target.value})}} placeholder="Ex: Portfolio"/>
-                                </Form.Group>
-                            </Form.Row>
-                                <Form.Group controlId="FormControlShortBio">
-                                    <Form.Label>Short Bio</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({shortBio: event.target.value})}} as="textarea" rows="3" placeholder="Tell us about yourself." />
-                                </Form.Group>
-                                <Form.Group controlId="FormControlHearProgram">
-                                    <Form.Label>How did you hear about our program?</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({hearAboutProgram: event.target.value})}}as="select">
-                                        <placeholder>Select</placeholder>
-                                        <option>LinkedIn</option>
-                                        <option>Facebook</option>
-                                        <option>Google</option>
-                                        <option>Twitter</option>
-                                        <option>Facebook</option>
-                                        <option>Veterans Affaris</option>
-                                        <option>Operation Code</option>
-                                        <option>Hiring Heroes</option>
-                                        <option>IVMF</option>
-                                        <option>Friend/Family</option>
-                                        <option>Warrior Scholar</option>
-                                        <option>Course Report</option>
-                                        <option>GirHub</option>
-                                        <option>Reddit</option>
-                                        <option>Article</option>
-                                        <option>Other</option>
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group required controlId="FormControlCohort">
-                                    <Form.Label>Which cohort are you Registering to?</Form.Label>
-                                    <Form.Control required as="select" >
-                                        <option aria-label="option 0" label="Select"></option>
-                                        <option onChange={(event) => {this.setState({ cohortMarToAug: event.target.value })}} aria-label="option 1" label="March 2 - August 7 2019"/> 
-                                        <option onChange={(event) => {this.setState({ cohortSeptToFeb: event.target.value })}} aria-label="option 2" label="September 1 - February 26 2019"/>  
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId="FormControlHowAttend">
-                                    <Form.Label>How would you like to attend?</Form.Label>
-                                        <Form.Check onChange={(event) => {this.setState({ howAttendVirtual: event.target.value })}} aria-label="option 1" label="Virtual"/> 
-                                        <Form.Check onChange={(event) => {this.setState({ howAttendInperson: event.target.value })}} aria-label="option 2" label="In-Person (Syosset, NY)"/> 
-                                </Form.Group>
-                                <Form.Group controlId="FormControlCohort">
-                                    <Form.Label>What is your highest education level?</Form.Label>
-                                    <Form.Control required onChange={(event) => {this.setState({highestEDU: event.target.value})}} as="select">
-                                        <option>High School</option>
-                                        <option>Associate Degree</option>
-                                        <option>Bacherlors Degree</option>
-                                        <option>Masters</option>
-                                        <option>Doctorate</option>
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>List any other education not included above:</Form.Label>
-                                    <Form.Control onChange={(event) => {this.setState({eduNotIncluded: event.target.value})}} placeholder="Certifications, self-learning, etc.."/>
-                                </Form.Group>
-                                <Form.Group controlId="FormControlCohort">
-                                    <Form.Label>Which of the following do you identify with (select all that Register)?</Form.Label>
-                                    <Form.Check onChange={(event) => {this.setState({  identifyCaucasian: event.target.value })}} aria-label="option 1" label="Caucasian"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyAfricanAmerican: event.target.value })}} aria-label="option 2" label="African American"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyHispanicLatin: event.target.value })}} aria-label="option 3" label="Hispanic or Latin Origin"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyAsian: event.target.value })}} aria-label="option 7" label="Asian"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyNativeAmerican: event.target.value })}} aria-label="option 4" label="Native American"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyNativeHawaiianPacificIslander: event.target.value })}} aria-label="option 5" label="Native Hawaiian or Other Pacific Islander"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyMiddleEastNorthaAfrican: event.target.value })}} aria-label="option 5" label="Middle Eastern or North African"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyFemale: event.target.value })}} aria-label="option 5" label="Female"/>
-                                    <Form.Check onChange={(event) => {this.setState({  identifyMale: event.target.value })}} aria-label="option 5" label="Male"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyNonbinary: event.target.value })}} aria-label="option 5" label="Nonbinary"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyLgbtqiap: event.target.value })}} aria-label="option 5" label="LGBTQIA+"/> 
-                                    <Form.Check onChange={(event) => {this.setState({  identifyOther: event.target.value })}} aria-label="option 5" label="Other"/> 
-                                </Form.Group>
-                                <Form.Group required controlId="formGridOnlineProfile3">
-                                    <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label>
-                                    <Form.Control required onChange={(e) => this.handleIntentionsChange(e)} as="select">
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 1" label="I intend to start a new lob within 180 days of graduating the program."/> 
-                                        <option aria-label="option 2" label="I intend to start a business or become a self-employed contractor upon graduation."/> 
-                                        <option aria-label="option 3" label="I intend to remain with my current employer upon graduation."/> 
-                                        <option aria-label="option 4" label="I am attending the program to learn new skills for self-enrichment and do not intent to pursue a job upon graduation."/> 
-                                        <option aria-label="option 5" label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation."/> 
-                                        <option aria-label="option 6" label="Other"/> 
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>Do you have coding experience?</Form.Label>
-                                    <Form.Control required onChange={(e) => this.handleCodingXPChange(e)} as="select">
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 1" label="None"/> 
-                                        <option aria-label="option 2" label="Beginner (100 hours or less of tutorials)"/> 
-                                        <option aria-label="option 3" label="Intermediate (Three or fewer classes and personal projects)"/> 
-                                        <option aria-label="option 4" label="Advanced (Degree or professional experience)"/> 
-                                    </Form.Control>
-                                </Form.Group> 
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>Are you interested in any of the following scholarships?</Form.Label>
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipVeteran: event.target.value })}} aria-label="option 1" label="Veteran In Person"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipWomenReEntry: event.target.value })}} aria-label="option 2" label="Women re-entering the workforce"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipHispanicLatin: event.target.value })}} aria-label="option 3" label="Hispanic or Latin Origin"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipAsian: event.target.value })}} aria-label="option 7" label="Asian"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipNativeAmerican: event.target.value })}} aria-label="option 4" label="Native American"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipNativeHawaiianPacificIslander: event.target.value })}} aria-label="option 5" label="Native Hawaiian or Other Pacific Islander"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipMiddleEastNorthaAfrican: event.target.value })}} aria-label="option 5" label="Middle Eastern or North African"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipFemale: event.target.value })}} aria-label="option 5" label="Female"/>
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipMale: event.target.value })}} aria-label="option 5" label="Male"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipNonbinary: event.target.value })}} aria-label="option 5" label="Nonbinary"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipLGBTQIAP: event.target.value })}} aria-label="option 5" label="LGBTQIA+"/> 
-                                    <Form.Check onChange={(event) => {this.setState({ scholarshipOther: event.target.value })}} aria-label="option 5" label="Other"/> 
-                                </Form.Group>
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>If you are a VET do you intend to use the VET TEC program to pay for tuition and housing?</Form.Label>
-                                    <Form.Control required onChange={(e) => this.handleVETTECChange(e)} as="select">
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 2" label="Yes"/> 
-                                        <option aria-label="option 3" label="No"/> 
-                                        <option aria-label="option 0" label="I am not a veteran"/> 
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
-                                    <Form.Control required onChange={(e) => this.handleGIChange(e)} as="select">
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 2" label="Yes"/> 
-                                        <option aria-label="option 3" label="No"/> 
-                                        <option aria-label="option 0" label="I am not a veteran"/> 
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>Are you currently authorized to work in the US?</Form.Label>
-                                    <Form.Control required as="select" onChange={(e) => this.handleAuthChange(e)}>
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 1" label="Yes"/> 
-                                        <option aria-label="option 2"  label="No"/> 
-                                    </Form.Control>
-                                </Form.Group> 
-                                <Form.Group controlId="formGridOnlineProfile3">
-                                    <Form.Label>Are you a US citizen or permanent resident?</Form.Label>
-                                    <Form.Control required as="select" onChange={(e) => this.handleResChange(e)}>
-                                        <option aria-label="option 0" label="Select"/> 
-                                        <option aria-label="option 1" label="Yes"/> 
-                                        <option aria-label="option 2" label="No"/> 
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group required  controlId="formGridOnlineProfile3">
-                                    <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
-                                        <Form.Control onChange={() => {this.setState({acknowledgement: 'acknowledged'})}} required as="select">
-                                            <option aria-label="option 0" label="Select"/> 
-                                            <option aria-label="option 1" label="I Acknowledge"/> 
-                                        </Form.Control>
-                                </Form.Group> 
-                            <Button variant="warning" type="submit">
-                                Submit
-                            </Button>
-                        </Form> */}
                     </Col>
                 </Row>
             </Container>

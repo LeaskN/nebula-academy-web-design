@@ -137,6 +137,15 @@ code {
   background-color: #3B3D7B;
   border-color: #3B3D7B;
 }
+.btn-info{
+  background-color: #FF8C0E;
+  border-color: #FF8C0E;
+}
+.btn-info:hover{
+  background-color: #146eb4;
+  border-color: #146eb4;
+  
+}
 .nobull {
   list-style-type: none;
 }
