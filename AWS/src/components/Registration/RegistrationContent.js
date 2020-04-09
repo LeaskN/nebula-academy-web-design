@@ -7,52 +7,6 @@ import image2 from '../../assets/6_AWS_Architect.jpg';
 import image3 from '../../assets/nebula-developing.jpg';
 
 class registrationContent extends Component {
-    state = {
-
-    }
-    handleResChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ permResident: element.label});
-    }
-    handleAuthChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ authToWork: element.label});
-    }
-    handleGIChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ GIBill: element.label});
-    }
-    handleVETTECChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ VETTEC: element.label});
-    }
-    handleCodingXPChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ codingXP: element.label});
-    }
-    handleIntentionsChange = (e) => {
-        let index = e.target.selectedIndex;
-        let element = e.target[index];
-        this.setState({ element: element});
-        this.setState({ intentions: element.label});
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-        // let exportData = this.state
-        // fire.database().ref('messages').push( exportData );
-        this.setState({}); // <- clear the input
-    }
-
     render() {
         return (
             <Container>
@@ -72,6 +26,7 @@ class registrationContent extends Component {
                             </Col>
                             <Col lg={7}>
                             <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
+                            <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert>
                             <p>AWS Academy Cloud Foundations (ACF) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                             <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
                             <div>
