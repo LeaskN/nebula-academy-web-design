@@ -25,6 +25,9 @@
 .customLink{
     color: black;
 }
+.current{
+    background: linear-gradient(to right, transparent 20%, green 20%, green 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
+}
 .customLink:hover{
     color: black;
     text-decoration: none;

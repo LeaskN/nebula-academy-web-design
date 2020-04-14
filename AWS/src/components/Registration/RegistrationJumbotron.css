@@ -1,22 +1,29 @@
 .registrationJumbotron{
-    background-image: url('../../assets/11_AWS_register.jpg');
+    background-image: url('../../assets/AWSBrandedHeaderReg-01.png');
     background-size: cover;
-    color: #ccc;
+    color: white;
     z-index: 02;
-    height:250px;
-    position: relative;
     z-index: -2;
     margin: 0px;
 }
 
-.registrationOverlay{
-    background-color: #000;
-    opacity: .65;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+@media (max-width: 633px){
+    .registrationJumbotron{
+        padding: 8vw 2vw 4vw 2vw;
+    }
+}
+@media (min-width: 633px){
+    .registrationJumbotron{
+        padding: 9vw 2vw 4vw 2vw;
+    }
+}
+@media (min-width: 770px){
+    .registrationJumbotron{
+        padding: 8vw 2vw 4vw 2vw;
+    }
+}
+@media (min-width: 2000px){
+    .registrationJumbotron{
+        padding: 9vw 2vw 4vw 2vw;
+    }
 }

@@ -1,4 +1,4 @@
-.registrationJumbotron{
+.hiddenRegistrationJumbotron{
     background-image: url('../../assets/11_AWS_register.jpg');
     background-size: cover;
     color: #ccc;
@@ -9,7 +9,7 @@
     margin: 0px;
 }
 
-.registrationOverlay{
+.hiddenRegistrationOverlay{
     background-color: #000;
     opacity: .65;
     position: absolute;

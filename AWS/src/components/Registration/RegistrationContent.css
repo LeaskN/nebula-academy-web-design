@@ -9,14 +9,13 @@
 }
 .registrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin: 30px;
+    margin-bottom: 30px;
     border-radius: 20px;
     border: 10px solid #FF8C0E;
     padding: 10px;
 }
 .registrationCard:hover{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.5);
-    margin: 30px;
     border-radius: 20px;
     border: 10px solid #FF8C0E;
 }

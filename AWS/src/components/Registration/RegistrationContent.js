@@ -15,14 +15,15 @@ class registrationContent extends Component {
                         <Row>
                             <Col className="alignCenter">
                                 <br/>
-                                <p style={{textAlign:'center'}}>Select your program below.</p>
+                                <p style={{textAlign:'center'}}>Take a look below at the AWS Academy Programs that we currently provide.</p>
                                 <p style={{textAlign:'center'}}>Questions? Contact us by mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a>. Or by phone at: 631-468-7475</p>
                             </Col>
                         </Row>
                         <hr></hr>
                         <Row className="registrationCard">
                             <Col style={{margin:'auto'}} xs={12} lg={5}>
-                                <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img>
+                                <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img> 
+                                {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
                             </Col>
                             <Col lg={7}>
                             <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
