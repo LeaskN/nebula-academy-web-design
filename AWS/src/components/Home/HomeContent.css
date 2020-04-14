@@ -23,8 +23,9 @@
     background-image: url("../../assets/4_AWS_More_info.jpg");
     background-size: cover;
 }
-.purpleBackground{
+.homeCard5{
     margin: auto;
+    padding: 10px;
     background-color: #ff9900;
 }
 .card{

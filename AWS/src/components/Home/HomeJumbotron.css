@@ -1,9 +1,29 @@
 .homeJumbo{
-    background-image: url('../../assets/1_AWS_home.jpg');
+    align-items: center;
+    background-image: url('../../assets/AWSBrandedHeader-01.png');
     background-size: cover;
-    color: #ccc;
+    color: white;
     z-index: 100;
-    min-height: 250px;
     z-index: -2;
     margin: 0px;
+}
+@media (max-width: 633px){
+    .homeJumbo{
+        padding: 14vw 2vw 2vw 2vw;
+    }
+}
+@media (min-width: 633px){
+    .homeJumbo{
+        padding: 13vw 2vw 2vw 2vw;
+    }
+}
+@media (min-width: 770px){
+    .homeJumbo{
+        padding: 10vw 2vw 2vw 2vw;
+    }
+}
+@media (min-width: 2000px){
+    .homeJumbo{
+        padding: 9vw 2vw 2vw 2vw;
+    }
 }
