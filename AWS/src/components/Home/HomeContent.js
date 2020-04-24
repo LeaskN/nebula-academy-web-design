@@ -10,45 +10,9 @@ import growAWSWork from '../../assets/growAWSWorkforce.png';
 
 export const HomeContent = () => (
     <React.Fragment>
+        {Popup()}
         <Container>
-            <Row>
-                {Popup()}
-                <Col xs={12} lg={6} xl={4} className="introRow1Column1">
-                    <Card className="introRowTile">
-                        <Card.Body>
-                            <Card.Title>There is a growing demand for AWS Cloud literate employees</Card.Title>
-                            <Card.Text>
-                                The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concepts, independent of specific technical roles.
-                            </Card.Text>
-                            <Row className="contentCentered" >
-                                <Col>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
-                                </Col>
-                            </Row>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={12} lg={6} xl={4} className="introRow1Column2">
-                    <Card className="introRowTile">
-                        <Card.Body>
-                            <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
-                            <p>Quick Read: <a className="linkWhite" target="blank" href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/">Unlock a world of opportunities with your AWS Cloud Literacy skills.</a></p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col xs={12} lg={12} xl={4} className="introRow1Column3">
-                    <Card className="introRowTile">
-                        <Card.Body>
-                            <Card.Title>Is an AWS Certification Important to Your Career?</Card.Title>
-                            <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9%.</p>
-                            <p>Source: <a className="linkLight" target="blank" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Row className="programBenefitsRow">
+        <Row className="programBenefitsRow">
                 <Col className="programBenefits">
                     <h5>Access AWS-Authored Curriculum</h5>
                     <img  className='programBenefitsImg' alt='AWSAuthorizedCurriculum' src={AWSAuthorizedCurriculum}></img>
@@ -76,6 +40,47 @@ export const HomeContent = () => (
                     <p>   
                         Practice makes perfect. Gain real-world experience needed to pursue industry jobs by consistently engaging in practical live-environment settings.  
                     </p>
+                </Col>
+            </Row>
+            <Row className="programBenefitsRow">
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+            </Row>
+
+            <Row>
+                
+                <Col xs={12} lg={6} xl={4} className="introRow1Column1">
+                    <Card className="introRowTile">
+                        <Card.Body>
+                            <Card.Title>There is a growing demand for AWS Cloud literate employees</Card.Title>
+                            <Card.Text>
+                                The AWS Academy Cloud Foundations teaches overall understanding of cloud computing concepts, independent of specific technical roles.
+                            </Card.Text>
+                            <Row className="contentCentered" >
+                                <Col>
+                                    
+                                </Col>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xs={12} lg={6} xl={4} className="introRow1Column2">
+                    <Card className="introRowTile">
+                        <Card.Body>
+                            <Card.Title>29% of IT decision-makers say they have trouble finding candidates with cloud computing skills.</Card.Title>
+                            <p>Quick Read: <a className="linkWhite" target="blank" href="https://aws.amazon.com/blogs/publicsector/a-commitment-to-training-learning-pathways-to-real-world-jobs-with-aws-educate/">Unlock a world of opportunities with your AWS Cloud Literacy skills.</a></p>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xs={12} lg={12} xl={4} className="introRow1Column3">
+                    <Card className="introRowTile">
+                        <Card.Body>
+                            <Card.Title>Is an AWS Certification Important to Your Career?</Card.Title>
+                            <p>AWS certification training has increased the salaries for the average certified professional by as much as 25.9%.</p>
+                            <p>Source: <a className="linkLight" target="blank" href="http://techgenix.com/aws-certification/">TechGenix Editorial</a></p>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
             <Row>
