@@ -3,13 +3,13 @@
     color: white;
 }
 .introRow1Column1{
-   background-color:#146eb4
+   background-color:#86549C
 }
 .introRow1Column2{
     background-color:#ff9900;
  }
  .introRow1Column3{
-    background-color:#146eb4;
+    background-color:#86549C;
  }
 .introRow2Tile1{
     background-image: url("../../assets/2_AWS_home_curriculum_placement.jpg");
@@ -41,4 +41,30 @@
 }
 .paddingMiddle{
     border-top: 5px solid white;
+}
+.programBenefitsRow{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.programBenefits{
+    margin: 9px 5px 11px 5px;
+    width: 270px !important;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px 1px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    border-top: 3px solid #86549C;
+    padding: 5px !important;
+}
+.programBenefits:hover{
+    box-shadow: 0 4px 6px 2px rgba(0,0,0,0.5);
+}
+.programBenefitsImg{
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 250px;
+    max-height: 230px;
 }

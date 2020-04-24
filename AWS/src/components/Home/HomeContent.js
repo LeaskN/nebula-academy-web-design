@@ -1,13 +1,55 @@
 import React from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './HomeContent.css';
-import Popup from './Popup'
+import Popup from './Popup';
+
+import AWSAuthorizedCurriculum from '../../assets/AWSAuthoredCurriculum.png';
+import buildingSkills from '../../assets/BuildingSkills.png';
+import educatorCredit from '../../assets/educatorsEarnAccreditation.png';
+import growAWSWork from '../../assets/growAWSWorkforce.png';
 
 export const HomeContent = () => (
     <React.Fragment>
+        {Popup()}
         <Container>
+        <Row className="programBenefitsRow">
+                <Col className="programBenefits">
+                    <h5>Access AWS-Authored Curriculum</h5>
+                    <img  className='programBenefitsImg' alt='AWSAuthorizedCurriculum' src={AWSAuthorizedCurriculum}></img>
+                    <p>
+                        With updates directly from AWS our instructors teach best practices, keep up with cloud computing in real-time, and provide ready-to-teach curriculum to member institutions.
+                    </p>
+                </Col>
+                <Col className="programBenefits">
+                    <h5>Build Skills Aligned with AWS Certification</h5>
+                    <img  className='programBenefitsImg' alt='buildingSkills' src={buildingSkills}></img>
+                    <p>
+                        Build your Cloud computing skills with hands-on practical experience and complimentary practice exams. Both educators and students will be able to prepare for and pass the full exam with confidence.
+                    </p>
+                </Col>
+                <Col className="programBenefits">
+                    <h5>Educators Earn Accreditation</h5>
+                    <img  className='programBenefitsImg' alt='educatorCredit' src={educatorCredit}></img>
+                    <p>
+                        Educators are provisioned with access to professional learning tools and support to receive their AWS Certification before directly teaching students. 
+                    </p>
+                </Col>
+                <Col className="programBenefits">
+                    <h5>Grow the AWS Cloud Worforce</h5>
+                    <img className='programBenefitsImg' alt='growAWSWork' src={growAWSWork}></img>
+                    <p>   
+                        Practice makes perfect. Gain real-world experience needed to pursue industry jobs by consistently engaging in practical live-environment settings.  
+                    </p>
+                </Col>
+            </Row>
+            <Row className="programBenefitsRow">
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
+                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+            </Row>
+
             <Row>
-                {Popup()}
+                
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
                         <Card.Body>
@@ -17,9 +59,7 @@ export const HomeContent = () => (
                             </Card.Text>
                             <Row className="contentCentered" >
                                 <Col>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
-                                    <Button style={{margin:'6px', maxWidth:'120px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+                                    
                                 </Col>
                             </Row>
                         </Card.Body>
