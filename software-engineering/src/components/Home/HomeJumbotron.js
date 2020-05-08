@@ -8,7 +8,7 @@ export const HomeJumbotron = () => (
       <div className="homeOverlay"></div>
       <Container>
         <h1 className="jumboText">Software Engineering Bootcamp</h1>
-        <p>Learn to code and land a job in the IT field.</p>
+        <h4>Empowering you to change your life and your career.</h4>
       </Container>
     </Jumbotron>
   </React.Fragment>
