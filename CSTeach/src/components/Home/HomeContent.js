@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-import CTLEImage from '../../assets/clteAlpha.png'
+import CTLEImage from '../../assets/clteAlpha.png';
+import Popup from './Popup';
 
 import './HomeContent.css';
 
@@ -8,14 +9,13 @@ class HomeContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Gender__c:[],
-            Ethnicity__c: [],
             show: false
         };
     }
 render() {
         return (
             <React.Fragment>
+                <Popup/>
                 <Container>
                     <Row>
                         <Col xs={12} lg={6} xl={4} className="introRow1Column1">
