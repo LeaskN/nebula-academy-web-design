@@ -13,7 +13,6 @@ function Popup() {
           <Modal.Title>COVID-19 UPDATE</Modal.Title>
         </Modal.Header>
         <p style={{padding: "0 10px 0 10px"}}>Due to the global COVID-19 outbreak, all Teacher Professional Development courses are being offered online.</p>
-        <p style={{padding: "0 10px 0 10px"}}>Our virtual AWS courses have been reduced to $99.</p>
         <Modal.Footer>
             <Button variant="secondary" href="/programs">
                 Course Details
