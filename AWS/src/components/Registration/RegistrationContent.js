@@ -75,24 +75,24 @@ class registrationContent extends Component {
                         </Row>
                         <Row className="registrationCard">
                             <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
-                            <Row>
-                                <Col style={{margin:'auto'}} xs={12} lg={5}>
-                                    <img alt="image3" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image3}></img>
-                                </Col>
-                                <Col lg={7}>
-                                    <h3>AWS Academy Cloud Foundations - <b>In Person</b></h3>
-                                    <h4> COVID-19 Alert:</h4>
-                                    <p>Unfortunately, due to the global COVID-19 outbreak, Nebula Academy is temporarily on hold our in person AWS training sessions as our students' safety is our main concern.
-                                    That said, the Nebula team is offering both Virtual and Live Virtual courses to provide our students with a flexible and comprehensive learning experience regardless of the situation.</p>
-                                    <hr></hr>
-                                    <p className="mb-0">
-                                    Please continue to stay healthy and safe. 
-                                    </p>
-                                    <br></br>
-                                    <div id="spacer"></div>
-                                    <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
-                                </Col>
-                            </Row>
+                                <Row>
+                                    <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                        <img alt="image3" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image3}></img>
+                                    </Col>
+                                    <Col lg={7}>
+                                        <h3>AWS Academy Cloud Foundations - <b>In Person</b></h3>
+                                        <h4> COVID-19 Alert:</h4>
+                                        <p>Unfortunately, due to the global COVID-19 outbreak, Nebula Academy is temporarily on hold our in person AWS training sessions as our students' safety is our main concern.
+                                        That said, the Nebula team is offering both Virtual and Live Virtual courses to provide our students with a flexible and comprehensive learning experience regardless of the situation.</p>
+                                        <hr></hr>
+                                        <p className="mb-0">
+                                        Please continue to stay healthy and safe. 
+                                        </p>
+                                        <br></br>
+                                        <div id="spacer"></div>
+                                        <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
+                                    </Col>
+                                </Row>
                             </Alert>
                         </Row>
 
