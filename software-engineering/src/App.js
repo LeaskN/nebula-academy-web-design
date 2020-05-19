@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { Program } from './pages/Program';
 import { NoMatch } from './pages/NoMatch';
 import { Curriculum } from './pages/Curriculum';
+import { GuestSpeakers } from './pages/GuestSpeakers';
 import { Application } from './pages/Application';
 import { Internships } from './pages/Internships';
 import { Outcomes } from './pages/Outcomes';
@@ -11,7 +12,7 @@ import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
 import { Scholarships } from './pages/Scholarships';
 import { Partners } from './pages/Partners';
-import { GuestSpeakers } from './pages/GuestSpeakers';
+import { GuestSpeakerApplication } from './pages/GuestSpeakerApplication';
 import { HiddenApplication } from './pages/HiddenApplication';
 import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
@@ -35,18 +36,19 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path ="/Application/Phase2" component={ApplicationPhase2}/>
-            <Route path= "/program" component={Program}/>
+            <Route path = "/application/Phase2" component={ApplicationPhase2}/>
+            <Route path = "/program" component={Program}/>
             <Route path = "/curriculum" component={Curriculum}/>
             <Route path = "/application" component={Application}/>
             <Route path = "/internships" component={Internships}/>
-            <Route path ="/outcomes" component={Outcomes}/>
-            <Route path ="/scholarships" component={Scholarships}/>
-            <Route path ="/Partners" component={Partners}/>
-            <Route path ="/GuestSpeakers" component={GuestSpeakers}/>
-            <Route path ="/TryCoding" component={TryCoding}/>
-            <Route path ="/staff" component={Staff}/>
-            <Route path ="/HiddenApplication" component={HiddenApplication}/>
+            <Route path = "/outcomes" component={Outcomes}/>
+            <Route path = "/scholarships" component={Scholarships}/>
+            <Route path = "/partners" component={Partners}/>
+            <Route path = "/guestspeakers" component={GuestSpeakers}/>
+            <Route path = "/guestspeakerapplication" component={GuestSpeakerApplication}/>
+            <Route path = "/trycoding" component={TryCoding}/>
+            <Route path = "/staff" component={Staff}/>
+            <Route path = "/hiddenapplication" component={HiddenApplication}/>
             <Route component = {NoMatch}/>
             {/*
             <Route path ="/Apply" component={Apply}/>

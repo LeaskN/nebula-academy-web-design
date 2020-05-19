@@ -1,7 +1,7 @@
-.curriculumJumbotron{
-    background-image: url('../../assets/9_CurriculumHeader.jpg');
+.guestSpeakersJumbotron{
+    background-image: url('../../assets/26_SpeakerHeader.jpg');
     background-size: cover;
-    color: #1E2125;
+    color: white;
     z-index: 02;
     height:250px;
     position: relative;

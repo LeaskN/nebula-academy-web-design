@@ -199,7 +199,7 @@ class CurriculumContent extends Component {
                                         The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
                                     </Card.Text>
                                     <div id="spacer" ></div>
-                                    <Button className="bottom contentCentered" href="/guestspeakers" variant="primary">Guest Speakers</Button>
+                                    <Button className="bottom contentCentered" href="/guestspeakerapplication" variant="primary">Guest Speakers</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

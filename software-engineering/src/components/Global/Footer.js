@@ -21,7 +21,7 @@ export const Footer = () => (
                     <h5 style={{color:'#BBBBBB'}}>All Links</h5>
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">About</Nav.Link></li>
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/staff">Staff</Nav.Link></li>
-                    <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakers">Guest Speakers</Nav.Link></li>
+                    <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakerapplication">Guest Speakers</Nav.Link></li>
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/partners">Partners</Nav.Link></li>
                 </ul>
                 <ul style={{justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start', padding:'0px', whiteSpace: 'nowrap'}}>

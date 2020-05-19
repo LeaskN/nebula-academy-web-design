@@ -1,0 +1,13 @@
+.guestSpeakerApplicationContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.guestSpeakerApplicationCard{
+    margin-bottom: 30px;
+}
+.guestSpeakerApplicationCard:hover{
+    box-shadow: 4px 8px 16px 4px rgba(58, 0, 0, 0.4)
+}
+.guestSpeakerApplicationCard{
+    margin-top: auto;
+}
