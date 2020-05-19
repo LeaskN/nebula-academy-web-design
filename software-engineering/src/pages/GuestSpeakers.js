@@ -1,16 +1,22 @@
 import React from 'react';
+import SectionNav  from '../components/Global/SectionNav';
 import { GuestSpeakersJumbotron } from '../components/GuestSpeakers/GuestSpeakersJumbotron';
-import SectionNav from '../components/Global/SectionNav';
-import { GuestSpeakersContent } from '../components/GuestSpeakers/GuestSpeakersContent';
+import GuestSpeakersContent from '../components/GuestSpeakers/GuestSpeakersContent';
 import  { GuestSpeakersFooter } from '../components/GuestSpeakers/GuestSpeakersFooter';
+
+import { Row } from 'react-bootstrap';
 
 
 
 export const GuestSpeakers = () => (
     <React.Fragment>
-        <GuestSpeakersJumbotron/>
-        <SectionNav/>
-        <GuestSpeakersContent/>
-        <GuestSpeakersFooter/>
+            <GuestSpeakersJumbotron/>
+        <Row>
+            <SectionNav/>
+        </Row>
+        <Row>
+            <GuestSpeakersContent/>
+        </Row>
+            <GuestSpeakersFooter/>
     </React.Fragment>
 )

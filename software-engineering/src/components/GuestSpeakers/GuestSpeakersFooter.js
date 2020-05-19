@@ -6,17 +6,14 @@ export const GuestSpeakersFooter = () => (
   <Container className="fullGuestSpeakersFooter">
     <Jumbotron>
       <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
-      
-      <p>
-        <Row>
+              <Row>
           <Col className="contentCentered">
-            <Button href="/outcomes" variant="primary">Outcomes</Button>
+            <Button href="/internships" variant="primary">Internships</Button>
           </Col>
           <Col className="contentCentered">
             <Button href="/application" variant="primary">Apply</Button>
           </Col>
         </Row>
-      </p>
     </Jumbotron>
   </Container>
 )

@@ -6,10 +6,7 @@ import keypad from '../../assets/keypadImage.png'
 class ApplicationPhase2Content extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            Gender__c:[],
-            Ethnicity__c: [],
-        };
+        this.state = {};
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     componentDidMount(e){
@@ -222,8 +219,8 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Control required input="true" onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
                                 </Form.Group>
                                  <Form.Group as={Col}>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Id" placeholder="Enter provided ID" />
+                                    <Form.Label>ID (should match ID provided via email)</Form.Label>
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Id" disabled placeholder={this.state.Id} />
                                 </Form.Group>
                             </Form.Row>
                             <hr></hr>

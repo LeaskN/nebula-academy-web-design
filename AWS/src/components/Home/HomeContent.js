@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './HomeContent.css';
 import Popup from './Popup';
+import Conditions from "../Global/Conditions/Conditions.js";
 
 import AWSAuthorizedCurriculum from '../../assets/AWSAuthoredCurriculum.png';
 import buildingSkills from '../../assets/BuildingSkills.png';
@@ -44,12 +45,11 @@ export const HomeContent = () => (
             </Row>
             <Row className="programBenefitsRow">
                 <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button>
-                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button>
+                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button> */}
+                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button> */}
+                <Conditions/>                                        
             </Row>
-
             <Row>
-                
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
                         <Card.Body>
