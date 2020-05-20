@@ -23,7 +23,7 @@ class GuestSpeakers extends Component {
                         <Col>
                             <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Pat Esposito</h1>
+                                            <h1 className="speakerName">Pat Esposito</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
@@ -49,7 +49,7 @@ class GuestSpeakers extends Component {
                         <Col>
                             <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Sharon Cates Williams</h1>
+                                            <h1 className="speakerName">Sharon Cates Williams</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
@@ -75,7 +75,7 @@ class GuestSpeakers extends Component {
                         <Col>
                             <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>John Wargo</h1>
+                                            <h1 className="speakerName">John Wargo</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
