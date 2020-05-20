@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Container } from 'react-bootstrap';
+import { Row, Col, Card, Button, Container } from 'react-bootstrap';
 import './GuestSpeakersContent.css'
 
 
