@@ -33,9 +33,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">Pat Esposito</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                 <p className="speakerAbout">"I'm passionate about technology and the amazing experiences we create through digital transformation. Digital transformation creates efficiency in the way we collaborate within the business and with our partners. It helps us gain better insight by looking more deeply at our data and provides perspectives into our processes and performance."</p>
                                                 <p className="speakerAbout"><span className="speakerAboutSpan">His advice to those entering into the tech field: </span>Find a coping mechanism, whatever works for you. Everybody's got something different. Find out that little thing that really makes you want to come back again and do it, again and again. For me it's getting something trivial to work for the first time, new language, a new platform. It's so exciting that it just keeps bringing me back to saying, yeah I really want to be a programmer. I encourage all of you to find a mentor, and work with them.</p>
@@ -69,9 +66,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">Sharon Cates Williams</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <p>Deputy Commissioner responsible for ensuring the effective, efficient, and prudent use of agency resources by developing sound practices, policies, and strategies to promote accountability and high performance throughout the Agency.</p>
                                                 </Col>
@@ -102,9 +96,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">John Wargo</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                 <p>Experienced, technical, mobile industry professional focused on enterprise mobility, and mobile application development. Clear communicator, accomplished writer, engaging and inspiring professional speaker; able to deliver content to a wide range of non-technical to technical audience types. Excellent listener. Analytical with solid problem solving and solution architecture skills.</p>
                                                 </Col>
