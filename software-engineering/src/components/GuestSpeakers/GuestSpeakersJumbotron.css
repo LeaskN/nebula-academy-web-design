@@ -8,3 +8,22 @@
     z-index: -2;
     margin: 0px;
 }
+
+.guestSpeakersOverlay{
+    background-color:#1E2125; 
+    opacity: .5; 
+    height: 100%; 
+    width: 100vw; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: -1; 
+}
+
+.jumboText{
+    display: block; 
+    justify-content: center; 
+    margin: auto;  
+    z-index: 0; 
+}
+

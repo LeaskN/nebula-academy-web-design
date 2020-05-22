@@ -70,7 +70,7 @@
     justify-content: space-around;
 }
 
-/* .guestSpeakersBackImage1{
+.guestSpeakersBackImage1{
     border:10px solid white;
     background-image: url("../../assets/10_handshake.jpg");
     background-size: cover;
@@ -79,16 +79,14 @@
     border:10px solid white;
     background-image: url("../../assets/11_GuestSpeakers.jpg");
     background-size: cover;
-} */
+}
 
 .LI-profile-badge{
     display: block;
     margin: auto;
     padding: 10px;
     width: 100%;
-    border: none; 
 }
-
 .speakerName{
     padding-left: 15px;
 }

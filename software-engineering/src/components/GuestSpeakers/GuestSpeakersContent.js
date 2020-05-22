@@ -70,7 +70,7 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='linkedin.com/in/jmwargo'>John Wargo</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='https://www.linkedin.com/in/jmwargo/'>John Wargo</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
