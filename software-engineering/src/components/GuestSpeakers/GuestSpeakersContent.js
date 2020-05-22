@@ -13,25 +13,29 @@ class GuestSpeakers extends Component {
             <React.Fragment>
                 <Container>
                     <Row className="staticCard">
-                        <Col xs={4} className="cardColumns">
+                        <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href='https://www.linkedin.com/in/espositopat/'>Pat Esposito</a></div>
+                                    <div className="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href='https://www.linkedin.com/in/espositopat/'>Pat Esposito</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card className="cardDeckRight">
+                            <Card className="guestSpeakerCardRight">
                                     <Card.Body>
-                                            <h1>Pat Esposito</h1>
+                                            <h1 className="speakerName">Pat Esposito</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
-                                                <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
-                                                <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
+                                                <p className="speakerAbout">"I'm passionate about technology and the amazing experiences we create through digital transformation. Digital transformation creates efficiency in the way we collaborate within the business and with our partners. It helps us gain better insight by looking more deeply at our data and provides perspectives into our processes and performance."</p>
+
+                                                <p className="speakerAbout"><span className="speakerAboutSpan">His advice to those entering into the tech space: </span>Find a coping mechanism, whatever works for you. Everybody's got something different. Find out that little thing that really makes you want to come back again and do it, again and again. For me it's getting something trivial to work for the first time, new language, a new platform. It's so exciting that it just keeps bringing me back to saying, yeah I really want to be a programmer. I encourage all of you to find a mentor, and work with them.</p>
+
+                                                <p>Read more of his address to Nebula Academy students <a href="https://www.linkedin.com/pulse/pathways-success-program-se-bootcamp-guest-speaker-highlight-carey/">here</a>.</p>
+
+
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -39,25 +43,23 @@ class GuestSpeakers extends Component {
                         </Col>
                     </Row>
                     <Row className="staticCard">
-                        <Col xs={4} className="cardColumns">
+                        <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='linkedin.com/in/sharon-cates-williams-a99273a'>Sharon Cates Williams</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a/'>Sharon Cates Williams</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card className="cardDeckRight">
+                            <Card className="guestSpeakerCardRight">
                                     <Card.Body>
-                                            <h1>Sharon Cates Williams</h1>
+                                            <h1 className="speakerName">Sharon Cates Williams</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
-                                                <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
-                                                <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
+                                                    <p>Deputy Commissioner responsible for ensuring the effective, efficient, and prudent use of agency resources by developing sound practices, policies, and strategies to promote accountability and high performance throughout the Agency.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -65,25 +67,23 @@ class GuestSpeakers extends Component {
                         </Col>
                     </Row>
                     <Row className="staticCard">
-                        <Col xs={4} className="cardColumns">
+                        <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='linkedin.com/in/jmwargo'>John Wargo</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='https://www.linkedin.com/in/jmwargo/'>John Wargo</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card className="cardDeckRight">
+                            <Card className="guestSpeakerCardRight">
                                     <Card.Body>
-                                            <h1>John Wargo</h1>
+                                            <h1 className="speakerName">John Wargo</h1>
                                             <Row>
                                                 {/* <Col xs={1} md={3}>
                                                     <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
                                                 </Col> */}
                                                 <Col xs={10}md={12}>
-                                                <p>Instead of only having our participants send out resumes, cover letters, and resumes, we have consistent local partners who are readily looking to hire our candidates.</p>
-                                                <p>This partnership is a two-way street. The partners have trouble hiring motivated individuals with the skills that help in their work environment and we have a shortlist of local companies that are excited to hire our candidates.</p>
-                                                <p>The clients give our participants tasks to do - build a new website, page, navbar, database, middleware, connections, etc... and this project is treated as the primary part of the interview process. This means that not only do our candidates see what the workforce looks like, but they are given an opportunity to impress the partner right from the start.</p>
+                                                <p>Experienced, technical, mobile industry professional focused on enterprise mobility, and mobile application development. Clear communicator, accomplished writer, engaging and inspiring professional speaker; able to deliver content to a wide range of non-technical to technical audience types. Excellent listener. Analytical with solid problem solving and solution architecture skills.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
