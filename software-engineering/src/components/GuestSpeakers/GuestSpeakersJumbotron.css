@@ -21,9 +21,12 @@
 }
 
 .jumboText{
-    display: block; 
-    justify-content: center; 
-    margin: auto;  
+    margin: 0 auto;  
     z-index: 0; 
 }
 
+@media (max-width: 576px){
+    .jumboText{
+        margin-top: 30px; 
+    }
+} 
