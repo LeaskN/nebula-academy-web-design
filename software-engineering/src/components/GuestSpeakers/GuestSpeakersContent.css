@@ -3,13 +3,13 @@
     height: 100%;
     width: 100%;
     color: #ffffff;
-    background-color:#048fc5;
+    background-color:#303336;
     display: flex;
     align-items: center;
     justify-content: center !important;
 }
 .staticCard{
-  background-color:#048fc5;
+  background-color:#303336;
 }
 .guestSpeakerCardRight{
     width: 60vw;
