@@ -5,13 +5,13 @@ import './GuestSpeakersFooter.css'
 export const GuestSpeakersFooter = () => (
   <Container className="fullGuestSpeakersFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Become a Software Engineer With Nebula Academy</h1><br/>
+      <h1 className="contentCentered">Get involved and apply today</h1><br/>
               <Row>
           <Col className="contentCentered">
-            <Button href="/internships" variant="primary">Internships</Button>
+            <Button href="/guestspeakerapplication" variant="primary">Speaker</Button>
           </Col>
           <Col className="contentCentered">
-            <Button href="/application" variant="primary">Apply</Button>
+            <Button href="/application" variant="primary">Student</Button>
           </Col>
         </Row>
     </Jumbotron>
