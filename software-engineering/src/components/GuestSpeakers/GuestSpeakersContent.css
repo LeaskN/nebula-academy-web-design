@@ -89,10 +89,66 @@
 }
 
 .LI-profile-badge{
-    display: block;
-    margin: auto;
-    padding: 10px;
+    margin: 0px auto; 
+    padding: 10px; 
     width: 100%;
+    height: 100%; 
+    min-width: 200px; 
+    color: #fff; 
+}
+.speakerBadgeContainer {
+    max-width: 400px; 
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    margin: 0px auto; 
+    background-image: linear-gradient(#0073b1 0% 30%, #303336 30% 100%);
+    border-radius: 5px; 
+    border-bottom: 1px solid #1b1c1e ; 
+ 
+}
+.speakerImage{
+    width: 200px; 
+    height: 200px; 
+    border: 5px solid #303336; 
+    border-radius: 50%; 
+    background-position: center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    object-fit: contain;
+    margin: 10px auto; 
+}
+.speakerBadgeName{
+    font-size: larger; 
+    font-weight: bolder; 
+    max-width: 200px; 
+    margin: 0px auto; 
+    margin-bottom: 10px; 
+}
+.speakerBadgeSummary{
+    font-weight: bold; 
+    font-size: medium; 
+    max-width: 200px; 
+    margin: 0px auto; 
+    margin-bottom: 5px; 
+}
+.speakerBadgeInfo{
+    font-size: smaller; 
+    max-width: 250px; 
+    margin: 0px auto; 
+    margin-bottom: 5px; 
+}
+.speakerBadgeButton{
+    background-color: #0073b1;
+    border: none; 
+    color: #fff; 
+    height: 30px; 
+    border-radius: 2px; 
+    margin-top: 5px; 
+}
+.speakerBadgeButton:hover{
+    background-color: #63c0f2;
 }
 .speakerName{
     padding-left: 15px;
@@ -104,28 +160,18 @@
     font-style: normal; 
     font-weight: 600;
 }
-.speakerImage{
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    background-position: center; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    object-fit: contain;
-    margin: 20px auto; 
-    box-shadow: 0px 5px 5px rgba(24, 26, 26, 0.27); 
-}
+
 
 .patEsposito{
-    background-image: url(../../assets/PatEsposito.jpg); 
+    background-image: url("../../assets/PatEsposito.jpg"); 
 }
 
 .sharonCatesWilliams{
-    background-image: url(../../assets/SharonCatesWilliams.jpg); 
+    background-image: url("../../assets/SharonCatesWilliams.jpg"); 
 }
 
 .johnWargo{
-    background-image: url(../../assets/JohnWargo.jpg); 
+    background-image: url("../../assets/JohnWargo.jpg"); 
 }
 
 @media (max-width: 768px){
