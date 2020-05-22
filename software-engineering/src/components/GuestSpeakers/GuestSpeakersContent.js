@@ -16,7 +16,7 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href='https://www.linkedin.com/in/espositopat/'>Pat Esposito</a></div>
+                                    <div className="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href='https://www.linkedin.com/in/espositopat/' target="_blank" rel="noopener noreferrer" >Pat Esposito</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
@@ -33,7 +33,7 @@ class GuestSpeakers extends Component {
 
                                                 <p className="speakerAbout"><span className="speakerAboutSpan">His advice to those entering into the tech space: </span>Find a coping mechanism, whatever works for you. Everybody's got something different. Find out that little thing that really makes you want to come back again and do it, again and again. For me it's getting something trivial to work for the first time, new language, a new platform. It's so exciting that it just keeps bringing me back to saying, yeah I really want to be a programmer. I encourage all of you to find a mentor, and work with them.</p>
 
-                                                <p>Read more of his address to Nebula Academy students <a href="https://www.linkedin.com/pulse/pathways-success-program-se-bootcamp-guest-speaker-highlight-carey/">here</a>.</p>
+                                                <p>Read more of his address to Nebula Academy students <a href="https://www.linkedin.com/pulse/pathways-success-program-se-bootcamp-guest-speaker-highlight-carey/" target="_blank" rel="noopener noreferrer" >here</a>.</p>
 
 
                                                 </Col>
@@ -46,7 +46,7 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a/'>Sharon Cates Williams</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a/'target="_blank" rel="noopener noreferrer">Sharon Cates Williams</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
@@ -70,7 +70,7 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='https://www.linkedin.com/in/jmwargo/'>John Wargo</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='https://www.linkedin.com/in/jmwargo/' target="_blank" rel="noopener noreferrer">John Wargo</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>

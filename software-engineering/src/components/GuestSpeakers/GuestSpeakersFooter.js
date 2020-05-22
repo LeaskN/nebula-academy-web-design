@@ -5,7 +5,7 @@ import './GuestSpeakersFooter.css'
 export const GuestSpeakersFooter = () => (
   <Container className="fullGuestSpeakersFooter">
     <Jumbotron>
-      <h1 className="contentCentered">Get Involved Today.</h1><br/>
+      <h1 className="contentCentered">Get Involved Today</h1><br/>
               <Row>
           <Col className="contentCentered">
             <Button href="/guestspeakerapplication" variant="primary">Speaker Application</Button>
