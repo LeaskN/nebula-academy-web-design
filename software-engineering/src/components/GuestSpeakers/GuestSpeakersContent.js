@@ -25,9 +25,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">Pat Esposito</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                 <p className="speakerAbout">"I'm passionate about technology and the amazing experiences we create through digital transformation. Digital transformation creates efficiency in the way we collaborate within the business and with our partners. It helps us gain better insight by looking more deeply at our data and provides perspectives into our processes and performance."</p>
 
@@ -46,7 +43,7 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a/'>Sharon Cates Williams</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-11160111"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a/'>Sharon Cates Williams</a></div>
                                     </Card.Body>
                             </Card>
                         </Col>
@@ -55,9 +52,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">Sharon Cates Williams</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                     <p>Deputy Commissioner responsible for ensuring the effective, efficient, and prudent use of agency resources by developing sound practices, policies, and strategies to promote accountability and high performance throughout the Agency.</p>
                                                 </Col>
@@ -79,9 +73,6 @@ class GuestSpeakers extends Component {
                                     <Card.Body>
                                             <h1 className="speakerName">John Wargo</h1>
                                             <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
                                                 <Col xs={10}md={12}>
                                                 <p>Experienced, technical, mobile industry professional focused on enterprise mobility, and mobile application development. Clear communicator, accomplished writer, engaging and inspiring professional speaker; able to deliver content to a wide range of non-technical to technical audience types. Excellent listener. Analytical with solid problem solving and solution architecture skills.</p>
                                                 </Col>
