@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-import './GuestSpeakersContent.css'
-
+import './GuestSpeakersContent.css';
 
 class GuestSpeakers extends Component {
     state = {
@@ -16,7 +15,9 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href="https://www.linkedin.com/in/espositopat/" target="_blank" rel="noopener noreferrer" >Pat Esposito</a></div>
+                                    <div className="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="espositopat"><a className="LI-simple-link" href='https://www.linkedin.com/in/espositopat?trk=profile-badge' target="_blank" rel="noopener noreferrer" >Pat Esposito</a></div>
+
+                                    <div className="speakerImage patEsposito"></div>
                                     </Card.Body>
                             </Card>
                         </Col>
@@ -46,7 +47,10 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href="https://www.linkedin.com/in/sharon-cates-williams-a99273a/" target="_blank" rel="noopener noreferrer">Sharon Cates Williams</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="sharon-cates-williams-a99273a"><a className="LI-simple-link" href='https://www.linkedin.com/in/sharon-cates-williams-a99273a?trk=profile-badge'target="_blank" rel="noopener noreferrer">Sharon Cates Williams</a></div>
+                                    
+                                    <div className="speakerImage sharonCatesWilliams"></div>
+
                                     </Card.Body>
                             </Card>
                         </Col>
@@ -70,7 +74,9 @@ class GuestSpeakers extends Component {
                         <Col sm={4} className="cardColumns">
                             <Card className="cardDeckLeft">
                                     <Card.Body className="noPadding">
-                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href="https://www.linkedin.com/in/jmwargo/" target="_blank" rel="noopener noreferrer">John Wargo</a></div>
+                                    <div className="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jmwargo"><a className="LI-simple-link" href='https://www.linkedin.com/in/jmwargo?trk=profile-badge' target="_blank" rel="noopener noreferrer">John Wargo</a></div>
+
+                                    <div className="speakerImage johnWargo"></div>
                                     </Card.Body>
                             </Card>
                         </Col>
