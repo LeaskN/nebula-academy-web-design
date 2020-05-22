@@ -90,30 +90,6 @@ class GuestSpeakers extends Component {
                             </Card>
                         </Col>
                     </Row>
-                    <Row className="staticCard">
-                        <Col sm={4} className="cardColumns">
-                            <Card className="cardDeckLeft">
-                                    <Card.Body className="noPadding">
-                                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="rosendo-pili"><a class="LI-simple-link" href='https://www.linkedin.com/in/rosendo-pili?trk=profile-badge'>Rosendo Pili</a></div>
-                                    </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col>
-                            <Card className="guestSpeakerCardRight">
-                                    <Card.Body>
-                                            <h1 className="speakerName">John Wargo</h1>
-                                            <Row>
-                                                {/* <Col xs={1} md={3}>
-                                                    <img  src="https://www.codeplatoon.org/wp-content/uploads/2018/10/javasript.png" alt="" />
-                                                </Col> */}
-                                                <Col xs={10}md={12}>
-                                                <p>Experienced, technical, mobile industry professional focused on enterprise mobility, and mobile application development. Clear communicator, accomplished writer, engaging and inspiring professional speaker; able to deliver content to a wide range of non-technical to technical audience types. Excellent listener. Analytical with solid problem solving and solution architecture skills.</p>
-                                                </Col>
-                                            </Row>
-                                    </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
                 </Container>
             </React.Fragment>
         )
