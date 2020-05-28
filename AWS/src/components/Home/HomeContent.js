@@ -36,7 +36,7 @@ export const HomeContent = () => (
                     </p>
                 </Col>
                 <Col className="programBenefits">
-                    <h5>Grow the AWS Cloud Worforce</h5>
+                    <h5>Grow the AWS Cloud Workforce</h5>
                     <img className='programBenefitsImg' alt='growAWSWork' src={growAWSWork}></img>
                     <p>   
                         Practice makes perfect. Gain real-world experience needed to pursue industry jobs by consistently engaging in practical live-environment settings.  
