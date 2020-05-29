@@ -92,7 +92,7 @@ render() {
                             <h1>{this.state.active.header}</h1>
                             <p>{this.state.active.content}</p>
                         </Col>
-                        {this.state.active.buttonURL ? <Col><Button style={{textShadow:'0px 0px 0px black'}} target="blank" href={this.state.active.buttonURL}>{this.state.active.buttonText}</Button></Col>:<></>}
+                        {this.state.active.buttonURL ? <Col><Button variant="dark" style={{textShadow:'0px 0px 0px black'}} target="blank" href={this.state.active.buttonURL}>{this.state.active.buttonText}</Button></Col>:<></>}
                     </Row>
             </React.Fragment>
             )
