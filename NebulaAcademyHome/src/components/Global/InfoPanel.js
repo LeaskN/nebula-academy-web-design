@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 
-import './ShapeAndContent.css';
+import './InfoPanel.css';
 
-class ShapeAndContent extends Component {
+class InfoPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,6 +21,8 @@ class ShapeAndContent extends Component {
     }
     handleClick = (e) => {
         e.preventDefault()
+        this.refs.infoPanel.scrollIntoView({ block: "center" });
+        
         let targetTitle = e.target.innerHTML.split(' ').join('').toLowerCase();
         for(let i = 0; i < e.target.parentElement.children.length; i++){
             e.target.parentElement.children[i].style.backgroundColor = 'transparent';
@@ -87,7 +89,7 @@ render() {
                         {this.createLine()}
                     </Row>
                 </div>
-                    <Row style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
+                    <Row ref="infoPanel" style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
                         <Col xs={12}>
                             <h1>{this.state.active.header}</h1>
                             <p>{this.state.active.content}</p>
@@ -100,4 +102,4 @@ render() {
 };
 
 
-export default ShapeAndContent;
+export default InfoPanel;
