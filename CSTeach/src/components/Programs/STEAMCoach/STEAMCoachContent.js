@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-// import prices from '../../../assets/programPrices.png'
 import prices from '../../../assets/ProgramCost.png'
 import micro from '../../../assets/micro.png'
 import tello from '../../../assets/tello.png'
