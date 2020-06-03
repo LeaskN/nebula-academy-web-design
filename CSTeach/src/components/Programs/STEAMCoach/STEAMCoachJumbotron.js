@@ -6,7 +6,7 @@ export const STEAMCoachJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="STEAMCoachJumbotron">
       <div className="STEAMCoachOverlay"></div>
-      <Container>
+      <Container className="jumboContainer">
         <h1 className="jumboText">STEAM Coach</h1>
       </Container>
     </Jumbotron>

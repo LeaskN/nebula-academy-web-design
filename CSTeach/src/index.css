@@ -25,8 +25,19 @@ code {
 .col-12{
   padding: 0px !important;
 }
+.jumboContainer{
+  height: 100%; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.jumboText{
+  align-self: center; 
+}
+
 .jumbotron {
   text-align: center;
+  border-radius: 0px; 
 }
 @media screen and (min-width: 1200px) {
   .jumboText {
@@ -164,9 +175,7 @@ code {
   width: 100px;
   display:inline-block;
 }
-.jumbotron {
-  border-radius: 0px;
-}
+
 .cookieConsent{
   min-height: 60px; 
   position: fixed; 

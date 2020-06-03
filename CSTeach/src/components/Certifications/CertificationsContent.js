@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import { Row, Col, Carousel, Button, Container  } from 'react-bootstrap';
 import './CertificationsContent.css'
-import prices from '../../assets/programPrices.png'
+import prices from '../../assets/ProgramCost.png'
 import micro from '../../assets/micro.png'
 import tello from '../../assets/tello.png'
 import surface from '../../assets/surface.png'

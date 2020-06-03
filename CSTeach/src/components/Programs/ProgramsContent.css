@@ -7,6 +7,7 @@
     margin: 10px;
     box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.4);
     height: 97%;
+    margin-bottom: 50px; /* added margin bottom to make room for the third button */
 }
 .programTile2{
     padding: 10px;
@@ -17,6 +18,7 @@
     margin: 10px;
     box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.4);
     height: 97%;
+    margin-bottom: 50px; 
 }
 .programTile3{
     padding: 10px;
@@ -27,6 +29,7 @@
     margin: 10px;
     box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.4);
     height: 97%;
+    margin-bottom: 50px; 
 }
 .programTile4{
     padding: 10px;
@@ -39,3 +42,10 @@
     height: 97%;
 }
 
+h3{
+    margin-left: 15px; 
+}
+
+h1 {
+    margin-left: 15px; 
+}

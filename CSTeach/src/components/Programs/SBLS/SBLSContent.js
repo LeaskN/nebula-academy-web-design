@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import './SBLSContent.css'
+import prices from '../../../assets/ProgramCost.png'
 
 class SBLSContent extends Component {
     state = {
@@ -109,6 +110,9 @@ class SBLSContent extends Component {
                                     </Card.Body>
                             </Card>: null}
                         </Col>
+                    </Row>
+                    <Row  style={{justifyContent: 'center'}}>
+                        <img className="staticCard" width="80%" src={prices}  alt="prices"></img>
                     </Row>
                 </Container>
             </React.Fragment>

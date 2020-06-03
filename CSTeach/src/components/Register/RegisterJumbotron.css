@@ -6,7 +6,7 @@
     height:250px;
     position: relative;
     z-index: -2;
-    margin: 0px;
+    margin: 0px;    
 }
 .registerOverlay{
     background-color: #000;
@@ -19,3 +19,4 @@
     height: 100%;
     z-index: -1;
 }
+

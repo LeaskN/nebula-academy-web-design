@@ -6,7 +6,7 @@ export const CSTCJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="CSTCJumbotron">
       <div className="CSTCOverlay"></div>
-      <Container>
+      <Container className="jumboContainer">
         <h1 className="jumboText">Computer Science Teaching Certification</h1>
       </Container>
     </Jumbotron>

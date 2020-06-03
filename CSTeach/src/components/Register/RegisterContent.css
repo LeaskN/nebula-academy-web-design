@@ -15,3 +15,67 @@
     padding-left: 10%;
     padding-right: 10%;
 }
+
+.formContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.registrationPadding{
+    padding: 10px !important;
+}
+
+.registrationCard{
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.registrationCard:hover{
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+#registrationCard1{
+    border: 10px solid #8D60A4;
+}
+#registrationCard2{
+    border: 10px solid rgb(87, 87, 87);
+}
+#registrationCard3{
+    border: 10px solid #9497D1;
+}
+#registerButton1{
+    background-color: #8D60A4;
+    color: white; 
+}
+#registerButton2{
+    background-color: rgb(87, 87, 87);
+    color: white; 
+}
+#registerButton3{
+    background-color: #9497D1;
+    color: white; 
+}
+.registerButton:hover{
+    opacity: .8; 
+}
+.registrationCard h3{
+    margin-left: 15px; 
+}
+p{
+    margin-left: 15px; 
+}
+
+@media only screen and (min-width: 991px){
+    .registrationCard h3{
+        margin-left: 2px; 
+    }
+    p{
+        margin-left: 2px; 
+    }
+    .registerButton{
+        width: 100%; 
+        margin: 0 auto; 
+    }
+}
