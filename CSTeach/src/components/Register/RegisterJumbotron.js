@@ -6,7 +6,7 @@ export const RegisterJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="registerJumbotron">
       <div className="registerOverlay"></div>
-      <Container>
+      <Container className="registerContainer">
         <h1 className="jumboText">Register</h1>
       </Container>
     </Jumbotron>
