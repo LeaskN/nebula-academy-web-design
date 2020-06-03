@@ -50,8 +50,8 @@ export const ProgramsContent = () => (
                         <h3 id="dronesHeader">Drones</h3>
                         <p>Our experience shows that students who take introduction to Coding in Middle School increases their likelihood to take Computer Science in high school, which results in students that are more likely to take computer science in college. To prepare students for the future, teachers need access to coursework that will support their success in introducing students to these growing career fields. Our goal is to help schools engage their students in learning to code through fun student centered, project-based learning experiences that integrate technology like Drones. This approach supports the understanding of applied math and real-world problem solving.</p>
                         <div id="spacer" style={{height: '100px'}} ></div>
-                        <Button style={{marginBottom: '75px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:STEAM%20Drones%20Professional%20Development%20%28in-person%29" variant="light">Register: In Person</Button>
-                        <Button style={{marginBottom: '25px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:STEAM%20Drones%20Professional%20Development%20%28virtual%29" variant="light">Register: Virtual</Button>                    
+                        <Button style={{marginBottom: '75px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:STEAM%20Drones%20Professional%20Development%20%28in-person%29" variant="light">Register For In-Person</Button>
+                        <Button style={{marginBottom: '25px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:STEAM%20Drones%20Professional%20Development%20%28virtual%29" variant="light">Register For Live-Virtual</Button>                    
                     </div>
                 </div>
             </Col>
