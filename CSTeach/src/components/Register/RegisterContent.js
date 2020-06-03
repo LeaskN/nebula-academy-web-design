@@ -1,6 +1,11 @@
 import React, { Component }from 'react';
 import { Container, Row, Col, Button, } from 'react-bootstrap';
-import './RegisterContent.css'
+import './RegisterContent.css'; 
+import SBL from '../../assets/ScienceBehindLearning.png';
+import CST from '../../assets/CSTeachingCertificate.jpeg';
+import STEAM from '../../assets/STEAMCoach.jpg';
+
+
 
 class RegisterContent extends Component {
     constructor(props) {
@@ -11,8 +16,56 @@ class RegisterContent extends Component {
     render() {
         return (
             <Container>
-                <h1>Register Below:</h1>
-                <Row className="programRow"style={{color:"white", marginBottom: '20px'}}>
+                {/* <h1>Register Below:</h1> */}
+
+                 <Row className="registrationCard" id="registrationCard1">
+                    <Col style={{margin:'auto'}} xs={12} lg={5}>
+                        <img alt="Science Behind Learning" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={SBL}></img> 
+                            </Col>
+                            <Col lg={7}>
+                            <h3>Science Behind Learning</h3>
+                            <p>The Science Behind Learning Certification program is a 2-day live-virtual professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly. </p>
+                            <p>Read about the program <a href="[https://bit.ly/CSTC_v5]">here</a>.</p>
+                            <div id="spacer" style={{height: '120px'}}></div>
+                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton1" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13071791" variant="light">Register for In-Person</Button>
+                            <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton1" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132536" variant="light">Register for Live-Virtual</Button>
+                            </Col>
+                    </Row>
+
+                    <Row className="registrationCard" id="registrationCard2">
+                    <Col style={{margin:'auto'}} xs={12} lg={5}>
+                        <img alt="STEAM Coach" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={STEAM}></img> 
+                            </Col>
+                            <Col lg={7}>
+                            <h3>STEAM Coach</h3>
+                            <p>Beginning with a 2-day Science Behind Learning program and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments. </p>
+
+                            <p>Read about the program <a href="[https://bit.ly/CSTC_v5]">here</a>.</p>
+                            <div id="spacer" style={{height: '120px'}}></div>
+                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton2" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light">Register for In-Person</Button>
+                            <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton2" href=" https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132702" variant="light">Register for Live-Virtual</Button>
+                            </Col>
+                    </Row>
+
+                    <Row className="registrationCard" id="registrationCard3">
+                    <Col style={{margin:'auto'}} xs={12} lg={5}>
+                        <img alt="STEAM Coach" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={CST}></img> 
+                            </Col>
+                            <Col lg={7}>
+                            <h3>Computer Science Teaching</h3>
+                            <p>Through our Computer Science Certification, we help students and teachers become computer science instructors and teachers through a structure of blended learning programs within traditional classroom content, as well as a plan and implementation model to incorporate College Board courses for AP Computer Science Principals, AP Computer Science-A, and advanced computer science electives that support Web Development, Cybersecurity, Data Science, and Machine Learning.</p>
+
+                            <p>Read about the program <a href="[https://bit.ly/CSTC_v5]">here</a>.</p>
+
+                            <div id="spacer" style={{height: '120px'}}></div>
+
+                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton3" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13072072" variant="light">Register for In-Person</Button>
+                            <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton3" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132617 " variant="light">Register for Live-Virtual</Button>
+                            </Col>
+                    </Row>
+
+
+                {/* <Row className="programRow"style={{color:"white", marginBottom: '20px'}}>
                     <Col xs={12} lg={6} xl={4}>
                         <div className="programTile1">
                             <div>
@@ -46,7 +99,7 @@ class RegisterContent extends Component {
                             </div>
                         </div>
                     </Col>
-                </Row>
+                </Row> */}
             </Container>
         )
     }
