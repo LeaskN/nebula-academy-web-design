@@ -6,7 +6,7 @@ export const CertificationsJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="certificationsJumbotron">
       <div className="certificationsOverlay"></div>
-      <Container>
+      <Container className="jumboContainer">
           <h1 className="jumboText">Certifications</h1>
       </Container>
     </Jumbotron>

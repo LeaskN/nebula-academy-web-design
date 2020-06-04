@@ -2,9 +2,25 @@
     background-image: url('../../assets/9_CurriculumHeader.jpg');
     background-size: cover;
     color: #1E2125;
-    z-index: 02;
-    min-height: 250px;
+    height: 250px;
     position: relative;
     z-index: -2;
     margin: 0px;
+}
+
+.curriculumOverlay{
+    height: 100%; 
+    width: 100%; 
+    z-index: -1; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: black; 
+    opacity: .4; 
+}
+
+.jumboText{
+    color: white; 
+    text-shadow: 0px 0px 40px black; 
+    margin: 0 auto; 
 }

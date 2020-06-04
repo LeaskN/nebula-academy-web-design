@@ -69,7 +69,7 @@ class STEAMCoachContent extends Component {
                         <Col xs={8} className="cardColumns offWhite">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Program Description:</h1>
+                                            <h1 className="steamH1">Program Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
                                                     <p>The certification begins with the 2-day Science Behind Learning Certification training and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments, learn how to build an understanding of the expectations of such a learning environment and experience, how the role and behavior of students has to change, as well as the role and behavior of the teacher, in order to ensure success. Most importantly, participants will have a visualization of what the classroom has to change into and what it looks like when being done successfully. Lastly, participants will learn about building team collaboration so that each member has a clear understanding of the purpose of their work together. </p>
@@ -79,7 +79,7 @@ class STEAMCoachContent extends Component {
                             </Card>: null}
                             {this.state.toggle.button2 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Program Objectives:</h1>
+                                        <h1 className="steamH1">Program Objectives:</h1>
                                         <Row>
                                             <Col xs={10} md={12}>
                                                 <ol>
@@ -98,7 +98,7 @@ class STEAMCoachContent extends Component {
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                        <h1>Program Objectives:</h1>
+                                        <h1 className="steamH1">Program Objectives:</h1>
                                         <Row>
                                             <Col xs={10} md={12}>
                                                 <ol>
@@ -117,27 +117,27 @@ class STEAMCoachContent extends Component {
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Modules</h1>
-                                            <p><b>Modules 1-6:</b> Coaching Certification</p>
-                                            <p><b>Module 7:</b> Introduction to 21st CLD</p>
-                                            <p><b>Module 8:</b> Collaboration</p>
-                                            <p><b>Module 9:</b> Knowledge Construction</p>
-                                            <p><b>Module 10:</b> Use of ICT</p>
-                                            <p><b>Module 11:</b> Using tools to support ICT for learning</p>
-                                            <p><b>Module 12:</b> Introduction to Sanford’s design thinking model</p>
-                                            <p><b>Module 13:</b> Applying Research skills to support empathizing & delivering project outcomes</p>
-                                            <p><b>Module 14:</b> Using tools to collaborate & begin Project Framework with        teams</p>
-                                            <p><b>Module 15:</b> BBC python and micro:bits activity</p>
-                                            <p><b>Module 16:</b> Team Collaboration (project) </p>
-                                            <p>Final Team Project: Learning Design Thinking through an Entrepreneurial </p>
-                                            <p>ExperienceThe curriculum is designed to engage educators with hands-on activities and exercises intended to help educators experience and learn how design thinking produces outcome through product development and all the roles involved in the process. Educators will be provided opportunities to gain experience in all aspects of an entrepreneurial experience, and how to engage students in this process within the classroom structure. The content can be approached in several different ways and is easily adaptable to a variety of situations. Each unit contains suggested sample activities, but instructors are provided clear learning topics to allow them the freedom to develop their own exercises. Likewise, sample student objectives are suggested but the instructor has the freedom to create specific objectives to match their own exercises and assignments. </p>
+                                            <h1 className="steamH1">Modules</h1>
+                                            <p className="steamText"><b>Modules 1-6:</b> Coaching Certification</p>
+                                            <p className="steamText"><b>Module 7:</b> Introduction to 21st CLD</p>
+                                            <p className="steamText"><b>Module 8:</b> Collaboration</p>
+                                            <p className="steamText"><b>Module 9:</b> Knowledge Construction</p>
+                                            <p className="steamText"><b>Module 10:</b> Use of ICT</p>
+                                            <p className="steamText"><b>Module 11:</b> Using tools to support ICT for learning</p>
+                                            <p className="steamText"><b>Module 12:</b> Introduction to Sanford’s design thinking model</p>
+                                            <p className="steamText"><b>Module 13:</b> Applying Research skills to support empathizing & delivering project outcomes</p>
+                                            <p className="steamText"><b>Module 14:</b> Using tools to collaborate & begin Project Framework with        teams</p>
+                                            <p className="steamText"><b>Module 15:</b> BBC python and micro:bits activity</p>
+                                            <p className="steamText"><b>Module 16:</b> Team Collaboration (project) </p>
+                                            <p className="steamText">Final Team Project: Learning Design Thinking through an Entrepreneurial </p>
+                                            <p className="steamText">ExperienceThe curriculum is designed to engage educators with hands-on activities and exercises intended to help educators experience and learn how design thinking produces outcome through product development and all the roles involved in the process. Educators will be provided opportunities to gain experience in all aspects of an entrepreneurial experience, and how to engage students in this process within the classroom structure. The content can be approached in several different ways and is easily adaptable to a variety of situations. Each unit contains suggested sample activities, but instructors are provided clear learning topics to allow them the freedom to develop their own exercises. Likewise, sample student objectives are suggested but the instructor has the freedom to create specific objectives to match their own exercises and assignments. </p>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
                                     <Card.Body>
-                                            <h1>Certification</h1>
+                                            <h1 className="steamH1">Certification</h1>
                                             <Row>
-                                                <p>Participants will earn a STEAM Coach Certification and CTLE credits, if applicable.</p>
+                                                <p className="steamText">Participants will earn a STEAM Coach Certification and CTLE credits, if applicable.</p>
                                                 {/* <p>Click <a href="">here</a> to learn more about our accreditation process (link to accreditation chapter). </p> */}
                                             </Row>
                                     </Card.Body>
@@ -147,13 +147,13 @@ class STEAMCoachContent extends Component {
                     <Row  style={{justifyContent: 'center'}}>
                         <img className="staticCard" width="80%" src={prices}  alt="prices"></img>
                     </Row>
-                    <h1>Optional STEAM Coach Kit:</h1>
+                    <h1 id="steamH1-Label">Optional STEAM Coach Kit:</h1>
                     <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
                         <Col style={{margin:'auto'}} xs={12} md={3}>
                             <img alt="surface" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={surface}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3><b>Microsoft Surface Go</b></h3>
+                        <h3 className="steamH3"><b>Microsoft Surface Go</b></h3>
                         <p>64GB / Intel 4415Y / 4GB RAM / WiFi</p>
                         <p>New Surface Go is perfect for all your daily tasks, giving you laptop performance, tablet portability, and  a stunning touchscreen with the power of Windows 10 Home in S mode. Surface Go Signature Type Keyboard included.</p>
                         </Col>
@@ -163,7 +163,7 @@ class STEAMCoachContent extends Component {
                             <img alt="tello" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={tello}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3><b>Tello Drone</b></h3>
+                        <h3 className="steamH3"><b>Tello Drone</b></h3>
                         <p>14-Core processor / Collision Detection / Propeller Protection / 80 Grams / Image Stabilization / 5 MP Photos / 13 min flight time / 100m Image Transmission Distance / 720p HD Transmission /Tello App / Controller / Smartphone VR Compatibility</p>
                         <p>Perform flying stunts, shoot quick videos with EZ Shots, and learn about drones with coding education. Get yourself a Tello to find out just how awesome flying a drone can be!</p>
                         </Col>
@@ -173,7 +173,7 @@ class STEAMCoachContent extends Component {
                             <img alt="micro" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={micro}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3><b>BBC’s Micro:bit</b></h3>
+                        <h3 className="steamH3"><b>BBC’s Micro:bit</b></h3>
                         <p>52.0mm x 43.0mm x 11.0mm / 2.0" x 1.7" x 0.4" / Product Weight: 9.0g / 0.3oz / accelerometer / compass / processor / radio & Bluetooth antenna / battery socket / 2 0 pin edge connector / USB connector / LED lights</p>
                         <p>Designed specifically for kids and beginners, the Micro:bit is a pocket-sized computer that you can code, customize and control to bring your digital ideas, games and apps to life!</p>
                         </Col>

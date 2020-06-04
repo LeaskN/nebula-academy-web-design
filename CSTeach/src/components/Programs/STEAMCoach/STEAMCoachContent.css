@@ -71,3 +71,15 @@
     background-image: url("../../../assets/11_GuestSpeakers.jpg");
     background-size: cover;
 }
+.steamH1{
+    margin-left: 30px; 
+}
+#steamH1-Label{
+    text-align: center; 
+}
+.steamH3{
+    margin-left: 15px; 
+}
+.steamText{
+    margin-left: 30px; 
+}

@@ -2,9 +2,19 @@
     background-image: url('../../../assets/MicrosoftDiscoveryDay2_1.jpg');
     background-size: cover;
     color: #ccc;
-    z-index: 02;
     height:250px;
     position: relative;
     z-index: -2;
     margin: 0px;
+}
+
+.SBLSOverlay{
+    height: 100%; 
+    width: 100%; 
+    z-index: -1; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: black; 
+    opacity: .1; 
 }

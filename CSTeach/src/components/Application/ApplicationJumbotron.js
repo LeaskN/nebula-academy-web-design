@@ -5,7 +5,7 @@ import './ApplicationJumbotron.css'
 export const ApplicationJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="applicationJumbotron">
-      <Container>
+      <Container className="jumboContainer">
         <h1 className="jumboText" >Application</h1>
       </Container>
     </Jumbotron>

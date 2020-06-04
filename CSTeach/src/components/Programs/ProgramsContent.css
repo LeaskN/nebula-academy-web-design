@@ -42,10 +42,16 @@
     height: 97%;
 }
 
-h3{
+.programHeader{
     margin-left: 15px; 
 }
 
-h1 {
+.programH1 {
     margin-left: 15px; 
+}
+
+@media only screen and (min-width: 991px){
+    .programText{
+    margin-left: 15px; 
+    }
 }
