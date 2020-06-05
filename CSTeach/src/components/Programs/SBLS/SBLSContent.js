@@ -68,7 +68,7 @@ class SBLSContent extends Component {
                                             <h1 className="sblsH1">Program Description:</h1>
                                             <Row>
                                                 <Col xs={10}md={12}>
-                                                    <p>The Science Behind Learning Certification program is a 2-day in-person professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly learning environments and experiences.</p>
+                                                    <p className="sblsText">The Science Behind Learning Certification program is a 2-day in-person professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly learning environments and experiences.</p>
                                                 </Col>
                                             </Row>
                                     </Card.Body>
@@ -91,20 +91,20 @@ class SBLSContent extends Component {
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                             <h1 className="sblsH1">Modules</h1>
-                                                <p className="sblsText"><b>Module 0:</b> Program Orientation</p>
-                                                <p className="sblsText"><b>Module 1:</b> Intro to Science Behind Learning</p>
-                                                <p className="sblsText"><b>Module 2:</b> Neuroscience Foundation</p>
-                                                <p className="sblsText"><b>Module 3:</b> Brain-based Learning</p>
-                                                <p className="sblsText"><b>Module 4:</b> Brain-friendly Communications</p>
-                                                <p className="sblsText"><b>Module 5:</b> Brain-friendly Connections</p>
-                                                <p className="sblsText"><b>Module 6:</b> Emotional Regulation</p>
+                                                <p className="sblsModulesText"><b>Module 0:</b> Program Orientation</p>
+                                                <p className="sblsModulesText"><b>Module 1:</b> Intro to Science Behind Learning</p>
+                                                <p className="sblsModulesText"><b>Module 2:</b> Neuroscience Foundation</p>
+                                                <p className="sblsModulesText"><b>Module 3:</b> Brain-based Learning</p>
+                                                <p className="sblsModulesText"><b>Module 4:</b> Brain-friendly Communications</p>
+                                                <p className="sblsModulesText"><b>Module 5:</b> Brain-friendly Connections</p>
+                                                <p className="sblsModulesText"><b>Module 6:</b> Emotional Regulation</p>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button5 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                             <h1 className="sblsH1">Certification</h1>
                                             <Row>
-                                                <p className="sblsText">Participants will earn a Science Behind Learning Certification and CTLE credits, if applicable.</p>
+                                                <p className="sblsModulesText">Participants will earn a Science Behind Learning Certification and CTLE credits, if applicable.</p>
                                                 {/* <p>Click <a href="">here</a> to learn more about our accreditation process (link to accreditation chapter). </p> */}
                                             </Row>
                                     </Card.Body>

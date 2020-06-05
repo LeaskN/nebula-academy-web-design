@@ -80,3 +80,11 @@
 #cstH1-Label{
     text-align: center; 
 }
+.cstText{
+    margin-left: 15px; 
+}
+@media only screen and (min-width: 991px){
+    .cstH3{
+        margin-left: 0px; 
+    }
+}

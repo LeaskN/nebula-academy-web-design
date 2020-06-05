@@ -83,3 +83,11 @@
 .steamText{
     margin-left: 30px; 
 }
+.steamPDText{
+    margin-left: 15px; 
+}
+@media only screen and (min-width: 991px){
+    .steamH3{
+        margin-left: 0px; 
+    }
+}

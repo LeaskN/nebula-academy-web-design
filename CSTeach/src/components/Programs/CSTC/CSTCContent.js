@@ -96,45 +96,45 @@ class CSTCContent extends Component {
                                     <Card.Body>
                                         <h1 className="cstH1">Program Objectives:</h1>
                                         <Row>
-                                                <p>The 4-week certification begins with the 5-day STEAM Coach Certification, and continues for 3 weeks with Computer Science framework, based on the NYS Board of Regents to earn a Computer Science Certificate in the classroom teaching service. </p>
-                                                <p>Candidates will complete 4 weeks of coursework in computer science that addresses the following five Computer Science concepts: 1) algorithms and programming, 2) computing systems, 3) data and analysis, 4) impacts of computer, and 5) networks and the internet. Candidates will also learn the American Disabilities Act (ADA) website accessibility compliance requirements and how to code for accessibility. Furthermore, candidates will learn and understand how computers can be used in educational settings to meet the needs of all learners, including those with learning differences.</p>
+                                                <p className="cstText">The 4-week certification begins with the 5-day STEAM Coach Certification, and continues for 3 weeks with Computer Science framework, based on the NYS Board of Regents to earn a Computer Science Certificate in the classroom teaching service. </p>
+                                                <p className="cstText">Candidates will complete 4 weeks of coursework in computer science that addresses the following five Computer Science concepts: 1) algorithms and programming, 2) computing systems, 3) data and analysis, 4) impacts of computer, and 5) networks and the internet. Candidates will also learn the American Disabilities Act (ADA) website accessibility compliance requirements and how to code for accessibility. Furthermore, candidates will learn and understand how computers can be used in educational settings to meet the needs of all learners, including those with learning differences.</p>
                                         </Row>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button3 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                     <h3 className="cstH3">Algorithms and Programming</h3>
-                                    <p>An algorithm is a sequence of steps designed to accomplish a specific task. Algorithms are translated into programs, or code, to provide instructions for computing devices. Algorithms and programming control all computing systems, empowering people to communicate with the world in new ways and solve compelling problems. The development process to create meaningful and efficient programs involves choosing which information to use and how to process and store it, breaking apart large problems into smaller ones, recombining existing solutions, and analyzing different solutions.</p>
+                                    <p className="cstText">An algorithm is a sequence of steps designed to accomplish a specific task. Algorithms are translated into programs, or code, to provide instructions for computing devices. Algorithms and programming control all computing systems, empowering people to communicate with the world in new ways and solve compelling problems. The development process to create meaningful and efficient programs involves choosing which information to use and how to process and store it, breaking apart large problems into smaller ones, recombining existing solutions, and analyzing different solutions.</p>
                                     <h3 className="cstH3">Computing Systems</h3>
-                                    <p>People interact with a wide variety of computing devices that collect, store, analyze, and act upon information in ways that can affect human capabilities both positively and negatively. The physical components (hardware) and instructions (software) that make up a computing system communicate and process information in digital form. An understanding of hardware and software is useful when troubleshooting a computing system that does not work as intended.</p>
+                                    <p className="cstText">People interact with a wide variety of computing devices that collect, store, analyze, and act upon information in ways that can affect human capabilities both positively and negatively. The physical components (hardware) and instructions (software) that make up a computing system communicate and process information in digital form. An understanding of hardware and software is useful when troubleshooting a computing system that does not work as intended.</p>
                                     <h3 className="cstH3">Data and Analysis</h3>
-                                    <p>Computing systems exist to process data. The amount of digital data generated in the world is rapidly expanding, so the need to process data effectively is increasingly important. Data is collected and stored so that it can be analyzed to better understand the world and make more accurate predictions.</p>
+                                    <p className="cstText">Computing systems exist to process data. The amount of digital data generated in the world is rapidly expanding, so the need to process data effectively is increasingly important. Data is collected and stored so that it can be analyzed to better understand the world and make more accurate predictions.</p>
                                     <h3 className="cstH3">Impacts of Computing</h3>
-                                    <p>Computing affects many aspects of the world in both positive and negative ways at local, national, and global levels. Individuals and communities influence computing through their behaviors and cultural and social interactions, and in turn, computing influences new cultural practices. An informed and responsible person should understand the social implications of the digital world, including equity and access to computing. </p>
+                                    <p className="cstText">Computing affects many aspects of the world in both positive and negative ways at local, national, and global levels. Individuals and communities influence computing through their behaviors and cultural and social interactions, and in turn, computing influences new cultural practices. An informed and responsible person should understand the social implications of the digital world, including equity and access to computing. </p>
                                     <h3 className="cstH3">Networks and the Internet</h3>
-                                    <p>Computing devices typically do not operate in isolation. Networks connect computing devices to share information and resources and are an increasingly integral part of computing. Networks and communication systems provide greater connectivity in the computing world by providing fast, secure communication and facilitating innovation.</p>
+                                    <p className="cstText">Computing devices typically do not operate in isolation. Networks connect computing devices to share information and resources and are an increasingly integral part of computing. Networks and communication systems provide greater connectivity in the computing world by providing fast, secure communication and facilitating innovation.</p>
                                 </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button4 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                             <h1 className="cstH1">Modules</h1>
-                                                <p><b>Modules 1-16:</b> STEAM Coach Certification</p>
-                                                <p><b>Module 17:</b> File navigation and manipulation through terminal</p>
-                                                <p><b>Module 18:</b> Neuroscience Foundation</p>
-                                                <p><b>Module 19:</b> JTML & CSS</p>
-                                                <p><b>Module 20:</b> Deployment of static sites</p>
-                                                <p><b>Module 21:</b> Git & GitHub</p>
-                                                <p><b>Module 22:</b> Algorithms & Programming</p>
-                                                <p><b>Module 23:</b> Computer Systems</p>
-                                                <p><b>Module 24:</b> Data & Analysis</p>
-                                                <p><b>Module 25:</b> JavaScript</p>
-                                                <p><b>Module 26:</b> DOM Manipulation</p>
-                                                <p><b>Module 27:</b> Event Listeners</p>
-                                                <p><b>Module 28:</b> Reading & writing data to local storage</p>
-                                                <p><b>Module 29:</b> Impacts of Computing</p>
-                                                <p><b>Module 30:</b> Introduction to Python</p>
-                                                <p><b>Module 31:</b> CAP Stone Development Project</p>
-                                                <p><b>Module 32:</b> Final Presentations</p>
+                                                <p className="cstText"><b>Modules 1-16:</b> STEAM Coach Certification</p>
+                                                <p className="cstText"><b>Module 17:</b> File navigation and manipulation through terminal</p>
+                                                <p className="cstText"><b>Module 18:</b> Neuroscience Foundation</p>
+                                                <p className="cstText"><b>Module 19:</b> JTML & CSS</p>
+                                                <p className="cstText"><b>Module 20:</b> Deployment of static sites</p>
+                                                <p className="cstText"><b>Module 21:</b> Git & GitHub</p>
+                                                <p className="cstText"><b>Module 22:</b> Algorithms & Programming</p>
+                                                <p className="cstText"><b>Module 23:</b> Computer Systems</p>
+                                                <p className="cstText"><b>Module 24:</b> Data & Analysis</p>
+                                                <p className="cstText"><b>Module 25:</b> JavaScript</p>
+                                                <p className="cstText"><b>Module 26:</b> DOM Manipulation</p>
+                                                <p className="cstText"><b>Module 27:</b> Event Listeners</p>
+                                                <p className="cstText"><b>Module 28:</b> Reading & writing data to local storage</p>
+                                                <p className="cstText"><b>Module 29:</b> Impacts of Computing</p>
+                                                <p className="cstText"><b>Module 30:</b> Introduction to Python</p>
+                                                <p className="cstText"><b>Module 31:</b> CAP Stone Development Project</p>
+                                                <p className="cstText"><b>Module 32:</b> Final Presentations</p>
                                     </Card.Body>
                             </Card>: null}
                             {this.state.toggle.button6 ? <Card className="cardDeckRight">
@@ -148,7 +148,7 @@ class CSTCContent extends Component {
                                     <Card.Body>
                                             <h1 className="cstH1">Certification</h1>
                                             <Row>
-                                                <p>Participants will earn a Computer Science Teaching Certification, as well as CTLE credits is applicable. </p>
+                                                <p >Participants will earn a Computer Science Teaching Certification, as well as CTLE credits is applicable. </p>
                                             </Row>
                                     </Card.Body>
                             </Card>: null}

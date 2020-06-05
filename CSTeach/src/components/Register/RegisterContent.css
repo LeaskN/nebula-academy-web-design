@@ -47,18 +47,19 @@
 }
 #registerButton1{
     background-color: #8D60A4;
-    color: white; 
 }
 #registerButton2{
     background-color: rgb(87, 87, 87);
-    color: white; 
 }
 #registerButton3{
     background-color: #9497D1;
+}
+.registerButton{
     color: white; 
 }
 .registerButton:hover{
     opacity: .8; 
+    color: white; 
 }
 .registrationCard h3{
     margin-left: 15px; 
@@ -66,6 +67,12 @@
 p{
     margin-left: 15px; 
 }
+.buttonDisabled{
+    color: rgb(196, 110, 110); 
+    pointer-events: none; 
+    background-color: rgb(172, 171, 171); 
+    border: gray; 
+  }
 
 @media only screen and (min-width: 991px){
     .registrationCard h3{
