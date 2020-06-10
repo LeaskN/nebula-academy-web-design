@@ -12,14 +12,17 @@ class applicationContent extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         
     }
+    // fetch all programs and set them to state
     componentDidMount(e){
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions : res.records}))
     }
+    // populate the dropdown lists with all SE Bootcamps (from state)
     populateOptions(){
         let options = this.state.cohortOptions;
         let finalArray = [];
+        // filter for ONLY the bootcamps
         for(let item in options){
             if((options[item].name).indexOf('BootCamp') > -1){
                 finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
@@ -29,9 +32,11 @@ class applicationContent extends Component {
             finalArray
         );
     }
+    // When a applicant presses submit check all data and if it's clean, submit it, otherwise state the issue to the user
     putData(e) {
         this.fixJSON();
         e.preventDefault();
+        // if the phone number exists, standardize it
         if(this.state.Contact_Number__c){
             let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
             if(newNumber.length === 10 || newNumber.length === 11){
@@ -42,59 +47,52 @@ class applicationContent extends Component {
                 alert('Please correct your phone number.')
                 return
             }
-        } else if (this.state.How_did_you_hear_about_our_program__c === 'Other'){
-            if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Highest_education_level__c === 'Other'){
-            if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Primary_intentions_for_enrolling__c === 'Other'){
-            if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Ethnicity__c === 'Other'){
-            if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Gender__c === 'Other/Prefer to self-describe'){
-            if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if(this.state.Email_ID__c){
-            if(!this.state.Email_ID__c.indexOf('@') || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
-                alert('There is an issue with your email address. Please check for typos to continue.');
-                return;
-            }
+        } else if( !this.state.Contact_Number__c ){
+            alert('Please correct your phone number.')
+        } else if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
+            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+        } else if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
+            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+        } else if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
+            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+        } else if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+        } else if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
+            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
+        } else if( !this.state.Email_ID__c || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
+            alert('There is an issue with your email address. Please check for typos to continue.');
+            return;
+        } else {
+            // Specific post request to the database through (check this: d9nuj9xdv4try.cloudfront.net)
+            // fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
+            //     method: 'POST', 
+            //     mode: 'cors', 
+            //     cache: 'no-cache', 
+            //     credentials: 'same-origin', 
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     redirect: 'follow', 
+            //     referrerPolicy: 'no-referrer',
+            //     body: this.fixJSON()
+            // })
+            // .then((response) => response.json())
+            // .then((response) => {
+            //     if(response['message'].indexOf('Required fields are missing') > -1){
+            //         alert('Please complete the application by filling in missing fields.')
+            //     } else if (response['message'].indexOf('Already registered for this program') > -1){
+            //         alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+            //     } else {
+            //         alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
+            //         // console.log('Response:', response);
+            //     }
+            // })
+            // .catch((error) => {
+            //     console.error('Error:', error);
+                
+            // })
+            console.log("this would have submitted", " State:", this.state)
         }
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
-            method: 'POST', 
-            mode: 'cors', 
-            cache: 'no-cache', 
-            credentials: 'same-origin', 
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            redirect: 'follow', 
-            referrerPolicy: 'no-referrer',
-            body: this.fixJSON()
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            if(response['message'].indexOf('Required fields are missing') > -1){
-                alert('Please complete the application by filling in missing fields.')
-            } else if (response['message'].indexOf('Already registered for this program') > -1){
-                alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-            } else {
-                alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
-                // console.log('Response:', response);
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            
-        })
     }
     arrayRemove(arr, value){
         return arr.filter(function(ele){
@@ -102,8 +100,8 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state
-        delete tempObj['cohortOptions']
+        let tempObj = this.state;
+        delete tempObj['cohortOptions'];
         //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
