@@ -30,7 +30,7 @@ class RegisterContent extends Component {
 
                             <div id="spacer" style={{height: '120px'}}></div>
                             <ButtonMessage75></ButtonMessage75>
-                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="buttonDisabled" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13071791" variant="light" disabled>Register for In-Person</Button> */}
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13071791" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton1" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132536" variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>
@@ -47,7 +47,7 @@ class RegisterContent extends Component {
 
                             <div id="spacer" style={{height: '120px'}}></div>
                             <ButtonMessage75></ButtonMessage75>
-                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="buttonDisabled" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light" disabled>Register for In-Person</Button> */}
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton2" href=" https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132702" variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>
@@ -64,7 +64,7 @@ class RegisterContent extends Component {
 
                             <div id="spacer" style={{height: '120px'}}></div>
                             <ButtonMessage75></ButtonMessage75>
-                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="buttonDisabled" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13072072" variant="light" disabled>Register for In-Person</Button> */}
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13072072" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton3" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132617 " variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>

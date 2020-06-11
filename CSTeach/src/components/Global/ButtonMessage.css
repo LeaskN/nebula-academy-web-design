@@ -4,14 +4,30 @@
     border: gray; 
     height: 40px; 
     border-radius: .25rem; 
+    display: flex; 
+    flex-direction: column; 
+    align-content: center; 
+    font-size: smaller; 
 }
 
-.message-text{
+/* .message-text{
     font-size: smaller; 
     height: 90%; 
     width: 90%; 
     margin: auto; 
     line-height: 18px; 
+    border: 1px solid black; 
+} */
+
+
+@media only screen and (max-width: 414px){
+    .message{
+        width: 100%; 
+        font-size: 12px; 
+        margin: 0 auto; 
+    }
+    .hoverButton{
+        font-size: smaller; 
+        width: 90%; 
+    }
 }
-
-

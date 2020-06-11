@@ -1,3 +1,27 @@
+#programTile, 
+#microsoftMIE, 
+#minecraftEd, 
+#drones{
+    width: 98%; 
+    margin: 10px auto; 
+}
+
+/* @media only screen and (max-width: 414px){
+    #programTile, 
+    #microsoftMIE, 
+    #minecraftEd, 
+    #drones{
+    width: 100%; 
+    margin: 0 auto; 
+}
+} */
+
+@media only screen and (max-width: 414px){
+    .steamBottom{
+        bottom: 5px; 
+    }
+}
+
 .programTile1{
     padding: 10px;
     min-height: 250px;
