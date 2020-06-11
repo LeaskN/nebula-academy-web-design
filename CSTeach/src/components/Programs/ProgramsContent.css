@@ -47,8 +47,7 @@
 .programH1 {
     margin-left: 15px; 
 }
-@media only screen and (min-width: 991px){
-    .programText{
+
+.programText{
     margin-left: 15px; 
-    }
 }

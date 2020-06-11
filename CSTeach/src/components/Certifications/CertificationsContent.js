@@ -56,7 +56,7 @@ class CertificationsContent extends Component {
                 <Carousel.Item key={element.header}  >
                     <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
                     <Carousel.Caption>
-                        <h3 className="certificationsH3">{element.header}</h3>
+                        <h3>{element.header}</h3>
                         <br/>
                         <div className="carouselParagraph">{element.body}</div>
                     </Carousel.Caption>
@@ -91,7 +91,7 @@ class CertificationsContent extends Component {
                             <img alt="surface" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={surface}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3 className="certificationsH3"><b>Microsoft Surface Go</b></h3>
+                        <h3><b>Microsoft Surface Go</b></h3>
                         <p>64GB / Intel 4415Y / 4GB RAM / WiFi</p>
                         <p>New Surface Go is perfect for all your daily tasks, giving you laptop performance, tablet portability, and  a stunning touchscreen with the power of Windows 10 Home in S mode. Surface Go Signature Type Keyboard included.</p>
                         </Col>
@@ -101,7 +101,7 @@ class CertificationsContent extends Component {
                             <img alt="tello" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={tello}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3 className="certificationsH3"><b>Tello Drone</b></h3>
+                        <h3><b>Tello Drone</b></h3>
                         <p>14-Core processor / Collision Detection / Propeller Protection / 80 Grams / Image Stabilization / 5 MP Photos / 13 min flight time / 100m Image Transmission Distance / 720p HD Transmission /Tello App / Controller / Smartphone VR Compatibility</p>
                         <p>Perform flying stunts, shoot quick videos with EZ Shots, and learn about drones with coding education. Get yourself a Tello to find out just how awesome flying a drone can be!</p>
                         </Col>
@@ -111,7 +111,7 @@ class CertificationsContent extends Component {
                             <img alt="micro" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={micro}></img>
                         </Col>
                         <Col xs={9}>
-                        <h3 className="certificationsH3"><b>BBC’s Micro:bit</b></h3>
+                        <h3><b>BBC’s Micro:bit</b></h3>
                         <p>52.0mm x 43.0mm x 11.0mm / 2.0" x 1.7" x 0.4" / Product Weight: 9.0g / 0.3oz / accelerometer / compass / processor / radio & Bluetooth antenna / battery socket / 2 0 pin edge connector / USB connector / LED lights</p>
                         <p>Designed specifically for kids and beginners, the Micro:bit is a pocket-sized computer that you can code, customize and control to bring your digital ideas, games and apps to life!</p>
                         </Col>

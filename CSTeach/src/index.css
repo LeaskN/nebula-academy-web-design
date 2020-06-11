@@ -159,9 +159,8 @@ code {
   border-color: #3B3D7B;
 }
  /* adding red text to disabled in-person buttons*/
-.buttonDisabled{
+#buttonDisabled{
   color: rgb(201, 96, 96); 
-  pointer-events: none; 
   background-color: rgb(172, 171, 171); 
   border: gray; 
 }

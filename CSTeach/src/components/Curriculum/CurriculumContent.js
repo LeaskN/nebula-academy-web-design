@@ -48,7 +48,7 @@ class CurriculumContent extends Component {
             <React.Fragment>
                 <Container>
                     <h1 className="curriculumH1">Curriculum designed to support student centered outcomes: Addressing the diverse learning needs of a modern classroom.</h1>
-                    <p>Our curriculum is designed by applying cognitive neuroscience research, our own experience with working with students and educators, blended with real-world industry experience. Our instructors teach across populations of students, educators, and adults in the workforce. This model brings greater value to our programs and to our participants. Our content and teaching model is continuously improved through feedback from students, educators, and our industry partners.</p>
+                    <p className="curriculumBodyText">Our curriculum is designed by applying cognitive neuroscience research, our own experience with working with students and educators, blended with real-world industry experience. Our instructors teach across populations of students, educators, and adults in the workforce. This model brings greater value to our programs and to our participants. Our content and teaching model is continuously improved through feedback from students, educators, and our industry partners.</p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -143,7 +143,7 @@ class CurriculumContent extends Component {
                         </Col>
                     </Row>
                     <h1 className="curriculumH1">Execution</h1>
-                    <p>Computer science education should involve real-world problem solving, engaging, meaningful, and personally relevant activities for students that focus on problem-solving, critical thinking, and creativity while emphasizing the ethical impacts of computing. </p>
+                    <p className="curriculumBodyText">Computer science education should involve real-world problem solving, engaging, meaningful, and personally relevant activities for students that focus on problem-solving, critical thinking, and creativity while emphasizing the ethical impacts of computing. </p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">

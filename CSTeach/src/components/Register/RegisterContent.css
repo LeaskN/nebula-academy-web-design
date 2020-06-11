@@ -64,25 +64,12 @@
 .registrationCard h3{
     margin-left: 15px; 
 }
-p{
+.registerText{
     margin-left: 15px; 
 }
-.buttonDisabled{
-    color: rgb(196, 110, 110); 
-    pointer-events: none; 
-    background-color: rgb(172, 171, 171); 
-    border: gray; 
-  }
 
 @media only screen and (min-width: 991px){
     .registrationCard h3{
-        margin-left: 2px; 
-    }
-    p{
-        margin-left: 2px; 
-    }
-    .registerButton{
-        width: 100%; 
-        margin: 0 auto; 
+        margin-left: 15px; 
     }
 }

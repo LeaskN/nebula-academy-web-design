@@ -39,6 +39,9 @@
 .curriculumText{
     margin-left: 0px; 
 }
+.curriculumBodyText{
+    margin-left: 15px; 
+}
 
 @media ( max-width: 414px){
     .curriculumText{
@@ -97,3 +100,4 @@
     background-image: url("../../assets/11_GuestSpeakers.jpg");
     background-size: cover;
 }
+

@@ -1,0 +1,17 @@
+.message{
+    color: rgb(216, 195, 195); 
+    background-color: rgb(211, 9, 9);  
+    border: gray; 
+    height: 40px; 
+    border-radius: .25rem; 
+}
+
+.message-text{
+    font-size: smaller; 
+    height: 90%; 
+    width: 90%; 
+    margin: auto; 
+    line-height: 18px; 
+}
+
+
