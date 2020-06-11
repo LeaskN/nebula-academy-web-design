@@ -32,7 +32,7 @@ export const ProgramsContent = () => (
                         <div id="spacer" style={{height: '125px'}}></div>
                         <ButtonMessage125 id="programButtonMessage"></ButtonMessage125>
                         {/* <Button style={{marginBottom: '125px'}} className="bottom contentCentered"  href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light" disabled>Register for In-Person</Button> */}
-                        <Button style={{marginBottom: '75px'}} className="bottom contentCentered" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132702" variant="light">Register for Virtual-Live</Button>
+                        <Button style={{marginBottom: '75px'}} className="bottom contentCentered steamTop" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132702" variant="light">Register for Virtual-Live</Button>
                         <Button style={{marginBottom: '25px'}} className="bottom contentCentered steamBottom" href="/STEAMCoach" variant="light">Learn More</Button>
                     </div>
                 </div>

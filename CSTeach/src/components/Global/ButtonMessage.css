@@ -22,12 +22,13 @@
 
 @media only screen and (max-width: 414px){
     .message{
-        width: 100%; 
+        width: 90%; 
         font-size: 12px; 
-        margin: 0 auto; 
+        height: auto; 
+        /* margin: 0 auto;  */
     }
     .hoverButton{
-        font-size: smaller; 
         width: 90%; 
+        font-size: smaller; 
     }
 }
