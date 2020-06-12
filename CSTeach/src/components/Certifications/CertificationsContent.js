@@ -85,7 +85,7 @@ class CertificationsContent extends Component {
                 <Row  style={{justifyContent: 'center'}}>
                         <img className="staticCard" width="80%" src={prices}  alt="prices"></img>
                     </Row>
-                    <h1>Optional STEAM Coach Kit:</h1>
+                    <h1 className="certificationsH1">Optional STEAM Coach Kit:</h1>
                     <Row style={{ boxShadow: '0 4px 6px 4px rgba(0,0,0,0.2)', margin: '30px', borderRadius: '20px', border: '10px solid #32BEBD'}}>
                         <Col style={{margin:'auto'}} xs={12} md={3}>
                             <img alt="surface" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={surface}></img>

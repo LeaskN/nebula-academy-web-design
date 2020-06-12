@@ -1,0 +1,34 @@
+.message{
+    color: rgb(216, 195, 195); 
+    background-color: rgb(211, 9, 9);  
+    border: gray; 
+    height: 40px; 
+    border-radius: .25rem; 
+    display: flex; 
+    flex-direction: column; 
+    align-content: center; 
+    font-size: smaller; 
+}
+
+/* .message-text{
+    font-size: smaller; 
+    height: 90%; 
+    width: 90%; 
+    margin: auto; 
+    line-height: 18px; 
+    border: 1px solid black; 
+} */
+
+
+@media only screen and (max-width: 414px){
+    .message{
+        width: 90%; 
+        font-size: 12px; 
+        height: auto; 
+        /* margin: 0 auto;  */
+    }
+    .hoverButton{
+        width: 90%; 
+        font-size: smaller; 
+    }
+}

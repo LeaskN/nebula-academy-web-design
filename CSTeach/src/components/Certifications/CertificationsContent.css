@@ -19,6 +19,9 @@
     max-height: 400px;
     overflow: hidden;
 }
+.certificationsH1{
+    text-align: center; 
+}
 @media (max-width: 1340px){
     .CertificationCarouselCard{
         font-size: .9em;

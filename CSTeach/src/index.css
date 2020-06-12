@@ -158,18 +158,30 @@ code {
   background-color: #3B3D7B;
   border-color: #3B3D7B;
 }
+ /* adding red text to disabled in-person buttons*/
+#buttonDisabled{
+  color: rgb(201, 96, 96); 
+  background-color: rgb(172, 171, 171); 
+  border: gray; 
+}
 .fullWidth{
   width: 100% !important;
 }
 .bottom{
   position:absolute;  
   margin-left: 5%;
-  margin-bottom: 15px;
   margin-top: 0px;
   width: 90%;                
-  bottom: 0;                          
+  bottom: 10px;                          
   left: 0; 
 }
+
+@media (max-width: 414px){
+  .bottom{
+    font-size: smaller;
+  }
+}
+
 #spacer{
   height: 50px;
   width: 100px;

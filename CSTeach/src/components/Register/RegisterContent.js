@@ -4,6 +4,7 @@ import './RegisterContent.css';
 import SBL from '../../assets/ScienceBehindLearning.png';
 import CST from '../../assets/CSTeachingCertificate.jpeg';
 import STEAM from '../../assets/STEAMCoach.jpg';
+import ButtonMessage75 from '../Global/ButtonMessage75'; 
 
 
 
@@ -24,11 +25,12 @@ class RegisterContent extends Component {
                             </Col>
                             <Col lg={7}>
                             <h3>Science Behind Learning</h3>
-                            <p>The Science Behind Learning Certification program is a 2-day virtual-live professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly. </p>
-                            <p>View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=4" target="blank">here</a>.</p>
+                            <p className="registerText">The Science Behind Learning Certification program is a 2-day virtual-live professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly. </p>
+                            <p className="registerText">View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=4" target="blank">here</a>.</p>
 
                             <div id="spacer" style={{height: '120px'}}></div>
-                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton1" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13071791" variant="light">Register for In-Person</Button>
+                            <ButtonMessage75></ButtonMessage75>
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13071791" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton1" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132536" variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>
@@ -39,12 +41,13 @@ class RegisterContent extends Component {
                             </Col>
                             <Col lg={7}>
                             <h3>STEAM Coach</h3>
-                            <p>Beginning with a 2-day Science Behind Learning program and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments. </p>
+                            <p className="registerText">Beginning with a 2-day Science Behind Learning program and follows with 21st Century Learning Design (CLD). Through this 5 day program, educators will learn how to introduce students to project-based learning and a collaborative student centered learning environment that takes place to set the stage for success. Participants will also understand how this is different from traditional learning and traditional teaching and learning environments. </p>
 
-                            <p>View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=5" target="blank">here</a>.</p>
+                            <p className="registerText">View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=5" target="blank">here</a>.</p>
 
                             <div id="spacer" style={{height: '120px'}}></div>
-                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton2" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light">Register for In-Person</Button>
+                            <ButtonMessage75></ButtonMessage75>
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096466" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton2" href=" https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132702" variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>
@@ -55,13 +58,13 @@ class RegisterContent extends Component {
                             </Col>
                             <Col lg={7}>
                             <h3>Computer Science Teaching</h3>
-                            <p>Through our Computer Science Certification, we help students and teachers become computer science instructors and teachers through a structure of blended learning programs within traditional classroom content, as well as a plan and implementation model to incorporate College Board courses for AP Computer Science Principals, AP Computer Science-A, and advanced computer science electives that support Web Development, Cybersecurity, Data Science, and Machine Learning.</p>
+                            <p className="registerText">Through our Computer Science Certification, we help students and teachers become computer science instructors and teachers through a structure of blended learning programs within traditional classroom content, as well as a plan and implementation model to incorporate College Board courses for AP Computer Science Principals, AP Computer Science-A, and advanced computer science electives that support Web Development, Cybersecurity, Data Science, and Machine Learning.</p>
 
-                            <p>View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=7" target="blank">here</a>.</p>
+                            <p className="registerText">View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=7" target="blank">here</a>.</p>
 
                             <div id="spacer" style={{height: '120px'}}></div>
-
-                            <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" id="registerButton3" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13072072" variant="light">Register for In-Person</Button>
+                            <ButtonMessage75></ButtonMessage75>
+                            {/* <Button style={{marginBottom: '75px'}} target="empty" className="bottom contentCentered registerButton" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=13072072" variant="light" disabled>Register for In-Person</Button> */}
                             <Button style={{marginBottom: '25px'}} className="bottom contentCentered registerButton" id="registerButton3" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=14132617 " variant="light">Register for Virtual-Live</Button>
                             </Col>
                     </Row>

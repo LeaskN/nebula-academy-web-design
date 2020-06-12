@@ -2,8 +2,22 @@
     background-image: url('../../assets/csteachHeader.jpeg');
     background-size: cover;
     color: #ccc;
-    z-index: 100;
-    min-height: 250px;
+    height: 100%;
+    min-height: 250px; 
     z-index: -2;
     margin: 0px;
+    position: relative; 
+}
+
+.homeOverlay{
+    height: 100%; 
+    width: 100%; 
+    z-index: -1; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: black; 
+    opacity: .1; 
+    border: 1px solid red; 
+    margin: 0 auto; 
 }

@@ -25,6 +25,7 @@ render() {
                         <Col className={this.state.selectedSection !== "Program" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/programs" onClick={(e)=> this.focused(e)}>Programs</a></Col>
                         <Col className={this.state.selectedSection !== "Curriculum" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/Curriculum" onClick={(e)=> this.focused(e)}>Curriculum</a></Col>
                         <Col className={this.state.selectedSection !== "Certifications" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/Certifications" onClick={(e)=> this.focused(e)}>Certifications</a></Col>
+                        <Col className={this.state.selectedSection !== "Register" ? "section" : "section selectedSectionNav "}><a className="customLink" href="/register" onClick={(e)=> this.focused(e)}>Register</a></Col>
                     </Row>
                 </Container>
             </React.Fragment>

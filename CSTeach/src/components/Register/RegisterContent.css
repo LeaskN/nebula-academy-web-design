@@ -47,35 +47,36 @@
 }
 #registerButton1{
     background-color: #8D60A4;
-    color: white; 
 }
 #registerButton2{
     background-color: rgb(87, 87, 87);
-    color: white; 
 }
 #registerButton3{
     background-color: #9497D1;
-    color: white; 
+}
+.registerButton{
+    color: white;  
 }
 .registerButton:hover{
     opacity: .8; 
+    color: white; 
 }
 .registrationCard h3{
     margin-left: 15px; 
 }
-p{
+.registerText{
     margin-left: 15px; 
 }
 
 @media only screen and (min-width: 991px){
     .registrationCard h3{
-        margin-left: 2px; 
+        margin-left: 15px; 
     }
-    p{
-        margin-left: 2px; 
-    }
+}
+
+@media only screen and (max-width: 414px){
     .registerButton{
-        width: 100%; 
-        margin: 0 auto; 
+        font-size: smaller; 
+        width: 90%; 
     }
 }

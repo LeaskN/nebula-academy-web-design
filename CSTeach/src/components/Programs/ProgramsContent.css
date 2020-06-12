@@ -1,3 +1,10 @@
+#programTile, 
+#microsoftMIE, 
+#minecraftEd, 
+#drones{
+    width: 98%; 
+    margin: 10px auto; 
+}
 .programTile1{
     padding: 10px;
     min-height: 250px;
@@ -41,11 +48,13 @@
     box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.4);
     height: 97%;
 }
-
-h3{
+.programHeader{
+    margin-left: 15px; 
+}
+.programH1 {
     margin-left: 15px; 
 }
 
-h1 {
+.programText{
     margin-left: 15px; 
 }
