@@ -25,7 +25,7 @@ class RegisterContent extends Component {
                             </Col>
                             <Col lg={7}>
                             <h3>Science Behind Learning</h3>
-                            <p className="registerText">The Science Behind Learning Certification program is a 2-day virtual-live professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills, and models to engage in more brain-friendly conversations that lead to positive out-comes and to create more brain friendly. </p>
+                            <p className="registerText">The Science Behind Learning Certification program is a 2-day virtual-live professional development program dedicated to Education sector professionals. This program is designed for the educator audience, including teachers, administrators, and anyone working in the education sector with students. Upon completing this learning experience, participants will have the knowledge, skills and models to engage in more brain-friendly conversation that lead to positive outcomes and to create more brain friendly learning environments and experiences.</p>
                             <p className="registerText">View program brochure <a href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:ab114496-4080-46be-81ee-0928af87e3cf#pageNum=4" target="blank">here</a>.</p>
 
                             <div id="spacer" style={{height: '120px'}}></div>
