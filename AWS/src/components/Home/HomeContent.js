@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Container, Button } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 import './HomeContent.css';
 import Popup from './Popup';
 import CurriculumContent from '../Curriculum/CurriculumContent';
