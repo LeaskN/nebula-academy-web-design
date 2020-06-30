@@ -49,57 +49,81 @@ class applicationContent extends Component {
         this.fixJSON();
         console.log('Pre-if-statement')
         if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
+            console.log('hit')
             alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.Authorized_to_work_in_US__c){
+            console.log('hit')
             alert('Please complete the field titled: "Are you currently authorized to work in the US?"')
         } else if(!this.state.Coding_experience__c){
+            console.log('hit')
             alert('Please complete the field titled: "Do you have coding experience?"')
         } else if(!this.state.Contact_Number__c){
+            console.log('hit')
             alert('Please complete the field titled: "Phone"')
         } else if(!this.state.Email_ID__c){
+            console.log('hit')
             alert('Please complete the field titled: "Email"')
         } else if(!this.state.First_Name__c){
+            console.log('hit')
             alert('Please complete the field titled: "First"')
         } else if(!this.state.Gender__c || (this.state.Gender__c === 'Other' && !this.state.Gender_Other__c)){
+            console.log('hit')
             alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.High_School_Diploma_or_GED__c){
+            console.log('hit')
             alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else if(!this.state.Highest_education_level__c || (this.state.Highest_education_level__c === 'Other' && !this.state.Highest_education_level_OTHER_Desc__c)){
+            console.log('hit')
             alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.How_did_you_hear_about_our_program__c || (this.state.How_did_you_hear_about_our_program__c === 'Other' && !this.state.How_did_you_hear_OTHER_Desc__c)){
+            console.log('hit')
             alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
-        } else if (this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
+        } else if(this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
+            console.log('hit')
             alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.Last_Name__c){
+            console.log('hit')
             alert('Please complete the field titled: "Last"')
         } else if(!this.state.Mailing_Address__c){
+            console.log('hit')
             alert('Please complete the field titled: "Mailing Address 1"')
         } else if(!this.state.Mailing_City__c){
+            console.log('hit')
             alert('Please complete the field titled: "City"')
         } else if(!this.state.Mailing_State__c){
+            console.log('hit')
             alert('Please complete the field titled: "State"')
         } else if(!this.state.Mailing_Zipcode__c){
+            console.log('hit')
             alert('Please complete the field titled: "Zip"')
         } else if(!this.state.Payment_Type__c){
+            console.log('hit')
             alert('Please complete the field titled: "How are you planning to fund the program fee of $16,995 if accepted into program?"')
         } else if(!this.state.Preference_to_experience_learning__c){
+            console.log('hit')
             alert('Please complete the field titled: "Please provide your preference to experience learning"')
         } else if(!this.state.Program_you_are_applying_to__c){
+            console.log('hit')
             alert('Please complete the field titled: "Which cohort are you applying to?"')
         } else if(this.state.Contact_Number__c){
-        let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+        console.log('hit')
+            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
         // if just the digits comes out to either 10 or 11 then set it to state
             if(newNumber.length === 10 || newNumber.length === 11){
                 this.setState({
                     Contact_Number__c: newNumber
                 })
+                // code is breaking here, not going into the next if statement
+                console.log('hit0')
             // if it is too many or too few digits present an error and exit the function
             } else {
+                console.log('hit1')
                 alert('Please correct your phone number.')
                 return;
             }
         // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
         } else if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1)){
+            console.log('hit')
             alert('There is an issue with your email address. Please check for typos to continue.');
         } else {
             //"Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.
