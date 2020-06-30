@@ -13,6 +13,8 @@ class applicationContent extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     shouldComponentUpdate(nextProps, nextState) {
+        console.log(this.state.cohortOptions)
+        console.log(nextState.cohortOptions)
         if (!nextState.cohortOptions) {
           return false;
         } else {
@@ -71,28 +73,18 @@ class applicationContent extends Component {
             alert('There is an issue with your email address. Please check for typos to continue.');
             return
         }
-        if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
-            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.Authorized_to_work_in_US__c){
-            alert('All participants must be required to work in the US.')
-        } else if(!this.state.Coding_experience__c){
-            alert('Please complete the field titled: "Do you have coding experience?"')
+        
+        if(!this.state.First_Name__c){
+            alert('Please complete the field titled: "First"')
         } else if(!this.state.Contact_Number__c){
             alert('Please complete the field titled: "Phone"')
+        // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
+        } else if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
+            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.Coding_experience__c){
+            alert('Please complete the field titled: "Do you have coding experience?"')
         } else if(!this.state.Email_ID__c){
             alert('Please complete the field titled: "Email"')
-        } else if(!this.state.First_Name__c){
-            alert('Please complete the field titled: "First"')
-        } else if(!this.state.Gender__c || (this.state.Gender__c === 'Other' && !this.state.Gender_Other__c)){
-            alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.High_School_Diploma_or_GED__c){
-            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
-        } else if(!this.state.Highest_education_level__c || (this.state.Highest_education_level__c === 'Other' && !this.state.Highest_education_level_OTHER_Desc__c)){
-            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.How_did_you_hear_about_our_program__c || (this.state.How_did_you_hear_about_our_program__c === 'Other' && !this.state.How_did_you_hear_OTHER_Desc__c)){
-            alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
-        } else if(this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
-            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.Last_Name__c){
             alert('Please complete the field titled: "Last"')
         } else if(!this.state.Mailing_Address__c){
@@ -103,15 +95,24 @@ class applicationContent extends Component {
             alert('Please complete the field titled: "State"')
         } else if(!this.state.Mailing_Zipcode__c){
             alert('Please complete the field titled: "Zip"')
+        } else if(!this.state.Highest_education_level__c || (this.state.Highest_education_level__c === 'Other' && !this.state.Highest_education_level_OTHER_Desc__c)){
+            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.How_did_you_hear_about_our_program__c || (this.state.How_did_you_hear_about_our_program__c === 'Other' && !this.state.How_did_you_hear_OTHER_Desc__c)){
+            alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
+        } else if(this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
+            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.Payment_Type__c){
             alert('Please complete the field titled: "How are you planning to fund the program fee of $16,995 if accepted into program?"')
         } else if(!this.state.Preference_to_experience_learning__c){
             alert('Please complete the field titled: "Please provide your preference to experience learning"')
         } else if(!this.state.Program_you_are_applying_to__c){
             alert('Please complete the field titled: "Which cohort are you applying to?"')
-        } else if(!this.state.Contact_Number__c){
-            alert('Please complete the field titled: "Phone"')
-        // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
+        } else if(!this.state.Authorized_to_work_in_US__c){
+            alert('All participants must be required to work in the US.')
+        } else if(!this.state.Gender__c || (this.state.Gender__c === 'Other' && !this.state.Gender_Other__c)){
+            alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.High_School_Diploma_or_GED__c){
+            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else {
             // Post request to the database 
             fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
@@ -155,9 +156,14 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state;
-        delete tempObj['cohortOptions'];
-        delete tempObj['loading'];
+        let prop1 = 'cohortOptions';
+        let prop2 = 'loading';
+        const tempObj = Object.keys(this.state).reduce((object, key) => {
+            if (key !== prop1 || key !== prop2) {
+              object[key] = this.state[key]
+            }
+            return object
+          }, {})
         //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
@@ -216,7 +222,7 @@ class applicationContent extends Component {
         return (
             <Container>
                 <Row>
-                    {this.loading ? <div className='loader'></div>: ''}
+                    {/* {this.loading ? <div className='loader'></div>: ''} */}
                     <Col xs={12}>
                         <Row>
                             <h2 style={{marginTop:"20px"}}>The application consists of three phases: </h2>
