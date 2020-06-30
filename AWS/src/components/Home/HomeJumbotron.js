@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Container, Button } from 'react-bootstrap';
+import { Jumbotron, Container } from 'react-bootstrap';
 import './HomeJumbotron.css'
 
 export const HomeJumbotron = () => (
@@ -7,10 +7,8 @@ export const HomeJumbotron = () => (
     <Jumbotron className="homeJumbo">
       <div className="homeOverlay"></div>
       <Container>
-        <h1 className="jumboText">AWS Academy Program</h1>
-        <h5>Earn your certification with Nebula Academy, an accredited AWS training provider</h5>
+        <h1 className="jumboText">AWS Academy <span class="orange-text"> Accreditation Preparation </span> Course</h1>
         <div style={{paddingTop: '1vw'}}></div>
-        <Button href="/registration" variant="warning">View Courses</Button>
       </Container>
     </Jumbotron>
   </React.Fragment>

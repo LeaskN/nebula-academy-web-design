@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Courses } from './pages/Courses';
+// import { Courses } from './pages/Courses';
 import { NoMatch } from './pages/NoMatch';
-import { Curriculum } from './pages/Curriculum';
+// import { Curriculum } from './pages/Curriculum';
 import { Registration } from './pages/Registration';
 import { Universities } from './pages/Universities';
 import { Outcomes } from './pages/Outcomes';
@@ -32,8 +32,8 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path= "/courses" component={Courses}/>
-            <Route path = "/curriculum" component={Curriculum}/>
+            {/* <Route path= "/courses" component={Courses}/> */}
+            {/* <Route path = "/curriculum" component={Curriculum}/> */}
             <Route path = "/registration" component={Registration}/>
             <Route path = "/universities" component={Universities}/>
             <Route path ="/outcomes" component={Outcomes}/>
