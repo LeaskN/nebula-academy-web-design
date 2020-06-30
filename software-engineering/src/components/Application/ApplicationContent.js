@@ -3,14 +3,6 @@ import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import './ApplicationContent.css'
 
 class applicationContent extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        if (!nextState.cohortOptions) {
-          return false;
-        } else {
-          return true;
-        }
-    }
-
     constructor(props) {
         super(props);
         this.state = {
@@ -18,6 +10,13 @@ class applicationContent extends Component {
             Ethnicity__c: [],
         };
         this.handleInputChange = this.handleInputChange.bind(this);
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        if (!nextState.cohortOptions) {
+          return false;
+        } else {
+          return true;
+        }
     }
     // fetch all programs and set them to state
     componentDidMount(){
