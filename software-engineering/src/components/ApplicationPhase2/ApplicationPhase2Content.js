@@ -75,7 +75,7 @@ class ApplicationPhase2Content extends Component {
                 return;
             }
         }
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/update`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 

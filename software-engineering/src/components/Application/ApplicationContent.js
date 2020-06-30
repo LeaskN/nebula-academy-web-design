@@ -3,6 +3,14 @@ import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import './ApplicationContent.css'
 
 class applicationContent extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        if (!nextState.cohortOptions) {
+          return false;
+        } else {
+          return true;
+        }
+    }
+
     constructor(props) {
         super(props);
         this.state = {
@@ -10,59 +18,92 @@ class applicationContent extends Component {
             Ethnicity__c: [],
         };
         this.handleInputChange = this.handleInputChange.bind(this);
-        
     }
     // fetch all programs and set them to state
-    componentDidMount(e){
+    componentDidMount(){
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
-        .then(res => this.setState({cohortOptions : res.records}))
+        .then(res => this.setState({cohortOptions : res.records}));
     }
+
     // populate the dropdown lists with all SE Bootcamps (from state)
     populateOptions(){
         let options = this.state.cohortOptions;
         let finalArray = [];
-        // filter for ONLY the bootcamps
+            // filter for ONLY the bootcamps
         for(let item in options){
             if((options[item].name).indexOf('BootCamp') > -1){
                 finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
             }
         }
-        return (
-            finalArray
-        );
+        if(!this.state.cohortOptions){
+            console.log('fetch')
+        } else {
+            console.log('render')
+        }
+
+        return (finalArray);
     }
     // When a applicant presses submit check all data and if it's clean, submit it, otherwise state the issue to the user
     putData(e) {
-        this.fixJSON();
         e.preventDefault();
-        // if the phone number exists, standardize it
-        if(this.state.Contact_Number__c){
-            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+        this.fixJSON();
+        console.log('Pre-if-statement')
+        if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
+            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.Authorized_to_work_in_US__c){
+            alert('Please complete the field titled: "Are you currently authorized to work in the US?"')
+        } else if(!this.state.Coding_experience__c){
+            alert('Please complete the field titled: "Do you have coding experience?"')
+        } else if(!this.state.Contact_Number__c){
+            alert('Please complete the field titled: "Phone"')
+        } else if(!this.state.Email_ID__c){
+            alert('Please complete the field titled: "Email"')
+        } else if(!this.state.First_Name__c){
+            alert('Please complete the field titled: "First"')
+        } else if(!this.state.Gender__c || (this.state.Gender__c === 'Other' && !this.state.Gender_Other__c)){
+            alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.High_School_Diploma_or_GED__c){
+            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
+        } else if(!this.state.Highest_education_level__c || (this.state.Highest_education_level__c === 'Other' && !this.state.Highest_education_level_OTHER_Desc__c)){
+            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.How_did_you_hear_about_our_program__c || (this.state.How_did_you_hear_about_our_program__c === 'Other' && !this.state.How_did_you_hear_OTHER_Desc__c)){
+            alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
+        } else if (this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
+            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
+        } else if(!this.state.Last_Name__c){
+            alert('Please complete the field titled: "Last"')
+        } else if(!this.state.Mailing_Address__c){
+            alert('Please complete the field titled: "Mailing Address 1"')
+        } else if(!this.state.Mailing_City__c){
+            alert('Please complete the field titled: "City"')
+        } else if(!this.state.Mailing_State__c){
+            alert('Please complete the field titled: "State"')
+        } else if(!this.state.Mailing_Zipcode__c){
+            alert('Please complete the field titled: "Zip"')
+        } else if(!this.state.Payment_Type__c){
+            alert('Please complete the field titled: "How are you planning to fund the program fee of $16,995 if accepted into program?"')
+        } else if(!this.state.Preference_to_experience_learning__c){
+            alert('Please complete the field titled: "Please provide your preference to experience learning"')
+        } else if(!this.state.Program_you_are_applying_to__c){
+            alert('Please complete the field titled: "Which cohort are you applying to?"')
+        } else if(this.state.Contact_Number__c){
+        let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+        // if just the digits comes out to either 10 or 11 then set it to state
             if(newNumber.length === 10 || newNumber.length === 11){
                 this.setState({
                     Contact_Number__c: newNumber
                 })
+            // if it is too many or too few digits present an error and exit the function
             } else {
                 alert('Please correct your phone number.')
-                return
+                return;
             }
-        } else if( !this.state.Contact_Number__c ){
-            alert('Please correct your phone number.')
-        } else if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
-            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-        } else if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
-            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-        } else if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
-            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-        } else if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-        } else if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-            alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-        } else if( !this.state.Email_ID__c || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
+        // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
+        } else if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1)){
             alert('There is an issue with your email address. Please check for typos to continue.');
-            return;
         } else {
+            //"Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.
             // Specific post request to the database through (check this: d9nuj9xdv4try.cloudfront.net)
             // fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
             //     method: 'POST', 
@@ -94,6 +135,22 @@ class applicationContent extends Component {
             console.log("this would have submitted", " State:", this.state)
         }
     }
+    // if( !this.state.Contact_Number__c){
+    //     alert('Please add your phone number.');
+    // } else if(!this.state.How_did_you_hear_OTHER_Desc__c){
+    //     alert(this.state.How_did_you_hear_OTHER_Desc__c);
+    //     alert('Please complete the field regarding how you heard about our program. \nIf you selected "Other" please write how you heard about our program.');
+    // } else if( this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
+
+    // } else if( this.state.Highest_education_level_OTHER_Desc__c && this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
+    //     alert('Please complete the field titled, Highest_education_level_OTHER_Desc__c');
+    // } else if( this.state.Primary_Intentions_OTHER_DESC__c && this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
+    //     alert('Please complete the field titled, Primary_Intentions_OTHER_DESC__c');
+    // } else if( this.state.Ethnicity_Other_description__c && this.state.Ethnicity_Other_description__c.length === 0 ){
+    //     alert('Please complete the field titled, Ethnicity_Other_description__c');
+    // } else if( this.state.Gender_Other__c && this.state.Gender_Other__c.length === 0 ){
+    //     alert('Please complete the field titled, Gender_Other__c');
+    // } 
     arrayRemove(arr, value){
         return arr.filter(function(ele){
             return ele !== value;
@@ -111,6 +168,8 @@ class applicationContent extends Component {
         return JSON.stringify(tempObj)
     }
     handleInputChange(event) {
+        event.preventDefault();
+
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
