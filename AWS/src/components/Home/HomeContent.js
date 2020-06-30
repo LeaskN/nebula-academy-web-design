@@ -122,7 +122,7 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
             </Row>    
-        <div className="margin-left">
+        <div className="margin-left margin-top">
             <CurriculumContent/>
         </div> 
         </Container>      

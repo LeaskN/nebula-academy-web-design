@@ -82,3 +82,7 @@
     background-image: url("../../assets/9_AWS_presenter.jpg");
     background-size: cover;
 }
+.curriculumButton{
+    width: 100%; 
+    margin-bottom: 0px; 
+}

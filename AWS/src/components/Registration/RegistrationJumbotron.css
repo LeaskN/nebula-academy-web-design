@@ -1,12 +1,23 @@
 .registrationJumbotron{
-    background-image: url('../../assets/AWSBrandedHeaderReg-01.png');
+    background-image: url('../../assets/nebula-developing.jpg');
     background-size: cover;
+    position: relative; 
     color: white;
     z-index: 02;
     z-index: -2;
     margin: 0px;
 }
-
+.registrationOverlay{
+    height: 100%; 
+    width: 100%; 
+    z-index: -1; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: rgb(57, 25, 66); 
+    opacity: .7; 
+}
+/* 
 @media (max-width: 633px){
     .registrationJumbotron{
         padding: 8vw 2vw 4vw 2vw;
@@ -26,4 +37,4 @@
     .registrationJumbotron{
         padding: 9vw 2vw 4vw 2vw;
     }
-}
+} */

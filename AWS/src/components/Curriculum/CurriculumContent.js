@@ -46,7 +46,7 @@ class CurriculumContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>AWS Cloud Programs</h1>
+                    <h1>AWS Academy courses offered by Nebula Academy</h1>
                     <p>Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices. </p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
@@ -100,14 +100,12 @@ class CurriculumContent extends Component {
                                                         <li> Explore key concepts related to Elastic Load Balancing, Amazon CloudWatch, and Amazon EC2 Auto Scaling</li>
                                                     </ul>
                                                     <h4>Course Outline</h4>
-                                                    <p>Duration:</p>
-                                                    <ul><li>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
                                                     <p>Intended Audience:</p>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
                                                     <h4>Student Prerequisites</h4>
                                                     <ul><li>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have:</li></ul>
                                                     <ul>
-                                                        <li>Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
+                                                        <li>Completed AWS Academy Cloud Foundations or have equivalent experience</li>
                                                         <li>A working knowledge of distributed systems</li>
                                                         <li>Familiarity with general networking concepts</li>
                                                         <li>A working knowledge of multi-tier architectures</li>
@@ -157,14 +155,12 @@ class CurriculumContent extends Component {
                                                         <li> Troubleshoot common errors</li>
                                                     </ul>
                                                     <h4>Course Outline</h4>
-                                                    <p>Duration:</p>
-                                                    <ul><li>Approximately 40 Hours, delivered over a period of six weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
                                                     <p>Intended Audience:</p>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
                                                     <h4>Student Prerequisites</h4>
                                                     <p>To ensure success in this course, students should have:</p>
                                                     <ul>
-                                                        <li> Completed AWS Academy Cloud Foundations (ACF) or have equivalent experience</li>
+                                                        <li> Completed AWS Academy Cloud Foundations or have equivalent experience</li>
                                                         <li> A working knowledge of distributed systems</li>
                                                         <li> Familiarity with general networking concepts</li>
                                                         <li> A working knowledge of multi-tier architectures</li>
@@ -198,8 +194,6 @@ class CurriculumContent extends Component {
                                                         <li> Create and configure automated and repeatable deployments with tools such as Amazon Machine Images (AMIs) and AWS CloudFormation </li>
                                                     </ul>
                                                     <h4>Course Outline</h4>
-                                                    <p>Duration:</p>
-                                                    <ul><li>Approximately 40 hours, delivered over a four week period. Actual delivery times vary depending on the format.</li></ul>
                                                     <p>Intended Audience:</p>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
                                                     <h4>Employment Outcomes</h4>
@@ -258,8 +252,6 @@ class CurriculumContent extends Component {
                                                         <li>Identify best practice for deploying applications</li>
                                                     </ul>
                                                     <h4>Course Outline</h4>
-                                                    <p>Duration:</p>
-                                                    <ul><li>Approximately 40 hours, delivered over a period of four weeks. Actual delivery times will vary from class to class and depending on delivery format.</li></ul>
                                                     <p>Intended Audience:</p>
                                                     <ul><li>Undergraduate, graduate, or professional students seeking cloud developing expertise. This is an intermediate (200-level) course.</li></ul>
                                                     <h4>Student Prerequisites</h4>
@@ -290,7 +282,8 @@ class CurriculumContent extends Component {
                                     <div>
                                         Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
                                     </div>
-                                    <Button href="/partners" variant="warning">Partners</Button>
+                                    <div id="spacer"></div>
+                                    <Button className="bottom" href="/partners" variant="warning">Partners</Button>
                                 </div>
                             </Card>
                         </Col>
@@ -301,7 +294,8 @@ class CurriculumContent extends Component {
                                     <div>
                                         The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
                                     </div>
-                                    <Button href="/guestspeakers" variant="warning">Guest Speakers</Button>
+                                    <div id="spacer"></div>
+                                    <Button className="bottom" href="/guestspeakers" variant="warning">Guest Speakers</Button>
                                 </div>
                             </Card>
                         </Col>

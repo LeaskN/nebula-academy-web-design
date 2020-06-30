@@ -28,18 +28,18 @@ class registrationContent extends Component {
                             <Col lg={7}>
                             <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
                             <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert>
-                            <p>AWS Academy Cloud Foundations (ACF) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                            <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                             <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
                             <div>
                                 The virtual session grants access to:
                                 <ul>
-                                    <li><b>Live virtual office hours with Nebula Academy's Certified AWS ACF instructors where participants can ask questions directly</b></li>
-                                    <li>AWS ACF labs</li>
-                                    <li>AWS ACF slides</li>
-                                    <li>AWS ACF videos</li>
-                                    <li>AWS ACF content</li>
-                                    <li>AWS ACF practice questions</li>
-                                    <li>Nebula Academy's AWS ACF Teams environment and AWS ACF related resources</li>
+                                    <li><b>Live virtual office hours with Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly</b></li>
+                                    <li>AWS Amazon Cloud Foundations labs</li>
+                                    <li>AWS Amazon Cloud Foundations slides</li>
+                                    <li>AWS Amazon Cloud Foundations videos</li>
+                                    <li>AWS Amazon Cloud Foundations content</li>
+                                    <li>AWS Amazon Cloud Foundations practice questions</li>
+                                    <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
                                     <li>Nebula Academy's Videos covering all modules & content in detail</li> 
                                 </ul>
                             </div>
@@ -53,19 +53,19 @@ class registrationContent extends Component {
                             </Col>
                             <Col lg={7}>
                                 <h3>AWS Academy Cloud Foundations - <b>Live Virtual</b></h3>
-                                <p>AWS Academy Cloud Foundations (ACF) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                <p>AWS Academy Cloud Foundations (Amazon Cloud Foundations) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                                 <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
                                 <div>
                                     The virtual session grants access to:
                                     <ul>
-                                        <li><b>Weekly live classes led by Nebula Academy's Certified AWS ACF instructors where participants can ask questions directly to the instructor</b></li>
+                                        <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
                                         <li><b>Recordings of the live classes for your individal review</b></li>
-                                        <li>AWS ACF labs</li>
-                                        <li>AWS ACF slides</li>
-                                        <li>AWS ACF videos</li>
-                                        <li>AWS ACF content</li>
-                                        <li>AWS ACF practice questions</li>
-                                        <li>Nebula Academy's AWS ACF Teams environment and AWS ACF related resources</li>
+                                        <li>AWS Amazon Cloud Foundations labs</li>
+                                        <li>AWS Amazon Cloud Foundations slides</li>
+                                        <li>AWS Amazon Cloud Foundations videos</li>
+                                        <li>AWS Amazon Cloud Foundations content</li>
+                                        <li>AWS Amazon Cloud Foundations practice questions</li>
+                                        <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
                                         <li>Nebula Academy's Videos covering all modules & content in detail</li> 
                                     </ul>
                                 </div>
