@@ -48,6 +48,29 @@ class applicationContent extends Component {
         e.preventDefault();
         this.fixJSON();
         console.log('Pre-if-statement')
+        if(this.state.Contact_Number__c){
+            console.log('fixing phone')
+                let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+            // if just the digits comes out to either 10 or 11 then set it to state
+                if(newNumber.length === 10 || newNumber.length === 11){
+                    this.setState({
+                        Contact_Number__c: newNumber
+                    })
+                    // code is breaking here, not going into the next if statement
+                    console.log('hit0')
+                // if it is too many or too few digits present an error and exit the function
+                } else {
+                    console.log('hit1')
+                    alert('Please correct your phone number.')
+                    return;
+                }
+            // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
+        } 
+        if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1)){
+            console.log('hit')
+            alert('There is an issue with your email address. Please check for typos to continue.');
+            return
+        }
         if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
             console.log('hit')
             alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
@@ -105,26 +128,10 @@ class applicationContent extends Component {
         } else if(!this.state.Program_you_are_applying_to__c){
             console.log('hit')
             alert('Please complete the field titled: "Which cohort are you applying to?"')
-        } else if(this.state.Contact_Number__c){
+        } else if(!this.state.Contact_Number__c){
         console.log('hit')
-            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
-        // if just the digits comes out to either 10 or 11 then set it to state
-            if(newNumber.length === 10 || newNumber.length === 11){
-                this.setState({
-                    Contact_Number__c: newNumber
-                })
-                // code is breaking here, not going into the next if statement
-                console.log('hit0')
-            // if it is too many or too few digits present an error and exit the function
-            } else {
-                console.log('hit1')
-                alert('Please correct your phone number.')
-                return;
-            }
+            alert('Please complete the field titled: "Phone"')
         // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
-        } else if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1)){
-            console.log('hit')
-            alert('There is an issue with your email address. Please check for typos to continue.');
         } else {
             //"Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.
             // Specific post request to the database through (check this: d9nuj9xdv4try.cloudfront.net)
