@@ -16,7 +16,7 @@ export const HomeContent = () => (
     <React.Fragment>
         {Popup()}
         <Container>
-            <div className="margin-left">
+            <div className="margin-left margin-bottom">
             <CourseContent/> 
             </div>   
             {/* <Row className="programBenefitsRow">

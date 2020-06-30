@@ -2,6 +2,9 @@
 .margin-left{
     margin-left: -15px; 
 }
+.margin-bottom{
+    margin-bottom: 30px; 
+}
 .introRowTile{
     background-color: transparent;
     color: white;
