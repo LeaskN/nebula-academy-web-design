@@ -5,8 +5,8 @@ import './CourseContent.css'
 export const CourseContent = () => (
   <React.Fragment>
     <Container>
-        <h1>Prepare For Your Amazon Web Services Certification With Nebula Academy</h1>
-        <p>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
+        <h1 style={{textAlign:"center"}}>Prepare for Certification with Nebula Academy</h1>
+        <p style={{marginLeft:"10px"}}>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at <b>Nebula Academy</b>. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
         <Row style={{flexWrap: "flex"}}>
             <Col  xs={12} lg={4} xl={4} className="courseBackImage1" style={{border:"5px solid white"}}>
                 <Card className="overImage">
@@ -29,7 +29,7 @@ export const CourseContent = () => (
                             <i>For students seeking to understand the fundamentals of building IT infrastructure on Amazon Webs Services, or AWS.</i>
                         </Card.Text>
                        <div id="spacer"></div>
-                        <Button className='bottom courseButton' href="mailto:succeed@nebulaacademyny.com" variant="secondary">Get More Info</Button>
+                        <Button className='bottom courseButton' href='/#CurriculumSection' variant="secondary">Get More Info</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -41,7 +41,7 @@ export const CourseContent = () => (
                             <i>Designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles.</i>
                         </Card.Text>
                        <div id="spacer"></div>
-                        <Button className='bottom courseButton' href="mailto:succeed@nebulaacademyny.com" variant="secondary">Get More Info</Button>
+                        <Button className='bottom courseButton' href='/#CurriculumSection' variant="secondary">Get More Info</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -55,7 +55,7 @@ export const CourseContent = () => (
                             <i>Designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles.</i>
                         </Card.Text>
                        <div id="spacer"></div>
-                        <Button className='bottom courseButton' href="mailto:succeed@nebulaacademyny.com" variant="secondary">Get More Info</Button>
+                        <Button className='bottom courseButton' href='/#CurriculumSection' variant="secondary">Get More Info</Button>
                     </Card.Body>
                 </Card>
             </Col>

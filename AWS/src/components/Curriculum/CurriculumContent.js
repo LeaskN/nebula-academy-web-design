@@ -46,8 +46,8 @@ class CurriculumContent extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <h1>AWS Academy courses offered by Nebula Academy</h1>
-                    <p>Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices. </p>
+                    <h1 id="CurriculumSection"style={{textAlign:"center"}}>AWS Academy courses offered by Nebula Academy</h1>
+                    <p style={{marginLeft:"10px"}}>Courseware is authored and maintained by AWS and taught by our industry instructors who have earned AWS Academy Accreditation. Regular updates from AWS reflect the pace of innovation, new releases and best practices. </p>
                     <Row className="staticCard">
                         <Col xs={4} className="cardColumns">
                             <Card className="cardDeckLeft">
@@ -58,22 +58,28 @@ class CurriculumContent extends Component {
                                             AWS Academy Cloud Foundations
                                         </div>
                                         <hr className="noMargin"/>
-                                        <div 
+                                        <div
+                                            id="CloudArchitecting" 
                                             onClick={() => this.button2()}
                                             className={this.state.toggle.button2 ? " subtleButton toggled" : "subtleButton"}>
-                                            AWS Academy Cloud Architecting
+                                            AWS Academy Cloud Architecting 
+                                            <br></br><i><span className="orange-text">Coming Soon!</span></i>
                                         </div>
                                         <hr className="noMargin"/>
                                         <div 
+                                            id="CloudOperations"
                                             onClick={() => this.button3()}
                                             className={this.state.toggle.button3 ? " subtleButton toggled" : "subtleButton"}>
                                             AWS Academy Cloud Operations
+                                            <br></br><i><span className="orange-text">Coming Soon!</span></i>
                                         </div>
                                         <hr className="noMargin"/>
                                         <div 
+                                            id="CloudDeveloping"
                                             onClick={() => this.button4()}
                                             className={this.state.toggle.button4 ? " subtleButton toggled" : "subtleButton"}>
                                             AWS Academy Cloud Developing
+                                            <br></br><i><span className="orange-text">Coming Soon!</span></i>
                                         </div>
                                     </div> 
                             </Card>
@@ -85,27 +91,27 @@ class CurriculumContent extends Component {
                                             <Row>
                                                 <Col xs={10} md={12}>
                                                     <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                                    <p> This online course includes both self-paced study and virtual-live class sessions. It will prepare participants for the AWS certification exam.</p>
                                                     <h4>Curriculum Objectives</h4>
-                                                    <p>AWS Cloud Developing teaches students how to:</p>
+                                                    <p>Course Outline:</p>
                                                     <ul>
-                                                        <li> Define the AWS Cloud</li>
-                                                        <li> Explain the AWS pricing philosophy</li>
-                                                        <li> Identify the global infrastructure components of AWS</li>
-                                                        <li> Describe the security and compliance measures of the AWS Cloud, including AWS Identity and Access Management (IAM)</li>
-                                                        <li> Create a virtual private cloud (VPC) by using Amazon Virtual Private Cloud (Amazon VPC)</li>
-                                                        <li> Demonstrate when to use Amazon Elastic Compute Cloud (Amazon EC2), AWS Lambda, and AWS Elastic Beanstalk</li>
-                                                        <li> Differentiate between Amazon Simple Storage Service (Amazon S3), Amazon Elastic Block Store (Amazon EBS), Amazon Elastic File System (Amazon EFS), and Amazon Simple Storage Service Glacier (Amazon S3 Glacier)</li>
-                                                        <li> Demonstrate when to use AWS database services, including Amazon Relational Database Service (Amazon RDS), Amazon DynamoDB, Amazon Redshift, and Amazon Aurora</li>
-                                                        <li> Explain the architectural principles of the AWS Cloud</li>
-                                                        <li> Explore key concepts related to Elastic Load Balancing, Amazon CloudWatch, and Amazon EC2 Auto Scaling</li>
+                                                        <li> Cloud Concepts Overview</li>
+                                                        <li> Cloud Economics and Billing</li>
+                                                        <li> AWS Global Infrastructure Overview</li>
+                                                        <li> Cloud Security</li>
+                                                        <li> Networking and Content Delivery</li>
+                                                        <li> Compute</li>
+                                                        <li> Storage</li>
+                                                        <li>Cloud Architecture</li>
+                                                        <li>Automatic Scaling and Monitoring</li>
                                                     </ul>
-                                                    <h4>Course Outline</h4>
-                                                    <p>Intended Audience:</p>
+                                                    <h4>Intended Audience</h4>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
+                                                    <ul><li>Suitable for participants pursuing AWS Academy accreditation</li></ul>
                                                     <h4>Student Prerequisites</h4>
-                                                    <ul><li>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have:</li></ul>
+                                                    <p>AWS Academy Cloud Foundations requires a strong foundation in IT concepts and skills.</p> 
+                                                    <p>To ensure success in this course, students should have:</p>
                                                     <ul>
-                                                        <li>Completed AWS Academy Cloud Foundations or have equivalent experience</li>
                                                         <li>A working knowledge of distributed systems</li>
                                                         <li>Familiarity with general networking concepts</li>
                                                         <li>A working knowledge of multi-tier architectures</li>
@@ -154,9 +160,9 @@ class CurriculumContent extends Component {
                                                         <li> Follow best practices to eliminate unneeded costs or suboptimal resources</li>
                                                         <li> Troubleshoot common errors</li>
                                                     </ul>
-                                                    <h4>Course Outline</h4>
-                                                    <p>Intended Audience:</p>
+                                                    <h4>Intended Audience</h4>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
+                                                    <ul><li>Suitable for participants pursuing AWS Academy accreditation</li></ul>
                                                     <h4>Student Prerequisites</h4>
                                                     <p>To ensure success in this course, students should have:</p>
                                                     <ul>
@@ -193,9 +199,9 @@ class CurriculumContent extends Component {
                                                         <li> Manage resource consumption in an AWS account by using tags, Amazon CloudWatch, and AWS Trusted Advisor</li>
                                                         <li> Create and configure automated and repeatable deployments with tools such as Amazon Machine Images (AMIs) and AWS CloudFormation </li>
                                                     </ul>
-                                                    <h4>Course Outline</h4>
-                                                    <p>Intended Audience:</p>
+                                                    <h4>Intended Audience</h4>
                                                     <ul><li>This is an intermediate (200-level) course</li></ul>
+                                                    <ul><li>Suitable for participants pursuing AWS Academy accreditation</li></ul>
                                                     <h4>Employment Outcomes</h4>
                                                     <p>This course is intended for prospective operations/support/DevOps roles including:</p>
                                                     <ul>
@@ -213,7 +219,8 @@ class CurriculumContent extends Component {
                                                         <li>Site Reliability Engineer</li>
                                                     </ul>
                                                     <h4>Student Prerequisites</h4>
-                                                    <p>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success, students should have:</p>
+                                                    <p>AWS Academy Cloud Operations requires a strong foundation in IT concepts and skills.</p>
+                                                    <p>To ensure success, students should have:</p>
                                                     <ul>
                                                         <li> Completed AWS Academy Cloud Foundations or have equivalent experience</li>
                                                         <li> A working knowledge of at least one scripting language</li>
@@ -251,11 +258,11 @@ class CurriculumContent extends Component {
                                                         <li>Identify best practice for building secure applications</li>
                                                         <li>Identify best practice for deploying applications</li>
                                                     </ul>
-                                                    <h4>Course Outline</h4>
-                                                    <p>Intended Audience:</p>
+                                                    <h4>Intended Audience</h4>
                                                     <ul><li>Undergraduate, graduate, or professional students seeking cloud developing expertise. This is an intermediate (200-level) course.</li></ul>
                                                     <h4>Student Prerequisites</h4>
-                                                    <ul><li>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills. To ensure success in this course, students should have:</li></ul>
+                                                    <p>AWS Academy Cloud Developing requires a strong foundation in IT concepts and skills.</p>
+                                                    <p>To ensure success in this course, students should have:</p>
                                                     <ul>
                                                         <li>Completed AWS Academy Cloud Foundations course or have equivalent experience</li>
                                                         <li>A working knowledge of distributed systems</li>
@@ -271,8 +278,8 @@ class CurriculumContent extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <h1>Schedule & Delivery Options</h1>
-                        <p>We understand that a majority of our participants may be juggling other education, career, or personal priorities. Our schedule provides flexibility to ensure participants can balance gaining new skills while managing existing commitments.</p>
+                        <h1 style={{textAlign:"center", margin:"0 auto"}}>Schedule & Delivery Options</h1>
+                        <p style={{marginLeft:"10px"}}>We understand that a majority of our participants may be juggling other education, career, or personal priorities. Our schedule provides flexibility to ensure participants can balance gaining new skills while managing existing commitments.</p>
                     </Row>
                     <Row className="sponsorsArea">
                         <Col xs={12} lg={6} xl={6} className="curriculumBackImage1">

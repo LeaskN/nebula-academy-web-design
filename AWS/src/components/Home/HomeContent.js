@@ -67,7 +67,7 @@ export const HomeContent = () => (
                                 <Card.Body>
                                     <Card.Title>Curriculum</Card.Title>
                                     <Card.Text>
-                                    Demonstrate your knowledge and showcase the skills you mastered in your AWS Academy coursework by pursuing an AWS Certification. AWS Academy students receive one free practice exam and a 50% discount on the AWS Certification exam.
+                                    Demonstrate your knowledge and showcase the skills you mastered with Nebula Academy by pursuing an AWS Certification. Nebula Academy students receive one free practice exam and a 50% discount on the AWS Certification exam.
                                     </Card.Text>
                                     <a href="/curriculum" className="linkLight">Click here to read more about curriculum.</a>
                                 </Card.Body>
@@ -78,7 +78,7 @@ export const HomeContent = () => (
                                 <Card.Body>
                                     <Card.Title>Job Placement</Card.Title>
                                     <Card.Text>
-                                    AWS Academy prepares you to enter the workforce as a qualified job candidate. The hands-on, real-world learning approach gives you the practical knowledge and skills needed to show what you know in an interview.
+                                    Nebula Academy prepares you to enter the workforce as a qualified job candidate. The hands-on, real-world learning approach gives you the practical knowledge and skills needed to show what you know in an interview.
                                     </Card.Text>
                                     <a href="/outcomes" className="linkLight">Click here to read more about job readiness.</a>
                                 </Card.Body>

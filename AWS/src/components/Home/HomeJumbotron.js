@@ -8,8 +8,8 @@ export const HomeJumbotron = () => (
       <div className="AWSLogo"></div>
       <div className="homeOverlay"></div>
       <Container className="jumboContainer">
-        <h1 className="jumboText homeJumboText">AWS Academy <span class="orange-text"> Accreditation Preparation </span> Course</h1>
-        <div style={{paddingTop: '1vw'}}></div>
+        <h1 className="jumboText homeJumboText">AWS Academy <span className="orange-text"> Accreditation Preparation </span> Course</h1>
+        <p className="homeSubtitle">Earn your certification with <b>Nebula Academy</b>, an accredited <span className="orange-text"> AWS </span> training provider</p>
       </Container>
     </Jumbotron>
   </React.Fragment>
