@@ -13,8 +13,6 @@ class applicationContent extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     shouldComponentUpdate(nextProps, nextState) {
-        console.log(this.state.cohortOptions)
-        console.log(nextState.cohortOptions)
         if (!nextState.cohortOptions) {
           return false;
         } else {
@@ -37,22 +35,15 @@ class applicationContent extends Component {
                 finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
             }
         }
-        if(!this.state.cohortOptions){
-            console.log('fetch')
-        } else {
-            console.log('render')
-        }
 
         return (finalArray);
     }
     // When a applicant presses submit check all data and if it's clean, submit it, otherwise state the issue to the user
     putData(e) {
         e.preventDefault();
-        this.setState({loading: true})
+        // this.setState({loading: true})
         this.fixJSON();
-        console.log('Pre-if-statement')
         if(this.state.Contact_Number__c){
-            console.log('fixing phone')
                 let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
             // if just the digits comes out to either 10 or 11 then set it to state
                 if(newNumber.length === 10 || newNumber.length === 11){
@@ -60,10 +51,8 @@ class applicationContent extends Component {
                         Contact_Number__c: newNumber
                     })
                     // code is breaking here, not going into the next if statement
-                    console.log('hit0')
                 // if it is too many or too few digits present an error and exit the function
                 } else {
-                    console.log('hit1')
                     alert('Please correct your phone number.')
                     return;
                 }
@@ -129,25 +118,25 @@ class applicationContent extends Component {
             })
             .then((response) => response.json())
             .then((response) => {
-                this.setState({ loading: true })
+                // this.setState({ loading: true })
                 if(response['message'].indexOf('Required fields are missing') > -1){
                     alert('Please complete the application by filling in missing fields.') 
-                    this.setState({loading: false});
+                    // this.setState({loading: false});
                 } else if (response['message'].indexOf('Already registered for this program') > -1){
                     alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-                    this.setState({loading: false});
+                    // this.setState({loading: false});
                 } else {
                     alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
-                    this.setState({loading: false});
+                    // this.setState({loading: false});
                 }
             })
             .catch((error) => {
                 console.error('Error:', error);
             })
-            this.setState({loading: false});
+            // this.setState({loading: false});
 
         }
-        this.setState({loading: false});
+        // this.setState({loading: false});
 
     }
     arrayRemove(arr, value){
@@ -156,21 +145,28 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let prop1 = 'cohortOptions';
-        let prop2 = 'loading';
-        const tempObj = Object.keys(this.state).reduce((object, key) => {
-            if (key !== prop1 || key !== prop2) {
-              object[key] = this.state[key]
-            }
-            return object
-          }, {})
+        let tempObj = this.state
+        delete tempObj.cohortOptions
+        delete tempObj.loading
+
+        // let prop1 = 'cohortOptions';
+        // let prop2 = 'loading';
+        // console.log(this.state)
+        // const tempObj = Object.keys(this.state).reduce((object, key) => {
+        //     if (key !== prop1 || key !== prop2) {
+        //       object[key] = this.state[key]
+        //     }
+        //     return object
+        // }, {})
+        // console.log(tempObj)
+        
         //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
                 tempObj[item] = tempObj[item].join(';');
             }
         }
-        return JSON.stringify(tempObj)
+        return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
         event.preventDefault();
