@@ -36,6 +36,8 @@
 .homeCard5{
     margin: auto;
     padding: 10px;
+    padding-bottom: 20px; 
+    height: 100%; 
     background-color: #ff9900;
 }
 .card{
@@ -51,7 +53,7 @@
 }
 .paddingMiddle{
     border-top: 5px solid white;
-}
+} 
 .programBenefitsRow{
     margin: auto;
     display: flex;

@@ -285,7 +285,8 @@ class CurriculumContent extends Component {
                         <Col xs={12} lg={6} xl={6} className="curriculumBackImage1">
                             <Card className="overImage">
                                 <div style={{padding: '10px'}}>
-                                    <div>Partners</div>
+                                    <div><b>Partners</b></div>
+                                    <br></br>
                                     <div>
                                         Nebula Academy is helping companies prepare for the future of work.  Let us help you with your recruitment needs, as we develop the talent to grow your business. Learn more about our Partner program and how your company can be a part of addressing the skills gap so you can scale your business.
                                     </div>
@@ -297,7 +298,8 @@ class CurriculumContent extends Component {
                         <Col xs={12} lg={6} xl={6} className="curriculumBackImage2">
                             <Card className="overImage">
                                 <div style={{padding: '10px'}}>
-                                    <div>Guest Speakers</div>
+                                    <div><b>Guest Speakers</b></div>
+                                    <br></br>
                                     <div>
                                         The information technology field is vast and offers opportunities that span every industry.  At Nebula Academy we offer our participants the opportunity to hear and speak to industry experts from diverse communities across industries.
                                     </div>

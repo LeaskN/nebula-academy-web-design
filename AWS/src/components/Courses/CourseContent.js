@@ -36,7 +36,7 @@ export const CourseContent = () => (
             <Col xs={12} lg={4} xl={4} className="courseBackImage3" style={{border:"5px solid white",  }}>
                 <Card className="overImage">
                     <Card.Body>
-                        <Card.Title>AWS Academy Cloud Operations & Development<span className="orange-text"><i> - Coming soon!</i></span></Card.Title>
+                        <Card.Title>AWS Academy Cloud Operations<span className="orange-text"><i> - Coming soon!</i></span></Card.Title>
                         <Card.Text>
                             <i>Designed to prepare participants to pursue entry-level DevOps, support, and cloud operations roles.</i>
                         </Card.Text>
