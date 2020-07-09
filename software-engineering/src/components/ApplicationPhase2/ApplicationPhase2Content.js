@@ -54,7 +54,7 @@ class ApplicationPhase2Content extends Component {
         let n = str.lastIndexOf('/');
         let result = str.substring(n+1, n+8)
 
-        fetch(`http://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${result}`, {
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${result}`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 
