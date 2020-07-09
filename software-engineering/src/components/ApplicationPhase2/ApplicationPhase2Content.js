@@ -48,13 +48,16 @@ class ApplicationPhase2Content extends Component {
     //         finalArray
     //     );
     // }
-    postData(e) {
-        e.preventDefault();
+    id(){
         let str = window.location.href;
         let n = str.lastIndexOf('/');
         let result = str.substring(n+1, n+8)
+        return result;
+    }
+    postData(e) {
+        e.preventDefault();
 
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${result}`, {
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${this.id()}`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 
@@ -69,13 +72,6 @@ class ApplicationPhase2Content extends Component {
         .then((response) => response.json())
         .then((response) => {
             console.log(response.errors)
-        //     if(response.errors.indexOf('Required fields are missing') > -1){
-        //         alert('Please complete the application by filling in missing fields.')
-        //     } else if (response.errors['message'].indexOf('Already registered for this program') > -1){
-        //         alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-        //     } else {
-        //         alert(`Congratulations! You've successfully completed Phase 2!`)
-        //     }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -162,7 +158,7 @@ class ApplicationPhase2Content extends Component {
                                 </Form.Group>
                                  <Form.Group as={Col}>
                                     <Form.Label>ID (should match ID provided via email)</Form.Label>
-                                    <Form.Control required input="true" name="Id" disabled placeholder={this.state.Id} />
+                                    <Form.Control required input="true" name="Id" disabled placeholder={this.id()} />
                                 </Form.Group>
                             </Form.Row>
                             <hr></hr>
