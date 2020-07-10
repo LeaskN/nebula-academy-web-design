@@ -12,18 +12,39 @@ class applicationContent extends Component {
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
+    // this lifecycle component can prevent component updates by returning either true (update) or false (dont update)
     shouldComponentUpdate(nextProps, nextState) {
-        if (!nextState.cohortOptions) {
-          return false;
+        console.log('Should Update?')
+            // if next state has cohort options 
+        if (nextState.cohortOptions) {
+            // update
+            console.log('will have cohort options, allowing update');
+            return true;
+            // if the this state doesn't have cohort options 
+        } else if (this.state.cohortOptions) {
+            // dont update
+            console.log('cohort options, wont have = dont update');
+            return false;
+            // if the this state doesn't have cohort options 
         } else {
-          return true;
+            // update (and therefore make a request to search for the new info by recalling populateOptions)
+            console.log('no ch options, forcing update');
+            this.getCohortOptions();
+            return true;
         }
     }
     // fetch all programs and set them to state
     componentDidMount(){
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
+        // fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
+        return this.getCohortOptions();
+    }
+    // get cohort options
+    getCohortOptions(){
+        console.log('fetching')
+        return fetch(`http://localhost:3000/dev2/campaigns`)
         .then(res => res.json())
-        .then(res => this.setState({cohortOptions : res.records}));
+        .then(res => this.setState({cohortOptions: res}))
+        .catch(err => {console.log(err)})
     }
     // populate the dropdown lists with all SE Bootcamps (from state)
     populateOptions(){
@@ -119,16 +140,20 @@ class applicationContent extends Component {
             .then((response) => response.json())
             .then((response) => {
                 // this.setState({ loading: true })
-                if(response['message'].indexOf('Required fields are missing') > -1){
-                    alert('Please complete the application by filling in missing fields.') 
-                    // this.setState({loading: false});
-                } else if (response['message'].indexOf('Already registered for this program') > -1){
-                    alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-                    // this.setState({loading: false});
-                } else {
+                console.log(response)
+                if(response.success){
                     alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
                     // this.setState({loading: false});
+                } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
+                    alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+                } else {
+                    alert(response.errorCode)
+                    // this.setState({loading: false});
                 }
+                // else if (response['message'].indexOf('Already registered for this program') > -1){
+                //     alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+                //     // this.setState({loading: false});
+                // } 
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -145,9 +170,9 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state
-        delete tempObj.cohortOptions
-        delete tempObj.loading
+        let tempObj = this.state;
+        delete tempObj.cohortOptions;
+        delete tempObj.loading;
 
         // let prop1 = 'cohortOptions';
         // let prop2 = 'loading';
