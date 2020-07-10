@@ -12,11 +12,11 @@
     height: 100%; 
     background-color: transparent;
     color: white;
-    transition: background-color 1000ms ease, color 500ms ease;
+    transition: background-color 500ms ease;
 }
 .introRowTile:hover{
-    background-color: black; 
-    color: rgb(210, 194, 194); 
+    background-color: rgb(0, 0, 0)
+    /* color: rgb(210, 194, 194);  */
 }
 .introRow1Column1{
    background-color:#86549C
@@ -44,7 +44,6 @@
 }
 .homeCard5{
     margin: auto;
-    padding: 10px;
     padding-top: 25px; 
     padding-bottom: 15px; 
     height: 100%; 

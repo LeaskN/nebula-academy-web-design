@@ -19,3 +19,14 @@
     border-radius: 20px;
     border: 10px solid #FF8C0E;
 }
+#registrationTabs-tab-STUDENT{
+    transition: transform 300ms ease-in; 
+    font-size: 18px; 
+}
+#registrationTabs-tab-EDUCATOR{
+    transition: transform 300ms ease-in; 
+    margin-left: 10px; 
+}
+#registrationTabs-tab-STUDENT:hover, #registrationTabs-tab-EDUCATOR:hover{
+   transform: translate(5%);  
+}

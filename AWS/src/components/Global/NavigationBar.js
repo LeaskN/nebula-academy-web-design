@@ -13,11 +13,10 @@ export const NavigationBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/">Student</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/educator">educator</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/outcomes">Outcomes</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/partners">Partners</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/guestspeakers">GuestSpeakers</Nav.Link></Nav.Item>
-                    <Button href="/registration" variant="warning">Register Now</Button>
+                    <Nav.Item><Nav.Link href="/Educator">Educator</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/Partners">Partners</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/Guestspeakers">GuestSpeakers</Nav.Link></Nav.Item>
+                    <Button href="/Registration" variant="warning">Register Now</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
             </Navbar.Collapse>
