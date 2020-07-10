@@ -86,9 +86,9 @@ export const HomeContent = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col  xs={12} lg={12} xl={4}>
-                    <Card className="bg-dark text-white">
-                        <Card className="homeCard5">
+                <Col className="introRow2tile3" xs={12} lg={12} xl={4}>
+                    <Card className="introRowTile">
+                        <Card.Body className="homeCard5">
                             <br/>
                             <h4 className="centralText">The average salary of an AWS-certified IT professional is $129,868 - ranking as one of the highest-paying certification categories in North America.</h4>
                             <h4 className="centralText">AWS Certifications Increase Tech Pay Up To $12K a year.</h4>
@@ -96,7 +96,7 @@ export const HomeContent = () => (
                                 <a className="linkWhite centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">Forbes</a>
                             </p>
                             <br/>
-                        </Card>
+                        </Card.Body>
                     </Card>
                 </Col>
             </Row>
@@ -112,8 +112,8 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
                 <Col xl={6} className="introRow3Tile2">
-                    <Card className="overImage introRowTile">
-                        <Card.Body>
+                    <Card className="introRowTile">
+                        <Card.Body className="overImage">
                             <Card.Title>More Info</Card.Title>
                             <Card.Text>
                                 As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at <a className="linkLight" href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a>.

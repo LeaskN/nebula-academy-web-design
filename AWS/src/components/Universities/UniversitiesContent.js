@@ -70,23 +70,22 @@ export const  UniversitiesContent  = () => (
                                 </Col>
                             </Row>
                         </Col>
-                        <Col  xs={12} lg={12} xl={4}>
-                            <Card className="bg-dark text-white">
-                                <Card className="universityCard5">
+                        <Col className="introRow2tile3" xs={12} lg={12} xl={4}>
+                            <Card className="introRowTile">
+                                <Card.Body className="homeCard5">
                                     <br/>
-                                    <div className="spacer"></div>
                                     <h4 className="centralText">The average salary of an AWS-certified IT professional is $129,868 - ranking as one of the highest-paying certification categories in North America.</h4>
                                     <h4 className="centralText">AWS Certifications Increase Tech Pay Up To $12K a year.</h4>
                                     <p className="centralText">Source:&nbsp;
                                         <a className="linkWhite centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">Forbes</a>
                                     </p>
                                     <br/>
-                                </Card>
+                                </Card.Body>
                             </Card>
                         </Col>
                     </Row>
                     <Row>
-                        <Col xl={14} className="introRow3Tile1">
+                        <Col xl={14} className="introRow3Tile2">
                             <Card className="introRowTile">
                                 <Card.Body className="overImage">
                                     <Card.Title>Reducing the gap between Higher Education and Industry needs</Card.Title>
