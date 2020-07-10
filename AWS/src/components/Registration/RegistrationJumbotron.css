@@ -18,9 +18,17 @@
     background-image: linear-gradient(45deg, transparent, rgb(88, 30, 142), black); 
     opacity: .5; 
 }
-.registrationJumboText{
-    padding-top: 50px; 
+@media(max-width: 720px){
+    .registrationJumboText{
+        padding-top: 50px; 
+    }
 }
+@media(max-width: 575px){
+    .registrationJumboText{
+        padding-top: 75px; 
+    }
+}
+
 /* 
 @media (max-width: 633px){
     .registrationJumbotron{

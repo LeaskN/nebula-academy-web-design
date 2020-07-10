@@ -35,7 +35,7 @@ function App() {
             {/* <Route path= "/courses" component={Courses}/> */}
             {/* <Route path = "/curriculum" component={Curriculum}/> */}
             <Route path = "/registration" component={Registration}/>
-            <Route path = "/universities" component={Universities}/>
+            <Route path = "/educator" component={Universities}/>
             <Route path ="/outcomes" component={Outcomes}/>
             <Route path ="/staff" component={Staff}/>
             <Route path ="/Partners" component={Partners}/>
