@@ -24,30 +24,6 @@ class ApplicationPhase2Content extends Component {
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
-    componentDidMount(e){
-        this.findID(e)
-    }
-    findID(e){
-        let str = window.location.href;
-        console.log(str)
-        let n = str.lastIndexOf('/');
-        let result = str.substring(n+1, n+8);
-        this.setState({
-            Id: result
-        })
-    }
-    // populateOptions(){
-    //     let options = this.state.cohortOptions;
-    //     let finalArray = [];
-    //     for(let item in options){
-    //         if((options[item].name).indexOf('BootCamp') > -1){
-    //             finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
-    //         }
-    //     }
-    //     return (
-    //         finalArray
-    //     );
-    // }
     id(){
         let str = window.location.href;
         let n = str.lastIndexOf('/');
@@ -71,7 +47,11 @@ class ApplicationPhase2Content extends Component {
         })
         .then((response) => response.json())
         .then((response) => {
-            console.log(response.errors)
+            if(response.errors.length === 0){
+                alert(`Phase II of the application completed. Please give the team some time to review your application.`)
+            } else {
+                console.log(response.errors)
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
