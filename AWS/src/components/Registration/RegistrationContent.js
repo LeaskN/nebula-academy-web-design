@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Col, Row, Alert, Button, Tabs, Tab } from 'react-bootstrap';
 // import Iframe from 'react-iframe';
 import './RegistrationContent.css';
@@ -66,7 +66,7 @@ const registrationContent = () => (
                                             <p>AWS Academy Cloud Foundations (Amazon Cloud Foundations) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                                             <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
                                             <div>
-                                                The virtual session grants access to:
+                                                The live virtual session grants access to:
                                                 <ul>
                                                     <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
                                                     <li><b>Recordings of the live classes for your individal review</b></li>
@@ -179,16 +179,17 @@ const registrationContent = () => (
                             <p>AWS Accreditation Preparation Course is intended for prospective learners who seek certification as AWS Cloud Foundation Educators. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
                             <p>This course prepares you for the AWS Accreditation process. Read about AWS certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
                             <div>
-                                The virtual session grants access to:
+                                The live virtual session grants access to:
                                 <ul>
-                                    <li><b>Live virtual office hours with Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly</b></li>
-                                    <li>AWS Amazon Cloud Foundations labs</li>
-                                    <li>AWS Amazon Cloud Foundations slides</li>
-                                    <li>AWS Amazon Cloud Foundations videos</li>
-                                    <li>AWS Amazon Cloud Foundations content</li>
-                                    <li>AWS Amazon Cloud Foundations practice questions</li>
-                                    <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
-                                    <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
+                                <li><b>Recordings of the live classes for your individal review</b></li>
+                                <li>AWS Amazon Cloud Foundations labs</li>
+                                <li>AWS Amazon Cloud Foundations slides</li>
+                                <li>AWS Amazon Cloud Foundations videos</li>
+                                <li>AWS Amazon Cloud Foundations content</li>
+                                <li>AWS Amazon Cloud Foundations practice questions</li>
+                                <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
+                                <li>Nebula Academy's Videos covering all modules & content in detail</li> 
                                 </ul>
                                 </div>
                             </div>
