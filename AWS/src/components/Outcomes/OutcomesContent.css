@@ -15,3 +15,28 @@
 .outcomesCard:hover{
     box-shadow: 4px 8px 16px 4px rgba(58, 0, 0, 0.4)
 }
+.outcomesTitle{
+    text-align: center; 
+    margin-bottom: 20px; 
+    width: 100%; 
+}
+.outcomesText{
+    width: 90%; 
+    margin: 0 auto;  
+}
+.outcomesLink{
+    margin: 10px auto; 
+    color: gray; 
+    transition: transform 500ms; 
+}
+.outcomesLink:hover{
+    transform: scale(1.1); 
+    color: rgb(103, 11, 196); 
+    text-decoration: none;
+}
+.outcomeImage{
+    transition: transform 500ms; 
+}
+.outcomeImage:hover{
+    transform: scale(1.1); 
+}

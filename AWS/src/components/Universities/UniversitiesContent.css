@@ -3,3 +3,18 @@
     background-size: cover;
     background-position: -0px -170px;
 }
+.contentContainer{
+    width: 90%; 
+    margin: 0 auto; 
+}
+.universityCard5{
+    margin: auto;
+    padding: 40px;
+    padding-top: 55px; 
+    padding-bottom: 55px; 
+    height: 100%; 
+    background-color: #ff9900;
+}
+.outcomesContainer{
+    margin-bottom: 30px; 
+}
