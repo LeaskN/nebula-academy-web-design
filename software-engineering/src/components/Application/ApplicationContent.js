@@ -35,13 +35,12 @@ class applicationContent extends Component {
     }
     // fetch all programs and set them to state
     componentDidMount(){
-        // fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         return this.getCohortOptions();
     }
     // get cohort options
     getCohortOptions(){
         console.log('fetching')
-        return fetch(`http://localhost:3000/dev2/campaigns`)
+        return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions: res}))
         .catch(err => {console.log(err)})
