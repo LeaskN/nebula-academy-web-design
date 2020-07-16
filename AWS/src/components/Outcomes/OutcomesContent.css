@@ -7,7 +7,8 @@
 }
 .outcomesContainer{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    border: 1px solid red; 
 }
 .outcomesCard{
     margin-bottom: 30px;
@@ -26,6 +27,7 @@
 }
 .outcomesLink{
     margin: 10px auto; 
+    padding: 10px 0; 
     color: gray; 
     transition: transform 500ms; 
 }
@@ -36,6 +38,7 @@
 }
 .outcomeImage{
     transition: transform 500ms; 
+    padding: 30px; 
 }
 .outcomeImage:hover{
     transform: scale(1.1); 

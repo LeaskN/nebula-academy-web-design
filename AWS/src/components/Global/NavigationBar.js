@@ -12,10 +12,10 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="/">Student</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Educator">Educator</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Partners">Partners</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/Guestspeakers">GuestSpeakers</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/"><p className="navText">Student</p></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/Educator"><p className="navText">Educator</p></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/Partners"><p className="navText">Partners</p></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/Guestspeakers"><p className="navText">GuestSpeakers</p></Nav.Link></Nav.Item>
                     <Button href="/Registration" variant="warning">Register Now</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
