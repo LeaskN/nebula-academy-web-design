@@ -32,7 +32,7 @@ class ApplicationPhase2Content extends Component {
     }
     postData(e) {
         e.preventDefault();
-        this.setState({loader:true})
+        this.setState({loader:true});
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${this.id()}`, {
             method: 'POST', 
             mode: 'cors', 
@@ -49,7 +49,7 @@ class ApplicationPhase2Content extends Component {
         .then(() => this.setState({loader: false}))
         .then((response) => {
             if(response.errors.length === 0){
-                alert(`Phase II of the application completed. Please give the team some time to review your application.`);
+                alert(`Phase II of the application completed. Please give the team some time to review your application. \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
             } else {
                 alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
                 console.log(response.errors);

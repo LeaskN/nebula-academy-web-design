@@ -8,7 +8,6 @@ class applicationContent extends Component {
         this.state = {
             Gender__c:[],
             Ethnicity__c: [],
-            loading: false,
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -61,8 +60,6 @@ class applicationContent extends Component {
     // When a applicant presses submit check all data and if it's clean, submit it, otherwise state the issue to the user
     putData(e) {
         e.preventDefault();
-        // this.setState({loading: true})
-        this.fixJSON();
         if(this.state.Contact_Number__c){
                 let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
             // if just the digits comes out to either 10 or 11 then set it to state
@@ -123,7 +120,8 @@ class applicationContent extends Component {
         } else if(!this.state.High_School_Diploma_or_GED__c){
             alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else {
-            // Post request to the database 
+            // Post request to the database
+            this.setState({loader:true}); 
             fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
                 method: 'POST', 
                 mode: 'cors', 
@@ -137,17 +135,15 @@ class applicationContent extends Component {
                 body: this.fixJSON()
             })
             .then((response) => response.json())
+            .then(() => this.setState({loader: false}))
             .then((response) => {
-                // this.setState({ loading: true })
                 console.log(response)
                 if(response.success){
                     alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
-                    // this.setState({loading: false});
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
                     alert('error:' + response.errorCode)
-                    // this.setState({loading: false});
                 }
                 // else if (response['message'].indexOf('Already registered for this program') > -1){
                 //     alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
@@ -157,10 +153,8 @@ class applicationContent extends Component {
             .catch((error) => {
                 console.error('Error:', error);
             })
-            // this.setState({loading: false});
 
         }
-        // this.setState({loading: false});
 
     }
     arrayRemove(arr, value){
@@ -174,7 +168,6 @@ class applicationContent extends Component {
         delete tempObj.loading;
 
         // let prop1 = 'cohortOptions';
-        // let prop2 = 'loading';
         // console.log(this.state)
         // const tempObj = Object.keys(this.state).reduce((object, key) => {
         //     if (key !== prop1 || key !== prop2) {
@@ -242,7 +235,6 @@ class applicationContent extends Component {
         return (
             <Container>
                 <Row>
-                    {/* {this.loading ? <div className='loader'></div>: ''} */}
                     <Col xs={12}>
                         <Row>
                             <h2 style={{marginTop:"20px"}}>The application consists of three phases: </h2>
@@ -571,6 +563,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Submit</Button>
+                            {this.state.loader? <div className='fullScreen'><h1 className="loaderText"><br></br>Submitting</h1><div className="loader"><div></div><div></div><div></div></div></div>:<span></span>}
                         </Form>
                     </Col>
                 </Row>
