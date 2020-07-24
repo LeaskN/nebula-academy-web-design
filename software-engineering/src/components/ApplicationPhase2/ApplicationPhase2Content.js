@@ -32,7 +32,7 @@ class ApplicationPhase2Content extends Component {
     }
     postData(e) {
         e.preventDefault();
-
+        this.setState({loader:true})
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${this.id()}`, {
             method: 'POST', 
             mode: 'cors', 
@@ -46,24 +46,28 @@ class ApplicationPhase2Content extends Component {
             body: this.fixJSON()
         })
         .then((response) => response.json())
+        .then(() => this.setState({loader: false}))
         .then((response) => {
             if(response.errors.length === 0){
-                alert(`Phase II of the application completed. Please give the team some time to review your application.`)
+                alert(`Phase II of the application completed. Please give the team some time to review your application.`);
             } else {
-                console.log(response.errors)
+                alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
+                console.log(response.errors);
             }
         })
         .catch((error) => {
+            alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
             console.error('Error:', error);
         })
     }
     fixJSON(){
-        let tempObj = this.state
-        delete tempObj.cohortOptions
-        delete tempObj.loading
-        delete tempObj.Id
+        let tempObj = this.state;
+        delete tempObj.cohortOptions;
+        delete tempObj.loading;
+        delete tempObj.Id;
+        delete tempObj.loader;
         //if the temporary object contains a list make it a semicolon seperated list
-        return JSON.stringify(tempObj)
+        return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
         let target = event.target;
@@ -266,6 +270,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Answer_10__c" required />
                                 </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.postData(e)}>Submit</Button>
+                            {this.state.loader? <div className='fullScreen'><h1 className="loaderText"><br></br>Submitting</h1><div className="loader"><div></div><div></div><div></div></div></div>:<span></span>}
                         </Form>
                     </Col>
                 </Row>

@@ -1,6 +1,6 @@
 import React, { Component }from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
-import './ApplicationContent.css'
+import './ApplicationContent.css';
 
 class applicationContent extends Component {
     constructor(props) {
@@ -17,10 +17,10 @@ class applicationContent extends Component {
         console.log('Should Update?')
             // if next state has cohort options 
         if (nextState.cohortOptions) {
-            // update
+            // allow an update
             console.log('will have cohort options, allowing update');
             return true;
-            // if the this state doesn't have cohort options 
+            // if the current this.state has cohort options and the next state WONT have cohort options (see prev if())
         } else if (this.state.cohortOptions) {
             // dont update
             console.log('cohort options, wont have = dont update');
@@ -146,7 +146,7 @@ class applicationContent extends Component {
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
-                    alert(response.errorCode)
+                    alert('error:' + response.errorCode)
                     // this.setState({loading: false});
                 }
                 // else if (response['message'].indexOf('Already registered for this program') > -1){
