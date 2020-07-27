@@ -1,53 +1,18 @@
 import React from 'react';
-import { Row, Col, Card, Button, Container } from 'react-bootstrap';
+import { Row, Col, Card, Container, Button } from 'react-bootstrap';
 import './HomeContent.css';
 import Popup from './Popup';
-import Conditions from "../Global/Conditions/Conditions.js";
-
-import AWSAuthorizedCurriculum from '../../assets/AWSAuthoredCurriculum.png';
-import buildingSkills from '../../assets/BuildingSkills.png';
-import educatorCredit from '../../assets/educatorsEarnAccreditation.png';
-import growAWSWork from '../../assets/growAWSWorkforce.png';
+import CurriculumContent from '../Curriculum/CurriculumContent';
+import { CourseContent } from '../Courses/CourseContent';
 
 export const HomeContent = () => (
     <React.Fragment>
         {Popup()}
         <Container>
-        <Row className="programBenefitsRow">
-                <Col className="programBenefits">
-                    <h5>Access AWS-Authored Curriculum</h5>
-                    <img  className='programBenefitsImg' alt='AWSAuthorizedCurriculum' src={AWSAuthorizedCurriculum}></img>
-                    <p>
-                        With updates directly from AWS our instructors teach best practices, keep up with cloud computing in real-time, and provide ready-to-teach curriculum to member institutions.
-                    </p>
-                </Col>
-                <Col className="programBenefits">
-                    <h5>Build Skills Aligned with AWS Certification</h5>
-                    <img  className='programBenefitsImg' alt='buildingSkills' src={buildingSkills}></img>
-                    <p>
-                        Build your Cloud computing skills with hands-on practical experience and complimentary practice exams. Both educators and students will be able to prepare for and pass the full exam with confidence.
-                    </p>
-                </Col>
-                <Col className="programBenefits">
-                    <h5>Educators Earn Accreditation</h5>
-                    <img  className='programBenefitsImg' alt='educatorCredit' src={educatorCredit}></img>
-                    <p>
-                        Educators are provisioned with access to professional learning tools and support to receive their AWS Certification before directly teaching students. 
-                    </p>
-                </Col>
-                <Col className="programBenefits">
-                    <h5>Grow the AWS Cloud Workforce</h5>
-                    <img className='programBenefitsImg' alt='growAWSWork' src={growAWSWork}></img>
-                    <p>   
-                        Practice makes perfect. Gain real-world experience needed to pursue industry jobs by consistently engaging in practical live-environment settings.  
-                    </p>
-                </Col>
-            </Row>
             <Row className="programBenefitsRow">
-                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button>
-                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button> */}
-                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button> */}
-                <Conditions/>                                        
+            <div className="margin-left margin-bottom">
+            <CourseContent/> 
+            </div>   
             </Row>
             <Row>
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
@@ -91,7 +56,7 @@ export const HomeContent = () => (
                                 <Card.Body>
                                     <Card.Title>Curriculum</Card.Title>
                                     <Card.Text>
-                                    Demonstrate your knowledge and showcase the skills you mastered in your AWS Academy coursework by pursuing an AWS Certification. AWS Academy students receive one free practice exam and a 50% discount on the AWS Certification exam.
+                                    Demonstrate your knowledge and showcase the skills you mastered with Nebula Academy by pursuing an AWS Certification. Nebula Academy students receive one free practice exam and a 50% discount on the AWS Certification exam.
                                     </Card.Text>
                                     <a href="/curriculum" className="linkLight">Click here to read more about curriculum.</a>
                                 </Card.Body>
@@ -102,7 +67,7 @@ export const HomeContent = () => (
                                 <Card.Body>
                                     <Card.Title>Job Placement</Card.Title>
                                     <Card.Text>
-                                    AWS Academy prepares you to enter the workforce as a qualified job candidate. The hands-on, real-world learning approach gives you the practical knowledge and skills needed to show what you know in an interview.
+                                    Nebula Academy prepares you to enter the workforce as a qualified job candidate. The hands-on, real-world learning approach gives you the practical knowledge and skills needed to show what you know in an interview.
                                     </Card.Text>
                                     <a href="/outcomes" className="linkLight">Click here to read more about job readiness.</a>
                                 </Card.Body>
@@ -110,9 +75,9 @@ export const HomeContent = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col  xs={12} lg={12} xl={4}>
-                    <Card className="bg-dark text-white">
-                        <Card className="homeCard5">
+                <Col className="introRow2tile3" xs={12} lg={12} xl={4}>
+                    <Card className="introRowTile">
+                        <Card.Body className="homeCard5">
                             <br/>
                             <h4 className="centralText">The average salary of an AWS-certified IT professional is $129,868 - ranking as one of the highest-paying certification categories in North America.</h4>
                             <h4 className="centralText">AWS Certifications Increase Tech Pay Up To $12K a year.</h4>
@@ -120,12 +85,12 @@ export const HomeContent = () => (
                                 <a className="linkWhite centralText" target="empty" href="https://www.forbes.com/sites/louiscolumbus/2019/07/28/aws-certifications-increase-tech-pay-up-to-12k-a-year/#6d60d68d189c">Forbes</a>
                             </p>
                             <br/>
-                        </Card>
+                        </Card.Body>
                     </Card>
                 </Col>
             </Row>
             <Row>
-                <Col xl={6} className="introRow3Tile1 paddingRight">
+                <Col xl={6} className="introRow3Tile1">
                     <Card className="introRowTile">
                         <Card.Body className="overImage">
                             <Card.Title>Support</Card.Title>
@@ -135,9 +100,9 @@ export const HomeContent = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xl={6} className="introRow3Tile2 paddingLeft">
-                    <Card className="overImage introRowTile">
-                        <Card.Body>
+                <Col xl={6} className="introRow3Tile2">
+                    <Card className="introRowTile">
+                        <Card.Body className="overImage">
                             <Card.Title>More Info</Card.Title>
                             <Card.Text>
                                 As you navigate our website we have included details regarding the overall program, what to expect from the experience, the learning outcomes, how to participate if you meet scholarship requirements, how we support you after the program to transition into a job, and how we will support your continued success post job placement. If you have additional questions that we have not answered please reach out to our team at <a className="linkLight" href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a>.
@@ -146,6 +111,9 @@ export const HomeContent = () => (
                     </Card>
                 </Col>
             </Row>    
+        <div className="margin-left margin-top">
+            <CurriculumContent/>
+        </div> 
         </Container>      
     </React.Fragment>
 )

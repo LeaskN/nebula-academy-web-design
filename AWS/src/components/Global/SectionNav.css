@@ -13,22 +13,20 @@
     justify-content: space-around;
     margin: 0px;
     height:100%;
-    background: linear-gradient(to right, transparent 20%, #992653 20%, #992653 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
-    padding-bottom: 15px;
     color:black !important;
+    /* font-weight: bold; */
     font-size: x-large;
-}
-.section:hover{
-    cursor: pointer;
-    background: linear-gradient(to right, transparent 20%, green 20%, green 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
+    padding: 0px 10px 15px !important;
 }
 .customLink{
     color: black;
-}
-.current{
-    background: linear-gradient(to right, transparent 20%, green 20%, green 80%, transparent 80%) 0 100% / 100% 3px no-repeat;
+    background: linear-gradient(to right, transparent 00%, #992653 00%, #992653 100%, transparent 100%) 0 100% / 100% 3px no-repeat; 
+    transition: transform 500ms; 
 }
 .customLink:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, transparent 0%, green 00%, green 100%, transparent 100%) 0 100% / 100% 3px no-repeat;
     color: black;
     text-decoration: none;
+    transform: scale(1.1); 
 }

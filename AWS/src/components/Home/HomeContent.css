@@ -1,6 +1,22 @@
+
+.margin-left{
+    margin-left: -15px; 
+}
+.margin-bottom{
+    margin-bottom: 30px; 
+}
+.margin-top{
+    margin-top: 60px; 
+}
 .introRowTile{
+    height: 100%; 
     background-color: transparent;
     color: white;
+    transition: background-color 500ms ease;
+}
+.introRowTile:hover{
+    background-color: rgb(0, 0, 0)
+    /* color: rgb(210, 194, 194);  */
 }
 .introRow1Column1{
    background-color:#86549C
@@ -15,6 +31,9 @@
     background-image: url("../../assets/2_AWS_home_curriculum_placement.jpg");
     background-size: cover;
 }
+.introRow2tile3{
+    background-color: #ff9900;
+}
 .introRow3Tile1{
     background-image: url("../../assets/3_AWS_scholarship.jpg");
     background-size: cover;
@@ -25,8 +44,9 @@
 }
 .homeCard5{
     margin: auto;
-    padding: 10px;
-    background-color: #ff9900;
+    padding-top: 25px; 
+    padding-bottom: 15px; 
+    height: 100%; 
 }
 .card{
     border: 0px !important;
@@ -41,7 +61,7 @@
 }
 .paddingMiddle{
     border-top: 5px solid white;
-}
+} 
 .programBenefitsRow{
     margin: auto;
     display: flex;
