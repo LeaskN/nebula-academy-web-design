@@ -17,6 +17,12 @@
         display: none;
     }
 }
-.nav-link{
-    color: #bbb !important;
+.navText {
+    color: #bbb; 
+    padding: 0; 
+    margin: 0; 
+    transition: color 500ms; 
+}
+.navText:hover{
+    color: rgb(125, 120, 120); 
 }

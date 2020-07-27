@@ -1,9 +1,12 @@
 .universitiesJumbotron{
-    background-image: url('../../assets/10_AWS_universities.jpg');
+    align-items: center;
+    background-color: black; 
+    background-image: url('../../assets/EducatorBanner.png');
     background-size: cover;
-    color: #ccc;
-    z-index: 100;
-    min-height: 250px;
-    z-index: -2;
-    margin: 0px;
+    color: white;
+    position: relative;
+    z-index: -1;
+    margin: 0px; 
+    height: 100%; 
+    width: 100%; 
 }

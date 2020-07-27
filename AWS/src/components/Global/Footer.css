@@ -1,5 +1,5 @@
 .nav-link{
-    color: #bbb !important;
+    color: #bbb;
 }
 
 .customFooter{
@@ -7,5 +7,5 @@
     font-size:70px;
 }
 .footerItem:hover{
-    color: white!important;
+    color: white;
 }
