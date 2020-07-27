@@ -9,12 +9,57 @@ import image4 from '../../assets/9_AWS_presenter.jpg'
 
 const registrationContent = () => (
             <Container>
-                <p className="resgistrationMessage">
+                {/* <p className="resgistrationMessage">
                     Please choose between the Student and Educator paths below: 
-                </p>
+                </p> */}
                 <Tabs 
-                    defaultActiveKey="STUDENT" 
+                    defaultActiveKey="EDUCATOR" 
                     id="registrationTabs">
+                    <Tab eventKey="EDUCATOR" title="EDUCATOR">
+                        <Row>
+                            <Col className="alignCenter">
+                                <br/>
+                                <h2 className="sectionTitle" style={{textAlign:'center'}}>Educator Registration</h2>
+                                <p style={{textAlign:'center'}}>Take a look below at the AWS Academy Programs that we currently provide for educators.</p>
+                                <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7477</p>
+                            </Col>
+                        </Row>
+                        <hr></hr>
+                        <Row className="educatorRegistrationCard">
+                            <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image4}></img> 
+                                {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
+                            </Col>
+                            
+                            <Col lg={7}>
+                            <div className="textWrap">
+                            <h3>AWS Accreditation Preparation Course- <b>Live Virtual</b></h3>
+                            {/* <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert> */}
+                            <p>AWS Accreditation Preparation Course is intended for prospective learners who seek certification as AWS Cloud Foundation Educators. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                            <p>This course prepares you for the AWS Accreditation process. Read about AWS certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
+                            <div>
+                                The live virtual session grants access to:
+                                <ul>
+                                <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
+                                <li><b>Recordings of the live classes for your individal review</b></li>
+                                <li>AWS Amazon Cloud Foundations labs</li>
+                                <li>AWS Amazon Cloud Foundations slides</li>
+                                <li>AWS Amazon Cloud Foundations videos</li>
+                                <li>AWS Amazon Cloud Foundations content</li>
+                                <li>AWS Amazon Cloud Foundations practice questions</li>
+                                <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
+                                <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                </ul>
+                                </div>
+                            </div>
+                            <div id="spacer"></div>
+                            
+                            <Button className="bottom educatorRegistrationButton" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=15551859">Register</Button>
+                            </Col>
+                            
+                        </Row>
+                    </Tab>
+
                         <Tab eventKey="STUDENT" title="STUDENT">
                             <Row>
                                 <Col xs={12}>
@@ -22,12 +67,13 @@ const registrationContent = () => (
                                         <Col className="alignCenter">
                                             <br/>
                                             <h2 className="sectionTitle" style={{textAlign:'center'}}>Student Registration</h2>
-                                            <p style={{textAlign:'center'}}>Take a look below at the AWS Academy Programs that we currently provide for students.</p>
-                                            <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7475</p>
+                                            <p className="textWarning"style={{textAlign:'center'}}> Student classes are not currently being offered but check back again at a later time. </p>
+                                            <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7477</p>
                                         </Col>
                                     </Row>
                                     <hr></hr>
                                     <Row className="registrationCard">
+                                        <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
                                         <Col style={{margin:'auto'}} xs={12} lg={5}>
                                             <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img> 
                                             {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
@@ -53,10 +99,12 @@ const registrationContent = () => (
                                         </div>
                                         </div>
                                         <div id="spacer"></div>
-                                        <Button className="bottom" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416">Register</Button>
+                                        <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416"><del>Register</del></Button>
                                         </Col>
+                                        </Alert>
                                     </Row>
                                     <Row className="registrationCard">
+                                        <Alert variant="danger" style={{height: '100%', margin: '0px'}}>    
                                         <Col style={{margin:'auto'}} xs={12} lg={5}>
                                             <img alt="image2" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image2}></img>
                                         </Col>
@@ -81,8 +129,11 @@ const registrationContent = () => (
                                             </div>
                                             </div>
                                             <div id="spacer"></div>
-                                            <Button className="bottom" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054">Register</Button>
+                                            <Button className="bottom"
+                                            variant="dark" disabled  
+                                            href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
                                         </Col>
+                                        </Alert>
                                     </Row>
                                     <Row className="registrationCard">
                                         <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
@@ -154,53 +205,7 @@ const registrationContent = () => (
                                 
                                 </Col>
                             </Row>
-                        </Tab>
-                    
-                    <Tab eventKey="EDUCATOR" title="EDUCATOR">
-                        <Row>
-                            <Col className="alignCenter">
-                                <br/>
-                                <h2 className="sectionTitle" style={{textAlign:'center'}}>Educator Registration</h2>
-                                <p style={{textAlign:'center'}}>Take a look below at the AWS Academy Programs that we currently provide for educators.</p>
-                                <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7475</p>
-                            </Col>
-                        </Row>
-                        <hr></hr>
-                        <Row className="educatorRegistrationCard">
-                            <Col style={{margin:'auto'}} xs={12} lg={5}>
-                                <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image4}></img> 
-                                {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
-                            </Col>
-                            
-                            <Col lg={7}>
-                            <div className="textWrap">
-                            <h3>AWS Accreditation Preparation Course- <b>Live Virtual</b></h3>
-                            {/* <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert> */}
-                            <p>AWS Accreditation Preparation Course is intended for prospective learners who seek certification as AWS Cloud Foundation Educators. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
-                            <p>This course prepares you for the AWS Accreditation process. Read about AWS certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
-                            <div>
-                                The live virtual session grants access to:
-                                <ul>
-                                <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
-                                <li><b>Recordings of the live classes for your individal review</b></li>
-                                <li>AWS Amazon Cloud Foundations labs</li>
-                                <li>AWS Amazon Cloud Foundations slides</li>
-                                <li>AWS Amazon Cloud Foundations videos</li>
-                                <li>AWS Amazon Cloud Foundations content</li>
-                                <li>AWS Amazon Cloud Foundations practice questions</li>
-                                <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
-                                <li>Nebula Academy's Videos covering all modules & content in detail</li> 
-                                </ul>
-                                </div>
-                            </div>
-                            <div id="spacer"></div>
-                            
-                            <Button className="bottom educatorRegistrationButton" variant="info" href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=15551859">Register</Button>
-                            </Col>
-                            
-                        </Row>
-                    </Tab>
-                
+                        </Tab>                
                 </Tabs>
             </Container>
         )
