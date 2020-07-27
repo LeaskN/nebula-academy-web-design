@@ -44,44 +44,56 @@
 .textWarning{
     color: red; 
 }
-#registrationTabs-tab-STUDENT{
-    margin-left: 10px; 
-}
-#registrationTabs-tab-EDUCATOR,
-#registrationTabs-tab-STUDENT{
+#registrationTabs-tab-EDUCATOR{
     display: flex; 
     justify-content: center; 
-    transition: 300ms ease-in;   
+    transition: 300ms ease-in-out;   
     background-color: #7F5A8F; 
     color: gray; 
     opacity: .9; 
     border-bottom: none; 
 }
-#registrationTabs-tab-EDUCATOR.active, 
-#registrationTabs-tab-STUDENT.active{
-    transition: 300ms ease-in;    
-    color: #FF8C0E; 
+#registrationTabs-tab-EDUCATOR.active{
+    transition: 300ms ease-in-out;    
+    color: white; 
     opacity: 1; 
     border: none; 
+    font-style: italic; 
+}
+#registrationTabs-tab-STUDENT{
+    display: flex; 
+    justify-content: center; 
+    transition: 300ms ease-in-out;   
+    background-color: #FF8C0E; 
+    color: gray; 
+    opacity: .9; 
+    border-bottom: none; 
+}
+#registrationTabs-tab-STUDENT.active{
+    transition: 300ms ease-in-out;    
+    color: white; 
+    opacity: 1; 
+    border: none; 
+    font-style: italic; 
 }
 .nav-tabs .nav-link{
     font-weight: bold; 
     margin: 0 auto; 
     width: 120px; 
-    color: black; 
     font-size: 14px;
     text-align: center;  
-}
-.nav-tabs .nav-link.active{
-    font-style: italic; 
 }
 .alignCenter {
     margin: 15px; 
 }
-.registrationContainer{
+.registrationContainer, 
+.registrationContainerOrange{
     border: 2px solid #7F5A8F; 
-    border-radius: 10px; 
+    border-radius: 20px; 
     margin-bottom: 15px; 
+}
+.registrationContainerOrange{
+    border: 2px solid #FF8C0E; 
 }
 nav.nav.nav-tabs{
     border: none; 

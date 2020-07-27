@@ -62,7 +62,7 @@ const registrationContent = () => (
                     </Tab>
 
                     <Tab eventKey="STUDENT" title="STUDENT">
-                        <div className="registrationContainer">
+                        <div className="registrationContainerOrange">
                             <Row>
                                 <Col xs={12}>
                                     <Row>
