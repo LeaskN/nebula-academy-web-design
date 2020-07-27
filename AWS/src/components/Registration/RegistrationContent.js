@@ -74,65 +74,69 @@ const registrationContent = () => (
                                     <hr></hr>
                                     <Row className="registrationCard">
                                         <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
-                                        <Col style={{margin:'auto'}} xs={12} lg={5}>
-                                            <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img> 
-                                            {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
-                                        </Col>
-                                        <Col lg={7}>
-                                        <div className="textWrap">
-                                        <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
-                                        <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert>
-                                        <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
-                                        <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
-                                        <div>
-                                            The virtual session grants access to:
-                                            <ul>
-                                                <li><b>Live virtual office hours with Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly</b></li>
-                                                <li>AWS Amazon Cloud Foundations labs</li>
-                                                <li>AWS Amazon Cloud Foundations slides</li>
-                                                <li>AWS Amazon Cloud Foundations videos</li>
-                                                <li>AWS Amazon Cloud Foundations content</li>
-                                                <li>AWS Amazon Cloud Foundations practice questions</li>
-                                                <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
-                                                <li>Nebula Academy's Videos covering all modules & content in detail</li> 
-                                            </ul>
-                                        </div>
-                                        </div>
-                                        <div id="spacer"></div>
-                                        <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416"><del>Register</del></Button>
-                                        </Col>
+                                            <Row>
+                                                <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                                    <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image1}></img> 
+                                                    {/* src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_512x512.bc006f14f986fa4f3ca238b0b62be458ce1fb5ce.png"></img> */}
+                                                </Col>
+                                                <Col lg={7}>
+                                                <div className="textWrap">
+                                                <h3>AWS Academy Cloud Foundations - <b>Virtual</b></h3>
+                                                <Alert variant="success" style={{textAlign:'center'}}>DUE TO THE COVID-19 OUTBREAK THIS COURSE PRICE HAS BEEN REDUCED TO $99</Alert>
+                                                <p>AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                                <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
+                                                <div>
+                                                    The virtual session grants access to:
+                                                    <ul>
+                                                        <li><b>Live virtual office hours with Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly</b></li>
+                                                        <li>AWS Amazon Cloud Foundations labs</li>
+                                                        <li>AWS Amazon Cloud Foundations slides</li>
+                                                        <li>AWS Amazon Cloud Foundations videos</li>
+                                                        <li>AWS Amazon Cloud Foundations content</li>
+                                                        <li>AWS Amazon Cloud Foundations practice questions</li>
+                                                        <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
+                                                        <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                                    </ul>
+                                                </div>
+                                                </div>
+                                                <div id="spacer"></div>
+                                                <Button className="bottom" variant="dark" disabled href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416"><del>Register</del></Button>
+                                                </Col>
+                                            </Row>
                                         </Alert>
                                     </Row>
                                     <Row className="registrationCard">
-                                        <Alert variant="danger" style={{height: '100%', margin: '0px'}}>    
-                                        <Col style={{margin:'auto'}} xs={12} lg={5}>
-                                            <img alt="image2" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image2}></img>
-                                        </Col>
-                                        <Col lg={7}>
-                                            <div className="textWrap">
-                                            <h3>AWS Academy Cloud Foundations - <b>Live Virtual</b></h3>
-                                            <p>AWS Academy Cloud Foundations (Amazon Cloud Foundations) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
-                                            <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
-                                            <div>
-                                                The live virtual session grants access to:
-                                                <ul>
-                                                    <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
-                                                    <li><b>Recordings of the live classes for your individal review</b></li>
-                                                    <li>AWS Amazon Cloud Foundations labs</li>
-                                                    <li>AWS Amazon Cloud Foundations slides</li>
-                                                    <li>AWS Amazon Cloud Foundations videos</li>
-                                                    <li>AWS Amazon Cloud Foundations content</li>
-                                                    <li>AWS Amazon Cloud Foundations practice questions</li>
-                                                    <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
-                                                    <li>Nebula Academy's Videos covering all modules & content in detail</li> 
-                                                </ul>
-                                            </div>
-                                            </div>
-                                            <div id="spacer"></div>
-                                            <Button className="bottom"
-                                            variant="dark" disabled  
-                                            href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
-                                        </Col>
+                                        <Alert variant="danger" style={{height: '100%', margin: '0px'}}> 
+                                            <Row>  
+                                                <Col style={{margin:'auto'}} xs={12} lg={5}>
+                                                    <img alt="image2" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image2}></img>
+                                                </Col>
+                                                <Col lg={7}>
+                                                    <div className="textWrap">
+                                                    <h3>AWS Academy Cloud Foundations - <b>Live Virtual</b></h3>
+                                                    <p>AWS Academy Cloud Foundations (Amazon Cloud Foundations) is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.</p>
+                                                    <p>This course prepares you for the AWS Cloud Practitioner Certification Exam. Read about the certification <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/">here</a>.</p>
+                                                    <div>
+                                                        The live virtual session grants access to:
+                                                        <ul>
+                                                            <li><b>Weekly live classes led by Nebula Academy's Certified AWS Amazon Cloud Foundations instructors where participants can ask questions directly to the instructor</b></li>
+                                                            <li><b>Recordings of the live classes for your individal review</b></li>
+                                                            <li>AWS Amazon Cloud Foundations labs</li>
+                                                            <li>AWS Amazon Cloud Foundations slides</li>
+                                                            <li>AWS Amazon Cloud Foundations videos</li>
+                                                            <li>AWS Amazon Cloud Foundations content</li>
+                                                            <li>AWS Amazon Cloud Foundations practice questions</li>
+                                                            <li>Nebula Academy's AWS Amazon Cloud Foundations Teams environment and AWS Amazon Cloud Foundations related resources</li>
+                                                            <li>Nebula Academy's Videos covering all modules & content in detail</li> 
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div id="spacer"></div>
+                                                    <Button className="bottom"
+                                                    variant="dark" disabled  
+                                                    href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054"><del>Register</del></Button>
+                                                </Col>
+                                            </Row> 
                                         </Alert>
                                     </Row>
                                     <Row className="registrationCard">
