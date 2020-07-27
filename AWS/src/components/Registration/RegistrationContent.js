@@ -16,6 +16,7 @@ const registrationContent = () => (
                     defaultActiveKey="EDUCATOR" 
                     id="registrationTabs">
                     <Tab eventKey="EDUCATOR" title="EDUCATOR">
+                        <div className="registrationContainer">
                         <Row>
                             <Col className="alignCenter">
                                 <br/>
@@ -24,7 +25,6 @@ const registrationContent = () => (
                                 <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7477</p>
                             </Col>
                         </Row>
-                        <hr></hr>
                         <Row className="educatorRegistrationCard">
                             <Col style={{margin:'auto'}} xs={12} lg={5}>
                                 <img alt="image1" style={{ padding: '10px', borderRadius: '20px', width: '100%'}} src={image4}></img> 
@@ -58,9 +58,11 @@ const registrationContent = () => (
                             </Col>
                             
                         </Row>
+                        </div> 
                     </Tab>
 
-                        <Tab eventKey="STUDENT" title="STUDENT">
+                    <Tab eventKey="STUDENT" title="STUDENT">
+                        <div className="registrationContainer">
                             <Row>
                                 <Col xs={12}>
                                     <Row>
@@ -71,7 +73,6 @@ const registrationContent = () => (
                                             <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7477</p>
                                         </Col>
                                     </Row>
-                                    <hr></hr>
                                     <Row className="registrationCard">
                                         <Alert variant="danger" style={{height: '100%', margin: '0px'}}>
                                             <Row>
@@ -206,9 +207,10 @@ const registrationContent = () => (
                                             <br/>
                                         </Col>
                                     </Row> */}
-                                
-                                </Col>
-                            </Row>
+                                    
+                                    </Col>
+                                </Row>
+                            </div>
                         </Tab>                
                 </Tabs>
             </Container>

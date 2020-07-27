@@ -9,7 +9,7 @@
 }
 .registrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
+    margin: 15px;
     border-radius: 20px;
     border: 10px solid #FF8C0E;
     padding: 10px;
@@ -17,22 +17,9 @@
 .registrationCard:hover{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.5);
 }
-#registrationTabs-tab-STUDENT{
-    transition: transform 300ms ease-in; 
-    margin-left: 10px; 
-    border: none; 
-}
-#registrationTabs-tab-EDUCATOR{
-    transition: transform 300ms ease-in;    
-    border: none; 
-}
-#registrationTabs-tab-STUDENT:hover, #registrationTabs-tab-EDUCATOR:hover{
-   transform: translateY(-5%);  
-   border: none; 
-}
 .educatorRegistrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
+    margin: 15px;
     border-radius: 20px;
     border: 10px solid#7F5A8F;
     padding: 10px;
@@ -54,24 +41,50 @@
     margin-bottom: 20px; 
     font-size: 25px; 
 }
+.textWarning{
+    color: red; 
+}
+#registrationTabs-tab-STUDENT{
+    margin-left: 10px; 
+}
+#registrationTabs-tab-EDUCATOR,
+#registrationTabs-tab-STUDENT{
+    display: flex; 
+    justify-content: center; 
+    transition: 300ms ease-in;   
+    background-color: #7F5A8F; 
+    color: gray; 
+    opacity: .8; 
+    border-bottom: none; 
+}
+#registrationTabs-tab-EDUCATOR.active, 
+#registrationTabs-tab-STUDENT.active{
+    transition: 300ms ease-in;    
+    color: #FF8C0E; 
+    opacity: 1; 
+    border: none; 
+}
+/* #registrationTabs-tab-STUDENT:hover, #registrationTabs-tab-EDUCATOR:hover{
+} */
 .nav-tabs .nav-link{
-    color: rgb(34, 33, 33);
-    font-size: 20px; 
-    background-image: linear-gradient(#747371, transparent)
+    font-weight: bold; 
+    margin: 0 auto; 
+    width: 120px; 
+    color: black; 
+    font-size: 14px;
+    text-align: center;  
 }
 .nav-tabs .nav-link.active{
-    font-weight: bold; 
     font-style: italic; 
-    border-bottom: none; 
-    color: rgb(85, 44, 103); 
-    background-image: linear-gradient(#ffc107, transparent); 
 }
-div.alignCenter.col {
-    border-top: none; 
+.alignCenter {
+    margin: 15px; 
+}
+.registrationContainer{
+    border: 2px solid #7F5A8F; 
+    border-radius: 10px; 
+    margin-bottom: 15px; 
 }
 nav.nav.nav-tabs{
     border: none; 
-}
-.textWarning{
-    color: red; 
 }

@@ -5,13 +5,6 @@ import Popup from './Popup';
 import CurriculumContent from '../Curriculum/CurriculumContent';
 import { CourseContent } from '../Courses/CourseContent';
 
-// import Conditions from "../Global/Conditions/Conditions.js";
-
-// import AWSAuthorizedCurriculum from '../../assets/AWSAuthoredCurriculum.png';
-// import buildingSkills from '../../assets/BuildingSkills.png';
-// import educatorCredit from '../../assets/educatorsEarnAccreditation.png';
-// import growAWSWork from '../../assets/growAWSWorkforce.png';
-
 export const HomeContent = () => (
     <React.Fragment>
         {Popup()}
@@ -19,12 +12,6 @@ export const HomeContent = () => (
             <div className="margin-left margin-bottom">
             <CourseContent/> 
             </div>   
-            {/* <Row className="programBenefitsRow">
-                <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=11903416" target="empty" variant="warning">Virtual Registration</Button> */}
-                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10267054" target="empty" variant="warning">Live Virtual Registration</Button> */}
-                {/* <Button style={{margin:'6px', width:'300px'}} href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=10096510" target="empty" variant="warning">In Person Registration</Button> */}
-                {/* <Conditions/>                                         */}
-            {/* </Row> */}
             <Row>
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">
