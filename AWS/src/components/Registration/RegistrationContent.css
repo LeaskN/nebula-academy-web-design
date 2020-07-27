@@ -54,7 +54,7 @@
     transition: 300ms ease-in;   
     background-color: #7F5A8F; 
     color: gray; 
-    opacity: .8; 
+    opacity: .9; 
     border-bottom: none; 
 }
 #registrationTabs-tab-EDUCATOR.active, 
@@ -64,8 +64,6 @@
     opacity: 1; 
     border: none; 
 }
-/* #registrationTabs-tab-STUDENT:hover, #registrationTabs-tab-EDUCATOR:hover{
-} */
 .nav-tabs .nav-link{
     font-weight: bold; 
     margin: 0 auto; 
