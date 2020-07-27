@@ -134,8 +134,11 @@ class applicationContent extends Component {
                 referrerPolicy: 'no-referrer',
                 body: this.fixJSON()
             })
-            .then((response) => response.json())
-            .then(() => this.setState({loader: false}))
+            // .then((response) => response.json())
+            .then((response) => {
+                this.setState({loader: false}) 
+                return response.json()}
+            )
             .then((response) => {
                 console.log(response)
                 if(response.success){
