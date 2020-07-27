@@ -1,13 +1,11 @@
 import React from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import './HomeContent.css';
-import Popup from './Popup';
 import CurriculumContent from '../Curriculum/CurriculumContent';
 import { CourseContent } from '../Courses/CourseContent';
 
 export const HomeContent = () => (
     <React.Fragment>
-        {Popup()}
         <Container>
             <div className="margin-left margin-bottom">
             <CourseContent/> 

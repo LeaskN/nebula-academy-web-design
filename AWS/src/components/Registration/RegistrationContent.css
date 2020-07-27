@@ -88,12 +88,14 @@
 }
 .registrationContainer, 
 .registrationContainerOrange{
-    border: 2px solid #7F5A8F; 
-    border-radius: 20px; 
+    border-top: 2px solid #7F5A8F; 
+    background-image: linear-gradient(#7F5A8F, transparent, transparent); 
     margin-bottom: 15px; 
+    border-radius: 20px; 
 }
 .registrationContainerOrange{
-    border: 2px solid #FF8C0E; 
+    border-top: 2px solid #FF8C0E; 
+    background-image: linear-gradient(#FF8C0E, transparent, transparent); 
 }
 nav.nav.nav-tabs{
     border: none; 
