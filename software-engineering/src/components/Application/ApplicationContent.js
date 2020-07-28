@@ -75,7 +75,7 @@ class applicationContent extends Component {
                 }
             // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
         } 
-        if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1)){
+        if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.') === -1)){
             alert('There is an issue with your email address. Please check for typos to continue.');
             return
         }
@@ -142,7 +142,7 @@ class applicationContent extends Component {
             .then((response) => {
                 console.log(response)
                 if(response.success){
-                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
+                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
