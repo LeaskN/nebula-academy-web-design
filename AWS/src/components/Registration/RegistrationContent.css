@@ -42,10 +42,11 @@
     font-size: 25px; 
 }
 .textWarning{
-    color: red; 
+    color: rgb(224, 12, 12); 
 }
 .sectionTitle{
     margin-top: 20px; 
+    text-shadow: 0px 10px 10px white; 
 }
 #registrationTabs-tab-EDUCATOR{
     display: flex; 
@@ -92,13 +93,13 @@
 .registrationContainer, 
 .registrationContainerOrange{
     border-top: 2px solid #7F5A8F; 
-    background-image: linear-gradient(#7F5A8F, white, transparent); 
+    background-image: linear-gradient(#7F5A8F, white, white, transparent); 
     margin-bottom: 15px; 
     border-radius: 20px; 
 }
 .registrationContainerOrange{
     border-top: 2px solid #FF8C0E; 
-    background-image: linear-gradient(#FF8C0E, white, transparent); 
+    background-image: linear-gradient(#FF8C0E, white, white, transparent); 
 }
 nav.nav.nav-tabs{
     border: none; 
