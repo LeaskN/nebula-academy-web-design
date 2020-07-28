@@ -45,8 +45,10 @@ class ApplicationPhase2Content extends Component {
             referrerPolicy: 'no-referrer',
             body: this.fixJSON()
         })
-        .then((response) => response.json())
-        .then(() => this.setState({loader: false}))
+        .then((response) => {
+            this.setState({loader: false}) 
+            return response.json()
+        })
         .then((response) => {
             if(response.errors.length === 0){
                 alert(`Phase II of the application completed. Please give the team some time to review your application. \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
