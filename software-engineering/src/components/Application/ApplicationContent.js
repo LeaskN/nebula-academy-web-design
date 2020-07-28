@@ -108,7 +108,7 @@ class applicationContent extends Component {
         } else if(this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
             alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
         } else if(!this.state.Payment_Type__c){
-            alert('Please complete the field titled: "How are you planning to fund the program fee of $16,995 if accepted into program?"')
+            alert('Please complete the field titled: "How are you planning to fund the program fee if accepted into program?"')
         } else if(!this.state.Preference_to_experience_learning__c){
             alert('Please complete the field titled: "Please provide your preference to experience learning"')
         } else if(!this.state.Program_you_are_applying_to__c){
@@ -184,7 +184,7 @@ class applicationContent extends Component {
         return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
-        event.preventDefault();
+        // event.preventDefault();
 
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
@@ -384,6 +384,7 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals formerly involved in the justice system" type="checkbox"/> Individuals formerly involved in the justice system</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homeless individuals" type="checkbox"/> Homeless individuals</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
+                                {/* <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="None" type="checkbox"/> None</label><br/> */}
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
@@ -480,7 +481,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
-                                <Form.Label>How are you planning to fund the program fee of $16,995 if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
+                                <Form.Label>How are you planning to fund the program fee if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paying in full</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
