@@ -134,7 +134,6 @@ class applicationContent extends Component {
                 referrerPolicy: 'no-referrer',
                 body: this.fixJSON()
             })
-            // .then((response) => response.json())
             .then((response) => {
                 this.setState({loader: false}) 
                 return response.json()}
@@ -146,12 +145,8 @@ class applicationContent extends Component {
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
-                    alert('error:' + response.errorCode)
+                    alert(`It looks like you're getting an error due to your browser, browser cookies, or an auto-filler. Please open a private browsing window and re-submit the form. \n ${response.errorCode}: + response.errorCode`)
                 }
-                // else if (response['message'].indexOf('Already registered for this program') > -1){
-                //     alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-                //     // this.setState({loading: false});
-                // } 
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -497,6 +492,7 @@ class applicationContent extends Component {
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Caucasian" value="Caucasian"> Caucasian</option>
                                         <option aria-label="option 2" label="African American" value="African American"> African American</option>
+                                        {/* <option aria-label="option 3" label="Asian" value="Asian"> Asian</option> */}
                                         <option aria-label="option 3" label="Hispanic or Latin Origin" value="Hispanic or Latin Origin"> Hispanic or Latin Origin</option>
                                         <option aria-label="option 4" label="Native American" value="Native American"> Native American</option>
                                         <option aria-label="option 5" label="Native Hawaiian or Other Pacific Islander" value="Native Hawaiian or Other Pacific Islander"> Native Hawaiian or Other Pacific Islander</option>
@@ -528,7 +524,7 @@ class applicationContent extends Component {
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
-                                <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
+                                <Form.Label>Are you a VET who has GI BILL benefits that you would like to use?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="VET_GI_BILL_BENEFITS__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Yes" value="true">Yes</option> 
