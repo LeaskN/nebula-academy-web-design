@@ -72,6 +72,7 @@
     color: gray; 
     opacity: .9; 
     border-bottom: none; 
+    margin-left: 20px; 
 }
 #registrationTabs-tab-STUDENT.active{
     transition: 300ms ease-in-out;    
