@@ -9,7 +9,7 @@
 .popupModal{
     width: 400px; 
     height: 300px; 
-    position: absolute; 
+    position: fixed; 
     top: calc((100vh/2) - (300px/2)); 
     left: calc((100vw/2) - (400px/2)); 
     animation: scale 1s ease-in-out; 

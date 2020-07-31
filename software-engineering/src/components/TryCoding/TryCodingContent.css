@@ -28,3 +28,17 @@
 .paddingMiddle{
     border-top: 5px solid white;
 }
+.staticCard{
+    padding: 10px;  
+    border-radius: 10px; 
+}
+.tryCodingButton{
+    margin-bottom: 10px; 
+}
+.tryCodingCard{
+    padding: 15px; 
+}
+.tryCodingP{
+    width: 100%; 
+    text-align: center; 
+}
