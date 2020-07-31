@@ -6,76 +6,34 @@ import keypad from '../../assets/keypadImage.png'
 class ApplicationPhase2Content extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            "Name" : "",
+            "Last" : "",
+            "Answers":{
+                "Answer_1__c": '',
+                "Answer_2__c": '',
+                "Answer_3__c": '',
+                "Answer_4__c": '',
+                "Answer_5__c": '',
+                "Answer_6__c": '',
+                "Answer_7__c": '',
+                "Answer_8__c": '',
+                "Answer_9__c": '',
+                "Answer_10__c": ''
+            }
+        };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
-    componentDidMount(e){
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
-        .then(res => res.json())
-        .then(res => this.setState({cohortOptions : res.records}))
-        this.findID(e)
-    }
-    findID(e){
+    id(){
         let str = window.location.href;
-        console.log(str)
         let n = str.lastIndexOf('/');
-        let result = str.substring(n + 1);
-        this.setState({
-            Id: result
-        })
-    }
-    populateOptions(){
-        let options = this.state.cohortOptions;
-        let finalArray = [];
-        for(let item in options){
-            if((options[item].name).indexOf('BootCamp') > -1){
-                finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
-            }
-        }
-        return (
-            finalArray
-        );
+        let result = str.substring(n+1, n+8)
+        return result;
     }
     postData(e) {
-        this.fixJSON();
         e.preventDefault();
-        if(this.state.Contact_Number__c){
-            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
-            if(newNumber.length === 10 || newNumber.length === 11){
-                this.setState({
-                    Contact_Number__c: newNumber
-                })
-            } else {
-                alert('Please correct your phone number.')
-                return
-            }
-        } else if (this.state.How_did_you_hear_about_our_program__c === 'Other'){
-            if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Highest_education_level__c === 'Other'){
-            if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Primary_intentions_for_enrolling__c === 'Other'){
-            if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Ethnicity__c === 'Other'){
-            if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Gender__c === 'Other/Prefer to self-describe'){
-            if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if(this.state.Email_ID__c){
-            if(!this.state.Email_ID__c.indexOf('@') || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
-                alert('There is an issue with your email address. Please check for typos to continue.');
-                return;
-            }
-        }
-        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
+        this.setState({loader:true});
+        fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${this.id()}`, {
             method: 'POST', 
             mode: 'cors', 
             cache: 'no-cache', 
@@ -87,82 +45,48 @@ class ApplicationPhase2Content extends Component {
             referrerPolicy: 'no-referrer',
             body: this.fixJSON()
         })
-        .then((response) => response.json())
         .then((response) => {
-            if(response['message'].indexOf('Required fields are missing') > -1){
-                alert('Please complete the application by filling in missing fields.')
-            } else if (response['message'].indexOf('Already registered for this program') > -1){
-                alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+            this.setState({loader: false}) 
+            return response.json()
+        })
+        .then((response) => {
+            if(response.errors.length === 0){
+                alert(`Phase II of the application completed. Please give the team some time to review your application. \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
             } else {
-                alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp!`)
-                // console.log('Response:', response);
+                alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
+                console.log(response.errors);
             }
         })
         .catch((error) => {
+            alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
             console.error('Error:', error);
-            
         })
     }
-    arrayRemove(arr, value){
-        return arr.filter(function(ele){
-            return ele !== value;
-        });
-    }
     fixJSON(){
-        let tempObj = this.state
-        delete tempObj['cohortOptions']
+        let tempObj = this.state;
+        delete tempObj.cohortOptions;
+        delete tempObj.loading;
+        delete tempObj.Id;
+        delete tempObj.loader;
         //if the temporary object contains a list make it a semicolon seperated list
-        for(let item in tempObj){
-            if(typeof tempObj[item] == "object"){
-                tempObj[item] = tempObj[item].join(';');
-            }
-        }
-        return JSON.stringify(tempObj)
+        return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
         let target = event.target;
         let value = target.type === 'radio' ? target.alt : target.value;
         let name = target.name;
-        let isList = target.parentElement.className;
-        let listName = target.parentElement.parentElement.className.split(" ")[0];
-        //if the parent element indicates that this is a list item
-        if(isList === 'list'){
-            
-            //if state does not contain that specific listName yet
-            if(!this.state[listName]){
-                //first time something is being added to an array
-                this.setState({
-                    [listName]: [name]
-                })
-            //if that specific listName exists 
-            } else if (this.state[listName].indexOf(name) > -1) {
-                //unchecked box
-                let oldList = this.state[listName]
-                oldList.pop(oldList.indexOf(name))
-                this.setState({
-                    [listName]: oldList
-                })
-            } else {
-                //adding to an existing array
-                let fullArray = [...this.state[listName], name]
-                this.setState({
-                    [listName]: fullArray
-                })
-            }
-        //else its not a list
-        } else {
-            //boolean comes as string so set it to boolean
-            if (value==="true"){
-                value = true
-            }
-            if (value==="false"){
-                value = false
-            }
+
+        if(name === 'Name' || name === 'Last'){
             this.setState({
-                [name]: value
-            });
+                [name]: value,
+            })
+        } else {
+            let answers = this.state.Answers;
+            answers[name] = value;
+            this.setState({
+                "Answers" : answers
+            })
         }
-        console.log(this.state)
     } 
     render() {
         return (
@@ -206,21 +130,21 @@ class ApplicationPhase2Content extends Component {
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>First</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="First_Name__c" placeholder="First Name" />
+                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Name" placeholder="First Name" />
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Last</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Last_Name__c" placeholder="Last Name" />
+                                    <Form.Control required onChange={this.handleInputChange} name="Last" placeholder="Last Name" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Email_ID__c" type="email" placeholder="Enter Email" />
+                                    <Form.Control required input="true" name="Email_ID__c" type="email" placeholder="Enter Email" />
                                 </Form.Group>
                                  <Form.Group as={Col}>
                                     <Form.Label>ID (should match ID provided via email)</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Id" disabled placeholder={this.state.Id} />
+                                    <Form.Control required input="true" name="Id" disabled placeholder={this.id()} />
                                 </Form.Group>
                             </Form.Row>
                             <hr></hr>
@@ -344,11 +268,11 @@ class ApplicationPhase2Content extends Component {
                                                 </ul>
                                                 <p> Anything submitted will be kept in full confidence.</p>
                                             </i>   
-                                        
                                     </Form.Label>
                                     <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Answer_10__c" required />
                                 </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.postData(e)}>Submit</Button>
+                            {this.state.loader? <div className='fullScreen'><h1 className="loaderText"><br></br>Submitting</h1><div className="loader"><div></div><div></div><div></div></div></div>:<span></span>}
                         </Form>
                     </Col>
                 </Row>

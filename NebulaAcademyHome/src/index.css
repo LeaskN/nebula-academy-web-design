@@ -211,6 +211,17 @@ code {
   border-color: #e45b00;
   color: white;
 }
+.btn-dark{
+  background-color: white;
+  border-color: white;
+  color: #464648;
+  transition: .5s;
+}
+.btn-dark:hover{
+  background-color: #464648;
+  border-color: #464648;
+  color: white;
+}
 .fullWidth{
   width: 100% !important;
 }

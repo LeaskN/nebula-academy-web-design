@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, Carousel } from 'react-bootstrap';
-import ShapeAndContent from '../Global/ShapeAndContent'
+import InfoPanel from '../Global/InfoPanel'
 import AWSSlide1 from '../../assets/awsstats1.jpg';
 import AWSSlide2 from '../../assets/awsslide2.jpg';
 import AWSSlide3 from '../../assets/awsquote.jpg';
@@ -126,7 +126,7 @@ render() {
                             <Button className='bottom' href="https://code.nebulaacademy.com" target="blank" variant="secondary">Bootcamp</Button>
                     </Col>
                 </Row>
-                    <ShapeAndContent state={this.state}/>
+                    <InfoPanel state={this.state}/>
             </React.Fragment>
         )
     }

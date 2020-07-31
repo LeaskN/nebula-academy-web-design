@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Container } from 'react-bootstrap';
+import { Row, Col, Card, Container, Button } from 'react-bootstrap';
 import './HomeContent.css';
 import CurriculumContent from '../Curriculum/CurriculumContent';
 import { CourseContent } from '../Courses/CourseContent';
@@ -7,9 +7,11 @@ import { CourseContent } from '../Courses/CourseContent';
 export const HomeContent = () => (
     <React.Fragment>
         <Container>
-            <div className="margin-left margin-bottom">
-            <CourseContent/> 
-            </div>   
+            <Row className="programBenefitsRow">
+              <div className="margin-left margin-bottom">
+                <CourseContent/> 
+              </div>   
+            </Row>
             <Row>
                 <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                     <Card className="introRowTile">

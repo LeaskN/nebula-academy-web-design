@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import ShapeAndContent from '../Global/ShapeAndContent'
+import InfoPanel from '../Global/InfoPanel'
 import slide1 from '../../assets/Image1.jpg'
 import slide2 from '../../assets/Image2.jpg'
 import slide3 from '../../assets/Image3.jpg'
@@ -62,7 +62,7 @@ render() {
                 <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                     { this.createSlideCard() }
                 </Row>
-                    <ShapeAndContent state={this.state}/>
+                    <InfoPanel state={this.state}/>
             </React.Fragment>
         )
 
