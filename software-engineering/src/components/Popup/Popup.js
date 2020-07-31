@@ -16,7 +16,7 @@ function Popup() {
         <p className="popupText" >3 Month <span>Full-Time</span> or 6 Month <span>Part-Time</span></p>
         <p className="popupText" >Cohorts Beginning <span>September 14th</span>!</p>
         <Modal.Footer className="popupFooter">
-            <Button variant="secondary" href="/program">
+            <Button className="popupButton" variant="secondary" href="/program">
                 Course Details
             </Button>
         </Modal.Footer>
