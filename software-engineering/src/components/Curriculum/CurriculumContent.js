@@ -43,13 +43,6 @@ class CurriculumContent extends Component {
         this.setState({ toggle2:{scheduleButton1: false, scheduleButton2: false, scheduleButton3: false, scheduleButton4: false, scheduleButton5: true}})
     }
 
-    // handleClick = () => {
-    //   console.log('clicked')
-    //   this.setState({
-    //     condition: !this.state.condition
-    //   });
-    // }
-
     render() {
         return (
             <React.Fragment>
@@ -95,7 +88,7 @@ class CurriculumContent extends Component {
                                     </Card.Body>
                             </Card>
                         </Col>
-                        <Col xs={8} className="cardColumns offWhite">
+                        <Col xs={8} className="cardColumns ">
                             {this.state.toggle.button1 ? <Card className="cardDeckRight">
                                     <Card.Body>
                                             <h1>Basics</h1>

@@ -24,7 +24,7 @@ class InternshipsContent extends Component {
                     <Col xs={1}></Col>
                 </Row>
                 <Row style={{ display:'flex', justifyContent: 'center',  }}>
-                    <Button href="/guestspeakers">View Guest Speakers</Button>
+                    <Button href="/curriculum">Career Readiness</Button>
                 </Row>
                 <Row>
                     <Col xs={1}></Col>
@@ -33,6 +33,9 @@ class InternshipsContent extends Component {
                         <p>An internship enables participants to gain first-hand exposure of working in the real world. It also allows participants the ability to harness the skill, knowledge, and lab practice they learnt in our program. Internships provide the opportunity for participants to demonstrate the value they can contribute to employers immediately after completion of our program.  We guarantee each participant in our program an internship opportunity so that they can build the confidence and build their portfolio for gaining employment.</p>
                     </Col>
                     <Col xs={1}></Col>
+                </Row>
+                <Row style={{ display:'flex', justifyContent: 'center',  }}>
+                    <Button href="/guestspeakers">View Guest Speakers</Button>
                 </Row>
             </React.Fragment>
         )
