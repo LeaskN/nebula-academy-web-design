@@ -22,7 +22,7 @@ render() {
                         <Col xs={12} lg={6} xl={4} className="introRow1Column1">
                             <Card className="introRowTile">
                                 <Card.Body>
-                                    <h3>Learn To Code in 3 Months</h3>
+                                    <h3>Learn To Code in 3 or 6 Months!</h3>
                                     <Card.Text>
                                         Nebula Academy is a workforce accelerator that provides intensive learning programs for workforce readiness in entry level technology career roles. We work hand-in-hand with our industry and university partners to create programs that help working adults from all backgrounds and experience levels gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy. 
                                     </Card.Text>
