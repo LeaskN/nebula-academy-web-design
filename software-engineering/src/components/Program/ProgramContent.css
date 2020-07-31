@@ -23,3 +23,29 @@
     background-size: cover;
     background-position: -0px -0px;
 }
+.currentCohorts{
+    width: 80%; 
+    margin: 10px auto 30px; 
+    padding: 10px; 
+    border-radius: 5px;
+    background-color: #7F5A8F; 
+    box-shadow: 0px 5px 10px gray; 
+    animation: scale 1s ease-in-out; 
+}
+.currentCohortsP{
+    font-size: 18px; 
+    text-align: center; 
+    margin-top: 5px; 
+    padding: 0; 
+    color: white; 
+}
+.currentCohortsSpan{
+    font-weight: bold; 
+}
+.learnToCodeTextCard{
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+.learnToCodeTextCard h1{
+    text-align: center; 
+}

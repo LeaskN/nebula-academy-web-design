@@ -9,7 +9,7 @@
 }
 .registrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
+    margin: 15px;
     border-radius: 20px;
     border: 10px solid #FF8C0E;
     padding: 10px;
@@ -17,22 +17,9 @@
 .registrationCard:hover{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.5);
 }
-#registrationTabs-tab-STUDENT{
-    transition: transform 300ms ease-in; 
-    margin-left: 10px; 
-    border: none; 
-}
-#registrationTabs-tab-EDUCATOR{
-    transition: transform 300ms ease-in;    
-    border: none; 
-}
-#registrationTabs-tab-STUDENT:hover, #registrationTabs-tab-EDUCATOR:hover{
-   transform: translateY(-5%);  
-   border: none; 
-}
 .educatorRegistrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
+    margin: 15px;
     border-radius: 20px;
     border: 10px solid#7F5A8F;
     padding: 10px;
@@ -54,24 +41,67 @@
     margin-bottom: 20px; 
     font-size: 25px; 
 }
-.nav-tabs .nav-link{
-    color: rgb(34, 33, 33);
-    font-size: 20px; 
-    background-image: linear-gradient(#747371, transparent)
+.textWarning{
+    color: rgb(224, 12, 12); 
 }
-.nav-tabs .nav-link.active{
-    font-weight: bold; 
-    font-style: italic; 
+.sectionTitle{
+    margin-top: 20px; 
+    text-shadow: 0px 10px 10px white; 
+}
+#registrationTabs-tab-EDUCATOR{
+    display: flex; 
+    justify-content: center; 
+    transition: 300ms ease-in-out;   
+    background-color: #7F5A8F; 
+    color: gray; 
+    opacity: .9; 
     border-bottom: none; 
-    color: rgb(85, 44, 103); 
-    background-image: linear-gradient(#ffc107, transparent); 
 }
-div.alignCenter.col {
-    border-top: none; 
+#registrationTabs-tab-EDUCATOR.active{
+    transition: 300ms ease-in-out;    
+    color: white; 
+    opacity: 1; 
+    border: none; 
+    font-style: italic; 
+}
+#registrationTabs-tab-STUDENT{
+    display: flex; 
+    justify-content: center; 
+    transition: 300ms ease-in-out;   
+    background-color: #FF8C0E; 
+    color: gray; 
+    opacity: .9; 
+    border-bottom: none; 
+    margin-left: 20px; 
+}
+#registrationTabs-tab-STUDENT.active{
+    transition: 300ms ease-in-out;    
+    color: white; 
+    opacity: 1; 
+    border: none; 
+    font-style: italic; 
+}
+.nav-tabs .nav-link{
+    font-weight: bold; 
+    margin: 0 auto; 
+    width: 120px; 
+    font-size: 14px;
+    text-align: center;  
+}
+.alignCenter {
+    margin: 15px; 
+}
+.registrationContainer, 
+.registrationContainerOrange{
+    border-top: 2px solid #7F5A8F; 
+    background-image: linear-gradient(#7F5A8F, white, white, transparent); 
+    margin-bottom: 15px; 
+    border-radius: 20px; 
+}
+.registrationContainerOrange{
+    border-top: 2px solid #FF8C0E; 
+    background-image: linear-gradient(#FF8C0E, white, white, transparent); 
 }
 nav.nav.nav-tabs{
     border: none; 
-}
-.textWarning{
-    color: red; 
 }

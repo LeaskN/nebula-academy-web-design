@@ -1,0 +1,56 @@
+@keyframes scale {
+    from {transform: scale(.4);}
+    to {transform: scale(1);}
+}
+@keyframes bounce { 
+    0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+} 
+.popupModal{
+    width: 400px; 
+    height: 300px; 
+    position: fixed; 
+    top: calc((100vh/2) - (300px/2)); 
+    left: calc((100vw/2) - (400px/2)); 
+    animation: scale 1s ease-in-out; 
+}
+.popupHeader{
+    border-bottom: none; 
+}
+.popupTitle{
+    margin-left: 24px; 
+    font-weight: 900; 
+    font-size: 30px;
+    letter-spacing: 2px; 
+    text-shadow: 0px 1px 2px rgb(188, 138, 196); 
+}
+.popupTitle, .popupText{
+    width: 100%; 
+    text-align: center; 
+    color: rgb(57, 10, 79); 
+}
+.popupText:nth-of-type(1){
+    margin-top: 12px; 
+}
+.popupText span{
+    font-style: italic; 
+    font-weight: 500; 
+    color: rgb(35, 5, 48); 
+}
+.popupFooter{
+    display: flex; 
+    justify-content: center; 
+    border-top: none; 
+}
+div.modal-content {
+    background-image: linear-gradient(45deg, rgb(251, 248, 254),rgb(254, 254, 254)); 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.694); 
+    transition: 500ms ease-in; 
+}
+button.close{
+    color: red; 
+    opacity: 1; 
+}
+.popupButton{ 
+    animation: bounce 5s ease infinite; 
+}

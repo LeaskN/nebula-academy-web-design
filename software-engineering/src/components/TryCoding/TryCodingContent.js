@@ -11,7 +11,7 @@ class TryCodingContent extends Component {
             Ethnicity__c: []
         };
     }
-    link = `https://nebulaacademycoding.eventbrite.com`
+    link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
     nextFriday = () => {
         var d = new Date();
 
@@ -47,18 +47,17 @@ render() {
                 <Col xs={4} className="cardColumns">
                     <Card className="cardDeckLeft" style={{width:"87.5vw", display: "flex", alignItems: "center", justifyContent: "center"}}>
                         <p style={{marginBottom:"0px"}}>Next Event:</p>
-                        <h1>{this.nextFriday().split('Monday').join('').split('Tuesday').join('').split('Wednesday').join('').split('Thursday').join('').split('Friday').join('').split('Saturday').join('').split('Sunday').join('')}<sup>th</sup></h1>
+                        <h1>{this.nextFriday().split('Monday').join('').split('Tuesday').join('').split('Wednesday').join('').split('Thursday').join('').split('Friday').join('').split('Saturday').join('').split('Sunday').join('')}</h1>
                         <br/>
-                        <Button href={this.link} target="empty">Join Free Event</Button>
+                        <Button href={this.link} className="tryCodingButton" target="empty">Register for Session</Button>
                     </Card>
                 </Col>
                 <Col xs={8} className="cardColumns offWhite">
-                    <Card style={{padding: "10px"}}>
-                        <h3><a href={this.link} target="empty">Try Coding Workshops are every Friday!</a></h3>
+                    <div className="tryCodingCard">
+                        <h3><a href={this.link} target="empty">Try Coding Workshops!</a></h3>
                         <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...<a href={this.link} target="empty">learn more</a></p>
-                        <p><b>Participants must be over 17 to participate.</b></p>
-                        <p><a target="empty" href="https://www.google.com/maps/place/Nebula+Academy/@40.8042109,-73.5183472,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2813b158c5423:0x81578d2a8861e473!8m2!3d40.8042109!4d-73.5161585">Nebula Academy, 180 Micheal Drive, NY 11791</a><span role="img" aria-label="pin">📍</span></p>
-                    </Card>
+                        <p className="tryCodingP"><b>Participants must be over 17.</b></p>
+                    </div>
                 </Col>
             </Row>
         )
