@@ -27,7 +27,7 @@ class applicationContent extends Component {
     }
     // fetch all programs and set them to state
     componentDidMount(){
-        console.log('V817')
+        console.log('V818')
         return this.getCohortOptions();
     }
     // get cohort options
