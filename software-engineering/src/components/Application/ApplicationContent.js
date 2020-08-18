@@ -13,7 +13,7 @@ class applicationContent extends Component {
     
     render() {
         return (
-            <div style={{display:'flex', justifyContent:'center', height:'7300px', margin:'20px', backgroundColor: 'white'}}>
+            <div style={{margin: '0 20px 0px 20px'}}>
                 <iframe 
                     title='SE Program Application'
                     width="640px" 
@@ -21,7 +21,7 @@ class applicationContent extends Component {
                     frameborder= "0" 
                     marginwidth= "0" 
                     marginheight= "0" 
-                    style={{border: 'none', maxWidth:'100%', height:'7290px'}} 
+                    style={{border: 'none', maxWidth:'100%', display:'flex', margin:'auto', height:'80vh'}} 
                     allowfullscreen 
                     webkitallowfullscreen 
                     mozallowfullscreen 
