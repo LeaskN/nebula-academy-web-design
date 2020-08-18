@@ -513,7 +513,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c && this.state.Ethnicity__c.indexOf('Other') > -1 && this.state.Ethnicity__c.indexOf('Other ') === -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c && (this.state.Ethnicity__c === 'Other' || this.state.Ethnicity__c === 'Other ') ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Ethnicity" />
                                 </Form.Group>
@@ -530,7 +530,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c && this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Gender__c && this.state.Gender__c === 'Other/Prefer to self-describe' ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
                                 </Form.Group>
