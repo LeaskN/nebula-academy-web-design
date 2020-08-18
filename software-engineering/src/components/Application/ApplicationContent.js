@@ -156,7 +156,7 @@ class applicationContent extends Component {
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
-                    window.confirm(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://bit.ly/3h15PJT`)
+                    alert(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://bit.ly/3h15PJT`)
                 }
             })
             .catch((error) => {
@@ -175,16 +175,6 @@ class applicationContent extends Component {
         let tempObj = this.state;
         delete tempObj.cohortOptions;
         delete tempObj.loading;
-
-        // let prop1 = 'cohortOptions';
-        // console.log(this.state)
-        // const tempObj = Object.keys(this.state).reduce((object, key) => {
-        //     if (key !== prop1 || key !== prop2) {
-        //       object[key] = this.state[key]
-        //     }
-        //     return object
-        // }, {})
-        // console.log(tempObj)
         
         //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
@@ -194,6 +184,7 @@ class applicationContent extends Component {
         }
         return JSON.stringify(tempObj);
     }
+
     handleInputChange(event) {
         // event.preventDefault();
         console.log(this.state)
@@ -395,7 +386,7 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals formerly involved in the justice system" type="checkbox"/> Individuals formerly involved in the justice system</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homeless individuals" type="checkbox"/> Homeless individuals</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
-                                {/* <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="None" type="checkbox"/> None</label><br/> */}
+                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="None" type="checkbox"/> None</label><br/>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
@@ -519,7 +510,7 @@ class applicationContent extends Component {
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
-                                <Form.Label>Please provide your Gender</Form.Label>
+                                <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Female" value="Female"> Female</option>
