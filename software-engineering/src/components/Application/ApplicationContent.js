@@ -10,27 +10,24 @@ class applicationContent extends Component {
     }
     // this lifecycle component can prevent component updates by returning either true (update) or false (dont update)
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('Should Update?')
             // if next state has cohort options 
         if (nextState.cohortOptions) {
             // allow an update
-            console.log('will have cohort options, allowing update');
             return true;
             // if the current this.state has cohort options and the next state WONT have cohort options (see prev if())
         } else if (this.state.cohortOptions) {
             // dont update
-            console.log('cohort options, wont have = dont update');
             return false;
             // if the this state doesn't have cohort options 
         } else {
             // update (and therefore make a request to search for the new info by recalling populateOptions)
-            console.log('no ch options, forcing update');
             this.getCohortOptions();
             return true;
         }
     }
     // fetch all programs and set them to state
     componentDidMount(){
+        console.log('V817')
         return this.getCohortOptions();
     }
     // get cohort options
