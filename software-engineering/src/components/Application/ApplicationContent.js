@@ -5,10 +5,7 @@ import './ApplicationContent.css';
 class applicationContent extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            Gender__c:[],
-            Ethnicity__c: [],
-        };
+        this.state = {};
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     // this lifecycle component can prevent component updates by returning either true (update) or false (dont update)
@@ -85,10 +82,6 @@ class applicationContent extends Component {
         } else if(!this.state.Contact_Number__c){
             alert('Please complete the field titled: "Phone"')
         // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
-        } else if(!this.state.Ethnicity__c || (this.state.Ethnicity__c === 'Other' && !this.state.Ethnicity_Other_description__c)){
-            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.Coding_experience__c){
-            alert('Please complete the field titled: "Do you have coding experience?"')
         } else if(!this.state.Email_ID__c){
             alert('Please complete the field titled: "Email"')
         } else if(!this.state.Last_Name__c){
@@ -101,23 +94,44 @@ class applicationContent extends Component {
             alert('Please complete the field titled: "State"')
         } else if(!this.state.Mailing_Zipcode__c){
             alert('Please complete the field titled: "Zip"')
-        } else if(!this.state.Highest_education_level__c || (this.state.Highest_education_level__c === 'Other' && !this.state.Highest_education_level_OTHER_Desc__c)){
-            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.How_did_you_hear_about_our_program__c || (this.state.How_did_you_hear_about_our_program__c === 'Other' && !this.state.How_did_you_hear_OTHER_Desc__c)){
+        } 
+        else if(!this.state.How_did_you_hear_about_our_program__c){
             alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
-        } else if(this.state.Primary_Intentions_OTHER_DESC__c === 'Other'){
-            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.Payment_Type__c){
-            alert('Please complete the field titled: "How are you planning to fund the program fee if accepted into program?"')
-        } else if(!this.state.Preference_to_experience_learning__c){
+        } 
+        else if(!this.state.Coding_experience__c){
+            alert('Please complete the field titled: "Do you have coding experience?"')
+        }
+        else if(!this.state.Highest_education_level__c){
+            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
+        } 
+        else if(!this.state.Preference_to_experience_learning__c){
             alert('Please complete the field titled: "Please provide your preference to experience learning"')
-        } else if(!this.state.Program_you_are_applying_to__c){
-            alert('Please complete the field titled: "Which cohort are you applying to?"')
-        } else if(!this.state.Authorized_to_work_in_US__c){
-            alert('All participants must be required to work in the US.')
-        } else if(!this.state.Gender__c || (this.state.Gender__c === 'Other' && !this.state.Gender_Other__c)){
+        } 
+        else if(!this.state.Primary_intentions_for_enrolling__c){
+            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
+        }
+        else if(!this.state.Payment_Type__c){
+            alert('Please complete the field titled: "How are you planning to fund the program fee if accepted into program?"')
+        } 
+        else if(!this.state.Ethnicity__c || this.state.Ethnicity__c === ''){
+            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
+        }
+        else if(!this.state.Gender__c || this.state.Gender__c === ''){
             alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
-        } else if(!this.state.High_School_Diploma_or_GED__c){
+        }
+        else if(!this.state.VET_GI_BILL_BENEFITS__c){
+            alert('Please complete the field titled: "Are you a VET who has GI BILL Benefits that you would like to use?"')
+        }
+        else if(!this.state.Program_you_are_applying_to__c){
+            alert('Please complete the field titled: "Which cohort are you applying to?"')
+        } 
+        else if(!this.state.US_citizen_or_permanent_resident__c){
+            alert('All participants must be a US citizen or permanent resident.')
+        }
+        else if(!this.state.Authorized_to_work_in_US__c){
+            alert('All participants must be authorized to work in the US.')
+        }
+        else if(!this.state.High_School_Diploma_or_GED__c){
             alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else {
             // Post request to the database
@@ -141,11 +155,11 @@ class applicationContent extends Component {
             .then((response) => {
                 console.log(response)
                 if(response.success){
-                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
+                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
                 } else {
-                    alert(`It looks like you're getting an error due to your browser, browser cookies, or an auto-filler. Please open a private browsing window and re-submit the form. \n ${response.errorCode}: + response.errorCode`)
+                    window.confirm(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://bit.ly/3h15PJT`)
                 }
             })
             .catch((error) => {
@@ -185,7 +199,7 @@ class applicationContent extends Component {
     }
     handleInputChange(event) {
         // event.preventDefault();
-
+        console.log(this.state)
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
@@ -457,13 +471,13 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
-                                <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
-                                <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
-                                <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 6" value="Other" label="Other">Other</option> 
+                                    <option aria-label="option 0" label="Select"></option> 
+                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
+                                    <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
+                                    <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
+                                    <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
+                                    <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
+                                    <option aria-label="option 6" value="Other" label="Other">Other</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
@@ -502,7 +516,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 && this.state.Ethnicity__c.indexOf('Other ') === -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c && this.state.Ethnicity__c.indexOf('Other') > -1 && this.state.Ethnicity__c.indexOf('Other ') === -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Ethnicity" />
                                 </Form.Group>
@@ -519,7 +533,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Gender__c && this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
                                 </Form.Group>

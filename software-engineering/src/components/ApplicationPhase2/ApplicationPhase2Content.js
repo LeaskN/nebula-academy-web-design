@@ -58,8 +58,7 @@ class ApplicationPhase2Content extends Component {
             }
         })
         .catch((error) => {
-            alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
-            console.error('Error:', error);
+            alert(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://forms.office.com/Pages/ResponsePage.aspx?id=DYC-61190U-xMgLVy3lNnmhMOgtjMC5JhCXq1Gwz5J5UQjlZMUZKSVFNRUxYVEpTRThOMlo2UEoxTyQlQCN0PWcu`)
         })
     }
     fixJSON(){
