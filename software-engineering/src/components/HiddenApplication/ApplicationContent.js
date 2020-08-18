@@ -73,7 +73,7 @@ class applicationContent extends Component {
             alert('There is an issue with your email address. Please check for typos to continue.');
             return
         }
-        
+
         if(!this.state.First_Name__c){
             alert('Please complete the field titled: "First"')
         } else if(!this.state.Contact_Number__c){
@@ -116,9 +116,9 @@ class applicationContent extends Component {
         else if(!this.state.Gender__c || this.state.Gender__c === ''){
             alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
         }
-        else if(!this.state.VET_GI_BILL_BENEFITS__c){
-            alert('Please complete the field titled: "Are you a VET who has GI BILL Benefits that you would like to use?"')
-        }
+        // else if(!this.state.VET_GI_BILL_BENEFITS__c){
+        //     alert('Please complete the field titled: "Are you a VET who has GI BILL Benefits that you would like to use?"')
+        // }
         else if(!this.state.Program_you_are_applying_to__c){
             alert('Please complete the field titled: "Which cohort are you applying to?"')
         } 
@@ -133,6 +133,7 @@ class applicationContent extends Component {
         } else {
             // Post request to the database
             this.setState({loader:true}); 
+            // fetch(`http://localhost:3000/dev2/application`, {
             fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
                 method: 'POST', 
                 mode: 'cors', 
@@ -187,15 +188,17 @@ class applicationContent extends Component {
 
     handleInputChange(event) {
         // event.preventDefault();
-        console.log(this.state)
+        // console.log(this.state)
         let target = event.target;
+        
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
-        
+        // console.log('target:', target, 'Parent:', isList, 'Grandparent:', listName)
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
+            console.log(this.state)
             //if state does not contain that specific listName yet
             if(!this.state[listName]){
                 //first time something is being added to an array
