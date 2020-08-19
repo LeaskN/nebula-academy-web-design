@@ -32,7 +32,6 @@ class applicationContent extends Component {
     }
     // get cohort options
     getCohortOptions(){
-        console.log('fetching')
         return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions: res}))
@@ -67,7 +66,7 @@ class applicationContent extends Component {
                     alert('Please correct your phone number.')
                     return;
                 }
-            // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
+            // if the email exists but doesnt have a length, or an @ sign and a '.' then alert: please correct typos
         } 
         if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.') === -1)){
             alert('There is an issue with your email address. Please check for typos to continue.');
@@ -76,22 +75,31 @@ class applicationContent extends Component {
 
         if(!this.state.First_Name__c){
             alert('Please complete the field titled: "First"')
-        } else if(!this.state.Contact_Number__c){
-            alert('Please complete the field titled: "Phone"')
-        // if the email exists but doesnt have a length, an @ sign or a .com then alert: please correct typos
-        } else if(!this.state.Email_ID__c){
-            alert('Please complete the field titled: "Email"')
-        } else if(!this.state.Last_Name__c){
+        }
+        else if(!this.state.Last_Name__c){
             alert('Please complete the field titled: "Last"')
-        } else if(!this.state.Mailing_Address__c){
+        } 
+        else if(!this.state.Email_ID__c){
+            alert('Please complete the field titled: "Email"')
+        }
+        else if(!this.state.Contact_Number__c){
+            alert('Please complete the field titled: "Phone"')
+        } 
+        else if(!this.state.Mailing_Address__c){
             alert('Please complete the field titled: "Mailing Address 1"')
-        } else if(!this.state.Mailing_City__c){
+        } 
+        else if(!this.state.Mailing_City__c){
             alert('Please complete the field titled: "City"')
-        } else if(!this.state.Mailing_State__c){
+        } 
+        else if(!this.state.Mailing_State__c){
             alert('Please complete the field titled: "State"')
-        } else if(!this.state.Mailing_Zipcode__c){
+        } 
+        else if(!this.state.Mailing_Zipcode__c){
             alert('Please complete the field titled: "Zip"')
         } 
+        else if(!this.state.Short_Bio__c){
+            alert('Please complete the "bio" field"')
+        }
         else if(!this.state.How_did_you_hear_about_our_program__c){
             alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
         } 
@@ -155,7 +163,7 @@ class applicationContent extends Component {
                 if(response.success){
                     alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
-                    alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
+                    alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \n\nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\n\nIf the email isn’t there please contact us at support@nebulaacademyny.com regarding the issue.`)
                 } else {
                     alert(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://bit.ly/3h15PJT`)
                 }
@@ -187,18 +195,14 @@ class applicationContent extends Component {
     }
 
     handleInputChange(event) {
-        // event.preventDefault();
-        // console.log(this.state)
         let target = event.target;
         
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
-        // console.log('target:', target, 'Parent:', isList, 'Grandparent:', listName)
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
-            console.log(this.state)
             //if state does not contain that specific listName yet
             if(!this.state[listName]){
                 //first time something is being added to an array
@@ -223,15 +227,15 @@ class applicationContent extends Component {
         //else its not a list
         } else {
             //boolean comes as string so set it to boolean
-            if (value==="true"){
-                value = true
-            }
-            if (value==="false"){
-                value = false
-            }
-            this.setState({
-                [name]: value
-            });
+            if((value === "true" || value === "false") && target === 'select-one'){
+                this.setState({
+                    [name]: value === 'true' ? true : false,
+                })
+            } else {
+                this.setState({
+                    [name]: value.trim()
+                });
+            }           
         }
     } 
     render() {
