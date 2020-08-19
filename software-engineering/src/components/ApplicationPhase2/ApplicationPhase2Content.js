@@ -24,6 +24,9 @@ class ApplicationPhase2Content extends Component {
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
+    componentDidMount(){
+        console.log('V819');
+    }
     id(){
         let str = window.location.href;
         let n = str.lastIndexOf('/');
@@ -32,6 +35,44 @@ class ApplicationPhase2Content extends Component {
     }
     postData(e) {
         e.preventDefault();
+        if( 
+            (!this.state.Answers.Answer_1__c && !this.state.Answers.Answer_2__c && !this.state.Answers.Answer_3__c) ||
+            (!this.state.Answers.Answer_1__c && !this.state.Answers.Answer_2__c) ||
+            (!this.state.Answers.Answer_1__c && !this.state.Answers.Answer_3__c) ||
+            (!this.state.Answers.Answer_2__c && !this.state.Answers.Answer_3__c)
+        ){
+            alert('For questions 1, 2, & 3 please respond to two of the three questions. In the one you choose to omit please write "skip" into the text field"');
+            return
+        }
+        else if(!this.state.Answers.Answer_4__c){
+            alert('Please complete question 4.')
+            return
+        }
+        else if(!this.state.Answers.Answer_5__c){
+            alert('Please complete question 5.')
+            return
+        }
+        else if(!this.state.Answers.Answer_6__c){
+            alert('Please complete question 6.')
+            return
+        }
+        else if(!this.state.Answers.Answer_7__c){
+            alert('Please complete question 7.')
+            return
+        }
+        else if(!this.state.Answers.Answer_8__c){
+            alert('Please complete question 8.')
+            return
+        }
+        else if(!this.state.Answers.Answer_9__c){
+            alert('Please complete question 9.')
+            return
+        }
+        else if(!this.state.Answers.Answer_10__c){
+            alert('Please complete question 10.')
+            return
+        }
+        
         this.setState({loader:true});
         fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application/phase2/${this.id()}`, {
             method: 'POST', 
@@ -46,19 +87,26 @@ class ApplicationPhase2Content extends Component {
             body: this.fixJSON()
         })
         .then((response) => {
-            this.setState({loader: false}) 
-            return response.json()
+            console.log(response.status);
+            this.setState({loader: false})
+            if(response.status !== 200){
+                alert("We're unable to match your provided name, email, or ID to an existing application. If you have completed the phase 1 application for the Software Engieering program please copy the link provided to you from succed@nebulaacademyny.com (could be in your junkmail) and ensure you are writing your information in an identical fashion to your application.");
+                throw new Error(response.status)
+            } else {
+                return response.json();
+            }
+
+             
         })
         .then((response) => {
             if(response.errors.length === 0){
                 alert(`Phase II of the application completed. Please give the team some time to review your application. \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\nIf after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
             } else {
-                alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
-                console.log(response.errors);
+                alert(`It seems that your device is unable to submit through this form. Please submit using this link: https://bit.ly/2E96QRN\n\nThe link is case-sensitive.`)
             }
         })
         .catch((error) => {
-            alert(`It seems that your device is unable to submit through this form. Please email your responses to succeed@nebulaacademyny.com.`)
+            console.log(error)
         })
     }
     fixJSON(){
@@ -68,6 +116,7 @@ class ApplicationPhase2Content extends Component {
         delete tempObj.Id;
         delete tempObj.loader;
         //if the temporary object contains a list make it a semicolon seperated list
+        console.log(tempObj)
         return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
