@@ -21,7 +21,7 @@ class applicationContent extends Component {
                     frameborder= "0" 
                     marginwidth= "0" 
                     marginheight= "0" 
-                    style={{border: 'none', maxWidth:'100%', display:'flex', margin:'auto', height:'80vh'}} 
+                    style={{border: 'none', maxWidth:'100%', display:'flex', margin:'auto', height:'90vh'}} 
                     allowfullscreen 
                     webkitallowfullscreen 
                     mozallowfullscreen 

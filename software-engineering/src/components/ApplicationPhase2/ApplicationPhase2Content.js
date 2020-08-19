@@ -51,14 +51,14 @@ class ApplicationPhase2Content extends Component {
         })
         .then((response) => {
             if(response.errors.length === 0){
-                alert(`Phase II of the application completed. Please give the team some time to review your application. \n IMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
+                alert(`Phase II of the application completed. Please give the team some time to review your application. \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\nIf after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
             } else {
                 alert(`Unable to submit, please copy your responses to a notepad (such as a word document), refresh the page, & re-submit. If the issue continues please contact support at succed@nebulaacademyny.com`);
                 console.log(response.errors);
             }
         })
         .catch((error) => {
-            alert(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://forms.office.com/Pages/ResponsePage.aspx?id=DYC-61190U-xMgLVy3lNnmhMOgtjMC5JhCXq1Gwz5J5UQjlZMUZKSVFNRUxYVEpTRThOMlo2UEoxTyQlQCN0PWcu`)
+            alert(`It seems that your device is unable to submit through this form. Please email your responses to succeed@nebulaacademyny.com.`)
         })
     }
     fixJSON(){
@@ -77,7 +77,7 @@ class ApplicationPhase2Content extends Component {
 
         if(name === 'Name' || name === 'Last'){
             this.setState({
-                [name]: value,
+                [name]: value.trim(),
             })
         } else {
             let answers = this.state.Answers;
