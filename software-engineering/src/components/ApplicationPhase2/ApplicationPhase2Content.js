@@ -24,9 +24,6 @@ class ApplicationPhase2Content extends Component {
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
-    componentDidMount(){
-        console.log('V049');
-    }
     id(){
         let str = window.location.href;
         let n = str.lastIndexOf('/');
