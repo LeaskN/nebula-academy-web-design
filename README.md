@@ -1,6 +1,6 @@
 # Nebula-Academy-Web-Design
 - Nebula Academy is equipping all learners of all ages with the necessary skills to address the computer science gap. 
-- We have four domains, NebulaAcademy.com code.NebulaAcademy.com, AWS.NebulaAcademy.com, & CSTeach.NebulaAcademy.com.  
+- We have four domains, NebulaAcademy.com, code.NebulaAcademy.com, AWS.NebulaAcademy.com, & CSTeach.NebulaAcademy.com.  
 
 To run this application locally do the following:
 - run: `git clone https://github.com/LeaskN/nebula-academy-web-design.git`
