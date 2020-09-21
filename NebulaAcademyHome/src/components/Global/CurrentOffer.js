@@ -20,19 +20,15 @@ export default class CurrentOffer extends React.Component {
                 <Modal.Title>Alert regarding Covid-19</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h5>Anyone on the frontline battle against Covid-19 gets access to our courses for free:</h5>
-                    This includes: 
-                    <ol> 
-                        <li>Doctors </li>
-                        <li>Nurses</li>
-                        <li>Grocery store employees</li>
-                    </ol>
-                    <h5>Everyone is affected in one way or another</h5>
+                    <h5>Anyone on the frontline battle against Covid-19 will be granted access to select courses for free.</h5>
+                    <p>This includes, doctors, nurses, and grocery store employees.</p>
+                    <p>If you aren't in any of these roles but feel you qualify, or if you'd like more information on the offer, please reach out to succeed@nebulaacademyny.com.</p>
+                    {/* <h5>Everyone is affected in one way or another</h5>
                     <ol>
                         <li>Offer 1</li>
                         <li>Offer 2</li>
                         <li>Offer 3</li>
-                    </ol>
+                    </ol> */}
                 </Modal.Body>
             </Modal>
         </React.Fragment>)
