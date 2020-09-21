@@ -5,7 +5,8 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "cors-anywhere": "^0.4.1",
-    "node-fetch": "^2.6.0",
+    "http-proxy": "^1.18.1",
+    "node-fetch": "^2.6.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-cookie-consent": "^3.0.0",

@@ -8,3 +8,9 @@
 .fullApplicationFooter{
     margin-top: 40px;
 }
+
+@media (max-width: 450px) {
+    .fullapplicationFooter{ 
+        display: none;
+    }
+}

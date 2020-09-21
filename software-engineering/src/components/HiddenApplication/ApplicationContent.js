@@ -5,107 +5,174 @@ import './ApplicationContent.css'
 class applicationContent extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            Gender__c:[],
-            Ethnicity__c: [],
-        };
+        this.state = {};
         this.handleInputChange = this.handleInputChange.bind(this);
-        
     }
-    cohortOptions = ""
-    componentDidMount(e){
-        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
-        .then(console.log('attmepting fetch'))
-        .then(res => res.json())
-        .then(res => this.cohortOptions = res.records)
-    }
-    populateOptions(){
-        if(this.cohortOptions === ""){
-            return
+    // this lifecycle component can prevent component updates by returning either true (update) or false (dont update)
+    shouldComponentUpdate(nextProps, nextState) {
+            // if next state has cohort options 
+        if (nextState.cohortOptions) {
+            // allow an update
+            return true;
+            // if the current this.state has cohort options and the next state WONT have cohort options (see prev if())
+        } else if (this.state.cohortOptions) {
+            // dont update
+            return false;
+            // if the this state doesn't have cohort options 
         } else {
-            let options = this.cohortOptions
-            let finalArray = [];
-            for (let i = 0; i < options.length; i++) {
-                const element = options[i];
-                if(element.name.indexOf('BootCamp') > -1){
-                    finalArray.push(<option aria-label="option 1" key={element.id} label={element.name} value={element.id}>{element.name}</option> )
-                }
-            }
-            return (
-                finalArray
-            )
-        }        
+            // update (and therefore make a request to search for the new info by recalling populateOptions)
+            this.getCohortOptions();
+            return true;
+        }
     }
-    getData(e) {
-        e.preventDefault();
-        fetch(`http://23.96.61.174:3000/dev2/campaigns`)
-        .then(console.log('attmepting fetch'))
+    // fetch all programs and set them to state
+    componentDidMount(){
+        return this.getCohortOptions();
+    }
+    // get cohort options
+    getCohortOptions(){
+        return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => this.setState({cohortOptions: res}))
+        .catch(err => {console.log(err)})
     }
+    // populate the dropdown lists with all SE Bootcamps (from state)
+    populateOptions(){
+        let options = this.state.cohortOptions;
+        let finalArray = [];
+            // filter for ONLY the bootcamps
+        for(let item in options){
+            if((options[item].name).indexOf('BootCamp') > -1){
+                finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
+            }
+        }
+
+        return (finalArray);
+    }
+    // When a applicant presses submit check all data and if it's clean, submit it, otherwise state the issue to the user
     putData(e) {
         e.preventDefault();
         if(this.state.Contact_Number__c){
-            let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
-            if(newNumber.length === 10 || newNumber.length === 11){
-                this.setState({
-                    Contact_Number__c: newNumber
-                })
-            } else {
-                alert('Please correct your phone number.')
-                return
-            }
-        } else if (this.state.How_did_you_hear_about_our_program__c === 'Other'){
-            if( !this.state.How_did_you_hear_OTHER_Desc__c || this.state.How_did_you_hear_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Highest_education_level__c === 'Other'){
-            if( !this.state.Highest_education_level_OTHER_Desc__c || this.state.Highest_education_level_OTHER_Desc__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Primary_intentions_for_enrolling__c === 'Other'){
-            if( !this.state.Primary_Intentions_OTHER_DESC__c || this.state.Primary_Intentions_OTHER_DESC__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Ethnicity__c === 'Other'){
-            if( !this.state.Ethnicity_Other_description__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if (this.state.Gender__c === 'Other/Prefer to self-describe'){
-            if( !this.state.Gender_Other__c || this.state.Ethnicity_Other_description__c.length === 0 ){
-                alert('If the field titled, "Please provide details on how you heard about our program." is "Other" please fill in the "Other" text field.');
-            }
-        } else if(this.state.Email_ID__c){
-            if(!this.state.Email_ID__c.indexOf('@') || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.com') === -1){
-                alert('There is an issue with your email address. Please check for typos to continue.');
-                return;
-            }
+                let newNumber = this.state.Contact_Number__c.replace(/\D/g,'');
+            // if just the digits comes out to either 10 or 11 then set it to state
+                if(newNumber.length === 10 || newNumber.length === 11){
+                    this.setState({
+                        Contact_Number__c: newNumber
+                    })
+                    // code is breaking here, not going into the next if statement
+                // if it is too many or too few digits present an error and exit the function
+                } else {
+                    alert('Please correct your phone number.')
+                    return;
+                }
+            // if the email exists but doesnt have a length, or an @ sign and a '.' then alert: please correct typos
+        } 
+        if( this.state.Email_ID__c && (this.state.Email_ID__c.length === 0 || this.state.Email_ID__c.indexOf('@') === -1 || this.state.Email_ID__c.indexOf('.') === -1)){
+            alert('There is an issue with your email address. Please check for typos to continue.');
+            return
         }
-        fetch(`http://23.96.61.174:3000/dev2/application`, {
-            method: 'POST', 
-            mode: 'cors', 
-            cache: 'no-cache', 
-            credentials: 'same-origin', 
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            redirect: 'follow', 
-            referrerPolicy: 'no-referrer',
-            body: this.fixJSON()
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            if(response['message'].indexOf('Required fields are missing') > -1){
-                alert('Please complete the application by filling in missing fields.')
-            } else if (response['message'].indexOf('Already registered for this program') > -1){
-                alert( `It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\nIf the email isn’t there please contact us at support@nebulaacademyny.com. regarding the issue.`)
-            }
-            console.log('Response:', response);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            
-        })
+
+        if(!this.state.First_Name__c){
+            alert('Please complete the field titled: "First"')
+        }
+        else if(!this.state.Last_Name__c){
+            alert('Please complete the field titled: "Last"')
+        } 
+        else if(!this.state.Email_ID__c){
+            alert('Please complete the field titled: "Email"')
+        }
+        else if(!this.state.Contact_Number__c){
+            alert('Please complete the field titled: "Phone"')
+        } 
+        else if(!this.state.Mailing_Address__c){
+            alert('Please complete the field titled: "Mailing Address 1"')
+        } 
+        else if(!this.state.Mailing_City__c){
+            alert('Please complete the field titled: "City"')
+        } 
+        else if(!this.state.Mailing_State__c){
+            alert('Please complete the field titled: "State"')
+        } 
+        else if(!this.state.Mailing_Zipcode__c){
+            alert('Please complete the field titled: "Zip"')
+        } 
+        else if(!this.state.Short_Bio__c){
+            alert('Please complete the "bio" field"')
+        }
+        else if(!this.state.How_did_you_hear_about_our_program__c){
+            alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
+        } 
+        else if(!this.state.Coding_experience__c){
+            alert('Please complete the field titled: "Do you have coding experience?"')
+        }
+        else if(!this.state.Highest_education_level__c){
+            alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
+        } 
+        else if(!this.state.Preference_to_experience_learning__c){
+            alert('Please complete the field titled: "Please provide your preference to experience learning"')
+        } 
+        else if(!this.state.Primary_intentions_for_enrolling__c){
+            alert('Please complete the field titled: "What are your primary intentions for enrolling in this program?"\n\nIf you selected "Other" please describe your "Other".')
+        }
+        else if(!this.state.Payment_Type__c){
+            alert('Please complete the field titled: "How are you planning to fund the program fee if accepted into program?"')
+        } 
+        else if(!this.state.Ethnicity__c || this.state.Ethnicity__c === ''){
+            alert('Please complete the field titled: "Please provide your ethnicity"\n\nIf you selected "Other" please describe your "Other".')
+        }
+        else if(!this.state.Gender__c || this.state.Gender__c === ''){
+            alert('Please complete the field titled: "Please provide your Gender"\n\nIf you selected "Other" please describe your "Other".')
+        }
+        // else if(!this.state.VET_GI_BILL_BENEFITS__c){
+        //     alert('Please complete the field titled: "Are you a VET who has GI BILL Benefits that you would like to use?"')
+        // }
+        else if(!this.state.Program_you_are_applying_to__c){
+            alert('Please complete the field titled: "Which cohort are you applying to?"')
+        } 
+        else if(!this.state.US_citizen_or_permanent_resident__c){
+            alert('All participants must be a US citizen or permanent resident.')
+        }
+        else if(!this.state.Authorized_to_work_in_US__c){
+            alert('All participants must be authorized to work in the US.')
+        }
+        else if(!this.state.High_School_Diploma_or_GED__c){
+            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
+        } else {
+            // Post request to the database
+            this.setState({loader:true}); 
+            // fetch(`http://localhost:3000/dev2/application`, {
+            fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/application`, {
+                method: 'POST', 
+                mode: 'cors', 
+                cache: 'no-cache', 
+                credentials: 'same-origin', 
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                redirect: 'follow', 
+                referrerPolicy: 'no-referrer',
+                body: this.fixJSON()
+            })
+            .then((response) => {
+                this.setState({loader: false}) 
+                return response.json()}
+            )
+            .then((response) => {
+                console.log(response)
+                if(response.success){
+                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
+                } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
+                    alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \n\nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\n\nIf the email isn’t there please contact us at support@nebulaacademyny.com regarding the issue.`)
+                } else {
+                    alert(`It seems that your device is unable to submit through this form. Please submit an application through the following link: https://bit.ly/3h15PJT`)
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            })
+
+        }
+
     }
     arrayRemove(arr, value){
         return arr.filter(function(ele){
@@ -113,59 +180,62 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state
+        let tempObj = this.state;
+        delete tempObj.cohortOptions;
+        delete tempObj.loading;
+        
+        //if the temporary object contains a list make it a semicolon seperated list
         for(let item in tempObj){
             if(typeof tempObj[item] == "object"){
                 tempObj[item] = tempObj[item].join(';');
             }
         }
-       return JSON.stringify(tempObj)
+        return JSON.stringify(tempObj);
     }
+
     handleInputChange(event) {
         let target = event.target;
+        
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
         let listName = target.parentElement.parentElement.className.split(" ")[0];
-        
         //if the parent element indicates that this is a list item
         if(isList === 'list'){
-            //if state does not contain listName
+            //if state does not contain that specific listName yet
             if(!this.state[listName]){
                 //first time something is being added to an array
                 this.setState({
-                    [listName]: [name]+';'
+                    [listName]: [name]
                 })
+            //if that specific listName exists 
             } else if (this.state[listName].indexOf(name) > -1) {
                 //unchecked box
-                let nameStr = this.state[listName].split(name+';').join('');
+                let oldList = this.state[listName]
+                oldList.pop(oldList.indexOf(name))
                 this.setState({
-                    [listName]: nameStr
+                    [listName]: oldList
                 })
-                
-                // this.state[listName].splice(this.state[listName].indexOf(name), 1) //this shouldnt work but it does
             } else {
                 //adding to an existing array
-                let nameStr = [this.state[listName].concat(name+';')]
+                let fullArray = [...this.state[listName], name]
                 this.setState({
-                    [listName]: nameStr
+                    [listName]: fullArray
                 })
             }
         //else its not a list
         } else {
             //boolean comes as string so set it to boolean
-            if (value==="true"){
-                value = true
-            }
-            if (value==="false"){
-                value = false
-            }
-            this.setState({
-                [name]: value
-            });
+            if((value === "true" || value === "false") && target === 'select-one'){
+                this.setState({
+                    [name]: value === 'true' ? true : false,
+                })
+            } else {
+                this.setState({
+                    [name]: value.trim()
+                });
+            }           
         }
-        this.fixJSON();
-        console.log(this.fixJSON())
     } 
     render() {
         return (
@@ -173,13 +243,16 @@ class applicationContent extends Component {
                 <Row>
                     <Col xs={12}>
                         <Row>
-                            <h2 style={{marginTop:"20px"}}>The application consists of two parts: </h2>
+                            <h2 style={{marginTop:"20px"}}>The application consists of three phases: </h2>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
-                            <p><b>Part 1:</b> the form on this page</p>
+                            <p><b>Phase 1:</b> the form on this page</p>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
-                            <p><b>Part 2:</b> an interview to understand a participants motivations, commitments, & capacity</p>
+                            <p><b>Phase 2:</b> an assessment to test your logical thinking</p>
+                        </Row>
+                        <Row style={{marginLeft:"50px"}}>
+                            <p><b>Phase 3:</b> an interview to understand a participants motivations, commitments, & capacity</p>
                         </Row>
                         <hr></hr>
                         <Row>
@@ -289,7 +362,7 @@ class applicationContent extends Component {
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Zip</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_Zipcode__c" placeholder="Last Name" />
+                                    <Form.Control required onChange={this.handleInputChange} name="Mailing_Zipcode__c" placeholder="00000" />
                                 </Form.Group>
                             </Form.Row>
                                 <Form.Label>Online Profiles (one per textbox) </Form.Label>
@@ -319,6 +392,7 @@ class applicationContent extends Component {
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Individuals formerly involved in the justice system" type="checkbox"/> Individuals formerly involved in the justice system</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Homeless individuals" type="checkbox"/> Homeless individuals</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Native American" type="checkbox"/> Native American</label><br/>
+                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="None" type="checkbox"/> None</label><br/>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide details on how you heard about our program.</Form.Label><br/>
@@ -391,13 +465,13 @@ class applicationContent extends Component {
                             <Form.Group>
                                 <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
-                                <option aria-label="option 0" label="Select"></option> 
-                                <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
-                                <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
-                                <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
-                                <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
-                                <option aria-label="option 6" value="Other" label="Other">Other</option> 
+                                    <option aria-label="option 0" label="Select"></option> 
+                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
+                                    <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
+                                    <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
+                                    <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
+                                    <option aria-label="option 5" value="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.">I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation." label="I am attending the program in preparation to enroll in an accredited post-secondary institution and do not intend to pursue a job upon graduation.</option> 
+                                    <option aria-label="option 6" value="Other" label="Other">Other</option> 
                                 </Form.Control>
                             </Form.Group>
                             <Form.Row className="paddedSides">
@@ -415,7 +489,7 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
-                                <Form.Label>How are you planning to fund the program fee of $16,995 if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
+                                <Form.Label>How are you planning to fund the program fee if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paying in full</label><br/>
                                 <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
@@ -427,6 +501,7 @@ class applicationContent extends Component {
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Caucasian" value="Caucasian"> Caucasian</option>
                                         <option aria-label="option 2" label="African American" value="African American"> African American</option>
+                                        {/* <option aria-label="option 3" label="Asian" value="Asian"> Asian</option> */}
                                         <option aria-label="option 3" label="Hispanic or Latin Origin" value="Hispanic or Latin Origin"> Hispanic or Latin Origin</option>
                                         <option aria-label="option 4" label="Native American" value="Native American"> Native American</option>
                                         <option aria-label="option 5" label="Native Hawaiian or Other Pacific Islander" value="Native Hawaiian or Other Pacific Islander"> Native Hawaiian or Other Pacific Islander</option>
@@ -435,13 +510,13 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Ethnicity__c.indexOf('Other') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Ethnicity__c && (this.state.Ethnicity__c === 'Other' || this.state.Ethnicity__c === 'Other ') ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your ethnicity</Form.Label>
-                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Gender" />
+                                    <Form.Control input="true" onChange={this.handleInputChange} name="Ethnicity_Other_description__c" placeholder="Ethnicity" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
-                                <Form.Label>Please provide your Gender</Form.Label>
+                                <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control required onChange={this.handleInputChange} className="Gender__c" name="Gender__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Female" value="Female"> Female</option>
@@ -452,13 +527,13 @@ class applicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Row className="paddedSides">
-                                <Form.Group as={Col} className={this.state.Gender__c.indexOf('Other/Prefer to self-describe') > -1 ? "showing" : "hidden"}>
+                                <Form.Group as={Col} className={this.state.Gender__c && this.state.Gender__c === 'Other/Prefer to self-describe' ? "showing" : "hidden"}>
                                     <Form.Label>Please provide your gender</Form.Label>
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Gender_Other__c" placeholder="Gender" />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Group>
-                                <Form.Label>If you are a VET do you have GI BILL benefits you would like to use?</Form.Label>
+                                <Form.Label>Are you a VET who has GI BILL benefits that you would like to use?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="VET_GI_BILL_BENEFITS__c" as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Yes" value="true">Yes</option> 
@@ -470,7 +545,6 @@ class applicationContent extends Component {
                                 <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
                                     <option aria-label="option 0" label="Select" value="false"></option> 
                                     {this.populateOptions()}
-                                    
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group>
@@ -496,12 +570,12 @@ class applicationContent extends Component {
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
                                 </Form.Control>
                             </Form.Group>
-                            <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Put</Button>
+                            <Button variant="secondary" type="submit" onClick={(e) => this.putData(e)}>Submit</Button>
+                            {this.state.loader? <div className='fullScreen'><h1 className="loaderText"><br></br>Submitting</h1><div className="loader"><div></div><div></div><div></div></div></div>:<span></span>}
                         </Form>
                     </Col>
                 </Row>
-                <p style={{maxWidth:"80vw", wordWrap: "break-word"}}>JSON: {this.fixJSON()}</p>
-                <Button variant="secondary" type="submit" onClick={(e) => this.getData(e)}>Get</Button>
+                <br/>
             </Container>
         )
     }
