@@ -168,7 +168,7 @@ class ApplicationPhase2Content extends Component {
                         </Row>
                         <Row>
                             <h5 style={{color: 'red'}}><b>IMPORTANT: </b></h5>
-                            <h6>Your first name, last name, and email address <em>must</em> match your previously enetered information. The email that provided you with this link also has the first name, last name, and email address which you previously entered.</h6>
+                            <h6>Your first name, last name, and email address <em>must</em> match your previously entered information. The email that provided you with this link also has the first name, last name, and email address which you previously entered.</h6>
                         </Row>
                         <br></br>
                         <Form className="manualContainer" >
