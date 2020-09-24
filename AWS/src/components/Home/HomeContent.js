@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Container, Button } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 import './HomeContent.css';
 import CurriculumContent from '../Curriculum/CurriculumContent';
 import { CourseContent } from '../Courses/CourseContent';
@@ -67,7 +67,7 @@ export const HomeContent = () => (
                                     <Card.Text>
                                     Nebula Academy prepares you to enter the workforce as a qualified job candidate. The hands-on, real-world learning approach gives you the practical knowledge and skills needed to show what you know in an interview.
                                     </Card.Text>
-                                    <a href="/outcomes" className="linkLight">Click here to read more about job readiness.</a>
+                                    <a href="/Outcomes" className="linkLight">Click here to read more about job readiness.</a>
                                 </Card.Body>
                             </Card>
                         </Col>

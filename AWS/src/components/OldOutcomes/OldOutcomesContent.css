@@ -1,0 +1,44 @@
+.dataBox{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background-color:grey;
+    margin-bottom: 10px;
+}
+.oldOutcomesContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.oldOutcomesCard{
+    margin-bottom: 30px;
+}
+.oldOutcomesCard:hover{
+    box-shadow: 4px 8px 16px 4px rgba(58, 0, 0, 0.4)
+}
+.oldOutcomesTitle{
+    text-align: center; 
+    margin-bottom: 20px; 
+    width: 100%; 
+}
+.oldOutcomesText{
+    width: 90%; 
+    margin: 0 auto;  
+}
+.oldOutcomesLink{
+    margin: 10px auto; 
+    padding: 10px 0; 
+    color: gray; 
+    transition: transform 500ms; 
+}
+.oldOutcomesLink:hover{
+    transform: scale(1.1); 
+    color: rgb(103, 11, 196); 
+    text-decoration: none;
+}
+.oldOutcomesImage{
+    transition: transform 500ms; 
+    padding: 30px; 
+}
+.oldOutcomesImage:hover{
+    transform: scale(1.1); 
+}

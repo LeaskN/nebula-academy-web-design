@@ -1,43 +1,69 @@
 import React from 'react';
-import { Row, Col, Container, Card } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 import './OutcomesContent.css'
+import OldOutcomesContent from '../OldOutcomes/OldOutcomesContent';
 
-
-const OutcomesContent = () =>  (
-
-            <React.Fragment>
-                <Container>
-                    <Row>
-                            <h1 className="outcomesTitle">Outcomes</h1>
-                            <div className="outcomesText">
-                                <p>Everyone learns at a different pace, has different learning goals and career goals. At Nebula Academy we ensure our program meets diverse learning needs and provides participants with a path to a sustainable career in Information Technology.</p>
-                                <p> As a research focused organization, we place our programs, our instructors, and our participants under ongoing evaluation to gain insight during, and after our programs. We know what our participants think of our instruction, our content, and our ability to support them in gaining a place in the workforce. Since we established the organization, we’ve collected feedback reports and implemented pre and post assessments to enable our team to continuously enhance our curriculum and our delivery methodology.</p>
-                            </div>            
-                    </Row>
-                    <Row>
-                        <Col md={6}>
-                            <Card>
-                                <Card.Img className="outcomeImage" variant="top" src={require("../../assets/JobGrowth_graphs_1.png")} />
-                                <a style={{textAlign:"center"}}className="outcomesLink" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
-                            </Card>
-                            <Card>
-                                <Card.Img className="outcomeImage" href="" variant="top" src={require("../../assets/JobGrowth_graphs_2.png")} />
-                                <a style={{textAlign:"center"}}className="outcomesLink" href="https://www.glassdoor.com/research/september-local-pay-reports/"> View Source</a>
+export const OutcomesContent = () => (
+    <React.Fragment>
+        <div className="oldOutcomesContainer"> 
+            <OldOutcomesContent/> 
+        </div>
+        <div className="contentContainer outcomesQuotesBG "> 
+                    <Row className="overImage">
+                        <Col lg={true}>
+                            <Card className="introRowTile">
+                                <Card.Body className="transPurple">
+                                    <Card.Title>Embedding “Stacking” Industry and Professional Certifications within Higher Education</Card.Title>
+                                    <Card.Text>
+                                        The top three benefits to embedding or stacking industry and professional certifications 
+                                        in higher education are:
+                                        <br/>
+                                        <br/>
+                                        1. Students can complete both academic credential and industry/professional-recognized 
+                                        certification.
+                                        <br/>
+                                        2. It helps keep college/university curriculum up-to-date with industry standards. 
+                                        <br/>
+                                        3. Employers get students trained to their specifications or their various tools.
+                                        
+                                    </Card.Text>
+                                </Card.Body>
                             </Card>
                         </Col>
-                        <Col md={6}>
-                            <Card>
-                                <Card.Img className="outcomeImage" href="" variant="top" src={require("../../assets/JobGrowth_graphs_3.png")} />
-                                <a style={{textAlign:"center"}}className="outcomesLink" href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6"> View Source</a>
+                        <Col lg={true}>
+                            <Card className="introRowTile">
+                                <Card.Body className="transOrange">
+                                    <Card.Title>
+                                        Industry Certifications are the norm in the modern workforce
+                                    </Card.Title>
+                                    <Card.Text>
+                                        There is growing interest in the certifications awarded by industry and professional associations. 
+                                        Today some 3.3 million Americans between the ages of 25 and 64 hold a job-related certification as their 
+                                        highest post-secondary credential (Lumina Foundation Strategic Plan 2017-2020). These certifications are 
+                                        not typically tied to a specific educational program; rather, they are awarded through direct assessment 
+                                        and validation of skills in cooperation with a business, trade association or another industry group.
+                                    </Card.Text>
+                                </Card.Body>
                             </Card>
-                            <Card>
-                                <Card.Img className="outcomeImage" href="" variant="top" src={require("../../assets/JobGrowth_graphs_4.png")} />
-                                <a style={{textAlign:"center"}}className="outcomesLink" href="https://money.usnews.com/careers/best-jobs/software-developer/salary"> View Source</a>
+                        </Col>
+                        <Col lg={true}>
+                            <Card className="introRowTile">
+                                <Card.Body className="transPurple">
+                                    <Card.Title>
+                                        Reducing the gap between Higher Education and Industry needs
+                                    </Card.Title>
+                                    <Card.Text>
+                                        Nebula Academy bridges the gap between industry and colleges and universities to embed or “stack” industry 
+                                        certifications within higher education courses and/or programs. Our model of embedding certifications in 
+                                        educational programs allows learners to simultaneously obtain one or more marketable industry/professional certifications, 
+                                        along with their degree at graduation.
+                                    </Card.Text>
+                                </Card.Body>
                             </Card>
                         </Col>
                     </Row>
-                </Container>
-            </React.Fragment>
+        </div>
+    </React.Fragment>
 );
 
 export default OutcomesContent;
