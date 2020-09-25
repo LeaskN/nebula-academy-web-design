@@ -8,6 +8,7 @@
 .oldOutcomesContainer{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 .oldOutcomesCard{
     margin-bottom: 30px;

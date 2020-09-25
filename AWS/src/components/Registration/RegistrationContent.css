@@ -1,3 +1,6 @@
+h2{
+    margin-bottom: .5em;
+}
 .formContainer {
     display: flex;
     align-content: center;
@@ -9,11 +12,14 @@
 }
 .registrationCard{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    margin: 15px;
+    margin: 25px;
     border-radius: 20px;
     /* border: 10px solid #FF8C0E; */
     border: 10px solid #7F5A8F;
     padding: 10px;
+}
+.registrationCard:last-child{
+    margin-bottom: 2.5em;
 }
 .registrationCard:hover{
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.5);
@@ -44,10 +50,6 @@
 }
 .textWarning{
     color: rgb(224, 12, 12); 
-}
-.sectionTitle{
-    margin-top: 20px; 
-    text-shadow: 0px 10px 10px white; 
 }
 #registrationTabs-tab-EDUCATOR{
     display: flex; 
@@ -90,24 +92,18 @@
     font-size: 14px;
     text-align: center;  
 }
-.alignCenter {
-    margin: 15px; 
-}
-.registrationContainer, 
-.registrationContainerOrange{
+
+/* .registrationContainer{
     border-top: 2px solid #7F5A8F; 
     background-image: linear-gradient(#7F5A8F, white, white, transparent); 
     margin-bottom: 15px; 
     border-radius: 20px; 
-}
-.registrationContainerOrange{
+} */
+/* .registrationContainerOrange{
     border-top: 2px solid #7F5A8F; 
     background-image: linear-gradient(#7F5A8F, white, white, transparent); 
-}
+} */
 nav.nav.nav-tabs{
     border: none; 
 }
 
-.studentTabStyle{
-    padding: 30px 0px;
-}

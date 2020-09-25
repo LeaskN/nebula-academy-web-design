@@ -1,27 +1,21 @@
 import React from 'react';
-import { Container, Col, Row, Alert, Button, Tabs, Tab } from 'react-bootstrap';
-// import Iframe from 'react-iframe';
+import { Container, Col, Row, Alert, Button } from 'react-bootstrap';
 import './RegistrationContent.css';
 import image1 from '../../assets/6.1_AWS_Basics.jpg';
 import image2 from '../../assets/6_AWS_Architect.jpg';
 import image3 from '../../assets/nebula-developing.jpg';
-import image4 from '../../assets/9_AWS_presenter.jpg'
 
 const registrationContent = () => (
     <Container>
-        {/* <p className="resgistrationMessage">
-            Please choose between the Student and Educator paths below: 
-        </p> */}
-
-        <Row className={"studentTabStyle"}>
+        <Row>
             <Col xs={12}>
-            <div className="registrationContainerOrange">
+            <div>
                 <Row>
-                    <Col className="alignCenter">
+                    <Col>
                         <br/>
-                        <h2 className="sectionTitle" style={{textAlign:'center'}}>Student Registration</h2>
+                        <h2 style={{textAlign:'center'}}>Student Registration</h2>
                         <p className="textWarning"style={{textAlign:'center'}}> Student classes are not currently being offered but check back again at a later time. </p>
-                        <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: 631-468-7477</p>
+                        <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: <span style={{fontWeight: "bold"}}>631-468-7477.</span></p>
                     </Col>
                 </Row>
                 </div>
