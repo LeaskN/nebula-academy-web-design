@@ -5,8 +5,8 @@ import { Home } from './pages/Home';
 import { NoMatch } from './pages/NoMatch';
 // import { Curriculum } from './pages/Curriculum';
 import { Registration } from './pages/Registration';
-import { Universities } from './pages/Universities';
 import { Outcomes } from './pages/Outcomes';
+// import { OldOutcomes } from './pages/OldOutcomes';
 import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
 import { Partners } from './pages/Partners';
@@ -25,7 +25,7 @@ function App() {
       <CookieConsent
         style={{ background: "#131520" }}
         buttonStyle={{ color: "#4e503b", borderRadius: '10px', shadow:'10px', backgroundColor: 'white' }}
-        >
+      >
         This website uses cookies to enhance the user experience.
       </CookieConsent>
       <NavigationBar/>
@@ -35,8 +35,8 @@ function App() {
             {/* <Route path= "/courses" component={Courses}/> */}
             {/* <Route path = "/curriculum" component={Curriculum}/> */}
             <Route path = "/registration" component={Registration}/>
-            <Route path = "/educator" component={Universities}/>
-            <Route path ="/outcomes" component={Outcomes}/>
+            <Route path = "/Outcomes" component={Outcomes}/>
+            {/* <Route path ="/Outcomes" component={OldOutcomes}/> */}
             <Route path ="/staff" component={Staff}/>
             <Route path ="/Partners" component={Partners}/>
             <Route path ="/GuestSpeakers" component={GuestSpeakers}/>

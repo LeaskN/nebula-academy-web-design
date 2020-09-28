@@ -29,7 +29,7 @@ export const Footer = () => (
                     <Nav.Item className="noPadding nobull noMargin smallLineHeight"><Nav.Link className="footerItem" href="/registration">Register</Nav.Link></Nav.Item>
                     <Nav.Item className="noPadding nobull noMargin smallLineHeight"><Nav.Link className="footerItem" href="/partners">Partners</Nav.Link></Nav.Item>
                     <Nav.Item className="noPadding nobull noMargin smallLineHeight"><Nav.Link className="footerItem" href="/guestspeakers">GuestSpeakers</Nav.Link></Nav.Item>
-                    <Nav.Item className="noPadding nobull noMargin smallLineHeight"><Nav.Link className="footerItem" href="/outcomes">Outcomes</Nav.Link></Nav.Item>
+                    <Nav.Item className="noPadding nobull noMargin smallLineHeight"><Nav.Link className="footerItem" href="/Outcomes">Outcomes</Nav.Link></Nav.Item>
                 </ul>
                 <ul style={{justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start', padding:'0px', whiteSpace: 'nowrap'}}>
                     <h5 style={{color:'#BBBBBB'}}>Articles</h5>

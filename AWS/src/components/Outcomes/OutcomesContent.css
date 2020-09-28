@@ -1,44 +1,47 @@
-.dataBox{
-    height: 300px;
-    width: 300px;
+.outcomesBackImage1{
+    background-image: url("../../assets/partners.jpg");
+    background-size: cover;
+    background-position: -0px -170px;
+}
+.contentContainer{
+    width: 90%; 
+    margin: 0 auto; 
+}
+.outcomesCard5{
     margin: auto;
-    background-color:grey;
-    margin-bottom: 10px;
+    padding: 40px;
+    padding-top: 55px; 
+    padding-bottom: 55px; 
+    height: 100%; 
 }
 .outcomesContainer{
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 30px; 
 }
-.outcomesCard{
-    margin-bottom: 30px;
+.outcomesQuotesBG{
+    background-image: url("../../assets/2.5_AWS_home_curriculum_placement.jpg");
+    background-size: cover;
+    background-position: 0% 35%;
 }
-.outcomesCard:hover{
-    box-shadow: 4px 8px 16px 4px rgba(58, 0, 0, 0.4)
+
+.transPurple {
+    background-color: rgba(133,84,156, 0.3);
+    transition: background-color 500ms ease;
 }
-.outcomesTitle{
-    text-align: center; 
-    margin-bottom: 20px; 
-    width: 100%; 
+
+.transOrange {
+    background-color:rgba(255, 153, 0, 0.3);
+    transition: background-color 500ms ease;
 }
-.outcomesText{
-    width: 90%; 
-    margin: 0 auto;  
+
+.transOrange:hover{
+    background-color:rgba(255, 153, 0, 1);
+
 }
-.outcomesLink{
-    margin: 10px auto; 
-    padding: 10px 0; 
-    color: gray; 
-    transition: transform 500ms; 
+
+.transPurple:hover{
+    background-color: rgba(133,84,156, 1);
 }
-.outcomesLink:hover{
-    transform: scale(1.1); 
-    color: rgb(103, 11, 196); 
-    text-decoration: none;
-}
-.outcomeImage{
-    transition: transform 500ms; 
-    padding: 30px; 
-}
-.outcomeImage:hover{
-    transform: scale(1.1); 
+
+.removePadding{
+    padding: 0px;
 }

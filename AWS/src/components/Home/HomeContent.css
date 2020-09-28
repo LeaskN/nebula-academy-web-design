@@ -15,11 +15,11 @@
     transition: background-color 500ms ease;
 }
 .introRowTile:hover{
-    background-color: rgb(0, 0, 0)
+    background-color: rgb(0, 0, 0);
     /* color: rgb(210, 194, 194);  */
 }
 .introRow1Column1{
-   background-color:#86549C
+   background-color:#86549C;
 }
 .introRow1Column2{
     background-color:#ff9900;
