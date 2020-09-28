@@ -14,7 +14,7 @@ const registrationContent = () => (
                     <Col>
                         <br/>
                         <h2 style={{textAlign:'center'}}>Student Registration</h2>
-                        <p className="textWarning"style={{textAlign:'center'}}> Student classes are not currently being offered but check back again at a later time. </p>
+                        <p className="textWarning"style={{textAlign:'center'}}> Student classes are not currently being offered due to COVID-19, please check again at a later date. </p>
                         <p style={{textAlign:'center'}}>Questions? Contact us by e-mail at: <a href="mailto:succeed@nebulaacademyny.com">succeed@nebulaacademyny.com</a> or by phone at: <span style={{fontWeight: "bold"}}>631-468-7477.</span></p>
                     </Col>
                 </Row>
