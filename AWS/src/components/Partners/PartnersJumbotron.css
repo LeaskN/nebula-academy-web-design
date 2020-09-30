@@ -1,10 +1,13 @@
-.partnersJumbotron{
-    background-image: url('../../assets/partners.jpg');
+.partnersJumbotron {
+    background-image: url('../../assets/8.3_AWS_partners.png');
     background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    z-index: 02;
-    height:250px;
+    z-index: 1;
+    height: 250px;
     position: relative;
-    z-index: -2;
-    margin: 0px;
+    margin: 0;
 }

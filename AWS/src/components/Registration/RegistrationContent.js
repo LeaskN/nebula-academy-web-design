@@ -152,8 +152,7 @@ const registrationContent = () => (
                         </Iframe>	
                         <br/>
                     </Col>
-                </Row> */}
-                
+                </Row> */}        
             </Col>
         </Row>
     </Container>

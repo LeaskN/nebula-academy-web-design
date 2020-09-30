@@ -1,12 +1,16 @@
 .registrationJumbotron{
     background-image: url('../../assets/AWS_REGISTER.png');
     background-size: cover;
-    background-position: left center; 
+    background-position: center; 
     position: relative; 
     color: white;
     z-index: 02;
     z-index: -2;
     margin: 0px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .registrationOverlay{
     height: 100%; 

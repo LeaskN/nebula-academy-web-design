@@ -1,9 +1,10 @@
 .partnersContainer{
-    display: flex;
-    justify-content: space-around;
-}
-.adjustContainer{
     margin-top: 1em;
+}
+
+.partnersContainer h1{
+    margin-bottom: 20px;
+    text-align: center;
 }
 .partnerCard{
     margin-bottom: 10px;

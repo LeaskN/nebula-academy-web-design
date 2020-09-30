@@ -1,11 +1,13 @@
 import React from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
-import './PartnersJumbotron.css'
+import './PartnersJumbotron.css';
 
 export const PartnersJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="partnersJumbotron">
-      <Container>
+      <div className="AWSLogo"></div>
+      <div className="awsOverlay"></div>
+      <Container className="jumboContainer">
         <h1 className="jumboText">Partners</h1>
       </Container>
     </Jumbotron>

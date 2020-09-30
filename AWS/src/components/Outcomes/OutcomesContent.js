@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
-import './OutcomesContent.css'
+import './OutcomesContent.css';
 import OldOutcomesContent from '../OldOutcomes/OldOutcomesContent';
 
 export const OutcomesContent = () => (

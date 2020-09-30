@@ -62,7 +62,7 @@ render() {
                 <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                     { this.createSlideCard() }
                 </Row>
-                    <InfoPanel state={this.state}/>
+                    <InfoPanel name={"INFO PANEL!!!"} state={this.state}/>
             </React.Fragment>
         )
 

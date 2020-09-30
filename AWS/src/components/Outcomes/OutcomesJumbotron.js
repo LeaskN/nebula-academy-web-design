@@ -5,7 +5,7 @@ import './OutcomesJumbotron.css'
 export const OutcomesJumbotron = () => (
   <React.Fragment>
     <Jumbotron className="outcomesJumbotron">
-    <div className="AWSLogo"></div>
+      <div className="AWSLogo"></div>
       <div className="awsOverlay"></div>
       <Container className="jumboContainer">
         <h1 className="jumboText homeJumboText">AWS Academy <span className="orange-text"> Accreditation Preparation </span> Course</h1>
@@ -14,4 +14,3 @@ export const OutcomesJumbotron = () => (
     </Jumbotron>
   </React.Fragment>
 )
-
