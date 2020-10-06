@@ -180,7 +180,7 @@ class applicationContent extends Component {
         });
     }
     fixJSON(){
-        let tempObj = this.state;
+        let tempObj = { ...this.state };
         delete tempObj.cohortOptions;
         delete tempObj.loading;
         

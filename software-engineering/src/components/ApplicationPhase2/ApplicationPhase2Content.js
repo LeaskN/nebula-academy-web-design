@@ -114,14 +114,14 @@ class ApplicationPhase2Content extends Component {
         })
     }
     fixJSON(){
-        let tempObj = this.state;
+        let tempObj = { ...this.state };
         delete tempObj.cohortOptions;
         delete tempObj.loading;
         delete tempObj.Id;
         delete tempObj.loader;
         delete tempObj.charCount;
         //if the temporary object contains a list make it a semicolon seperated list
-        console.log(tempObj)
+        console.log(tempObj);
         return JSON.stringify(tempObj);
     }
     handleInputChange(event) {
@@ -241,7 +241,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label className="top">
                                         <span><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_1__c"]}
+                                            {this.state.charCount ? 20000 - this.state.charCount["Answer_1__c"] : '' }/20000
                                         </p>
                                     </Form.Label>
                                     <Form.Control 
@@ -259,7 +259,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label className="top">
                                         <span><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_2__c"]}
+                                            {this.state.charCount ? 20000 - this.state.charCount["Answer_2__c"] : '' }/20000
                                         </p>
                                     </Form.Label>
                                     <Form.Control 
@@ -277,7 +277,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label className="top">
                                         <span><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_3__c"]}
+                                            {this.state.charCount ? 20000 - this.state.charCount["Answer_3__c"] : '' }/20000
                                         </p>
                                     </Form.Label>
                                     <Form.Control 
@@ -308,7 +308,7 @@ class ApplicationPhase2Content extends Component {
                                             <p>Based on the following image what code would you punch in and why?</p>
                                         </span> 
                                         <p className="charLimit">
-                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_4__c"]}
+                                            {this.state.charCount ? 20000 - this.state.charCount["Answer_4__c"] : '' }/20000
                                         </p>
                                     </Form.Label>
                                     <Row>
@@ -335,7 +335,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label className="top">
                                         <span><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{30 - this.state.charCount["Answer_5__c"]}
+                                            { this.state.charCount ? 30 - this.state.charCount["Answer_5__c"] : '' }/30
                                         </p>
                                     </Form.Label>
                                     <Form.Control 
@@ -353,7 +353,7 @@ class ApplicationPhase2Content extends Component {
                                     <Form.Label className="top">
                                         <span><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{30 - this.state.charCount["Answer_6__c"]}
+                                            { this.state.charCount ? 30 - this.state.charCount["Answer_6__c"] : '' }/30
                                         </p>
                                     </Form.Label>
                                     <Form.Control 
@@ -458,7 +458,7 @@ class ApplicationPhase2Content extends Component {
                                             </i>
                                         </span>
                                         <p className="charLimit">
-                                            <b>char limit: </b>{25000 - this.state.charCount["Answer_10__c"]}
+                                            {this.state.charCount ? 25000 - this.state.charCount["Answer_10__c"] : '' }/25000
                                         </p>   
                                     </Form.Label>
                                     <Form.Control 
