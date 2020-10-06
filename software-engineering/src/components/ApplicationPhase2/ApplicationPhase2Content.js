@@ -20,6 +20,15 @@ class ApplicationPhase2Content extends Component {
                 "Answer_8__c": '',
                 "Answer_9__c": '',
                 "Answer_10__c": ''
+            },
+            "charCount": {
+                "Answer_1__c": 0,
+                "Answer_2__c": 0,
+                "Answer_3__c": 0,
+                "Answer_4__c": 0,
+                "Answer_5__c": 0,
+                "Answer_6__c": 0,
+                "Answer_10__c": 0
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -91,9 +100,7 @@ class ApplicationPhase2Content extends Component {
                 throw new Error(response.status)
             } else {
                 return response.json();
-            }
-
-             
+            } 
         })
         .then((response) => {
             if(response.errors.length === 0){
@@ -112,6 +119,7 @@ class ApplicationPhase2Content extends Component {
         delete tempObj.loading;
         delete tempObj.Id;
         delete tempObj.loader;
+        delete tempObj.charCount;
         //if the temporary object contains a list make it a semicolon seperated list
         console.log(tempObj)
         return JSON.stringify(tempObj);
@@ -120,6 +128,7 @@ class ApplicationPhase2Content extends Component {
         let target = event.target;
         let value = target.type === 'radio' ? target.alt : target.value;
         let name = target.name;
+        let charCount = value.length;
 
         if(name === 'Name' || name === 'Last'){
             this.setState({
@@ -127,12 +136,16 @@ class ApplicationPhase2Content extends Component {
             })
         } else {
             let answers = this.state.Answers;
+            let charCountStore = this.state.charCount;;
+            charCountStore[name] = charCount;
             answers[name] = value;
+
             this.setState({
-                "Answers" : answers
+                "Answers" : answers,
+                "charCount" : charCountStore
             })
         }
-    } 
+    }
     render() {
         return (
             <Container>
@@ -142,7 +155,8 @@ class ApplicationPhase2Content extends Component {
                             <h2 style={{marginTop:"20px"}}>This is phase 2 of the Nebula Academy Software Engineering Bootcamp </h2>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
-                            <p><s><b>Phase 1:</b> the form on this page</s></p>
+                            <p>
+                                <s><b>Phase 1:</b> the form on this page</s></p>
                         </Row>
                         <Row style={{marginLeft:"50px"}}>
                             <p><b>Phase 2:</b> an assessment to test your logical thinking</p>
@@ -175,21 +189,43 @@ class ApplicationPhase2Content extends Component {
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>First</Form.Label>
-                                    <Form.Control required input="true" onChange={this.handleInputChange} name="Name" placeholder="First Name" />
+                                    <Form.Control 
+                                        required input="true" 
+                                        onChange={this.handleInputChange} 
+                                        name="Name" 
+                                        placeholder="First Name" 
+                                    />
                                 </Form.Group>
                                 <Form.Group as={Col}>
                                     <Form.Label>Last</Form.Label>
-                                    <Form.Control required onChange={this.handleInputChange} name="Last" placeholder="Last Name" />
+                                    <Form.Control 
+                                        required 
+                                        onChange={this.handleInputChange} 
+                                        name="Last" 
+                                        placeholder="Last Name" 
+                                    />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control required input="true" name="Email_ID__c" type="email" placeholder="Enter Email" />
+                                    <Form.Control 
+                                        required 
+                                        input="true" 
+                                        name="Email_ID__c" 
+                                        type="email" 
+                                        placeholder="Enter Email" 
+                                    />
                                 </Form.Group>
                                  <Form.Group as={Col}>
                                     <Form.Label>ID (should match ID provided via email)</Form.Label>
-                                    <Form.Control required input="true" name="Id" disabled placeholder={this.id()} />
+                                    <Form.Control 
+                                        required 
+                                        input="true" 
+                                        name="Id" 
+                                        disabled 
+                                        placeholder={this.id()} 
+                                    />
                                 </Form.Group>
                             </Form.Row>
                             <hr></hr>
@@ -202,16 +238,58 @@ class ApplicationPhase2Content extends Component {
                             </Row>
                             <br></br>
                                 <Form.Group className="question">
-                                    <Form.Label className="top"><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 1 here." onChange={this.handleInputChange} name="Answer_1__c" required />
+                                    <Form.Label className="top">
+                                        <span><b>Q1:</b> Explain the internet to someone coming out of a 30 year coma.</span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_1__c"]}
+                                        </p>
+                                    </Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={20000} 
+                                        placeholder="Write your response to question 1 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_1__c" 
+                                        required
+                                    />
                                 </Form.Group>
                                 <Form.Group className="question">
-                                    <Form.Label className="top"><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 2 here." onChange={this.handleInputChange} name="Answer_2__c" required />
+                                    <Form.Label className="top">
+                                        <span><b>Q2:</b> Describe a color to a blind person (for example purple, green, or yellow).</span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_2__c"]}
+                                        </p>
+                                    </Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={20000} 
+                                        placeholder="Write your response to question 2 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_2__c" 
+                                        required
+                                    />
                                 </Form.Group>
                                 <Form.Group className="question">
-                                    <Form.Label className="top"><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 3 here." onChange={this.handleInputChange} name="Answer_3__c" required />
+                                    <Form.Label className="top">
+                                        <span><b>Q3:</b> Write instructions teaching someone to make an egg sandwich.</span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_3__c"]}
+                                        </p>
+                                    </Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={20000} 
+                                        placeholder="Write your response to question 3 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_3__c" 
+                                        required 
+                                    />
                                 </Form.Group>
                             <hr></hr>
                             {/* Section 3: Logical Thinking */}
@@ -221,21 +299,73 @@ class ApplicationPhase2Content extends Component {
                             <br></br>
                                 <Form.Group className="question">
                                     <Form.Label className="top">
-                                        <p><b>Q4:</b> You are a spy following a target who just entered a building with a door locked by a keypad. You noticed they clearly punched in 4 numbers and you walk up to the keypad.</p> 
-                                        <p>Based on the following image what code would you punch in and why?</p>
+                                        <span>
+                                            <p>
+                                                <b>Q4:</b> 
+                                                You are a spy following a target who just entered a building with a door locked by a keypad. 
+                                                You noticed they clearly punched in 4 numbers and you walk up to the keypad.
+                                            </p>
+                                            <p>Based on the following image what code would you punch in and why?</p>
+                                        </span> 
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{20000 - this.state.charCount["Answer_4__c"]}
+                                        </p>
                                     </Form.Label>
                                     <Row>
-                                        <Col><Image style={{display:'flex', maxWidth: '500px', margin:'auto'}} src={ keypad } fluid /></Col>
+                                        <Col>
+                                            <Image 
+                                                style={{display:'flex', maxWidth: '500px', margin:'auto'}} 
+                                                src={ keypad } 
+                                                fluid 
+                                            />
+                                        </Col>
                                     </Row>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 4 here." onChange={this.handleInputChange} name="Answer_4__c" required />
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={20000} 
+                                        placeholder="Write your response to question 4 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_4__c" 
+                                        required 
+                                    />
                                 </Form.Group>
                                 <Form.Group className="question">
-                                    <Form.Label className="top"><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 5 here." onChange={this.handleInputChange} name="Answer_5__c" required />
+                                    <Form.Label className="top">
+                                        <span><b>Q5:</b> What is the next number in the following series: <i>13, 19, 25, 31, 37, 43</i></span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{30 - this.state.charCount["Answer_5__c"]}
+                                        </p>
+                                    </Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={30} 
+                                        placeholder="Write your response to question 5 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_5__c" 
+                                        required 
+                                    />
                                 </Form.Group>
                                 <Form.Group className="question">
-                                    <Form.Label className="top"><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your response to question 6 here." onChange={this.handleInputChange} name="Answer_6__c" required />
+                                    <Form.Label className="top">
+                                        <span><b>Q6:</b> Determine the missing numbers in the series: <i>5, 1, 9, 6, _, _, 17, 16</i></span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{30 - this.state.charCount["Answer_6__c"]}
+                                        </p>
+                                    </Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={30} 
+                                        placeholder="Write your response to question 6 here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_6__c" 
+                                        required 
+                                    />
                                 </Form.Group>
                                 <hr></hr>
                                 {/* Section 4: Multiple Choice */}
@@ -245,16 +375,19 @@ class ApplicationPhase2Content extends Component {
                                 <br></br>
                                 <fieldset className="question">
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_7__c">
-                                        <Form.Label  className="top"  ><b>Q7:</b> Arrange the following words in a meaningful sequence.
-                                            <ol style={{listStyle: 'number'}}>
-                                                <i>
-                                                    <li>Repair</li>
-                                                    <li>Crash</li>
-                                                    <li>Mechanic</li>
-                                                    <li>Tow</li>
-                                                    <li>Estimate</li>
-                                                </i>
-                                            </ol>
+                                        <Form.Label className="top">
+                                            <span>
+                                                <b>Q7:</b> Arrange the following words in a meaningful sequence.
+                                                <ol style={{listStyle: 'number'}}>
+                                                    <i>
+                                                        <li>Repair</li>
+                                                        <li>Crash</li>
+                                                        <li>Mechanic</li>
+                                                        <li>Tow</li>
+                                                        <li>Estimate</li>
+                                                    </i>
+                                                </ol>
+                                            </span>
                                         </Form.Label>
                                         <Col sm={10}>
                                             <Form.Check type="radio" label="1, 3, 2, 4, 5" name="Answer_7__c" id="formHorizontalRadios1" alt="1, 3, 2, 4, 5"/>
@@ -267,7 +400,12 @@ class ApplicationPhase2Content extends Component {
                                 </fieldset>
                                 <fieldset className="question">
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_8__c">
-                                        <Form.Label  className="top" ><b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?</Form.Label>
+                                        <Form.Label className="top" >
+                                            <span>
+                                                <b>Q8:</b> Mike is taller than Petunia who is the same height as Steve. Steve is shorter than Phoebe who is taller than Sharmania, 
+                                                    Bob, and Petunia. Petunia is shorter than Sharmania who is the same height as Mike. Who is the tallest?
+                                            </span>
+                                        </Form.Label>
                                         <Col sm={10}>
                                             <Form.Check type="radio" label="Mike" name="Answer_8__c" id="formHorizontalRadios6" alt="Mike" />
                                             <Form.Check type="radio" label="Petunia" name="Answer_8__c" id="formHorizontalRadios7" alt="Petunia" />
@@ -280,7 +418,12 @@ class ApplicationPhase2Content extends Component {
                                 </fieldset>
                                 <fieldset className="question" >
                                     <Form.Group as={Row} required onChange={this.handleInputChange} className="Answer_9__c">
-                                        <Form.Label  className="top" ><b>Q9:</b>Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, Emmanuel is taller than Carla. Who is the tallest?</Form.Label>
+                                        <Form.Label className="top">
+                                            <span>
+                                                <b>Q9:</b> Jimmy is shorter than Kathy and Carla. Emmanuel is taller than Kathy. Nate is taller than Kathy and Emmanuel however, 
+                                                Emmanuel is taller than Carla. Who is the tallest?
+                                            </span>
+                                        </Form.Label>
                                         <Col sm={10}>
                                             <Form.Check type="radio" label="Jimmy" name="Answer_9__c" id="formHorizontalRadios12" alt="Jimmy"/>
                                             <Form.Check type="radio" label="Kathy" name="Answer_9__c" id="formHorizontalRadios13" alt="Kathy"/>
@@ -296,9 +439,9 @@ class ApplicationPhase2Content extends Component {
                                 </Row>
                                 <br></br>
                                 <Form.Group className="question">
-                                    <Form.Label>
+                                    <Form.Label className="top">
+                                        <span>
                                         <p> In 350-700 words, tell us how you can relate your past experiences to how this program will help build your future.</p>
-                                        
                                             <i>
                                                 <p> Here are some ideas you may want to include in your essay:</p>                                
                                                 <ul>
@@ -312,9 +455,22 @@ class ApplicationPhase2Content extends Component {
                                                     <li>How the program would change your future</li>
                                                 </ul>
                                                 <p> Anything submitted will be kept in full confidence.</p>
-                                            </i>   
+                                            </i>
+                                        </span>
+                                        <p className="charLimit">
+                                            <b>char limit: </b>{25000 - this.state.charCount["Answer_10__c"]}
+                                        </p>   
                                     </Form.Label>
-                                    <Form.Control type="text" as="textarea" rows="3" placeholder="Write your essay here." onChange={this.handleInputChange} name="Answer_10__c" required />
+                                    <Form.Control 
+                                        type="text" 
+                                        as="textarea" 
+                                        rows="3" 
+                                        maxLength={25000} 
+                                        placeholder="Write your essay here." 
+                                        onChange={this.handleInputChange} 
+                                        name="Answer_10__c" 
+                                        required 
+                                    />
                                 </Form.Group>
                             <Button variant="secondary" type="submit" onClick={(e) => this.postData(e)}>Submit</Button>
                             {this.state.loader? <div className='fullScreen'><h1 className="loaderText"><br></br>Submitting</h1><div className="loader"><div></div><div></div><div></div></div></div>:<span></span>}
