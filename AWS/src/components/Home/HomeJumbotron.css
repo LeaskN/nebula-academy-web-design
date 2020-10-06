@@ -11,26 +11,6 @@
     height: 100%; 
     width: 100%; 
 }
-/* @media (max-width: 633px){
-    .homeJumbo{
-        padding: 14vw 2vw 2vw 2vw;
-    }
-}
-@media (min-width: 633px){
-    .homeJumbo{
-        padding: 13vw 2vw 2vw 2vw;
-    }
-}
-@media (min-width: 770px){
-    .homeJumbo{
-        padding: 10vw 2vw 2vw 2vw;
-    }
-}
-@media (min-width: 2000px){
-    .homeJumbo{
-        padding: 9vw 2vw 2vw 2vw;
-    }
-} */
 
 .jumboContainer{
     height: 50%; 

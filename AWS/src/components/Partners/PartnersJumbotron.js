@@ -8,7 +8,7 @@ export const PartnersJumbotron = () => (
       <div className="AWSLogo"></div>
       <div className="awsOverlay"></div>
       <Container className="jumboContainer">
-        <h1 className="jumboText">Partners</h1>
+        <h1 className="jumboText partnerJumboText">Partners</h1>
       </Container>
     </Jumbotron>
   </React.Fragment>

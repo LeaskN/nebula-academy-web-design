@@ -11,3 +11,9 @@
     position: relative;
     margin: 0;
 }
+
+@media(max-width: 575px){
+    .partnersJumbotron{
+        background-size: inherit;
+    }
+}
