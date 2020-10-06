@@ -104,7 +104,7 @@ class ApplicationPhase2Content extends Component {
         })
         .then((response) => {
             if(response.errors.length === 0){
-                alert(`Phase II of the application completed. Please give the team some time to review your application.\n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation.\n\nIf after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`);
+                alert(`Phase II of the application completed. Please give the Nebula Academy team some time to review your submission.`);
             } else {
                 alert(`It seems that your device is unable to submit through this form. Please submit using this link: https://bit.ly/2E96QRN\n\nThe link is case-sensitive.`)
             }

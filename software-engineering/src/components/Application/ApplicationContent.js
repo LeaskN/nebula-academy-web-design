@@ -160,7 +160,7 @@ class applicationContent extends Component {
             .then((response) => {
                 console.log(response)
                 if(response.success){
-                    alert(`Congratulations! You've successfully applied to the Software Engineering BootCamp! \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation. \n\n If after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
+                    alert(`Congratulations! You've successfully applied to the Software Engineering Bootcamp! \n\nYou'll be receiving a confirmation & instructions regarding next steps via e-mail. \n\nThis will include your link to the next phase of the application process. \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation & instructions. \n\nIf after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){
                     alert(`It looks like you have already registered for this program. If this is not the case or you'd like to amend previously sent information please let us know at support@nebulaacademyny.com. \n\nIf you haven’t received a verification email from succeed@nebulaacademyny.com within 24 hours please check your spam.\n\nIf the email isn’t there please contact us at support@nebulaacademyny.com regarding the issue.`)
                 } else {
