@@ -4,7 +4,6 @@ class ProgramDesc extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          currentCohortText : <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> test</p>
         };
     }
     componentDidMount(){
@@ -17,22 +16,20 @@ class ProgramDesc extends Component {
 
     }
 
-    componentDidUpdate(){
-      console.log('updated')
-    }
-
     createTextForPage(){
+      let allPrograms = [];
+
       if( this.state.cohortOptions ){
-        return this.state.cohortOptions.map(element => {
-          if( this.state.cohortOptions && element.name.indexOf('6 Month') > -1){
-            console.log()
-            return <p className="currentCohortsP"><span className="currentCohortsSpan">Part time session:</span> {`${new Date(element.startDate + 'EST')}`} - {`${new Date(element.endDate + 'EST')}`}</p>;
-          } else {
-            console.log()
-            return <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> {`${new Date(element.startDate + 'EST')}`} - {`${new Date(element.endDate + 'EST')}`}</p>;
+        this.state.cohortOptions.forEach(element => {
+          if( element.name.toLowerCase().indexOf('bootcamp') > -1 && element.name.indexOf('6 Month') > -1){
+            allPrograms.push(<p key={element.name} className="currentCohortsP"><span className="currentCohortsSpan">{element.name.slice(0, 8)}, Part time session:</span> {`${new Date(element.startDate + 'EST').toDateString()}`} - {`${new Date(element.endDate + 'EST').toDateString()}`}</p>)
+          } else if( element.name.toLowerCase().indexOf('bootcamp') > -1 ) {
+            allPrograms.push(<p key={element.name} className="currentCohortsP"><span className="currentCohortsSpan">{element.name.slice(0, 8)}, Full time session:</span> {`${new Date(element.startDate + 'EST').toDateString()}`} - {`${new Date(element.endDate + 'EST').toDateString()}`}</p>)
           }
         })
       }
+      
+      return allPrograms;
     }
     
     render() {
