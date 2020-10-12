@@ -3,35 +3,43 @@ import React, { Component }from 'react';
 class ProgramDesc extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+          currentCohortText : <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> test</p>
+        };
     }
     componentDidMount(){
-      // return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
 
-      return fetch(`http://localhost:3000/dev2/campaigns`)
+      // fetch(`http://localhost:3000/dev2/campaigns`)
+      return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions: res}))
         .catch(err => {console.log(err)})
+
     }
+
     componentDidUpdate(){
-      this.createTextForPage();
+      console.log('updated')
     }
+
     createTextForPage(){
-      if(this.state.cohortOptions){
-        for (let i = 0; i < this.state.cohortOptions.length; i++) {
-          const element = this.state.cohortOptions[i];
-          console.log(element)
-        }
+      if( this.state.cohortOptions ){
+        return this.state.cohortOptions.map(element => {
+          if( this.state.cohortOptions && element.name.indexOf('6 Month') > -1){
+            console.log()
+            return <p className="currentCohortsP"><span className="currentCohortsSpan">Part time session:</span> {`${new Date(element.startDate + 'EST')}`} - {`${new Date(element.endDate + 'EST')}`}</p>;
+          } else {
+            console.log()
+            return <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> {`${new Date(element.startDate + 'EST')}`} - {`${new Date(element.endDate + 'EST')}`}</p>;
+          }
+        })
       }
     }
-    // get cohort options    
+    
     render() {
-      console.log(this.state.cohortOptions ? this.state.cohortOptions[0].name:'');
-      
+
       return (
         <div className="currentCohorts">
-          <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> September 14th - December 30th</p>
-          <p className="currentCohortsP"><span className="currentCohortsSpan">Part time session:</span> September 14th - March 19th</p>
+          {this.createTextForPage()}
         </div>
       )
     }
