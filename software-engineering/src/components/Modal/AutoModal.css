@@ -1,0 +1,11 @@
+.modalAdjustments {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    overflow: auto;
+}
+
+.modalLink {
+    color: purple;
+    cursor: pointer;
+}

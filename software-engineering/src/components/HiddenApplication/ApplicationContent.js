@@ -1,6 +1,8 @@
 import React, { Component }from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
-import './ApplicationContent.css'
+import './ApplicationContent.css';
+import paymentOptionsPNG from '../../assets/Payment-Options-7.8.2020.png';
+import AutoModal from '../Modal/AutoModal';
 
 class applicationContent extends Component {
     constructor(props) {
@@ -195,7 +197,7 @@ class applicationContent extends Component {
 
     handleInputChange(event) {
         let target = event.target;
-        
+
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
         let isList = target.parentElement.className;
@@ -488,12 +490,27 @@ class applicationContent extends Component {
                                         <option aria-label="option 2" label="No" value="false">No</option> 
                                     </Form.Control>
                             </Form.Group> 
-                            <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
-                                <Form.Label>How are you planning to fund the program fee if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paying in full</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Multiple payments option" type="checkbox"/> Multiple payments option</label><br/>
+                            <Form.Group>
+                                <Form.Label>
+                                    How are you planning to fund the program fee if accepted into program? 
+                                    <AutoModal content={<img className="paymentImg" alt="payment details" src={paymentOptionsPNG} />}> Click for details </AutoModal>
+                                    (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com).
+                                </Form.Label>
+                                <Form.Control required onChange={this.handleInputChange} defaultValue="Select" as="select" name="Payment_Type__c">
+                                    <option aria-label="default option">Select</option>
+                                    <option aria-label="option 1" value="Paid in full (option 1)">
+                                        Paid in full up front
+                                    </option>
+                                    <option aria-label="option 2" value="3 Monthly Payments (option 2)">
+                                        3 Monthly Payments (5% administration fee)
+                                    </option>
+                                    <option aria-label="option 3" value="Deffered payment (option 3)">
+                                        Deffered payment until employment or up to 90 days after completion of program (8% administration fee) - 12 monthly payments
+                                    </option>
+                                    <option aria-label="option 4" value="Deffered payment (option 4)">
+                                        Deffered payment until employment or up to 90 days after completion of program (8% administration fee) - 14 monthly payments
+                                    </option>
+                                </Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide your ethnicity</Form.Label>
