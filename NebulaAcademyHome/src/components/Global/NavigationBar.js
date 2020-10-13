@@ -12,7 +12,7 @@ export const NavigationBar = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <div className='navContents'>
-                    <Nav.Item><Nav.Link href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item>
+                    {/* <Nav.Item><Nav.Link href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item> */}
                     <Nav.Item><Nav.Link href="/educators">Educators</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/workforce-development">Workforce Development</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>

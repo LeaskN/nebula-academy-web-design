@@ -10,7 +10,7 @@ class HomeContent extends Component {
         super(props);
         this.state = {
             backgroundColor: 'transparent',
-            clicked: 'steamforkids',
+            clicked: 'educators',
             shape: 'circle',
             slides: [
                 {
@@ -49,16 +49,16 @@ class HomeContent extends Component {
             ))
         )
     }
-render() {
-    return (
-        <React.Fragment>
-            <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
-                { this.createSlideCard() }
-            </Row>
-                <InfoPanel state={this.state} />
-        </React.Fragment>
-        )
-    }
+    render() {
+        return (
+            <React.Fragment>
+                <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
+                    { this.createSlideCard() }
+                </Row>
+                    <InfoPanel state={this.state} />
+            </React.Fragment>
+            )
+        }
 };
 
 export default HomeContent;

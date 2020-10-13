@@ -30,13 +30,13 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path ="/steam-for-kids" component={STEAMForKids}/>
+              {/* <Route path ="/steam-for-kids" component={STEAMForKids}/> */}
               <Route path ="/educators" component={Educators}/>
               <Route path ="/workforce-development" component={WorkforceDevelopment}/>
               <Route path ="/universities" component={Universities}/>
               <Route path ="/philanthropy" component={Philanthropy}/>
               <Route path ="/staff" component={Staff}/>
-          {/*<Route path ="/success-stories" component={SuccessStories}/>
+              {/*<Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>
               <Route path ="/blog" component={Blog}/>*/}
               <Route component = {NoMatch}/>
