@@ -89,15 +89,15 @@ render() {
                         {this.createLine()}
                     </Row>
                 </div>
-                    <Row ref="infoPanel" style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
-                        <Col xs={12}>
-                            <h1>{this.state.active.header}</h1>
-                            <p>{this.state.active.content}</p>
-                        </Col>
-                        {this.state.active.buttonURL ? <Col><Button variant="dark" style={{textShadow:'0px 0px 0px black'}} target="blank" href={this.state.active.buttonURL}>{this.state.active.buttonText}</Button></Col>:<></>}
-                    </Row>
+                <Row ref="infoPanel" style={{backgroundColor: `${this.state.active.color}`, border:`3px solid ${this.state.active.color}`}} className="dynamicContentInfo">
+                    <Col xs={12}>
+                        <h1>{this.state.active.header}</h1>
+                        <p>{this.state.active.content}</p>
+                    </Col>
+                    {this.state.active.buttonURL ? <Col><Button variant="dark" style={{textShadow:'0px 0px 0px black'}} target="blank" href={this.state.active.buttonURL}>{this.state.active.buttonText}</Button></Col>:<></>}
+                </Row>
             </React.Fragment>
-            )
+        )
     }
 };
 
