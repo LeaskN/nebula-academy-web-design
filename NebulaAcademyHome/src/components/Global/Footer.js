@@ -25,7 +25,7 @@ export const Footer = () => (
                     <h5 style={{color:'#BBBBBB'}}>All Links</h5>
                     <li><Nav.Link style={{textAlign:'left'}} href="/">About</Nav.Link></li>
                     <li><Nav.Link style={{textAlign:'left'}} href="/Staff">Staff</Nav.Link></li>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item>
+                    {/* <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item> */}
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/educators">Educators</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/workforce-development">Workforce Development</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/universities">Universities</Nav.Link></Nav.Item>

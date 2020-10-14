@@ -4,7 +4,7 @@ import { Home } from './pages/Home';
 import { NoMatch } from './pages/NoMatch';
 import { NavigationBar } from './components/Global/NavigationBar';
 import { Footer } from './components/Global/Footer'
-import { STEAMForKids } from './pages/STEAMForKids'
+// import { STEAMForKids } from './pages/STEAMForKids'
 import { Educators } from './pages/Educators'
 import { WorkforceDevelopment } from './pages/WorkforceDevelopment'
 import { Universities } from './pages/Universities'
