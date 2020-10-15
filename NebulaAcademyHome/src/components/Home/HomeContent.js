@@ -20,8 +20,8 @@ class HomeContent extends Component {
                     header: 'Industry Shaped Curriculum',
                     body: <h5>We work hand-in-hand with our community, industry, and university partners to create programs that help young adults and adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h5>,
                 },{
-                    header: 'Certified Instruction',
-                    body: <h5>Our instructors are certified industry professionals and have the necessary technological skills to run our programs. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h5>,
+                    header: 'Accredited Instructors',
+                    body: <h5>Our instructors are accredited and experienced in teaching today's modern learner, and are trained in cognitive neuroscience pedagogy models. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h5>,
                 }
             ],
             elements: [ 
