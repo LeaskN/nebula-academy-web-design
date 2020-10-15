@@ -18,7 +18,7 @@ class HomeContent extends Component {
                     body: <h5>We pride ourselves on the technology platforms we choose to teach and utilize within our organization. In order to model and teach how technology increases potential and productivity, we must understand it in real-world applications.</h5>,
                 },{
                     header: 'Industry Shaped Curriculum',
-                    body: <h5>We work hand-in-hand with our industry and university partners to create programs that help adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h5>,
+                    body: <h5>We work hand-in-hand with our community, industry, and university partners to create programs that help young adults and adults gain the skills to pursue meaningful and rewarding careers in the fast-growing tech economy</h5>,
                 },{
                     header: 'Certified Instruction',
                     body: <h5>Our instructors are certified industry professionals and have the necessary technological skills to run our programs. We ensure all of our participants and customers are getting the most up-to-date, cutting edge experience to be successful in today's modern workforce.</h5>,
