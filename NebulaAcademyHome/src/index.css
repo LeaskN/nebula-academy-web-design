@@ -107,10 +107,23 @@ code {
   color:  black;
   cursor: pointer;
 }
+.linkColor {
+  cursor: pointer;
+  color: #00C9CB;
+}
+.linkColor:hover {
+  color: #3B3D7B;
+  text-shadow: none;
+  text-decoration: none;
+}
 .centralText{
   display: flex;
   justify-content: center;
   text-align: center;
+}
+.condenseWidth {
+  width: fit-content;
+  margin: auto;
 }
 .container{
   width: 90vw;

@@ -12,7 +12,7 @@ export const StaffFooter = () => (
             <Button href="/" style={{maxHeight:'37px', margin:'auto'}} variant="secondary">Home</Button>
           </Col>
           <Col className="contentCentered">
-            <Form enctype="text/plain" action="mailto:support@nebulaacademyny.com" method="GET">
+            <Form encType="text/plain" action="mailto:support@nebulaacademyny.com" method="GET">
               <Button variant="secondary" type="submit">
                 Send Us an Email
               </Button>
