@@ -24,7 +24,7 @@ ReactGA.initialize('UA-000000-01');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
-  console.log('V0908');
+  console.log('V101620');
   return (
     <React.Fragment>
       <CookieConsent
