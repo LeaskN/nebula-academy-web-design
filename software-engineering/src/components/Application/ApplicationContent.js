@@ -136,7 +136,7 @@ class applicationContent extends Component {
             alert('All participants must be authorized to work in the US.')
         }
         else if(!this.state.High_School_Diploma_or_GED__c){
-            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
+            alert('Please complete the field titled: "I am at least 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else {
             // Post request to the database
             this.setState({loader:true}); 
@@ -466,7 +466,7 @@ class applicationContent extends Component {
                                 <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
                                     <option aria-label="option 0" label="Select"></option> 
-                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
+                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduating the program." label="I intend to start a new job within 180 days of graduating the program.">I intend to start a new job within 180 days of graduating the program." label="I intend to start a new job within 180 days of graduating the program.</option> 
                                     <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
                                     <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
                                     <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
@@ -564,7 +564,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group>
-                                <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
+                                <Form.Label>I am at least 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
                                 <Form.Control onChange={this.handleInputChange} name="High_School_Diploma_or_GED__c" required as="select">
                                     <option label="Select"></option> 
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>

@@ -1,14 +1,13 @@
 import React from 'react';
+import ProgramDescriptions from './ProgramDesc';
 import { Row, Card, Col, Container } from 'react-bootstrap';
 import './ProgramContent.css'
 
 export const ProgramContent = () => (
   <React.Fragment>
     <Container>
-        <div className="currentCohorts">
-            <p className="currentCohortsP"><span className="currentCohortsSpan">Full time session:</span> September 14th - December 30th</p>
-            <p className="currentCohortsP"><span className="currentCohortsSpan">Part time session:</span> September 14th - March 19th</p>
-        </div>
+        <ProgramDescriptions/>
+        
         <div className="learnToCodeTextCard"> 
         <h1>Learn to Code</h1>
         <p>You’ll be challenged in this immersive software engineering program. Taught by industry professionals, full time participants will spend 5 days a week and 8 hours a day, Monday – Friday 9:00AM to 4:00PM, and part time participants will spend Monday and Wednesday evenings from 6:30PM  to 9:00PM and Saturdays from 10:00AM to 2:00PM in learning sessions, coding time, and self-study. All times are Eastern Standard Time. </p>
