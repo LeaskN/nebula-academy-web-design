@@ -136,7 +136,7 @@ class applicationContent extends Component {
             alert('All participants must be authorized to work in the US.')
         }
         else if(!this.state.High_School_Diploma_or_GED__c){
-            alert('Please complete the field titled: "I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
+            alert('Please complete the field titled: "I am at least 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll."')
         } else {
             // Post request to the database
             this.setState({loader:true}); 
@@ -564,7 +564,7 @@ class applicationContent extends Component {
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group>
-                                <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
+                                <Form.Label>I am at least 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
                                 <Form.Control onChange={this.handleInputChange} name="High_School_Diploma_or_GED__c" required as="select">
                                     <option label="Select"></option> 
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
