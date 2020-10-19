@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import './ApplicationContent.css'
 
-class applicationContent extends Component {
+class ApplicationContent extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -581,4 +581,4 @@ class applicationContent extends Component {
     }
 };
 
-export default applicationContent;
+export default ApplicationContent;
