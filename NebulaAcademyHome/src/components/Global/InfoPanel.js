@@ -53,7 +53,7 @@ class InfoPanel extends Component {
         if(this.state.active.header === e.target.innerHTML){
             e.target.style.border = `3px solid ${this.state.active.color}`;
         } else {
-            e.target.style.backgroundColor = 'transparent'
+            e.target.style.backgroundColor = 'transparent';
             e.target.style.border = `3px solid ${nextBorderColor}`;
             e.target.style.color = 'black';
         }

@@ -11,8 +11,8 @@ function Popup() {
       <Modal.Header className="popupHeader" closeButton>
         <Modal.Title className="popupTitle">New Courses!</Modal.Title>
       </Modal.Header>
-      <p className="popupText" >3 Month <span>Full-Time</span> or 6 Month <span>Part-Time</span></p>
-      <p className="popupText" >Cohorts Beginning <span>September 14th</span>!</p>
+      <p className="popupText" >3-month <span>Full-Time</span> Cohort Begins <span>February 1, 2021</span></p>
+      <p className="popupText" >6-month <span>Part-Time</span> Cohort Begins <span>April 19, 2021</span></p>
       <Modal.Footer className="popupFooter">
           <Button className="popupButton" variant="secondary" href="/program">
               Course Details
