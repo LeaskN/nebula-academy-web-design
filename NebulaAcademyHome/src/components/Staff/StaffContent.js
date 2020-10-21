@@ -40,7 +40,7 @@ class StaffContent extends Component {
                 { name: 'Tefé Del Rosario-Bell', refName: 'TefeDRB', position:'Software Engineer & Associate Software Engineering Instructor.', linkText: `Tefe's LinkedIn`, url: 'https://www.linkedin.com/in/tefedrb/', image: TefeImage, bio: `Tefe has transitioned from working in the media industry as a Video Editor & Producer to becoming a Software Engineer based in New York City. He has a master's degree in media studies from The New School and brings with him an interdisciplinary approach to understanding and manipulating technology. He is a lifelong learner who wants to not only help be a part of a shift in the representation of people within the tech field but also shape the world for the better, one byte at a time.`},
             ],            
         };
-        this.setInfo = this.setInfo.bind(this);
+        // this.setInfo = this.setInfo.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
     componentDidMount() {
@@ -59,42 +59,7 @@ class StaffContent extends Component {
         let string = JSON.stringify(bio);
         return string;
     }
-    setInfo(event){
-        let target = event.target;
-        if (target.parentElement.className === 'col'){
-            let person = target.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-            console.log(person," person")
-            if (this.state.name !== person) {
-                for (let i = 0; i < this.state.allPeople.length; i++) {
-                    const individual = this.state.allPeople[i];
-                    if(person === individual.refName)
-                    this.setState({
-                        name: person,
-                        activeBio: individual.bio,
-                        activePosition: individual.position
-                    })
-                } 
-            }
-        } else if (target.parentElement.parentElement.className === 'col'){
-            let person = target.parentElement.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-
-            if (this.state.name !== person) {
-                for (let i = 0; i < this.state.allPeople.length; i++) {
-                    const individual = this.state.allPeople[i];
-                    if(person === individual.refName)
-                    this.setState({
-                        name: person,
-                        activeBio: individual.bio,
-                        activePosition: individual.position
-                    })
-                } 
-            }
-        } 
-    }
-    setInfoOpenPanel(e){
-        this.setInfo(e);
-        this.setState({ isPaneOpen: true });
-    }
+   
     render() {
         return (
             <div ref={ref => this.el = ref}>
@@ -114,8 +79,8 @@ class StaffContent extends Component {
                 </SlidingPane>
                 <React.Fragment>
                     <Container>
-                        <Row>{this.state.allPeople.map(person =>
-                            <React.Fragment>
+                        <Row>{this.state.allPeople.map((person, key) =>
+                            <React.Fragment key={key}>
                                 <Col className="staffMember">
                                     <div className="imageContainer" >
                                         <Image src={ person.image } fluid />
@@ -126,7 +91,7 @@ class StaffContent extends Component {
                                     <a className="linkColor centralText condenseWidth" href={ person.url } target="empty">{ person.linkText }</a>
                                     <div id="spacer" ></div>                                
                                     <ButtonToolbar className="bottom contentCentered">
-                                        <StaffAbout state={ person } name={ person.name.split(' ').length === 3? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0] }/>
+                                        <StaffAbout state={ person } name={ person.name.split(' ')[0] === "Dr." ? person.name.split(' ')[0] + ' ' + person.name.split(' ')[2] : person.name.split(' ')[0] }/>
                                     </ButtonToolbar>                            
                                 </Col> 
                                     <br/>    
