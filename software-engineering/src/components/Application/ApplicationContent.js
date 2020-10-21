@@ -1,6 +1,8 @@
 import React, { Component }from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
-import './ApplicationContent.css'
+import './ApplicationContent.css';
+import paymentOptionsPNG from '../../assets/Payment-Options-7.8.2020.png';
+import AutoModal from '../Modal/AutoModal';
 
 class ApplicationContent extends Component {
     constructor(props) {
@@ -170,9 +172,7 @@ class ApplicationContent extends Component {
             .catch((error) => {
                 console.error('Error:', error);
             })
-
         }
-
     }
     arrayRemove(arr, value){
         return arr.filter(function(ele){
@@ -195,32 +195,32 @@ class ApplicationContent extends Component {
 
     handleInputChange(event) {
         let target = event.target;
-        
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
-        let isList = target.parentElement.className;
-        let listName = target.parentElement.parentElement.className.split(" ")[0];
+        let isCheckBoxList = target.parentElement.className;
+        let checkBoxListName = target.parentElement.parentElement.className.split(" ")[0];
         //if the parent element indicates that this is a list item
-        if(isList === 'list'){
-            //if state does not contain that specific listName yet
-            if(!this.state[listName]){
+        if(isCheckBoxList === 'list'){
+            //if state does not contain that specific checkBoxListName yet
+            if(!this.state[checkBoxListName]){
                 //first time something is being added to an array
                 this.setState({
-                    [listName]: [name]
+                    [checkBoxListName]: [name]
                 })
-            //if that specific listName exists 
-            } else if (this.state[listName].indexOf(name) > -1) {
+            //if that specific checkBoxListName exists && unchecked box?
+            } else if (this.state[checkBoxListName].includes(name) && !value) {
                 //unchecked box
-                let oldList = this.state[listName]
-                oldList.pop(oldList.indexOf(name))
+                let checkedValues = this.state[checkBoxListName]
+                // This removes item from list when box is unchecked.
+                checkedValues.splice(checkedValues.indexOf(name), 1);
                 this.setState({
-                    [listName]: oldList
+                    [checkBoxListName]: checkedValues
                 })
             } else {
                 //adding to an existing array
-                let fullArray = [...this.state[listName], name]
+                let checkedValues = [...this.state[checkBoxListName], name]
                 this.setState({
-                    [listName]: fullArray
+                    [checkBoxListName]: checkedValues
                 })
             }
         //else its not a list
@@ -236,7 +236,19 @@ class ApplicationContent extends Component {
                 });
             }           
         }
-    } 
+    }
+
+    returnAllStateOptions(){
+        const states = ["AL", "AK", "AS", "AZ", "AR", "CA", "CO", 
+            "CT", "DE", "DC", "FM", "FL", "GA", "GU", "HI", "ID", 
+            "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH", "MD", 
+            "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", 
+            "NJ", "NM", "NY", "NC", "ND", "MP", "OH", "OK", "OR", 
+            "PW", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", 
+            "VT", "VI", "VA", "WA", "WV", "WI", "WY"];
+        return states.map((state, key) => <option key={key}>{state}</option>);
+    }
+    
     render() {
         return (
             <Container>
@@ -298,66 +310,8 @@ class ApplicationContent extends Component {
                                 <Form.Group as={Col} controlId="formGridState">
                                     <Form.Label>State</Form.Label>
                                     <Form.Control required onChange={this.handleInputChange} name="Mailing_State__c" as="select">
-                                    <option aria-label="option 0"></option> 
-                                    <option>AL</option>
-                                    <option>AK</option>
-                                    <option>AS</option>
-                                    <option>AZ</option>
-                                    <option>AR</option>
-                                    <option>CA</option>
-                                    <option>CO</option>
-                                    <option>CT</option>
-                                    <option>DE</option>
-                                    <option>DC</option>
-                                    <option>FM</option>
-                                    <option>FL</option>
-                                    <option>GA</option>
-                                    <option>GU</option>
-                                    <option>HI</option>
-                                    <option>ID</option>
-                                    <option>IL</option>
-                                    <option>IN</option>
-                                    <option>IA</option>
-                                    <option>KS</option>
-                                    <option>KY</option>
-                                    <option>LA</option>
-                                    <option>ME</option>
-                                    <option>MH</option>
-                                    <option>MD</option>
-                                    <option>MA</option>
-                                    <option>MI</option>
-                                    <option>MN</option>
-                                    <option>MS</option>
-                                    <option>MO</option>
-                                    <option>MT</option>
-                                    <option>NE</option>
-                                    <option>NV</option>
-                                    <option>NH</option>
-                                    <option>NJ</option>
-                                    <option>NM</option>
-                                    <option>NY</option>
-                                    <option>NC</option>
-                                    <option>ND</option>
-                                    <option>MP</option>
-                                    <option>OH</option>
-                                    <option>OK</option>
-                                    <option>OR</option>
-                                    <option>PW</option>
-                                    <option>PA</option>
-                                    <option>PR</option>
-                                    <option>RI</option>
-                                    <option>SC</option>
-                                    <option>SD</option>
-                                    <option>TN</option>
-                                    <option>TX</option>
-                                    <option>UT</option>
-                                    <option>VT</option>
-                                    <option>VI</option>
-                                    <option>VA</option>
-                                    <option>WA</option>
-                                    <option>WV</option>
-                                    <option>WI</option>
-                                    <option>WY</option>
+                                        <option aria-label="option 0"></option> 
+                                        {this.returnAllStateOptions()}
                                     </Form.Control>
                                 </Form.Group>
                                 <Form.Group as={Col}>
@@ -451,7 +405,7 @@ class ApplicationContent extends Component {
                             </Form.Row>
                             <Form.Group>
                                 <Form.Label>Please include certification(s), specialized training(s), license(s), self-taught learning program(s), self-enrichment workshop(s) and other career-enhancing program(s) below.</Form.Label>
-                                <Form.Control type="text" as="textarea" rows="3" placeholder="Certifications, self-learning, etc.." name="Education_Not_included_above__c" required />
+                                <Form.Control required onChange={this.handleInputChange} type="text" as="textarea" rows="3" placeholder="Certifications, self-learning, etc.." name="Education_Not_included_above__c"/>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide your preference to experience learning</Form.Label><br/>
@@ -466,7 +420,7 @@ class ApplicationContent extends Component {
                                 <Form.Label>What are your primary intentions for enrolling in this program?</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Primary_intentions_for_enrolling__c" as="select">
                                     <option aria-label="option 0" label="Select"></option> 
-                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.">I intend to start a new job within 180 days of graduationg the program." label="I intend to start a new job within 180 days of graduationg the program.</option> 
+                                    <option aria-label="option 1" value="I intend to start a new job within 180 days of graduating the program." label="I intend to start a new job within 180 days of graduating the program.">I intend to start a new job within 180 days of graduating the program." label="I intend to start a new job within 180 days of graduating the program.</option> 
                                     <option aria-label="option 2" value="I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.">I intend to start a business or become a self-employed contractor upon graduation." label="I intend to start a business or become a self-employed contractor upon graduation.</option> 
                                     <option aria-label="option 3" value="I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.">I intend to remain with my current employer upon graduation." label="I intend to remain with my current employer upon graduation.</option> 
                                     <option aria-label="option 4" value="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.">I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation." label="I am attending the program to learn new skills for self-enrichment and do not intend to pursue a job upon graduation.</option> 
@@ -489,11 +443,16 @@ class ApplicationContent extends Component {
                                     </Form.Control>
                             </Form.Group> 
                             <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
-                                <Form.Label>How are you planning to fund the program fee if accepted into program? (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com)</Form.Label>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paying in full</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Pay after employment option" type="checkbox"/> Pay after employment option</label><br/>
-                                <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Multiple payments option" type="checkbox"/> Multiple payments option</label><br/>
+                                <Form.Label>
+                                    How are you planning to fund the program fee if accepted into program? 
+                                    <AutoModal content={<img className="paymentImg" alt="payment details" src={paymentOptionsPNG} />}> Click for details </AutoModal>
+                                    (For questions regarding scholarships contact scholarships@wctd.org. For questions regarding payment options contact succeed@nebulaacademyny.com).
+                                </Form.Label>
+                                    <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Applying to scholarship" type="checkbox"/> Applying to scholarship </label><br/>
+                                    <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Paying in full" type="checkbox"/> Paid in full up front</label><br/>
+                                    <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="3 Monthly Payments" type="checkbox"/> 3 Monthly Payments (5% administration fee)</label><br/>
+                                    <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Deferred payment 14mo" type="checkbox"/> Deferred payment until employment or up to 90 days after completion of program (8% administration fee) - 12 monthly payments</label><br/>
+                                    <label className="list">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Deferred payment 12mo" type="checkbox"/> Deferred payment until employment or up to 90 days after completion of program (8% administration fee) - 14 monthly payments</label><br/>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Please provide your ethnicity</Form.Label>
@@ -564,7 +523,7 @@ class ApplicationContent extends Component {
                                 </Form.Control>
                             </Form.Group> 
                             <Form.Group>
-                                <Form.Label>I am atleast 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
+                                <Form.Label>I am at least 18 years old and I have at least a HS diploma or equivalent. I understand I will be asked to provide proof of my prior educational history if I enroll.</Form.Label>
                                 <Form.Control onChange={this.handleInputChange} name="High_School_Diploma_or_GED__c" required as="select">
                                     <option label="Select"></option> 
                                     <option label="I Acknowledge" value="true">I Acknowledge</option>
