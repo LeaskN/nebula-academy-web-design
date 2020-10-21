@@ -59,42 +59,7 @@ class StaffContent extends Component {
         let string = JSON.stringify(bio);
         return string;
     }
-    // setInfo(event){
-    //     let target = event.target;
-    //     if (target.parentElement.className === 'col'){
-    //         let person = target.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-    //         console.log(person," person")
-    //         if (this.state.name !== person) {
-    //             for (let i = 0; i < this.state.allPeople.length; i++) {
-    //                 const individual = this.state.allPeople[i];
-    //                 if(person === individual.refName)
-    //                 this.setState({
-    //                     name: person,
-    //                     activeBio: individual.bio,
-    //                     activePosition: individual.position
-    //                 })
-    //             } 
-    //         }
-    //     } else if (target.parentElement.parentElement.className === 'col'){
-    //         let person = target.parentElement.parentElement.childNodes[2].innerHTML.split(' ').join('').split('.').join('');
-
-    //         if (this.state.name !== person) {
-    //             for (let i = 0; i < this.state.allPeople.length; i++) {
-    //                 const individual = this.state.allPeople[i];
-    //                 if(person === individual.refName)
-    //                 this.setState({
-    //                     name: person,
-    //                     activeBio: individual.bio,
-    //                     activePosition: individual.position
-    //                 })
-    //             } 
-    //         }
-    //     } 
-    // }
-    // setInfoOpenPanel(e){
-    //     this.setInfo(e);
-    //     this.setState({ isPaneOpen: true });
-    // }
+   
     render() {
         return (
             <div ref={ref => this.el = ref}>
