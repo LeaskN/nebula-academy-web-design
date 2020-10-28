@@ -39,7 +39,7 @@ class ProgramDesc extends Component {
     }
 
     filterBootCamps(){
-      return this.state.cohortOptions.filter(option => option.name.toLowerCase().includes('bootcamp'));
+      return this.state.cohortOptions.filter(option => option.name.toLowerCase().includes('bootcamp') && option.isActive);
     }
 
     formatDetailsIntoJSX(option, key){
@@ -49,7 +49,7 @@ class ProgramDesc extends Component {
       const endDate = `${new Date(option.endDate + 'EST').toDateString()}`;
       return (
         <p key={key} className="currentCohortsP">
-          <span className="currentCohortsSpan">{`${version} ${boot} ${camp}, ${partTimeOrFull}`}</span> {startDate} - {endDate}
+          <span className="currentCohortsSpan">{`${version} ${boot}${camp.toLowerCase()}, ${partTimeOrFull}`}</span> {startDate} - {endDate}
         </p>
       )
     }
