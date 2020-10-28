@@ -31,7 +31,7 @@ class ProgramDesc extends Component {
     cohortDetailsJSX(){
       try {
         if(this.state.cohortOptions){
-          return this.filterBootCamps().map((option, key) => this.parseDetailsIntoJSX(option, key));
+          return this.filterBootCamps().map((option, key) => this.formatDetailsIntoJSX(option, key));
         }
       } catch(e) {
         console.log("Error caught: " + e);
@@ -42,7 +42,7 @@ class ProgramDesc extends Component {
       return this.state.cohortOptions.filter(option => option.name.toLowerCase().includes('bootcamp'));
     }
 
-    parseDetailsIntoJSX(option, key){
+    formatDetailsIntoJSX(option, key){
       const [, version, boot, camp] = /(\w\d*) (Boot)(Camp)/.exec(option.name);
       const partTimeOrFull = option.name.includes('6 Month') ? "part-time session: " : "full-time session: ";
       const startDate = `${new Date(option.startDate + 'EST').toDateString()}`;
