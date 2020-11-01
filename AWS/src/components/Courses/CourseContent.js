@@ -8,9 +8,9 @@ export const CourseContent = () => (
         <h1 style={{textAlign:"center"}}>Prepare for Certification with Nebula Academy</h1>
         <p style={{marginLeft:"10px"}}>Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at <b>Nebula Academy</b>. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.</p>
         <Row style={{flexWrap: "flex"}}>
-            <Col  xs={12} lg={4} xl={4} className="courseBackImage1" style={{border:"5px solid white"}}>
+            <Col xs={12} lg={4} xl={4} className="courseBackImage1" style={{border:"5px solid white"}}>
                 <Card className="overImage">
-                    <Card.Body> 
+                    <Card.Body>
                         <Card.Title>AWS Academy Cloud Foundations</Card.Title>
                         <Card.Text>
                             <i>Intended for students who seek an overall understanding of cloud computing concepts. Independent of specific technical roles.</i>
