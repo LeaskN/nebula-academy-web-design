@@ -56,26 +56,81 @@ class WorkforceDevelopment extends Component {
                 body: 'Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.',
             }],
             elements : [
-                { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6-hour in-person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
-                { color: '#993955', header:"Scholarships", content: `As a social enterprise, our mission is to inspire future innovators through building awareness and skills related to technology and computer science. Our methodology, the Computer Science Growth System (CSGS), combined with our scholarship programs, builds capacity from K-Career.` }, 
-                { color: '#138DFE', header:"Workforce Experience", content: <><p>The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.</p><p>The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce.</p></> },
-                { color: '#127FA5', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
-                { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise, metrics are key to our long-term sustainability. Measuring matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
+                { 
+                    color: '#8E5EA5', 
+                    header:"Try Coding", 
+                    content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6-hour in-person session provides the opportunity to build confidence, and clarity on an investment towards your future." 
+                },
+                { 
+                    color: '#993955', 
+                    header:"Scholarships", 
+                    content: `As a social enterprise, our mission is to inspire future innovators through building awareness and skills related to technology and computer science. Our methodology, the Computer Science Growth System (CSGS), combined with our scholarship programs, builds capacity from K-Career.`,
+                    buttonText: "Scholarships",
+                    buttonURL: "https://code.nebulaacademy.com/Scholarships",
+                    linkLeavesSite: true
+                }, 
+                { 
+                    color: '#138DFE', 
+                    header:"Workforce Experience", 
+                    content: ["The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.", "The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce."]
+                },
+                { 
+                    color: '#127FA5', 
+                    header:"Guest Speakers", 
+                    content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." 
+                },
+                { 
+                    color: '#9395D3', 
+                    header:"Measuring Success", 
+                    content: "As a research focused social enterprise, metrics are key to our long-term sustainability. Measuring matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." 
+                },
             ],
-            'trycoding': { color: '#8E5EA5', header:"Try Coding", content: "We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6-hour in-person session provides the opportunity to build confidence, and clarity on an investment towards your future." },
-            'scholarships': { color: '#993955', header:"Scholarships", content: <div id='scholarshipContent'><p>As a social enterprise, our mission is to inspire future innovators through building awareness and skills related to technology and computer science. Our methodology, the Computer Science Growth System (CSGS), combined with our scholarship programs, builds capacity from K-Career.</p> <Button target="_blank" href="https://code.nebulaacademy.com/Scholarships" variant="outline-light">Scholarships</Button></div>}, 
-            'workforceexperience': { color: '#138DFE', header:"Workforce Experience", content: <><p>The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.</p><p>The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce.</p></> },
-            'guestspeakers': { color: '#127FA5', header:"Guest Speakers", content: "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world." },
-            'measuringsuccess': { color: '#9395D3', header:"Measuring Success", content: "As a research focused social enterprise, metrics are key to our long-term sustainability. Measuring matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results." },
+            // 'trycoding': { 
+            //     color: '#8E5EA5', 
+            //     header:"Try Coding", 
+            //     content: ["We take the risk out of making an investment in your future by providing participants an opportunity to test drive our program through our Monthly Try Coding days.  This 6-hour in-person session provides the opportunity to build confidence, and clarity on an investment towards your future."] 
+            // },
+            // 'scholarships': { 
+            //     color: '#993955', 
+            //     header: "Scholarships", 
+            //     // content: <div id='scholarshipContent'><p>As a social enterprise, our mission is to inspire future innovators through building awareness and skills related to technology and computer science. Our methodology, the Computer Science Growth System (CSGS), combined with our scholarship programs, builds capacity from K-Career.</p> <Button target="_blank" href="https://code.nebulaacademy.com/Scholarships" variant="outline-light">Scholarships</Button></div>,
+            //     content: ["As a social enterprise, our mission is to inspire future innovators through building awareness and skills related to technology and computer science. Our methodology, the Computer Science Growth System (CSGS), combined with our scholarship programs, builds capacity from K-Career."],
+            //     buttonTxt: "Scholarships",
+            //     buttonLink: "https://code.nebulaacademy.com/Scholarships"
+            // }, 
+            // 'workforceexperience': { 
+            //     color: '#138DFE', 
+            //     header:"Workforce Experience", 
+            //     // content: <><p>The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career.</p><p>The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce.</p></> 
+            //     content: ["The gap between academia and industry is growing and our workforce is suffering for it. Schools and universities don't prepare our students enough to join the industry and industries are unwilling to train and hire students. Therefore, the workforce is left unprepared and without the necessary skills to attain a sustainable career. The solution? Stop blaming and start training! Nebula Academy prepares anyone looking to join the growing technology industry, whether you have little to no skill or tremendous skill and looking to get certified. Our programs offer students comprehensive coursework, engaging and willing instructors, and career preparation and experience. We invest in our students to ensure participants have the necessary hard and soft skills to join the leading technology workforce."]
+            // },
+            // 'guestspeakers': { 
+            //     color: '#127FA5', 
+            //     header:"Guest Speakers", 
+            //     content: ["The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world."] 
+            // },
+            // 'measuringsuccess': { 
+            //     color: '#9395D3', 
+            //     header:"Measuring Success", 
+            //     content: ["As a research focused social enterprise, metrics are key to our long-term sustainability. Measuring matters to our customers and our team to ensure continuous improvement as we shape and reshape our programs to align with industry needs and ensure our outcomes are creating the right results."]
+            // },
         };
     }
-    createAWSSlides = () => {
-        return (
-            this.props.state.elements.map(element => (
-                <div className={`${this.props.state.shape}`} key={element.header} style={{color:`black`}} onMouseEnter={ e => this.mouseOver(e)} onMouseLeave={ e => this.mouseAway(e)} onClick={e => this.handleClick(e)}>{element.header}</div>
-            ))
-        )
-    }
+    // createAWSSlides = () => {
+    //     return (
+    //         this.props.state.elements.map(element => (
+    //             <div 
+    //                 className={`${this.props.state.shape}`} 
+    //                 key={element.header} style={{color:`black`}} 
+    //                 onMouseEnter={ e => this.mouseOver(e)} 
+    //                 onMouseLeave={ e => this.mouseAway(e)} 
+    //                 onClick={e => this.handleClick(e)}
+    //             >
+    //                 {element.header}
+    //             </div>
+    //         ))
+    //     )
+    // }
     createAWSSlides = () => {
         return (
             this.state.AWSCarouselItems.map(element => (
@@ -88,23 +143,23 @@ class WorkforceDevelopment extends Component {
                     </Carousel.Caption>
                 </Carousel.Item>
             ))
-            )
-        }
-        createSoftwareEngineeringSlides = () => {
-            return (
-                this.state.softwareEngineeringCarouselItems.map(element => (
-                    <Carousel.Item key={element.header}>
-                        <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
-                        <Carousel.Caption>
-                            <h3>{element.header}</h3>
-                            <br/>
-                            <div className="carouselParagraph">{element.body}</div>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                ))
-            )
-        }
-render() {
+        )
+    }
+    createSoftwareEngineeringSlides = () => {
+        return (
+            this.state.softwareEngineeringCarouselItems.map(element => (
+                <Carousel.Item key={element.header}>
+                    <img className="d-block w-100" alt={element.image} src={element.image} al={element.al}/>
+                    <Carousel.Caption>
+                        <h3>{element.header}</h3>
+                        <br/>
+                        <div className="carouselParagraph">{element.body}</div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))
+        )
+    }
+    render() {
         return (
             <React.Fragment>
                 <br/>
