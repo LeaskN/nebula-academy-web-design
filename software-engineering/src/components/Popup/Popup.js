@@ -12,7 +12,6 @@ function Popup() {
       fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
       .then(res => res.json())
       .then(res => {
-        console.log(res, "res")
         updatePrograms(res);
       })
       .catch(err => {
@@ -49,7 +48,7 @@ function Popup() {
   const parseCohortStr = (cohort) => {
       const [duration] = /[0-9] Month/i.exec(cohort.name);
       const [fullOrPartTime] = /Full time|Part time/i.exec(cohort.name);
-      const [rawStartDate] = /\w{3} \d* \d{4}/i.exec(new Date(cohort.startDate));
+      const [rawStartDate] = /\w{3} \d* \d{4}/i.exec(new Date(cohort.startDate + "EST"));
       const startDate = parseDateStr(rawStartDate);
       return [duration, fullOrPartTime, startDate];
   }
