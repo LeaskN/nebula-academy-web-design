@@ -46,10 +46,17 @@ class ProgramDesc extends Component {
       const [, version, boot, camp] = /(\w\d*) (Boot)(Camp)/.exec(option.name);
       const partTimeOrFull = option.name.includes('6 Month') ? "part-time session: " : "full-time session: ";
       const startDate = `${new Date(option.startDate + 'EST').toDateString()}`;
+      const startDatePlusComma = startDate.slice(0, startDate.indexOf(' ')) + ',' + startDate.slice(startDate.indexOf(' '));
       const endDate = `${new Date(option.endDate + 'EST').toDateString()}`;
+      const endDatePlusComma = endDate.slice(0, endDate.indexOf(' ')) + ',' + endDate.slice(endDate.indexOf(' '));
       return (
         <p key={key} className="currentCohortsP">
-          <span className="currentCohortsSpan">{`${version} ${boot}${camp.toLowerCase()}, ${partTimeOrFull}`}</span> {startDate} - {endDate}
+          
+          <span className="currentCohortsSpan">
+            {`${version} ${boot}${camp.toLowerCase()}, ${partTimeOrFull}`}
+          </span>
+
+          {startDatePlusComma} - {endDatePlusComma}
         </p>
       )
     }
