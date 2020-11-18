@@ -11,7 +11,7 @@ class InfoPanel extends Component {
         };
     }
     componentDidMount(){
-        let stateFromProps = this.props
+        let stateFromProps = this.props;
         // for(let item in stateFromProps.state){
         //     let currentItem = stateFromProps.state[item]
         //     this.setState({
