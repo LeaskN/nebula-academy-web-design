@@ -16,6 +16,8 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/Outcomes"><p className="navText">Outcomes</p></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/Partners"><p className="navText">Partners</p></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/Guestspeakers"><p className="navText">GuestSpeakers</p></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/staff">Team</Nav.Link></Nav.Item>
+                    
                     <Button href="/Registration" variant="warning">Register Now</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
