@@ -204,6 +204,14 @@ code {
   background-color: #3B3D7B;
   border-color: #3B3D7B;
 }
+.btn-outline-primary {
+  border-color: #7F5A8F;
+  color: #7F5A8F;
+}
+.btn-outline-primary:hover {
+  background-color: #7F5A8F;
+  border-color: #7F5A8F;
+}
 .btn-info{
   color: white;
   background-color: #00C9CB;
