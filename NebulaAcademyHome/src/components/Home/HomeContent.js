@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import InfoPanel from '../Global/InfoPanel';
+import StudentReviews from '../Global/StudentReviews/StudentReviews';
 import slide2 from '../../assets/nebulahomeimage.jpg';
 
 import './HomeContent.css';
@@ -30,7 +31,20 @@ class HomeContent extends Component {
                 { color: '#138DFE', header:"Workforce Development", content: "We reignite the passion for learning in today’s continually disruptive workforce development industries. We achieve these objectives by leveraging tools and resources that support today’s modern learner, where technology is used as a tool for supporting more productive and engaging STEAM learning experiences.​" , buttonURL:'workforce-development', buttonText: 'Learn More' },
                 { color: '#007EA7', header:"Universities", content: "Nebula Academy bridges the gap between academia and industry. We work with colleges and universities to ensure their curriculum is up to date with industry standards and students are prepared with the skillset they need to enter the modern workforce. " , buttonURL:'universities', buttonText: 'Learn More' },
                 { color: '#9395D3', header:"Philanthropy", content: "Nebula Academy is a social enterprise institution. Through our not-for-profit entity, We Connect The Dots, we aspire to help our community and world by giving back. Learn more on the types of programs we have and how you can give back! " , buttonURL:'philanthropy', buttonText: 'Learn More' },
-            ]
+            ],
+            studentReviews: [
+                {   
+                    name: 'Nicholas Leask', 
+                    image: 'https://images.squarespace-cdn.com/content/v1/53ed0e3ce4b0c296acaeae80/1584577511464-8FDZYWQVXUI1OBS4VTZP/ke17ZwdGBToddI8pDm48kD8Xroq_AX5Zgi3HGn2a5gd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQQ0iLpUJJ55dW55w_oZ6JvHnXlmx4oSoNzVwlPskgpsLIXfY3DEqu8fc08UsQJ-4w/Bonneville14082-Edit-DHWEB%2BNick%2BFerguson%2BDenver%2BBroncos%2BHeadshot%2BPhotography%2Bby%2BAaron%2BLucy%2BDenver%2BColorado%2BHeadshots%2BPhotographer.jpg?format=2500w',
+                    header: 'Fantastic',
+                    quote: 'Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tempus imperdiet nulla malesuada pellentesque elit. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat. Nibh praesent tristique magna sit. Adipiscing elit ut aliquam purus sit amet. In ante metus dictum at tempor commodo ullamcorper. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Fames ac turpis egestas sed tempus urna. Morbi tincidunt ornare massa eget.'
+                }, 
+                {   
+                    name: 'Alex Sanchez', 
+                    image: 'https://www.unh.edu/unhtoday/sites/default/files/styles/article_huge/public/article/2019/professional_woman_headshot.jpg?itok=3itzxHXh',
+                    header: 'Amazing!',
+                    quote: 'Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tempus imperdiet nulla malesuada pellentesque elit. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat. Nibh praesent tristique magna sit. Adipiscing elit ut aliquam purus sit amet. In ante metus dictum at tempor commodo ullamcorper. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Fames ac turpis egestas sed tempus urna. Morbi tincidunt ornare massa eget.'
+                }             ]
         };
     }
     createSlideCard = () => {
@@ -51,6 +65,7 @@ class HomeContent extends Component {
                     { this.createSlideCard() }
                 </Row>
                     <InfoPanel state={this.state} />
+                    <StudentReviews reviews={this.state.studentReviews}/>
             </React.Fragment>
             )
         }

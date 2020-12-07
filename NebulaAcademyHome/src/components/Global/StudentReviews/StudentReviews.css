@@ -1,0 +1,29 @@
+.studentReviewRow{
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  min-height: 500px;
+  width: 90vw;
+  background-color: #3B3D7B;
+  padding-top: 150px;
+}
+
+.studentReviewImg{
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #00C9CB;
+}
+
+.singleReview{
+  box-shadow: 3px 3px 3px 8px;
+  margin: 100px 40px 40px 40px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.reviewName{
+  padding-top: 135px;
+}

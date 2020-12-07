@@ -12,13 +12,6 @@ class InfoPanel extends Component {
     }
     componentDidMount(){
         let stateFromProps = this.props;
-        // for(let item in stateFromProps.state){
-        //     let currentItem = stateFromProps.state[item]
-        //     this.setState({
-        //         [item]: currentItem
-        //     })
-        // }
-        // Create a key value signature for each element
         const elementsObj = stateFromProps.state.elements.reduce((acc, cur) => {
             const title = cur.header.split(" ").join("").toLowerCase();
             acc[title] = {...cur};
