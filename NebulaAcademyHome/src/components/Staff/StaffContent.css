@@ -1,5 +1,5 @@
 .card{
-  border: 0px !important;
+  border: 0px;
 }
 .paddingRight{
   border-top: 5px solid white;
@@ -25,7 +25,7 @@
 display: none;
 }
 .slidingPane{
-height:fit-content !important;
+height:fit-content;
 }
 .slide-pane_from_bottom{
 /* margin-top: 20vh; */
@@ -42,14 +42,14 @@ height: auto;
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
   border: 5px solid white;
-  padding: 10px !important;
+  padding: 10px;
   filter: grayscale(100%);
   transition: .5s;
 }
 .staffMember:hover{
   color: white;
   text-shadow: 1px 1px 1px #000;
-  -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%) !important;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
   background-color: #7b7b7b;
 }

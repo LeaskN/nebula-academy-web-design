@@ -15,22 +15,23 @@ class StudentReviews extends Component {
 
     createStudentReview = () => {
         return this.state.reviews.map((review, i) => { 
-            console.log(review)
+            console.log(review.image)
                 return(
                     i % 2 ?
-                    <Col sm={12} md={5} className="singleReview">
-                        <img style={{ top: '-125px', right: '20px' }} className="studentReviewImg" src={review.image} />
-                        <div>{review.title}</div>
-                        <div className="reviewName">{review.name}</div>
+                    <Col key={i} sm={12} md={5} className="singleReview">
+                        <div className='singleReviewImg' style={{ backgroundImage:`url(${review.image})`, top: '-125px', right: '20px' }} src={review.image} ></div>
+                        <h2 className="singleReviewHeader">"{review.header}"</h2>
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <div>{review.name}</div>
                         <div>{review.quote}</div>
-                        <div>STARS</div>
+
                     </Col> :
-                    <Col sm={12} md={5} className="singleReview" style={{ flexDirection: 'row-reverse'}}>
-                        <div style={{ flexDirection: 'row-reverse' }}>{review.title}</div>
-                        <div className="reviewName">{review.name}</div>
+                    <Col key={i} sm={12} md={5} className="singleReview" style={{ flexDirection: 'row-reverse'}}>
+                        <div className='singleReviewImg' style={{ backgroundImage:`url(${review.image})`, top: '-125px', left: '20px' }} src={review.image} ></div>
+                        <h2 className="singleReviewHeader" style={{ flexDirection: 'row-reverse' }}>"{review.header}"</h2>
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <div>{review.name}</div>
                         <div>{review.quote}</div>
-                        <div>STARS</div>
-                        <img style={{ top: '-125px', left: '20px' }} className="studentReviewImg" src={review.image} />
                     </Col>
                 )
             }

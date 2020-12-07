@@ -8,22 +8,56 @@
   padding-top: 150px;
 }
 
-.studentReviewImg{
-  height: 250px;
-  border-radius: 50%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid #00C9CB;
-}
-
 .singleReview{
   box-shadow: 3px 3px 3px 8px;
   margin: 100px 40px 40px 40px;
   background-color: white;
   border: 1px solid black;
+  padding: 30px;
 }
 
-.reviewName{
+.singleReviewImg{
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid #00C9CB;
+}
+
+.singleReviewHeader{
   padding-top: 135px;
+  text-shadow: 1px 2px black;;  
+}
+
+.singleReview:nth-child(4n-1) .singleReviewImg {
+  border: 3px solid rgb(153, 57, 85);
+  color: black
+}
+.singleReview:nth-child(4n-2) .singleReviewImg {
+  border: 3px solid rgb(19, 141, 254);
+  color: black
+}
+.singleReview:nth-child(4n-3) .singleReviewImg {
+  border: 3px solid rgb(0, 126, 167);
+  color: black
+}
+.singleReview:nth-child(4n-4) .singleReviewImg {
+  border: 3px solid rgb(147, 149, 211);
+  color: black
+}
+
+
+.singleReview:nth-child(4n-1) h2 {
+  color: rgb(153, 57, 85);
+}
+.singleReview:nth-child(4n-2) h2 {
+  color: rgb(19, 141, 254);
+}
+.singleReview:nth-child(4n-3) h2 {
+  color: rgb(0, 126, 167);
+}
+.singleReview:nth-child(4n-4) h2 {
+  color: rgb(147, 149, 211);
 }
