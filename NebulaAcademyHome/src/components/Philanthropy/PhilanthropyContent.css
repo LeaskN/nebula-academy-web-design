@@ -1,26 +1,26 @@
-.PhilanthropyUrlCard{
-    text-align: center;
-    color: black;
-    background-color: white;
-    margin: 20px;
-    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
-    border: 3px solid #00C9CB;
-    min-width: 300px;
-    min-height: 200px;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    padding: 7px !important;
+.PhilanthropyUrlCard {
+  text-align: center;
+  color: black;
+  background-color: white;
+  margin: 15px;
+  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
+  border: 3px solid #00c9cb;
+  min-width: 300px;
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 7px !important;
 }
-.cardDeckLeft{
-    color: #ffffff;
-    background-color: #00C9CB;
-    padding: 10px;
-    align-items: center;
-    justify-content: center !important;
+.cardDeckLeft {
+  color: #ffffff;
+  background-color: #00c9cb;
+  padding: 10px;
+  align-items: center;
+  justify-content: center !important;
 }
-@media (max-width: 810px){
-    .changingFont{
-        font-size: 4vw !important;
-    }
+@media (max-width: 810px) {
+  .changingFont {
+    font-size: 4vw !important;
+  }
 }
