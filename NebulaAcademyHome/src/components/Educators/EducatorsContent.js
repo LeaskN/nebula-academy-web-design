@@ -4,7 +4,7 @@ import InfoPanel from '../Global/InfoPanel'
 import slide1 from '../../assets/Image1.jpg'
 import slide2 from '../../assets/Image2.jpg'
 import slide3 from '../../assets/Image3.jpg'
-
+import Popup from '../Popup/Popup';
 import './EducatorsContent.css';
 
 class Educators extends Component {
@@ -40,7 +40,7 @@ class Educators extends Component {
     createSlideCard = () => {
         return(
             this.state.slides.map((slide, idx) => (
-                <Col key={idx} style={{ backgroundColor: 'transparent'}} className="HomeUrlCard cardHeaderContainer">
+                <Col key={idx} stysle={{ backgroundColor: 'transparent'}} className="HomeUrlCard cardHeaderContainer">
                     <blockquote style={{fontSize: '1.3em'}}>{slide.header}</blockquote>
                     <p>{slide.body}</p>
                 </Col>
@@ -50,13 +50,16 @@ class Educators extends Component {
 render() {
         return (
             <React.Fragment>
+                <Popup 
+                    content={"All Teacher Professional Development courses are being offered online. Registrations are now open for our Computer Science Teaching Certification Program!"} 
+                    buttons={[{title: "Learn More", link: "https://csteach.nebulaacademy.com/programs"}]}
+                />
                 <Row style={{ backgroundImage: `url('${slide2}')`, backgroundSize: 'cover', marginLeft: '10vw', marginRight: '10vw', }}>
                     { this.createSlideCard() }
                 </Row>
-                    <InfoPanel name={"INFO PANEL!!!"} state={this.state}/>
+                <InfoPanel name={"INFO PANEL!!!"} state={this.state}/>
             </React.Fragment>
         )
-
     }
 };
 
