@@ -1,55 +1,55 @@
-.card{
+.card {
   border: 0px !important;
 }
-.paddingRight{
+.paddingRight {
   border-top: 5px solid white;
   border-right: 2.5px solid white;
 }
-.paddingLeft{
-  border-top:5px solid white;
+.paddingLeft {
+  border-top: 5px solid white;
   border-left: 2.5px solid white;
 }
-.paddingMiddle{
+.paddingMiddle {
   border-top: 5px solid white;
 }
-.imageContainer{
+.imageContainer {
   height: 268.5px;
   width: 268.5px;
   margin: auto;
-  overflow: hidden; 
+  overflow: hidden;
   justify-content: center;
-  border: 5px solid #00C9CB;
+  border: 5px solid #00c9cb;
   border-radius: 10px;
 }
-.toggleOff{
-display: none;
+.toggleOff {
+  display: none;
 }
-.slidingPane{
-height:fit-content !important;
+.slidingPane {
+  height: fit-content !important;
 }
-.slide-pane_from_bottom{
-/* margin-top: 20vh; */
-overflow: auto;
+.slide-pane_from_bottom {
+  /* margin-top: 20vh; */
+  overflow: auto;
 }
 .ReactModal__Overlay {
-overflow: scroll;
+  overflow: scroll;
 }
 .img-fluid {
-width: 100%;
-height: auto;
+  width: 100%;
+  height: auto;
 }
-.staffMember{
+.staffMember {
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
   border: 5px solid white;
   padding: 10px !important;
   filter: grayscale(100%);
-  transition: .5s;
+  transition: 0.5s;
 }
-.staffMember:hover{
+.staffMember:hover {
   color: white;
   text-shadow: 1px 1px 1px #000;
   -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
   filter: grayscale(0%) !important;
-  background-color: #7F5A8F;
+  background-color: #7b7b7b;
 }

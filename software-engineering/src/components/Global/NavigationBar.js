@@ -24,7 +24,9 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/trycoding">Try Coding</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/Scholarships">Scholarships</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/guestspeakers">Guest Speakers</Nav.Link></Nav.Item>
-                    <Button href="/application" variant="success">Apply</Button>
+                    <Nav.Item><Nav.Link href="/staff">Team</Nav.Link></Nav.Item>
+
+                    <Button href="/application" variant="success" id="nav-button">Apply</Button>
                     <div style={{width: "20px"}}></div>
                 </Nav>
             </Navbar.Collapse>
