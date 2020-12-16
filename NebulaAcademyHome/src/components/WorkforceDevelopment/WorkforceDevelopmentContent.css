@@ -2,10 +2,10 @@
     text-align: center;
     color: black;
     background-color: white;
-    margin: 9px 9px 0 9px;
+    margin: 2%;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
     border: 3px solid #8E5EA5;
-    min-width: 570px !important;
+    min-width: 570px;
     min-height: 400px;
 }
 #scholarshipContent {
@@ -35,11 +35,18 @@
         font-size: .9em;
     }
 }
+@media (max-width: 610px){
+    .WorkforceDevelopmentUrlCard{
+      margin: 0;
+      width: 100vw;
+    }
+}
 @media (max-width: 570px){
     .WorkforceDevelopmentUrlCard{
         line-height: .6em;
-        min-width: 100vw !important;
+        min-width: 100%;
         border: none;
+        margin: 0 0 5% 0;
     }
     .carousel-item, .d-block, .w-100{
         min-height: 300px;

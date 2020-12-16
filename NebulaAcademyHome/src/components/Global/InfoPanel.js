@@ -113,7 +113,7 @@ class InfoPanel extends Component {
     render() {
         return (
             <React.Fragment>
-                <div>
+                <div className="shapeContainer">
                     <Row className="circleContainer" >
                         {this.createShape()}
                     </Row>
