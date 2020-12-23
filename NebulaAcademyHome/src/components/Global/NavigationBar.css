@@ -6,7 +6,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 .navbar-collapse{

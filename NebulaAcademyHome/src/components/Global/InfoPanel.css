@@ -31,11 +31,13 @@
     justify-content: space-around;
     margin-bottom: 0px;
 }
-@media (max-width: 1095px){
+@media (max-width: 994px){
     .lineContainer{
         display: none;
     }
-
+    .shapeContainer {
+        margin-bottom: 5%;
+    }
 }
 .line{
     width: 4px;
@@ -52,7 +54,7 @@
     text-shadow: 1px 1px 1px black; 
     color: white;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
     border: 3px solid #8E5EA5;
     border-radius: 10px;

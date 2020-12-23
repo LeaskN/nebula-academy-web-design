@@ -47,7 +47,7 @@ class Educators extends Component {
             ))
         )
     }
-render() {
+    render() {
         return (
             <React.Fragment>
                 <Popup 

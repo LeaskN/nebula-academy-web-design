@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Row, Col, Button, Carousel, Container } from 'react-bootstrap';
 import InfoPanel from '../Global/InfoPanel'
 import AWSSlide1 from '../../assets/awsstats1.jpg';
 import AWSSlide2 from '../../assets/awsslide2.jpg';
@@ -120,9 +120,10 @@ class WorkforceDevelopment extends Component {
     }
     render() {
         return (
-            <React.Fragment>
+            <Container fluid="sm">
                 <br/>
-                <Row style={{marginLeft: '3vw', marginRight: '3vw'}}>
+                {/* style={{marginLeft: '3vw', marginRight: '3vw'}} */}
+                <Row>
                     <Col className="WorkforceDevelopmentUrlCard" style={{ borderColor: '#ff9900'}}>
                             <h1>AWS</h1>
                             <Carousel interval="10000">
@@ -140,8 +141,8 @@ class WorkforceDevelopment extends Component {
                             <Button className='bottom' href="https://code.nebulaacademy.com" target="blank" variant="secondary">Bootcamp</Button>
                     </Col>
                 </Row>
-                    <InfoPanel state={this.state}/>
-            </React.Fragment>
+                <InfoPanel state={this.state}/>
+            </Container>
         )
     }
 };

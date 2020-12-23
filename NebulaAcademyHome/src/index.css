@@ -1,7 +1,15 @@
-html{ scroll-behavior: smooth; }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{ 
+  scroll-behavior: smooth; 
+}
+
 body {
-  overflow-x: hidden;
-  width:100vw;
+  /* overflow-x: hidden; */
+  width:100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -9,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #body::-webkit-scrollbar { display: none; }
-.body::-webkit-scrollbar { width: 0 !important; }
+.body::-webkit-scrollbar { width: 0; }
 .body { overflow: -moz-scrollbars-none; }
 .element { -ms-overflow-style: none; }
 
@@ -30,7 +38,7 @@ code {
 .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2,
 .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10,
 .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
-  padding: 0px !important;
+  padding: 0px;
 }
 .carousel-indicators{
   margin-bottom: 0px;
@@ -57,16 +65,7 @@ code {
 .carouselParagraph{
   line-height: 30px;
 }
-@media (max-width: 610px){
-  .row{
-    margin: 0px !important;
-    padding: 0px !important;
-  }
-  .WorkforceDevelopmentUrlCard{
-    margin: 0 !important;
-    width: 100vw;
-  }
-}
+
 .jumbotron {
   text-align: center;
 }
