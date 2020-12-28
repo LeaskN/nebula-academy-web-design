@@ -12,7 +12,6 @@ function Popup() {
       fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
       .then(res => res.json())
       .then(res => {
-        console.log(res, "< res")
         updatePrograms(res);
       })
       .catch(err => {

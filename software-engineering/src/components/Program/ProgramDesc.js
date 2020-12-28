@@ -10,7 +10,9 @@ class ProgramDesc extends Component {
       // fetch(`http://localhost:3000/dev2/campaigns`)
       return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
-        .then(res => this.setState({cohortOptions: res}))
+        .then(res => {
+          console.log(res, "res")
+          this.setState({cohortOptions: res})})
         .catch(err => {console.log(err)})
     }
 
