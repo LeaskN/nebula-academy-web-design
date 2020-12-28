@@ -45,9 +45,9 @@ class ProgramDesc extends Component {
     formatDetailsIntoJSX(option, key){
       const [, version, boot, camp] = /(\w\d*) (Boot)(Camp)/.exec(option.name);
       const partTimeOrFull = option.name.includes('6 Month') ? "part-time session: " : "full-time session: ";
-      const startDate = `${new Date(option.startDate + 'EST').toDateString()}`;
+      const startDate = `${new Date((option.startDate + ' 00:00:00 EST').replace(/-/g, '/')).toDateString()}`;
       const startDatePlusComma = startDate.slice(0, startDate.indexOf(' ')) + ',' + startDate.slice(startDate.indexOf(' '));
-      const endDate = `${new Date(option.endDate + 'EST').toDateString()}`;
+      const endDate = `${new Date((option.endDate + ' 00:00:00 EST').replace(/-/g, '/')).toDateString()}`;
       const endDatePlusComma = endDate.slice(0, endDate.indexOf(' ')) + ',' + endDate.slice(endDate.indexOf(' '));
       return (
         <p key={key} className="currentCohortsP">
