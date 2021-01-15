@@ -9,3 +9,6 @@
 .footerItem:hover{
     color: white!important;
 }
+.responsiveIcon svg {
+    height: 100px;
+}
