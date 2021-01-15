@@ -7,8 +7,8 @@ import './Footer.css';
 
 export const Footer = () => (
     <React.Fragment>
-        <Navbar bg="dark" className="footerNavbar mainNavbar navbar-dark navbar-collapse"  style={{fontSize: '.80em', lineHeight:'10px'}}toggleable="true" expand="lg">
-            <Container style={{ alignItems: 'flex-start', alignContent: 'flex-start', paddingTop: '15px'}}>
+        <Navbar bg="dark" className="footerNavbar mainNavbar navbar-dark"  style={{fontSize: '.80em', lineHeight:'10px'}}>
+            <Container className="container">
                 <Navbar.Brand href="/"><img src={ NebulaIcon } height="70px" alt=""></img></Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav"/> */}
                 <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start'}}>

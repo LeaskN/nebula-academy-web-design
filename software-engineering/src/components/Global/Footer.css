@@ -12,3 +12,14 @@
 .responsiveIcon svg {
     height: 100px;
 }
+.container {
+    /* align-items: flex-start;
+    align-content: flex-start;  */
+    padding-top: 15px;
+}
+
+/* @media screen and (max-width: 975px) {
+    .container{
+        flex-direction: column;
+    }
+  } */
