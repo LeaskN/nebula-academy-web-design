@@ -7,9 +7,9 @@ import './Footer.css';
 
 export const Footer = () => (
     <Navbar bg="dark" className="footerWrap mainNavbar navbar-dark"  style={{fontSize: '.80em', lineHeight:'10px'}}>
-        <div className="footerNav">
+        <div className="innerFooterWrap">
             <Navbar.Brand href="/"><img src={ NebulaIcon } height="70px" alt=""></img></Navbar.Brand>                
-            <div className="contactWrap">
+            <div className="footerContact">
                 <ul>
                     <h5 style={{color:'#BBBBBB'}}>Contact</h5>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="tel:631-468-7477"><AiTwotonePhone/> 631-468-7477</Nav.Link></Nav.Item>
@@ -43,7 +43,7 @@ export const Footer = () => (
                     </IconContext.Provider>   
                 </Nav>
             </div>
-            <div className="footerSection">
+            <div className="footerLinks">
                 <ul>
                     <h5 style={{color:'#BBBBBB'}}>All Links</h5>
                     <li className="noPadding noMargin nobull smallLineHeight"><Nav.Link className="footerItem" href="/">About</Nav.Link></li>
