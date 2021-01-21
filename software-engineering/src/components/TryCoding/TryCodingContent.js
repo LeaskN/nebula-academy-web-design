@@ -52,7 +52,7 @@ render() {
                         <Button href={this.link} className="tryCodingButton" target="empty">Register for Session</Button>
                     </Card>
                 </Col>
-                <Col xs={8} className="cardColumns offWhite">
+                <Col xs={8} className="cardColumns">
                     <div className="tryCodingCard">
                         <h3><a href={this.link} target="empty">Try Coding Workshops!</a></h3>
                         <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...<a href={this.link} target="empty">learn more</a></p>

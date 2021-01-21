@@ -37,6 +37,8 @@
 }
 .tryCodingCard{
     padding: 15px; 
+    background-color: transparent;
+    color: white;
 }
 .tryCodingP{
     width: 100%; 
