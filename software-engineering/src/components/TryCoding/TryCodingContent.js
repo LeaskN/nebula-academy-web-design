@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
-
+import { formatDateString } from '../../helperFunctions/helperFunctions';
 import './TryCodingContent.css';
 
 class TryCodingContent extends Component {
@@ -14,7 +14,8 @@ class TryCodingContent extends Component {
     link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
     nextFriday = () => {
         var d = new Date();
-
+        // console.log(d)
+        // console.log(formatDateString(d))
         switch (d.getDay())
         {
         case 0: d.setDate(d.getDate() + 5);
@@ -37,17 +38,17 @@ class TryCodingContent extends Component {
 
         default:
         }
-        let formattedDate = ` ${d}`.split('2020')[0].split('Mon').join('Monday').split('Tues').join('Tuesday').split('Wed').join('Wednesday').split('Thurs').join('Thursday').split('Fri').join('Friday').split('Sat').join('Saturday').split('Sun').join('Sunday')
+        let formattedDate = ` ${d}`.split(/(\d{5,}|[2-9](?=\d*[1-9])\d{3})/g)[0].split('Mon').join('Monday').split('Tues').join('Tuesday').split('Wed').join('Wednesday').split('Thurs').join('Thursday').split('Fri').join('Friday').split('Sat').join('Saturday').split('Sun').join('Sunday')
         return formattedDate;
-
     }
+
 render() {
         return (
             <Row className="staticCard" style={{width:"87.5vw"}}>
                 <Col xs={4} className="cardColumns">
                     <Card className="cardDeckLeft" style={{width:"87.5vw", display: "flex", alignItems: "center", justifyContent: "center"}}>
                         <p style={{marginBottom:"0px"}}>Next Event:</p>
-                        <h1>{this.nextFriday().split('Monday').join('').split('Tuesday').join('').split('Wednesday').join('').split('Thursday').join('').split('Friday').join('').split('Saturday').join('').split('Sunday').join('')}</h1>
+                        <h1>{this.nextFriday()}</h1>
                         <br/>
                         <Button href={this.link} className="tryCodingButton" target="empty">Register for Session</Button>
                     </Card>
