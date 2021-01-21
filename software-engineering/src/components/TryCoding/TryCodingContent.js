@@ -14,8 +14,6 @@ class TryCodingContent extends Component {
     link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
     nextFriday = () => {
         var d = new Date();
-        // console.log(d)
-        // console.log(formatDateString(d))
         switch (d.getDay())
         {
         case 0: d.setDate(d.getDate() + 5);
