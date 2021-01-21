@@ -32,7 +32,7 @@ ReactGA.initialize('G-3H3KR3P2P1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
-  console.log('V:1.20.21');
+  console.log('V:1.21.21.GA');
   return (
     <React.Fragment>
       <CookieConsent
