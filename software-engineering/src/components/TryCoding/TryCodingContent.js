@@ -11,7 +11,8 @@ class TryCodingContent extends Component {
             Ethnicity__c: []
         };
     }
-    link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
+    // link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
+    link = `mailto:succeed@nebulaacademy.com?subject=Try Coding!`
     nextFriday = () => {
         var d = new Date();
         switch (d.getDay())
@@ -36,7 +37,8 @@ class TryCodingContent extends Component {
 
         default:
         }
-        let formattedDate = ` ${d}`.split(/(\d{5,}|[2-9](?=\d*[1-9])\d{3})/g)[0].split('Mon').join('Monday').split('Tues').join('Tuesday').split('Wed').join('Wednesday').split('Thurs').join('Thursday').split('Fri').join('Friday').split('Sat').join('Saturday').split('Sun').join('Sunday')
+        let formattedDate = `${d}`.split(/(\d{5,}|[2-9](?=\d*[1-9])\d{3})/g)[0].split('Mon').join('Monday').split('Tues').join('Tuesday').split('Wed').join('Wednesday').split('Thurs').join('Thursday').split('Fri').join('Friday').split('Sat').join('Saturday').split('Sun').join('Sunday')
+        this.link = `mailto:succeed@nebulaacademy.com?subject=Try Coding, ${formattedDate}`;
         return formattedDate;
     }
 
@@ -48,13 +50,14 @@ render() {
                         <p style={{marginBottom:"0px"}}>Next Event:</p>
                         <h1>{this.nextFriday()}</h1>
                         <br/>
-                        <Button href={this.link} className="tryCodingButton" target="empty">Register for Session</Button>
+                        <Button href={this.link} className="tryCodingButton" target="empty">Register for Free</Button>
+                        <p>Please leave the subject as:<br/> Try Coding, {this.nextFriday()}(or your desired date)</p>
                     </Card>
                 </Col>
                 <Col xs={8} className="cardColumns">
                     <div className="tryCodingCard">
-                        <h3><a href={this.link} target="empty">Try Coding Workshops!</a></h3>
-                        <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...<a href={this.link} target="empty">learn more</a></p>
+                        <h3 style={{color:'#0078d7'}}>Try Coding Workshops!</h3>
+                        <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...</p>
                         <p className="tryCodingP"><b>Participants must be over 17.</b></p>
                     </div>
                 </Col>
