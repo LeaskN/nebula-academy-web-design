@@ -33,6 +33,7 @@ class ApplicationContent extends Component {
     }
     // get cohort options
     getCohortOptions(){
+        // return fetch(`http://localhost:3000/dev2/campaigns`)
         return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions: res}))
@@ -161,6 +162,7 @@ class ApplicationContent extends Component {
             )
             .then((response) => {
                 console.log(response)
+                console.log(this.fixJSON())
                 if(response.success){
                     alert(`Congratulations! You've successfully applied to the Software Engineering Bootcamp! \n\nYou'll be receiving a confirmation & instructions regarding next steps via e-mail. \n\nThis will include your link to the next phase of the application process. \n\nIMPORTANT! This is an automated email and can land in your junkmail. Please whitelist succeed@nebulaacademyny.com and check your junk or spam mail for your confirmation & instructions. \n\nIf after 15 minutes you still haven’t received your confirmation please email succeed@nebulaacademyny.com`)
                 } else if(response.errorCode === 'FIELD_CUSTOM_VALIDATION_EXCEPTION'){

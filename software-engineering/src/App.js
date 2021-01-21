@@ -18,13 +18,21 @@ import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import CookieConsent from "react-cookie-consent";
-
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
+import ReactGA from 'react-ga'; //google analytics
+// the following 7 lines are example code
+// const trackingId = "UA-1234567890-1"; // Replace with your Google Analytics tracking ID
+// ReactGA.initialize(trackingId);
+// ReactGA.set({
+//   userId: auth.currentUserId(),
+//   // any data that is relevant to the user session
+//   // that you would like to track with google analytics
+// })
+//the following are from our old code and new research
+ReactGA.initialize('G-3H3KR3P2P1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
-  console.log('V:12.28.20');
+  console.log('V:1.20.21');
   return (
     <React.Fragment>
       <CookieConsent
