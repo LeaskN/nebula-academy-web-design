@@ -16,6 +16,7 @@ import { GuestSpeakerApplication } from './pages/GuestSpeakerApplication';
 import { HiddenApplication } from './pages/HiddenApplication';
 import { TryCoding } from './pages/TryCoding';
 import { Staff } from './pages/Staff';
+import { Videos } from './pages/Videos.js'
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import CookieConsent from "react-cookie-consent";
 import ReactGA from 'react-ga'; //google analytics
@@ -57,6 +58,7 @@ function App() {
             <Route path = "/guestspeakerapplication" component={GuestSpeakerApplication}/>
             <Route path = "/trycoding" component={TryCoding}/>
             <Route path = "/staff" component={Staff}/>
+            <Route path = "/videos" component={Videos}/>
             <Route path = "/hiddenapplication" component={HiddenApplication}/>
             <Route component = {NoMatch}/>
             {/*
