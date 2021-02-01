@@ -2,7 +2,7 @@
     background-image: url('../../assets/NebulaAcademyBootCampImg2Cover.jpg');
     background-size: cover;
     color: #ccc;
-    margin: 0px;
+    margin-bottom: 15px;
     min-height: 250px;
     z-index: -2;
 }

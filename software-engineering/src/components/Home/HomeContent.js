@@ -93,19 +93,19 @@ render() {
                             <Card className="bg-dark text-white">
                                 <Card className="purpleBackground">
                                     <br/>
-                                    <h1 className="centralText">$62,910</h1>
+                                    <h1 className="centralText">$75,452</h1>
                                     <a className="link centralText" target="empty" href="https://www.indeed.com/salaries/junior-software-engineer-Salaries">
                                     Junior Software Engineer Salary
                                     </a>
-                                    <h1 className="centralText">$106,395</h1>
+                                    <h1 className="centralText">$107,914</h1>
                                     <a className="link centralText" target="empty" href="https://www.indeed.com/career/software-engineer/salaries">
                                     Software Engineer Salary
                                     </a>
-                                    <h1 className="centralText">$112,376</h1>
+                                    <h1 className="centralText">$108,909</h1>
                                     <a className="link centralText" target="empty" href="https://www.indeed.com/career/full-stack-developer/salaries">
                                     Full Stack Developer Salary
                                     </a>
-                                    <h1 id="conditions" className="centralText">$128,817</h1>
+                                    <h1 id="conditions" className="centralText">$133,368</h1>
                                     <a className="link centralText" target="empty" href="https://www.indeed.com/career/senior-software-engineer/salaries">
                                     Senior Software Engineer Salary
                                     </a>
