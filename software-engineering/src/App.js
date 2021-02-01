@@ -37,7 +37,7 @@ function App() {
   return (
     <React.Fragment>
       <CookieConsent
-        style={{ background: "#131520" }}
+        style={{ background: "#131520", paddingLeft: "75px" }}
         buttonStyle={{ color: "#4e503b", borderRadius: '10px', shadow:'10px', backgroundColor: 'white' }}
         >
         This website uses cookies to enhance the user experience.
