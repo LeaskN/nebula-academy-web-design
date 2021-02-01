@@ -1,5 +1,5 @@
 .mainNavbar{
-    justify-content: space-between !important;
+    justify-content: space-between;
 }
 .navbar{
     background-color: #131524 !important;
@@ -7,11 +7,13 @@
     position: sticky;
     top: 0px;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
 }
 .navbar-collapse{
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
     justify-content: flex-end;
-    display: flex;
 }
 .navContents{
     display: flex;
