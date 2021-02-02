@@ -1,12 +1,14 @@
-.PhilanthropyJumbo{
-    background-image: url('../../assets/philanthropy.jpg');
-    background-size: cover;
-    color: white;
-    z-index: 1;
-    height: fit-content;
-    position: relative;
-    margin: 0px;
-    padding: 30px;
-    font-size: x-large;
-    text-shadow: 1px 1px 1px #8E5EA5; 
+.PhilanthropyJumbo {
+  background-image: url("../../assets/philanthropy.jpg");
+  background-size: cover;
+  color: white;
+  z-index: 1;
+  height: fit-content;
+  position: relative;
+  margin: 0px;
+  padding: 30px;
+  font-size: x-large;
+  min-height: 325px;
+
+  text-shadow: 1px 1px 1px #8e5ea5;
 }

@@ -220,23 +220,6 @@ class WorkforceDevelopment extends Component {
           ),
         },
         {
-          image: AWSSlide3,
-          al: "Third slide",
-          header: "Explore Potential Career Paths in Tech",
-          body: (
-            <>
-              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
-                “My advice to people leaving college is always the same: Get
-                AWS-Certified.” <br />
-                <br />
-                <b>
-                  <p>David Linthicum, Infoworld</p>
-                </b>
-              </blockquote>
-            </>
-          ),
-        },
-        {
           image: AWSSlide4,
           al: "Fourth slide",
           header: "Course Description",
@@ -290,23 +273,6 @@ class WorkforceDevelopment extends Component {
                 </a>
               </p>
             </div>
-          ),
-        },
-        {
-          image: AWSSlide3,
-          al: "Third slide",
-          header: "Become a Tech Sales Professional",
-          body: (
-            <>
-              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
-                “My advice to people leaving college is always the same: Get
-                AWS-Certified.” <br />
-                <br />
-                <b>
-                  <p>David Linthicum, Infoworld</p>
-                </b>
-              </blockquote>
-            </>
           ),
         },
         {
@@ -366,23 +332,6 @@ class WorkforceDevelopment extends Component {
                 </a>
               </p>
             </div>
-          ),
-        },
-        {
-          image: AWSSlide3,
-          al: "Third slide",
-          header: "Become a Tech Sales Professional",
-          body: (
-            <>
-              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
-                “My advice to people leaving college is always the same: Get
-                AWS-Certified.” <br />
-                <br />
-                <b>
-                  <p>David Linthicum, Infoworld</p>
-                </b>
-              </blockquote>
-            </>
           ),
         },
         {
@@ -528,7 +477,7 @@ class WorkforceDevelopment extends Component {
     return (
       <React.Fragment>
         <br />
-        <Row style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+        <Row className="WorkForceDevPrograms">
           <Col
             className="WorkforceDevelopmentUrlCard"
             style={{ borderColor: "#ff9900" }}
@@ -560,8 +509,7 @@ class WorkforceDevelopment extends Component {
               Bootcamp
             </Button>
           </Col>
-        </Row>
-        <Row style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Skills</h1>
             <Carousel interval="10000">
@@ -590,8 +538,7 @@ class WorkforceDevelopment extends Component {
               Tech Sales
             </Button>
           </Col>
-        </Row>
-        <Row style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
             <Carousel interval="10000">{this.createHelpDeskSlides()}</Carousel>
