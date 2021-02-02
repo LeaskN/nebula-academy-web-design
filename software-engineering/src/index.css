@@ -1,7 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 html{ scroll-behavior: smooth; }
 body {
   overflow-x: hidden;
-  width:100vw;
+  width:100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -9,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #body::-webkit-scrollbar { display: none; }
-.body::-webkit-scrollbar { width: 0 !important; }
+.body::-webkit-scrollbar { width: 0; }
 .body { overflow: -moz-scrollbars-none; }
 .element { -ms-overflow-style: none; }
 
@@ -25,7 +29,7 @@ code {
 .col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11.col-lg-12,
 .col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11.col-xl-12,
 .col-12{
-  padding: 0px !important;
+  padding: 0px;
 }
 .jumbotron {
   text-align: center;
@@ -80,12 +84,7 @@ code {
     max-width: 1500px;
   }
 }
-@media (max-width: 991px){
-  .container {
-    /* margin: 0vw; */
-    min-width: 98vw ;
-  }
-}
+
 .overImage{
   background-color: rgb(0, 0, 0, .65);
   color: white;
@@ -101,10 +100,13 @@ code {
 .card-body {
   margin: auto;
   width: 100%;
-  height: 100% !important;
-  border: 0px !important;
   white-space: pre-wrap;
 }
+
+.card-body ul {
+  padding: 5%;
+}
+
 .row{
   margin-right: 0px;
   margin-left: 0px;
