@@ -244,6 +244,155 @@ class WorkforceDevelopment extends Component {
             "build networking and presentation kills, master Microsoft Office 365 (Microsoft Teams​, Microsoft OneNote​, Microsoft Forms​, Microsoft PowerPoint​, Microsoft SharePoint), learn the IT fundamentals and intro to coding. ",
         },
       ],
+      TechSalesItems: [
+        {
+          image: AWSSlide1,
+          al: "First slide",
+          header: "Build Client Facing Skills",
+          body: (
+            <div>
+              <p>
+                'This program is an entry to any tech career and is an
+                opportunity to explore potential paths based on individual
+                participant’s interest and capabilities. '
+              </p>
+              <p>
+                Source:{" "}
+                <a
+                  className="linkLight"
+                  target="empty"
+                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                >
+                  Global Knowledge
+                </a>
+              </p>
+            </div>
+          ),
+        },
+        {
+          image: AWSSlide2,
+          al: "Second slide",
+          header: "Prepare For Your Preferred Technical Sales Role",
+          body: (
+            <div>
+              <p>
+                There are a few roles in the tech-sales-cycle each one varying
+                in client facing and technical capacity.
+              </p>
+              <p>
+                Source:{" "}
+                <a
+                  className="linkLight"
+                  target="empty"
+                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                >
+                  Forbes Magazine
+                </a>
+              </p>
+            </div>
+          ),
+        },
+        {
+          image: AWSSlide3,
+          al: "Third slide",
+          header: "Become a Tech Sales Professional",
+          body: (
+            <>
+              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
+                “My advice to people leaving college is always the same: Get
+                AWS-Certified.” <br />
+                <br />
+                <b>
+                  <p>David Linthicum, Infoworld</p>
+                </b>
+              </blockquote>
+            </>
+          ),
+        },
+        {
+          image: AWSSlide4,
+          al: "Fourth slide",
+          header: "Course Description",
+          body:
+            "Learn IT concepts, terminology and infrastructure concepts. Build Sales skills and customer relationship management. ",
+        },
+      ],
+      HelpDeskItems: [
+        {
+          image: AWSSlide1,
+          al: "First slide",
+          header: "Guide End Users Through Issues",
+          body: (
+            <div>
+              <p>
+                'A Helpdesk Support Technician is empathetic, has strong
+                problem-solving skills, understands how to provide remote
+                support, asks the right questions to illicit important
+                information, and has strong communication skills to help guide
+                end users through issues.'
+              </p>
+              <p>
+                Source:{" "}
+                <a
+                  className="linkLight"
+                  target="empty"
+                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                >
+                  Global Knowledge
+                </a>
+              </p>
+            </div>
+          ),
+        },
+        {
+          image: AWSSlide2,
+          al: "Second slide",
+          header: "Build Your Tech Skills",
+          body: (
+            <div>
+              <p>
+                Helpdesk Support Technicians understand complex systems, can
+                manage an AWS Management Console, a Microsoft Office 365
+                Administration Console, customer expectations, and much more.
+              </p>
+              <p>
+                Source:{" "}
+                <a
+                  className="linkLight"
+                  target="empty"
+                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                >
+                  Forbes Magazine
+                </a>
+              </p>
+            </div>
+          ),
+        },
+        {
+          image: AWSSlide3,
+          al: "Third slide",
+          header: "Become a Tech Sales Professional",
+          body: (
+            <>
+              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
+                “My advice to people leaving college is always the same: Get
+                AWS-Certified.” <br />
+                <br />
+                <b>
+                  <p>David Linthicum, Infoworld</p>
+                </b>
+              </blockquote>
+            </>
+          ),
+        },
+        {
+          image: AWSSlide4,
+          al: "Fourth slide",
+          header: "Course Description",
+          body:
+            "Learn IT concepts, terminology and infrastructure concepts. Become a AWS Cloud Practitioner and Microsoft Office 360 Administrator",
+        },
+      ],
       elements: [
         {
           color: "#8E5EA5",
@@ -286,6 +435,7 @@ class WorkforceDevelopment extends Component {
       ],
     };
   }
+
   createAWSSlides = () => {
     return this.state.AWSCarouselItems.map((element) => (
       <Carousel.Item key={element.header}>
@@ -339,7 +489,25 @@ class WorkforceDevelopment extends Component {
   };
 
   createTechSalesSlides = () => {
-    return this.state.AWSCarouselItems.map((element) => (
+    return this.state.TechSalesItems.map((element) => (
+      <Carousel.Item key={element.header}>
+        <img
+          className="d-block w-100"
+          alt={element.image}
+          src={element.image}
+          al={element.al}
+        />
+        <Carousel.Caption>
+          <h3>{element.header}</h3>
+          <br />
+          <div className="carouselParagraph">{element.body}</div>
+        </Carousel.Caption>
+      </Carousel.Item>
+    ));
+  };
+
+  createHelpDeskSlides = () => {
+    return this.state.HelpDeskItems.map((element) => (
       <Carousel.Item key={element.header}>
         <img
           className="d-block w-100"
@@ -420,6 +588,21 @@ class WorkforceDevelopment extends Component {
               variant="secondary"
             >
               Tech Sales
+            </Button>
+          </Col>
+        </Row>
+        <Row style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+          <Col className="WorkforceDevelopmentUrlCard">
+            <h1>Help Desk</h1>
+            <Carousel interval="10000">{this.createHelpDeskSlides()}</Carousel>
+            <div id="spacer"></div>
+            <Button
+              className="bottom"
+              href="https://code.nebulaacademy.com"
+              target="blank"
+              variant="secondary"
+            >
+              Help Desk
             </Button>
           </Col>
         </Row>
