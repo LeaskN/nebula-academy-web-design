@@ -24,3 +24,20 @@
     font-size: 4vw !important;
   }
 }
+
+
+.helpOutCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1500px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.philanthropyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
