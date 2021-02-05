@@ -23,11 +23,14 @@
 .footerLinks {
     display: flex;
     justify-content: space-around;
+    max-width: 100%;
+    padding-bottom: 50px;
 }
 
 .footerLinks ul {
     margin-right: 2em;
     white-space: nowrap;
+    max-width: 33%;
 }
 
 .footerLinks ul:nth-child(1) {
@@ -35,10 +38,27 @@
     padding-left: 4em;
 }
 
+.footerListHeader{
+    color: #BBBBBB;
+}
+
+@media screen and (max-width: 445px){
+    .footerLinks ul:nth-child(1) {
+        padding-left: 5px ;
+    }
+    .footerLinks ul:nth-child(3) {
+        padding-right: 5px ;
+    }
+    .footerListHeader{
+        font-size: 16px;
+    }
+}
+
+
+
 .footerLinks ul:nth-child(3){
     border-right: 1px solid gray;
-    /* margin-right: 4em; */
-    max-width: ;
+    padding-right: 4em;
 }
 
 .innerFooterWrap {

@@ -49,7 +49,7 @@ export const Footer = () => (
             </div>
             <div className="footerLinks">
                 <ul>
-                    <h5 style={{color:'#BBBBBB'}}>All Links</h5>
+                    <h5 className="footerListHeader">All Links</h5>
                     <Nav.Link style={{textAlign:'left'}} href="/">About</Nav.Link>
                     <Nav.Link style={{textAlign:'left'}} href="/Staff">Staff</Nav.Link>
                     {/* <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item> */}
@@ -62,7 +62,7 @@ export const Footer = () => (
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://calendly.com/tomlemons/nebulaacademy" target="blank">Discovery Call</Nav.Link></Nav.Item>
                 </ul>
                 <ul>
-                    <h5 style={{color:'#BBBBBB'}}>Philanthropy</h5>
+                    <h5 className="footerListHeader">Philanthropy</h5>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/wctd" target="blank" variant="warning">We Connect The Dots</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.we-connect-the-dots.org/coding-programs-for-1st12th" target="blank" variant="warning">Coding Programs, Ages 7-18 </Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://www.we-connect-the-dots.org/student-ambassador-program" target="blank" variant="warning">Community Ambassador</Nav.Link></Nav.Item>
@@ -70,7 +70,7 @@ export const Footer = () => (
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href='https://code.nebulaacademy.com/Scholarships' target="blank" variant="warning">Software Engineering Scholarships</Nav.Link></Nav.Item>
                 </ul>
                 <ul>
-                    <h5 style={{color:'#BBBBBB', whiteSpace: 'normal'}}>Brochures</h5>
+                    <h5 className="footerListHeader" style={{whiteSpace: 'normal'}}>Brochures</h5>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href={ AWS_Flyer } target="blank" download variant="warning">AWS One-Page Flyer</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href={ AWS_Brochure } target="blank" download variant="warning">AWS Full Brochure</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href={ AWS_Student_Infographic } target="blank" download variant="warning">Student Infograph</Nav.Link></Nav.Item>

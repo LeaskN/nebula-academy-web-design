@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button, Carousel } from "react-bootstrap";
+import { Col, Button,  } from "react-bootstrap";
 
 export const WorkforceProgramSection = (props) => {
   const { data } = props;

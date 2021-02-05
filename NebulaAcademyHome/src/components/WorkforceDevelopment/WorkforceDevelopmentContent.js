@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Carousel } from "react-bootstrap";
+import { Row, Col, Button, } from "react-bootstrap";
 import InfoPanel from "../Global/InfoPanel";
 import AWSSlide1 from "../../assets/awsstats1.jpg";
 import AWSSlide2 from "../../assets/awsslide2.jpg";
@@ -9,7 +9,7 @@ import SESlide1 from "../../assets/NebulaGrowingField.jpg";
 import SESlide2 from "../../assets/nebulaSECourseDescription2.jpg";
 import SESlide3 from "../../assets/nebulasecoursedescription.jpg";
 import { WorkforceCarousel } from "./WorkforceCarousel/WorkforceCarousel";
-import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
+// import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
 import "./WorkforceDevelopmentContent.css";
 
 class WorkforceDevelopment extends Component {
