@@ -24,7 +24,6 @@
     display: flex;
     justify-content: space-around;
     max-width: 100%;
-    padding-bottom: 50px;
 }
 
 .footerLinks ul {
@@ -51,6 +50,9 @@
     }
     .footerListHeader{
         font-size: 16px;
+    }
+    .footerLinks{
+        padding-bottom: 50px;
     }
 }
 
