@@ -18,6 +18,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
+    console.log('V:2.5.21-Tawk');
     return (
       <React.Fragment>
         <NavigationBar />
