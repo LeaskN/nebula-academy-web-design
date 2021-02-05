@@ -1,0 +1,48 @@
+.formContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: inline;
+    /* padding-left: 100px; */
+}
+
+.paddedSides {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.question {
+    background-color: #a4bee6;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.top {
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.charLimit {
+    font-size: .9rem;
+    margin: 0px 10px;
+    opacity: .6;
+    white-space: nowrap;
+}

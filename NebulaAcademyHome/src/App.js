@@ -10,6 +10,8 @@ import { WorkforceDevelopment } from './pages/WorkforceDevelopment'
 import { Universities } from './pages/Universities'
 import { Philanthropy } from './pages/Philanthropy'
 import { Staff } from './pages/Staff'
+import { Application } from './pages/Application';
+import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import CookieConsent from "react-cookie-consent";
 
 import ReactGA from 'react-ga';
@@ -33,6 +35,8 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             {/* <Route path ="/steam-for-kids" component={STEAMForKids}/> */}
             <Route path="/educators" component={Educators} />
+            <Route path = "/application/Phase2" component={ApplicationPhase2}/>
+            <Route path = "/application" component={Application}/>
             <Route path="/workforce-development" component={WorkforceDevelopment} />
             <Route path="/universities" component={Universities} />
             <Route path="/philanthropy" component={Philanthropy} />
