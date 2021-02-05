@@ -9,9 +9,16 @@
     min-height: 200px;
     background-position: center;
     background-size: cover;
-    padding: 10px !important;
+    padding: 10px;
 }
 .HomeUrlCard > h3 {
     margin: auto;
     padding-bottom: 0px;
+}
+@media (max-width: 400px){
+    .HomeUrlCard{
+
+        min-width: auto;
+        min-height: auto;
+    }
 }
