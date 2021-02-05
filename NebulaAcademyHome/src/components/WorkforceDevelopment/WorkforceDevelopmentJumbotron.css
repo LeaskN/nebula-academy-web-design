@@ -9,6 +9,8 @@
   padding: 30px;
   font-size: x-large;
   min-height: 325px;
-
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   text-shadow: 1px 1px 1px #8e5ea5;
 }

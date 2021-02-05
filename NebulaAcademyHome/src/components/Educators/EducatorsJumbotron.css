@@ -10,4 +10,7 @@
   font-size: x-large;
   min-height: 325px;
   text-shadow: 1px 1px 1px #8e5ea5;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
