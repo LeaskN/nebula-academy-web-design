@@ -104,9 +104,9 @@ class ApplicationContent extends Component {
         else if(!this.state.How_did_you_hear_about_our_program__c){
             alert('Please complete the field titled: "Please provide details on how you heard about our program."\n\nIf you selected "Other" please describe your "Other".')
         } 
-        else if(!this.state.Coding_experience__c){
-            alert('Please complete the field titled: "Do you have coding experience?"')
-        }
+        // else if(!this.state.Coding_experience__c){
+        //     alert('Please complete the field titled: "Do you have coding experience?"')
+        // }
         else if(!this.state.Highest_education_level__c){
             alert('Please complete the field titled: "Please provide highest education level"\n\nIf you selected "Other" please describe your "Other".')
         } 
@@ -375,7 +375,7 @@ class ApplicationContent extends Component {
                                     <Form.Control input="true" onChange={this.handleInputChange} name="How_did_you_hear_OTHER_Desc__c" placeholder="Something else" />
                                 </Form.Group> 
                             </Form.Row>
-                            <Form.Group>
+                            {/* <Form.Group>
                                 <Form.Label>Do you have coding experience?</Form.Label>
                                 <Form.Control required onChange={this.handleInputChange} name="Coding_experience__c" as="select">
                                     <option aria-label="option 0" label="Select"></option> 
@@ -384,7 +384,7 @@ class ApplicationContent extends Component {
                                     <option aria-label="option 3" value="Intermediate (three or fewer classes or personal projects)" label="Intermediate (Three or fewer classes and personal projects)">Intermediate (Three or fewer classes and personal projects)</option> 
                                     <option aria-label="option 4" value="Advanced (Degree or professional experience)" label="Advanced (Degree or professional experience)">Advanced (Degree or professional experience)</option> 
                                 </Form.Control>
-                            </Form.Group>  
+                            </Form.Group>   */}
                             <Form.Group>
                                 <Form.Label>Please provide highest education level</Form.Label><br/>
                                 <Form.Control required onChange={this.handleInputChange} name="Highest_education_level__c" as="select">
@@ -435,14 +435,14 @@ class ApplicationContent extends Component {
                                     <Form.Control input="true" onChange={this.handleInputChange} name="Primary_Intentions_OTHER_DESC__c" placeholder="Primary Intentions: Other" />
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Group>
+                            {/* <Form.Group>
                                 <Form.Label>Would you be interested in learning more about our teacher certification program?</Form.Label>
                                     <Form.Control onChange={this.handleInputChange} name="Want_to_know_more_about_teacher_cert_pgm__c"  as="select">
                                         <option aria-label="option 0" label="Select" value="false"></option> 
                                         <option aria-label="option 1" label="Yes" value="true">Yes</option> 
                                         <option aria-label="option 2" label="No" value="false">No</option> 
                                     </Form.Control>
-                            </Form.Group> 
+                            </Form.Group>  */}
                             <Form.Group required onChange={this.handleInputChange} className="Payment_Type__c"><br/>
                                 <Form.Label>
                                     How are you planning to fund the program fee if accepted into program? 
