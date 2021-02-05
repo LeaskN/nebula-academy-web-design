@@ -37,7 +37,8 @@
 
 .footerLinks ul:nth-child(3){
     border-right: 1px solid gray;
-    padding-right: 4em;
+    /* margin-right: 4em; */
+    max-width: ;
 }
 
 .innerFooterWrap {
