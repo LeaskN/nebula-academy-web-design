@@ -8,6 +8,10 @@ import AWSSlide4 from "../../assets/AdobeStock_312848234.jpg";
 import SESlide1 from "../../assets/NebulaGrowingField.jpg";
 import SESlide2 from "../../assets/nebulaSECourseDescription2.jpg";
 import SESlide3 from "../../assets/nebulasecoursedescription.jpg";
+import HelpDesk1 from "../../assets/HelpDesk1.jpeg";
+import TechSkills1 from "../../assets/TechSkills1.jpeg";
+import TechSales1 from "../../assets/TechSales1.jpeg";
+
 import { WorkforceCarousel } from "./WorkforceCarousel/WorkforceCarousel";
 // import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
 import "./WorkforceDevelopmentContent.css";
@@ -193,16 +197,12 @@ class WorkforceDevelopment extends Component {
         },
         techSkillsItems: [
           {
-            image: AWSSlide1,
+            image: TechSkills1,
             al: "First slide",
             header: "Build Competence in Computer Technology",
             body: (
               <div>
-                <p>
-                  This program is an entry to any tech career and is an
-                  opportunity to explore potential paths based on individual
-                  participant’s interest and capabilities.
-                </p>
+                <p>This program is an entry to any tech career and is an opportunity to explore potential paths based on individual participant’s interests and capabilities. Designed to improve basic workforce-related tech skills, a participant will learn networking fundamentals, IT fundamentals, MS 365, basic coding principals, presentation skills, collaboration skills, and more.</p>
                 {/* <p>
                   Source:{" "}
                   <a
@@ -222,11 +222,7 @@ class WorkforceDevelopment extends Component {
             header: "Build Foundational Knowledge",
             body: (
               <div>
-                <p>
-                  Opportunity for participants to understand if they have a
-                  desire to work with technology, to foster participant
-                  confidence, and build competence in computer technology
-                </p>
+                <p>Opportunity for participants to understand if they have a desire to work with technology, to foster participantconfidence, and build competence in computer technology.</p>
                 {/* <p>
                   Source:{" "}
                   <a
@@ -257,16 +253,12 @@ class WorkforceDevelopment extends Component {
         },
         techSalesItems: [
           {
-            image: AWSSlide1,
+            image: TechSales1,
             al: "First slide",
             header: "Build Client Facing Skills",
             body: (
               <div>
-                <p>
-                  This program is an entry to any tech career and is an
-                  opportunity to explore potential paths based on individual
-                  participant’s interest and capabilities.
-                </p>
+                <p>A Tech Sales Professional is someone with strong communication skills who understands technology and how it supports business operations at a high level. They track customer engagement and understand the sales process from customer initial engagement to the close of the sales cycle. There are a few roles in the tech-sales-cycle each one varying in client facing & technical capacity. This program focuses on preparing participants for their preferred technical sales role.</p>
                 {/* <p>
                   Source:{" "}
                   <a
@@ -320,18 +312,13 @@ class WorkforceDevelopment extends Component {
         },
         helpDeskItems: [
           {
-            image: AWSSlide1,
+            image: HelpDesk1,
             al: "First slide",
             header: "Guide End Users Through Issues",
             body: (
               <div>
                 <p>
-                  A Helpdesk Support Technician is empathetic, has strong
-                  problem-solving skills, understands how to provide remote
-                  support, asks the right questions to illicit important
-                  information, and has strong communication skills to help guide
-                  end users through issues.
-                </p>
+                A Helpdesk Support Technician is empathetic, has strong problem-solving skills, understands how to provide remote support, asks the right questions to illicit important information, and has strong communication skills to help guide end users through issues.  They understand complex systems, can manage an AWS Management Console, a Microsoft Office 365 Administration Console, customer expectations, & much more.</p>
                 {/* <p>
                   Source:{" "}
                   <a

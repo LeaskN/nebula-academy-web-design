@@ -45,9 +45,9 @@ class ApplicationContent extends Component {
         let finalArray = [];
             // dont filter for ONLY the bootcamps
         for(let item in options){
-        //     if((options[item].name).indexOf('BootCamp') > -1){
+            if((options[item].name.toLowerCase()).indexOf('bootcamp') > -1){
                 finalArray.push(<option aria-label="option 1" key={options[item].id} label={options[item].name} value={options[item].id}>{options[item].name}</option> );
-        //     }
+            }
         }
         return finalArray;
     }
