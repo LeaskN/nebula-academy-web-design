@@ -8,7 +8,8 @@ import AWSSlide4 from "../../assets/AdobeStock_312848234.jpg";
 import SESlide1 from "../../assets/NebulaGrowingField.jpg";
 import SESlide2 from "../../assets/nebulaSECourseDescription2.jpg";
 import SESlide3 from "../../assets/nebulasecoursedescription.jpg";
-
+import { WorkforceCarousel } from "./WorkforceCarousel/WorkforceCarousel";
+import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
 import "./WorkforceDevelopmentContent.css";
 
 class WorkforceDevelopment extends Component {
@@ -18,330 +19,365 @@ class WorkforceDevelopment extends Component {
       backgroundColor: "transparent",
       clicked: "sciencebehindlearning",
       shape: "circle",
-      softwareEngineeringCarouselItems: [
-        {
-          image: SESlide1,
-          al: "The field is exponentially growing.",
-          header: "The field is exponentially growing.",
-          body: (
-            <div>
-              <p>
-                According to the U.S. Bureau of Labor Statistics, software
-                engineer jobs are projected to increase by 21% from 2018 to
-                2028.
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
-                >
-                  Bureau of Labor Statistics
-                </a>
-              </p>
-            </div>
-          ),
+      softwareEngineering: {
+        section: {
+          header: "Software Engineering",
+          buttonName: "Bootcamp",
         },
-        {
-          image: SESlide2,
-          al: "ReactJS is the future",
-          header: "ReactJS is the future of Web Dev",
-          body: (
-            <div>
+        softwareEngineeringCarouselItems: [
+          {
+            image: SESlide1,
+            al: "The field is exponentially growing.",
+            header: "The field is exponentially growing.",
+            body: (
+              <div>
+                <p>
+                  According to the U.S. Bureau of Labor Statistics, software
+                  engineer jobs are projected to increase by 21% from 2018 to
+                  2028.
+                </p>
+                <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+                  >
+                    Bureau of Labor Statistics
+                  </a>
+                </p>
+              </div>
+            ),
+          },
+          {
+            image: SESlide2,
+            al: "ReactJS is the future",
+            header: "ReactJS is the future of Web Dev",
+            body: (
+              <div>
+                <p>
+                  Today, ReactJS has become highly popular because of its extra
+                  simplicity and flexibility. It is estimated that more than
+                  1,300 developers and over 94,000 sites utilize ReactJS. React
+                  JS is leading in Top 10K Sites, Top 100K Sites, Top 1M Sites,
+                  and The Entire Web.
+                </p>
+                <p>
+                  Sources:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.tecla.io/blog/2019-stats-on-top-js-frameworks-react-angular-and-vue/#section-content"
+                  >
+                    Tecla.io
+                  </a>{" "}
+                  &{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://medium.com/@thinkwik/why-reactjs-is-gaining-so-much-popularity-these-days-c3aa686ec0b3"
+                  >
+                    Medium.com
+                  </a>
+                </p>
+              </div>
+            ),
+          },
+          {
+            image: SESlide3,
+            al: "Course Description",
+            header: "Course Description",
+            body: (
               <p>
-                Today, ReactJS has become highly popular because of its extra
-                simplicity and flexibility. It is estimated that more than 1,300
-                developers and over 94,000 sites utilize ReactJS. React JS is
-                leading in Top 10K Sites, Top 100K Sites, Top 1M Sites, and The
-                Entire Web.
+                Taught by industry professionals, participants will spend 5 days
+                a week and 8 hours a day learning, coding, and studying to
+                become a full-stack developer with an AWS or Microsoft
+                certification. Upon completion, participants will have the
+                ability to launch a career in software development. We focus on
+                holistic training including soft skills and personal
+                development. Participants will get hands-on experience working
+                with today’s modern web development tools.
               </p>
-              <p>
-                Sources:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.tecla.io/blog/2019-stats-on-top-js-frameworks-react-angular-and-vue/#section-content"
-                >
-                  Tecla.io
-                </a>{" "}
-                &{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://medium.com/@thinkwik/why-reactjs-is-gaining-so-much-popularity-these-days-c3aa686ec0b3"
-                >
-                  Medium.com
-                </a>
-              </p>
-            </div>
-          ),
+            ),
+          },
+        ],
+      },
+
+      AWS: {
+        section: {
+          header: "AWS",
+          buttonName: "AWS",
         },
-        {
-          image: SESlide3,
-          al: "Course Description",
-          header: "Course Description",
-          body: (
-            <p>
-              Taught by industry professionals, participants will spend 5 days a
-              week and 8 hours a day learning, coding, and studying to become a
-              full-stack developer with an AWS or Microsoft certification. Upon
-              completion, participants will have the ability to launch a career
-              in software development. We focus on holistic training including
-              soft skills and personal development. Participants will get
-              hands-on experience working with today’s modern web development
-              tools.
-            </p>
-          ),
+        AWSCarouselItems: [
+          {
+            image: AWSSlide1,
+            al: "First slide",
+            header: "AWS Certifications Pay Well",
+            body: (
+              <div>
+                <p>
+                  'The average salary of an AWS-certified IT professional is
+                  $129,868 — ranking as one of the highest-paying certification
+                  categories in North America.'
+                </p>
+                <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                  >
+                    Global Knowledge
+                  </a>
+                </p>
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide2,
+            al: "Second slide",
+            header:
+              "AWS ranks highly as one of the best certifications to hold.",
+            body: (
+              <div>
+                <p>
+                  Forbes Magazine has ranked AWS Certification as one of the Top
+                  15 Most Valuable IT Certifications. Each of the five Amazon
+                  Web Services (AWS) certifications brings in an average salary
+                  of more than $100,000.
+                </p>
+                <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                  >
+                    Forbes Magazine
+                  </a>
+                </p>
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide3,
+            al: "Third slide",
+            header: "AWS Certifications Are Great for All Levels of Employment",
+            body: (
+              <>
+                <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
+                  “My advice to people leaving college is always the same: Get
+                  AWS-Certified.” <br />
+                  <br />
+                  <b>
+                    <p>David Linthicum, Infoworld</p>
+                  </b>
+                </blockquote>
+              </>
+            ),
+          },
+          {
+            image: AWSSlide4,
+            al: "Fourth slide",
+            header: "Course Description",
+            body:
+              "Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.",
+          },
+        ],
+      },
+
+      techSkills: {
+        TechSkills: {
+          header: "Tech Skills",
+          buttonName: "Tech Skills",
         },
-      ],
-      AWSCarouselItems: [
-        {
-          image: AWSSlide1,
-          al: "First slide",
-          header: "AWS Certifications Pay Well",
-          body: (
-            <div>
-              <p>
-                'The average salary of an AWS-certified IT professional is
-                $129,868 — ranking as one of the highest-paying certification
-                categories in North America.'
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
-                >
-                  Global Knowledge
-                </a>
-              </p>
-            </div>
-          ),
+        techSkillsItems: [
+          {
+            image: AWSSlide1,
+            al: "First slide",
+            header: "Build Competence in Computer Technology",
+            body: (
+              <div>
+                <p>
+                  This program is an entry to any tech career and is an
+                  opportunity to explore potential paths based on individual
+                  participant’s interest and capabilities.
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                  >
+                    Global Knowledge
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide2,
+            al: "Second slide",
+            header: "Build Foundational Knowledge",
+            body: (
+              <div>
+                <p>
+                  Opportunity for participants to understand if they have a
+                  desire to work with technology, to foster participant
+                  confidence, and build competence in computer technology
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                  >
+                    Forbes Magazine
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide4,
+            al: "Fourth slide",
+            header: "Course Description",
+            body:
+              "Build networking and presentation skills, master Microsoft Office 365 (Microsoft Teams​, Microsoft OneNote​, Microsoft Forms​, Microsoft PowerPoint​, Microsoft SharePoint), learn the IT fundamentals and intro to coding. ",
+          },
+        ],
+      },
+
+      techSales: {
+        section: {
+          header: "Tech Sales",
+          buttonName: "Tech Sales",
         },
-        {
-          image: AWSSlide2,
-          al: "Second slide",
-          header: "AWS ranks highly as one of the best certifications to hold.",
-          body: (
-            <div>
-              <p>
-                Forbes Magazine has ranked AWS Certification as one of the Top
-                15 Most Valuable IT Certifications. Each of the five Amazon Web
-                Services (AWS) certifications brings in an average salary of
-                more than $100,000.
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
-                >
-                  Forbes Magazine
-                </a>
-              </p>
-            </div>
-          ),
+        techSalesItems: [
+          {
+            image: AWSSlide1,
+            al: "First slide",
+            header: "Build Client Facing Skills",
+            body: (
+              <div>
+                <p>
+                  This program is an entry to any tech career and is an
+                  opportunity to explore potential paths based on individual
+                  participant’s interest and capabilities.
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                  >
+                    Global Knowledge
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide2,
+            al: "Second slide",
+            header: "Prepare For Your Preferred Technical Sales Role",
+            body: (
+              <div>
+                <p>
+                  There are a few roles in the tech-sales-cycle each one varying
+                  in client facing and technical capacity.
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                  >
+                    Forbes Magazine
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide4,
+            al: "Fourth slide",
+            header: "Course Description",
+            body:
+              "Learn IT concepts, terminology and infrastructure concepts. Build Sales skills and customer relationship management. ",
+          },
+        ],
+      },
+
+      helpDesk: {
+        section: {
+          header: "Help Desk",
+          buttonName: "Help Desk",
         },
-        {
-          image: AWSSlide3,
-          al: "Third slide",
-          header: "AWS Certifications Are Great for All Levels of Employment",
-          body: (
-            <>
-              <blockquote style={{ borderLeft: "none", paddingLeft: "" }}>
-                “My advice to people leaving college is always the same: Get
-                AWS-Certified.” <br />
-                <br />
-                <b>
-                  <p>David Linthicum, Infoworld</p>
-                </b>
-              </blockquote>
-            </>
-          ),
-        },
-        {
-          image: AWSSlide4,
-          al: "Fourth slide",
-          header: "Course Description",
-          body:
-            "Get Real World in-demand skills and experience that sets you apart in a competitive global job market. Learn the latest and greatest AWS Cloud computing technology through AWS Academy courses at Nebula Academy. Learn about AWS Cloud through real-world scenarios and gain the skills needed to architect real-world solutions.",
-        },
-      ],
-      TechSkillsItems: [
-        {
-          image: AWSSlide1,
-          al: "First slide",
-          header: "Build Competence in Computer Technology",
-          body: (
-            <div>
-              <p>
-                'This program is an entry to any tech career and is an
-                opportunity to explore potential paths based on individual
-                participant’s interest and capabilities. '
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
-                >
-                  Global Knowledge
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide2,
-          al: "Second slide",
-          header: "Build Foundational Knowledge",
-          body: (
-            <div>
-              <p>
-                Opportunity for participants to understand if they have a desire
-                to work with technology, to foster participant confidence, and
-                build competence in computer technology
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
-                >
-                  Forbes Magazine
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide4,
-          al: "Fourth slide",
-          header: "Course Description",
-          body:
-            "build networking and presentation kills, master Microsoft Office 365 (Microsoft Teams​, Microsoft OneNote​, Microsoft Forms​, Microsoft PowerPoint​, Microsoft SharePoint), learn the IT fundamentals and intro to coding. ",
-        },
-      ],
-      TechSalesItems: [
-        {
-          image: AWSSlide1,
-          al: "First slide",
-          header: "Build Client Facing Skills",
-          body: (
-            <div>
-              <p>
-                'This program is an entry to any tech career and is an
-                opportunity to explore potential paths based on individual
-                participant’s interest and capabilities. '
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
-                >
-                  Global Knowledge
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide2,
-          al: "Second slide",
-          header: "Prepare For Your Preferred Technical Sales Role",
-          body: (
-            <div>
-              <p>
-                There are a few roles in the tech-sales-cycle each one varying
-                in client facing and technical capacity.
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
-                >
-                  Forbes Magazine
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide4,
-          al: "Fourth slide",
-          header: "Course Description",
-          body:
-            "Learn IT concepts, terminology and infrastructure concepts. Build Sales skills and customer relationship management. ",
-        },
-      ],
-      HelpDeskItems: [
-        {
-          image: AWSSlide1,
-          al: "First slide",
-          header: "Guide End Users Through Issues",
-          body: (
-            <div>
-              <p>
-                'A Helpdesk Support Technician is empathetic, has strong
-                problem-solving skills, understands how to provide remote
-                support, asks the right questions to illicit important
-                information, and has strong communication skills to help guide
-                end users through issues.'
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
-                >
-                  Global Knowledge
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide2,
-          al: "Second slide",
-          header: "Build Your Tech Skills",
-          body: (
-            <div>
-              <p>
-                Helpdesk Support Technicians understand complex systems, can
-                manage an AWS Management Console, a Microsoft Office 365
-                Administration Console, customer expectations, and much more.
-              </p>
-              <p>
-                Source:{" "}
-                <a
-                  className="linkLight"
-                  target="empty"
-                  href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
-                >
-                  Forbes Magazine
-                </a>
-              </p>
-            </div>
-          ),
-        },
-        {
-          image: AWSSlide4,
-          al: "Fourth slide",
-          header: "Course Description",
-          body:
-            "Learn IT concepts, terminology and infrastructure concepts. Become a AWS Cloud Practitioner and Microsoft Office 360 Administrator",
-        },
-      ],
+        helpDeskItems: [
+          {
+            image: AWSSlide1,
+            al: "First slide",
+            header: "Guide End Users Through Issues",
+            body: (
+              <div>
+                <p>
+                  A Helpdesk Support Technician is empathetic, has strong
+                  problem-solving skills, understands how to provide remote
+                  support, asks the right questions to illicit important
+                  information, and has strong communication skills to help guide
+                  end users through issues.
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-to-earn-a-top-paying-aws-certification-salary/"
+                  >
+                    Global Knowledge
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide2,
+            al: "Second slide",
+            header: "Build Your Tech Skills",
+            body: (
+              <div>
+                <p>
+                  Helpdesk Support Technicians understand complex systems, can
+                  manage an AWS Management Console, a Microsoft Office 365
+                  Administration Console, customer expectations, and much more.
+                </p>
+                {/* <p>
+                  Source:{" "}
+                  <a
+                    className="linkLight"
+                    target="empty"
+                    href="https://www.forbes.com/sites/louiscolumbus/2016/02/21/15-top-paying-it-certifications-in-2016-aws-certified-solutions-architect-leads-at-125k/#24d610fc7978"
+                  >
+                    Forbes Magazine
+                  </a>
+                </p> */}
+              </div>
+            ),
+          },
+          {
+            image: AWSSlide4,
+            al: "Fourth slide",
+            header: "Course Description",
+            body:
+              "Learn IT concepts, terminology and infrastructure concepts. Become a AWS Cloud Practitioner and Microsoft Office 360 Administrator",
+          },
+        ],
+      },
       elements: [
         {
           color: "#8E5EA5",
@@ -385,93 +421,27 @@ class WorkforceDevelopment extends Component {
     };
   }
 
-  createAWSSlides = () => {
-    return this.state.AWSCarouselItems.map((element) => (
-      <Carousel.Item key={element.header}>
-        <img
-          className="d-block w-100"
-          alt={element.image}
-          src={element.image}
-          al={element.al}
-        />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <br />
-          <div className="carouselParagraph">{element.body}</div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    ));
-  };
-  createSoftwareEngineeringSlides = () => {
-    return this.state.softwareEngineeringCarouselItems.map((element) => (
-      <Carousel.Item key={element.header}>
-        <img
-          className="d-block w-100"
-          alt={element.image}
-          src={element.image}
-          al={element.al}
-        />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <br />
-          <div className="carouselParagraph">{element.body}</div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    ));
-  };
-  createTechSkillsSlides = () => {
-    return this.state.TechSkillsItems.map((element) => (
-      <Carousel.Item key={element.header}>
-        <img
-          className="d-block w-100"
-          alt={element.image}
-          src={element.image}
-          al={element.al}
-        />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <br />
-          <div className="carouselParagraph">{element.body}</div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    ));
-  };
+  createAWSSlides = () => (
+    <WorkforceCarousel data={this.state.AWS.AWSCarouselItems} />
+  );
 
-  createTechSalesSlides = () => {
-    return this.state.TechSalesItems.map((element) => (
-      <Carousel.Item key={element.header}>
-        <img
-          className="d-block w-100"
-          alt={element.image}
-          src={element.image}
-          al={element.al}
-        />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <br />
-          <div className="carouselParagraph">{element.body}</div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    ));
-  };
+  createSoftwareEngineeringSlides = () => (
+    <WorkforceCarousel
+      data={this.state.softwareEngineering.softwareEngineeringCarouselItems}
+    />
+  );
 
-  createHelpDeskSlides = () => {
-    return this.state.HelpDeskItems.map((element) => (
-      <Carousel.Item key={element.header}>
-        <img
-          className="d-block w-100"
-          alt={element.image}
-          src={element.image}
-          al={element.al}
-        />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <br />
-          <div className="carouselParagraph">{element.body}</div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    ));
-  };
+  createTechSkillsSlides = () => (
+    <WorkforceCarousel data={this.state.techSkills.techSkillsItems} />
+  );
+
+  createTechSalesSlides = () => (
+    <WorkforceCarousel data={this.state.techSales.techSalesItems} />
+  );
+
+  createHelpDeskSlides = () => (
+    <WorkforceCarousel data={this.state.helpDesk.helpDeskItems} />
+  );
 
   render() {
     return (
@@ -483,7 +453,7 @@ class WorkforceDevelopment extends Component {
             style={{ borderColor: "#ff9900" }}
           >
             <h1>AWS</h1>
-            <Carousel interval="10000">{this.createAWSSlides()}</Carousel>
+            {this.createAWSSlides()}
             <div id="spacer"></div>
             <Button
               className="bottom"
@@ -496,9 +466,7 @@ class WorkforceDevelopment extends Component {
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Software Engineering</h1>
-            <Carousel interval="10000">
-              {this.createSoftwareEngineeringSlides()}
-            </Carousel>
+            {this.createSoftwareEngineeringSlides()}
             <div id="spacer"></div>
             <Button
               className="bottom"
@@ -512,9 +480,7 @@ class WorkforceDevelopment extends Component {
 
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Skills</h1>
-            <Carousel interval="10000">
-              {this.createTechSkillsSlides()}
-            </Carousel>
+            {this.createTechSkillsSlides()}
             <div id="spacer"></div>
             <Button
               className="bottom"
@@ -527,7 +493,7 @@ class WorkforceDevelopment extends Component {
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Sales</h1>
-            <Carousel interval="10000">{this.createTechSalesSlides()}</Carousel>
+            {this.createTechSalesSlides()}
             <div id="spacer"></div>
             <Button
               className="bottom"
@@ -538,10 +504,9 @@ class WorkforceDevelopment extends Component {
               Tech Sales
             </Button>
           </Col>
-
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
-            <Carousel interval="10000">{this.createHelpDeskSlides()}</Carousel>
+            {this.createHelpDeskSlides()}
             <div id="spacer"></div>
             <Button
               className="bottom"
