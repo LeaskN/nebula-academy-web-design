@@ -16,8 +16,15 @@
     justify-content: space-between;
 } */
 
+.registrationCard blockquote{
+    font-style:'normal';
+    height:'80%'; 
+    align-items:'center';
+    display: flex;
+}
+
 .learningObjectivesList{
     text-align: left;
-    list-style-type: '- ';
+    list-style-type: ' - ';
 }
   

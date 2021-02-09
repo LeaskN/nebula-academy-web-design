@@ -16,17 +16,22 @@ class Registration extends Component {
             date: 'Feb 13',
             time: '4:00PM',
             workshopTitle: 'Jobs In Tech',
-            aboutTheEvent: 'This workshop focuses on some pathways into tech careers. It primarily focuses on jobs in Tech Sales, Tech Support, and Software Engineering. In this workshop we will also discuss the need for general tech-skills within the workforce. ',
+            aboutTheEvent: `
+                This workshop focuses on some pathways into tech careers. 
+                It primarily looks at jobs in Tech Sales, Tech Support, and Software Engineering. 
+                In this workshop we will also discuss the need for general tech-skills within the workforce. 
+                This is a high-level workshop and if you'd like more information on any one career path we recommend taking this workshop, followed by that specific workshop.
+                `,
             learningObjectives: [
-                'Understanding of current opportunities in technology ',
-                'Understand potential salaries ',
-                'Understand skills necessary to compete for these jobs ',
-                'Understand the day-to-day degree of difficulty for each role ',
-                'Gain an understanding of the potential within a tech career with a statistical focus ',
+                'Understanding of current opportunities in technology',
+                'Understand potential salaries',
+                'Understand skills necessary to compete for these jobs',
+                'Understand the day-to-day degree of difficulty for each role',
+                'Gain an understanding of the potential within a tech career with a statistical focus',
                 'Understand a broad picture of who is hiring',
-                'Learn about currently available programs '
+                'Learn about currently available programs'
             ],
-            workshopOverview: 'Workshop overview goes here',
+            workshopOverview: `In this one-hour workshop participants will gain an understanding of the level of difficulty a tech role can be. The workshop highlights the growth someone can expect from each tech role, the daily interactions that a specific role may have, what their product/service lifecycle may look like, & how to penetrate the career path. Although this is provided by Nebula Academy and there will be conversations regarding the programs Nebula provides, we will also discuss a self-taught path that someone could create for themselves to begin their tech career.`,
             salaries: [
                 {title: 'Entry Level Software Engineer', salary: '$74,532', source: 'https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm' },
                 {title: 'Software Engineer', salary: '$92,046', source: 'https://www.glassdoor.com/Salaries/software-engineer-salary-SRCH_KO0,17.htm' },
@@ -45,11 +50,11 @@ render() {
                 <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
                         <Col className="registrationCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
                             <h2 style={{ fontSize: '1.9rem' }}>About this event</h2>
-                            <blockquote style={{fontStyle:'normal'}}>{this.state.aboutTheEvent}</blockquote>
+                                <blockquote  style={{fontStyle:'normal', height: '80%', alignItems:'center'}}>{this.state.aboutTheEvent}</blockquote>
                         </Col>
                         <Col className="registrationCard">
                             <h2 style={{ fontSize: '1.9rem' }}>Learning Objectives</h2>
-                            <blockquote style={{fontStyle:'normal'}}>
+                            <blockquote  style={{fontStyle:'normal'}}>
                                     <ul className="learningObjectivesList">
                                         {this.state.learningObjectives.map(ele => <li>{ele}</li>)}
                                     </ul>
@@ -57,7 +62,7 @@ render() {
                         </Col>
                         <Col className="registrationCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
                             <h2 style={{ fontSize: '1.9rem' }}>Workshop Overview</h2>
-                            <blockquote style={{fontStyle:'normal'}}>{this.state.workshopOverview}</blockquote>
+                            <blockquote  style={{fontStyle:'normal'}}>{this.state.workshopOverview}</blockquote>
                         </Col>
                     </Row>
                     <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
@@ -67,8 +72,8 @@ render() {
                         </Col>
                     </Row>
                     <Row style={{ borderColor: '#ff9900', marginLeft: '10vw', marginRight: '10vw' }}>
-                        <Col className="registrationCard" style={{ backgroundImage: "url(" + uniImage + ")" }}></Col>
-                        <Col className="registrationCard" style={{  backgroundImage: "url(" + uniImage2 + ")", backgroundSize:'cover' }}></Col>
+                        <Col className="registrationCard" style={{ minHeight:'200px', backgroundImage: "url(" + uniImage + ")" }}></Col>
+                        <Col className="registrationCard" style={{ minHeight:'200px', backgroundImage: "url(" + uniImage2 + ")", backgroundSize:'cover' }}></Col>
                     </Row>
             </React.Fragment>
         )

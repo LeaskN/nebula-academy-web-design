@@ -46,9 +46,6 @@ code {
 .carousel-control-prev, .carousel-control-next{
   width: 50px;
 }
-.carousel-control-prev{
-  padding-left: 13px;
-}
 .carousel-caption{
   position: absolute;
   bottom: 20px;
