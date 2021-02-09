@@ -14,6 +14,8 @@ import { Application } from './pages/Application';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import { Registration } from './pages/Registration';
 import CookieConsent from "react-cookie-consent";
+import AllWorkshops from './components/AllWorkshops/AllWorkshopsContent';
+
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-000000-01');
@@ -36,12 +38,13 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             {/* <Route path ="/steam-for-kids" component={STEAMForKids}/> */}
             <Route path="/educators" component={Educators} />
-            <Route path = "/application/Phase2" component={ApplicationPhase2}/>
-            <Route path = "/application" component={Application}/>
-            <Route path = "/registration" component={Registration}/>
+            <Route path="/application/Phase2" component={ApplicationPhase2}/>
+            <Route path="/application" component={Application}/>
             <Route path="/workforce-development" component={WorkforceDevelopment} />
             <Route path="/universities" component={Universities} />
             <Route path="/philanthropy" component={Philanthropy} />
+            <Route exact path="/workshops" component={AllWorkshops} />
+            <Route path="/workshops/:id" component={Registration}/>
             <Route path="/staff" component={Staff} />
             {/*<Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>

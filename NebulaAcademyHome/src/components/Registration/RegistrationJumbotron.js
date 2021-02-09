@@ -6,14 +6,9 @@ class RegistrationJumbotron extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      date: 'Feb 13',
-      time: '4:00PM',
-      workshopTitle: 'Jobs In Tech',
-      registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20344935'
-      // Workshop: Tech Sales Careers
-      // Workshop: Tech Support Careers
-      // Workshop: How to Become A Software Engineer
-  };
+      
+    };
+    console.log(this.props.data)
   }
   render(){
     return(
@@ -21,20 +16,20 @@ class RegistrationJumbotron extends Component{
         <Jumbotron className='noMargin registrationJumbo'>
           <Row>
             <Col xs={12} sm={9} className='registrationJumboLeft'>
-              <h1>Register for {this.state.workshopTitle}</h1>
+              <h1>{this.props.data.workshopTitle}</h1>
             </Col>
             <Col xs={12} sm={3} className='registrationJumboRight'>
-              <p>{this.state.date} at {this.state.time}</p>
-              <h3>{this.state.workshopTitle}</h3>
+              <p>{this.props.data.date} at {this.props.data.time}</p>
+              <h3>Register for Workshop: {this.props.data.workshopTitle}</h3>
               <p>Price: Free</p>
             </Col>
           </Row>
           <Row>
           <Col xs={12} sm={9} style={{color:'black', marginTop:'10px'}}>
-            <p>For more information regarding this workshop call: <a href='tel:6314687477'>(631) 468-7477</a></p>
+            <p>For more information regarding this workshop call: <a href='tel:6314687477' style={{whiteSpace:'nowrap'}}>(631) 468-7477</a></p>
             </Col>
             <Col xs={12} sm={3}>
-            <Button className='registerButton' variant='success' href={this.state.registrationUrl} target='empty'>Register For Free</Button>
+            <Button className='registerButton' variant='success' href={this.props.data.registrationUrl} target='empty'>Register For Free</Button>
 
             </Col>
           </Row>
