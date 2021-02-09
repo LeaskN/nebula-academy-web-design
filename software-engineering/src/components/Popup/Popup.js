@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Modal, Button } from 'react-bootstrap';
-import { formatDateString } from '../../helperFunctions/helperFunctions'
+import { parseCohortStr, parseDateStr } from '../helperFunctions/helperFunctions';
 import './Popup.css'; 
 
 function Popup() {
@@ -35,36 +35,21 @@ function Popup() {
   }
   
   const formatDetailsIntoJSX = (cohort, key) => {
-    const [duration, fullOrPartTime, startDate] = parseCohortStr(cohort);
+    const { cohortName, duration, fullOrPartTime, startDate } = parseCohortStr(cohort);
     return (
-      <p key={key} className="popupText">
-        {duration.toLowerCase().split(' ').join('-')}
-        <span> {fullOrPartTime.toLowerCase().split(' ').join('-')} </span>
-        cohort begins 
-        <span> {startDate}</span>
-      </p>
+      <div className="cohort-details" key={key}>
+        <h6>{cohortName}</h6>
+        <p className="popupText">
+          {duration.toLowerCase().split(' ').join('-')}
+          <span> {fullOrPartTime.toLowerCase().split(' ').join('-')} </span>
+          begins 
+          <span> {startDate}</span>
+        </p>  
+      </div>
     )
   }
-
-  const parseCohortStr = (cohort) => {
-      const [duration] = /[0-9] Month/i.exec(cohort.name);
-      const [fullOrPartTime] = /Full time|Part time/i.exec(cohort.name);
-      const rawStartDate = formatDateString(cohort.startDate);    
-      const startDate = parseDateStr(rawStartDate);
-      return [duration, fullOrPartTime, startDate];
-  }
-
-  const parseDateStr = (str) => {
-    const fullMonthNames = ["January", "February", "March", "April", 
-      "May", "June", "July", "August", "September", "October", "December"];
-    const [, month, day, year] = /(\w{3}) (\d{2}|\d{1}) (\d{4})/.exec(str);
-    const fullMonth = fullMonthNames.filter(mo => mo.includes(month));
-    const startDate = `${fullMonth} ${day}, ${year}`;
-    return startDate;
-  }
-
   return (
-    <Modal className="popupModal" show={show} onHide={handleClose}>
+    <Modal aria-labelledby="contained-modal-title-vcenter" centered className="popupModal" show={show} onHide={handleClose}>
       <Modal.Header className="popupHeader" closeButton>
         <Modal.Title className="popupTitle">New Courses!</Modal.Title>
       </Modal.Header>

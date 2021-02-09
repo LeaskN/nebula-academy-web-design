@@ -24,6 +24,7 @@
     background-position: -0px -0px;
 }
 .currentCohorts{
+    padding-top: 15px !important;
     width: 80%; 
     margin: 10px auto 30px; 
     padding: 10px; 
@@ -35,7 +36,8 @@
 .currentCohortsP{
     font-size: 18px; 
     text-align: center; 
-    margin-top: 5px; 
+    margin-top: 5px;
+    margin-bottom: 0px; 
     padding: 0; 
     color: white; 
 }
@@ -48,4 +50,9 @@
 }
 .learnToCodeTextCard h1{
     text-align: center; 
+}
+.program-duration {
+    margin-top: 0px;
+    text-align: center;
+    color: black;
 }

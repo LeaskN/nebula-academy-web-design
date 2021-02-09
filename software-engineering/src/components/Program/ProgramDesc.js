@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { formatDateString } from '../../helperFunctions/helperFunctions'
+import { parseCohortStr, parseDateStr } from '../helperFunctions/helperFunctions';
 
 class ProgramDesc extends Component {
     constructor(props) {
@@ -30,17 +30,21 @@ class ProgramDesc extends Component {
     }
 
     formatDetailsIntoJSX(option, key){
-      const [, version, boot, camp] = /(\w\d*) (Boot)(Camp)/.exec(option.name);
-      const partTimeOrFull = option.name.includes('6 Month') ? "part-time session: " : "full-time session: ";
-      const startDate = formatDateString(option.startDate, true);
-      const endDate = formatDateString(option.endDate, true);
+      const { cohortName, fullOrPartTime } = parseCohortStr(option);
+      const startDate = parseDateStr(new Date(option.startDate).toString());
+      const endDate = parseDateStr(new Date(option.endDate).toString());
+
       return (
-        <p key={key} className="currentCohortsP">
-          <span className="currentCohortsSpan">
-            {`${version} ${boot}${camp.toLowerCase()}, ${partTimeOrFull}`}
-          </span>
-          {startDate} - {endDate}
-        </p>
+        <div key={key} className="center-with-flex">
+          <p className="currentCohortsP">
+            <span className="currentCohortsSpan">
+              {`${cohortName} - ${fullOrPartTime}`}
+            </span>
+          </p>
+          <p className="program-duration">
+            {startDate} - {endDate}
+          </p>
+        </div>
       )
     }
 
