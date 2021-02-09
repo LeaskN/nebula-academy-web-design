@@ -1,5 +1,5 @@
 import React from 'react';
-import { RegistrationJumbotron } from '../components/Registration/RegistrationJumbotron';
+import RegistrationJumbotron from '../components/Registration/RegistrationJumbotron';
 import RegistrationContent from '../components/Registration/RegistrationContent';
 import  { RegistrationFooter } from '../components/Registration/RegistrationFooter';
 

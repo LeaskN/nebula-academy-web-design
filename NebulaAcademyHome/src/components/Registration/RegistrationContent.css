@@ -1,4 +1,4 @@
-.registrationUrlCard{
+.registrationCard{
     text-align: center;
     color: black;
     background-color: white;
@@ -6,9 +6,18 @@
     box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
     border: 3px solid #8E5EA5;
     min-width: 300px;
-    min-height: 200px;
-    padding: 8px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* min-height: 200px; */
+    padding: 8px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
+/* .registrationCard:first-child{
+    justify-content: space-between;
+} */
+
+.learningObjectivesList{
+    text-align: left;
+    list-style-type: '- ';
+}
+  

@@ -13,53 +13,62 @@ class Registration extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            date: 'Feb 13',
+            time: '4:00PM',
+            workshopTitle: 'Jobs In Tech',
+            aboutTheEvent: 'This workshop focuses on some pathways into tech careers. It primarily focuses on jobs in Tech Sales, Tech Support, and Software Engineering. In this workshop we will also discuss the need for general tech-skills within the workforce. ',
+            learningObjectives: [
+                'Understanding of current opportunities in technology ',
+                'Understand potential salaries ',
+                'Understand skills necessary to compete for these jobs ',
+                'Understand the day-to-day degree of difficulty for each role ',
+                'Gain an understanding of the potential within a tech career with a statistical focus ',
+                'Understand a broad picture of who is hiring',
+                'Learn about currently available programs '
+            ],
+            workshopOverview: 'Workshop overview goes here',
+            salaries: [
+                {title: 'Entry Level Software Engineer', salary: '$74,532', source: 'https://www.glassdoor.com/Salaries/entry-level-software-engineer-salary-SRCH_KO0,29.htm' },
+                {title: 'Software Engineer', salary: '$92,046', source: 'https://www.glassdoor.com/Salaries/software-engineer-salary-SRCH_KO0,17.htm' },
+                {title: 'Entry Level Tech Sales', salary: '$41,490', source: 'https://www.glassdoor.com/Salaries/entry-level-tech-sales-salary-SRCH_KO0,11_KE12,22.htm?clickSource=searchBtn' },
+                {title: 'Tech Sales', salary: '$80,000', source: 'https://www.rainmakers.co/blog/the-20-tech-companies-paying-the-highest-salaries-for-salespeople/#:~:text=According%20to%20Glassdoor%2C%20tech%20companies,nature%20of%20commissions%20and%20bonuses' },
+                {title: 'Entry Level Tech Help Desk', salary: '$34,176', source: 'https://www.ziprecruiter.com/Salaries/Entry-Level-Help-Desk-Technician-Salary#:~:text=As%20of%20Jan%2029%2C%202021,%2Fweek%20or%20%242%2C848%2Fmonth' },
+                {title: 'Tech Help Desk', salary: '$41,842', source: 'https://www.glassdoor.com/Salaries/tech-help-desk-salary-SRCH_KO0,14.htm?clickSource=searchBtn' },
+            ],
+            infoCard5: 'test',
+            infoCard6: 'test',
         };
     }
 render() {
         return (
             <React.Fragment>
                 <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
-                        <Col className="registrationUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
-                            <h2 style={{ fontSize: '1.9rem' }}>Certifications in the Workplace</h2>
-                            <blockquote>"Companies are actively seeking job applicants with AWS Cloud Computing skills. 58% of employees request AWS skills by name in listings that require 'cloud computing' skill. Nebula Academy offers AWS-authored courses that will help you become AWS Cloud literate and master the in-demand skills that hiring companies need most."</blockquote>
-                            <a className="linkLight" href="https://searchcloudcomputing.techtarget.com/feature/Are-you-on-the-right-cloud-computing-career-path">Source: Search Cloud Computing</a>
+                        <Col className="registrationCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
+                            <h2 style={{ fontSize: '1.9rem' }}>About this event</h2>
+                            <blockquote style={{fontStyle:'normal'}}>{this.state.aboutTheEvent}</blockquote>
                         </Col>
-                        <Col className="registrationUrlCard">
-                            <h2 style={{ fontSize: '1.9rem' }}>Certifications Within Higher Education</h2>
-                            <blockquote>"AWS Academy provides higher education institutions with a ready-to-teach cloud computing curriculum that prepares students to pursue industry-recognized certifications and in-demand cloud jobs. Our curriculum helps educators stay at the forefront of AWS Cloud innovation so that they can equip students with the skills they need to get hired in one of the fastest-growing industries."</blockquote>
-                            <a className="link" href="https://aws.amazon.com/training/awsacademy/">Source: AWS Academy</a>
+                        <Col className="registrationCard">
+                            <h2 style={{ fontSize: '1.9rem' }}>Learning Objectives</h2>
+                            <blockquote style={{fontStyle:'normal'}}>
+                                    <ul className="learningObjectivesList">
+                                        {this.state.learningObjectives.map(ele => <li>{ele}</li>)}
+                                    </ul>
+                                </blockquote>
                         </Col>
-                        <Col className="registrationUrlCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
-                            <h2 style={{ fontSize: '1.9rem' }}>Bridge Higher Education and Industry</h2>
-                            <blockquote >"The biggest issue we face is industry telling us we're not doing enough to prepare our students for the workforce. Which is frustrating because our dilemma is that industry is not investing enough in us to be able to prepare our students"</blockquote>
-                            <>
-                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>Caron Hobin</p>
-                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>VP for strategic alliances</p>
-                                <p style={{ lineHeight:'3px', fontWeight:'bold' }}>Baypath University</p>
-                            </>
+                        <Col className="registrationCard" style={{backgroundColor:'#8E5EA5', color: 'white', border: '3px solid white'}}>
+                            <h2 style={{ fontSize: '1.9rem' }}>Workshop Overview</h2>
+                            <blockquote style={{fontStyle:'normal'}}>{this.state.workshopOverview}</blockquote>
                         </Col>
                     </Row>
                     <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
-                        <Col className="registrationUrlCard" style={{ backgroundImage: "url(" + uniImage + ")" }}></Col>
-                        <Col className="registrationUrlCard" style={{ borderColor: '#ff9900' }}>
-                            <h2 style={{ fontSize: '1.9rem' }}>Additional AWS Information</h2>
-                            <p>Please feel free to download and share the following infomation with students, teachers, and administration.</p>
-                            <Row className="contentCentered">
-                                <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Flyer } target="blank" download variant="warning">AWS One-Page Flyer</Button>
-                                </Col>
-                                <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Brochure } target="blank" download variant="warning">AWS Full Brochure</Button>
-                                </Col>
-                                <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_Student_Infographic } target="blank" download variant="warning">Student Infograph</Button>
-                                </Col>
-                                <Col>
-                                    <Button style={{ margin: '10px', whiteSpace:'nowrap' }} href={ AWS_University_Infographic } target="blank" download variant="warning">University Infograph</Button>
-                                </Col>
-                            </Row>
+                        <Col className="registrationCard" style={{ borderColor: '#ff9900' }}>
+                            <h2 style={{ fontSize: '1.9rem' }}>Potential Salary Information</h2>
+                            {this.state.salaries.map(ele =><h3>{ele.title}: {ele.salary} <a href={`${ele.source}`} style={{fontWeight:'200'}} target='blank'>source</a></h3>)}
                         </Col>
-                        <Col className="registrationUrlCard" style={{  backgroundImage: "url(" + uniImage2 + ")" }}></Col>
+                    </Row>
+                    <Row style={{ borderColor: '#ff9900', marginLeft: '10vw', marginRight: '10vw' }}>
+                        <Col className="registrationCard" style={{ backgroundImage: "url(" + uniImage + ")" }}></Col>
+                        <Col className="registrationCard" style={{  backgroundImage: "url(" + uniImage2 + ")", backgroundSize:'cover' }}></Col>
                     </Row>
             </React.Fragment>
         )
