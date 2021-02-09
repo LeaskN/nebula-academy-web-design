@@ -154,8 +154,8 @@ class AllWorkshops extends Component {
     }
     createProgramCard = () => {
         return(
-            this.state.programs.map(program => (
-                <Col style={{ backgroundImage: `url('${program.image}')` }} className="AllWorkshopsUrlCard">
+            this.state.programs.map((program, i) => (
+                <Col style={{ backgroundImage: `url('${program.image}')` }} className="AllWorkshopsUrlCard" key={i}>
                     <h1>{program.workshopTitle}</h1>
                     <p>{program.aboutTheEvent}</p>
                     <div id="spacer"></div>

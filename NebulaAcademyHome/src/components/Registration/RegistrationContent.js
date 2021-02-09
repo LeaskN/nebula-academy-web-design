@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import AWS_Brochure from '../../assets/AWS_Brochure.pdf'
-import AWS_Flyer from '../../assets/AWS_Flyer.pdf'
-import AWS_Student_Infographic from '../../assets/AWS_Student_Infographic.pdf'
-import AWS_University_Infographic from '../../assets/AWS_University_Infographic.pdf'
 
 import './RegistrationContent.css';
 import uniImage from '../../assets/UniCollegePicture2.jpg'

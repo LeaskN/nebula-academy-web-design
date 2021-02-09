@@ -3,13 +3,6 @@ import { Jumbotron, Button, Row, Col } from 'react-bootstrap';
 import './RegistrationJumbotron.css';
 
 class RegistrationJumbotron extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    };
-    console.log(this.props.data)
-  }
   render(){
     return(
     <React.Fragment>

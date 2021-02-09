@@ -12,10 +12,7 @@ import image4 from '../assets/12b_Slidelabel.jpg'
 let programs = [
     { 
         id:1, 
-        time: '4:00PM',
-        workshopTitle: 'Jobs In Tech',
         image:image1,
-        source:'/registration',
         date: 'March 4th',
         time: '4:00PM',
         workshopTitle: 'Jobs In Tech',
@@ -49,11 +46,10 @@ let programs = [
     },
     { 
         id:2, 
-        date: 'Feb 13',
+        date: 'March 11th',
         time: '4:00PM',
         workshopTitle: 'Tech Sales Careers',
         image:image2,
-        source:'/registration',
         aboutTheEvent: `
             This workshop focuses on some pathways into tech careers. 
             It primarily looks at jobs in Tech Sales, Tech Support, and Software Engineering. 
@@ -83,11 +79,10 @@ let programs = [
     },
     { 
         id:3, 
-        date: 'Feb 13',
+        date: 'March 18th',
         time: '4:00PM',
         workshopTitle: 'Tech Support Careers',
         image: image3,
-        source:'/registration',
         aboutTheEvent: `
             This workshop focuses on some pathways into tech careers. 
             It primarily looks at jobs in Tech Sales, Tech Support, and Software Engineering. 
@@ -117,11 +112,10 @@ let programs = [
     },
     { 
         id:4, 
-        date: 'Feb 13',
+        date: 'March 25th',
         time: '4:00PM',
         workshopTitle: 'How to Become A Software Engineer',
         image:image4,
-        source:'/registration',
         aboutTheEvent: `
             This workshop focuses on some pathways into tech careers. 
             It primarily looks at jobs in Tech Sales, Tech Support, and Software Engineering. 
