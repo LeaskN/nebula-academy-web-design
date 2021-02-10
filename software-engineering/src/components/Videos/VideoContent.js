@@ -85,6 +85,7 @@ class VideoContent extends Component {
             {this.state.seBootcamp.map((video) => (
               <div className="singleVideo">
                 <iframe
+                  title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
@@ -103,6 +104,7 @@ class VideoContent extends Component {
             {this.state.seV2Videos.map((video) => (
               <div className="singleVideo">
                 <iframe
+                  title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
@@ -121,6 +123,7 @@ class VideoContent extends Component {
             {this.state.seV1Videos.map((video) => (
               <div className="singleVideo">
                 <iframe
+                  title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
