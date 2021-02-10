@@ -13,7 +13,7 @@ class Registration extends Component {
             <React.Fragment>
                 <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
                         <Col className="registrationCard" style={{backgroundColor:'#8E5EA5', color: 'white', paddingLeft: '10px', border: '3px solid white'}}>
-                            <h2 style={{ fontSize: '1.9rem' }}>About this event</h2>
+                            <h2 style={{ fontSize: '1.9rem' }}>About This Event</h2>
                                 <blockquote  style={{fontStyle:'normal', height: '80%', alignItems:'center'}}>{this.props.data.aboutTheEvent}</blockquote>
                         </Col>
                         <Col className="registrationCard">
@@ -31,7 +31,7 @@ class Registration extends Component {
                     </Row>
                     <Row style={{ marginLeft: '10vw', marginRight: '10vw' }}>
                         <Col className="registrationCard" style={{ borderColor: '#ff9900' }}>
-                            <h2 style={{ fontSize: '1.9rem' }}>Potential Salary Information</h2>
+                            <h2 style={{ fontSize: '1.9rem' }}>Average Salary Information</h2>
                             {this.props.data.salaries.map((ele, i) =><h3 key={i}>{ele.title}: {ele.salary} <a href={`${ele.source}`} style={{fontWeight:'200'}} key={i} target='blank'>source</a></h3>)}
                         </Col>
                     </Row>
