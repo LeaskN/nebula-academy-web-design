@@ -24,3 +24,9 @@
 .pointer:hover{
   cursor: pointer;
 }
+
+.center-with-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
