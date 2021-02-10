@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Modal, Button } from 'react-bootstrap';
-import { parseCohortStr, parseDateStr } from '../helperFunctions/helperFunctions';
+import { parseCohortStr } from '../../helperFunctions/helperFunctions';
 import './Popup.css'; 
 
 function Popup() {

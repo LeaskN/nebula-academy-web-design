@@ -1,5 +1,5 @@
-import React, { Component }from 'react';
-import { parseCohortStr, parseDateStr } from '../helperFunctions/helperFunctions';
+import React, { Component } from 'react';
+import { parseCohortStr, parseDateStr } from '../../helperFunctions/helperFunctions';
 
 class ProgramDesc extends Component {
     constructor(props) {
@@ -8,7 +8,6 @@ class ProgramDesc extends Component {
         };
     }
     componentDidMount(){
-      // fetch(`http://localhost:3000/dev2/campaigns`)
       return fetch(`https://d9nuj9xdv4try.cloudfront.net/dev2/campaigns`)
         .then(res => res.json())
         .then(res => this.setState({cohortOptions: res}))
@@ -31,8 +30,8 @@ class ProgramDesc extends Component {
 
     formatDetailsIntoJSX(option, key){
       const { cohortName, fullOrPartTime } = parseCohortStr(option);
-      const startDate = parseDateStr(new Date(option.startDate).toString());
-      const endDate = parseDateStr(new Date(option.endDate).toString());
+      const startDate = parseDateStr(option.startDate);
+      const endDate = parseDateStr(option.endDate);
 
       return (
         <div key={key} className="center-with-flex">
