@@ -53,6 +53,7 @@ let programs = [
         time: '4:00PM',
         workshopTitle: 'Tech Sales Careers',
         image: image2,
+        registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20354929',
         aboutTheEvent: `
             This workshop focuses on what a Tech Sales career looks like and how to begin one. 
             We will primarily focus on the day-to-day of this role, the potenital growth, team structure, required techincal skills, and required soft skills for the role. 
@@ -84,6 +85,7 @@ let programs = [
         date: 'March 18th',
         time: '4:00PM',
         workshopTitle: 'Tech Support Careers',
+        registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20355006',
         image: image3,
         aboutTheEvent: `
             This workshop focuses on Tech Support Careers.
@@ -115,6 +117,7 @@ let programs = [
         date: 'March 25th',
         time: '4:00PM',
         workshopTitle: 'How to Become A Software Engineer',
+        registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20355044',
         image: image4,
         aboutTheEvent: `
             This workshop focuses on what Software Engineers do & how to become one. 
