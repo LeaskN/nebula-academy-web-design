@@ -472,7 +472,6 @@ class WorkforceDevelopment extends Component {
             <Button
               className="bottom"
               href="mailto:succeed@neublaacademy.com?subject=Tech Skills Bootcamp"
-              target="blank"
               variant="secondary"
             >
               Tech Skills
@@ -504,8 +503,7 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
+              href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
               variant="secondary"
             >
               Help Desk
