@@ -9,7 +9,7 @@ export const WorkforceDevelopmentFooter = () => (
 <h3 className="contentCentered">Continue exploring our website to better understand our offerings</h3><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/universities" variant="primary">Universities</Button>
+            <Button href="/workshops" variant="primary">Workshops</Button>
           </Col>
         </Row>
     </Jumbotron>

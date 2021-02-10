@@ -457,7 +457,7 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
-              href="https://code.nebulaacademy.com"
+              href="https://code.nebulaacademy.com/application"
               target="blank"
               variant="secondary"
             >
@@ -471,7 +471,7 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
-              href="https://code.nebulaacademy.com"
+              href="mailto:succeed@neublaacademy.com?subject=Tech Skills Bootcamp"
               target="blank"
               variant="secondary"
             >
@@ -484,12 +484,19 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
+              href="mailto:succeed@neublaacademy.com?subject=Tech Sales Bootcamp"
+              variant="secondary"
+            >
+              Tech Sales
+            </Button>
+            {/* <Button
+              className="bottom"
               href="https://code.nebulaacademy.com"
               target="blank"
               variant="secondary"
             >
               Tech Sales
-            </Button>
+            </Button> */}
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
