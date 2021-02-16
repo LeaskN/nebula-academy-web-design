@@ -15,7 +15,7 @@
   min-height: 400px;
 }
 
-.WorkforceDevelopmentUrlCard div{
+.WorkforceDevelopmentUrlCard div {
   text-shadow: 2px 1px 3px black;
 }
 
@@ -35,10 +35,9 @@
   }
 }
 
-
-@media (max-width: 1089px) {
+@media (max-width: 1200px) {
   .WorkforceDevelopmentUrlCard:last-child {
-    max-width: 570px !important;
+    max-width: 100% !important;
   }
 }
 
@@ -61,7 +60,7 @@
   .carousel-item,
   .d-block,
   .w-100 {
-    min-height: 325px;;
+    min-height: 325px;
     line-height: 0.6em;
   }
 }
@@ -72,7 +71,7 @@
 }
 
 .d-block,
-  .w-100 {
-    min-height: 325px;;
-    line-height: 0.6em;
-  }
+.w-100 {
+  min-height: 325px;
+  line-height: 0.6em;
+}
