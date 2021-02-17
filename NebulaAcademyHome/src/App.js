@@ -3,15 +3,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { NoMatch } from './pages/NoMatch';
 import { NavigationBar } from './components/Global/NavigationBar';
-import { Footer } from './components/Global/Footer'
+import { Footer } from './components/Global/Footer';
 // import { STEAMForKids } from './pages/STEAMForKids'
-import { Educators } from './pages/Educators'
-import { WorkforceDevelopment } from './pages/WorkforceDevelopment'
-import { Universities } from './pages/Universities'
-import { Philanthropy } from './pages/Philanthropy'
-import { Staff } from './pages/Staff'
+import { Educators } from './pages/Educators';
+import { WorkforceDevelopment } from './pages/WorkforceDevelopment';
+import { Universities } from './pages/Universities';
+import { Philanthropy } from './pages/Philanthropy';
+import { Staff } from './pages/Staff';
 import { Application } from './pages/Application';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
+import { Blog } from './pages/Blog';
+import { AllBlogs} from './pages/AllBlogs';
 import CookieConsent from "react-cookie-consent";
 
 import ReactGA from 'react-ga';
@@ -41,9 +43,12 @@ class App extends Component {
             <Route path="/universities" component={Universities} />
             <Route path="/philanthropy" component={Philanthropy} />
             <Route path="/staff" component={Staff} />
-            {/*<Route path ="/success-stories" component={SuccessStories}/>
+            {/*
+              <Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>
-              <Route path ="/blog" component={Blog}/>*/}
+            */}
+            <Route path="/blog" component={Blog}/>
+            <Route path="/blogs" component={AllBlogs}/>
             <Route component={NoMatch} />
           </Switch>
         </Router>

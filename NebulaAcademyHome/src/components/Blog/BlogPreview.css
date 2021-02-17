@@ -1,0 +1,7 @@
+.blog-preview {
+    height: 300px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 20px 0px;
+    border: 1px solid red;
+}
