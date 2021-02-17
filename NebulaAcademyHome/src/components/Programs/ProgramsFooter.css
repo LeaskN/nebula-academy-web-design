@@ -1,15 +1,11 @@
-.ProgramsCard {
+.ProgramsRow {
   text-align: center;
   text-shadow: 1px solid black;
   color: black;
   background-color: white;
-  margin: 20px;
+  margin: 15px;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
   border: 3px solid #8e5ea5;
-  min-width: 400px !important;
-  min-height: 300px;
-}
-
-.programImages {
-  min-width: 400px !important;
+  min-width: 570px !important;
+  min-height: 400px;
 }
