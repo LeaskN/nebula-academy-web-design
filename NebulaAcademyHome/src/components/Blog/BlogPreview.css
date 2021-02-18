@@ -1,7 +1,28 @@
 .blog-preview {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
     height: 300px;
     width: 100%;
     max-width: 1250px;
     margin: 20px 0px;
     border: 1px solid red;
+    align-items: center;
+}
+
+.blog-text {
+    max-width: 900px;
+    margin-top: 20px;
+    /* align-self: baseline; */
+}
+
+.preview-image {
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    border-radius: 100%;
+    background-position: top;
+    background-size: contain;
 }
