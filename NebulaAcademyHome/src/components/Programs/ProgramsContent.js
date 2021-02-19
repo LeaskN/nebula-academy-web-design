@@ -18,7 +18,7 @@ class ProgramsContent extends Component {
           description1: "description1",
           description2: "description2",
           CTA: "Learn More",
-          hover: true,
+          hover: false,
         },
         {
           id: 2,
@@ -111,8 +111,18 @@ class ProgramsContent extends Component {
     console.log(this.state, "<-- new state?");
   };
 
-  onMouseUnhover = () => {
-    this.setState({ hover: false });
+  onMouseUnhover = (e) => {
+    let hoverId = e.target.dataset.id;
+    if (hoverId) {
+      this.setState((prevState) => {
+        const newState = prevState;
+        newState.programs[hoverId - 1].hover = false;
+        console.log(newState.programs[hoverId - 1].hover, "<--- changing?");
+        return {
+          programs: [...newState.programs],
+        };
+      });
+    }
   };
 
   render() {
@@ -124,8 +134,8 @@ class ProgramsContent extends Component {
               key={program.id}
               data-id={program.id}
               className="ProgramsCard"
-              onMouseEnter={this.onMouseHover}
-              onMouseLeave={this.onMouseUnhover}
+              onMouseOver={this.onMouseHover}
+              onMouseOut={this.onMouseUnhover}
             >
               {program.hover ? (
                 <h3>{program.CTA}</h3>
@@ -134,7 +144,7 @@ class ProgramsContent extends Component {
               )}
               {/* <h3>{program.title}</h3> */}
               {/* <img className="programImages" src={program.image} /> */}
-              {/* <p>{program.description1}</p> */}
+              <p>{program.description1}</p>
             </Col>
           ))}
         </Row>
