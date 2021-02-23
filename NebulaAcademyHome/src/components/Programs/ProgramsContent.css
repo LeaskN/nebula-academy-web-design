@@ -10,6 +10,17 @@
   min-height: 300px;
 }
 
+.hovered {
+  background-color: #8e5ea5;
+  padding: 50px;
+}
+
 .programImages {
   min-width: 400px !important;
+  min-height: 300px;
+}
+
+.description {
+  text-align: center;
+  margin: auto;
 }

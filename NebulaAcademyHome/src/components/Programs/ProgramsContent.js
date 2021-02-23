@@ -15,8 +15,10 @@ class ProgramsContent extends Component {
           id: 1,
           title: "AWS",
           image: AWSSlide1,
-          description1: "description1",
-          description2: "description2",
+          description1:
+            "The average salary of an AWS-certified IT professional is $129,868 — ranking as one of the highest-paying certification categories in North America.",
+          description2:
+            "Forbes Magazine has ranked AWS Certification as one of the Top 15 Most Valuable IT Certifications. Each of the five Amazon Web Services (AWS) certifications brings in an average salary of more than $100,000.",
           CTA: "Learn More",
           hover: false,
         },
@@ -138,13 +140,20 @@ class ProgramsContent extends Component {
               onMouseOut={this.onMouseUnhover}
             >
               {program.hover ? (
-                <h3>{program.CTA}</h3>
+                <div>
+                  <h3>{program.title}</h3>
+                  <div className="hovered">
+                    <p className="description">{program.description2}</p>
+                    <Button className="bottom">{program.CTA}</Button>
+                  </div>
+                </div>
               ) : (
-                <h3>{program.title}</h3>
+                <div>
+                  <h3>{program.title}</h3>
+                  <p className="description">{program.description1}</p>
+                  {/* <img className="programImages" src={program.image} /> */}
+                </div>
               )}
-              {/* <h3>{program.title}</h3> */}
-              {/* <img className="programImages" src={program.image} /> */}
-              <p>{program.description1}</p>
             </Col>
           ))}
         </Row>
