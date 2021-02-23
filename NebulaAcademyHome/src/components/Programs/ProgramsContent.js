@@ -139,9 +139,9 @@ class ProgramsContent extends Component {
               onMouseOver={this.onMouseHover}
               onMouseOut={this.onMouseUnhover}
             >
+              <h3>{program.title}</h3>
               {program.hover ? (
                 <div>
-                  <h3>{program.title}</h3>
                   <div className="hovered">
                     <p className="description">{program.description2}</p>
                     <Button className="bottom">{program.CTA}</Button>
@@ -149,7 +149,6 @@ class ProgramsContent extends Component {
                 </div>
               ) : (
                 <div>
-                  <h3>{program.title}</h3>
                   <p className="description">{program.description1}</p>
                   {/* <img className="programImages" src={program.image} /> */}
                 </div>
