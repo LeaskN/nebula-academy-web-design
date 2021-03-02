@@ -18,11 +18,30 @@
 }
 
 .preview-image {
-    margin: 30px;
     width: 200px;
     height: 200px;
     border: 2px solid red;
     border-radius: 100%;
     background-position: top;
     background-size: contain;
+}
+
+.read-me {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.date-created {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.blog-preview-img-holder {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    height: 200px;
+    width: 200px;
 }

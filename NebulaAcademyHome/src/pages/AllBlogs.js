@@ -6,7 +6,7 @@ import AllBlogsPage from '../components/Blog/AllBlogsPage';
 export const AllBlogs = () => (
     <>
         <BlogJumbotron />
-        <AllBlogsPage />
+            <AllBlogsPage/>
         <BlogFooter />
     </>
 )

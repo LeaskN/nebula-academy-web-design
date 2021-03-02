@@ -37,8 +37,8 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             {/* <Route path ="/steam-for-kids" component={STEAMForKids}/> */}
             <Route path="/educators" component={Educators} />
-            <Route path = "/application/Phase2" component={ApplicationPhase2}/>
-            <Route path = "/application" component={Application}/>
+            <Route path="/application/Phase2" component={ApplicationPhase2}/>
+            <Route path="/application" component={Application}/>
             <Route path="/workforce-development" component={WorkforceDevelopment} />
             <Route path="/universities" component={Universities} />
             <Route path="/philanthropy" component={Philanthropy} />
@@ -47,9 +47,10 @@ class App extends Component {
               <Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>
             */}
-            <Route path="/blog" component={Blog}/>
+            {/* <Route path="/blog" component={Blog}/> */}
+            <Route path="/blogs/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
             <Route path="/blogs" component={AllBlogs}/>
-            <Route component={NoMatch} />
+            {/* <Route component={NoMatch} /> */}
           </Switch>
         </Router>
         <Footer />
