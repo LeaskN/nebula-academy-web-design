@@ -16,9 +16,9 @@ class ProgramsContent extends Component {
           title: "AWS",
           image: AWSSlide1,
           description1:
-            "The average salary of an AWS-certified IT professional is $129,868 — ranking as one of the highest-paying certification categories in North America.",
+            "The average salary of an AWS-certified IT professional is $129,868 — ranking as one of the highest-paying certification categories in North America.The average salary of an AWS-certified IT professional is $129,868 — ranking as one of the highest-paying certification categories in North America.",
           description2:
-            "Forbes Magazine has ranked AWS Certification as one of the Top 15 Most Valuable IT Certifications. Each of the five Amazon Web Services (AWS) certifications brings in an average salary of more than $100,000.",
+            "Forbes Magazine has ranked AWS Certification as one of the Top 15 Most Valuable IT Certifications. Each of the five Amazon Web Services (AWS) certifications brings in an average salary of more than $100,000. Forbes Magazine has ranked AWS Certification as one of the Top 15 Most Valuable IT Certifications. Each of the five Amazon Web Services (AWS) certifications brings in an average salary of more than $100,000.",
           CTA: "Learn More",
           hover: false,
         },
@@ -98,61 +98,26 @@ class ProgramsContent extends Component {
     };
   }
 
-  onMouseHover = (e) => {
-    let hoverId = e.target.dataset.id;
-    if (hoverId) {
-      this.setState((prevState) => {
-        const newState = prevState;
-        newState.programs[hoverId - 1].hover = true;
-        console.log(newState.programs[hoverId - 1].hover, "<--- changing?");
-        return {
-          programs: [...newState.programs],
-        };
-      });
-    }
-    console.log(this.state, "<-- new state?");
-  };
-
-  onMouseUnhover = (e) => {
-    let hoverId = e.target.dataset.id;
-    if (hoverId) {
-      this.setState((prevState) => {
-        const newState = prevState;
-        newState.programs[hoverId - 1].hover = false;
-        console.log(newState.programs[hoverId - 1].hover, "<--- changing?");
-        return {
-          programs: [...newState.programs],
-        };
-      });
-    }
-  };
-
   render() {
     return (
       <div>
         <Row className="ProgramsRow">
           {this.state.programs.map((program) => (
-            <Col
-              key={program.id}
-              data-id={program.id}
-              className="ProgramsCard"
-              onMouseOver={this.onMouseHover}
-              onMouseOut={this.onMouseUnhover}
-            >
+            <Col key={program.id} data-id={program.id} className="ProgramsCard">
               <h3>{program.title}</h3>
-              {program.hover ? (
-                <div>
-                  <div className="hovered">
-                    <p className="description">{program.description2}</p>
-                    <Button className="bottom">{program.CTA}</Button>
-                  </div>
+
+              <div
+                className="hoverContainer"
+                style={{ backgroundImage: `url(${program.image})` }}
+              >
+                <p className="description1">{program.description1}</p>
+                <div className="hovered">
+                  <p className="description">{program.description2}</p>
+                  <Button className="learnMore" href={`/program/${program.id}`}>
+                    {program.CTA}
+                  </Button>
                 </div>
-              ) : (
-                <div>
-                  <p className="description">{program.description1}</p>
-                  {/* <img className="programImages" src={program.image} /> */}
-                </div>
-              )}
+              </div>
             </Col>
           ))}
         </Row>

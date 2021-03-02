@@ -14,6 +14,8 @@ import { Application } from "./pages/Application";
 import { ApplicationPhase2 } from "./pages/ApplicationPhase2";
 import { Registration } from "./pages/Registration";
 import { Programs } from "./pages/Programs";
+import { SingleProgram } from "./pages/SingleProgram";
+
 import CookieConsent from "react-cookie-consent";
 import AllWorkshops from "./components/AllWorkshops/AllWorkshopsContent";
 
@@ -55,6 +57,8 @@ class App extends Component {
             <Route path="/workshops/:id" component={Registration} />
             <Route path="/staff" component={Staff} />
             <Route path="/programs" component={Programs} />
+            <Route path="/program/:id" component={SingleProgram} />
+
             {/*<Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>
               <Route path ="/blog" component={Blog}/>*/}
