@@ -7,41 +7,103 @@
     width: 100%;
     max-width: 1250px;
     margin: 20px 0px;
-    border: 1px solid red;
+    border: 1px solid rgb(190,111,176);
+    border-radius: 6px;
     align-items: center;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, .15);
 }
+
+.blog-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    background-color: rgb(190,111,176, .2);
+}
+
+.blog-cover span {
+    position: absolute;
+    bottom: .75em;
+    right: .75em;
+    text-shadow: 0px 0px 1px;
+    color: rgb(72,61,152);
+}
+
+.blog-cover:hover {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+.blog-preview-img-holder { 
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    z-index: 3;
+}
+
+.date-created {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+/* .blog-preview:hover {
+    background-color:rgb(190,111,176);
+} */
 
 .blog-text {
     max-width: 900px;
     margin-top: 20px;
     /* align-self: baseline; */
+    align-self: flex-start;
 }
 
 .preview-image {
     width: 200px;
     height: 200px;
-    border: 2px solid red;
+    border: 2px solid rgb(190,111,176);
     border-radius: 100%;
     background-position: top;
     background-size: contain;
+}
+
+@media (max-width: 750px){
+    .preview-image {
+        width: 5em;
+        height: 5em;
+    }
+    .blog-preview-img-holder {
+        position: relative;
+        top: -30%;
+        left: 0;
+        width: 5em;
+        height: 5em;
+        margin: 1em;
+    }
 }
 
 .read-me {
     position: absolute;
     right: 20px;
     bottom: 15px;
+    color: black;
+    border-radius: 5%;
+    padding: .25em;
+    text-shadow: 0px 0px 1px rgb(0, 0, 0);
+    background: linear-gradient(70deg, rgb(153,111,176), rgb(190,111,176));;
 }
 
-.date-created {
+.read-me:hover {
+    background: linear-gradient(70deg, rgb(190,111,176), rgb(153,111,176));;
+}
+
+.text-cover {
     position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-.blog-preview-img-holder {
-    display: flex;
-    align-items: center;
-    margin: 30px;
-    height: 200px;
-    width: 200px;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(240,240,240) 20%, transparent);
 }

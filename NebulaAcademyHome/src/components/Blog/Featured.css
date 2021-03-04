@@ -1,6 +1,39 @@
 .featured-blog {
+    position: relative;
     height: 100%;
     width: 100%;
     max-width: 1250px;
     border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 6px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, .15);
+}
+
+.featured-blog img {
+    height: 80%;
+}
+
+.featured-blog-image {
+    height: 20em;
+    width: 20em;
+    margin: 0;
+    background: url("https://builtin.com/sites/default/files/styles/ckeditor_optimize/public/inline-images/software-engineer-vs-developer02.jpg");
+}
+
+.featured-blog p {
+    padding: 1em;
+}
+
+.featured-blog h3 {
+    text-align: center;
+    padding: .5em;
+}
+
+.icon-placement {
+    position: absolute;
+    top: 5px;
+    left: 0;
 }

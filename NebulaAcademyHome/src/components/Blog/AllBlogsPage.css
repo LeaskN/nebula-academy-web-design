@@ -8,9 +8,15 @@
 .featured-section {
     display: flex;
     align-items: center;
-    height: 600px;
+    justify-content: center;
+    min-height: 600px;
     width: 100%;
     max-width: 1250px;
     margin: 20px 0px;
-    border: 1px solid blue;
+}
+
+@media (max-width: 750px){
+    .featured-section {
+        flex-direction: column;
+    }
 }

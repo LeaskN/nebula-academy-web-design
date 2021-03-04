@@ -7,7 +7,7 @@ const BlogPreview = ({ blog }) => {
     // console.log(props, "<-props")
     // I need to cut the string at a certain length then add ...
     const cutString = () => {
-        return blog?.text?.substring(0, 550);
+        return blog?.text?.substring(0, 1000);
     } 
 
     const grabImageFromTxt = (text) => {
@@ -39,21 +39,24 @@ const BlogPreview = ({ blog }) => {
 
     return (
         <div className="blog-preview">
-            <div className="blog-preview-img-holder">
-                {createImage()}
-            </div>
-            <p className="date-created">{blog.date}</p>
-            <div className="blog-text">
-                <ReactMarkdown skipHtml={true} source={cutString()+"..."} />
-            </div>
             <Link to={{
                 pathname: `/blogs/${blog.date}`,
                 state: {
                     blogData: blog.text
                 }
             }}>
-                <div className="read-me">Read More</div>
+                <div className="blog-cover">
+                    <span>Read More...</span>
+                </div>
             </Link>
+            <div className="blog-preview-img-holder">
+                {createImage()}
+            </div>
+            <p className="date-created">{blog.date}</p>
+            <div className="blog-text">
+                <ReactMarkdown skipHtml={true} source={cutString()+"..."} />
+                <div className="text-cover"></div>
+            </div>
         </div>
     )
 }
