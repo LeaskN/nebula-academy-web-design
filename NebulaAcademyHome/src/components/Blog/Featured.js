@@ -1,13 +1,13 @@
 import React from 'react';
 import './Featured.css';
-import { GoBookmark } from 'react-icons/all';
+import { AiTwotonePushpin } from 'react-icons/all';
 import { IconContext } from 'react-icons';
 
 const Featured = () => {
     return (
         <div className="featured-blog">
             <IconContext.Provider value={{size: "2.5em", className: "icon-placement"}}>
-                <GoBookmark />
+                <AiTwotonePushpin />
             </IconContext.Provider>
             <div className="featured-blog-image"></div>
             <h3 className="featured-headline">How To Find Salvation As A Software Engineer</h3>
@@ -17,6 +17,7 @@ const Featured = () => {
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>
+            
         </div>
     )
 }

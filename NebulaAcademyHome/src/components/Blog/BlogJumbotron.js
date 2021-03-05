@@ -4,10 +4,12 @@ import './BlogJumbotron.css';
 
 export const BlogJumbotron = () => (
     <>
-        <Jumbotron>
+        <Jumbotron className="blog-jumbo">
             <Container>
-                <h1>Blog</h1>
+                <h1>
+                    Blog
+                </h1>
             </Container>
         </Jumbotron>
     </>
-)
+)   

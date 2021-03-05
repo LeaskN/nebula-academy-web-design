@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './AllBlogsPage.css';
 import BlogPreview from './BlogPreview';
+import MostViewed from './MostViewed';
 import Featured from './Featured';
+import BlogLoadingWheel from './BlogLoadingWheel';
 
 const AllBlogsPage = () => {
-    const [mdFiles, updateFiles] = useState({ posts: null, updated: false });
+    const [mdFiles, updateFiles] = useState({ loading: true, posts: null, updated: false });
     // I need to sent up a fake feed that determines which blog is the most popular
     useEffect(() => {
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
+                console.log("done");
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
                 return filteredFiles
             })
-            .then(filteredFiles => updateFiles((mdFiles) => ({...mdFiles, posts: filteredFiles})))
+            .then(filteredFiles => updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles})))
             .catch(err => console.error(err));
     }, [mdFiles.updated]);
 
@@ -75,9 +78,10 @@ const AllBlogsPage = () => {
     return (
         <div className="all-blogs-page">
             <section className="featured-section">
-                <Featured />
+                <MostViewed />
                 <Featured />
             </section>
+            <BlogLoadingWheel loading={mdFiles.loading}/>
             {renderBlogs()}
         </div>
     )

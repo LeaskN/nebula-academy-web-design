@@ -4,9 +4,21 @@ import './BlogPreview.css';
 import ReactMarkdown from 'react-markdown';
 
 const BlogPreview = ({ blog }) => {
-    // console.log(props, "<-props")
-    // I need to cut the string at a certain length then add ...
+   
     const cutString = () => {
+        const getTitle = (() => {
+            const titleRegex = /<!--\s*Title\s*-->(.|\n)*<!--\s*End\s*Title\s*-->/;
+            const title = blog?.text?.match(titleRegex);
+            return title;
+        })();
+        const getPreview = (() => {
+            const previewRegex = /<!--\s*Preview\s*-->(.|\n)*<!--\s*End\s*Preview\s*-->/;
+            const preview = blog?.text?.match(previewRegex)?.[0];
+            return preview;
+        })();
+
+        if(getTitle && getPreview) return getTitle + getPreview;
+       
         return blog?.text?.substring(0, 1000);
     } 
 
@@ -36,7 +48,7 @@ const BlogPreview = ({ blog }) => {
     const formatDate = () => {
         
     }
-
+    const blogText = cutString();
     return (
         <div className="blog-preview">
             <Link to={{
@@ -54,7 +66,7 @@ const BlogPreview = ({ blog }) => {
             </div>
             <p className="date-created">{blog.date}</p>
             <div className="blog-text">
-                <ReactMarkdown skipHtml={true} source={cutString()+"..."} />
+                <ReactMarkdown skipHtml={true} source={blogText} />
                 <div className="text-cover"></div>
             </div>
         </div>
