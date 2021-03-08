@@ -51,7 +51,6 @@ const AllBlogsPage = () => {
 
     const blogToObject = (blogs) => {
         if(blogs.length === 0) return blogs;
-        console.log(blogs, "<-- blogs");
         // We should get the date first and then re-arrange
         const getDate = (blog) => {
             const dateRegex = /\d{2}-\d{2}-\d{4}/;
