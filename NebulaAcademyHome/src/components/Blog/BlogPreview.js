@@ -23,7 +23,7 @@ const BlogPreview = ({ blog }) => {
     } 
 
     const grabImageFromTxt = (text) => {
-        const imageRegex = /<!--\s*FeaturedImage:\s*.* -->/;
+        const imageRegex = /<!--\s*FeaturedImage:\s*.*-->/;
         const featuredImage = text?.match(imageRegex)?.[0];
         if(featuredImage) {
             const beginning = /<!--\s*FeaturedImage:\s*/;

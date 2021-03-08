@@ -3,7 +3,7 @@ import './Featured.css';
 import { AiTwotonePushpin } from 'react-icons/all';
 import { IconContext } from 'react-icons';
 
-const Featured = () => {
+const Featured = ({ data }) => {
     return (
         <div className="featured-blog">
             <IconContext.Provider value={{size: "2.5em", className: "icon-placement"}}>

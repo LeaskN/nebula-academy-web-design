@@ -6,25 +6,46 @@ import Featured from './Featured';
 import BlogLoadingWheel from './BlogLoadingWheel';
 
 const AllBlogsPage = () => {
-    const [mdFiles, updateFiles] = useState({ loading: true, posts: null, updated: false });
+    const [mdFiles, updateFiles] = useState({ loading: true, posts: null, featured: null, updated: false });
     // I need to sent up a fake feed that determines which blog is the most popular
     useEffect(() => {
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
-                console.log("done");
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
+                const featured = removeAndStoreFeatured(filteredFiles);
+                spliceOutFeatured(filteredFiles, featured.idx);
+                updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}))
+                console.log("done");
                 return filteredFiles
             })
-            .then(filteredFiles => updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles})))
             .catch(err => console.error(err));
     }, [mdFiles.updated]);
 
+    const spliceOutFeatured = (files, idx) => {
+        if(idx !== null){
+            files.splice(idx, 1)
+        }
+    }
+
+    const removeAndStoreFeatured = (blogs) => {
+        // Marking all featured blogs - will return latest into featured component
+        const featuredCheck = /<!--\s*Featured\s*Blog\s*-->/;
+        let idxOfBlog = null;
+        const firstFeatured = blogs.find((blog, idx) => {
+            const holdMatch = blog?.text?.match(featuredCheck);
+            idxOfBlog = holdMatch ? idx : null;
+            return holdMatch ? true : false;
+        })
+        firstFeatured.idx = idxOfBlog;
+        return firstFeatured;
+    }
+
     const filterOutBlogsWithoutDate = (blogs) => {
+        const dateCommentRegex = /<!--\s*Date:\s*\d{2}-\d{2}-\d{4}\s*-->/;
         return blogs.filter(blog => {
-            const dateCommentRegex = /<!-- Date: \d{2}-\d{2}-\d{4} -->/;
-            blog.match(dateCommentRegex);
-            return blog.match ? true : false;
+            const holdMatch = blog?.match(dateCommentRegex);
+            return holdMatch ? true : false;
         })
     }
 
@@ -79,9 +100,9 @@ const AllBlogsPage = () => {
         <div className="all-blogs-page">
             <section className="featured-section">
                 <MostViewed />
-                <Featured />
+                <Featured data={mdFiles.featured} />
             </section>
-            <BlogLoadingWheel loading={mdFiles.loading}/>
+            <BlogLoadingWheel loading={mdFiles.loading} />
             {renderBlogs()}
         </div>
     )
