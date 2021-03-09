@@ -1,3 +1,8 @@
+.ProgramsRow {
+  display: flex;
+  justify-content: center;
+}
+
 .ProgramsCard {
   text-align: center;
   text-shadow: 1px solid black;
@@ -6,8 +11,8 @@
   margin: 20px;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
   border: 3px solid #8e5ea5;
-  min-width: 400px !important;
-  min-height: 310px;
+  min-width: 400px;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -57,7 +62,6 @@
   color: #fff;
   opacity: 1;
   transition: all 1s ease-in-out;
-  /* transition-delay: 1s; */
   box-sizing: border-box;
 }
 
@@ -66,11 +70,32 @@
   top: 0;
 }
 .programImages {
-  min-width: 400px !important;
+  min-width: 100%;
   min-height: 300px;
 }
 
 .description {
   text-align: center;
   margin: auto;
+}
+.ProgramsCard:last-child {
+  max-width: 47%;
+}
+
+@media (max-width: 375px) {
+  .ProgramsCard {
+    padding: auto;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ProgramsCard:last-child {
+    max-width: 46%;
+  }
+}
+@media (max-width: 855px) {
+  .ProgramsCard:last-child {
+    max-width: 100%;
+  }
 }
