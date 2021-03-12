@@ -33,6 +33,7 @@
   width: 90%;
   bottom: 0;
   left: 0;
+  outline: none !important;
 }
 
 .hoverContainer {
@@ -43,7 +44,6 @@
   transform: scale(1);
   transition: all 0.3s ease-in-out;
   height: 100%;
-  /* min-height: 300px; */
 }
 
 .hovered {
@@ -80,6 +80,11 @@
 }
 .ProgramsCard:last-child {
   max-width: 47%;
+}
+
+.learnMore:hover {
+  background-color: #00c9cb;
+  outline: none;
 }
 
 @media (max-width: 375px) {

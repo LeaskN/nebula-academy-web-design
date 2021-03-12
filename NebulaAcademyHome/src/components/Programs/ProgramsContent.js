@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Button } from "react-bootstrap";
+
 import AWSSlide1 from "../../assets/awsstats1.jpg";
 import AWSSlide2 from "../../assets/awsslide2.jpg";
 import AWSSlide3 from "../../assets/awsquote.jpg";
@@ -113,7 +114,11 @@ class ProgramsContent extends Component {
                 <p className="description1">{program.description1}</p>
                 <div className="hovered">
                   <p className="description">{program.description2}</p>
-                  <Button className="learnMore" href={`/program/${program.id}`}>
+                  <Button
+                    className="learnMore"
+                    href={`/program/${program.id}`}
+                    variant="info"
+                  >
                     {program.CTA}
                   </Button>
                 </div>
