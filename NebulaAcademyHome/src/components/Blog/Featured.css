@@ -24,6 +24,30 @@
     height: 80%;
 }
 
+.feat-blog-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    background-color: rgb(190,111,176, .2);
+}
+
+.feat-blog-cover span {
+    position: absolute;
+    bottom: .75em;
+    right: .75em;
+    text-shadow: 0px 0px 1px;
+    color: rgb(72,61,152);
+}
+
+.feat-blog-cover:hover {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
 .featured-blog-image {
     height: 20em;
     width: 20em;

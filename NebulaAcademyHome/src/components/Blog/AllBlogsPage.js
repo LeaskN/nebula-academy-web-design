@@ -12,11 +12,12 @@ const AllBlogsPage = () => {
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
+                console.log("done - request");
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
                 const featured = removeAndStoreFeatured(filteredFiles);
                 spliceOutFeatured(filteredFiles, featured.idx);
                 updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}))
-                console.log("done");
+                console.log("done parsing")
                 return filteredFiles
             })
             .catch(err => console.error(err));
@@ -97,10 +98,12 @@ const AllBlogsPage = () => {
 
     return (
         <div className="all-blogs-page">
-            <section className="featured-section">
-                <MostViewed />
-                <Featured data={mdFiles.featured} />
-            </section>
+                {   mdFiles.loading ? null :
+                    <section className="featured-section">
+                        <MostViewed />
+                        <Featured blog={mdFiles.featured} />
+                    </section>
+                }
             <BlogLoadingWheel loading={mdFiles.loading} />
             {renderBlogs()}
         </div>
