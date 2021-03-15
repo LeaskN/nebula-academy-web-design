@@ -25,7 +25,7 @@ const Featured = ({ blog }) => {
                 <AiTwotonePushpin />
             </IconContext.Provider>
             <Link to={{
-                pathname: `/blogs/${blog?.date}`,
+                pathname: `/blogs/${blog?.id}/${blog?.date}`,
                 state: {
                     blogData: blog?.text
                 }

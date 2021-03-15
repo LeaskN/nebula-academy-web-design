@@ -8,10 +8,11 @@ import './BlogPreview.css';
 const BlogPreview = ({ blog }) => {
 
     const blogText = cutString(blog);
+    console.log(blog, "blog")
     return (
         <div className="blog-preview">
             <Link to={{
-                pathname: `/blogs/${blog.date}`,
+                pathname: `/blogs/${blog.id}/${blog.date}`,
                 state: {
                     blogData: blog.text
                 }

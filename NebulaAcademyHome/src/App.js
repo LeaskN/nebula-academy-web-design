@@ -50,7 +50,7 @@ class App extends Component {
             {/* <Route path="/blog" component={Blog}/> */}
             <Route path="/blogs/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
             <Route path="/blogs" component={AllBlogs}/>
-            {/* <Route component={NoMatch} /> */}
+            <Route component={NoMatch} />
           </Switch>
         </Router>
         <Footer />

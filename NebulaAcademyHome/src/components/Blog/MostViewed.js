@@ -11,7 +11,7 @@ const MostViewed = ({ blog }) => {
                 <AiTwotoneFire />
             </IconContext.Provider>
             <Link to={{
-                pathname: `/blogs/${blog?.date ? blog.date : ""}`,
+                pathname: `/blogs/${blog?.id}/${blog?.date ? blog.date : ""}`,
                 state: {
                     blogData: blog?.text
                 }
