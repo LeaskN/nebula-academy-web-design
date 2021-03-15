@@ -1,6 +1,7 @@
 import React from "react";
 import SingleProgramContent from "../components/SingleProgram/SingleProgramContent";
 import SingleProgramJumbotron from "../components/SingleProgram/SingleProgramJumbotron";
+import { SingleProgramFooter } from "../components/SingleProgram/SingleProgramFooter";
 
 let programs = [
   {
@@ -71,6 +72,7 @@ export const SingleProgram = (props) => {
     <React.Fragment>
       <SingleProgramJumbotron data={programs[id]} />
       <SingleProgramContent data={programs[id]} />
+      <SingleProgramFooter />
     </React.Fragment>
   );
 };

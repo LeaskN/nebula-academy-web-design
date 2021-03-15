@@ -10,7 +10,6 @@
   flex-direction: column;
   border: 3px solid white;
   color: white;
-  width: 700px;
   background-color: #8e5ea5;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
@@ -22,22 +21,17 @@
   margin-left: 15px;
 }
 
-.RightPanel {
-  width: 300px;
+.TopCard,
+.BottomCard {
   margin-left: 25px;
 }
 
-.TopCard {
-  height: 25%;
+.TopCard,
+.BottomCard {
   border: 3px solid #8e5ea5;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
 .BottomCard {
-  /* margin-top: 5%; */
-  height: 70%;
-  border: 3px solid #8e5ea5;
-  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
-  position: absolute;
   bottom: 0;
 }

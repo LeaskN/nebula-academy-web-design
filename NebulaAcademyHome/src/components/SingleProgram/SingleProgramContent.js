@@ -20,7 +20,7 @@ class SingleProgramContent extends Component {
     return (
       <div className="ProgramPage">
         <Row>
-          <Col className="ProgramInfo">
+          <Col xs={9} className="ProgramInfo">
             <h5>Program: {title}</h5>
             <h5>About:</h5>
             <p> {about}</p>
@@ -34,20 +34,24 @@ class SingleProgramContent extends Component {
             <p>{cost}</p>
           </Col>
 
-          <Col className="RightPanel">
+          <Col xs={3} className="RightPanel">
             <Col className="TopCard">
-              <h5>Highlights:</h5>
-              <p>{highlights2}</p>
+              <div className="inner">
+                <h5>Highlights:</h5>
+                <p>{highlights2}</p>
+              </div>
             </Col>
             <Col className="BottomCard">
-              <h5>Technologies:</h5>
-              <p>{technologies}</p>
-              <h5>Certifications:</h5>
-              <p>{certifications}</p>
-              <h5>Outcomes:</h5>
-              <p>{outcomes}</p>
-              <h5>Industry Verifications</h5>
-              <p>{verifications}</p>
+              <div className="inner">
+                <h5>Technologies:</h5>
+                <p>{technologies}</p>
+                <h5>Certifications:</h5>
+                <p>{certifications}</p>
+                <h5>Outcomes:</h5>
+                <p>{outcomes}</p>
+                <h5>Industry Verifications</h5>
+                <p>{verifications}</p>
+              </div>
             </Col>
           </Col>
         </Row>
