@@ -471,7 +471,7 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
-              href="mailto:succeed@neublaacademy.com?subject=Tech Skills Bootcamp"
+              href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
               variant="secondary"
             >
               Tech Skills

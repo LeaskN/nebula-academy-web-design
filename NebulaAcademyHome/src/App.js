@@ -23,7 +23,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:2.5.21-WFDEV');
+    console.log('V:3.10.21-links');
     return (
       <React.Fragment>
         <NavigationBar />
