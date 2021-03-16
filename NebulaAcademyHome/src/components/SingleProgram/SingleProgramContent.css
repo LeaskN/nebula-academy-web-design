@@ -1,37 +1,46 @@
 .ProgramPage {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
-  margin: 25px;
+  align-items: center;
+  margin: 30px;
 }
 
 .ProgramInfo {
-  display: flex;
-  flex-direction: column;
   border: 3px solid white;
   color: white;
   background-color: #8e5ea5;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
-.ProgramInfo > *,
 .TopCard > *,
 .BottomCard > * {
   margin-top: 10px;
   margin-left: 15px;
 }
+.ProgramInfo > * {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.BottomCard {
+  margin-top: 20px;
+}
 
 .TopCard,
 .BottomCard {
   margin-left: 25px;
-}
-
-.TopCard,
-.BottomCard {
   border: 3px solid #8e5ea5;
   box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
-.BottomCard {
-  bottom: 0;
+.ApplyButton {
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .programContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }

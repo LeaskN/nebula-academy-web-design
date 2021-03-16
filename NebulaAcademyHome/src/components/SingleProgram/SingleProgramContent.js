@@ -19,9 +19,12 @@ class SingleProgramContent extends Component {
     } = this.props.data;
     return (
       <div className="ProgramPage">
-        <Row>
+        <Row className="programContainer">
           <Col xs={9} className="ProgramInfo">
-            <h5>Program: {title}</h5>
+            <h5>
+              <strong>Program:</strong> {title}
+            </h5>
+            <br />
             <h5>About:</h5>
             <p> {about}</p>
             <h5>Program Highlights:</h5>
@@ -55,9 +58,11 @@ class SingleProgramContent extends Component {
             </Col>
           </Col>
         </Row>
-        {/* <div>
-          <Button className="ApplyButton">Apply Now</Button>
-        </div> */}
+        <div className="ApplyButton">
+          <Button href="/application" variant="success" id="nav-button">
+            Apply Now
+          </Button>
+        </div>
       </div>
     );
   }

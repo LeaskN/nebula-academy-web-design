@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Button } from "react-bootstrap";
+import { IoIosArrowDropup } from "react-icons/io";
 
 import AWSSlide1 from "../../assets/awsstats1.jpg";
 import AWSSlide2 from "../../assets/awsslide2.jpg";
@@ -59,42 +60,6 @@ class ProgramsContent extends Component {
           CTA: "Learn More",
           hover: false,
         },
-        {
-          id: 6,
-          title: "title6",
-          image: "image6",
-          description1: "description16",
-          description2: "description6",
-          CTA: "Learn More",
-          hover: false,
-        },
-        {
-          id: 7,
-          title: "title7",
-          image: "image7",
-          description1: "description17",
-          description2: "description7",
-          CTA: "Learn More",
-          hover: false,
-        },
-        {
-          id: 8,
-          title: "title8",
-          image: "image8",
-          description1: "description18",
-          description2: "description8",
-          CTA: "Learn More",
-          hover: false,
-        },
-        {
-          id: 9,
-          title: "title9",
-          image: "image9",
-          description1: "description19",
-          description2: "description9",
-          CTA: "Learn More",
-          hover: false,
-        },
       ],
     };
   }
@@ -105,20 +70,19 @@ class ProgramsContent extends Component {
         <Row className="ProgramsRow">
           {this.state.programs.map((program) => (
             <Col key={program.id} data-id={program.id} className="ProgramsCard">
-              <h3>{program.title}</h3>
+              <h3 className="programTitle">{program.title}</h3>
 
               <div
                 className="hoverContainer"
                 style={{ backgroundImage: `url(${program.image})` }}
               >
-                <p className="description1">{program.description1}</p>
+                <div className="description1">
+                  <p>{program.description1}</p> <IoIosArrowDropup />
+                </div>
+
                 <div className="hovered">
                   <p className="description">{program.description2}</p>
-                  <Button
-                    className="learnMore"
-                    href={`/program/${program.id}`}
-                    variant="info"
-                  >
+                  <Button href={`/program/${program.id}`} variant="info">
                     {program.CTA}
                   </Button>
                 </div>
