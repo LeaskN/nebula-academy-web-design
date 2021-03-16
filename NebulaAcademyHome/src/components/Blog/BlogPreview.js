@@ -6,9 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import './BlogPreview.css';
 
 const BlogPreview = ({ blog }) => {
-
     const blogText = cutString(blog);
-    console.log(blog, "blog")
     return (
         <div className="blog-preview">
             <Link to={{

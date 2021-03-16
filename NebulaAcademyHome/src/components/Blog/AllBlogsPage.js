@@ -63,7 +63,6 @@ const removeAndStoreFeatured = (blogs) => {
         return holdMatch ? true : false;
     })
     firstFeatured.idx = idxOfBlog;
-	console.log(firstFeatured, "First!!!!!!!!!!!!!");
     return firstFeatured;
 }
 
@@ -82,14 +81,10 @@ const AllBlogsPage = () => {
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
-                console.log(files, "<--- files");
-                console.log("done - request");
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
                 const featured = removeAndStoreFeatured(filteredFiles);
                 spliceOutFeatured(filteredFiles, featured.idx);
-				console.log(filteredFiles, "<--- ah");
                 updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}))
-                console.log("done parsing")
                 return filteredFiles
             })
             .catch(err => console.error(err));
