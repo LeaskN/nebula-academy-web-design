@@ -244,14 +244,14 @@ code {
 .bottom{
   position:absolute;  
   margin-left: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 5%;
   margin-top: 0px;
   width: 90%;                
   bottom: 0;                          
   left: 0; 
 }
 #spacer{
-  height: 70px;
+  height: 90px;
   width: 100px;
   display:inline-block;
 }

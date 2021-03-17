@@ -441,78 +441,102 @@ class WorkforceDevelopment extends Component {
           >
             <h1>AWS</h1>
             {this.createAWSSlides()}
-            <div id="spacer"></div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
-              <Button
-                href="https://aws.nebulaacademy.com"
-                target="blank"
-                variant="warning"
-              >
-                AWS Program Info
+            <Button
+              href="https://aws.nebulaacademy.com"
+              target="blank"
+              style={{ margin: '5px' }}
+
+              variant="warning"
+            >
+              AWS Program Info
             </Button>
-            </div>
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Software Engineering</h1>
             {this.createSoftwareEngineeringSlides()}
-            <div id="spacer"></div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
-              <Button
-                href="https://code.nebulaacademy.com/application"
-                target="blank"
-                variant="secondary"
-              >
-                Bootcamp Application
-            </Button>
-            </div>
+            <Button
+              style={{ margin: '5px' }}
+              href="/workshops/4"
+              variant="secondary"
+            >
+              FREE SE Workshop
+              </Button>
+
+            <Button
+              style={{ margin: '5px' }}
+              href="https://code.nebulaacademy.com/application"
+              target="blank"
+              variant="secondary"
+            >
+              SE Bootcamp Application
+              </Button>
           </Col>
 
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Skills</h1>
             {this.createTechSkillsSlides()}
-            <div id="spacer"></div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
-              <Button
-                target="blank"
-                href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
-                variant="secondary"
-              >
-                Tech Skills Registration
+            <Button
+              style={{ margin: '5px' }}
+              href="/workshops/1"
+              variant="secondary"
+            >
+              FREE Jobs in Tech Workshop
             </Button>
-            </div>
+            
+            <Button
+              target="blank"
+              style={{ margin: '5px' }}
+              href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
+              variant="secondary"
+            >
+              Tech Skills Registration
+            </Button>
           </Col>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Sales</h1>
             {this.createTechSalesSlides()}
-            <div id="spacer"></div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
-              <Button
-                href="/application"
-                variant="secondary"
-              >
-                Tech Sales Application
+            <Button
+              href="/workshops/2"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              FREE Tech Sales Workshop
               </Button>
-            </div>
+            <Button
+              href="/application"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              Tech Sales Application
+              </Button>
           </Col>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
             {this.createHelpDeskSlides()}
-            <div id="spacer"></div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
-              <Button
-                href="/application"
-                variant="secondary"
-              >
-                Help Desk Application
+            <Button
+              href="/workshops/3"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              FREE Tech Support Workshop
               </Button>
-              {/* <Button
+            <Button
+              href="/application"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              Help Desk Application
+              </Button>
+            {/* <Button
                 href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
                 variant="secondary"
               >
                 Register
               </Button> */}
-            </div>
           </Col>
+
         </Row>
         <InfoPanel state={this.state} />
       </React.Fragment>
