@@ -8,9 +8,16 @@ import AWSSlide4 from "../../assets/AdobeStock_312848234.jpg";
 import SESlide1 from "../../assets/NebulaGrowingField.jpg";
 import SESlide2 from "../../assets/nebulaSECourseDescription2.jpg";
 import SESlide3 from "../../assets/nebulasecoursedescription.jpg";
-import HelpDesk1 from "../../assets/HelpDesk1.jpeg";
 import TechSkills1 from "../../assets/TechSkills1.jpeg";
-import TechSales1 from "../../assets/TechSales1.jpeg";
+import HelpDesk1 from "../../assets/HelpDesk1.jpeg";
+import HelpDesk2 from "../../assets/HelpDesk2.jpg"; 
+import HelpDesk3 from "../../assets/HelpDesk3.jpeg"; 
+import TechSales1 from "../../assets/TechSales1.jpeg"; 
+import TechSkills2 from "../../assets/TechSkills2.jpeg"; 
+import TechSkills3 from "../../assets/TechSkills3.jpeg"; 
+import TechSales2 from "../../assets/TechSales2.jpeg";
+import TechSales3 from "../../assets/TechSales3.jpeg"; 
+
 
 import { WorkforceCarousel } from "./WorkforceCarousel/WorkforceCarousel";
 // import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
@@ -217,7 +224,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: TechSkills2,
             al: "Second slide",
             header: "Build Foundational Knowledge",
             body: (
@@ -237,7 +244,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: TechSkills3,
             al: "Fourth slide",
             header: "Course Description",
             body:
@@ -273,7 +280,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: TechSales2,
             al: "Second slide",
             header: "Prepare For Your Preferred Technical Sales Role",
             body: (
@@ -296,7 +303,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: TechSales3,
             al: "Fourth slide",
             header: "Course Description",
             body:
@@ -333,7 +340,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: HelpDesk2,
             al: "Second slide",
             header: "Build Your Tech Skills",
             body: (
@@ -357,7 +364,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: HelpDesk3,
             al: "Fourth slide",
             header: "Course Description",
             body:
