@@ -318,7 +318,7 @@ class WorkforceDevelopment extends Component {
             body: (
               <div>
                 <p>
-                A Helpdesk Support Technician is empathetic, has strong problem-solving skills, understands how to provide remote support, asks the right questions to illicit important information, and has strong communication skills to help guide end users through issues.  They understand complex systems, can manage an AWS Management Console, a Microsoft Office 365 Administration Console, customer expectations, & much more.</p>
+                  A Helpdesk Support Technician is empathetic, has strong problem-solving skills, understands how to provide remote support, asks the right questions to illicit important information, and has strong communication skills to help guide end users through issues.  They understand complex systems, can manage an AWS Management Console, a Microsoft Office 365 Administration Console, customer expectations, & much more.</p>
                 {/* <p>
                   Source:{" "}
                   <a
@@ -442,63 +442,68 @@ class WorkforceDevelopment extends Component {
             <h1>AWS</h1>
             {this.createAWSSlides()}
             <div id="spacer"></div>
-            <Button
-              className="bottom"
-              href="https://aws.nebulaacademy.com"
-              target="blank"
-              variant="warning"
-            >
-              AWS
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
+              <Button
+                href="https://aws.nebulaacademy.com"
+                target="blank"
+                variant="warning"
+              >
+                AWS Program Info
             </Button>
+            </div>
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Software Engineering</h1>
             {this.createSoftwareEngineeringSlides()}
             <div id="spacer"></div>
-            <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com/application"
-              target="blank"
-              variant="secondary"
-            >
-              Bootcamp
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
+              <Button
+                href="https://code.nebulaacademy.com/application"
+                target="blank"
+                variant="secondary"
+              >
+                Bootcamp Application
             </Button>
+            </div>
           </Col>
 
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Skills</h1>
             {this.createTechSkillsSlides()}
             <div id="spacer"></div>
-            <Button
-              className="bottom"
-              href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
-              variant="secondary"
-            >
-              Tech Skills
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
+              <Button
+                target="blank"
+                href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
+                variant="secondary"
+              >
+                Tech Skills Registration
             </Button>
+            </div>
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Sales</h1>
             {this.createTechSalesSlides()}
             <div id="spacer"></div>
-            <Button
-              className="bottom"
-              href="/application"
-              variant="secondary"
-            >
-              Tech Sales Application
-            </Button>
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
+              <Button
+                href="/application"
+                variant="secondary"
+              >
+                Tech Sales Application
+              </Button>
+            </div>
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
             {this.createHelpDeskSlides()}
             <div id="spacer"></div>
-            <div style={{display:'flex', justifyContent:'space-evenly'}} className="bottom">
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }} className="bottom">
               <Button
-                href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20344935"
+                href="/application"
                 variant="secondary"
               >
-                Free Workshop Registration
+                Help Desk Application
               </Button>
               {/* <Button
                 href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
