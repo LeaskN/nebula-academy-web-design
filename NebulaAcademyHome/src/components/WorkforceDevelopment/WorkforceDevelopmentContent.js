@@ -464,8 +464,7 @@ class WorkforceDevelopment extends Component {
 
             <Button
               style={{ margin: '5px' }}
-              href="https://code.nebulaacademy.com/application"
-              target="blank"
+              href="/application"
               variant="secondary"
             >
               SE Bootcamp Application
@@ -484,7 +483,6 @@ class WorkforceDevelopment extends Component {
             </Button>
             
             <Button
-              target="blank"
               style={{ margin: '5px' }}
               href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
               variant="secondary"
