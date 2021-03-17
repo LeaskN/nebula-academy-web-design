@@ -483,31 +483,30 @@ class WorkforceDevelopment extends Component {
             <div id="spacer"></div>
             <Button
               className="bottom"
-              href="mailto:succeed@neublaacademy.com?subject=Tech Sales Bootcamp"
+              href="/application"
               variant="secondary"
             >
-              Tech Sales
+              Tech Sales Application
             </Button>
-            {/* <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
-              variant="secondary"
-            >
-              Tech Sales
-            </Button> */}
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
             {this.createHelpDeskSlides()}
             <div id="spacer"></div>
-            <Button
-              className="bottom"
-              href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
-              variant="secondary"
-            >
-              Help Desk
-            </Button>
+            <div style={{display:'flex', justifyContent:'space-evenly'}} className="bottom">
+              <Button
+                href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20344935"
+                variant="secondary"
+              >
+                Free Workshop Registration
+              </Button>
+              {/* <Button
+                href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
+                variant="secondary"
+              >
+                Register
+              </Button> */}
+            </div>
           </Col>
         </Row>
         <InfoPanel state={this.state} />

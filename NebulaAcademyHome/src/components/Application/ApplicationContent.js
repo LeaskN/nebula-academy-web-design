@@ -129,7 +129,7 @@ class ApplicationContent extends Component {
         //     alert('Please complete the field titled: "Are you a VET who has GI BILL Benefits that you would like to use?"')
         // }
         else if(!this.state.Program_you_are_applying_to__c){
-            alert('Please complete the field titled: "Which cohort are you applying to?"')
+            alert('Please complete the field titled: "Which program are you applying to?"')
         } 
         else if(!this.state.US_citizen_or_permanent_resident__c){
             alert('All participants must be a US citizen or permanent resident.')
@@ -275,6 +275,13 @@ class ApplicationContent extends Component {
                             </Col>
                         </Row>
                         <Form className="manualContainer" >
+                            <Form.Group>
+                                <Form.Label>Which program are you applying to?</Form.Label>
+                                <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
+                                    <option aria-label="option 0" label="Select" value="false"></option> 
+                                    {this.populateOptions()}
+                                </Form.Control>
+                            </Form.Group> 
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label>First</Form.Label>
@@ -499,13 +506,6 @@ class ApplicationContent extends Component {
                                         <option aria-label="option 1" label="Yes" value="true">Yes</option> 
                                         <option aria-label="option 2" label="No" value="false">No</option> 
                                     </Form.Control>
-                            </Form.Group> 
-                            <Form.Group>
-                                <Form.Label>Which cohort are you applying to?</Form.Label>
-                                <Form.Control required as="select" name="Program_you_are_applying_to__c" onChange={this.handleInputChange}>
-                                    <option aria-label="option 0" label="Select" value="false"></option> 
-                                    {this.populateOptions()}
-                                </Form.Control>
                             </Form.Group> 
                             <Form.Group>
                                 <Form.Label>Are you a US citizen or permanent resident?</Form.Label>
