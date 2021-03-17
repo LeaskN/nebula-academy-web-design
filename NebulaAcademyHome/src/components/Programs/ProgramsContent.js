@@ -77,7 +77,11 @@ class ProgramsContent extends Component {
                 style={{ backgroundImage: `url(${program.image})` }}
               >
                 <div className="description1">
-                  <p>{program.description1}</p> <IoIosArrowDropup />
+                  <p>{program.description1}</p> 
+                  <div>
+                    <IoIosArrowDropup />
+                    <p className='moreInfo'>More Info</p>
+                  </div>
                 </div>
 
                 <div className="hovered">
