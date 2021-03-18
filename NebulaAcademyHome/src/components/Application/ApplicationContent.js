@@ -1,4 +1,4 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import './ApplicationContent.css';
 import paymentOptionsPNG from '../../assets/Payment-Options-7.8.2020.png';

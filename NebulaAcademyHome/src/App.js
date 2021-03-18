@@ -19,12 +19,12 @@ import { GuestSpeakerApplication } from './pages/GuestSpeakerApplication';
 
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('G-515JPPTG2L');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:3.10.21-links');
+    console.log('V:3.18.21');
     return (
       <React.Fragment>
         <NavigationBar />
