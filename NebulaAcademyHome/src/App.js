@@ -14,7 +14,8 @@ import { Application } from './pages/Application';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import { Registration } from './pages/Registration';
 import CookieConsent from "react-cookie-consent";
-import AllWorkshops from './components/AllWorkshops/AllWorkshopsContent';
+import { AllWorkshops } from "./pages/AllWorkshops";
+// import AllWorkshops from './components/AllWorkshops/AllWorkshopsContent';
 
 
 import ReactGA from 'react-ga';

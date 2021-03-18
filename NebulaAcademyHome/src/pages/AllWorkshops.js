@@ -6,7 +6,7 @@ import  { AllWorkshopsFooter } from '../components/AllWorkshops/AllWorkshopsFoot
 
 export const AllWorkshops = () => (
   <React.Fragment>
-      <AllWorkshopsJumbotron/>
+      {/* <AllWorkshopsJumbotron/> */}
       <AllWorkshopsContent/>
       <AllWorkshopsFooter/>
   </React.Fragment>
