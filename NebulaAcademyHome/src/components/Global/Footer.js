@@ -59,7 +59,6 @@ export const Footer = () => (
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/philanthropy">Philanthropy</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://aws.nebulaacademy.com" target="blank">AWS Certifications</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://code.nebulaacademy.com" target="blank">Softare Engineering Programs</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link style={{textAlign:'left'}} href="https://calendly.com/tomlemons/nebulaacademy" target="blank">Discovery Call</Nav.Link></Nav.Item>
                 </ul>
                 <ul>
                     <h5 className="footerListHeader">Philanthropy</h5>

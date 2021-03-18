@@ -18,12 +18,12 @@ import AllWorkshops from './components/AllWorkshops/AllWorkshopsContent';
 
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('G-515JPPTG2L');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:2.5.21-WFDEV');
+    console.log('V:3.16.21-GA');
     return (
       <React.Fragment>
         <NavigationBar />
