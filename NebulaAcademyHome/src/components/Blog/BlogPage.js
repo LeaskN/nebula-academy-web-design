@@ -20,14 +20,14 @@ const fetchBlogData = (blogId, func) => {
         fetch(`http://localhost:3000/test2/?${blogId}`)
             .then(res => res.json())
             .then(res => {
-                func(res.blogData);
+                if(res?.errorCode) throw "Server Error: " + res?.errorCode;
+                func(res);
             })
-            .catch(e => {
-                console.log(e, "<--- caught");
+            .catch(err => {
+                console.log(err);
             })
     }
 }
-
 
 const BlogPage = ({ routeProps }) => {
     const [ data, updateBlogData ] = useState("");
