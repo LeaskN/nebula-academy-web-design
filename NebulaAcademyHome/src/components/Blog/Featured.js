@@ -7,7 +7,6 @@ import Markdown from 'markdown-to-jsx';
 import './Featured.css';
 
 const Featured = ({ blog }) => {
-    console.log(blog, "<---blog")
     const parseTitlePreview = (blog) => {
         const previewStartReg = /<!--\s*Preview\s*-->/;
         const previewEndReg = /<!--\s*End\s*Preview\s*-->/;

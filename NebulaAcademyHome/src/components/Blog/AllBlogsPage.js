@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { usePersistedState } from './BlogCustomHooks';
 import './AllBlogsPage.css';
 import BlogPreview from './BlogPreview';
 import MostViewed from './MostViewed';
@@ -74,25 +75,47 @@ const filterOutBlogsWithoutDate = (blogs) => {
     })
 }
 
+const checkLocalBlogsForUpdate = (localBlogs, apiBlogs) => {
+    return localBlogs.some((blog, idx) => {
+        for(let element in blog){
+            const blogDidChange = blog[element] === apiBlogs?.[idx]?.[element] ? false : true;
+            if(blogDidChange) return blogDidChange;
+        }
+    })
+}
+
 const AllBlogsPage = () => {
     const [mdFiles, updateFiles] = useState({ loading: true, posts: null, featured: null, updated: false });
     // I need to sent up a fake feed that determines which blog is the most popular
+    const [localBlogs, updateLocalBlogs] = usePersistedState("posts");
+
     useEffect(() => {
+        // Check localBlogs
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
                 if(files?.errorCode) throw new Error("Server Error: " + files?.errorCode);
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
+                // Instead of splicing out feature, lets add a feature property and set it true or false.
                 const featured = removeAndStoreFeatured(filteredFiles);
                 spliceOutFeatured(filteredFiles, featured.idx);
-                updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}));
+
+                if(checkLocalBlogsForUpdate(localBlogs, filteredFiles)) {
+                    console.log("update...");
+                    updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}));
+                } else {
+                    console.log("no update...");
+                    updateFiles((mdFiles) => ({...mdFiles, loading: false, featured: featured}));
+                }
+                updateLocalBlogs(filteredFiles);
                 return filteredFiles;
             })
             .catch(err => console.error(err));
     }, [mdFiles.updated]);
 
     const renderBlogs = () => {
-        return mdFiles?.posts?.map((data, key) => <BlogPreview key={key} blog={data} />);
+        // return mdFiles?.posts?.map((data, key) => <BlogPreview key={key} blog={data} />);
+        return localBlogs?.map((data, key) => <BlogPreview key={key} blog={data} />);
     }
 
     return (
