@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { usePersistedState } from './BlogCustomHooks';
 import './AllBlogsPage.css';
 import BlogPreview from './BlogPreview';
@@ -48,22 +48,24 @@ const orderBlogsByDateDesc = (blogs) => {
     return blogObjects;
 }
 
-const spliceOutFeatured = (files, idx) => {
-    if(idx !== null){
-        files.splice(idx, 1);
-    }
-}
+// const spliceOutFeatured = (files, idx) => {
+//     if(idx !== null){
+//         files.splice(idx, 1);
+//     }
+// }
 
-const removeAndStoreFeatured = (blogs) => {
-    // Marking all featured blogs - will return latest into featured component
+const markAndReturnFeatured = (blogs) => {
+    // Marking and then returning first featured blog found.
     const featuredCheck = /<!--\s*Featured\s*Blog\s*-->/;
-    let idxOfBlog = null;
-    const firstFeatured = blogs.find((blog, idx) => {
+    const firstFeatured = blogs.find((blog, idx, arr) => {
         const holdMatch = blog?.text?.match(featuredCheck);
-        idxOfBlog = holdMatch ? idx : null;
+        if(holdMatch){
+            blog.featured = true;
+            blog.idx = idx;
+            arr.featuredIdx = idx;
+        }
         return holdMatch ? true : false;
     })
-    firstFeatured.idx = idxOfBlog;
     return firstFeatured;
 }
 
@@ -75,59 +77,62 @@ const filterOutBlogsWithoutDate = (blogs) => {
     })
 }
 
-const checkLocalBlogsForUpdate = (localBlogs, apiBlogs) => {
+const checkIfLocalBlogsNeedUpdate = (localBlogs, apiBlogs) => {
+    if(localBlogs?.length < 1) return true;
     return localBlogs.some((blog, idx) => {
         for(let element in blog){
             const blogDidChange = blog[element] === apiBlogs?.[idx]?.[element] ? false : true;
-            if(blogDidChange) return blogDidChange;
+            if(blogDidChange) return true;
         }
+        return false;
     })
 }
 
 const AllBlogsPage = () => {
-    const [mdFiles, updateFiles] = useState({ loading: true, posts: null, featured: null, updated: false });
-    // I need to sent up a fake feed that determines which blog is the most popular
-    const [localBlogs, updateLocalBlogs] = usePersistedState("posts");
+    const [state, updateState] = useState({ loading: true });
+    // ~ 180 blogs stored in localStorage === ~ 1mb
+    // localStorage has a total capacity of 5mb
+    const [localBlogs, updateLocalBlogs] = usePersistedState("posts", []);
+    
+    const updateLocalBlogsFunc = useCallback(newBlogs => {
+            updateLocalBlogs(newBlogs);
+        }, [updateLocalBlogs])
 
     useEffect(() => {
-        // Check localBlogs
+        if(localBlogs.length > 1) updateState((prevState) => ({ ...prevState, loading: false }));
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
                 if(files?.errorCode) throw new Error("Server Error: " + files?.errorCode);
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
-                // Instead of splicing out feature, lets add a feature property and set it true or false.
-                const featured = removeAndStoreFeatured(filteredFiles);
-                spliceOutFeatured(filteredFiles, featured.idx);
-
-                if(checkLocalBlogsForUpdate(localBlogs, filteredFiles)) {
-                    console.log("update...");
-                    updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}));
-                } else {
-                    console.log("no update...");
-                    updateFiles((mdFiles) => ({...mdFiles, loading: false, featured: featured}));
-                }
-                updateLocalBlogs(filteredFiles);
-                return filteredFiles;
+                filteredFiles.push(markAndReturnFeatured(filteredFiles));
+                if(checkIfLocalBlogsNeedUpdate(localBlogs, filteredFiles)) {
+                    console.log("update needed...");
+                    updateLocalBlogsFunc(filteredFiles);
+                } else console.log("no update needed...");
+                updateState(prevState => ({...prevState, loading: false}));
+                return filteredFiles
             })
             .catch(err => console.error(err));
-    }, [mdFiles.updated]);
+    }, [localBlogs, updateLocalBlogsFunc]);
 
     const renderBlogs = () => {
-        // return mdFiles?.posts?.map((data, key) => <BlogPreview key={key} blog={data} />);
-        return localBlogs?.map((data, key) => <BlogPreview key={key} blog={data} />);
+        return localBlogs?.map((data, key) => {
+            if(!data.featured) return <BlogPreview key={key} blog={data} />; 
+        });
     }
+
+    const renderFeaturedSection = () => (
+        <section className="featured-section">
+            <MostViewed />
+            <Featured blog={localBlogs?.[localBlogs?.length-1]} />
+        </section>
+    )
 
     return (
         <div className="all-blogs-page">
-            {   
-                mdFiles.loading ? null :
-                <section className="featured-section">
-                    <MostViewed />
-                    <Featured blog={mdFiles.featured} />
-                </section>
-            }
-            <BlogLoadingWheel loading={mdFiles.loading} />
+            <BlogLoadingWheel loading={state.loading} />
+            {renderFeaturedSection()}
             {renderBlogs()}
         </div>
     )

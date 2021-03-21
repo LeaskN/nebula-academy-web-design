@@ -20,6 +20,7 @@ import './BlogPage.css';
         - Flashing when loading a blog?
         - Parse date (top right of preview) for something more user friendly.
         - Cache - but make the request after a defined time and compare with cache to update
+        - Need cleanup function
 */
 const fetchBlogData = (blogId, func) => {
     if(blogId){
