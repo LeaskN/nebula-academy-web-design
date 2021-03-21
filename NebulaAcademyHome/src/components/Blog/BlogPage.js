@@ -14,13 +14,16 @@ import './BlogPage.css';
 
         It seems like I might need to be logged into Salesforce to actually see the hosted
         img links??
+
+        - Add blog wheel to single blogs
+        - Check mobile -> blog not fetching from mobile -> it doesn't look like it can hit my server
 */
 const fetchBlogData = (blogId, func) => {
     if(blogId){
         fetch(`http://localhost:3000/test2/?${blogId}`)
             .then(res => res.json())
             .then(res => {
-                if(res?.errorCode) throw "Server Error: " + res?.errorCode;
+                if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
                 func(res);
             })
             .catch(err => {

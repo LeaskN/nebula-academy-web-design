@@ -81,7 +81,7 @@ const AllBlogsPage = () => {
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
-                if(files?.errorCode) throw "Server Error: " + files?.errorCode;
+                if(files?.errorCode) throw new Error("Server Error: " + files?.errorCode);
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
                 const featured = removeAndStoreFeatured(filteredFiles);
                 spliceOutFeatured(filteredFiles, featured.idx);
