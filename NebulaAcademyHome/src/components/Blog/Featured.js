@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { AiTwotonePushpin } from 'react-icons/all';
 import { IconContext } from 'react-icons';
 import { cutString, createImage } from './SharedBlogFunctions';
-import ReactMarkdown from 'react-markdown';
-
+import Markdown from 'markdown-to-jsx';
 import './Featured.css';
 
 const Featured = ({ blog }) => {
+    console.log(blog, "<---blog")
     const parseTitlePreview = (blog) => {
         const previewStartReg = /<!--\s*Preview\s*-->/;
         const previewEndReg = /<!--\s*End\s*Preview\s*-->/;
@@ -39,7 +39,10 @@ const Featured = ({ blog }) => {
                 {/* <div className="featured-blog-image"></div> */}
             </div>
             <div className="markdown-wrap">
-                <ReactMarkdown skipHtml={true} source={blogText} />
+                {/* <ReactMarkdown skipHtml={true} source={blogText} /> */}
+                <Markdown>
+                    { blogText }
+                </Markdown>
             </div>
         </div>
     )

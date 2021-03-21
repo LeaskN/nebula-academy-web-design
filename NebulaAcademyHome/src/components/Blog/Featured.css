@@ -1,5 +1,9 @@
 .featured-blog {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 570px;
     width: 100%;
     max-width: 1250px;

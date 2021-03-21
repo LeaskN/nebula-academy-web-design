@@ -9,8 +9,12 @@
     /* max-width: 1100px; */
 }
 
+dl, ol, ul {
+    padding-left: 1.8em;
+}
+
 li {
-     display: list-item;
+    display: list-item;
 }
 
 .blog-inner-container {

@@ -85,8 +85,8 @@ const AllBlogsPage = () => {
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
                 const featured = removeAndStoreFeatured(filteredFiles);
                 spliceOutFeatured(filteredFiles, featured.idx);
-                updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}))
-                return filteredFiles
+                updateFiles((mdFiles) => ({...mdFiles, loading: false, posts: filteredFiles, featured: featured}));
+                return filteredFiles;
             })
             .catch(err => console.error(err));
     }, [mdFiles.updated]);
@@ -97,7 +97,8 @@ const AllBlogsPage = () => {
 
     return (
         <div className="all-blogs-page">
-            {   mdFiles.loading ? null :
+            {   
+                mdFiles.loading ? null :
                 <section className="featured-section">
                     <MostViewed />
                     <Featured blog={mdFiles.featured} />

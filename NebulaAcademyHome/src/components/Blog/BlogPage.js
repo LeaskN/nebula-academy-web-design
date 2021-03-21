@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown/with-html';
+import Markdown from 'markdown-to-jsx';
+import BlogLoadingWheel from './BlogLoadingWheel';
+
 import './BlogPage.css';
 
 /* 
@@ -17,6 +19,13 @@ import './BlogPage.css';
 
         - Add blog wheel to single blogs
         - Check mobile -> blog not fetching from mobile -> it doesn't look like it can hit my server
+        - Testing environment for blog
+        - What's with this extra comma in our Markdown parse...?
+        - It might be better if the .md parser recognized the styling that headers # gave (the underline)
+            instead of having to rely on adding in <hr /> elements. This would allow someone like Anam
+            to only have to rely on her markdown viewer.
+        - We could pull out the test component for Anam or whoever, to fiddle around with the styling
+            in a create-react-app before uploading.
 */
 const fetchBlogData = (blogId, func) => {
     if(blogId){
@@ -24,7 +33,7 @@ const fetchBlogData = (blogId, func) => {
             .then(res => res.json())
             .then(res => {
                 if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
-                func(res);
+                func({ blogData: res, loading: false });
             })
             .catch(err => {
                 console.log(err);
@@ -33,13 +42,13 @@ const fetchBlogData = (blogId, func) => {
 }
 
 const BlogPage = ({ routeProps }) => {
-    const [ data, updateBlogData ] = useState("");
+    const [ data, updateBlogData ] = useState({ blogData: "", loading: true });
     
     useEffect(() => {
         window.scrollTo(0,0);
         if(routeProps?.location?.state){
             const { blogData } = routeProps?.location?.state;
-            updateBlogData(blogData);
+            updateBlogData({ blogData: blogData, loading: false });
         } else {
             let idParse = window.location.pathname?.match(/\/\w{6,}\//);
             if(idParse?.[0]){
@@ -56,10 +65,11 @@ const BlogPage = ({ routeProps }) => {
     return (
         <div className="blog-container">
             <Link to={"/blogs"}><button>All Blogs</button></Link>
+            <BlogLoadingWheel loading={data.loading} />
             <div className="blog-inner-container">
-                <ReactMarkdown allowDangerousHtml={true}>
-                    { data }
-                </ReactMarkdown>
+                <Markdown>
+                    { data.blogData }
+                </Markdown>
             </div>
         </div>
     )

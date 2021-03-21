@@ -3,7 +3,7 @@ import React from 'react';
 export const cutString = (blog, length = null) => {
     const getTitle = (() => {
         const titleRegex = /<!--\s*Title\s*-->(.|\n)*<!--\s*End\s*Title\s*-->/;
-        const title = blog?.text?.match(titleRegex);
+        const title = blog?.text?.match(titleRegex)?.[0];
         return title;
     })();
 

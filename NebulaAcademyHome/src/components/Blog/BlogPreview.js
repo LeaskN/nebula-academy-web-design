@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cutString, createImage } from './SharedBlogFunctions';
-import ReactMarkdown from 'react-markdown';
-
+import Markdown from 'markdown-to-jsx';
 import './BlogPreview.css';
 
 const BlogPreview = ({ blog }) => {
@@ -24,7 +23,9 @@ const BlogPreview = ({ blog }) => {
             </div>
             <p className="date-created">{blog.date}</p>
             <div className="blog-text">
-                <ReactMarkdown skipHtml={true} source={blogText} />
+                <Markdown>
+                    { blogText }
+                </Markdown>
                 <div className="text-cover"></div>
             </div>
         </div>
