@@ -403,7 +403,10 @@ class WorkforceDevelopment extends Component {
           color: "#127FA5",
           header: "Guest Speakers",
           content:
-            "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world.",
+            ["The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world."],
+          buttonText: "Speaker Application",
+          buttonURL: "https://code.nebulaacademy.com/guestspeakerapplication",
+          linkLeavesSite: true,
         },
         {
           color: "#9395D3",
