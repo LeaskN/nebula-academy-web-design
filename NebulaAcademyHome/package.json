@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "analytics": "^0.7.5",
     "bootstrap": "^4.4.1",
     "cors-anywhere": "^0.4.1",
     "http-proxy": "^1.18.1",
