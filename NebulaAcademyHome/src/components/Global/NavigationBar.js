@@ -38,7 +38,7 @@ export const NavigationBar = () => (
           </NavDropdown.Item>
         </NavDropdown>
         <Nav.Item>
-          <Nav.Link href="/universities">Universities</Nav.Link>
+          <Nav.Link href="/videos">Videos</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/philanthropy">Philanthropy</Nav.Link>
