@@ -17,7 +17,6 @@ import CookieConsent from "react-cookie-consent";
 import AllWorkshops from './components/AllWorkshops/AllWorkshopsContent';
 import { GuestSpeakerApplication } from './pages/GuestSpeakerApplication';
 
-
 import ReactGA from 'react-ga';
 ReactGA.initialize('G-515JPPTG2L');
 ReactGA.pageview(window.location.pathname + window.location.search);
