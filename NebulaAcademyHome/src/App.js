@@ -7,7 +7,6 @@ import { Footer } from "./components/Global/Footer";
 // import { STEAMForKids } from './pages/STEAMForKids'
 import { Educators } from "./pages/Educators";
 import { WorkforceDevelopment } from "./pages/WorkforceDevelopment";
-import { Universities } from "./pages/Universities";
 import { Philanthropy } from "./pages/Philanthropy";
 import { Staff } from "./pages/Staff";
 import { Application } from "./pages/Application";
@@ -50,7 +49,6 @@ class App extends Component {
               path="/workforce-development"
               component={WorkforceDevelopment}
             />
-            <Route path="/universities" component={Universities} />
             <Route path="/philanthropy" component={Philanthropy} />
             <Route
               path="/guestspeakerapplication"
