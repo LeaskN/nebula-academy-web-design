@@ -1,0 +1,13 @@
+.videoJumbo {
+  background-image: url("../../assets/1_AWS_home.jpg");
+  background-size: cover;
+  color: white;
+  z-index: 1;
+  height: fit-content;
+  position: relative;
+  margin: 0px;
+  font-size: x-large;
+  text-shadow: 1px 1px 1px #8e5ea5;
+  min-height: 200px;
+  filter: grayscale(100%);
+}
