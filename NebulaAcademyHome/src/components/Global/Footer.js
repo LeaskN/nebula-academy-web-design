@@ -114,7 +114,7 @@ export const Footer = () => (
           </Nav.Link>
           {/* <Nav.Item><Nav.Link style={{textAlign:'left'}} href="/steam-for-kids">STEAM for Kids</Nav.Link></Nav.Item> */}
           <Nav.Item>
-            <Nav.Link style={{ textAlign: "left" }} href="/educators">
+            <Nav.Link style={{ textAlign: "left" }} href="/onlineLearning">
               Educators
             </Nav.Link>
           </Nav.Item>

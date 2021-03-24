@@ -42,7 +42,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             {/* <Route path ="/steam-for-kids" component={STEAMForKids}/> */}
-            <Route path="/educators" component={Educators} />
+            <Route path="/onlineLearning" component={Educators} />
             <Route path="/application/Phase2" component={ApplicationPhase2} />
             <Route path="/application" component={Application} />
             <Route

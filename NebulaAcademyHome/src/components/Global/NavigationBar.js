@@ -17,7 +17,7 @@ export const NavigationBar = () => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto navContents">
         <Nav.Item>
-          <Nav.Link href="/educators">Educators</Nav.Link>
+          <Nav.Link href="/onlineLearning">Educators</Nav.Link>
         </Nav.Item>
         <NavDropdown title="Workforce Development" id="basic-nav-dropdown">
           <NavDropdown.Item href="/workforce-development">
