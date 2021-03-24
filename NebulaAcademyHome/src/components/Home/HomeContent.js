@@ -75,14 +75,7 @@ class HomeContent extends Component {
           buttonURL: "workforce-development",
           buttonText: "Learn More",
         },
-        // {
-        //   color: "#007EA7",
-        //   header: "Universities",
-        //   content:
-        //     "Nebula Academy bridges the gap between academia and industry. We work with colleges and universities to ensure their curriculum is up to date with industry standards and students are prepared with the skillset they need to enter the modern workforce. ",
-        //   buttonURL: "universities",
-        //   buttonText: "Learn More",
-        // },
+
         {
           color: "#9395D3",
           header: "Philanthropy",
