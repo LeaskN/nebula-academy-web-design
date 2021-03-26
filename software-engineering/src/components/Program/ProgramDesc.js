@@ -25,7 +25,9 @@ class ProgramDesc extends Component {
     }
 
     filterBootCamps(){
-      return this.state.cohortOptions.filter(option => option.name.toLowerCase().includes('bootcamp') && option.isActive);
+      let programs = this.state.cohortOptions.filter(option => option.name.toLowerCase().includes('bootcamp') && option.isActive);
+      programs.sort((a, b) =>  new Date(a.startDate) - new Date(b.startDate) )
+      return programs;
     }
 
     formatDetailsIntoJSX(option, key){

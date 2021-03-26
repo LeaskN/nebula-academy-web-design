@@ -31,7 +31,6 @@ function Popup() {
   }
 
   const filterBootCamps = () => {
-    console.log(programs)
     programs.sort((a, b) =>  new Date(a.startDate) - new Date(b.startDate) )
     return programs.filter(option => option.name.toLowerCase().includes('bootcamp') && option.isActive);
   }
