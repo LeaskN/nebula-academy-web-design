@@ -94,7 +94,7 @@ code {
   width: 100% !important;
   border-radius: 0px !important;
   height: 100% !important;
-  justify-content: space-between !important;
+  justify-content: space-between;
   border: 0px !important;
 }
 .card-body {

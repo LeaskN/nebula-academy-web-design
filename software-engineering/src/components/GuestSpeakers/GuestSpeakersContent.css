@@ -13,7 +13,7 @@
     background-color:#303336;
     display: flex;
     align-items: center;
-    justify-content: center !important;
+    justify-content: center;
 }
 .staticCard{
   background-color:#303336;

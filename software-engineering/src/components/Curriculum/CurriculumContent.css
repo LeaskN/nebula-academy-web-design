@@ -5,7 +5,7 @@
     background-color: #9971AF;
     display: flex;
     align-items: center;
-    justify-content: center !important;
+    justify-content: center;
 }
 .cardDeckRight{
     width: 60vw;

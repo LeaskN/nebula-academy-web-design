@@ -43,11 +43,10 @@ class TryCodingContent extends Component {
 render() {
         return (
             <Row className="staticCard" style={{width:"87.5vw"}}>
-                <Col xs={4} className="cardColumns">
-                    <Card className="cardDeckLeft" style={{width:"87.5vw", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <Col xs={4}>
+                    <Card className="cardDeckLeft" style={{display: "flex", justifyContent: "space-evenly"}}>
                         <p style={{marginBottom:"0px"}}>Next Event:</p>
                         <h1>{this.nextFriday()}</h1>
-                        <br/>
                         <Button href={this.link} className="tryCodingButton" target="empty">Register for Free</Button>
                         {/* <p>Please leave the subject as:<br/> Try Coding, {this.nextFriday()}(or your desired date)</p> */}
                     </Card>
