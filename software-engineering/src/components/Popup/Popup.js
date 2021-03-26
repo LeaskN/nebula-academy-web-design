@@ -31,11 +31,12 @@ function Popup() {
   }
 
   const filterBootCamps = () => {
+    console.log(programs)
+    programs.sort((a, b) =>  new Date(a.startDate) - new Date(b.startDate) )
     return programs.filter(option => option.name.toLowerCase().includes('bootcamp') && option.isActive);
   }
   
   const formatDetailsIntoJSX = (cohort, key) => {
-    console.log(cohort)
     const { cohortName, duration, fullOrPartTime, startDate } = parseCohortStr(cohort);
     return (
       <div className="cohort-details" key={key}>
