@@ -29,7 +29,6 @@ const orderBlogsByDateDesc = (blogs) => {
     if(blogs.length === 0) return blogs;
 
     const blogObjects = blogToObject(blogs);
-    // console.log(blogObjects, "Objects")
     const returnDateVal = (blog) => {
         return new Date(blog.date).valueOf();
     }
@@ -48,25 +47,40 @@ const orderBlogsByDateDesc = (blogs) => {
     return blogObjects;
 }
 
-// const spliceOutFeatured = (files, idx) => {
-//     if(idx !== null){
-//         files.splice(idx, 1);
-//     }
-// }
-
-const markAndReturnFeatured = (blogs) => {
+const findFeaturedAndPopular = (blogs, idx) => {
     // Marking and then returning first featured blog found.
-    const featuredCheck = /<!--\s*Featured\s*Blog\s*-->/;
-    const firstFeatured = blogs.find((blog, idx, arr) => {
+    const markFeatured = (blog) => {
+        const featuredCheck = /<!--\s*Featured\s*Blog\s*-->/;
         const holdMatch = blog?.text?.match(featuredCheck);
         if(holdMatch){
             blog.featured = true;
             blog.idx = idx;
-            arr.featuredIdx = idx;
+            return blog;
         }
-        return holdMatch ? true : false;
-    })
-    return firstFeatured;
+        return false;
+    }
+
+    const markMostPopular = (blog, idx) => {
+        // Marking and then returning first featured blog found.
+        const popular = /<!--\s*On\s*Fire\s*-->/;
+        const holdMatch = blog?.text?.match(popular);
+        if(holdMatch){
+            blog.popular = true;
+            blog.idx = idx;
+            return blog;
+        }
+        return false;
+    }
+
+    const featuredAndPopular = blogs.reduce((acc, blog, idx) => { 
+        const popular = !acc["popular"] ? markMostPopular(blog, idx) : false;
+        const featured = !acc["featured"] ? markFeatured(blog, idx) : false;
+        if(popular) acc["popular"] = popular;
+        if(featured) acc["featured"] = featured;
+        return acc;
+    }, {});
+
+    return featuredAndPopular;
 }
 
 const filterOutBlogsWithoutDate = (blogs) => {
@@ -77,9 +91,9 @@ const filterOutBlogsWithoutDate = (blogs) => {
     })
 }
 
-const checkIfLocalBlogsNeedUpdate = (localBlogs, apiBlogs) => {
-    if(localBlogs?.length < 1) return true;
-    return localBlogs.some((blog, idx) => {
+const doCachedBlogsNeedUpdate = (cachedBlogs, apiBlogs) => {
+    if(!cachedBlogs || cachedBlogs?.length < 1) return true;
+    return cachedBlogs?.some((blog, idx) => {
         for(let element in blog){
             const blogDidChange = blog[element] === apiBlogs?.[idx]?.[element] ? false : true;
             if(blogDidChange) return true;
@@ -92,42 +106,54 @@ const AllBlogsPage = () => {
     const [state, updateState] = useState({ loading: true });
     // ~ 180 blogs stored in localStorage === ~ 1mb
     // localStorage has a total capacity of 5mb
-    const [localBlogs, updateLocalBlogs] = usePersistedState("posts", []);
+    const [cachedBlogs, updateCachedBlogs] = usePersistedState("posts", []);
     
-    const updateLocalBlogsFunc = useCallback(newBlogs => {
-            updateLocalBlogs(newBlogs);
-        }, [updateLocalBlogs])
+    const updateCache = useCallback(newBlogs => {
+            updateCachedBlogs(newBlogs);
+        }, [updateCachedBlogs])
 
     useEffect(() => {
-        if(localBlogs.length > 1) updateState((prevState) => ({ ...prevState, loading: false }));
+        let ignore = false;
+
+        if(cachedBlogs?.allBlogs?.length > 1) updateState((prevState) => ({ ...prevState, loading: false }));
+
         fetch("http://localhost:3000/test")
             .then(res => res.json())
             .then(files => {
+                if(ignore) return;
                 if(files?.errorCode) throw new Error("Server Error: " + files?.errorCode);
+
                 const filteredFiles = orderBlogsByDateDesc(filterOutBlogsWithoutDate(files));
-                filteredFiles.push(markAndReturnFeatured(filteredFiles));
-                if(checkIfLocalBlogsNeedUpdate(localBlogs, filteredFiles)) {
-                    console.log("update needed...");
-                    updateLocalBlogsFunc(filteredFiles);
-                } else console.log("no update needed...");
+                
+                const blogs = {
+                    allBlogs: filteredFiles,
+                    featured: findFeaturedAndPopular(filteredFiles)
+                }
+
+                if(doCachedBlogsNeedUpdate(cachedBlogs.allBlogs, blogs.allBlogs)) updateCache(blogs);
+                else console.log("no update needed...");
+
                 updateState(prevState => ({...prevState, loading: false}));
-                return filteredFiles
             })
             .catch(err => console.error(err));
-    }, [localBlogs, updateLocalBlogsFunc]);
+
+            return () => { ignore = true; }
+    }, [cachedBlogs, updateCache]);
 
     const renderBlogs = () => {
-        return localBlogs?.map((data, key) => {
-            if(!data.featured) return <BlogPreview key={key} blog={data} />; 
+        return cachedBlogs?.allBlogs?.map((data, key) => {
+            if(!data?.featured && !data?.popular) return <BlogPreview key={key} blog={data} />; 
         });
     }
 
-    const renderFeaturedSection = () => (
-        <section className="featured-section">
-            <MostViewed />
-            <Featured blog={localBlogs?.[localBlogs?.length-1]} />
-        </section>
-    )
+    const renderFeaturedSection = () => {
+        return cachedBlogs?.featured?.featured ? (
+            <section className="featured-section">
+                {cachedBlogs?.featured?.popular ? <MostViewed blog={cachedBlogs?.featured?.popular}/>: ""}
+                {cachedBlogs?.featured?.featured ? <Featured blog={cachedBlogs?.featured?.featured}/> : ""}            
+            </section>  
+        ) : null
+    }
 
     return (
         <div className="all-blogs-page">

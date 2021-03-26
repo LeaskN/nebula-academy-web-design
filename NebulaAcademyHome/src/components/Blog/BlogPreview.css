@@ -7,6 +7,7 @@
     width: 100%;
     max-width: 1250px;
     margin: 20px 0px;
+    padding-right: 1.8em;
     border: 1px solid rgb(190,111,176);
     border-radius: 6px;
     align-items: center;
@@ -55,6 +56,7 @@
 } */
 
 .blog-text {
+    padding-top: .75em;
     max-width: 900px;
     margin-top: 20px;
     /* align-self: baseline; */
@@ -67,7 +69,7 @@
     border: 2px solid rgb(190,111,176);
     border-radius: 100%;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
 }
 
 @media (max-width: 750px){

@@ -53,11 +53,15 @@
 }
 
 .featured-blog-image {
-    height: 20em;
-    width: 20em;
+    height: 16em;
+    width: 16em;
     margin: 0;
     background: url("https://builtin.com/sites/default/files/styles/ckeditor_optimize/public/inline-images/software-engineer-vs-developer02.jpg");
     background-size: cover;
+}
+
+.markdown-wrap h1 {
+    text-align: center;
 }
 
 .featured-blog p {

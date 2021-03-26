@@ -15,8 +15,19 @@
     margin: 20px 0px;
 }
 
+h1 {
+    font-size: 1.8em;
+}
+
 @media (max-width: 750px){
     .featured-section {
         flex-direction: column;
     }
 }
+
+@media (max-width: 1000px){
+    h1 {
+        font-size: 1.5em;
+    }
+}
+

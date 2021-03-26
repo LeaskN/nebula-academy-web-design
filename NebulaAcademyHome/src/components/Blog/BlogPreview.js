@@ -9,22 +9,22 @@ const BlogPreview = ({ blog }) => {
     return (
         <div className="blog-preview">
             <Link to={{
-                pathname: `/blogs/${blog.id}/${blog.date}`,
+                pathname: `/blog/${blog?.id}/${blog?.date}`,
                 state: {
-                    blogData: blog.text
+                    blogData: blog?.text
                 }
             }}>
                 <div className="blog-cover">
                     <span>Read More...</span>
                 </div>
+                <div className="blog-preview-img-holder">
+                    { createImage(blog, "preview-image") }
+                </div>
             </Link>
-            <div className="blog-preview-img-holder">
-                {createImage(blog, "preview-image")}
-            </div>
-            <p className="date-created">{blog.date}</p>
+            <p className="date-created">{blog?.date}</p>
             <div className="blog-text">
                 <Markdown>
-                    { blogText }
+                    { blogText ? blogText : "" }
                 </Markdown>
                 <div className="text-cover"></div>
             </div>

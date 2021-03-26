@@ -13,6 +13,7 @@ export const NavigationBar = () => (
                 <Nav.Item><Nav.Link href="/workforce-development">Workforce Development</Nav.Link></Nav.Item>
                 <Nav.Item><Nav.Link href="/universities">Universities</Nav.Link></Nav.Item>
                 <Nav.Item><Nav.Link href="/philanthropy">Philanthropy</Nav.Link></Nav.Item>
+                <Nav.Item><Nav.Link href="/blog">Blog</Nav.Link></Nav.Item>
                 <Nav.Item><Nav.Link href="/staff">Team</Nav.Link></Nav.Item>
                 <Button href="/application" variant="success" id="nav-button">Apply</Button>
                 <div style={{width: "15px"}}></div>

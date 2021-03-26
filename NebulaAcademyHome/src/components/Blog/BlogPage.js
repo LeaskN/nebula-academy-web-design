@@ -19,28 +19,30 @@ import './BlogPage.css';
             in a create-react-app before uploading.
         - Flashing when loading a blog?
         - Parse date (top right of preview) for something more user friendly.
-        - Cache - but make the request after a defined time and compare with cache to update
-        - Need cleanup function
+        - Cache - make the request after a defined time and compare with cache to update?
+        - I should be able to click on the image in the PreviewBlog component and go to the Blog.
+        - Need to use @media-query for .blog-container for mobile in particular.
 */
-const fetchBlogData = (blogId, func) => {
-    if(blogId){
-        fetch(`http://localhost:3000/test2/?${blogId}`)
-            .then(res => res.json())
-            .then(res => {
-                if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
-                func({ blogData: res, loading: false });
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }
-}
 
 const BlogPage = ({ routeProps }) => {
     const [ data, updateBlogData ] = useState({ blogData: "", loading: true });
     
     useEffect(() => {
+        let ignore = false;
         window.scrollTo(0,0);
+        const fetchBlogData = (blogId, func) => {
+            if(blogId){
+                fetch(`http://localhost:3000/test2/?${blogId}`)
+                .then(res => res.json())
+                .then(res => {
+                    if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
+                    if(!ignore) func({ blogData: res, loading: false });
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+            }
+        }
         if(routeProps?.location?.state){
             const { blogData } = routeProps?.location?.state;
             updateBlogData({ blogData: blogData, loading: false });
@@ -55,20 +57,21 @@ const BlogPage = ({ routeProps }) => {
             }
             fetchBlogData(idParse, updateBlogData);
         }
+        return () => { ignore = true; }
     }, [routeProps]);
 
     return (
         <div className="blog-container">
-            <Link to={"/blogs"}><button id="back-btn"><AiOutlineLeft />All Blogs</button></Link>
+            <Link to={"/blog"}><button id="back-btn"><AiOutlineLeft />Blog Page</button></Link>
             <BlogLoadingWheel loading={data.loading} />
             <div className="blog-inner-container">
                 <Markdown>
                     { data.blogData }
                 </Markdown>
             </div>
-            <Link to={"/blogs"}>
+            <Link to={"/blog"}>
                 <button style={data.loading ? {opacity: "0"} : null} id="btm-back-btn">
-                    <AiOutlineLeft /> All Blogs
+                    <AiOutlineLeft /> Blog Page
                 </button>
             </Link>
         </div>

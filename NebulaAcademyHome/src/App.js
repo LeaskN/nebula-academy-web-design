@@ -14,7 +14,7 @@ import { Application } from './pages/Application';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import { Blog } from './pages/Blog';
 import { AllBlogs} from './pages/AllBlogs';
-import TestBlogPage from './components/Blog/TestBlogPage';
+// import TestBlogPage from './components/Blog/test-blogs/TestBlogPage';
 import CookieConsent from "react-cookie-consent";
 
 import ReactGA from 'react-ga';
@@ -49,10 +49,10 @@ class App extends Component {
               <Route path ="/employment" component={Employment}/>
             */}
             {/* <Route path="/blog" component={Blog}/> */}
-            <Route path="/blogs/test-blog" component={TestBlogPage}/>
+            {/* <Route path="/blog/test-blog" component={TestBlogPage}/> */}
 
-            <Route path="/blogs/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
-            <Route path="/blogs" component={AllBlogs}/>
+            <Route path="/blog/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
+            <Route path="/blog" component={AllBlogs}/>
             <Route component={NoMatch} />
           </Switch>
         </Router>

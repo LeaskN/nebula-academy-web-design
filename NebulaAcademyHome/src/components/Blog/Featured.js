@@ -7,6 +7,7 @@ import Markdown from 'markdown-to-jsx';
 import './Featured.css';
 
 const Featured = ({ blog }) => {
+    console.log(blog, "<====== here")
     const parseTitlePreview = (blog) => {
         const previewStartReg = /<!--\s*Preview\s*-->/;
         const previewEndReg = /<!--\s*End\s*Preview\s*-->/;
@@ -24,7 +25,7 @@ const Featured = ({ blog }) => {
                 <AiTwotonePushpin />
             </IconContext.Provider>
             <Link to={{
-                pathname: `/blogs/${blog?.id}/${blog?.date}`,
+                pathname: `/blog/${blog?.id}/${blog?.date}`,
                 state: {
                     blogData: blog?.text
                 }
@@ -34,13 +35,11 @@ const Featured = ({ blog }) => {
                 </div>
             </Link>
             <div className="img-header-wrap">
-                {createImage(blog, "featured-blog-image", 1000)}
-                {/* <div className="featured-blog-image"></div> */}
+                { createImage(blog, "featured-blog-image", 1000) }
             </div>
             <div className="markdown-wrap">
-                {/* <ReactMarkdown skipHtml={true} source={blogText} /> */}
                 <Markdown>
-                    { blogText }
+                    { blogText ? blogText : "" }
                 </Markdown>
             </div>
         </div>
