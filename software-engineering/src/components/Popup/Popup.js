@@ -35,6 +35,7 @@ function Popup() {
   }
   
   const formatDetailsIntoJSX = (cohort, key) => {
+    console.log(cohort)
     const { cohortName, duration, fullOrPartTime, startDate } = parseCohortStr(cohort);
     return (
       <div className="cohort-details" key={key}>

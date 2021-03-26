@@ -30,6 +30,6 @@ export function parseDateStr(str){
   // Here we are checking which month we've returned above ie: return "August" b/c it contains "Aug"
   const fullMonth = fullMonthNames.filter(mo => mo.includes(month));
   // Formatting our start date string...
-  const startDate = `${fullMonth} ${day}, ${year}`;
+  const startDate = `${fullMonth} ${Number(day)+1}, ${year}`;
   return startDate;
 }
