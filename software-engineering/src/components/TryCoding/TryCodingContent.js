@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
-import { formatDateString } from '../../helperFunctions/helperFunctions';
 import './TryCodingContent.css';
 
 class TryCodingContent extends Component {

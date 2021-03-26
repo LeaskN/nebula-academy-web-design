@@ -8,9 +8,16 @@ import AWSSlide4 from "../../assets/AdobeStock_312848234.jpg";
 import SESlide1 from "../../assets/NebulaGrowingField.jpg";
 import SESlide2 from "../../assets/nebulaSECourseDescription2.jpg";
 import SESlide3 from "../../assets/nebulasecoursedescription.jpg";
-import HelpDesk1 from "../../assets/HelpDesk1.jpeg";
 import TechSkills1 from "../../assets/TechSkills1.jpeg";
-import TechSales1 from "../../assets/TechSales1.jpeg";
+import HelpDesk1 from "../../assets/HelpDesk1.jpeg";
+import HelpDesk2 from "../../assets/HelpDesk2.jpg"; 
+import HelpDesk3 from "../../assets/HelpDesk3.jpeg"; 
+import TechSales1 from "../../assets/TechSales1.jpeg"; 
+import TechSkills2 from "../../assets/TechSkills2.jpeg"; 
+import TechSkills3 from "../../assets/TechSkills3.jpeg"; 
+import TechSales2 from "../../assets/TechSales2.jpeg";
+import TechSales3 from "../../assets/TechSales3.jpeg"; 
+
 
 import { WorkforceCarousel } from "./WorkforceCarousel/WorkforceCarousel";
 // import { WorkforceProgramSection } from "./WorkfroceProgramSection/WorkforceProgramSection";
@@ -217,7 +224,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: TechSkills2,
             al: "Second slide",
             header: "Build Foundational Knowledge",
             body: (
@@ -237,7 +244,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: TechSkills3,
             al: "Fourth slide",
             header: "Course Description",
             body:
@@ -273,7 +280,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: TechSales2,
             al: "Second slide",
             header: "Prepare For Your Preferred Technical Sales Role",
             body: (
@@ -296,7 +303,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: TechSales3,
             al: "Fourth slide",
             header: "Course Description",
             body:
@@ -318,7 +325,7 @@ class WorkforceDevelopment extends Component {
             body: (
               <div>
                 <p>
-                A Helpdesk Support Technician is empathetic, has strong problem-solving skills, understands how to provide remote support, asks the right questions to illicit important information, and has strong communication skills to help guide end users through issues.  They understand complex systems, can manage an AWS Management Console, a Microsoft Office 365 Administration Console, customer expectations, & much more.</p>
+                  A Helpdesk Support Technician is empathetic, has strong problem-solving skills, understands how to provide remote support, asks the right questions to illicit important information, and has strong communication skills to help guide end users through issues.  They understand complex systems, can manage an AWS Management Console, a Microsoft Office 365 Administration Console, customer expectations, & much more.</p>
                 {/* <p>
                   Source:{" "}
                   <a
@@ -333,7 +340,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide2,
+            image: HelpDesk2,
             al: "Second slide",
             header: "Build Your Tech Skills",
             body: (
@@ -357,7 +364,7 @@ class WorkforceDevelopment extends Component {
             ),
           },
           {
-            image: AWSSlide4,
+            image: HelpDesk3,
             al: "Fourth slide",
             header: "Course Description",
             body:
@@ -396,7 +403,10 @@ class WorkforceDevelopment extends Component {
           color: "#127FA5",
           header: "Guest Speakers",
           content:
-            "The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world.",
+            ["The career world of information technology is expansive and can feel overwhelming to those entering it or navigating it.  We help our participants not only build the necessary skills to succeed but introduce them to learn from others who have successfully built careers in a continuously evolving world."],
+          buttonText: "Speaker Application",
+          buttonURL: "https://code.nebulaacademy.com/guestspeakerapplication",
+          linkLeavesSite: true,
         },
         {
           color: "#9395D3",
@@ -441,69 +451,100 @@ class WorkforceDevelopment extends Component {
           >
             <h1>AWS</h1>
             {this.createAWSSlides()}
-            <div id="spacer"></div>
             <Button
-              className="bottom"
               href="https://aws.nebulaacademy.com"
               target="blank"
+              style={{ margin: '5px' }}
+
               variant="warning"
             >
-              AWS
+              AWS Program Info
             </Button>
           </Col>
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Software Engineering</h1>
             {this.createSoftwareEngineeringSlides()}
-            <div id="spacer"></div>
             <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
+              style={{ margin: '5px' }}
+              href="/workshops/4"
               variant="secondary"
             >
-              Bootcamp
-            </Button>
+              FREE SE Workshop
+              </Button>
+
+            <Button
+              style={{ margin: '5px' }}
+              href="/application"
+              variant="secondary"
+            >
+              SE Bootcamp Application
+              </Button>
           </Col>
 
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Skills</h1>
             {this.createTechSkillsSlides()}
-            <div id="spacer"></div>
             <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
+              style={{ margin: '5px' }}
+              href="/workshops/1"
               variant="secondary"
             >
-              Tech Skills
+              FREE Jobs in Tech Workshop
+            </Button>
+            
+            <Button
+              style={{ margin: '5px' }}
+              href="https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=21098006"
+              variant="secondary"
+            >
+              Tech Skills Registration
             </Button>
           </Col>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Tech Sales</h1>
             {this.createTechSalesSlides()}
-            <div id="spacer"></div>
             <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
+              href="/workshops/2"
+              style={{ margin: '5px' }}
               variant="secondary"
             >
-              Tech Sales
-            </Button>
+              FREE Tech Sales Workshop
+              </Button>
+            <Button
+              href="/application"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              Tech Sales Application
+              </Button>
           </Col>
+
           <Col className="WorkforceDevelopmentUrlCard">
             <h1>Help Desk</h1>
             {this.createHelpDeskSlides()}
-            <div id="spacer"></div>
             <Button
-              className="bottom"
-              href="https://code.nebulaacademy.com"
-              target="blank"
+              href="/workshops/3"
+              style={{ margin: '5px' }}
               variant="secondary"
             >
-              Help Desk
-            </Button>
+              FREE Tech Support Workshop
+              </Button>
+            <Button
+              href="/application"
+              style={{ margin: '5px' }}
+              variant="secondary"
+            >
+              Help Desk Application
+              </Button>
+            {/* <Button
+                href="mailto:succeed@neublaacademy.com?subject=Help Desk Bootcamp"
+                variant="secondary"
+              >
+                Register
+              </Button> */}
           </Col>
+
         </Row>
         <InfoPanel state={this.state} />
       </React.Fragment>

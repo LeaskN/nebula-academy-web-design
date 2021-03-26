@@ -1,0 +1,42 @@
+.registrationJumbo {
+  background-size: cover;
+  color: white;
+  z-index: 1;
+  height: fit-content;
+  position: relative;
+  margin: 0px;
+  padding: 10px;
+  font-size: x-large;
+  min-height: 325px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-shadow: 1px 1px 1px #8e5ea5;
+  background: linear-gradient(#131524 0%, #f0f0f0 100%);
+}
+
+.registrationJumboLeft {
+  background-image: url("../../assets/UniCollegebanner.jpg");
+  background-size: cover;
+  padding: 10px;
+  min-height: 325px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.registrationJumboRight {
+  background-color: #7F5A8F;
+  /* padding: 60px 10px 10px 10px; */
+  font-size: x-large;
+  min-height: 325px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.registerButton{
+  width: 100%;
+  align-self: flex-end;
+  margin-top: 10px;
+}

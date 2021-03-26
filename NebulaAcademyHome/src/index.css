@@ -22,8 +22,7 @@ body {
 .element { -ms-overflow-style: none; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .col,
@@ -46,9 +45,6 @@ code {
 
 .carousel-control-prev, .carousel-control-next{
   width: 50px;
-}
-.carousel-control-prev{
-  padding-left: 13px;
 }
 .carousel-caption{
   position: absolute;
@@ -248,14 +244,14 @@ code {
 .bottom{
   position:absolute;  
   margin-left: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 5%;
   margin-top: 0px;
   width: 90%;                
   bottom: 0;                          
   left: 0; 
 }
 #spacer{
-  height: 70px;
+  height: 90px;
   width: 100px;
   display:inline-block;
 }
@@ -292,7 +288,9 @@ code {
 }
 blockquote{
   border-left: 4px solid white;
-  font-family: 'Montserrat';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;;
   margin: 5px;
   font-style: italic;
   padding-left: 7px;

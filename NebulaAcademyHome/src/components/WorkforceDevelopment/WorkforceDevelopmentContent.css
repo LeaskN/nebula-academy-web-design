@@ -4,6 +4,9 @@
 }
 
 .WorkforceDevelopmentUrlCard {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   text-shadow: 1px solid black;
   color: black;

@@ -1,16 +1,17 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Col, Row} from 'react-bootstrap';
-import './WorkforceDevelopmentFooter.css'
+import './RegistrationFooter.css'
 
-export const WorkforceDevelopmentFooter = () => (
-  <Container className="fullWorkforceDevelopment">
+export const RegistrationFooter = () => (
+  <Container className="fullRegistration">
     <Jumbotron>
       <h1 className="contentCentered">Transforming individuals, teams, and organizations</h1>
 <h3 className="contentCentered">Continue exploring our website to better understand our offerings</h3><br/>
         <Row>
           <Col className="contentCentered">
-            <Button href="/workshops" variant="primary">Workshops</Button>
+            <Button href="/philanthropy" variant="secondary">Philanthropy</Button>
           </Col>
+          
         </Row>
     </Jumbotron>
   </Container>

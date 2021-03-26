@@ -1,0 +1,30 @@
+.registrationCard{
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 4px 6px 4px rgba(0,0,0,0.2);
+    border: 3px solid #8E5EA5;
+    min-width: 300px;
+    /* min-height: 200px; */
+    padding: 8px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+/* .registrationCard:first-child{
+    justify-content: space-between;
+} */
+
+.registrationCard blockquote{
+    font-style:'normal';
+    height:'80%'; 
+    align-items:'center';
+    display: flex;
+}
+
+.learningObjectivesList{
+    text-align: left;
+    list-style-type: ' - ';
+}
+  
