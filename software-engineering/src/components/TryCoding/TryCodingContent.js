@@ -10,8 +10,7 @@ class TryCodingContent extends Component {
             Ethnicity__c: []
         };
     }
-    // link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=category:Learning%20To%20Code`
-    link = `mailto:succeed@nebulaacademy.com?subject=Try Coding!`
+    link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=15679218`
     nextFriday = () => {
         var d = new Date();
         switch (d.getDay())
@@ -37,7 +36,7 @@ class TryCodingContent extends Component {
         default:
         }
         let formattedDate = `${d}`.split(/(\d{5,}|[2-9](?=\d*[1-9])\d{3})/g)[0].split('Mon').join('Monday').split('Tues').join('Tuesday').split('Wed').join('Wednesday').split('Thurs').join('Thursday').split('Fri').join('Friday').split('Sat').join('Saturday').split('Sun').join('Sunday')
-        this.link = `mailto:succeed@nebulaacademy.com?subject=Try Coding, ${formattedDate}`;
+        this.link = `https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=15679218`;
         return formattedDate;
     }
 
@@ -50,13 +49,14 @@ render() {
                         <h1>{this.nextFriday()}</h1>
                         <br/>
                         <Button href={this.link} className="tryCodingButton" target="empty">Register for Free</Button>
-                        <p>Please leave the subject as:<br/> Try Coding, {this.nextFriday()}(or your desired date)</p>
+                        {/* <p>Please leave the subject as:<br/> Try Coding, {this.nextFriday()}(or your desired date)</p> */}
                     </Card>
                 </Col>
                 <Col xs={8} className="cardColumns">
                     <div className="tryCodingCard">
                         <h3 style={{color:'#0078d7'}}>Try Coding Workshops!</h3>
-                        <p>Come and spend your day in a beginner level, crash course in front-end software engineering; what we don't see in web applications: data, information and structures. You'll get a glimpse into what a software developer does and learn...</p>
+                        <p>Many of us feel lured into tech & software development but dont understand what it may entail. Come to our workshop and quickly build an app with one of our experienced software engineering instructors!</p>
+                        <p>This is a free one hour workshop where you can ask questions and follow along with an instructor to build a fun project!</p>
                         <p className="tryCodingP"><b>Participants must be over 17.</b></p>
                     </div>
                 </Col>
