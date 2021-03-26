@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Modal, } from 'react-bootstrap';
+import './Conditions.css';
 
 export default class Conditions extends React.Component {
     constructor(props) {
@@ -25,7 +26,7 @@ export default class Conditions extends React.Component {
                 <Modal.Header closeButton>
                 <Modal.Title>Project & Certification Conditions:</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className="conditions">
                     <ol>
                         <li>Pass your AWS Cloud Practitioner exam</li>
                         <li>Have five live projects assessed and accepted by program manager</li>
