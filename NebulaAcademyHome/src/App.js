@@ -26,7 +26,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:3.26.21-WFDEV');
+    console.log('V:3.26.21-VID');
     return (
       <React.Fragment>
         <NavigationBar />
@@ -54,6 +54,7 @@ class App extends Component {
             <Route exact path="/workshops" component={AllWorkshops} />
             <Route path="/workshops/:id" component={Registration} />
             <Route path="/staff" component={Staff} />
+            <Route path="/videos" component={Videos} />
             {/* <Route path="/blog/test-blog" component={TestBlogPage}/> */}
             <Route path="/blog/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
             <Route path="/blog" component={AllBlogs}/>
