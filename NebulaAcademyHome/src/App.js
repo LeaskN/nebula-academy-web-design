@@ -14,6 +14,7 @@ import { Application } from './pages/Application';
 import { ApplicationPhase2 } from './pages/ApplicationPhase2';
 import { Blog } from './pages/Blog';
 import { AllBlogs} from './pages/AllBlogs';
+// TEFE HAS THE TESTBLOGPAGE
 // import TestBlogPage from './components/Blog/test-blogs/TestBlogPage';
 import CookieConsent from "react-cookie-consent";
 
@@ -23,7 +24,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:2.5.21-WFDEV');
+    console.log('V:3.26.21-WFDEV');
     return (
       <React.Fragment>
         <NavigationBar />
@@ -48,9 +49,7 @@ class App extends Component {
               <Route path ="/success-stories" component={SuccessStories}/>
               <Route path ="/employment" component={Employment}/>
             */}
-            {/* <Route path="/blog" component={Blog}/> */}
             {/* <Route path="/blog/test-blog" component={TestBlogPage}/> */}
-
             <Route path="/blog/:post" render={routeProps => <Blog routeProps={routeProps}/>}/>
             <Route path="/blog" component={AllBlogs}/>
             <Route component={NoMatch} />

@@ -32,15 +32,17 @@ const BlogPage = ({ routeProps }) => {
         window.scrollTo(0,0);
         const fetchBlogData = (blogId, func) => {
             if(blogId){
-                fetch(`http://localhost:3000/test2/?${blogId}`)
-                .then(res => res.json())
-                .then(res => {
-                    if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
-                    if(!ignore) func({ blogData: res, loading: false });
-                })
-                .catch(err => {
-                    console.log(err);
-                })
+                // Local Testing
+                // fetch(`http://localhost:3000/single-blog/?${blogId}`)
+                fetch(`https://d9nuj9xdv4try.cloudfront.net/single-blog/?${blogId}`)
+                    .then(res => res.json())
+                    .then(res => {
+                        if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
+                        if(!ignore) func({ blogData: res, loading: false });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
             }
         }
         if(routeProps?.location?.state){

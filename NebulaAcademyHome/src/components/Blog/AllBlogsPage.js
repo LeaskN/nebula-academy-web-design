@@ -117,7 +117,9 @@ const AllBlogsPage = () => {
 
         if(cachedBlogs?.allBlogs?.length > 1) updateState((prevState) => ({ ...prevState, loading: false }));
 
-        fetch("http://localhost:3000/test")
+        // LOCAL TESTING
+        // fetch("http://localhost:3000/test")
+        fetch("https://d9nuj9xdv4try.cloudfront.net/all-blogs")
             .then(res => res.json())
             .then(files => {
                 if(ignore) return;
