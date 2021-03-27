@@ -107,5 +107,5 @@
     bottom: 0;
     height: 100px;
     width: 100%;
-    background: linear-gradient(0deg, rgb(240,240,240) 20%, transparent);
+    background: linear-gradient(0deg, rgb(240,240,240) 20%, rgba(255,255,255,0));
 }

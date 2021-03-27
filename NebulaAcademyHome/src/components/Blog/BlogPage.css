@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 10% 7%;
     height: 100%;
     /* max-width: 1100px; */
 }
@@ -28,8 +28,8 @@ li {
     position: absolute;
     display: flex;
     align-items: center;
-    left: 10%;
-    top: 2.8em;
+    left: 2%;
+    top: .2em;
     padding: .2em;
     opacity: .4;
     color: rgb(172,0,89);
@@ -43,5 +43,9 @@ li {
 
 #btm-back-btn {
     top: auto;
-    bottom: 2.8em;
+    bottom: .2em;
+}
+
+.blog-inner-container img {
+    height: 100%;
 }
