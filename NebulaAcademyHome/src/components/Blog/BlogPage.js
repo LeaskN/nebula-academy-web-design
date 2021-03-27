@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/all';
 import Markdown from 'markdown-to-jsx';
 import BlogLoadingWheel from './BlogLoadingWheel';
@@ -38,6 +38,11 @@ const BlogPage = ({ routeProps }) => {
                     .then(res => res.json())
                     .then(res => {
                         if(res?.errorCode) throw new Error("Server Error: " + res?.errorCode);
+                        if(Object.keys(res).length === 0){
+                            console.log(res, "<--- server response");
+                            updateBlogData( { redirect: true } );
+                            return;
+                        }
                         if(!ignore) func({ blogData: res, loading: false });
                     })
                     .catch(err => {
@@ -62,7 +67,12 @@ const BlogPage = ({ routeProps }) => {
         return () => { ignore = true; }
     }, [routeProps]);
 
+    const redirectPatch = () => {
+        window.location.href = "https://nebulaacademy.com/blog/"
+        return ""
+    }
     return (
+        data.redirect ? redirectPatch() :
         <div className="blog-container">
             <Link to={"/blog"}><button id="back-btn"><AiOutlineLeft />Blog Page</button></Link>
             <BlogLoadingWheel loading={data.loading} />
