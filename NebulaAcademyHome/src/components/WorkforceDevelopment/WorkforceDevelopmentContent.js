@@ -466,6 +466,13 @@ class WorkforceDevelopment extends Component {
             {this.createSoftwareEngineeringSlides()}
             <Button
               style={{ margin: '5px' }}
+              href="https://code.nebulaacademy.com"
+              variant="secondary"
+            >
+              SE Bootcamp Website
+              </Button>
+            <Button
+              style={{ margin: '5px' }}
               href="/workshops/4"
               variant="secondary"
             >

@@ -280,6 +280,7 @@ code {
 }
 .carousel-inner{
   max-height: 375px;
+  height:100%;
 }
 .carousel-caption{
   z-index: 10;
