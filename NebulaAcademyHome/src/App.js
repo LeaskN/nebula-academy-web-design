@@ -26,7 +26,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
-    console.log('V:3.26.21-BLOG-CSS');
+    console.log('V:4.12.21-D');
     return (
       <React.Fragment>
         <NavigationBar />

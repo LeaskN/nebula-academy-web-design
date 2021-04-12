@@ -83,15 +83,15 @@ class VideoContent extends Component {
           <h4>Software Engineering Bootcamp</h4>
           <Carousel className="carousel" responsive={responsive}>
             {this.state.seBootcamp.map((video) => (
-              <div className="singleVideo">
+              <div className="singleVideo" key={video.title}>
                 <iframe
                   title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
                 <p>{video.title}</p>
               </div>
@@ -102,15 +102,15 @@ class VideoContent extends Component {
           <h4>Software Engineering Bootcamp V2 Cohort Videos</h4>
           <Carousel className="carousel" responsive={responsive}>
             {this.state.seV2Videos.map((video) => (
-              <div className="singleVideo">
+              <div className="singleVideo" key={video.title}>
                 <iframe
                   title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
                 <p>{video.title}</p>
               </div>
@@ -121,15 +121,15 @@ class VideoContent extends Component {
           <h4>Software Engineering Bootcamp V1 Cohort Videos</h4>
           <Carousel className="carousel" responsive={responsive}>
             {this.state.seV1Videos.map((video) => (
-              <div className="singleVideo">
+              <div className="singleVideo" key={video.title}>
                 <iframe
                   title={video.title}
                   src={video.url}
                   width="400"
                   height="auto"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
                 <p>{video.title}</p>
               </div>

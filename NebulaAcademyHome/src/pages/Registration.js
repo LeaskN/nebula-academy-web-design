@@ -12,7 +12,7 @@ let programs = [
     { 
         id: 1, 
         image: image1,
-        date: 'April 1st',
+        date: 'April 29th',
         time: '4:00PM',
         workshopTitle: 'Jobs In Tech',
         registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20344935',
@@ -49,7 +49,7 @@ let programs = [
     },
     { 
         id: 2, 
-        date: 'April 8th',
+        date: 'May 6th',
         time: '4:00PM',
         workshopTitle: 'Tech Sales Careers',
         image: image2,
@@ -114,7 +114,7 @@ let programs = [
     },
     { 
         id: 4, 
-        date: 'March 25th',
+        date: 'April 22nd',
         time: '4:00PM',
         workshopTitle: 'How to Become A Software Engineer',
         registrationUrl: 'https://app.acuityscheduling.com/schedule.php?owner=13648189&appointmentType=20355044',
